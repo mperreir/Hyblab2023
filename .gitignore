@@ -107,3 +107,6 @@ dist
 .DS_Store
 package-lock.json
 .idea
+
+# Database
+*.db
