@@ -1,7 +1,7 @@
 "use strict";
 
 // async init function (because of the awaits on fetches)
-const initSlide1 = async function () {
+const initSlide1 = async function(){
   // Get logo element
   const logo = document.querySelector('#logo-hyblab');
 
@@ -20,9 +20,9 @@ const initSlide1 = async function () {
   // Add click listener
   logo.addEventListener('click', () => {
     anime({
-      targets: '#logo-hyblab',
-      scale: 0
-    });
+        targets: '#logo-hyblab',
+        scale: 0
+      });
     swiper.slideNext()
   });
 
@@ -30,19 +30,11 @@ const initSlide1 = async function () {
   let response = await fetch('api/topic');
   const data1 = await response.json();
 
-  // Get some message
-  response = await fetch('data/conversation1.json');
-  const conversation = await response.json();
-  const data2 = conversation['message'][0]['message']
-
-  // Get some message
-  response = await fetch('data/conversation1.json');
-  const votes = await response.json();
-  const vote = conversation['message'][0]['message']
-
-
+  // Get some dummy data
+  response = await fetch('data/dummy.json');
+  const data2 = await response.json();
 
   // Update the DOM to insert topic and data
   const footer = document.querySelector('footer p');
-  footer.textContent = `Our topic is "${data1.topic}" and here is "${data2}" retrieved on the server." ${vote}"`;
+  footer.textContent = `Our topic is "${data1.topic}" and here is "${data2.message}" retrieved on the server.`;
 };
