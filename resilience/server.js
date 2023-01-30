@@ -8,9 +8,13 @@ const path = require('path');
 // Create our application
 const app = express();
 
+// Database
+const db = require('./db.js')
+app.use('./db.db', db)
+
 // Load and register our REST API
-const api = require('./api/api');
-app.use('/api', api);
+const api = require('./api/api')(db);
+app.use('./api', api);
 
 // Minimum routing: serve static content from the html directory
 app.use(express.static(path.join(__dirname, 'public')));
