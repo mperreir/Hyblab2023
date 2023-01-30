@@ -1,0 +1,22 @@
+header, footer {
+    height: 10%;
+}
+
+#liste-theme {
+    width: 100%;
+    height: 80%;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.theme {
+    width: min-content;
+    user-select: none;
+    cursor: pointer;
+}
+
+.checked-theme {
+    color: red;
+}
