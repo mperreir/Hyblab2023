@@ -1,0 +1,17 @@
+{
+    "place": "Polytech",
+    "names": {
+        "0": "Tristan",
+        "1": "Maxime"
+    },
+    "message": [
+        {
+            "name": "Tristan",
+            "message": "Bonjour Maxime !"
+        },
+        {
+            "name": "Maxime",
+            "message": "Bonjour Tristan !"
+        }
+    ]
+}
