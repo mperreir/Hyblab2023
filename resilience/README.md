@@ -13,3 +13,14 @@ Participants :
 - EPJT
 
 - Polytech :  
+
+
+
+# Setup
+
+Create SQL db :
+```
+sqlite3 database.db
+> .read createDB.sql
+> .exit
+```

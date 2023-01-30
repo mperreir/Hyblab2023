@@ -7,10 +7,9 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.4"
   },
   "author": "MPDS",
-  "license": "MIT",
-  "devDependencies": {
-  }
+  "license": "MIT"
 }
