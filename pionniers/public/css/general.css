@@ -70,7 +70,7 @@ ul {
 /* We set a default font size here. It will be the base for all other font sizes */
 /* Here the font size is proportional to content width */
 body{
-    font-size: calc(15vh * 3 / 4);
+    font-size: calc(5vh * 3 / 4);
 }
 
 /* Fill the whole viewport when its aspect ratio is between 9/16 and 3/4 */
@@ -83,7 +83,7 @@ body{
     /* We set a default font size here. It will be the base for all other font sizes */
     /* Here the font size is proportional to content width */
     body{
-        font-size: 15vw;
+        font-size: 5vw;
     }
 }
 
@@ -100,7 +100,7 @@ body{
     /* We set a default font size here. It will be the base for all other font sizes */
     /* Here the font size is proportional to content width */
     body{
-        font-size: 15vw;
+        font-size: 5vw;
     }
 }
 

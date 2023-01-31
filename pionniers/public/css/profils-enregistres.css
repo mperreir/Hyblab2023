@@ -1,0 +1,8 @@
+.fiche-minia {
+    height: 7%;
+    width: 100%;
+}
+
+.fiche-minia .contenu-fiche-minia img {
+    max-height: 100px;
+}
