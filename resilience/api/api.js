@@ -4,10 +4,10 @@ const app = require('express');
 const { json } = require('express');
 const path = require('path');
 
-const express = require('express');
-const routeur = express.Router();
+const routeur = app.Router();
+const db = require('../db.js')
 
-module.export = (db) => {
+module.export = () => {
     // Get partner's topic from folder name
     let topic = path.basename(path.join(__dirname, '/..'))
 
