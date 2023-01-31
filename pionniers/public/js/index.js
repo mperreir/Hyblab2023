@@ -1,5 +1,16 @@
 "use strict";
 
+/**
+ * Créer un node HTML à partir d'une string
+ * @param htmlString : string définition de la balise
+ * @returns {ChildNode}
+ */
+function createElementFromHTML(htmlString) {
+  let div = document.createElement('div');
+  div.innerHTML = htmlString.trim();
+  return div.firstChild;
+}
+
 // Init of the (touch friendly) Swiper slider
 const swiper = new Swiper("#mySwiper", {
   direction: "vertical",

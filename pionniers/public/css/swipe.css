@@ -1,0 +1,25 @@
+#theme-selector {
+    width: 100%;
+}
+
+#theme-selector ul {
+    width: 70%;
+}
+
+#theme-selector ul li {
+    border-radius: 100%;
+    /* Juste pour le test, tant qu'il y a pas d'image */
+    background-color: red;
+    width: 20px;
+    height: 20px;
+}
+
+footer {
+    height: 10%;
+    width: 100%;
+}
+
+
+.checked-theme {
+    border: 5px solid blue;
+}
