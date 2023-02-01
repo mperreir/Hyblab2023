@@ -13,13 +13,13 @@ let swiper = new Swiper("#mySwiper", {
 swiper.on("slideChange", function () {
   switch( swiper.activeIndex ) {
     case 0:
-      initSlide1();
+      initSlideAccueil();
       break;
     case 1:
-      initSlide2();
+      initSlideQuestion();
       break;
     case 2: 
-      initSlide3();
+      initSlideFin();
       break;
   }
 });
@@ -30,12 +30,12 @@ setTimeout(() => {
   // fade out the loader "slide"
   // and send it to the back (z-index = -1)
   anime({
-    delay: 1000,
+    delay: 1,
     targets: '#loader',
     opacity: '0',
     'z-index' : -1,
     easing: 'easeOutQuad',
   });
   // Init first slide
-  initSlide1();
-}, 1000);
+  initSlideAccueil();
+}, 1);
