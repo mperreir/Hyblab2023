@@ -1,17 +1,26 @@
 "use strict";
 
 // Just animate the logo
-const initSlide2 = function(){
-  // Get img element
-  const img = document.querySelector('#img-fini');
+const initSlide2 = function(data){
+    console.log(data.carte.name);
+    document.querySelector('#map-title').innerHTML = data.carte.name;
 
-  // (Re)set initial position of img
-  img.setAttribute('style', 'transform : translateY(-50vh);');
+    /*
+    var map = L.map('map').setView([51.505, -0.09], 13);
 
-  // Animate it
-  anime({
-    targets: '#img-fini',
-    translateY: 0,
-    easing: 'easeOutBounce'
-  });
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);*/
+
+    var map = L.map("map");
+
+    $.getJSON('https://cdn.jsdelivr.net/gh/johan/world.geo.json@34c96bba/countries/FRA.geo.json').then(function(geoJSON) {
+        var osm = new L.TileLayer.BoundaryCanvas("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            boundary: geoJSON,
+            attribution: ''
+        });
+        map.addLayer(osm);
+        var ukLayer = L.geoJSON(geoJSON);
+        map.fitBounds(ukLayer.getBounds());
+    });
 };
