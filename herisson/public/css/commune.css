@@ -39,13 +39,13 @@ body {
 .swiper-slide .commune {
     color: white;
     margin-top: -80%;
-    font-size: 3em;
+    font-size: 3vh;
 }
 
 .swiper-slide h1 {
     position: absolute;
     margin-top: -65%;
-    font-size: 2.5em;
+    font-size: 2.5vh;
 }
 
 .swiper {
@@ -74,12 +74,13 @@ body {
 .button {
     background-color: #FBC5EB;
     color: #0B6E5F;
-    border: 7px solid #0B6E5F;
+    border: 0.4vh solid #0B6E5F;
 }
 
 .decouvrir {
     font-family: Prompt, Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 300%;
+    font-size: 2.7vh;
+    margin: auto;
 }
 
 .button:hover {
@@ -87,3 +88,35 @@ body {
     color: white;
 }
 
+.swiper-pagination-bullet {
+    position: relative;
+    width: 1.5vh;
+    height: 1.5vh;
+    display: inline-block;
+    border-radius: 100%;
+    background: #FBC5EB;
+    border: 7px solid white;
+    bottom: 17vh;
+}
+
+.swiper-pagination-bullet-active {
+    background: #FBC5EB;
+}
+
+
+.swiper-button-prev {
+    color: #0B6E5F;
+    background-size: contain;
+    width: 2vh;
+    height: 2vh;
+    margin-left: 1vh;
+    top: 50vh;
+}
+.swiper-button-next {
+    color: #0B6E5F;
+    background-size: contain;
+    width: 2vh;
+    height: 2vh;
+    margin-right: 1vh;
+    top: 50vh;
+}
