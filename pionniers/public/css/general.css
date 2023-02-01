@@ -10,7 +10,7 @@
 
 body {
     background-color: black;
-    color: white;
+    color: yellowgreen;
     overflow: hidden;   /* to avoid slider bugs on some browsers */
     font-family: sans-serif;
 }
@@ -49,7 +49,7 @@ ul {
 
 
 #container {
-    background-color: #1a1a1a;
+    background-color: white;
 }
 
 

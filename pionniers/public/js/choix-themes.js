@@ -29,7 +29,7 @@ function onCheck(evnt) {
 
 document.addEventListener("DOMContentLoaded", function() {
     // TODO : Thèmes à récupérer depuis l'API de Marin (fonction fetch)
-    const themesTest = ["écologie", "truc", "machin"];
+    const themesTest = ["économie circulaire", "alimentation", "mobilité", "industrie", "numérique", "énergie"];
 
     const listeThemes = document.querySelector('#liste-theme');
 
