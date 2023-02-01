@@ -32,6 +32,7 @@ body{
 }
 
 div {
+    width : 85%;
     float: left;
     height: 150px;
     padding: 0 10px;
@@ -42,6 +43,11 @@ div {
 
 header{
     margin-top: 20px;
+}
+
+#choix-log{
+    width : 60px;
+    height: 30px;
 }
 
   #ligne{
