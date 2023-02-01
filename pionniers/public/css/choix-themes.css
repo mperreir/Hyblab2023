@@ -10,6 +10,11 @@ header {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+#liste-theme ul {
+    height: 100%;
+    width: 100%;
+}
+
 #partie-basse {
     height: 80%;
     width: 100%;
@@ -20,9 +25,12 @@ input[type="checkbox"] {
 }
 
 .theme {
-    width: min-content;
     user-select: none;
     cursor: pointer;
+    background: var(--blanc-fond);
+    border-radius: 500px;
+    padding: 2%;
+    font-size: 0.6em;
 }
 
 .checked-theme {

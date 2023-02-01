@@ -1,5 +1,7 @@
+
 function createThemeButton(nomTheme) {
     const htmlString = `<li class="theme flex-row justify-content-center">
+                             <img alt="theme" src="">
                              <input type="checkbox" id="cb-${nomTheme}"><label for="cb-${nomTheme}">${nomTheme}</label>
                         </li>
                         `;
