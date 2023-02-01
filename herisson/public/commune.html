@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="titre" style="align-content: center"></h1>
+<script>
+    const search = new URLSearchParams(window.location.search).get('search');
+    const h1 = document.getElementById("titre");
+    h1.innerHTML = search;
+</script>
+</body>
+</html>
