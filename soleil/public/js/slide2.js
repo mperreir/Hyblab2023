@@ -12,6 +12,6 @@ const initSlide2 = function(){
   anime({
     targets: '#img-fini',
     translateY: 0,
-    easing: 'easeOutBounce'
+    easing: 'easeOutBounce'  
   });
 };

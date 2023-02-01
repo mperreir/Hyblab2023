@@ -1,15 +1,15 @@
 # Descriptif du projet
 
-Porteur de projet :
+Porteur de projet : Aurélie
 
-Sujet :
+Sujet : Soleil
 
-Nom d'équipe :
+Nom d'équipe : Equinoxe
 
 Participants : 
 
 - AGR :
 
-- EPJT
+- EPJT : Anne-France
 
 - Polytech :  
