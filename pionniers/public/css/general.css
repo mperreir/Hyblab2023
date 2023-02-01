@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
 /* ------- Important ! Please at least keep the last part of this CSS ----------- */
 /* ------- that adapts content width and height so that aspect ratio  ----------- */
 /* ------- is kept between 9/16 a,d 3/4 (portait orientation)         ----------- */
@@ -8,11 +9,26 @@
     margin:0;
 }
 
+:root {
+    /* Couleurs catégories */
+    --orange: #F6AE0A;
+    --caca-doie: #C9AE37;
+    --vert: #9CAF65;
+    --turquoise: #6FAF92;
+    --cyan: #42B0C0;
+    --bleu-clair: #15B0ED;
+
+    /* Interface */
+    --blanc-fond: #ffffff;
+    --gris-clair: #DFDFDF;
+    --bleu-fonce: #006A82;
+}
+
 body {
     background-color: black;
-    color: yellowgreen;
+    color: var(--bleu-fonce);
     overflow: hidden;   /* to avoid slider bugs on some browsers */
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 ul {
@@ -45,11 +61,8 @@ ul {
     align-items: center;
 }
 
-
-
-
 #container {
-    background-color: white;
+    background-color: var(--blanc-fond);
 }
 
 
