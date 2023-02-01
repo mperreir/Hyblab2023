@@ -10,7 +10,7 @@
 
 body{
     background-color: black;
-    color: white;
+    color: black;
     overflow: hidden;   /* to avoid slider bugs on some browsers */
     font-family: sans-serif;
 }
@@ -41,6 +41,7 @@ body{
     width: 100%;
     height:100%;
     position: absolute;
+    background: white;
 }
 
 /* white navigation bullets */
@@ -50,19 +51,30 @@ body{
 
 /* the slides and the loader should fill the whole 9:16 zone */
 .swiper-wrapper section, #loader{
-    background-color: dodgerblue;
     width: 100%;
     height: 100%;
 }
 
 /* Most of the elements in this demo are absolute positionned with percentages */
-#first-slide header, #second-slide header{
-    text-align: center;
+header{
     width: 100%;
-    top: 10%;
-    position: absolute;
-    font-size: 30%;
-    z-index: 2;
+    height: 100px;
+}
+header img{
+    width: 100%;
+}
+header > div {
+    display: inline-block;
+}
+
+.headerOne{
+    float: left;
+    width: 33%;
+}
+.headerThree{
+    float: right;
+    width: 33%;
+    text-align: right;
 }
 
 #logo-hyblab{
@@ -89,7 +101,7 @@ body{
 }
 
 main > section{
-    background-image: url('../img/background.svg');
+    background-color: white;
     background-size: 100% 100%;
 }
 
@@ -171,7 +183,7 @@ main > section{
 /* We set a default font size here. It will be the base for all other font sizes */
 /* Here the font size is proportional to content width */
 body{
-    font-size: calc(15vh * 3 / 4);
+    font-size: 13pt;
 }
 
 /* Fill the whole viewport when its aspect ratio is between 9/16 and 3/4 */
@@ -181,11 +193,6 @@ body{
         width: 100vw; /* content is full width (and full height because of the default rule for container height */
     }
 
-    /* We set a default font size here. It will be the base for all other font sizes */
-    /* Here the font size is proportional to content width */
-    body{
-        font-size: 15vw;
-    }
 }
 
 /* The content is displayed at 9/16 If the aspect ratio is higher that 9/16  */ 
@@ -201,7 +208,7 @@ body{
     /* We set a default font size here. It will be the base for all other font sizes */
     /* Here the font size is proportional to content width */
     body{
-        font-size: 15vw;
+        font-size: 13pt;
     }
 }
 

@@ -1,0 +1,15 @@
+.textElu{
+    margin-top: 30%;
+    font-size: 13pt;
+    display: inline-block;
+    background-color: #d7d1d1;
+    border-radius: 10px;
+    padding: 1em 1em;
+    width: 50%;
+}
+.Elu{
+    display: inline-block;
+    width: 20%;
+    margin-top: 30%
+}
+

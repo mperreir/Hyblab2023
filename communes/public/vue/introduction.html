@@ -1,11 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Hyblab 2023</title>
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/introduction.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../js/slide1.js" defer></script>
+    <script src="../js/slide2.js" defer></script>
+    <script src="../js/index.js" defer></script>
 </head>
 <body>
+<!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
+<div id="container">
+    <!-- Le loader-->
+    <section id="loader">
+        <div id="loader-img" class="ld ld-ring ld-cycle"></div>
+        <img src="../img/logo_hyblab.png" id="logo-hyblab" alt="logo hyblab"></img>
+    </section>
+    <div id="mySwiper" class="swiper">
+        <header>
+            <div class="headerOne">
+                <img src="../img/logo_hyblab.png" alt="logo hyblab"></img>
+            </div>
+            <div class="headerThree">
+                hyblab
+            </div>
+        </header>
+        <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
+        <main class = "swiper-wrapper">
+            <section id="first-slide" class="swiper-slide">
+                <!-- le footer sera rempli à partir de données lues dans un fichier Json-->
+                <div class="Elu">
+                    Elu
+                </div>
+                <div class="textElu">
+                    <p class="bubble-text">
+                        Lorem ipsum dolor sit amet consectetur. Morbi varius at molestie in turpis. Egestas platea placerat amet neque a cras pharetra interdum phasellus. Dignissim consectetur mauris turpis integer. Sed arcu gravida pellentesque vestibulum diam a viverra elit. Mi suscipit sed gravida faucibus pulvinar. Pellentesque cras a tincidunt eget. Amet.
+                    </p>
+                </div>
+                <footer>
+                    <p></p>
+                </footer>
+            </section>
+            <section id="second-slide" class="swiper-slide">
+                <!-- le footer sera rempli à partir de données lues dans un fichier Json-->
+                <div class="textElu">
+                    <p class="bubble-text">
+                        Lorem ipsum dolor sit amet consectetur. Morbi varius at molestie in turpis. Egestas platea placerat amet neque a cras pharetra interdum phasellus. Dignissim consectetur mauris turpis integer. Sed arcu gravida pellentesque vestibulum diam a viverra elit. Mi suscipit sed gravida faucibus pulvinar. Pellentesque cras a tincidunt eget. Amet.
+                    </p>
+                </div>
+                <div class="Elu">
+                    Elu
+                </div>
+                <footer>
+                    <p></p>
+                </footer>
+            </section>
 
+        </main>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
 </body>
 </html>

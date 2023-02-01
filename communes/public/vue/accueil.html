@@ -1,11 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="../js/caroussel.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/accueil.css">
+
 </head>
 <body>
+<!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
+<div id="container">
+    <div id="mySwiper" class="swiper">
+        <header>
+            <div class="headerOne">
+                <img src="../img/logo_hyblab.png" alt="logo hyblab"></img>
+            </div>
+            <div class="headerThree">
+                hyblab
+            </div>
+        </header>
+        <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
+        <main>
+            <div class="carousel" id="carousel">
+                <div class="carousel-item" id="ville"><img src="../img/friche.svg" alt=""></div>
+                <div class="carousel-item" id="friche"><img src="../img/ville.svg" alt=""></div>
+                <div class="carousel-item" id="foret"><img src="../img/ville.svg" alt=""></div>
+            </div>
+            <div id="carousel-text">lorem ipsum</div>
 
+
+        </main>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
 </body>
 </html>
