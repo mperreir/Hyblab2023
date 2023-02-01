@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/slide1.js" defer></script>
   <script src="js/slide2.js" defer></script>
@@ -27,15 +28,20 @@
         <main class = "swiper-wrapper">
             <section id="first-slide" class="swiper-slide">
                 <header>
-                    <h1 id="titre">Welcome to</h1>
+                  <button class="retour">Retour</button>
+                    <h1 id="titre">Welcome</h1>
                 </header>
-                
-                <img src="img/logo_hyblab.png" id="logo-hyblab" alt="logo hyblab"></img>
+                <div>
+                  <p>“OBJECTIF SOLEIL
+                    Le défi citoyen pour développer l’énergie solaire autour de chez vous”
+                    </p>
+                  <div class="nacelle"><p>Panneaux sur votre toit, projet collectif, aides… Commencez le voyage pour trouver des réponses sur-mesure.</p></div>
+                  </div>
+               
 
-
-                <!-- le footer sera rempli à partir de données lues dans un fichier Json-->
+              <!-- le footer sera rempli à partir de données lues dans un fichier Json-->
                 <footer>
-                  <p></p>
+                  <button>Commencer</button>
                 </footer>
             </section>
             <section id="second-slide" class="swiper-slide">

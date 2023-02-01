@@ -1,4 +1,8 @@
 /* ------- Important ! Please at least keep the last part of this CSS ----------- */
+
+p{
+    font-size: 30px;
+}
 /* ------- that adapts content width and height so that aspect ratio  ----------- */
 /* ------- is kept between 9/16 a,d 3/4 (portait orientation)         ----------- */
 
@@ -31,7 +35,6 @@ body{
     text-align: center;
     font-size: 25%;
     position: absolute;
-    top:60%;
     width: 100%
 }
 /* -------------- End of Loader --------------*/
@@ -57,25 +60,23 @@ body{
 
 /* Most of the elements in this demo are absolute positionned with percentages */
 #first-slide header, #second-slide header{
+    margin-bottom: 20px;
     text-align: center;
     width: 100%;
     top: 10%;
-    position: absolute;
+    
     font-size: 30%;
     z-index: 2;
 }
 
-#logo-hyblab{
-    text-align: center;
-    width: 50%;
-    left: 50%;
-    top: 50%;
-    margin-left:-25%;
-    margin-top:calc(-7.5% * 9 / 16 ); /* margins are relative to the element width... :-( */
+div{
+    position: relative;
+}
+
+button.retour{
+    left: 0%;
+    margin: 10px ;
     position: absolute;
-    font-size: 50%;
-    z-index: 2;
-    cursor: pointer;
 }
 
 /* Last slide image is centered */
@@ -89,7 +90,7 @@ body{
 }
 
 main > section{
-    background-image: url('../img/background.svg');
+    /*background-image: url('../img/background.svg');*/
     background-size: 100% 100%;
 }
 
