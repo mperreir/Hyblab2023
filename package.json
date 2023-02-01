@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "addresser": "^1.1.19",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "node-wget": "^0.4.3"
   },
   "author": "MPDS",
   "license": "MIT"
