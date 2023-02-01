@@ -25,7 +25,7 @@ app.get('/searchAddress', async function (req, res) {
 // Retrieves all data regarding the input
 app.get('/addressInfo', async function (req, res) {
     // Uses our parser to turn the text input into a valid address
-    let location = await getAddressFromText(req.body['searchText']);
+    let location = (await getAddressFromText(req.body['searchText']))[0];
 
     // Retrieves the density of the town the person lives in
     let density = data.find(e => e["Libellé commune"] === location.address.town)["Degré de Densité"];
