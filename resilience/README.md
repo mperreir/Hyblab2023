@@ -6,10 +6,20 @@ Sujet :
 
 Nom d'équipe :
 
-Participants : 
+Participants :
 
 - AGR :
 
 - EPJT
 
 - Polytech :  
+
+## Database
+
+Création de la based edonnées avant de lancer le serveur :
+
+```{sql}
+sqlite3 database.db
+> .read createDB.sql
+> .exit
+```
