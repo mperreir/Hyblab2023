@@ -7,10 +7,9 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "addresser": "^1.1.19",
     "express": "^4.18.2"
   },
   "author": "MPDS",
-  "license": "MIT",
-  "devDependencies": {
-  }
+  "license": "MIT"
 }
