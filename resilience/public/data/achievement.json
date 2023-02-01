@@ -1,0 +1,22 @@
+{
+    "badges":[
+        {
+            "name": "Survivant",
+            "img": "survivant.png"
+        }
+    ],
+    "achievements":[
+        {
+            "name": "1",
+            "shortDescription": "",
+            "longDescription": "",
+            "links": []
+        },
+        {
+            "name": "2",
+            "shortDescription": "",
+            "longDescription": "",
+            "links": []
+        }
+    ]
+}

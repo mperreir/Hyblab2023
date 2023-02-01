@@ -1,0 +1,17 @@
+{
+    "place" : "AGR",
+    "names" : {
+        "0" :"Tristan",
+        "1" : "Guillaume"
+    },
+    "message" : [
+        {
+            "name" : "Tristan",
+            "message" : "Bonjour Guillaume !"
+        },
+        {
+            "name" : "Guillaume",
+            "message" : "Bonjour Tristan !"
+        }
+    ]
+}
