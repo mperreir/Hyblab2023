@@ -16,7 +16,7 @@ module.exports = function (param) {
 
         singleton = {
             Vote: {
-                fromId: (id) => dbget('SELECT * FROM user WHERE id = ?', [id]),
+                fromId: (id) => dbget('SELECT * FROM vote WHERE id = ?', [id]),
 
                 getAll: () => dball('SELECT * FROM vote ORDER BY nb DESC'),
 
@@ -26,7 +26,6 @@ module.exports = function (param) {
     }
 
     function dbget(sql, ...params) {
-        debugLine(sql, ...params);
         return new Promise(function (resolve, reject) {
             db.prepare(sql).get(...params, function (err, row) {
                 if (err) {
@@ -38,7 +37,6 @@ module.exports = function (param) {
     }
 
     function dball(sql, ...params) {
-        debugLine(sql, ...params);
         return new Promise(function (resolve, reject) {
             db.prepare(sql).all( ...params, function (err, row) {
                 if (err) {
@@ -50,7 +48,6 @@ module.exports = function (param) {
     }
 
     function dbrun(sql, ...params) {
-        debugLine(sql, ...params);
         return new Promise(function (resolve, reject) {
             db.prepare(sql).run( ...params, function (err) {
                 if (err) {

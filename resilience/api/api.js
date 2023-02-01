@@ -1,31 +1,27 @@
 'use strict';
 
-const app = require('express');
-const { json } = require('express');
+const app = require( 'express' )();
 const path = require('path');
 
-const routeur = app.Router();
-const db = require('../db.js')
+const db = require('../db.js')('db.db')
 
-module.export = () => {
-    // Get partner's topic from folder name
-    let topic = path.basename(path.join(__dirname, '/..'))
+// Get partner's topic from folder name
+let topic = path.basename(path.join(__dirname, '/..'))
 
-    // Sample endpoint that sends the partner's name
-    routeur.get('/topic', function (req, res) {
-        // Send it as a JSON object
-        res.json({ 'topic': topic });
-    });
+// Sample endpoint that sends the partner's name
+app.get('/topic', function (req, res) {
+    // Send it as a JSON object
+    res.json({ 'topic': topic });
+});
 
-    routeur.get('/vote', async function (req, res) {
-        const votes = await db.Vote.getAll();
-        res.json(votes);
-    });
+app.get('/vote', async function (req, res) {
+    const votes = await db.Vote.getAll();
+    res.json(votes);
+});
 
-    routeur.post('/vote', async function (req, res) {
-        await db.Vote.addVote(req.id);
-    });
+app.post('/vote', async function (req, res) {
+    await db.Vote.addVote(req.id);
+});
 
-    // Export our API
-    return routeur;
-}
+// Export our API
+module.exports = app;
