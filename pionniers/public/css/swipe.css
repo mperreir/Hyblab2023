@@ -61,11 +61,11 @@ body {
     filter: blur(1px) grayscale(10%);
 }
 .carousel__item[data-pos="-1"] {
-    transform: translateX(-10%) scale(0.9);
+    transform: translateX(-15%) scale(0.9);
     z-index: 4;
 }
 .carousel__item[data-pos="1"] {
-    transform: translateX(10%) scale(0.9);
+    transform: translateX(15%) scale(0.9);
     z-index: 4;
 }
 .carousel__item[data-pos="-2"], .carousel__item[data-pos="2"] {
@@ -73,11 +73,11 @@ body {
     filter: blur(3px) grayscale(20%);
 }
 .carousel__item[data-pos="-2"] {
-    transform: translateX(-20%) scale(0.8);
+    transform: translateX(-30%) scale(0.8);
     z-index: 3;
 }
 .carousel__item[data-pos="2"] {
-    transform: translateX(20%) scale(0.8);
+    transform: translateX(30%) scale(0.8);
     z-index: 3;
 }
 
