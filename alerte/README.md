@@ -1,15 +1,15 @@
 # Descriptif du projet
 
-Porteur de projet :
+Porteur de projet : Displate
 
 Sujet :
 
-Nom d'équipe :
+Nom d'équipe : La boite à MEUH
 
-Participants : 
+Participants :
 
-- AGR :
+- AGR : Fantine GAUTHIER, Tom GRASSIOT
 
-- EPJT
+- EPJT : Laura BLAIRET
 
-- Polytech :  
+- Polytech : Corentin PINGUET, Tanguy SERRAND, Enzo SABINO, Léo POINET, Simon LEBOUCHER
