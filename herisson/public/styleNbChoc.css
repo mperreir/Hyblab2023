@@ -1,0 +1,38 @@
+body
+{
+    background-color: #FBC5EB;
+    font-family: 'Prompt', sans-serif;
+    color : #0B6E5F;
+}
+
+#nbChoc
+{
+    font-size: 17em;
+    line-height: 0.8em;
+    margin: auto;
+    font-weight: 700;
+    font-family: 'Prompt', sans-serif;
+}
+
+div
+{
+    text-align: center;
+}
+
+#texteExplication
+{
+    font-size: 20px;
+    margin-left : 3em;
+    margin-right : 3em;
+}
+
+#texteDanger
+{
+    font-size: 20px;
+    margin: 7em 3em 1em;
+}
+
+#nbDanger
+{
+    font-weight: 700;
+}
