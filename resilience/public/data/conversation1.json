@@ -4,16 +4,30 @@
         "0": "Tristan",
         "1": "Maxime"
     },
-    "message": [
+    "messages": [
         {
             "name": "Tristan",
-            "message": "Bonjour Maxime !",
-            "answer": []
+            "text": "Bonjour Maxime !"
         },
         {
             "name": "Maxime",
-            "message": "Bonjour Tristan !",
-            "answer": []
+            "text": "Bonjour Tristan !"
+        },
+        {
+            "name": "Tristan",
+            "text": "Commen vas-tu ?"
+        },
+        {
+            "name": "Maxime",
+            "text": "Très bien et toi ?"
+        },
+        {
+            "name": "Tristan",
+            "text": "Très bien également ! Vas-tu au volley mardi prochain ?"
+        },
+        {
+            "name": "Maxime",
+            "text": "Oui, bien sûr !"
         }
     ]
 }
