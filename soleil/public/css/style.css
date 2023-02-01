@@ -64,6 +64,10 @@ header{
     width: 35%;
   }
 
+  #colonne3{
+    width: 27%;
+  }
+
   #jauge{
     margin-top: 20px;
     height: 600px;
@@ -194,7 +198,7 @@ main > section{
 }
 
 /* Footer of last slide is at the bottom and content is centered */
-#accueil footer{
+#accueil footer, #logement footer, #pente footer{
     bottom: 5%;
     position: absolute;
     box-sizing: border-box; /* So that padding is not added to width (and width: 100% works) */
