@@ -11,7 +11,15 @@ app.use(express.json());
 
 // Retrieves a correct match for the address and sends it
 app.get('/searchAddress', async function (req, res) {
-    res.json(await getAddressFromText(req.body['searchText']));
+    const addressList = await getAddressFromText(req.body['searchText']);
+
+    const output = [];
+
+    addressList.forEach(elt => {
+        output.push(elt.address.address + " " + elt.address.zip_code + " " + elt.address.town);
+    });
+
+    res.json(output);
 });
 
 // Retrieves all data regarding the input
