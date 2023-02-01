@@ -1,7 +1,7 @@
 /* ------- Important ! Please at least keep the last part of this CSS ----------- */
 
 p{
-    font-size: 30px;
+    font-size: 15px;
 }
 /* ------- that adapts content width and height so that aspect ratio  ----------- */
 /* ------- is kept between 9/16 a,d 3/4 (portait orientation)         ----------- */
@@ -69,6 +69,8 @@ body{
     z-index: 2;
 }
 
+/*mes ajouts*/
+
 div{
     position: relative;
 }
@@ -78,6 +80,44 @@ button.retour{
     margin: 10px ;
     position: absolute;
 }
+
+/* infobulle */
+.conteneur {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    overflow: visible;
+    }
+    
+    .conteneur .objet_vise {
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    }
+    
+    .conteneur .objet_vise:hover {
+    /* ici, on peut modifier l'objet visé au hover si on le veut. Ici, je change sa couleur!*/
+    background-color: red;
+    }
+    
+    .conteneur .infobulle {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    width: 200px;
+    height: 100px;
+    border-radius: 100px / 50px;
+    background-color: #C1BFBF;
+    opacity: 0;
+    visibility: hidden;
+    }
+    
+    .conteneur:hover .infobulle {
+    opacity: 1;
+    visibility: visible;
+    z-index: 999;
+    }
+    
 
 /* Last slide image is centered */
 #img-fini{
