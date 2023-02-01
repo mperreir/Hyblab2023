@@ -4,7 +4,7 @@ body {
 }
 
 .swiper-container {
-    background: #eee;
+    background: #FBC5EB;
     font-family: Prompt, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #0B6E5F;
@@ -16,6 +16,7 @@ body {
     width: 100%;
     height: 100%;
 }
+
 
 .swiper-slide {
     text-align: center;
@@ -35,8 +36,16 @@ body {
     object-fit: cover;
 }
 
+.swiper-slide .commune {
+    color: white;
+    margin-top: -80%;
+    font-size: 3em;
+}
+
 .swiper-slide h1 {
     position: absolute;
+    margin-top: -65%;
+    font-size: 2.5em;
 }
 
 .swiper {
@@ -59,19 +68,22 @@ body {
     margin-top: 70%;
     border-radius: 40px;
     width: 70%;
+    height: 5%
 }
 
 .button {
     background-color: #FBC5EB;
     color: #0B6E5F;
-    border: 2px solid #0B6E5F;
+    border: 7px solid #0B6E5F;
 }
 
 .decouvrir {
-    font-family: 'Prompt', sans-serif;
+    font-family: Prompt, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 300%;
 }
 
 .button:hover {
     background-color: #0B6E5F;
     color: white;
 }
+
