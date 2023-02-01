@@ -16,23 +16,31 @@ Participants :
 
 # Lancement
 
+## Lancement locale
 
-### Il faut avoir pm2 d'installé
+### Installer pm2
 `npm install pm2 -g`
 
-### installer les modules
-
-dans la racine et le dossier herisson
+### Installer les modules dans la racine et le dossier herisson
 `npm install`
 
-### Lancer le serveur
-dans la racine : 
+### Lancer le serveur dans la racine : 
 `pm2 start server.js --name herisson`
 
-### Lancer le client
+Aller sur http://127.0.0.1:8080/herisson/
 
-aller sur http://127.0.0.1:8080/herisson/
+## Lancer en ligne
 
+### SSH
+Aller sur : https://hyblab.polytech.univ-nantes.fr/ssh/ <br>
+login : herisson <br>
+mdp : hyblab4herisson
+
+### Lancement
+
+`pm2 start server.js --name herisson`
+
+Aller sur : https://hyblab.polytech.univ-nantes.fr/herisson/
 
 # Commandes utiles
 
