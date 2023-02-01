@@ -5,7 +5,7 @@ body {
 
 .swiper-container {
     background: #eee;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Prompt, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #0B6E5F;
     margin: 0;
@@ -35,7 +35,43 @@ body {
     object-fit: cover;
 }
 
+.swiper-slide h1 {
+    position: absolute;
+}
+
 .swiper {
     margin-left: auto;
     margin-right: auto;
+}
+
+
+.button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-top: 70%;
+    border-radius: 40px;
+    width: 70%;
+}
+
+.button {
+    background-color: #FBC5EB;
+    color: #0B6E5F;
+    border: 2px solid #0B6E5F;
+}
+
+.decouvrir {
+    font-family: 'Prompt', sans-serif;
+}
+
+.button:hover {
+    background-color: #0B6E5F;
+    color: white;
 }
