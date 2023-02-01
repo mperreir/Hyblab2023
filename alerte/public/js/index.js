@@ -2,8 +2,8 @@
 
 // Init of the (touch friendly) Swiper slider
 const swiper = new Swiper("#mySwiper", {
-  direction: "vertical",
-  mousewheel: true,
+  direction: "horizontal",
+  mousewheel: false,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -11,7 +11,7 @@ const swiper = new Swiper("#mySwiper", {
 });
 
 swiper.on("slideChange", function () {
-  switch( swiper.activeIndex ) {
+  switch (swiper.activeIndex) {
     case 0:
       initSlide1();
       break;
@@ -23,14 +23,14 @@ swiper.on("slideChange", function () {
 
 // Wait for the content to preload and display 1st slide
 // Here we simulate a loading time of one second
-setTimeout(() => { 
+setTimeout(() => {
   // fade out the loader "slide"
   // and send it to the back (z-index = -1)
   anime({
     delay: 1000,
     targets: '#loader',
     opacity: '0',
-    'z-index' : -1,
+    'z-index': -1,
     easing: 'easeOutQuad',
   });
   // Init first slide

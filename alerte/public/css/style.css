@@ -77,12 +77,28 @@ footer button,
     height: 100%;
 }
 
-footer button {
+footer>button {
     background-image: url('../img/main_button.svg');
-    min-height: 50px;
+    background-position: center center;
+    background-size: cover;
+
+    max-height: 50px;
     border-radius: 25px;
 }
 
+#networks {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#twitter {
+    margin-left: 12px;
+    margin-right: 10px;
+}
 
 /* Swiper slider. Need to fill the container */
 #mySwiper {
