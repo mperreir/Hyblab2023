@@ -2,39 +2,41 @@
 
 // async init function (because of the awaits on fetches)
 const initSlide1 = async function(){
-  // Get logo element
-  const logo = document.querySelector('#logo-hyblab');
-
-  // (Re)set initial scale of logo
-  logo.setAttribute('style', 'transform :scale(1);');
-
-  // Animate hyblab logo and make shrink on click
-  anime({
-    targets: '#logo-hyblab',
-    scale: 1.2,
-    easing: 'easeInOutQuad',
-    direction: 'alternate',
-    loop: true
-  });
-
-  // Add click listener
-  logo.addEventListener('click', () => {
-    anime({
-        targets: '#logo-hyblab',
-        scale: 0
-      });
-    swiper.slideNext()
-  });
-
+  /*
   // Retrieve the partner's topic from our API
   let response = await fetch('api/topic');
   const data1 = await response.json();
+   */
+  let response = await fetch('data/data.json');
+  const data = await response.json();
 
-  // Get some dummy data
-  response = await fetch('data/dummy.json');
-  const data2 = await response.json();
+  function mise_en_forme(data) {
+    document.querySelector('#introduction').innerHTML = data.intro;
+    const titre = document.querySelector('#titre');
+    titre.innerHTML = data.name.toUpperCase();
+    titre.style.color = data.main_color;
+    document.querySelector('#logo-environment')
+    document.querySelector('.swiper-pagination-bullet-active').style.backgroundColor = data.main_color;
+    document.querySelector('.swiper-wrapper section').style.backgroundColor = data.background_color;
+    document.querySelector('#first-slide footer').style.backgroundColor = data.main_color;
 
-  // Update the DOM to insert topic and data
-  const footer = document.querySelector('footer p');
-  footer.textContent = `Our topic is "${data1.topic}" and here is "${data2.message}" retrieved on the server.`;
+    const objectElement = document.querySelector('#logo-environment');
+    objectElement.data = data.file_name;
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', objectElement.data, true);
+    xhr.onreadystatechange = function () {
+      if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+        const parser = new DOMParser();
+        const svgDoc = parser.parseFromString(this.responseText, 'image/svg+xml');
+        const elements = svgDoc.querySelectorAll('.st0');
+        for (let i = 0; i < elements.length; i++) {
+          elements[i].style.fill = data.main_color;
+        }
+        objectElement.data = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(new XMLSerializer().serializeToString(svgDoc));
+      }
+    };
+    xhr.send();
+  }
+
+  mise_en_forme(data.filter(function(item){return item.name === "La mer";})[0]);
 };
