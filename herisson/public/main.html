@@ -4,27 +4,54 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="styleMain.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scriptMain.js"></script>
 
 </head>
+<header>
+    <h1>Hyblab 2023</h1>
+</header>
 <body>
-
-    <div style="text-align: center;">
-         <p id="text">Indiquez la commune ou le code postal</p>
-         <form id="search" action="commune.html" method="get" name="RechercheCommune">
-             <input id="searchBar" type="text" name="searchCommune" placeholder="Ex : 75001 ou Paris">
-             <input type="submit" value="Rechercher">
-         </form>
-         <div style="display: flex; align-items: center;">
-             <label style="margin-right: auto;" for="switch">Code Postal</label>
-             <label id="switch">
-                 <input type="checkbox">
-                 <span class="slider round"></span>
-             </label>
-             <label style="margin-left: auto;" for="switch">Animal</label>
-         </div>
+    <div class="texte-intro">
+        <p>
+            aaa<br/>
+            aaa<br/>
+            aaa<br/>
+            aaa<br/>
+        </p>
     </div>
+    <div style="text-align: center;">
+<!--         <p id="text">Indiquez la commune ou le code postal</p>-->
+        <form class="search" action="commune.html" method="get" name="RechercheCommune">
+            <label>
+                <input class="searchBar" type="text" name="searchCommune" placeholder="Nom de ta commune">
+            </label>
+            <button class="search-btn">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+
+        <form class="search" action="animal.html" method="get" name="RechercheCommune">
+            <label>
+                <input class="searchBar" type="text" name="searchCommune" placeholder="Nom de ton animal">
+            </label>
+            <button class="search-btn">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+
+<!--         <div style="display: flex; align-items: center;">-->
+<!--             <label style="margin-right: auto;" for="switch">Code Postal</label>-->
+<!--             <label id="switch">-->
+<!--                 <input type="checkbox">-->
+<!--                 <span class="slider round"></span>-->
+<!--             </label>-->
+<!--             <label style="margin-left: auto;" for="switch">Animal</label>-->
+<!--         </div>-->
+    </div>
+
+    <div class="mascotte"></div>
 
 </body>
 </html>
