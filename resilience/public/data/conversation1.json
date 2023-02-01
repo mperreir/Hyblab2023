@@ -7,11 +7,13 @@
     "message": [
         {
             "name": "Tristan",
-            "message": "Bonjour Maxime !"
+            "message": "Bonjour Maxime !",
+            "answer": []
         },
         {
             "name": "Maxime",
-            "message": "Bonjour Tristan !"
+            "message": "Bonjour Tristan !",
+            "answer": []
         }
     ]
 }

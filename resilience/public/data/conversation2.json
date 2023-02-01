@@ -7,11 +7,29 @@
     "message": [
         {
             "name": "Tristan",
-            "message": "Bonjour Guillaume !"
+            "message": "Bonjour Guillaume !",
+            "answer": []
         },
         {
             "name": "Guillaume",
-            "message": "Bonjour Tristan !"
+            "message": "Bonjour Tristan !",
+            "answer": []
+        },
+        {
+            "name": "Guillaume",
+            "message": "Comment vas-tu ?",
+            "answer": [
+                {
+                    "name": "Tristan",
+                    "message": "Bien !",
+                    "answer": []
+                },
+                {
+                    "name": "Tristan",
+                    "message": "Pas bien !",
+                    "answer": []
+                }
+            ]
         }
     ]
 }
