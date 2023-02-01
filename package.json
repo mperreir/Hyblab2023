@@ -7,10 +7,9 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "googleapis": "^110.0.0"
   },
   "author": "MPDS",
-  "license": "MIT",
-  "devDependencies": {
-  }
+  "license": "MIT"
 }

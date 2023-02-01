@@ -31,10 +31,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // TODO : Thèmes à récupérer depuis l'API de Marin (fonction fetch)
     const themesTest = ["économie circulaire", "alimentation", "mobilité", "industrie", "numérique", "énergie"];
 
-    const listeThemes = document.querySelector('#liste-theme');
+    const listeThemes = document.querySelector('#liste-theme ul');
 
     themesTest.forEach((theme) => {
-        console.log("Le thème est", theme);
         const customButton = createThemeButton(theme);
         customButton.addEventListener('change', onCheck);
         listeThemes.append(customButton);

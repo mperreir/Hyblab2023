@@ -11,17 +11,19 @@
 
 :root {
     /* Couleurs catégories */
-    --orange: #F6AE0A;
-    --caca-doie: #C9AE37;
-    --vert: #9CAF65;
-    --turquoise: #6FAF92;
-    --cyan: #42B0C0;
-    --bleu-clair: #15B0ED;
+    --orange: rgba(246, 174, 10, 1);
+    --caca-doie: rgba(201, 174, 55, 1);
+    --vert: rgba(156, 175, 101, 1);
+    --turquoise: rgba(111, 175, 146, 1);
+    --cyan: rgba(66, 176, 192, 1);
+    --bleu-clair: rgba(21, 176, 237, 1);
+
+
 
     /* Interface */
     --blanc-fond: #ffffff;
-    --gris-clair: #DFDFDF;
-    --bleu-fonce: #006A82;
+    --gris-clair: #F8F8F8;
+    --bleu-fonce: #006982;
 }
 
 body {
@@ -33,6 +35,10 @@ body {
 
 ul {
     list-style: none;
+}
+
+h2 {
+    font-size: 1em;
 }
 
 .flex-column {
@@ -61,11 +67,35 @@ ul {
     align-items: center;
 }
 
+.justify-content-flex-end {
+    justify-content: flex-end;
+}
+
 #container {
     background-color: var(--blanc-fond);
 }
 
+.bouton-rond {
+    font-family: 'Poppins', sans-serif;
+    color: var(--bleu-fonce);
+    border-radius: 500px;
+    padding: 2%;
+    border: none;
+    background: var(--blanc-fond);
+    font-size: 0.7em;
+}
 
+.rainbow-background {
+    background-image: url("../img/rainwbow_background.svg");
+}
+
+.italic {
+    font-style: italic;
+}
+
+.gras {
+    font-weight: bold;
+}
 
 
 /* ---------- Important media queries for easy responsive content :-) ----------------- */

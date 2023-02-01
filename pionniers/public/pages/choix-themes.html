@@ -21,18 +21,27 @@
     <title>Thème</title>
 </head>
 <body>
-<div id="container">
-    <header>
-        <button>Passer le filtrage</button>
+<div id="container" class="flex-column align-items-center">
+    <header class="flex-column justify-content-flex-end">
+        <h2>Je suis intéressé par :</h2>
     </header>
 
-    <ul id="liste-theme" class="flex-column flex-column justify-content-space-between align-items-center">
+    <div class="rainbow-background flex-column align-items-center justify-content-space-around" id="partie-basse">
+        <section id="liste-theme" class="flex-column justify-content-center align-items-center">
+            <ul class="flex-column justify-content-space-between align-items-center">
 
-    </ul>
+            </ul>
+        </section>
 
-    <footer>
-        <button onclick="window.location.href = './swipe.html';">Valider</button>
-    </footer>
+        <footer class="flex-row align-items-center justify-content-space-around">
+            <button onclick="window.location.href = './swipe.html'" class="bouton-rond">Voir la carte</button>
+            <button onclick="window.location.href = './swipe.html'" class="bouton-rond">
+                Voir les <span class="italic">
+                            <span class="gras">Pro</span>fils
+                        </span>
+            </button>
+        </footer>
+    </div>
 </div>
 
 </body>
