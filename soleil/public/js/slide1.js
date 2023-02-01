@@ -2,12 +2,10 @@
 
 // async init function (because of the awaits on fetches)
 const initSlide1 = async function(){
-  $(document).ready(function () {
     $("#accueil button").click(function(){
       swiper.slideNext()
       initSlide2();
     });
-  });
   
   // Get logo element
   //const logo = document.querySelector('#logo-hyblab');
