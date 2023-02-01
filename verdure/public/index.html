@@ -12,6 +12,7 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/slide1.js" defer></script>
   <script src="js/slide2.js" defer></script>
+  <script src="js/slidequestion.js" defer></script>
   <script src="js/index.js" defer></script>
 </head>
 <body>
@@ -25,6 +26,8 @@
       <div id="mySwiper" class="swiper">
         <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
         <main class = "swiper-wrapper">
+
+
             <section id="first-slide" class="swiper-slide">
                 <header>
                     <h1 id="titre">Welcome to</h1>
@@ -38,6 +41,10 @@
                   <p></p>
                 </footer>
             </section>
+
+
+
+
             <section id="second-slide" class="swiper-slide">
                 <header>
                   <h1>This was...</h1>
@@ -69,7 +76,27 @@
                           </ul>
                 </footer>
             </section>
+
+
+          <section id="third-slide" class="swiper-slide">
+            
+            <object class = "indic" type="image/svg+xml" data="./img/icone_click.svg"></object>
+            
+
+              <div id = "question">
+                <p>TEST TEST TEST TEST<p>
+                <div id = "reponse">
+                  <p id = "gauche">REP 1</p>
+                  <p id = "droite">REP 2</p>
+                </div>
+              </div>
+
+          </section>
+
+
         </main>
+
+
         <div class="swiper-pagination"></div>
     </div>
   </div>

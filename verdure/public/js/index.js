@@ -1,7 +1,7 @@
 "use strict";
 
 // Init of the (touch friendly) Swiper slider
-const swiper = new Swiper("#mySwiper", {
+let swiper = new Swiper("#mySwiper", {
   direction: "vertical",
   mousewheel: true,
   pagination: {
@@ -17,6 +17,9 @@ swiper.on("slideChange", function () {
       break;
     case 1:
       initSlide2();
+      break;
+    case 2: 
+      initSlide3();
       break;
   }
 });
