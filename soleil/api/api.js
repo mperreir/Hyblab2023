@@ -25,46 +25,47 @@ app.get('/addressInfo', async function (req, res) {
     res.json({location, 'density': density});
 });
 
-
 // Retrieve a legit address from text input
 async function getAddressFromText(text) {
     const apiCall = await NominatimJS.search({
         q: text
     });
 
-    let address = {
-        'address': "",
-        'zip_code': 0,
-        'town': ""
-    };
+    const result = [];
 
-    const addressInfo = apiCall[0].display_name.split(', ');
+    apiCall.forEach(elt => {
+        let address = {
+            'address': "",
+            'zip_code': 0,
+            'town': ""
+        };
+
+        const addressInfo = elt.display_name.split(', ');
     
-    // Security to avoid problems later on
-    if (addressInfo.pop() !== "France") return "Service not avaliable outside of France";
+        // Security to avoid problems later on
+        if (addressInfo.pop() !== "France") return "Service not avaliable outside of France";
 
-    // We need to check if the returned address starts with a number, or is just the name of the street
-    if (addressInfo[0].match(/^\d/)) {
-        console.log("Number detected");
-        address = {
-            'address': addressInfo[0] + ", " + addressInfo[1],
-            'zip_code': addressInfo.pop(),
-            'town': addressInfo[3]
-        };
-    } else {
-        console.log("No number here");
-        address = {
-            'address': addressInfo[0],
-            'zip_code': addressInfo.pop(),
-            'town': addressInfo[2]
-        };
-    }
-
-    const result = {
-        'latitude': apiCall[0].lat,
-        'longitude': apiCall[0].lon,
-        'address': address
-    };
+        // We need to check if the returned address starts with a number, or is just the name of the street
+        if (addressInfo[0].match(/^\d/)) {
+            address = {
+                'address': addressInfo[0] + ", " + addressInfo[1],
+                'zip_code': addressInfo.pop(),
+                'town': addressInfo[3]
+            };
+        } else {
+            address = {
+                'address': addressInfo[0],
+                'zip_code': addressInfo.pop(),
+                'town': addressInfo[2]
+            };
+        }
+        
+        result.push({
+            'latitude': elt.lat,
+            'longitude': elt.lon,
+            'address': address
+        });
+    });
 
     return result;
 }
