@@ -3,7 +3,7 @@
 const app = require( 'express' )();
 const path = require('path');
 
-const db = require('../db.js')('db.db')
+const db = require('../db.js')(path.join(__dirname, '../db.db'))
 
 // Get partner's topic from folder name
 let topic = path.basename(path.join(__dirname, '/..'))
