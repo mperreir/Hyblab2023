@@ -20,16 +20,14 @@ Participants :
 ### Il faut avoir pm2 d'installé
 `npm install pm2 -g`
 
+### installer les modules
+
+dans la racine et le dossier herisson
+`npm install`
 
 ### Lancer le serveur
+dans la racine : 
 `pm2 start server.js --name herisson`
-
-### Lancer l'autre serveur
-
-dans un nouveau terminal se mettre à la racine
-
-`npm install` <br>
-`npm start`
 
 ### Lancer le client
 
