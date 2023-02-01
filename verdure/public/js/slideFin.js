@@ -1,7 +1,7 @@
 "use strict";
 
 // Just animate the logo
-const initSlide2 = function(){
+const initSlideFin = function(){
   // Get img element
   const img = document.querySelector('#img-fini');
 
@@ -14,4 +14,5 @@ const initSlide2 = function(){
     translateY: 0,
     easing: 'easeOutBounce'
   });
+  
 };

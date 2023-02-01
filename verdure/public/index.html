@@ -10,9 +10,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="js/slide1.js" defer></script>
-  <script src="js/slide2.js" defer></script>
-  <script src="js/slidequestion.js" defer></script>
+  <script src="js/slideAccueil.js" defer></script>
+  <script src="js/slideQuestion.js" defer></script>
+  <script src="js/slideFin.js" defer></script>
   <script src="js/index.js" defer></script>
 </head>
 <body>
@@ -28,70 +28,102 @@
         <main class = "swiper-wrapper">
 
 
-            <section id="first-slide" class="swiper-slide">
-                <header>
-                    <h1 id="titre">Welcome to</h1>
-                </header>
-                
-                <img src="img/logo_hyblab.png" id="logo-hyblab" alt="logo hyblab"></img>
+          <section id="slideAccueil" class="swiper-slide">
+              
+            <img src="img/logo_hyblab.png" id="logo-verdure" alt="logo verdure"></img>
+            <div id="fond"></div>
 
 
-                <!-- le footer sera rempli à partir de données lues dans un fichier Json-->
-                <footer>
-                  <p></p>
-                </footer>
-            </section>
+            <div>
+              <p id="presentation-jeu">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae 
+                totam iure deserunt aspernatur quod quo, vero repellendus, placeat reiciendis 
+                rerum consequatur ipsa perferendis numquam nobis. Dolorem soluta quidem numquam commodi!
+              </p>
+            </div>
+
+            <footer>
+
+            </footer>
+            
+
+        </section>
 
 
 
+          <section id="question-slide" class="swiper-slide">
+            
+            
+            <object class = "city" type="image/svg+xml" data="./img/boulevard.svg"></object>
 
-            <section id="second-slide" class="swiper-slide">
-                <header>
-                  <h1>This was...</h1>
-                </header>
-                <img id="img-fini" src="hyblab_2023.jpg">
-                <footer id="bandeau">
-                        <!-- Logo Hyblab -->
-                          <a href="http://www.hyblab.fr/"><img id="hyblab" src="logo_hyblab.png" alt="Hyblab DataSport"></a>
-                      
-                          <!-- Les organisateurs -->
-                          <ul>
-                            <li><a href="http://www.ouestmedialab.fr/"><img src="logo_oml.png" alt="Ouest Médialab"></a></li>
-                            <li><a href="http://www.agrnantes.fr"><img src="ecoles/logo_agr.png" alt="AGR école de l'image"></a></li>
-                            <li><a href="https://epjt.fr/"><img src="ecoles/logo_epjt.svg" alt="Ecole publique de journalisme de Tours"></a></li>
-                            <li><a href="http://www.polytech.univ-nantes.fr/"><img src="ecoles/logo_polytech.png" alt="Polytech Nantes"></a></li>
-                          <!-- Les autres logos -->
-                          <ul>
-                            <!-- Logos CC et opensource -->
-                            <li>
-                            <ul>
-                              <li class="stacked"><img id="cc" src="logo_cc.png" alt="Creative commons"></li>
-                              <li class="stacked"><img id="opensource" src="logo_opensource.png" alt="Open source"></li>
-                            </ul>
-                            </li>
-                            <!-- Logo de votre porteur de projet -->
-                            <li><a href="https://leplan.studio/"><img src="./img/LOGO_LEPLAN3.png" alt="Logo de mon porteur de projet"></a></li>
-                            <!-- Partenaires institutionnels -->
-                            <li><a href="http://www.nantesmetropole.fr/"><img class="institutionnel" src="institutionnels/logo_nantesmetropole.png" alt="Nantes Métropole"></a></li>
-                          </ul>
-                </footer>
-            </section>
-
-
-          <section id="third-slide" class="swiper-slide">
+            <div id = "question">
+              <p>TEST TEST TEST TEST<p>
+              <div id = "reponse">
+                <p id = "gauche">REP 1</p>
+                <p id = "droite">REP 2</p>
+              </div>
+            </div>
             
             <object class = "indic" type="image/svg+xml" data="./img/icone_click.svg"></object>
-            
-
-              <div id = "question">
-                <p>TEST TEST TEST TEST<p>
-                <div id = "reponse">
-                  <p id = "gauche">REP 1</p>
-                  <p id = "droite">REP 2</p>
-                </div>
-              </div>
-
           </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section id="end-slide" class="swiper-slide">
+            <header>
+              <h1>This was...</h1>
+            </header>
+            <img id="img-fini" src="hyblab_2023.jpg">
+            <footer id="bandeau">
+                    <!-- Logo Hyblab -->
+                      <a href="http://www.hyblab.fr/"><img id="hyblab" src="logo_hyblab.png" alt="Hyblab DataSport"></a>
+                  
+                      <!-- Les organisateurs -->
+                      <ul>
+                        <li><a href="http://www.ouestmedialab.fr/"><img src="logo_oml.png" alt="Ouest Médialab"></a></li>
+                        <li><a href="http://www.agrnantes.fr"><img src="ecoles/logo_agr.png" alt="AGR école de l'image"></a></li>
+                        <li><a href="https://epjt.fr/"><img src="ecoles/logo_epjt.svg" alt="Ecole publique de journalisme de Tours"></a></li>
+                        <li><a href="http://www.polytech.univ-nantes.fr/"><img src="ecoles/logo_polytech.png" alt="Polytech Nantes"></a></li>
+                      <!-- Les autres logos -->
+                      <ul>
+                        <!-- Logos CC et opensource -->
+                        <li>
+                        <ul>
+                          <li class="stacked"><img id="cc" src="logo_cc.png" alt="Creative commons"></li>
+                          <li class="stacked"><img id="opensource" src="logo_opensource.png" alt="Open source"></li>
+                        </ul>
+                        </li>
+                        <!-- Logo de votre porteur de projet -->
+                        <li><a href="https://leplan.studio/"><img src="./img/LOGO_LEPLAN3.png" alt="Logo de mon porteur de projet"></a></li>
+                        <!-- Partenaires institutionnels -->
+                        <li><a href="http://www.nantesmetropole.fr/"><img class="institutionnel" src="institutionnels/logo_nantesmetropole.png" alt="Nantes Métropole"></a></li>
+                      </ul>
+            </footer>
+        </section>
 
 
         </main>
