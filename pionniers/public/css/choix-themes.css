@@ -1,10 +1,18 @@
-header, footer {
-    height: 10%;
+header {
+    height: 20%;
 }
 
 #liste-theme {
-    width: 100%;
+    background: var(--gris-clair);
+    width: 75%;
+    height: 70%;
+    border-radius: 5%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#partie-basse {
     height: 80%;
+    width: 100%;
 }
 
 input[type="checkbox"] {
@@ -19,4 +27,8 @@ input[type="checkbox"] {
 
 .checked-theme {
     color: yellow;
+}
+
+footer {
+    width: 100%;
 }
