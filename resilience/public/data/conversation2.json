@@ -1,17 +1,17 @@
 {
-    "place" : "AGR",
-    "names" : {
-        "0" :"Tristan",
-        "1" : "Guillaume"
+    "place": "AGR",
+    "names": {
+        "0": "Tristan",
+        "1": "Guillaume"
     },
-    "message" : [
+    "message": [
         {
-            "name" : "Tristan",
-            "message" : "Bonjour Guillaume !"
+            "name": "Tristan",
+            "message": "Bonjour Guillaume !"
         },
         {
-            "name" : "Guillaume",
-            "message" : "Bonjour Tristan !"
+            "name": "Guillaume",
+            "message": "Bonjour Tristan !"
         }
     ]
 }
