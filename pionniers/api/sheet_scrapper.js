@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const {google} = require('googleapis');
 
-async function retrieveSheetJSON () {
+async function retrieveSheetJSON() {
     // Create a new JWT client using the key file downloaded from the Google Developers Console
     const auth = new google.auth.GoogleAuth({
         keyFile: "./pionniers/api/credentials.json",
@@ -28,27 +28,45 @@ async function retrieveSheetJSON () {
     }
 }
 
-async function exportSheetJSON () {
+async function exportSheetJSON() {
     // Retrieve data from Google Sheets
     const data = await retrieveSheetJSON();
     // Do nothing if no data
-    if (!data){
+    if (!data) {
         return;
     }
     // Write data to JSON file
     const data_json = JSON.stringify(data, null, 2);
     fs.writeFile('./pionniers/public/data/data.json', data_json, (err) => {
         if (err) throw err;
-        console.log('Data written to file');
     });
 }
 
-async function readJSONFromServerFile () {
-    // Read data from JSON file and return as JSON object
-    const data = await fs.readFileSync('./pionniers/public/data/data.json');
-    return JSON.parse(data.toString());
-}
 
 setInterval(() => {
-    exportSheetJSON().then(r => console.log("Data updated"));
-}, 1000 * 10);
+    exportSheetJSON().then(() => {
+        console.log("Data updated");
+    });
+}, 1000 * 60);
+
+
+module.exports = {
+    readJSONFromServerFile: async function () {
+        // Read data from JSON file and return as JSON object (empty object if error)
+        return new Promise((resolve, reject) => {
+            try {
+                fs.readFile('./pionniers/public/data/data.json', (error, buffer) => {
+                    if (error) {
+                        console.error(`An error occurred: ${error}`);
+                        reject({});
+                    } else {
+                        resolve(JSON.parse(buffer.toString()));
+                    }
+                });
+            } catch (error) {
+                console.error(`An error occurred: ${error}`);
+                reject({});
+            }
+        });
+    }
+}
