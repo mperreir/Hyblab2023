@@ -7,6 +7,7 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "@owsas/nominatim-js": "^1.0.1",
     "addresser": "^1.1.19",
     "express": "^4.18.2"
   },
