@@ -12,11 +12,6 @@
 <body>
 
 <div id="container">
-
-    <section id="swiper">
-
-    </section>
-
     <section id="theme-selector" class="flex-row justify-content-center">
         <ul class="flex-row justify-content-space-between">
             <li><input type="checkbox" id="cb-1"></li>
@@ -27,7 +22,17 @@
             <li><input type="checkbox" id="cb-6"></li>
         </ul>
     </section>
-
+    <section id="swiper">
+        <div class="carousel">
+            <ul class="carousel__list">
+                <li class="carousel__item" data-pos="-2">1</li>
+                <li class="carousel__item" data-pos="-1">2</li>
+                <li class="carousel__item" data-pos="0">3</li>
+                <li class="carousel__item" data-pos="1">4</li>
+                <li class="carousel__item" data-pos="2">5</li>
+            </ul>
+        </div>
+    </section>
     <footer class="flex-row justify-content-space-around">
         <button onclick="window.location.href = './profils-enregistres.html';" id="profils-enr">Profils enregistrés</button>
         <button onclick="window.location.href = './carte.html';">Voir la carte</button>
@@ -36,3 +41,4 @@
 
 </body>
 </html>
+
