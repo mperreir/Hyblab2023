@@ -20,6 +20,11 @@ h1{
     color: #e81313;
 }
 
+h2{
+    font-weight: 400;
+    font-size: 1.6em;
+}
+
 /* -------------- Loader --------------*/
 #loader{
     z-index: 2;
@@ -81,19 +86,20 @@ h1{
 }
 
 /* Footer of last slide is at the bottom and content is centered */
-#first-slide footer{
-    bottom: 0%;
+.swiper-slide main{
     position: absolute;
+    bottom: 0;
     box-sizing: border-box; /* So that padding is not added to width (and width: 100% works) */
     /*width: 100%; /* could also use  width: calc(100% - 2em) if not using box-sizing */
     border-radius: 20px;
+    width: 96%;
     font-size: 20%;
     text-align: center;
     padding: 1em 1em;
     margin-left: 2%;
     margin-right: 2%;
     margin-bottom: 15%;
-    background-color: #ffffff;
+    background-color: #6e0c0c;
 }
 
 
@@ -196,3 +202,7 @@ body{
     }
 }
 
+#map {
+    margin-top: 10px;
+    height: 350px;
+}

@@ -13,10 +13,10 @@ const swiper = new Swiper("#mySwiper", {
 swiper.on("slideChange", function () {
   switch( swiper.activeIndex ) {
     case 0:
-      initSlide1();
+      //initSlide1();
       break;
     case 1:
-      initSlide2();
+      //initSlide2();
       break;
   }
 });
