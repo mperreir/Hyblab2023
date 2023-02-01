@@ -1,7 +1,8 @@
 "use strict";
 
 // async init function (because of the awaits on fetches)
-const initSlide1 = async function(){
+const initSlide1 = async function () {
+  /*
   // Get logo element
   const logo = document.querySelector('#logo-hyblab');
 
@@ -37,4 +38,5 @@ const initSlide1 = async function(){
   // Update the DOM to insert topic and data
   const footer = document.querySelector('footer p');
   footer.textContent = `Our topic is "${data1.topic}" and here is "${data2.message}" retrieved on the server.`;
+  */
 };
