@@ -35,3 +35,25 @@ setTimeout(() => {
   // Init first slide
   initSlide1();
 }, 1000);
+
+// switch on-off du son des id='audio'
+// les interactions sont repercutés sur tous les boutons 'unlock_audio'
+const aud = document.getElementById('audio');
+let ubtn = document.querySelectorAll("#unlock_audio");
+
+ubtn.forEach(element => {
+  element.addEventListener('click', () => {
+    if(aud.muted){
+      aud.muted = false;
+      ubtn.forEach(e => {
+        e.setAttribute('src', 'img/unmute.png')
+      });
+      
+    }else{
+      aud.muted = true;
+      ubtn.forEach(e => {
+        e.setAttribute('src', 'img/mute.png')
+      });
+    }
+  });
+});
