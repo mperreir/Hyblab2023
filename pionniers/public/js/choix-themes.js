@@ -1,12 +1,12 @@
 
-function createThemeButton(nomTheme) {
+/*function createThemeButton(nomTheme) {
     const htmlString = `<li class="theme flex-row justify-content-center">
                              <img alt="theme" src="">
                              <input type="checkbox" id="cb-${nomTheme}"><label for="cb-${nomTheme}">${nomTheme}</label>
                         </li>
                         `;
     return createElementFromHTML(htmlString);
-}
+}*/
 
 
 /**
@@ -30,7 +30,7 @@ function onCheck(evnt) {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    // TODO : Thèmes à récupérer depuis l'API de Marin (fonction fetch)
+    /*// TODO : Thèmes à récupérer depuis l'API de Marin (fonction fetch)
     const themesTest = ["économie circulaire", "alimentation", "mobilité", "industrie", "numérique", "énergie"];
 
     const listeThemes = document.querySelector('#liste-theme ul');
@@ -39,5 +39,5 @@ document.addEventListener("DOMContentLoaded", function() {
         const customButton = createThemeButton(theme);
         customButton.addEventListener('change', onCheck);
         listeThemes.append(customButton);
-    })
+    })*/
 });

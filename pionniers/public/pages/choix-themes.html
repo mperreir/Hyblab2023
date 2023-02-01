@@ -21,27 +21,48 @@
     <title>Thème</title>
 </head>
 <body>
-<div id="container" class="flex-column align-items-center">
+<div id="container" class="flex-column align-items-center justify-content-space-evenly rainbow-background">
     <header class="flex-column justify-content-flex-end">
         <h2>Je suis intéressé par :</h2>
     </header>
 
-    <div class="rainbow-background flex-column align-items-center justify-content-space-around" id="partie-basse">
-        <section id="liste-theme" class="flex-column justify-content-center align-items-center">
-            <ul class="flex-column justify-content-space-around align-items-center">
+    <section id="liste-theme" class="flex-column justify-content-center align-items-center">
+        <ul class="flex-column justify-content-space-evenly align-items-center-flex-start">
+            <li class="theme flex-row justify-content-center align-items-center">
+                <img alt="alimentation" src="../img/pictogrammes_themes/alimentation.svg">
+                <p class="orange-font">Alimentation</p>
+            </li>
+            <li class="theme flex-row justify-content-center align-items-center">
+                <img alt="alimentation" src="../img/pictogrammes_themes/economie_circulaire.svg">
+                <p class="caca-doie-font">Économie circulaire</p>
+            </li>
+            <li class="theme flex-row justify-content-center align-items-center">
+                <img alt="alimentation" src="../img/pictogrammes_themes/energie.svg">
+                <p class="vert-font">Énergie</p>
+            </li>
+            <li class="theme flex-row justify-content-center align-items-center">
+                <img alt="industrie" src="../img/pictogrammes_themes/industrie.svg">
+                <p class="turquoise-font">Industrie</p>
+            </li>
+            <li class="theme flex-row justify-content-center align-items-center">
+                <img alt="mobilite" src="../img/pictogrammes_themes/mobilite.svg">
+                <p class="cyan-font">Mobilité</p>
+            </li>
+            <li class="theme flex-row justify-content-center align-items-center">
+                <img alt="numerique" src="../img/pictogrammes_themes/numerique.svg">
+                <p class="bleu-clair-font">Numérique</p>
+            </li>
+        </ul>
+    </section>
 
-            </ul>
-        </section>
-
-        <footer class="flex-row align-items-center justify-content-space-around">
-            <button onclick="window.location.href = './swipe.html'" class="bouton-rond">Voir la carte</button>
-            <button onclick="window.location.href = './swipe.html'" class="bouton-rond">
-                Voir les <span class="italic">
+    <footer class="flex-row align-items-center justify-content-space-between">
+        <button onclick="window.location.href = './swipe.html'" class="bouton-rond">Voir la carte</button>
+        <button onclick="window.location.href = './swipe.html'" class="bouton-rond">
+            Voir les <span class="italic">
                             <span class="gras">Pro</span>fils
                         </span>
-            </button>
-        </footer>
-    </div>
+        </button>
+    </footer>
 </div>
 
 </body>
