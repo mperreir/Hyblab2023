@@ -14,7 +14,7 @@ p{
 
 body{
     background-color: black;
-    color: white;
+    color: black;
     overflow: hidden;   /* to avoid slider bugs on some browsers */
     font-family: sans-serif;
 }
@@ -32,7 +32,6 @@ body{
 }
 
 div {
-    width : 85%;
     float: left;
     height: 150px;
     padding: 0 10px;
@@ -43,11 +42,6 @@ div {
 
 header{
     margin-top: 20px;
-}
-
-#choix-log{
-    width : 60px;
-    height: 30px;
 }
 
   #ligne{
@@ -108,7 +102,7 @@ header{
 
 /* the slides and the loader should fill the whole 9:16 zone */
 .swiper-wrapper section, #loader{
-    background-color: dodgerblue;
+    background-color: white;
     width: 100%;
     height: 100%;
 }
@@ -168,13 +162,6 @@ div.conteneur{
     border-radius: 100px / 50px;
     background-color: #C1BFBF;
     opacity: 0;
-    visibility: hidden;
-    }
-    
-    .conteneur:hover .infobulle {
-    opacity: 1;
-    visibility: visible;
-    z-index: 999;
     }
     
 
