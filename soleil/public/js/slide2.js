@@ -2,6 +2,13 @@
 
 // Just animate the logo
 const initSlide2 = function(){
+  $("#adresse footer button").click(function(){
+    swiper.slideNext()
+    initSlide3();
+  });
+  $("#adresse header button").click(function(){
+    swiper.slidePrev();
+  })
   // Get img element
   const img = document.querySelector('#img-fini');
 
