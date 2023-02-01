@@ -3,7 +3,7 @@
 // async init function (because of the awaits on fetches)
 const initSlide1 = async function(){
   $(document).ready(function () {
-    $("#first-slide button").click(function(){
+    $("#accueil button").click(function(){
       swiper.slideNext()
       initSlide2();
     });

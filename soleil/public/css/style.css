@@ -64,12 +64,6 @@ header{
     width: 35%;
   }
 
-  #retour{
-    position : absolute;
-    left: 7px;
-    top: 7px;
-  }
-
   #jauge{
     margin-top: 20px;
     height: 600px;
@@ -120,7 +114,7 @@ header{
 }
 
 /* Most of the elements in this demo are absolute positionned with percentages */
-#first-slide header, #second-slide header{
+#accueil header, #logement header, #second-slide header{
     margin-bottom: 20px;
     text-align: center;
     width: 100%;
@@ -200,7 +194,7 @@ main > section{
 }
 
 /* Footer of last slide is at the bottom and content is centered */
-#first-slide footer{
+#accueil footer{
     bottom: 5%;
     position: absolute;
     box-sizing: border-box; /* So that padding is not added to width (and width: 100% works) */
