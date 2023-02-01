@@ -42,14 +42,6 @@ async function exportSheetJSON() {
     });
 }
 
-
-setInterval(() => {
-    exportSheetJSON().then(() => {
-        console.log("Data updated");
-    });
-}, 1000 * 60);
-
-
 module.exports = {
     readJSONFromServerFile: async function () {
         // Read data from JSON file and return as JSON object (empty object if error)
@@ -68,5 +60,14 @@ module.exports = {
                 reject({});
             }
         });
+    },
+
+    updateJSONServerFile: function () {
+    // Retrieve data from Google Sheets and write it to JSON file every minute
+        setInterval(() => {
+            exportSheetJSON().then(() => {
+                console.log("Data updated");
+            });
+        }, 1000 * 60);
     }
 }
