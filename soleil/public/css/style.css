@@ -31,6 +31,11 @@ body{
 
 }
 
+#choix-log{
+    width : 60px;
+    height: 30px;
+}
+
 div {
     float: left;
     height: 150px;
