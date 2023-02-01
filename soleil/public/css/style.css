@@ -81,6 +81,10 @@ button.retour{
     position: absolute;
 }
 
+div.conteneur{
+    margin: auto;
+}
+
 /* infobulle */
 .conteneur {
     position: relative;
