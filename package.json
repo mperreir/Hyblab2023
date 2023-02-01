@@ -8,9 +8,10 @@
   },
   "dependencies": {
     "@owsas/nominatim-js": "^1.0.1",
-    "addresser": "^1.1.19",
+    "cross-fetch": "^3.1.5",
     "express": "^4.18.2",
-    "node-wget": "^0.4.3"
+    "node-wget": "^0.4.3",
+    "nominatim-js": "^1.0.10"
   },
   "author": "MPDS",
   "license": "MIT"
