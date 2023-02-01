@@ -15,6 +15,61 @@ body{
     font-family: sans-serif;
 }
 
+#base{
+    padding: 10px;
+    font-size: 36px;
+    text-align: center;
+}
+
+#image{
+    width : 85%;
+    height : 300px;
+
+}
+
+div {
+    float: left;
+    height: 150px;
+    padding: 0 10px;
+    font-size: 24px;
+    text-align: center;
+
+  }
+
+header{
+    margin-top: 20px;
+}
+
+  #ligne{
+    width: 90%;
+  }
+
+  #colonne1 {
+    margin-left: 10px;
+    width: 35%;
+  }
+
+  #colonne2 {
+    margin-right: 10px;
+    width: 35%;
+  }
+
+  #retour{
+    position : absolute;
+    left: 7px;
+    top: 7px;
+  }
+
+  #jauge{
+    margin-top: 20px;
+    height: 600px;
+    width: 5%;
+    background-color: blue;
+    position :absolute;
+    right : 3px;
+
+  }
+
 /* -------------- Loader --------------*/
 #loader{
     z-index: 2;
@@ -203,5 +258,6 @@ body{
     body{
         font-size: 15vw;
     }
+
 }
 
