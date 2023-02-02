@@ -41,6 +41,12 @@ h2 {
     font-size: 1em;
 }
 
+p {
+    font-size: 0.5em;
+}
+
+
+
 .flex-column {
     display: flex;
     flex-flow: column;
@@ -101,11 +107,19 @@ h2 {
 
 .rainbow-background {
     background-color: var(--blanc-fond);
-    background-image: url("../img/rainbow_background.svg");
     background-size: 100%;
-    background-position: center 60vh;
     background-repeat: no-repeat;
+}
 
+.rbg-top {
+    background-image: url("../img/rainbow_background_top.svg");
+    background-position: center -25vh;
+
+}
+
+.rbg-bottom {
+    background-image: url("../img/rainbow_background_bottom.svg");
+    background-position: center 60vh;
 }
 
 .italic {

@@ -8,12 +8,15 @@ html {
 body {
     height: 100vh;
 }
+
+#container > * {
+    width: 75%;
+}
 .carousel {
     display: flex;
     width: 100%;
     height: 100%;
     align-items: center;
-    font-family: Arial;
 }
 .carousel__list {
     display: flex;
@@ -29,11 +32,11 @@ body {
     align-items: center;
     justify-content: center;
     color: #fff;
-    font-size: 0px;
+    font-size: 0;
     width: 300px;
     height: 350px;
     border-radius: 12px;
-    box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+    box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.5);
     position: absolute;
     transition: all 0.3s ease-in;
 }
@@ -81,29 +84,61 @@ body {
     z-index: 3;
 }
 
-#theme-selector {
-    width: 100%;
-    height: 30%;
-    align-items: center;
-
-}
-
 #theme-selector ul {
-    width: 70%;
-}
-
-#theme-selector ul li {
-    border-radius: 100%;
-    /* Juste pour le test, tant qu'il y a pas d'image */
-    background-color: red;
-    width: 40px;
-    height: 40px;
-}
-
-footer {
     width: 100%;
-    height: 110%;
-    align-items: center;
+    margin-top: 2%;
+}
+
+#theme-selector ul img {
+    height: 6vh;
+}
+
+#swiper {
+    height: 50%;
+}
+
+
+
+#folder-tab {
+    width: 45%;
+    background-color: var(--gris-clair);
+    border-radius: 3vh 3vh 0 0;
+    padding: 2%;
+}
+
+#folder-back-body {
+    width: 100%;
+    height: 10vh;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--gris-clair);
+    border-radius: 0 3vh 0 0;
+
+}
+
+#folder-front-body {
+    width: 100%;
+    height: 80%;
+    background-color: var(--blanc-fond);
+    position: relative;
+    top: 25%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 3vh 3vh 0 0;
+    perspective : 600px;
+    transition: 0.5s;
+}
+
+
+/* Animation d'ouverture du dossier au passage de la souris */
+#folder-front-body:hover {
+    transform: perspective(50px) rotateX(-1deg) scale(1.1);
+}
+
+#folder-back-body:hover #folder-front-body {
+    transform: perspective(50px) rotateX(-1deg) scale(1.1);
+}
+
+#folder-tab:hover ~ * > #folder-front-body {
+    transform: perspective(50px) rotateX(-1deg) scale(1.1);
 }
 
 

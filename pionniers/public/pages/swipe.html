@@ -11,18 +11,25 @@
 </head>
 <body>
 
-<div id="container">
-    <section id="theme-selector" class="flex-row justify-content-center">
+<div id="container" class="flex-column align-items-center justify-content-space-between rainbow-background rbg-bottom">
+    <header>
+        <!--- LE LOGO -->
+    </header>
+
+    <section id="theme-selector" class="flex-column align-items-center-flex-start">
+        <p class="gras">Je modifie mes intérêts</p>
         <ul class="flex-row justify-content-space-between">
-            <li><input type="checkbox" id="cb-1"></li>
-            <li><input type="checkbox" id="cb-2"></li>
-            <li><input type="checkbox" id="cb-3"></li>
-            <li><input type="checkbox" id="cb-4"></li>
-            <li><input type="checkbox" id="cb-5"></li>
-            <li><input type="checkbox" id="cb-6"></li>
+            <li><img src="../img/pictogrammes_themes/alimentation.svg" alt="alimentation"></li>
+            <li><img src="../img/pictogrammes_themes/economie_circulaire.svg" alt="economie_circulaire"></li>
+            <li><img src="../img/pictogrammes_themes/energie.svg" alt="energie"></li>
+            <li><img src="../img/pictogrammes_themes/industrie.svg" alt="industrie"></li>
+            <li><img src="../img/pictogrammes_themes/mobilite.svg" alt="mobilite"></li>
+            <li><img src="../img/pictogrammes_themes/numerique.svg" alt="numerique"></li>
         </ul>
     </section>
+
     <section id="swiper">
+        <!--
         <div class="carousel">
             <ul class="carousel__list">
                 <li class="carousel__item" data-pos="-2">1</li>
@@ -31,11 +38,15 @@
                 <li class="carousel__item" data-pos="1">4</li>
                 <li class="carousel__item" data-pos="2">5</li>
             </ul>
-        </div>
+        </div>-->
     </section>
-    <footer class="flex-row justify-content-space-around">
-        <button onclick="window.location.href = './profils-enregistres.html';" id="profils-enr">Profils enregistrés</button>
-        <button onclick="window.location.href = './carte.html';">Voir la carte</button>
+    <footer>
+        <div id="folder-tab" class="flex-column align-items-center justify-content-center">
+            <p class="gras">Voir mes favoris</p>
+        </div>
+        <div id="folder-back-body">
+            <div id="folder-front-body"></div>
+        </div>
     </footer>
 </div>
 
