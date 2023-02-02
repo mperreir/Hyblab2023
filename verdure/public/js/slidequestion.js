@@ -14,9 +14,9 @@ const initSlideQuestion = async function(){
         indic.style.opacity= 0;
         city.style.top = "20%";
         swiper.enabled= true;
-        changementThermo(10,"blue")
-        changementMoney(90,"red")
-        changementHappy(50,"green")
+        changementThermo(10)
+        changementMoney(+10)
+        changementHappy(-40)
         swiper.enable();
   }
   )
@@ -54,17 +54,88 @@ const initSlideQuestion = async function(){
 };
 
 
-function changementThermo(quantity, color) {
-  $(".thermo").css("height", quantity+"%");
-  $(".thermo").css("background-color", color);
+function changementThermo(quantitytoAdd) {
+  var div = document.querySelector('.thermo');
+  var height = div.offsetHeight;
+  var parentHeight = div.parentNode.offsetHeight;
+
+  height = height / parentHeight * 100 ;
+
+  var new_height = quantitytoAdd  + height;
+
+  applyChange(".thermo",new_height);
 }
 
-function changementMoney(quantity, color) {
-  $(".money").css("height", quantity+"%");
-  $(".money").css("background-color", color);
+function changementMoney(quantitytoAdd) {
+  var div = document.querySelector('.money');
+  var height = div.offsetHeight;
+  var parentHeight = div.parentNode.offsetHeight;
+
+  height = height / parentHeight * 100 ;
+
+  var new_height = quantitytoAdd  + height;
+
+  applyChange(".money",new_height);
 }
 
-function changementHappy(quantity, color) {
-  $(".happy").css("height", quantity+"%");
-  $(".happy").css("background-color", color);
+function changementHappy(quantitytoAdd) {
+  var div = document.querySelector('.happy');
+  var height = div.offsetHeight;
+  var parentHeight = div.parentNode.offsetHeight;
+
+  height = height / parentHeight * 100 ;
+
+  var new_height = quantitytoAdd  + height;
+
+  applyChange(".happy",new_height);
 }
+
+function applyChange(div,new_height){
+
+
+
+  if(new_height <= 10){
+    $(div).css("height", 15+"%");
+    $(div).css("background-color", "#fc0303");
+  }
+
+  else if(new_height <= 20){
+    $(div).css("height", new_height+"%");
+    $(div).css("background-color", "#fc4503");
+  }
+
+  else if(new_height <= 30){
+    $(div).css("height", new_height+"%");
+    $(div).css("background-color", "#fc6b03");
+  }
+
+  else if(new_height <= 40){
+    $(div).css("height", new_height+"%");
+    $(div).css("background-color", "#fcc203");
+  }
+  else if(new_height <= 50){
+    $(div).css("height", new_height+"%");
+    $(div).css("background-color", "#f8fc03");
+  }
+  else if(new_height <= 60){
+    $(div).css("height", new_height+"%");
+    $(div).css("background-color", "#d2fc03");
+  }
+  else if(new_height <= 70){
+    $(div).css("height", new_height+"%");
+    $(div).css("background-color", "#a9fc03");
+  }
+  else if(new_height <= 80){
+    $(div).css("height", new_height+"%");
+    $(div).css("background-color", "#6bfc03*");
+  }
+  else if(new_height < 90){
+    $(div).css("height", new_height+"%");
+    $(div).css("background-color", "#3dfc03");
+  }
+  else{
+    $(div).css("height", 100+"%");
+    $(div).css("background-color", "#0ffc03");
+  }
+}
+
