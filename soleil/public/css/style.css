@@ -52,14 +52,9 @@ header{
     width: 90%;
   }
 
-  #colonne1 {
-    margin-left: 10px;
-    width: 35%;
-  }
-
   #colonne2 {
-    margin-right: 10px;
-    width: 35%;
+    width: 45%;
+    text-align: center;
   }
 
   #colonne3{
@@ -68,7 +63,7 @@ header{
 
   #jauge{
     margin-top: 20px;
-    height: 600px;
+    height: 60%;
     width: 5%;
     background-color: blue;
     position :absolute;
