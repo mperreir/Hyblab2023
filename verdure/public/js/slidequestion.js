@@ -14,6 +14,9 @@ const initSlideQuestion = async function(){
         indic.style.opacity= 0;
         city.style.top = "20%";
         swiper.enabled= true;
+        changementThermo(10,"blue")
+        changementMoney(90,"red")
+        changementHappy(50,"green")
         swiper.enable();
   }
   )
@@ -51,3 +54,17 @@ const initSlideQuestion = async function(){
 };
 
 
+function changementThermo(quantity, color) {
+  $(".thermo").css("height", quantity+"%");
+  $(".thermo").css("background-color", color);
+}
+
+function changementMoney(quantity, color) {
+  $(".money").css("height", quantity+"%");
+  $(".money").css("background-color", color);
+}
+
+function changementHappy(quantity, color) {
+  $(".happy").css("height", quantity+"%");
+  $(".happy").css("background-color", color);
+}

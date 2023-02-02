@@ -268,6 +268,7 @@ SLIDE QUESTION
 .city{
     position : absolute;
     top : 27%;
+    right :0;
     transition: top 3s;
     width: 100%;
 }
@@ -283,6 +284,7 @@ SLIDE ANIMATION
     text-align: center;
 
 }
+
 #bas{
     position: absolute;
     top: 50%;
@@ -309,4 +311,158 @@ SLIDE ANIMATION
     top: 41%;
     text-align: center;
     right: 10%;
+}
+
+/**********************
+********INDICATEUR*****
+***********************/
+
+.indicateur{
+    position: absolute;
+    right : 4%;
+    top : 2%;
+    height: 8%;
+    text-align: center;
+    z-index: 2;
+    cursor: pointer;
+    opacity:100
+}
+
+#thermo{
+    object-fit: fill;
+    margin: 0px;
+    padding: 0px;
+}
+
+#money{
+    position : absolute;
+    object-fit: fill;
+    right : 4%;
+    top : 12%;
+}
+
+#happy{
+    position : absolute;
+    object-fit: fill;
+    right : 4%;
+    top : 19.5%;
+}
+
+
+.containerthermo{
+    position:absolute;
+    width: 7%;
+    height: 7%;
+    right: 3%;
+    top: 2%;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 0px;
+    padding: 0px;
+}
+
+.thermo{
+    position:absolute;
+    background-color: blue;
+    width:  100%;
+    height: 80%;
+    bottom: 0px;
+    transition: height 3s, background-color 3s;
+}
+
+#thermoindic{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*THERMOMETRE*/
+.containerthermo{
+    position:absolute;
+    width: 6%;
+    height: 6%;
+    right: 4.5%;
+    top: 2%;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 0px;
+    padding: 0px;
+}
+
+.thermo{
+    position:absolute;
+    background-color: rgb(0, 0, 255);
+    width:  100%;
+    height: 80%;
+    bottom: 0px;
+    transition: height 3s, background-color 3s;
+}
+
+#thermoindic {
+    object-fit: fill;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*MONEY*/
+
+.containermoney{
+    position:absolute;
+    width: 9%;
+    height: 5%;
+    right: 3%;
+    top: 9%;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 0px;
+    padding: 0px;
+}
+
+.money {
+    position:absolute;
+    background-color: rgb(0, 0, 255);
+    width:  100%;
+    height: 80%;
+    bottom: 0px;
+    transition: height 3s, background-color 3s;
+}
+
+#moneyindic {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*HAPPY*/
+
+.containerhappy{
+    position:absolute;
+    width: 9%;
+    height: 5%;
+    right: 3%;
+    top: 15%;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 0px;
+    padding: 0px;
+}
+
+.happy {
+    position:absolute;
+    background-color: rgb(0, 0, 255);
+    width:  100%;
+    height: 80%;
+    bottom: 0px;
+    transition: height 3s, background-color 3s;
+}
+
+#happyindic {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    margin: 0px;
+    padding: 0px;
 }
