@@ -8,7 +8,7 @@ let swiper = new Swiper("#mySwiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  allowSlidePrev : false,
+  //allowSlidePrev : false,
   enabled : true
 });
 
@@ -23,9 +23,21 @@ swiper.on("slideChange", function () {
       initSlideQuestion();
       break;
     case 2 :
-      initSlideAnimation();
+      initSlideAnimationHaut();
       break;
     case 3: 
+      initSlideAnimationDroit();
+      break;
+    case 4: 
+      initSlideAnimationGauche();
+      break;
+    case 5: 
+      initSlideAnimationBas();
+      break;
+    case 6: 
+      initSlideAnimationEntree();
+      break;
+    default:
       initSlideFin();
       break;
   }
