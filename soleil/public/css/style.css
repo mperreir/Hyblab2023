@@ -36,6 +36,26 @@ body{
     height: 30px;
 }
 
+#Soli1{
+  width : 40px;
+  height: 60px;
+  position : absolute;
+  bottom : 5%;
+  right : 5%;
+
+}
+
+#Soli2{
+  width : 40px;
+  height: 60px;
+  position : absolute;
+  bottom : 20%;
+  right : 5%;
+
+}
+
+
+
 div {
     float: left;
     height: 150px;
