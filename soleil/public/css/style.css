@@ -37,20 +37,20 @@ body{
 }
 
 #Soli1{
-  width : 40px;
-  height: 60px;
-  position : absolute;
-  bottom : 5%;
-  right : 5%;
+    width : 40px;
+    height: 60px;
+    position : absolute;
+    bottom : 5%;
+    right : 5%;
 
 }
 
 #Soli2{
-  width : 40px;
-  height: 60px;
-  position : absolute;
-  bottom : 20%;
-  right : 5%;
+    width : 40px;
+    height: 60px;
+    position : absolute;
+    bottom : 20%;
+    right : 5%;
 
 }
 
@@ -62,7 +62,7 @@ div {
     padding: 0 10px;
     font-size: 24px;
     text-align: center;
-  }
+}
 
 header{
     margin-top: 20px;
@@ -89,30 +89,30 @@ header{
     top: 10%;
 }
 
-  #ligne{
+#ligne{
     width: 90%;
-  }
+}
 
-  #colonne2 {
+#colonne2 {
     width: 45%;
     text-align: center;
-  }
+}
 
-  #colonne3{
+#colonne3{
     width: 27%;
-  }
+}
 
-  .choix-texte {
-      font-size: 3vw;
-  }
+.choix-texte {
+    font-size: 3vw;
+}
 
-  #choix-ombre {
-      position: fixed;
-      bottom: 10%;
-  }
+#choix-ombre {
+    position: fixed;
+    bottom: 10%;
+}
 
-  #jauge{
-      display: inline-block;
+#jauge{
+    display: inline-block;
     margin-top: 20px;
     height: 60%;
     width: 5%;
@@ -120,7 +120,7 @@ header{
     position :absolute;
     right : 3px;
 
-  }
+}
 
 /* -------------- Loader --------------*/
 #loader{
@@ -213,20 +213,20 @@ div.conteneur{
     height: 200px;
     width: 200px;
     overflow: visible;
-    }
+}
 
-    .conteneur .objet_vise {
+.conteneur .objet_vise {
     height: 100px;
     width: 100px;
     background-color: black;
-    }
+}
 
-    .conteneur .objet_vise:hover {
+.conteneur .objet_vise:hover {
     /* ici, on peut modifier l'objet visé au hover si on le veut. Ici, je change sa couleur!*/
     background-color: red;
-    }
+}
 
-    .conteneur .infobulle {
+.conteneur .infobulle {
     position: absolute;
     top: 80px;
     left: 80px;
@@ -235,7 +235,7 @@ div.conteneur{
     border-radius: 100px / 50px;
     background-color: #C1BFBF;
     opacity: 0;
-    }
+}
 
 
 /* Last slide image is centered */
@@ -277,44 +277,44 @@ main > section{
     bottom: 0;
     background-color: white;
     font-size: 20%;
-  }
+}
 
-  #bandeau li{
+#bandeau li{
     list-style-type: none;
     display: inline-block;
     vertical-align: middle;
     margin: 0 0.5em;
-  }
+}
 
-  #bandeau img{
+#bandeau img{
     height: 2.5em;
-  }
+}
 
-  #bandeau #hyblab{
+#bandeau #hyblab{
     margin: 1em auto;
     height: 3em;
     display: block;
-  }
+}
 
-  #bandeau #cc, #bandeau #opensource
-  {
+#bandeau #cc, #bandeau #opensource
+{
     height: 1em;
-  }
+}
 
-  #bandeau .stacked{
+#bandeau .stacked{
     display:block;
-  }
+}
 
-  #bandeau ul{
+#bandeau ul{
     text-align: center;
     padding: 0 0;
     margin-bottom: 0.5em;
-  }
+}
 
-  #bandeau .institutionnel
-  {
+#bandeau .institutionnel
+{
     height: 2em;
-  }
+}
 
 /* ---------- Important media queries for easy responsive content :-) ----------------- */
 /* Whatever the devie used, the content will be displayed full width and height if      */
@@ -394,4 +394,3 @@ body{
     }
 
 }
-
