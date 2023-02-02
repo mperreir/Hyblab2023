@@ -68,6 +68,21 @@ header{
     margin-top: 20px;
 }
 
+.commentaire-soli {
+    max-width: 90%;
+    left: 5%;
+}
+
+.commentaire-soli p {
+    max-width: 75%;
+    display: inline-block;
+    font-size: 1.9vw;
+}
+
+.commentaire-soli img {
+    max-width: 20%;
+}
+
 .contenu-page {
     display: inline-block;
     max-width: 87%;
@@ -165,8 +180,13 @@ div{
 
 button.retour{
     left: 0%;
-    margin: 10px ;
+    margin: 2% ;
     position: absolute;
+}
+
+p.intitulé {
+    padding-top: 2%;
+    font-size: 5vw;
 }
 
 div.conteneur{
