@@ -5,16 +5,16 @@ const initSlideQuestion = async function(){
   // Get logo element
   const page = document.querySelector('#question-slide')
   let question = document.querySelector('#question')
+  let city = document.querySelector('.city')
     
  
   page.addEventListener('click', () => {
-        console.log("OKK")
         question.style.opacity = 100;
-        page.style.backgroundPositionY = "-5vh";
+        page.style.backgroundPositionY = "-10vh";
         indic.style.opacity= 0;
+        city.style.top = "20%";
         swiper.enabled= true;
         swiper.enable();
-
   }
   )
 
