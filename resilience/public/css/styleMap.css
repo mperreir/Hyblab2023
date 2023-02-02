@@ -1,0 +1,239 @@
+/* ------- Important ! Please at least keep the last part of this CSS ----------- */
+/* ------- that adapts content width and height so that aspect ratio  ----------- */
+/* ------- is kept between 9/16 a,d 3/4 (portait orientation)         ----------- */
+
+/* Normalize margin and padding to ease elements positioning */
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    background-color: black;
+    color: white;
+    overflow: hidden;   /* to avoid slider bugs on some browsers */
+    font-family: sans-serif;
+}
+
+/* -------------- Loader --------------*/
+#loader{
+    z-index: 2;
+    position:absolute;
+}
+
+#loader-img{
+    top:40%;
+    left:40%;
+    position: absolute;
+}
+
+#loader-text{
+    text-align: center;
+    font-size: 25%;
+    position: absolute;
+    top:60%;
+    width: 100%
+}
+/* -------------- End of Loader --------------*/
+
+/* Swiper slider. Need to fill the container */
+#mySwiper{
+    width: 100%;
+    height:100%;
+    position: absolute;
+}
+
+/* white navigation bullets */
+.swiper-pagination-bullet-active {
+    background-color: white !important;
+}
+
+/* the slides and the loader should fill the whole 9:16 zone */
+.swiper-wrapper section, #loader{
+    background-color: dodgerblue;
+    width: 100%;
+    height: 100%;
+}
+
+/* Most of the elements in this demo are absolute positionned with percentages */
+#first-slide header, #second-slide header{
+    text-align: center;
+    width: 100%;
+    top: 10%;
+    position: absolute;
+    font-size: 30%;
+    z-index: 2;
+}
+
+#logo-hyblab{
+    text-align: center;
+    width: 50%;
+    left: 50%;
+    top: 50%;
+    margin-left:-25%;
+    margin-top:calc(-7.5% * 9 / 16 ); /* margins are relative to the element width... :-( */
+    position: absolute;
+    font-size: 50%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* Last slide image is centered */
+#img-fini{
+    width: 70%;
+    left: 50%;
+    top: 40%;
+    position: absolute;
+    margin-left:-35%;
+    margin-top:calc(-25% * 9 / 16 ); /* margins are relative to the element width... :-( */
+}
+
+main > section{
+    background-image: url('../img/background.svg');
+    background-size: 100% 100%;
+}
+
+/* Footer of last slide is at the bottom and content is centered */
+#first-slide footer{
+    bottom: 5%;
+    position: absolute;
+    box-sizing: border-box; /* So that padding is not added to width (and width: 100% works) */
+    width: 100%; /* could also use  width: calc(100% - 2em) if not using box-sizing */
+    font-size: 20%;
+    text-align: center;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* ---------- Positionning of logos on the last slide -------------------- */
+/* here we have a contraint on the height of the logos (not the width)     */
+/* so we cannot use % and use em (which are proportinal to the size of the */
+/* slide because of body's font size rule at the end of this CSS           */
+#bandeau {
+    padding-top: 3%;
+    width:100%;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    font-size: 20%;
+  }
+
+  #bandeau li{
+    list-style-type: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0.5em;
+  }
+
+  #bandeau img{
+    height: 2.5em;
+  }
+
+  #bandeau #hyblab{
+    margin: 1em auto;
+    height: 3em;
+    display: block;
+  }
+
+  #bandeau #cc, #bandeau #opensource
+  {
+    height: 1em;
+  }
+
+  #bandeau .stacked{
+    display:block;
+  }
+
+  #bandeau ul{
+    text-align: center;
+    padding: 0 0;
+    margin-bottom: 0.5em;
+  }
+
+  #bandeau .institutionnel
+  {
+    height: 2em;
+  }
+
+/* ---------- Important media queries for easy responsive content :-) ----------------- */
+/* Whatever the devie used, the content will be displayed full width and height if      */
+/* the aspect ratio is between 3/4 and 9/16. If not it is locked to either 3/4 or 3/16  */
+
+/* When the aspect ratio is smaller that 3/4, display a 3/4 content */
+#container{
+    position: fixed; /* To set the size of the container to 100% of the visible viewport height AND for absolute positionning of child elements*/ 
+    height: 100%;   /* even on mobile devices with url or navigation bars */
+    margin-left: calc((100vw - 100 * 3vh / 4) / 2); /* Add black bands on left and right */
+    width: calc(100 * 3vh / 4); /* Force 3/4 aspect ratio */
+}
+
+/* We set a default font size here. It will be the base for all other font sizes */
+/* Here the font size is proportional to content width */
+body{
+    font-size: calc(15vh * 3 / 4);
+}
+
+/* Fill the whole viewport when its aspect ratio is between 9/16 and 3/4 */
+@media screen and (max-aspect-ratio: 3/4) {
+    #container{
+        margin-left: 0; /* reset margin-left */
+        width: 100vw; /* content is full width (and full height because of the default rule for container height */
+    }
+
+    /* We set a default font size here. It will be the base for all other font sizes */
+    /* Here the font size is proportional to content width */
+    body{
+        font-size: 15vw;
+    }
+}
+
+/* The content is displayed at 9/16 If the aspect ratio is higher that 9/16  */ 
+@media screen and (max-aspect-ratio: 9/16) {
+    #container{
+        margin-left: 0; /* reset left margin */
+        width: 100vw;   /* content is full width */
+        margin-top: calc(-50 * 16vw / 9); /* move the content half the height to the top */
+        top:50%; /* then center it ! */
+        height: calc(100 * 16vw / 9); /* adjust height so that aspect ratio is 9/16 */
+    }
+
+    /* We set a default font size here. It will be the base for all other font sizes */
+    /* Here the font size is proportional to content width */
+    body{
+        font-size: 15vw;
+    }
+}
+
+/*********************************************************************/
+
+#page-map{
+    background-color: #baffc9;
+    width: 100%;
+    height: 100%;
+}
+
+#parametres{
+    width: 10%;
+    margin-top: 5%;
+    margin-left: 7%;
+}
+
+#trophe{
+    position:absolute;
+    width: 10%;
+    top: 5%;
+    right: 7%;
+}
+
+#unlock_audio{
+    width: 7%;
+    top: 5%;
+    left: 20%;
+}
+
+#bananas{
+    max-width: 100%;
+    max-height: 100%;
+
+}

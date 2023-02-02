@@ -12,10 +12,28 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/map.js" defer></script>
+  <script src="js/index.js" defer></script>
 </head>
 <body>
     <div id="container">
-        <p>Map</p>
+        <div id="page-map">
+          <a href="a_propos.html">
+            <img id="parametres" src="./img/parametres.png">
+          </a>
+          <a href="achievement.html">
+            <img id="trophe" src="./img/trophee.png">
+          </a>
+
+          <img id="unlock_audio" src="./img/mute.png">
+
+          <audio controls id="audio" muted autoplay loop hidden>
+            <source src="sound/jingleSncf.mp3" type="audio/mpeg">
+            <source src="sound/jingleSncf.ogg" type="audio/ogg">
+          </audio>
+
+          <img id="bananas" src="./img/Bananas.svg">
+
+        </div>
     </div>
 </body>
 </html>
