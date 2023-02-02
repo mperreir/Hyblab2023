@@ -116,7 +116,7 @@ header{
     text-align: center;
     width: 100%;
     top: 10%;
-    
+
     font-size: 30%;
     z-index: 2;
 }
@@ -144,18 +144,18 @@ div.conteneur{
     width: 200px;
     overflow: visible;
     }
-    
+
     .conteneur .objet_vise {
     height: 100px;
     width: 100px;
     background-color: black;
     }
-    
+
     .conteneur .objet_vise:hover {
     /* ici, on peut modifier l'objet visé au hover si on le veut. Ici, je change sa couleur!*/
     background-color: red;
     }
-    
+
     .conteneur .infobulle {
     position: absolute;
     top: 80px;
@@ -166,7 +166,7 @@ div.conteneur{
     background-color: #C1BFBF;
     opacity: 0;
     }
-    
+
 
 /* Last slide image is centered */
 #img-fini{
@@ -252,7 +252,7 @@ main > section{
 
 /* When the aspect ratio is smaller that 3/4, display a 3/4 content */
 #container{
-    position: fixed; /* To set the size of the container to 100% of the visible viewport height AND for absolute positionning of child elements*/ 
+    position: fixed; /* To set the size of the container to 100% of the visible viewport height AND for absolute positionning of child elements*/
     height: 100%;   /* even on mobile devices with url or navigation bars */
     margin-left: calc((100vw - 100 * 3vh / 4) / 2); /* Add black bands on left and right */
     width: calc(100 * 3vh / 4); /* Force 3/4 aspect ratio */
@@ -278,24 +278,28 @@ body{
     }
 }
 
-#geoloc-img{
-
+.main-location-page{
+    position: unset;
+    padding-top: 10%;
 }
 
 .location-input{
-    /*position: relative;*/
     height: 20%;
     margin: 0;
     padding: 0;
     float: none;
     text-align: center;
     font-size: medium;
-    /*top: 350px;
-    left: 130px;*/
 }
 
 .valider{
     bottom: 20%;
+}
+
+.illustration{
+    max-width: 100%;
+    max-height: 40%;
+    height: auto;
 }
 
 .div-adresse{
