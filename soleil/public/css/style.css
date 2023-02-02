@@ -137,6 +137,20 @@ div.conteneur{
     margin: auto;
 }
 
+#info{
+    display:inline-block;
+    border:#666 1px solid;
+    margin:2px;
+    font-size:24px;
+    cursor:pointer;
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    font-size: small;
+    position: absolute;
+    right : 10%;
+}
+
 /* infobulle */
 .conteneur {
     position: relative;
