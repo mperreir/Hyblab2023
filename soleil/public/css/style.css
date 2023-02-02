@@ -42,7 +42,6 @@ div {
     padding: 0 10px;
     font-size: 24px;
     text-align: center;
-
   }
 
 header{
@@ -190,7 +189,7 @@ main > section{
 }
 
 /* Footer of last slide is at the bottom and content is centered */
-#accueil footer, #logement footer, #pente footer{
+#accueil footer, #adresse footer, #logement footer, #pente footer{
     bottom: 5%;
     position: absolute;
     box-sizing: border-box; /* So that padding is not added to width (and width: 100% works) */
@@ -284,7 +283,33 @@ body{
     }
 }
 
-/* The content is displayed at 9/16 If the aspect ratio is higher that 9/16  */ 
+#geoloc-img{
+
+}
+
+.location-input{
+    /*position: relative;*/
+    height: 20%;
+    margin: 0;
+    padding: 0;
+    float: none;
+    text-align: center;
+    font-size: medium;
+    /*top: 350px;
+    left: 130px;*/
+}
+
+.valider{
+    bottom: 20%;
+}
+
+.div-adresse{
+    width: 100%;
+    padding: 0;
+    height: 300px;
+}
+
+/* The content is displayed at 9/16 If the aspect ratio is higher that 9/16  */
 @media screen and (max-aspect-ratio: 9/16) {
     #container{
         margin-left: 0; /* reset left margin */
