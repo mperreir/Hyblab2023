@@ -26,7 +26,7 @@ app.get('/map/all', function ( req, res ) {
     });
 });
 
-app.get('/map/filter/:keyword', function ( req, res ) {
+app.get('/map/filter/keyword/:keyword', function ( req, res ) {
     sheet_scrapper.readJSONFromServerFile().then(data => {
         // Filter data to only keep convenient fields
         data.values = data.values.map(row => {
@@ -41,6 +41,37 @@ app.get('/map/filter/:keyword', function ( req, res ) {
         // Filter data to only keep rows with the requested keyword
         data.values = data.values.filter(row => {
             return row.Keywords.includes(req.params.keyword);
+        });
+        // Remove header row
+        data.values.shift();
+        // Remove range and majorDimension fields
+        delete data.range;
+        delete data.majorDimension;
+        // Send it as a JSON object
+        res.json(data.values);
+    });
+});
+
+app.get('/map/filter/topics/:feed/:circular_economy/:energy/:industry/:mobility/:digital', function ( req, res ) {
+    sheet_scrapper.readJSONFromServerFile().then(data => {
+        // Filter data to only keep convenient fields
+        data.values = data.values.map(row => {
+            return {
+                "Id": row[0],
+                "Long": row[2],
+                "Lat": row[3],
+                "Topic": row[11],
+                "Keywords": row[12]
+            }
+        });
+        // Filter data to only keep rows with the requested keyword
+        data.values = data.values.filter(row => {
+            return (req.params.feed === "true" && row.Topic.includes("alimentation")) ||
+                (req.params.circular_economy === "true" && row.Topic.includes("économie circulaire")) ||
+                (req.params.energy === "true" && row.Topic.includes("énergie")) ||
+                (req.params.industry === "true" && row.Topic.includes("industrie")) ||
+                (req.params.mobility === "true" && row.Topic.includes("mobilité")) ||
+                (req.params.digital === "true" && row.Topic.includes("numérique"));
         });
         // Remove header row
         data.values.shift();
