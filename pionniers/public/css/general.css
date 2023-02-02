@@ -63,13 +63,27 @@ h2 {
     justify-content: space-around;
 }
 
-.align-items-center {
-    align-items: center;
+.justify-content-space-evenly {
+    justify-content: space-evenly;
 }
 
 .justify-content-flex-end {
     justify-content: flex-end;
 }
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-center-flex-start {
+    align-items: flex-start;
+}
+
+.align-items-center-flex-end {
+    align-items: flex-end;
+}
+
+
 
 #container {
     background-color: var(--blanc-fond);
@@ -79,14 +93,19 @@ h2 {
     font-family: 'Poppins', sans-serif;
     color: var(--bleu-fonce);
     border-radius: 500px;
-    padding: 2%;
+    padding: 3%;
     border: none;
     background: var(--blanc-fond);
     font-size: 0.7em;
 }
 
 .rainbow-background {
-    background-image: url("../img/rainwbow_background.svg");
+    background-color: var(--blanc-fond);
+    background-image: url("../img/rainbow_background.svg");
+    background-size: 100%;
+    background-position: center 60vh;
+    background-repeat: no-repeat;
+
 }
 
 .italic {
@@ -95,6 +114,31 @@ h2 {
 
 .gras {
     font-weight: bold;
+}
+
+
+.orange-font {
+    color: var(--orange);
+}
+
+.caca-doie-font {
+    color: var(--caca-doie);
+}
+
+.vert-font {
+    color: var(--vert);
+}
+
+.turquoise-font {
+    color: var(--turquoise);
+}
+
+.cyan-font {
+    color: var(--cyan);
+}
+
+.bleu-clair-font {
+    color: var(--bleu-clair);
 }
 
 
