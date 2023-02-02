@@ -1,59 +1,68 @@
 {
     "place": "AGR",
-    "names": {
-        "0": "Tristan",
-        "1": "Guillaume"
-    },
+    "names": [
+        "Tristan",
+        "Guillaume"
+    ],
     "messages": [
         {
+            "type": "message",
             "name": "Tristan",
-            "text": "Bonjour Guillaume !",
-            "answer": []
+            "text": "Bonjour Guillaume !"
         },
         {
+            "type": "message",
             "name": "Guillaume",
-            "text": "Bonjour Tristan !",
-            "answer": []
+            "text": "Bonjour Tristan !"
         },
         {
+            "type": "message",
             "name": "Guillaume",
-            "text": "Comment vas-tu ?",
+            "text": "Comment vas-tu ?"
+        },
+        {
+            "type": "answer",
             "answer": [
                 {
+                    "type": "message",
                     "name": "Tristan",
-                    "text": "Bien !",
-                    "answer": []
+                    "text": "Bien !"
                 },
                 {
+                    "type": "message",
                     "name": "Tristan",
-                    "text": "Pas bien !",
-                    "answer": []
+                    "text": "Pas bien !"
                 }
             ]
         },
-        [
-            {
-                "name": "Guillaume",
-                "text": "D'où viens-tu ?",
-                "answer": [
+        {
+            "type": "question",
+            "question": [
+                [
                     {
+                        "type": "message",
+                        "name": "Guillaume",
+                        "text": "D'où viens-tu ?"
+                    },
+                    {
+                        "type": "message",
                         "name": "Tristan",
-                        "text": "La chapelle sur Erdre.",
-                        "answer": []
+                        "text": "La chapelle sur Erdre."
+                    }
+                ],
+                [
+                    {
+                        "type": "message",
+                        "name": "Guillaume",
+                        "text": "Que fais-tu ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Tristan",
+                        "text": "Je fait du Hyblab."
                     }
                 ]
-            },
-            {
-                "name": "Guillaume",
-                "text": "Que fais-tu ?",
-                "answer": [
-                    {
-                        "name": "Tristan",
-                        "text": "Je fait du Hyblab.",
-                        "answer": []
-                    }
-                ]
-            }
-        ]
+            ]
+        }
     ]
 }
