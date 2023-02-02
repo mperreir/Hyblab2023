@@ -10,16 +10,17 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="js/slideAccueil.js" defer></script>
   <script src="js/slideQuestion.js" defer></script>
   <script src="js/slideFin.js" defer></script>
   <script src="js/index.js" defer></script>
+
   <script src="js/slideAnimationHaut.js"></script>
   <script src="js/slideAnimationDroit.js"></script>
   <script src="js/slideAnimationGauche.js"></script>
   <script src="js/slideAnimationBas.js"></script>
   <script src="js/slideAnimationEntree.js"></script>
-
 
 </head>
 <body>
@@ -60,7 +61,22 @@
 
           <section id="question-slide" class="swiper-slide">
             
-            
+            <div class="containerthermo">
+              <div class="thermo"></div>
+              <img src = "img/thermo.png" id="thermoindic"a lt="indicateur de température">
+            </div>
+
+            <div class="containermoney">
+              <div class="money"></div>
+              <img src = "img/money.png" id="moneyindic" alt="indicateur de dépense">
+            </div>
+
+            <div class="containerhappy">
+              <div class="happy"></div>
+              <img src = "img/happy.png" id="happyindic" alt="indicateur de satisfaction">
+            </div>
+
+                        
             <img class= "city" src="img/boulevard.png" alt="boulevard">
 
             <div id = "question">
@@ -73,6 +89,29 @@
             
             <img class="indic" src="./img/icone_clik.png" alt="click">
           </section>
+
+
+          <section id="animation-slide" class="swiper-slide">
+
+
+            <div class="containerthermo">
+              <div class="thermo"></div>
+              <img src = "img/thermo.png" id="thermoindic"a lt="indicateur de température">
+            </div>
+
+            <div class="containermoney">
+              <div class="money"></div>
+              <img src = "img/money.png" id="moneyindic" alt="indicateur de dépense">
+            </div>
+
+            <div class="containerhappy">
+              <div class="happy"></div>
+              <img src = "img/happy.png" id="happyindic" alt="indicateur de satisfaction">
+            </div>
+            <img src="./img/boulevard.png" alt="" id="haut" class="">
+            <img src="./img/boulevard.png" alt="" id="img_droit" class="bouge">
+            <img src="./img/boulevard.png" alt="" id="img_gauche" class="bouge">
+            <img src="./img/boulevard.png" alt="" id="bas" class="bouge">
 
           <section id="animationSlideHaut" class="swiper-slide animation-slide">
             <img src="./img/boulevard.png" alt="" id="" class="img_haut">
@@ -111,6 +150,7 @@
             <img src="./img/boulevard.png" alt="" id="" class="img_droit">
             <img src="./img/boulevard.png" alt="" id="" class="img_gauche">
             <img src="./img/boulevard.png" alt="" id="" class="img_bas">
+
 
           </section>
 
