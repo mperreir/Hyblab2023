@@ -43,6 +43,12 @@ app.get('/map/topics/:feed/:circular_economy/:energy/:industry/:mobility/:digita
                 "Keywords": row[12]
             }
         });
+        // If Topic or Keywords are undefined, set an empty string
+        data.values = data.values.map(row => {
+            row.Topic = row.Topic ? row.Topic : " ";
+            row.Keywords = row.Keywords ? row.Keywords : " ";
+            return row;
+        });
         // Filter data to only keep rows with the requested topics
         data.values = data.values.filter(row => {
             return (req.params.feed === "true" && row.Topic.includes("alimentation")) ||
@@ -112,6 +118,12 @@ app.get('/miniature/topics/:feed/:circular_economy/:energy/:industry/:mobility/:
                 "Keywords": row[12],
                 "URLImage": row[15]
             }
+        });
+        // If Topic or Keywords are undefined, set an empty string
+        data.values = data.values.map(row => {
+            row.Topic = row.Topic ? row.Topic : " ";
+            row.Keywords = row.Keywords ? row.Keywords : " ";
+            return row;
         });
         // Filter data to only keep rows with the requested topics
         data.values = data.values.filter(row => {
