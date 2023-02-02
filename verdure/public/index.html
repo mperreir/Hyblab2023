@@ -2,204 +2,202 @@
 
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-  <title>Hyblab 2023</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="js/slideAccueil.js" defer></script>
-  <script src="js/slideQuestion.js" defer></script>
-  <script src="js/slideFin.js" defer></script>
-  <script src="js/index.js" defer></script>
-  <script src="js/slideAnimation.js"></script>
-  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Hyblab 2023</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/slideAccueil.js" defer></script>
+    <script src="js/slideQuestion.js" defer></script>
+    <script src="js/slideFin.js" defer></script>
+    <script src="js/index.js" defer></script>
+
+    <script src="js/slideAnimationHaut.js"></script>
+    <script src="js/slideAnimationDroit.js"></script>
+    <script src="js/slideAnimationGauche.js"></script>
+    <script src="js/slideAnimationBas.js"></script>
+    <script src="js/slideAnimationEntree.js"></script>
+    <script src="js/displayQuestion.js"></script>
+    <script src="js/answerResponse.js"></script>
+    <script src="js/displayResponse.js"></script>
+
 </head>
 <body>
-    <!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
-    <div id="container">
-      <!-- Le loader-->
-      <section id="loader">
+<!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
+<div id="container">
+    <!-- Le loader-->
+    <section id="loader">
         <div id="loader-img" class="ld ld-ring ld-cycle"></div>
         <p id="loader-text">Veuillez patienter...</p>
-      </section>
-      <div id="mySwiper" class="swiper">
+    </section>
+    <div id="mySwiper" class="swiper">
         <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
-        <main class = "swiper-wrapper">
+        <main class="swiper-wrapper">
 
 
-          <section id="slideAccueil" class="swiper-slide">
-              
-            <img src="img/logo_hyblab.png" id="logo-verdure" alt="logo verdure"></img>
-            <div id="fond"></div>
+            <section id="slideAccueil" class="swiper-slide">
+
+                <img src="img/logo_hyblab.png" id="logo-verdure" alt="logo verdure"></img>
+                <div id="fond"></div>
 
 
-            <div>
-              <p id="presentation-jeu">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae 
-                totam iure deserunt aspernatur quod quo, vero repellendus, placeat reiciendis 
-                rerum consequatur ipsa perferendis numquam nobis. Dolorem soluta quidem numquam commodi!
-              </p>
-            </div>
+                <div>
+                    <p id="presentation-jeu">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                        totam iure deserunt aspernatur quod quo, vero repellendus, placeat reiciendis
+                        rerum consequatur ipsa perferendis numquam nobis. Dolorem soluta quidem numquam commodi!
+                    </p>
+                </div>
 
-            <footer>
+                <footer>
 
-            </footer>
-            
-
-        </section>
+                </footer>
 
 
+            </section>
 
-          <section id="question-slide" class="swiper-slide">
-            
-            <div class="containerthermo">
-              <div class="thermo"></div>
-              <img src = "img/thermo.png" id="thermoindic"a lt="indicateur de température">
-            </div>
 
-            <div class="containermoney">
-              <div class="money"></div>
-              <img src = "img/money.png" id="moneyindic" alt="indicateur de dépense">
-            </div>
+            <section id="question-slide" class="swiper-slide">
 
-            <div class="containerhappy">
-              <div class="happy"></div>
-              <img src = "img/happy.png" id="happyindic" alt="indicateur de satisfaction">
-            </div>
+                <div class="containerthermo">
+                    <div class="thermo"></div>
+                    <img src="img/thermo.png" id="thermoindic" a lt="indicateur de température">
+                </div>
 
-                        
-            <img class= "city" src="img/boulevard.png" alt="boulevard">
+                <div class="containermoney">
+                    <div class="money"></div>
+                    <img src="img/money.png" id="moneyindic" alt="indicateur de dépense">
+                </div>
 
-            <div id = "question">
-              <p>TEST TEST TEST TEST<p>
-              <div id = "reponse">
-                <p id = "gauche">REP 1</p>
-                <p id = "droite">REP 2</p>
-              </div>
-            </div>
-            
-            <img class="indic" src="./img/icone_clik.png" alt="click">
-          </section>
+                <div class="containerhappy">
+                    <div class="happy"></div>
+                    <img src="img/happy.png" id="happyindic" alt="indicateur de satisfaction">
+                </div>
 
+
+                <div id="question-footer">
+                    <div id="question-title">
+                        <p id="question-title-text">Question</p>
+                        <input type="button" id="showButton" value="voir plus">
+                    </div>
+                    <div id="question-reponse">
+                        <div id="reponse">
+                            <input type="button" id="gauche" value="Planter des arbres">
+                            <input type="button" id="droite" value="Planter plein d'arbres">
+                        </div>
+                        <p id="short-reponse">
+                        </p>
+                        <p id="long-reponse">
+                        </p>
+                    </div>
+                </div>
+
+                <img class="indic" src="./img/icone_clik.png" alt="click">
+            </section>
 
 
             <section id="animationSlideHaut" class="swiper-slide animation-slide">
 
-            <div class="containerthermo">
-              <div class="thermo"></div>
-              <img src = "img/thermo.png" id="thermoindic"a lt="indicateur de température">
-            </div>
+                <div class="containerthermo">
+                    <div class="thermo"></div>
+                    <img src="img/thermo.png" id="thermoindic" a lt="indicateur de température">
+                </div>
 
-            <div class="containermoney">
-              <div class="money"></div>
-              <img src = "img/money.png" id="moneyindic" alt="indicateur de dépense">
-            </div>
+                <div class="containermoney">
+                    <div class="money"></div>
+                    <img src="img/money.png" id="moneyindic" alt="indicateur de dépense">
+                </div>
 
-            <div class="containerhappy">
-              <div class="happy"></div>
-              <img src = "img/happy.png" id="happyindic" alt="indicateur de satisfaction">
-            </div>
-            
-
-            <img src="./img/boulevard.png" alt="" id="" class="img_haut">
-            <img src="./img/boulevard.png" alt="" id="" class="img_droit">
-            <img src="./img/boulevard.png" alt="" id="" class="img_gauche">
-            <img src="./img/boulevard.png" alt="" id="" class="img_bas">
-
-          </section>
-
-          <section id="animationSlideDroit" class="swiper-slide animation-slide">
-            <img src="./img/boulevard.png" alt="" id="" class="img_haut">
-            <img src="./img/boulevard.png" alt="" id="" class="img_droit">
-            <img src="./img/boulevard.png" alt="" id="" class="img_gauche">
-            <img src="./img/boulevard.png" alt="" id="" class="img_bas">
-
-          </section>
-
-          <section id="animationSlideGauche" class="swiper-slide animation-slide">
-            <img src="./img/boulevard.png" alt="" id="" class="img_haut">
-            <img src="./img/boulevard.png" alt="" id="" class="img_droit">
-            <img src="./img/boulevard.png" alt="" id="" class="img_gauche">
-            <img src="./img/boulevard.png" alt="" id="" class="img_bas">
-
-          </section>
-
-          <section id="animationSlideBas" class="swiper-slide animation-slide">
-            <img src="./img/boulevard.png" alt="" id="" class="img_haut">
-            <img src="./img/boulevard.png" alt="" id="" class="img_droit">
-            <img src="./img/boulevard.png" alt="" id="" class="img_gauche">
-            <img src="./img/boulevard.png" alt="" id="" class="img_bas">
-
-          </section>
-
-          <section id="animationSlideEntree" class="swiper-slide animation-slide">
-            <img src="./img/boulevard.png" alt="" id="" class="img_haut">
-            <img src="./img/boulevard.png" alt="" id="" class="img_droit">
-            <img src="./img/boulevard.png" alt="" id="" class="img_gauche">
-            <img src="./img/boulevard.png" alt="" id="" class="img_bas">
-
-          </section>
+                <div class="containerhappy">
+                    <div class="happy"></div>
+                    <img src="img/happy.png" id="happyindic" alt="indicateur de satisfaction">
+                </div>
 
 
+                <img src="./img/boulevard.png" alt="" id="" class="img_haut">
+                <img src="./img/boulevard.png" alt="" id="" class="img_droit">
+                <img src="./img/boulevard.png" alt="" id="" class="img_gauche">
+                <img src="./img/boulevard.png" alt="" id="" class="img_bas">
+
+            </section>
+
+            <section id="animationSlideDroit" class="swiper-slide animation-slide">
+                <img src="./img/boulevard.png" alt="" id="" class="img_haut">
+                <img src="./img/boulevard.png" alt="" id="" class="img_droit">
+                <img src="./img/boulevard.png" alt="" id="" class="img_gauche">
+                <img src="./img/boulevard.png" alt="" id="" class="img_bas">
+
+            </section>
+
+            <section id="animationSlideGauche" class="swiper-slide animation-slide">
+                <img src="./img/boulevard.png" alt="" id="" class="img_haut">
+                <img src="./img/boulevard.png" alt="" id="" class="img_droit">
+                <img src="./img/boulevard.png" alt="" id="" class="img_gauche">
+                <img src="./img/boulevard.png" alt="" id="" class="img_bas">
+
+            </section>
+
+            <section id="animationSlideBas" class="swiper-slide animation-slide">
+                <img src="./img/boulevard.png" alt="" id="" class="img_haut">
+                <img src="./img/boulevard.png" alt="" id="" class="img_droit">
+                <img src="./img/boulevard.png" alt="" id="" class="img_gauche">
+                <img src="./img/boulevard.png" alt="" id="" class="img_bas">
+
+            </section>
+
+            <section id="animationSlideEntree" class="swiper-slide animation-slide">
+                <img src="./img/boulevard.png" alt="" id="" class="img_haut">
+                <img src="./img/boulevard.png" alt="" id="" class="img_droit">
+                <img src="./img/boulevard.png" alt="" id="" class="img_gauche">
+                <img src="./img/boulevard.png" alt="" id="" class="img_bas">
 
 
+            </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <section id="end-slide" class="swiper-slide">
-            <header>
-              <h1>This was...</h1>
-            </header>
-            <img id="img-fini" src="hyblab_2023.jpg">
-            <footer id="bandeau">
+            <section id="end-slide" class="swiper-slide">
+                <header>
+                    <h1>This was...</h1>
+                </header>
+                <img id="img-fini" src="hyblab_2023.jpg">
+                <footer id="bandeau">
                     <!-- Logo Hyblab -->
-                      <a href="http://www.hyblab.fr/"><img id="hyblab" src="logo_hyblab.png" alt="Hyblab DataSport"></a>
-                  
-                      <!-- Les organisateurs -->
-                      <ul>
-                        <li><a href="http://www.ouestmedialab.fr/"><img src="logo_oml.png" alt="Ouest Médialab"></a></li>
-                        <li><a href="http://www.agrnantes.fr"><img src="ecoles/logo_agr.png" alt="AGR école de l'image"></a></li>
-                        <li><a href="https://epjt.fr/"><img src="ecoles/logo_epjt.svg" alt="Ecole publique de journalisme de Tours"></a></li>
-                        <li><a href="http://www.polytech.univ-nantes.fr/"><img src="ecoles/logo_polytech.png" alt="Polytech Nantes"></a></li>
-                      <!-- Les autres logos -->
-                      <ul>
-                        <!-- Logos CC et opensource -->
-                        <li>
-                        <ul>
-                          <li class="stacked"><img id="cc" src="logo_cc.png" alt="Creative commons"></li>
-                          <li class="stacked"><img id="opensource" src="logo_opensource.png" alt="Open source"></li>
-                        </ul>
+                    <a href="http://www.hyblab.fr/"><img id="hyblab" src="logo_hyblab.png" alt="Hyblab DataSport"></a>
+
+                    <!-- Les organisateurs -->
+                    <ul>
+                        <li><a href="http://www.ouestmedialab.fr/"><img src="logo_oml.png" alt="Ouest Médialab"></a>
                         </li>
-                        <!-- Logo de votre porteur de projet -->
-                        <li><a href="https://leplan.studio/"><img src="./img/LOGO_LEPLAN3.png" alt="Logo de mon porteur de projet"></a></li>
-                        <!-- Partenaires institutionnels -->
-                        <li><a href="http://www.nantesmetropole.fr/"><img class="institutionnel" src="institutionnels/logo_nantesmetropole.png" alt="Nantes Métropole"></a></li>
-                      </ul>
-            </footer>
-        </section>
+                        <li><a href="http://www.agrnantes.fr"><img src="ecoles/logo_agr.png" alt="AGR école de l'image"></a>
+                        </li>
+                        <li><a href="https://epjt.fr/"><img src="ecoles/logo_epjt.svg"
+                                                            alt="Ecole publique de journalisme de Tours"></a></li>
+                        <li><a href="http://www.polytech.univ-nantes.fr/"><img src="ecoles/logo_polytech.png"
+                                                                               alt="Polytech Nantes"></a></li>
+                        <!-- Les autres logos -->
+                        <ul>
+                            <!-- Logos CC et opensource -->
+                            <li>
+                                <ul>
+                                    <li class="stacked"><img id="cc" src="logo_cc.png" alt="Creative commons"></li>
+                                    <li class="stacked"><img id="opensource" src="logo_opensource.png"
+                                                             alt="Open source"></li>
+                                </ul>
+                            </li>
+                            <!-- Logo de votre porteur de projet -->
+                            <li><a href="https://leplan.studio/"><img src="./img/LOGO_LEPLAN3.png"
+                                                                      alt="Logo de mon porteur de projet"></a></li>
+                            <!-- Partenaires institutionnels -->
+                            <li><a href="http://www.nantesmetropole.fr/"><img class="institutionnel"
+                                                                              src="institutionnels/logo_nantesmetropole.png"
+                                                                              alt="Nantes Métropole"></a></li>
+                        </ul>
+                </footer>
+            </section>
 
 
         </main>
@@ -207,6 +205,6 @@
 
         <div class="swiper-pagination"></div>
     </div>
-  </div>
+</div>
 </body>
 </html>
