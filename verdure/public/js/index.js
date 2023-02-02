@@ -8,6 +8,8 @@ let swiper = new Swiper("#mySwiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
+  allowSlidePrev : false,
+  enabled : true
 });
 
 swiper.on("slideChange", function () {
@@ -16,9 +18,14 @@ swiper.on("slideChange", function () {
       initSlideAccueil();
       break;
     case 1:
+      //swiper.enabled= false;
+      swiper.disable()
       initSlideQuestion();
       break;
-    case 2: 
+    case 2 :
+      initSlideAnimation();
+      break;
+    case 3: 
       initSlideFin();
       break;
   }

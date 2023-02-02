@@ -269,3 +269,42 @@ SLIDE QUESTION
     position : absolute;
     top : 32%;
 }
+
+
+/*****************
+SLIDE ANIMATION
+******************/
+
+#animation-slide > img {
+    width: 40%;
+    height: auto;
+    text-align: center;
+
+}
+#bas{
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    left: 30%;
+}
+
+#haut{
+    position: absolute;
+    top: 32%;
+    text-align: center;
+    left: 30%;
+}
+
+#img_gauche{
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    left: 10%;
+}
+
+#img_droit{
+    position: absolute;
+    top: 41%;
+    text-align: center;
+    right: 10%;
+}
