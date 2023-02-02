@@ -1,0 +1,66 @@
+body{
+    position: relative;
+    background-color: #FBC5EB;
+    min-height: 100vh;
+}
+/*//HEADER//*/
+header{
+    position: relative;
+}
+#logo{
+    width: 50%;
+    max-width: 200px;
+    height: auto;
+}
+button#burger{
+    position: absolute;
+    right: 8%;
+    top: 35%;
+}
+
+/*//MAIN//*/
+main{
+    min-height: 100vh;
+}
+#titles{
+    min-height: 10vh;
+    position: sticky;
+    top: 20px;
+}
+#titles h1{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+#titles h3{
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -20%);
+}
+#rec{
+    height: 19vh;
+    width: 100vw;
+    margin-top: -42%;
+    margin-left: -8px;
+    position: sticky;
+    top: 0;
+    background-image: linear-gradient(to top, rgba(0,0,0,0), #FBC5EB, #FBC5EB, #FBC5EB, #FBC5EB);
+    z-index: -5;
+}
+#animals-buttons {
+    position: absolute;
+    left: 50%;
+    top: 8%;
+    transform: translate(-50%, 7%);
+    z-index: -10;
+
+}
+main button {
+    width: 320px;
+    max-width: 100%;
+    height:70px;
+    border-radius: 40px;
+    background-color: #FBC5EB;
+}
+
