@@ -106,6 +106,17 @@ function recreateProfileDeck(profilTrouve) {
         carrousel.append(createFiche(profilTrouve[i + 2], i));
     }
 }
+
+async function chercheEtAjouteProfils(themeSelected) {
+    const baseURL = document.location.origin;
+    const profilTrouve = await fetch(baseURL + "/pionniers/api/miniature/topics/" + generateApiParameters(themeSelected)).then(r => r.json());
+    console.log(profilTrouve);
+    recreateProfileDeck(profilTrouve);
+
+    carouselList = document.querySelector('.carousel-list');
+    carouselItems = document.querySelectorAll('.carousel-item');
+    elems = Array.from(carouselItems);
+}
 async function onCheck(evnt) {
     const themeImg = evnt.target;  // La cible est l'image dans la <li>
     const themeString = themeImg.getAttribute('alt');
@@ -118,19 +129,14 @@ async function onCheck(evnt) {
         themeSelected.splice(themeSelected.indexOf(themeString), 1);
     }
 
-    // TODO : Appel à l'API pour recréer un jeu de profils, suivant les nouveaux thèmes sélectionnés
-
-    const baseURL = document.location.origin;
-    const profilTrouve = await fetch(baseURL + "/pionniers/api/miniature/topics/" + generateApiParameters(themeSelected)).then(r => r.json());
-    console.log(profilTrouve);
-    recreateProfileDeck(profilTrouve);
+    await chercheEtAjouteProfils(themeSelected);
 }
 
 function onClickProfilsEnregistre() {
     window.location.href = "./profils-enregistres.html";
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", async function () {
 
     const themesCheckboxes = document.querySelectorAll('#theme-selector ul li');
     const profilsEnregistre = document.querySelector('footer');
@@ -139,19 +145,20 @@ document.addEventListener("DOMContentLoaded", function() {
         tb.addEventListener('click', onCheck)
     );
 
-    profilsEnregistre.addEventListener('click', onClickProfilsEnregistre)
+    profilsEnregistre.addEventListener('click', onClickProfilsEnregistre);
+
+    await chercheEtAjouteProfils(themeSelected);
 });
 
-const state = {};
-const carouselList = document.querySelector('.carousel-list');
-const carouselItems = document.querySelectorAll('.carousel-item');
-const elems = Array.from(carouselItems);
+let carouselList = document.querySelector('.carousel-list');
+let carouselItems = document.querySelectorAll('.carousel-item');
+let elems = Array.from(carouselItems);
 
 carouselList.addEventListener('click', function (event) {
     let newActive = event.target;
     // Si la target du click n'est pas la LI, on prend le parent qui sera la LI
-    if(newActive.parentNode.tagName === "LI") {
-        newActive = newActive.parentNode;
+    if(newActive.parentNode.parentNode.tagName === "LI") {
+        newActive = newActive.parentNode.parentNode;
     }
 
     const isItem = newActive.closest('.carousel-item');
