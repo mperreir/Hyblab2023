@@ -11,6 +11,20 @@ function createElementFromHTML(htmlString) {
   return div.firstChild;
 }
 
+/**
+ * Supprime tous les element enfant d'un Node
+ * @param node : Node
+ */
+function removeAllChild(node) {
+  while (node.firstChild) {
+    node.removeChild(node.lastChild);
+  }
+}
+
+function capitalizeFirstLetter(word) {
+  return word.charAt(0).toUpperCase() + word.slice(1);
+}
+
 // Init of the (touch friendly) Swiper slider
 const swiper = new Swiper("#mySwiper", {
   direction: "vertical",

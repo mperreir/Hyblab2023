@@ -20,30 +20,83 @@ function generateApiParameters(themeSelected) {
     return parameterString;
 }
 
-function removeAllChild(node) {
-    while (node.firstChild) {
-        node.removeChild(node.lastChild);
+function createKeywordItem(Keyword) {
+    const htmlString = `<div class="keyword-item">
+                            <p>#${Keyword}</p>
+                        </div>`;
+
+    return createElementFromHTML(htmlString);
+}
+
+function tranlateThemeToSimpleChar(topic) {
+    switch (topic) {
+        case 'alimentation' :
+            return 'alimentation';
+        case 'économie circulaire' :
+            return 'economie_circulaire';
+        case 'énergie' :
+            return 'energie';
+        case 'industrie' :
+            return 'industrie';
+        case 'mobilité' :
+            return 'mobilite';
+        case 'numérique' :
+            return 'numerique';
+            
+    }
+}
+
+function getFontClass(topic) {
+    switch (topic) {
+        case 'alimentation' :
+            return 'orange-font';
+        case 'economie_circulaire' :
+            return 'caca-doie-font';
+        case 'energie' :
+            return 'vert-font';
+        case 'industrie' :
+            return 'turquoise-font';
+        case 'mobilite' :
+            return 'cyan-font';
+        case 'numerique' :
+            return 'bleu-clair-font';
+
     }
 }
 
 function createFiche(profil, dataPos) {
-    const { Age, City, Company, Id, Keywords, MiniBio, Name, Status, Topic, URLImage } = profil
-    const htmlString = `<li class="carousel__item flex-column align-items-center justify-content-space-between" data-pos="${dataPos}">
-                            <img alt="photo-profil" src="${URLImage}">
-                            <section class="information-fiche">
-                                <section class="carte-id flex-column align-items-center-flex-end">
-                                    <p>${Name}</p>
-                                    <p>${Age}</p>
+    const { Age, City, Company, Keywords, MiniBio, Name, Status, Topic, URLImage } = profil;
+    const tranlatedSimpleTopic = tranlateThemeToSimpleChar(Topic);
+    const fontClass = getFontClass(tranlatedSimpleTopic);
+    const htmlString = `<li class="carousel-item flex-column align-items-center justify-content-space-between" data-pos="${dataPos}">
+                            <section class="photo-case">
+                                <img alt="photo-profil" src="${URLImage}">
+                            </section>
+                            <section class="information-fiche flex-column justify-content-space-evenly">
+                                <section class="carte-identite flex-column align-items-center-flex-start ${fontClass}">
+                                    <p class="gras">${Name}</p>
+                                    <p class="gras">${Age}</p>
                                 </section>
                                 <section class="entreprise-info">
-                                    <p>${Status}</p>
-                                    <p>${Company}</p>
+                                    <p class="gras">${Status}</p>
+                                    <p class="gras">${Company}</p>
                                     <p>${City}</p>
                                     <p>${MiniBio}</p>
                                 </section>
+                                <section class="keywords flex-row">
+                                    <!-- Section qui va se remplir dans la suite de la fonction -->
+                                </section>
+                                <section class="topic flex-row align-items-center">
+                                    <img src="../img/pictogrammes_themes/${tranlatedSimpleTopic}.svg" alt="${tranlatedSimpleTopic}">
+                                    <p class="${fontClass} gras">${capitalizeFirstLetter(Topic)}</p>
+                                </section>
                             </section>
                         </li>`;
-    return createElementFromHTML(htmlString);
+    const ficheProfil = createElementFromHTML(htmlString);
+    const keywordsSplit = Keywords.split(';');
+    const keywordList = ficheProfil.querySelector(".keywords");
+    keywordsSplit.forEach(k => keywordList.append(createKeywordItem(k)));
+    return ficheProfil;
 }
 
 function recreateProfileDeck(profilTrouve) {
@@ -90,8 +143,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 const state = {};
-const carouselList = document.querySelector('.carousel__list');
-const carouselItems = document.querySelectorAll('.carousel__item');
+const carouselList = document.querySelector('.carousel-list');
+const carouselItems = document.querySelectorAll('.carousel-item');
 const elems = Array.from(carouselItems);
 
 carouselList.addEventListener('click', function (event) {
@@ -101,7 +154,7 @@ carouselList.addEventListener('click', function (event) {
         newActive = newActive.parentNode;
     }
 
-    const isItem = newActive.closest('.carousel__item');
+    const isItem = newActive.closest('.carousel-item');
 
     if (!isItem || newActive.classList.contains('carousel__item_active')) {
         return;
