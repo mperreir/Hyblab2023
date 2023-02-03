@@ -6,34 +6,34 @@ const initSlideQuestion = async function(){
   const page = document.querySelector('#question-slide')
   let question = document.querySelector('#question')
   let city = document.querySelector('.city')
-    
- 
-  // page.addEventListener('click', () => {
-  //       question.style.opacity = 100;
-  //       page.style.backgroundPositionY = "-10vh";
-  //       indic.style.opacity= 0;
-  //       city.style.top = "20%";
-  //       swiper.enabled= true;
-  //       changementThermo(10)
-  //       changementMoney(+10)
-  //       changementHappy(-40)
-  //       swiper.enable();
-  // }
-  // )
+  var rep_1 = document.querySelector("#gauche")
+  var rep_2 = document.querySelector("#droite")
 
+  rep_1.addEventListener('click', ()=> {
+    changementThermo(-10)
+    changementMoney(-20)
+    changementHappy(+30)
+    question.style.opacity = 0
+    question.style.height =0
+  })
+
+  rep_2.addEventListener('click', ()=> {
+    changementThermo(-20)
+    changementMoney(-10)
+    changementHappy(-20)
+    question.style.opacity = 0
+    question.style.height =0
+  })
 
   setTimeout(()=> {
     question.style.opacity = 100;
     page.style.backgroundPositionY = "-10vh";
-    indic.style.opacity= 0;
     city.style.top = "20%";
     swiper.enabled= true;
-    changementThermo(10)
-    changementMoney(+10)
-    changementHappy(-40)
     swiper.enable();
 },1000
 )
+
 
 
 // swiper.on('touchMove',function(event){
@@ -53,9 +53,9 @@ const initSlideQuestion = async function(){
 //   }
   
 // })
-  const indic = document.querySelector('.indic');
 
-  // Animate hyblab logo and make shrink on click
+
+  const indic = document.querySelector('.indic');
   anime({
     targets: '.indic',
     scale: 1.2,
@@ -104,52 +104,63 @@ function changementHappy(quantitytoAdd) {
   applyChange(".happy",new_height);
 }
 
+
 function applyChange(div,new_height){
-
-
 
   if(new_height <= 10){
     $(div).css("height", 15+"%");
-    $(div).css("background-color", "#fc0303");
+    if(div == ".thermo"){$(div).css("background-color", "#0ffc03");}
+    else {$(div).css("background-color", "#fc0303");}
   }
 
   else if(new_height <= 20){
     $(div).css("height", new_height+"%");
-    $(div).css("background-color", "#fc4503");
+    if(div == ".thermo"){$(div).css("background-color", "#3dfc03");}
+    else {$(div).css("background-color", "#fc4503");}
   }
 
   else if(new_height <= 30){
     $(div).css("height", new_height+"%");
-    $(div).css("background-color", "#fc6b03");
+    if(div == ".thermo"){$(div).css("background-color", "#6bfc03");}
+    else {$(div).css("background-color", "#fc6b03");}
   }
 
   else if(new_height <= 40){
     $(div).css("height", new_height+"%");
-    $(div).css("background-color", "#fcc203");
+    if(div == ".thermo"){$(div).css("background-color", "#a9fc03");}
+    else {$(div).css("background-color", "#fcc203");}
   }
   else if(new_height <= 50){
     $(div).css("height", new_height+"%");
-    $(div).css("background-color", "#f8fc03");
+    if(div == ".thermo"){$(div).css("background-color", "#d2fc03");}
+    else {$(div).css("background-color", "#f8fc03");}
   }
   else if(new_height <= 60){
     $(div).css("height", new_height+"%");
-    $(div).css("background-color", "#d2fc03");
+    if(div == ".thermo"){$(div).css("background-color", "#f8fc03");}
+    else { $(div).css("background-color", "#d2fc03");}
   }
   else if(new_height <= 70){
     $(div).css("height", new_height+"%");
-    $(div).css("background-color", "#a9fc03");
+    if(div == ".thermo"){$(div).css("background-color", "#fcc203");}
+    else { $(div).css("background-color", "#a9fc03");}
   }
   else if(new_height <= 80){
     $(div).css("height", new_height+"%");
-    $(div).css("background-color", "#6bfc03*");
+    if(div == ".thermo"){$(div).css("background-color", "#fc6b03");}
+    else {$(div).css("background-color", "#6bfc03");}
   }
   else if(new_height < 90){
     $(div).css("height", new_height+"%");
-    $(div).css("background-color", "#3dfc03");
+    if(div == ".thermo"){$(div).css("background-color", "#fc4503");}
+    else {$(div).css("background-color", "#3dfc03");}
   }
   else{
-    $(div).css("height", 100+"%");
-    $(div).css("background-color", "#0ffc03");
+    $(div).css("height", 100+"%"); 
+    if(div == ".thermo"){$(div).css("background-color", "#fc0303");}
+    else { $(div).css("background-color", "#0ffc03");}
   }
 }
+
+
 

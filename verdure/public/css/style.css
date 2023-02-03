@@ -241,29 +241,29 @@ SLIDE QUESTION
     width: 100%;
     opacity: 0;
     transition: opacity 1s;
+    background-color: rgba(255, 255, 255, 0.159);
 }
 
 #question p{
-    background-color: rgba(255, 255, 255, 0.159);
     color: white;
     text-align: center;
-    font-size: 5vh;
+    font-size: 3vh;
 }
 
 #reponse p{
+    margin: 1vh;
+    padding:1vh;
     background-color: rgb(0, 0, 0);
     color: white;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 5px;
+    font-size: 2.5vh;
     text-align: center;
 }
 
-#gauche{
-    float:left;
-    width:50%;
-}
 
-#droite{
-    left:50%
-}
 
 .city{
     position : absolute;
@@ -331,9 +331,9 @@ INDICATEUR
 
 .thermo{
     position:absolute;
-    background-color: rgb(0, 0, 255);
+    background-color: red;
     width:  100%;
-    height: 50%;
+    height: 85%;
     bottom: 0px;
     transition: height 3s, background-color 3s;
 }
@@ -362,9 +362,9 @@ INDICATEUR
 
 .money {
     position:absolute;
-    background-color: rgb(0, 0, 255);
+    background-color: #0ffc03;
     width:  100%;
-    height: 10%;
+    height: 80%;
     bottom: 0px;
     transition: height 3s, background-color 3s;
 }
@@ -393,7 +393,7 @@ INDICATEUR
 
 .happy {
     position:absolute;
-    background-color: rgb(0, 0, 255);
+    background-color: #d2fc03;
     width:  100%;
     height: 50%;
     bottom: 0px;
