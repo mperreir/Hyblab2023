@@ -7,11 +7,15 @@ body
 
 #nbChoc
 {
-    font-size: 17em;
+    font-size: 37.5em;
     line-height: 0.8em;
     margin: auto;
+    padding-top: 100px;
     font-weight: 700;
     font-family: 'Prompt', sans-serif;
+    color: #FFF8F1;
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #FBC5EB;
 }
 
 div
@@ -21,18 +25,46 @@ div
 
 #texteExplication
 {
-    font-size: 20px;
-    margin-left : 3em;
-    margin-right : 3em;
+    font-size: 60px;
+    margin-left : 1em;
+    margin-right : 1em;
 }
 
 #texteDanger
 {
-    font-size: 20px;
-    margin: 7em 3em 1em;
+    font-size: 45px;
+    margin: 3em 5em 5em;
 }
 
 #nbDanger
 {
     font-weight: 700;
 }
+
+#fleche {
+    width: 100px;
+    color: #0B6E5F;
+}
+.round-background
+{
+    background-color: #FFF8F1;
+    border-radius: 100px;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+/*@keyframes slideUp {*/
+/*    from {*/
+/*        transform: translateY(100%);*/
+/*    }*/
+/*    to {*/
+/*        transform: translateY(0);*/
+/*    }*/
+/*}*/
+
+/*body {*/
+/*    transition: all 1s ease-in-out;*/
+/*}*/

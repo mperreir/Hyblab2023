@@ -8,16 +8,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://hammerjs.github.io/dist/hammer.js"></script>-->
+    <script src="scriptNbChoc.js"></script>-->
+
+
 
 </head>
 <header>
     <h1>Hyblab 2023</h1>
 </header>
 <body>
-    <div>
+    <div class="round-background">
         <p id="nbChoc"> 40 </p>
-        <p id="texteExplication"> espèces sauvages observées près de chez vous ! </p>
+        <p id="texteExplication"></p>
         <p id="texteDanger"> Dont <span id="nbDanger">20 en danger</span>, voici comment vous pouvez les protéger ! </p>
+        <a href="main.html"> <img src="fleche.png" alt="fleche vers le bas" id="fleche"> </a>
     </div>
+    <script>
+        const search = new URLSearchParams(window.location.search).get('searchCommune');
+        const h1 = document.getElementById("texteExplication");
+        // put the search in bold
+        h1.innerHTML = "espèces sauvages observées près de "+ search + " !";
+    </script>
 </body>
 </html>
