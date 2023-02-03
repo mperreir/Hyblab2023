@@ -1,0 +1,13 @@
+#container footer {
+    width: 75%;
+}
+
+#container header {
+    width: 60%;
+    padding: 2% 7% 2% 7%;
+    border-radius: 20px;
+}
+
+header {
+    background: var(--gris-clair);
+}
