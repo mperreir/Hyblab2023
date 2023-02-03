@@ -6,15 +6,19 @@ const initSlideQuestion = async function(){
   const page = document.querySelector('#question-slide')
   let question = document.querySelector('#question')
   let city = document.querySelector('.city')
-  var rep_1 = document.querySelector("#gauche")
-  var rep_2 = document.querySelector("#droite")
+  var rep_1 = document.querySelector("#rep_1")
+  var rep_2 = document.querySelector("#rep_2")
+  var cons_1 = document.querySelector("#reponse1")
+  var cons_2 = document.querySelector("#reponse2")
 
   rep_1.addEventListener('click', ()=> {
     changementThermo(-10)
     changementMoney(-20)
     changementHappy(+30)
     question.style.opacity = 0
-    question.style.height =0
+    question.style.height = 0
+    cons_1.style.height = '100%'
+    cons_1.style.opacity = 100
   })
 
   rep_2.addEventListener('click', ()=> {
@@ -27,6 +31,8 @@ const initSlideQuestion = async function(){
 
   setTimeout(()=> {
     question.style.opacity = 100;
+    cons_1.style.height = 0;
+    cons_2.style.height = 0;
     page.style.backgroundPositionY = "-10vh";
     city.style.top = "20%";
     swiper.enabled= true;

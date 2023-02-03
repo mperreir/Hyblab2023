@@ -242,15 +242,44 @@ SLIDE QUESTION
     opacity: 0;
     transition: opacity 1s;
     background-color: rgba(255, 255, 255, 0.159);
+    
 }
 
-#question p{
+#question p {
     color: white;
     text-align: center;
     font-size: 3vh;
+    margin: 0.2vh;
+}
+
+#reponse {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
 }
 
 #reponse p{
+    font-size: 2.5vh;
+    text-align: center;
+    
+    width: 40%;
+    margin-bottom: 0;
+    margin: 0.7vh;
+    padding:1vh;
+
+    background-color: rgb(0, 0, 0);
+    color: white;
+
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 5px;
+  
+  }
+
+/*#reponse p{
     margin: 1vh;
     padding:1vh;
     background-color: rgb(0, 0, 0);
@@ -261,7 +290,7 @@ SLIDE QUESTION
     border-width: 5px;
     font-size: 2.5vh;
     text-align: center;
-}
+}*/
 
 
 
