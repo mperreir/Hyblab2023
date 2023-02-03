@@ -2,7 +2,7 @@
   "name": "La ville",
   "file_name": "img/ville.svg",
   "main_color": "#A04952",
-  "background_color": "#F6CBCF",
+  "background_color": "#FFEDEF",
   "intro": "Lorem ipsum dolor sit amet at imperdiet nulla sit est volutpat. Luptatum duis amet sed et dolor et aliquyam sea tempor kasd vel nonumy justo clita ea. Sadipscing praesent sit elitr duis sed sed lorem. At amet sit labore illum nonumy lorem gubergren amet. Dolor amet dolore sed et accusam consetetur eos euismod labore feugiat nihil stet magna velit invidunt molestie. Eos et accusam odio sed volutpat lorem accusam labore vero invidunt et lorem duis vulputate. Sit eos duis sea clita magna. Dolor amet et sed diam et ea nonumy ut et et molestie. Clita nibh et elit erat clita tempor invidunt tempor. Magna ut gubergren et dolore dolores ut no sit labore diam et et.",
   "exemple": {
     "ville": "Paris",
@@ -16,9 +16,9 @@
 },
   {
     "name": "La mer",
-    "file_name": "img/friche.svg",
+    "file_name": "img/mer.svg",
     "main_color": "#5A76B4",
-    "background_color": "#C6D3F0",
+    "background_color": "#EDF3FF",
     "intro": "Lorem ipsum dolor sit amet at imperdiet nulla sit est volutpat. Luptatum duis amet sed et dolor et aliquyam sea tempor kasd vel nonumy justo clita ea. Sadipscing praesent sit elitr duis sed sed lorem. At amet sit labore illum nonumy lorem gubergren amet. Dolor amet dolore sed et accusam consetetur eos euismod labore feugiat nihil stet magna velit invidunt molestie. Eos et accusam odio sed volutpat lorem accusam labore vero invidunt et lorem duis vulputate. Sit eos duis sea clita magna. Dolor amet et sed diam et ea nonumy ut et et molestie. Clita nibh et elit erat clita tempor invidunt tempor. Magna ut gubergren et dolore dolores ut no sit labore diam et et.",
     "exemple": {
       "ville": "Strasbourg",
@@ -29,5 +29,23 @@
       "name": "La géothermie en France",
       "api": "https://api-adresse.data.gouv.fr/search/?q={search}"
     }
+  },
+  {
+    "name": "La friche",
+    "file_name": "img/campagne.svg",
+    "main_color": "#FFAC7F",
+    "background_color": "#FFF5EF"
+  },
+  {
+    "name": "La rivière",
+    "file_name": "img/riviere.svg",
+    "main_color": "#73CAD6",
+    "background_color": "#F2FDFF"
+  },
+  {
+    "name": "La campagne et la forêt",
+    "file_name": "img/campagne.svg",
+    "main_color": "#59A78D",
+    "background_color": "#F2FFFB"
   }
 ]

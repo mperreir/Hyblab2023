@@ -5,12 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Accueil</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script src="../js/caroussel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="../js/change_svg_color.js" defer></script>
+
+    <script src="../js/caroussel.js" defer></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/accueil.css">
 
@@ -21,7 +24,7 @@
     <div id="mySwiper" class="swiper">
         <header>
             <div class="headerOne">
-                <img src="../img/logo_hyblab.png" alt="logo hyblab"></img>
+                <img src="../img/logo_hyblab.png" alt="logo hyblab">
             </div>
             <div class="headerThree">
                 hyblab
@@ -30,13 +33,9 @@
         <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
         <main>
             <div class="carousel" id="carousel">
-                <div class="carousel-item" id="ville"><img src="../img/friche.svg" alt=""></div>
-                <div class="carousel-item" id="friche"><img src="../img/ville.svg" alt=""></div>
-                <div class="carousel-item" id="foret"><img src="../img/ville.svg" alt=""></div>
+
             </div>
-            <div id="carousel-text">lorem ipsum</div>
-
-
+            <p id="carousel-text"></p>
         </main>
         <div class="swiper-pagination"></div>
     </div>
