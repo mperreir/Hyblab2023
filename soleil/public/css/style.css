@@ -32,8 +32,8 @@ body{
 }
 
 #choix-log{
-    width : 5%;
-    height: 2.5%;
+    width : 24;
+    height: 12%;
 }
 
 #Soli1{
@@ -54,7 +54,23 @@ body{
 
 }
 
+#Soli3{
+    width : 40px;
+    height: 60px;
+    position : absolute;
+    bottom : 35%;
+    right : 5%;
 
+}
+
+#Soli4{
+    width : 40px;
+    height: 60px;
+    position : absolute;
+    bottom : 50%;
+    right : 5%;
+
+}
 
 div {
     float: left;
