@@ -41,6 +41,12 @@ h2 {
     font-size: 1em;
 }
 
+p {
+    font-size: 0.5em;
+}
+
+
+
 .flex-column {
     display: flex;
     flex-flow: column;
@@ -99,13 +105,25 @@ h2 {
     font-size: 0.7em;
 }
 
+.bouton-rond:hover {
+    cursor: pointer;
+}
+
 .rainbow-background {
     background-color: var(--blanc-fond);
-    background-image: url("../img/rainbow_background.svg");
     background-size: 100%;
-    background-position: center 60vh;
     background-repeat: no-repeat;
+}
 
+.rbg-top {
+    background-image: url("../img/rainbow_background_top.svg");
+    background-position: center -25vh;
+
+}
+
+.rbg-bottom {
+    background-image: url("../img/rainbow_background_bottom.svg");
+    background-position: center 60vh;
 }
 
 .italic {
@@ -139,6 +157,69 @@ h2 {
 
 .bleu-clair-font {
     color: var(--bleu-clair);
+}
+
+#theme-selector ul {
+    width: 100%;
+    margin-top: 2%;
+}
+
+#theme-selector ul li {
+    border-radius: 100px;
+}
+
+#theme-selector ul li:hover {
+    cursor: pointer;
+}
+
+#theme-selector ul li img {
+    height: 6vh;
+    transition: 0.2s;
+}
+
+#folder-tab {
+    width: 45%;
+    background-color: var(--gris-clair);
+    border-radius: 3vh 3vh 0 0;
+    padding: 2%;
+}
+
+#folder-back-body {
+    width: 100%;
+    height: 10vh;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--gris-clair);
+    border-radius: 0 3vh 0 0;
+    transition: 0.5s;
+}
+
+#folder-front-body {
+    width: 100%;
+    height: 80%;
+    background-color: var(--blanc-fond);
+    position: relative;
+    top: 25%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 3vh 3vh 0 0;
+    perspective : 600px;
+    transition: 0.5s;
+}
+
+/* Animation d'ouverture du dossier au passage de la souris */
+footer#folder:hover{
+    cursor: pointer;
+}
+
+footer#folder:hover #folder-back-body{
+    height: 11vh;
+}
+
+footer#folder:hover #folder-front-body {
+    transform: perspective(50px) rotateX(-1deg) scale(1.1);
+}
+
+.unchecked {
+    opacity: 40%;
 }
 
 

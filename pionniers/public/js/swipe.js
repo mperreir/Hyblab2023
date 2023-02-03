@@ -1,28 +1,35 @@
+const themeSelected = [];
 function onCheck(evnt) {
-    const checkbox = evnt.target;
-    const currentLi = checkbox.parentNode;
+    const themeImg = evnt.target;  // La cible est l'image dans la <li>
+    const themeString = themeImg.getAttribute('alt');
 
-    // TODO : Évenements d'animation à choisir + ajout dans la liste de filtre
-    if(checkbox.checked) {
-        currentLi.classList.add("checked-theme");
+    console.log("themeSelected :", themeSelected);
+
+    if(themeImg.classList.contains("unchecked")) {
+        themeImg.classList.remove("unchecked");
+        themeSelected.add(themeString);
     } else {
-        currentLi.classList.remove("checked-theme");
+        themeImg.classList.add("unchecked");
+        themeSelected.remove(themeString);
     }
+
+    // TODO : Appel à l'API pour recréer un jeu de profils, suivant les nouveaux thèmes sélectionnés
 }
 
-function onClickProfilsEnregistre(evt) {
-    window.location
+function onClickProfilsEnregistre() {
+    window.location.href = "./profils-enregistres.html"
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+
     const themesCheckboxes = document.querySelectorAll('#theme-selector ul li');
-    const btnProfilsEnregistre = document.querySelector('#profils-enr');
+    const profilsEnregistre = document.querySelector('footer');
 
-    themesCheckboxes.forEach(tb => {
-        tb.addEventListener('change', onCheck);
-    });
+    themesCheckboxes.forEach(tb =>
+        tb.addEventListener('click', onCheck)
+    );
 
-    btnProfilsEnregistre.addEventListener('click', onClickProfilsEnregistre)
+    profilsEnregistre.addEventListener('click', onClickProfilsEnregistre)
 });
 
 const state = {};
@@ -36,7 +43,7 @@ carouselList.addEventListener('click', function (event) {
 
     if (!isItem || newActive.classList.contains('carousel__item_active')) {
         return;
-    };
+    }
 
     update(newActive);
 });
@@ -44,11 +51,11 @@ carouselList.addEventListener('click', function (event) {
 const update = function(newActive) {
     const newActivePos = newActive.dataset.pos;
 
-    const current = elems.find((elem) => elem.dataset.pos == 0);
-    const prev = elems.find((elem) => elem.dataset.pos == -1);
-    const next = elems.find((elem) => elem.dataset.pos == 1);
-    const first = elems.find((elem) => elem.dataset.pos == -2);
-    const last = elems.find((elem) => elem.dataset.pos == 2);
+    const current = elems.find((elem) => elem.dataset.pos === 0);
+    const prev = elems.find((elem) => elem.dataset.pos === -1);
+    const next = elems.find((elem) => elem.dataset.pos === 1);
+    const first = elems.find((elem) => elem.dataset.pos === -2);
+    const last = elems.find((elem) => elem.dataset.pos === 2);
 
     current.classList.remove('carousel__item_active');
 
