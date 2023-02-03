@@ -206,3 +206,8 @@ body{
     margin-top: 10px;
     height: 350px;
 }
+
+#video-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

@@ -45,4 +45,5 @@ const initSlide1 = async function(){
   const data_filter = data.filter(function(item){return item.name === "La mer";})[0]
   mise_en_forme(data_filter);
   initSlide2(data_filter);
+  initSlide3(data_filter);
 };

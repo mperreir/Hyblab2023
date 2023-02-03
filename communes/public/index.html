@@ -17,8 +17,9 @@
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <script src="https://cdn.rawgit.com/aparshin/leaflet-boundary-canvas/f00b4d35/src/BoundaryCanvas.js"></script>
 
-    <script src="js/slide1.js" defer></script>
+  <script src="js/slide1.js" defer></script>
   <script src="js/slide2.js" defer></script>
+  <script src="js/slide3.js" defer></script>
   <script src="js/index.js" defer></script>
 </head>
 <body>
@@ -44,14 +45,28 @@
             </section>
 
             <section id="second-slide" class="swiper-slide">
+            <header>
+            </header>
+            <main>
+                <h2 id="exemple-title">This was...</h2>
+                <!-- video -->
+                <div id="video-container">
+                    <video id="video" width="100%" height="100%" controls>
+                        <source src="" type="video/mp4">
+                    </video>
+                </div>
+                <p id="exemple-text"></p>
 
+            </main>
+            </section>
+
+            <section id="third-slide" class="swiper-slide">
                 <header>
                 </header>
                 <main>
                     <h2 id="map-title">This was...</h2>
                     <div id="map"></div>
                 </main>
-
             </section>
         </main>
         <div class="swiper-pagination"></div>

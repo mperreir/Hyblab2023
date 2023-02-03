@@ -18,6 +18,9 @@ swiper.on("slideChange", function () {
     case 1:
       //initSlide2();
       break;
+    case 2:
+      //initSlide3();
+      break;
   }
 });
 
