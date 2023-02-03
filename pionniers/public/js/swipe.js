@@ -65,10 +65,10 @@ function getFontClass(topic) {
 }
 
 function createFiche(profil, dataPos) {
-    const { Age, City, Company, Keywords, MiniBio, Name, Status, Topic, URLImage } = profil;
+    const { Id, Age, City, Company, Keywords, MiniBio, Name, Status, Topic, URLImage } = profil;
     const tranlatedSimpleTopic = tranlateThemeToSimpleChar(Topic);
     const fontClass = getFontClass(tranlatedSimpleTopic);
-    const htmlString = `<li class="carousel-item flex-column align-items-center justify-content-space-between" data-pos="${dataPos}">
+    const htmlString = `<li class="carousel-item flex-column align-items-center justify-content-space-between" data-pos="${dataPos}" data-id="${Id}">
                             <section class="photo-case">
                                 <img alt="photo-profil" src="${URLImage}">
                             </section>
@@ -156,9 +156,10 @@ let elems = Array.from(carouselItems);
 
 carouselList.addEventListener('click', function (event) {
     let newActive = event.target;
-    // Si la target du click n'est pas la LI, on prend le parent qui sera la LI
-    if(newActive.parentNode.parentNode.tagName === "LI") {
-        newActive = newActive.parentNode.parentNode;
+
+    // Si la target du click n'est pas la LI, on remonte jusqu'au parent LI
+    while(newActive.tagName !== 'LI') {
+        newActive = newActive.parentNode;
     }
 
     const isItem = newActive.closest('.carousel-item');
@@ -173,19 +174,22 @@ carouselList.addEventListener('click', function (event) {
 function update(newActive) {
     const newActivePos = newActive.dataset.pos;
 
-    const first = elems.find((elem) => elem.dataset.pos === '-2');
-    const prev = elems.find((elem) => elem.dataset.pos === '-1');
-    const current = elems.find((elem) => elem.dataset.pos === '0');
-    const next = elems.find((elem) => elem.dataset.pos === '1');
-    const last = elems.find((elem) => elem.dataset.pos === '2');
+    if(newActivePos !== '0') {  // Pas de défilement si on click sur l'active (celle du milieu)
 
-    current.classList.remove('carousel__item_active');
+        const first = elems.find((elem) => elem.dataset.pos === '-2');
+        const prev = elems.find((elem) => elem.dataset.pos === '-1');
+        const current = elems.find((elem) => elem.dataset.pos === '0');
+        const next = elems.find((elem) => elem.dataset.pos === '1');
+        const last = elems.find((elem) => elem.dataset.pos === '2');
 
-    [current, prev, next, first, last].forEach(item => {
-        let itemPos = item.dataset.pos;
+        current.classList.remove('carousel__item_active');
 
-        item.dataset.pos = getPos(itemPos, newActivePos)
-    });
+        [current, prev, next, first, last].forEach(item => {
+            let itemPos = item.dataset.pos;
+
+            item.dataset.pos = getPos(itemPos, newActivePos)
+        });
+    }
 }
 
 const getPos = function (current, active) {
