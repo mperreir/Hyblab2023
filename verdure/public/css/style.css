@@ -288,7 +288,7 @@ SLIDE ANIMATION
 
 .img_bas{
     position: absolute;
-    top: 50%;
+    top: 49%;
     text-align: center;
     left: 30%;
 }
@@ -313,7 +313,9 @@ SLIDE ANIMATION
     text-align: center;
     right: 10%;
 }
-
+/********************************
+INDICATEUR
+*******************************/
 
 /*THERMOMETRE*/
 .containerthermo{
@@ -407,3 +409,33 @@ SLIDE ANIMATION
     padding: 0px;
 }
 
+
+/****************
+Nuage
+***************/
+figure {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0 0 0 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    /* overflow: hidden; */
+    background: url(http://res.cloudinary.com/duqzvuawc/image/upload/c_scale,h_424/v1508813537/clouds_tile_efhbuh.jpg);
+    animation: clouds_animation 75s linear infinite;
+  }
+  
+  @keyframes clouds_animation {
+    
+    0%  {background-position: 0 0;}
+    100%  {background-position: -2122px 0;}
+  }
+
+/*********/
+/* #ville > img {
+    width: 40%;
+    height: auto;
+    text-align: center;
+
+} */

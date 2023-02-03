@@ -6,7 +6,6 @@ const initSlideAnimationDroit = function(){
 
     // (Re)set initial position of img
   droit.setAttribute('style', 'transform :scale(1);');
-  //droit.setAttribute('style', 'transform : translateY(-50vh);');
 
   // Animate it
 

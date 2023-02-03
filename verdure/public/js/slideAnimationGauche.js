@@ -32,7 +32,7 @@ const initSlideAnimationGauche = function(){
   anime({
     targets: "#animationSlideGauche .img_gauche",
     scale: 3,
-    translateX : 25,
+    translateX : 30,
     delay : 1300,
     easing: 'easeInOutSine',
     direction: 'normal',

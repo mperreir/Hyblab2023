@@ -33,6 +33,7 @@ const initSlideAnimationBas = function(){
     targets: "#animationSlideBas .img_bas",
     scale: 3,
     translateY : -15,
+    translateX :5,
     delay : 1300,
     easing: 'easeInOutSine',
     direction: 'normal',

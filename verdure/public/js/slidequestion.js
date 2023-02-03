@@ -8,18 +8,32 @@ const initSlideQuestion = async function(){
   let city = document.querySelector('.city')
     
  
-  page.addEventListener('click', () => {
-        question.style.opacity = 100;
-        page.style.backgroundPositionY = "-10vh";
-        indic.style.opacity= 0;
-        city.style.top = "20%";
-        swiper.enabled= true;
-        changementThermo(10)
-        changementMoney(+10)
-        changementHappy(-40)
-        swiper.enable();
-  }
-  )
+  // page.addEventListener('click', () => {
+  //       question.style.opacity = 100;
+  //       page.style.backgroundPositionY = "-10vh";
+  //       indic.style.opacity= 0;
+  //       city.style.top = "20%";
+  //       swiper.enabled= true;
+  //       changementThermo(10)
+  //       changementMoney(+10)
+  //       changementHappy(-40)
+  //       swiper.enable();
+  // }
+  // )
+
+
+  setTimeout(()=> {
+    question.style.opacity = 100;
+    page.style.backgroundPositionY = "-10vh";
+    indic.style.opacity= 0;
+    city.style.top = "20%";
+    swiper.enabled= true;
+    changementThermo(10)
+    changementMoney(+10)
+    changementHappy(-40)
+    swiper.enable();
+},1000
+)
 
 
 // swiper.on('touchMove',function(event){
