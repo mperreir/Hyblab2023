@@ -11,23 +11,24 @@
 
 :root {
     /* Couleurs catégories */
-    --orange: rgba(246, 174, 10, 1);
-    --caca-doie: rgba(201, 174, 55, 1);
-    --vert: rgba(156, 175, 101, 1);
-    --turquoise: rgba(111, 175, 146, 1);
-    --cyan: rgba(66, 176, 192, 1);
-    --bleu-clair: rgba(21, 176, 237, 1);
-
+    --orange: #F5AF0A;
+    --caca-doie: #C8AF37;
+    --vert: #9BAF64;
+    --turquoise: #6EAF91;
+    --cyan: #6EAF91;
+    --bleu-clair: #14AFF0;
 
 
     /* Interface */
-    --blanc-fond: #ffffff;
+    --blanc-fond: #FFFFFF;
     --gris-clair: #F8F8F8;
-    --bleu-fonce: #006982;
+    --gris-moyen: #7F7F7F;
+    --bleu-fonce: #006A82;
+
 }
 
 body {
-    background-color: black;
+    background-color: #202124;
     color: var(--bleu-fonce);
     overflow: hidden;   /* to avoid slider bugs on some browsers */
     font-family: 'Poppins', sans-serif;
