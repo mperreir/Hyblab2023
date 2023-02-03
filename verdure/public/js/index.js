@@ -58,3 +58,5 @@ setTimeout(() => {
   // Init first slide
   initSlideAccueil();
 }, 1);
+
+let selectedZone = ["boulevard0", "parking0", "place0", "friche0"]; // the value of which image to take for each Zone

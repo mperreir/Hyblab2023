@@ -16,7 +16,7 @@ app.get('/topic', function (req, res) {
 
 const prompts = {
     1: {
-        "question": "This is the first question",
+        "question": "This is the</br> first question",
         "choices": [{
             "prompt": "This is the first choice of the first question",
             "positive": ["First positive effect", "Second positive effect"],
@@ -52,7 +52,7 @@ const prompts = {
 app.get('/question/:questionId', function (req, res) {
     const questionId = parseInt(req?.params?.questionId, 10);
     const data = prompts[questionId];
-    res.json({'data': data});
+    res.json(data);
 });
 
 // Export our API

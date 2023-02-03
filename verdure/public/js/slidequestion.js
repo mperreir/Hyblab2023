@@ -4,11 +4,9 @@
 const initSlideQuestion = async function () {
     // Get logo element
     const page = document.querySelector('#question-slide')
-    let question = document.querySelector('#question')
     let city = document.querySelector('.city')
 
-    page.addEventListener('click', () => {
-            question.style.opacity = 100;
+    /*page.addEventListener('click', () => {
             page.style.backgroundPositionY = "-10vh";
             indic.style.opacity = 0;
             city.style.top = "20%";
@@ -18,16 +16,10 @@ const initSlideQuestion = async function () {
             changementHappy(50, "green")
             swiper.enable();
         }
-    )
+    )*/
 
     //question
     await questions();
-
-    // long response part
-    const button = document.getElementById('showButton');
-    button.addEventListener('click', showExplications);
-    button.style.display = 'none';
-    document.getElementById('longAnswers').style.display = 'none';
 
 
 // swiper.on('touchMove',function(event){
