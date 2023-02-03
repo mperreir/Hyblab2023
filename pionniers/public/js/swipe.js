@@ -1,5 +1,10 @@
 let themeSelected = [];
-let carrouselPointer = 0;
+let carrouselPointer = 5;
+
+let carouselList = document.querySelector('.carousel-list');
+let carouselItems = document.querySelectorAll('.carousel-item');
+let elems = Array.from(carouselItems);
+const swiperSection = document.querySelector('#swiper');
 
 function generateApiParameters(themeSelected) {
     const theme = ["alimentation", "économie circulaire", "énergie", "industrie", "mobilité", "numérique"]
@@ -135,7 +140,13 @@ async function onCheck(evnt) {
 function onClickProfilsEnregistre() {
     window.location.href = "./profils-enregistres.html";
 }
+function ajouterNouvelleFiche(posFicheASuppr) {
+    const ficheA = document.querySelector('.carousel-item[data-pos="2"]');
 
+    carouselList = document.querySelector('.carousel-list');
+    carouselItems = document.querySelectorAll('.carousel-item');
+    elems = Array.from(carouselItems);
+}
 document.addEventListener("DOMContentLoaded", async function () {
 
     const themesCheckboxes = document.querySelectorAll('#theme-selector ul li');
@@ -150,25 +161,20 @@ document.addEventListener("DOMContentLoaded", async function () {
     await chercheEtAjouteProfils(themeSelected);
 });
 
-let carouselList = document.querySelector('.carousel-list');
-let carouselItems = document.querySelectorAll('.carousel-item');
-let elems = Array.from(carouselItems);
+swiperSection.addEventListener('click', function (event) {
+    let newActive;
+    const wWidth = window.innerWidth;
+    const xClick = event.clientX;
 
-carouselList.addEventListener('click', function (event) {
-    let newActive = event.target;
-
-    // Si la target du click n'est pas la LI, on remonte jusqu'au parent LI
-    while(newActive.tagName !== 'LI') {
-        newActive = newActive.parentNode;
-    }
-
-    const isItem = newActive.closest('.carousel-item');
-
-    if (!isItem || newActive.classList.contains('carousel__item_active')) {
-        return;
+    if(xClick > (wWidth / 2)) {
+        newActive = carouselList.querySelector('.carousel-item[data-pos="1"]');
+    } else {
+        newActive = carouselList.querySelector('.carousel-item[data-pos="-1"]');
     }
 
     update(newActive);
+
+    //ajouterNouvelleFiche(newActive.dataset.pos);
 });
 
 function update(newActive) {
@@ -190,8 +196,9 @@ function update(newActive) {
             item.dataset.pos = getPos(itemPos, newActivePos)
         });
     }
-}
 
+
+}
 const getPos = function (current, active) {
     const diff = current - active;
 

@@ -29,11 +29,12 @@ header div img {
 
 #swiper {
     height: 50%;
-    width: 60%;
+    width: 100%;
 }
 
 .carousel-list {
-    width: 100%;
+
+    width: 60%;
     height: 100%;
     perspective: 300px;
 }
