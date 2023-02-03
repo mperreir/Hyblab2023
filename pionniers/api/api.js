@@ -9,9 +9,12 @@ app.get('/map/keywords', function ( req, res ) {
         // Filter data to only keep convenient fields
         data.values = data.values.map(row => {
             return {
+                "Id": row[0],
                 "Keywords": row[12]
             }
         });
+        // Remove lines with no Id
+        data.values = data.values.filter(row => row.Id);
         // Remove header row
         data.values.shift();
         // Remove empty rows
@@ -43,6 +46,8 @@ app.get('/map/topics/:feed/:circular_economy/:energy/:industry/:mobility/:digita
                 "Keywords": row[12]
             }
         });
+        // Remove lines with no Id
+        data.values = data.values.filter(row => row.Id);
         // If Topic or Keywords are undefined, set an empty string
         data.values = data.values.map(row => {
             row.Topic = row.Topic ? row.Topic : " ";
@@ -87,6 +92,8 @@ app.get('/miniature/:id', function ( req, res ) {
                 "URLImage": row[15]
             }
         });
+        // Remove lines with no Id
+        data.values = data.values.filter(row => row.Id);
         // Filter data to only keep the row with the requested id
         data.values = data.values.filter(row => {
             return row.Id === req.params.id;
@@ -119,6 +126,8 @@ app.get('/miniature/topics/:feed/:circular_economy/:energy/:industry/:mobility/:
                 "URLImage": row[15]
             }
         });
+        // Remove lines with no Id
+        data.values = data.values.filter(row => row.Id);
         // If Topic or Keywords are undefined, set an empty string
         data.values = data.values.map(row => {
             row.Topic = row.Topic ? row.Topic : " ";
@@ -159,6 +168,8 @@ app.get('/profile/:id', function ( req, res ) {
                 "URLLinkedin": row[16]
             }
         });
+        // Remove lines with no Id
+        data.values = data.values.filter(row => row.Id);
         // Filter data to only keep the row with the requested id
         data.values = data.values.filter(row => {
             return row.Id === req.params.id;
