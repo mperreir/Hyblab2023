@@ -40,7 +40,8 @@ const initSlideQuestion = async function(){
 },1000
 )
 
-
+// questions
+await questions();
 
 // swiper.on('touchMove',function(event){
 //   console.log("OKK")
