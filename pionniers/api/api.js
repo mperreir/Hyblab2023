@@ -12,8 +12,8 @@ app.get('/map/keywords', function ( req, res ) {
         // Filter data to only keep convenient fields
         data.values = data.values.map(row => {
             return {
-                "Id": row[0],
-                "Keywords": row[12]
+                "Id": row[0].toString().trim(),
+                "Keywords": row[12].toString().trim()
             }
         });
         // Remove lines with no Id
@@ -45,21 +45,15 @@ app.get('/map/topics/:feed/:circular_economy/:energy/:industry/:mobility/:digita
         // Filter data to only keep convenient fields
         data.values = data.values.map(row => {
             return {
-                "Id": row[0],
-                "Long": row[2],
-                "Lat": row[3],
-                "Topic": row[11],
-                "Keywords": row[12]
+                "Id": row[0].toString().trim(),
+                "Long": row[2].toString().trim(),
+                "Lat": row[3].toString().trim(),
+                "Topic": row[11].toString().trim(),
+                "Keywords": row[12].toString().trim()
             }
         });
         // Remove lines with no Id
         data.values = data.values.filter(row => row.Id);
-        // If Topic or Keywords are undefined, set an empty string
-        data.values = data.values.map(row => {
-            row.Topic = row.Topic ? row.Topic : " ";
-            row.Keywords = row.Keywords ? row.Keywords : " ";
-            return row;
-        });
         // Filter data to only keep rows with the requested topics
         data.values = data.values.filter(row => {
             return (req.params.feed === "true" && row.Topic.includes("alimentation")) ||
@@ -89,16 +83,16 @@ app.get('/miniature/:id', function ( req, res ) {
         // Filter data to only keep convenient fields
         data.values = data.values.map(row => {
             return {
-                "Id": row[0],
-                "Name": row[4],
-                "Company": row[5],
-                "City": row[6],
-                "Age": row[7],
-                "Status": row[8],
-                "MiniBio": row[9],
-                "Topic": row[11],
-                "Keywords": row[12],
-                "URLImage": row[15]
+                "Id": row[0].toString().trim(),
+                "Name": row[4].toString().trim(),
+                "Company": row[5].toString().trim(),
+                "City": row[6].toString().trim(),
+                "Age": row[7].toString().trim(),
+                "Status": row[8].toString().trim(),
+                "MiniBio": row[9].toString().trim(),
+                "Topic": row[11].toString().trim(),
+                "Keywords": row[12].toString().trim(),
+                "URLImage": row[15].toString().trim()
             }
         });
         // Remove lines with no Id
@@ -127,26 +121,20 @@ app.get('/miniature/topics/:feed/:circular_economy/:energy/:industry/:mobility/:
         // Filter data to only keep convenient fields
         data.values = data.values.map(row => {
             return {
-                "Id": row[0],
-                "Name": row[4],
-                "Company": row[5],
-                "City": row[6],
-                "Age": row[7],
-                "Status": row[8],
-                "MiniBio": row[9],
-                "Topic": row[11],
-                "Keywords": row[12],
-                "URLImage": row[15]
+                "Id": row[0].toString().trim(),
+                "Name": row[4].toString().trim(),
+                "Company": row[5].toString().trim(),
+                "City": row[6].toString().trim(),
+                "Age": row[7].toString().trim(),
+                "Status": row[8].toString().trim(),
+                "MiniBio": row[9].toString().trim(),
+                "Topic": row[11].toString().trim(),
+                "Keywords": row[12].toString().trim(),
+                "URLImage": row[15].toString().trim()
             }
         });
         // Remove lines with no Id
         data.values = data.values.filter(row => row.Id);
-        // If Topic or Keywords are undefined, set an empty string
-        data.values = data.values.map(row => {
-            row.Topic = row.Topic ? row.Topic : " ";
-            row.Keywords = row.Keywords ? row.Keywords : " ";
-            return row;
-        });
         // Filter data to only keep rows with the requested topics
         data.values = data.values.filter(row => {
             return (req.params.feed === "true" && row.Topic.includes("alimentation")) ||
@@ -170,19 +158,19 @@ app.get('/profile/:id', function ( req, res ) {
         // Filter data to only keep convenient fields
         data.values = data.values.map(row => {
             return {
-                "Id": row[0],
-                "ExactAddress": row[1],
-                "Name": row[4],
-                "Company": row[5],
-                "Age": row[7],
-                "Status": row[8],
-                "ContentBio": row[10],
-                "Topic": row[11],
-                "Keywords": row[12],
-                "Podcast": row[13],
-                "Article": row[14],
-                "URLImage": row[15],
-                "URLLinkedin": row[16]
+                "Id": row[0].toString().trim(),
+                "ExactAddress": row[1].toString().trim(),
+                "Name": row[4].toString().trim(),
+                "Company": row[5].toString().trim(),
+                "Age": row[7].toString().trim(),
+                "Status": row[8].toString().trim(),
+                "ContentBio": row[10].toString().trim(),
+                "Topic": row[11].toString().trim(),
+                "Keywords": row[12].toString().trim(),
+                "Podcast": row[13].toString().trim(),
+                "Article": row[14].toString().trim(),
+                "URLImage": row[15].toString().trim(),
+                "URLLinkedin": row[16].toString().trim()
             }
         });
         // Remove lines with no Id

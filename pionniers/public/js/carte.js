@@ -66,7 +66,7 @@ async function getProfiles() {
  * @returns {*}
  */
 function createIcon(p) {
-    switch (p.Topic.trim()) {
+    switch (p.Topic) {
         case 'énergie':
             return L.icon({
                 iconUrl: '../img/pictogrammes_carte/point_energie.svg',
