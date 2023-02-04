@@ -23,16 +23,20 @@
         {
             "type": "answer",
             "answer": [
-                {
-                    "type": "message",
-                    "name": "Tristan",
-                    "text": "Bien !"
-                },
-                {
-                    "type": "message",
-                    "name": "Tristan",
-                    "text": "Pas bien !"
-                }
+                [
+                    {
+                        "type": "message",
+                        "name": "Tristan",
+                        "text": "Bien !"
+                    }
+                ],
+                [
+                    {
+                        "type": "message",
+                        "name": "Tristan",
+                        "text": "Pas bien !"
+                    }
+                ]
             ]
         },
         {
