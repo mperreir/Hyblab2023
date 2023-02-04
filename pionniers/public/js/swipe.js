@@ -167,9 +167,12 @@ function ajouterNouvelleFiche(clicADroite) {
     const indexProfilSuppr = profilsTrouves.findIndex(pr => pr.Id === idFicheASuppr);
     let indexNouveauProfil;
     if(clicADroite) {
-        indexNouveauProfil = (indexProfilSuppr + 6) % profilsTrouves.length;
+        indexNouveauProfil = (indexProfilSuppr + 5) % profilsTrouves.length;
     } else {
-        indexNouveauProfil = (indexProfilSuppr - 6) % profilsTrouves.length;
+        indexNouveauProfil = indexProfilSuppr - 5;
+        if(indexNouveauProfil < 0) {
+            indexNouveauProfil = profilsTrouves.length + indexNouveauProfil;
+        }
     }
 
     const newProfil = profilsTrouves[indexNouveauProfil];
