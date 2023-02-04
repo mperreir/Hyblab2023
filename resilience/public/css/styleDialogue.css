@@ -1,3 +1,7 @@
+#container {
+    background-color: lightblue;
+}
+
 h1 {
     font-size: 1em;
     line-height: 1em;
@@ -5,9 +9,48 @@ h1 {
     padding: 0;
 }
 
+#dialogue {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    background-color: lightgreen;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+}
+
+#dialogue > * {
+    position: relative;
+}
+
+#messages > * {
+    position: relative;
+}
+
 .message {
     color: black;
-    position: relative;
+    max-width: 30em;
+    
+    background-color: white;
+    padding: 0.5em 0.75em;
+    font-size: 0.2em;
+    border-radius: 0.2rem;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+    bottom: 1rem;
+    width: 75%;
+    margin-bottom: 0.5rem;
+}
+
+.name {
+    padding: 1.5em 0.75em;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    margin-right: 0.5em;
+}
+
+.answer {
+    color: black;
     max-width: 30em;
 
     background-color: white;
@@ -20,20 +63,6 @@ h1 {
     margin-bottom: 0.5rem;
 }
 
-.name {
-    padding: 2em 0.75em;
-    font-size: 1rem;
-    color: white;
-    font-weight: bold;
-    margin-right: 0.5em;
-}
-
-.question .answer {
-    font-size: 0.2rem;
-    color: white;
-    position: relative;
-}
-
 .left {
     float: left;
 }
@@ -43,17 +72,22 @@ h1 {
 }
 
 .message::before {
-    /* layout*/
     content: '';
     position: absolute;
     width: 0;
     height: 0;
     bottom: 100%;
-    left: 1em; /* offset should move with padding of parent*/
     border: .5rem solid transparent;
     border-top: none;
-
-    /*looks*/
+    
     border-bottom-color: white;
     filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+}
+
+.message.right::before {
+    right: 1em;
+}
+
+.message.left::before {
+    left: 1em;
 }
