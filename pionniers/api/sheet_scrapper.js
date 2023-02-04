@@ -68,6 +68,6 @@ module.exports = {
             exportSheetJSON().then(() => {
                 console.log("Data updated");
             });
-        }, 1000 * 60);
+        }, 1000 * 60 * 60);
     }
 }

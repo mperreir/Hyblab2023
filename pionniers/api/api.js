@@ -4,6 +4,9 @@ const app = require( 'express' )();
 const sheet_scrapper = require('./sheet_scrapper');
 
 
+/**
+ * @api {get} Get all used keywords
+ */
 app.get('/map/keywords', function ( req, res ) {
     sheet_scrapper.readJSONFromServerFile().then(data => {
         // Filter data to only keep convenient fields
@@ -34,6 +37,9 @@ app.get('/map/keywords', function ( req, res ) {
 });
 
 
+/**
+ * @api {get} Get all geographical information of entrepreneurs matching the requested topics and optional keyword
+ */
 app.get('/map/topics/:feed/:circular_economy/:energy/:industry/:mobility/:digital/keyword/:keyword?', function ( req, res ) {
     sheet_scrapper.readJSONFromServerFile().then(data => {
         // Filter data to only keep convenient fields
@@ -75,6 +81,9 @@ app.get('/map/topics/:feed/:circular_economy/:energy/:industry/:mobility/:digita
 });
 
 
+/**
+ * @api {get} Get the miniature of a specific entrepreneur by its id
+ */
 app.get('/miniature/:id', function ( req, res ) {
     sheet_scrapper.readJSONFromServerFile().then(data => {
         // Filter data to only keep convenient fields
@@ -109,6 +118,10 @@ app.get('/miniature/:id', function ( req, res ) {
     });
 });
 
+
+/**
+ * @api {get} Get all miniatures of entrepreneurs matching the requested topics
+ */
 app.get('/miniature/topics/:feed/:circular_economy/:energy/:industry/:mobility/:digital?', function ( req, res ) {
     sheet_scrapper.readJSONFromServerFile().then(data => {
         // Filter data to only keep convenient fields
@@ -148,6 +161,10 @@ app.get('/miniature/topics/:feed/:circular_economy/:energy/:industry/:mobility/:
     });
 });
 
+
+/**
+ * @api {get} Get the profile of a specific entrepreneur by its id
+ */
 app.get('/profile/:id', function ( req, res ) {
     sheet_scrapper.readJSONFromServerFile().then(data => {
         // Filter data to only keep convenient fields
