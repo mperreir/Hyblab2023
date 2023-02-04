@@ -1,29 +1,3 @@
-function afficheMenu(obj){
-    const idachievement = obj.id;
-    const idexplication = 'explication-' + idachievement;
-    const explication = document.getElementById(idexplication);
-
-    /*****************************************************/
-    /**	on cache tous les sous-menus pour n'afficher    **/
-    /** que celui dont le menu correspondant est cliqué **/
-    /*****************************************************/
-    for(let i = 1; i <= 11; i++){
-        if(document.getElementById('explication-achievement' + i) && document.getElementById('explication-achievement' + i) !== explication){
-            document.getElementById('explication-achievement' + i).style.display = "none";
-        }
-    }
-
-    if(explication){
-        if(explication.style.display === "block"){
-            explication.style.display = "none";
-        }
-        else{
-            explication.style.display = "block";
-        }
-    }
-
-}
-
 async function achievement() {
     let response = await fetch(`data/achievement.json`);
     const achievements = await response.json();
