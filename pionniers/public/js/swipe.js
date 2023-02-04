@@ -1,5 +1,5 @@
 let themeSelected = [];
-let carrouselPointer = 5;
+let profilsTrouves;
 
 let carouselList = document.querySelector('.carousel-list');
 let carouselItems = document.querySelectorAll('.carousel-item');
@@ -75,7 +75,7 @@ function createFiche(profil, dataPos) {
     const fontClass = getFontClass(tranlatedSimpleTopic);
     const htmlString = `<li class="carousel-item flex-column align-items-center justify-content-space-between" data-pos="${dataPos}" data-id="${Id}">
                             <section class="photo-case">
-                                <img alt="photo-profil" src="${URLImage}">
+                                <img draggable="false" alt="photo-profil" src="${URLImage}">
                             </section>
                             <section class="information-fiche flex-column justify-content-space-evenly">
                                 <section class="carte-identite flex-column align-items-center-flex-start ${fontClass}">
@@ -104,19 +104,22 @@ function createFiche(profil, dataPos) {
     return ficheProfil;
 }
 
-function recreateProfileDeck(profilTrouve) {
+function recreateProfileDeck(profilsTrouves) {
     const carrousel = document.querySelector('#swiper ul');
     removeAllChild(carrousel);
     for(let i = -2; i < 3; i++) {
-        carrousel.append(createFiche(profilTrouve[i + 2], i));
+        carrousel.append(createFiche(profilsTrouves[i + 2], i));
     }
 }
 
-async function chercheEtAjouteProfils(themeSelected) {
+async function chercheEtAjouteProfils(themeSelected, shuffleResults) {
     const baseURL = document.location.origin;
-    const profilTrouve = await fetch(baseURL + "/pionniers/api/miniature/topics/" + generateApiParameters(themeSelected)).then(r => r.json());
-    console.log(profilTrouve);
-    recreateProfileDeck(profilTrouve);
+    profilsTrouves = await fetch(baseURL + "/pionniers/api/miniature/topics/" + generateApiParameters(themeSelected)).then(r => r.json());
+    if(shuffleResults) {
+        profilsTrouves = profilsTrouves.sort(() => 0.5 - Math.random());
+    }
+    console.log(profilsTrouves);
+    recreateProfileDeck(profilsTrouves);
 
     carouselList = document.querySelector('.carousel-list');
     carouselItems = document.querySelectorAll('.carousel-item');
@@ -134,19 +137,46 @@ async function onCheck(evnt) {
         themeSelected.splice(themeSelected.indexOf(themeString), 1);
     }
 
-    await chercheEtAjouteProfils(themeSelected);
+    await chercheEtAjouteProfils(themeSelected, true);
+
 }
 
 function onClickProfilsEnregistre() {
     window.location.href = "./profils-enregistres.html";
 }
-function ajouterNouvelleFiche(posFicheASuppr) {
-    const ficheA = document.querySelector('.carousel-item[data-pos="2"]');
+
+
+function ajouterNouvelleFiche(clicADroite) {
+    let posFicheASuppr;
+
+    if(clicADroite) { // Mise en avant la fiche de droite
+        posFicheASuppr = 2;
+    } else {                // Mise en avant la fiche de gauche
+        posFicheASuppr = -2;
+    }
+
+    const ficheASuppr = document.querySelector(`.carousel-item[data-pos="${posFicheASuppr}"]`);
+    const idFicheASuppr = ficheASuppr.dataset.id;
+
+    carouselList.removeChild(ficheASuppr);
+
+    const indexProfilSuppr = profilsTrouves.findIndex(pr => pr.Id === idFicheASuppr);
+    let indexNouveauProfil;
+    if(clicADroite) {
+        indexNouveauProfil = (indexProfilSuppr + 6) % profilsTrouves.length;
+    } else {
+        indexNouveauProfil = (indexProfilSuppr - 6) % profilsTrouves.length;
+    }
+
+    const newProfil = profilsTrouves[indexNouveauProfil];
+
+    carouselList.append(createFiche(newProfil, posFicheASuppr));
 
     carouselList = document.querySelector('.carousel-list');
     carouselItems = document.querySelectorAll('.carousel-item');
     elems = Array.from(carouselItems);
 }
+
 document.addEventListener("DOMContentLoaded", async function () {
 
     const themesCheckboxes = document.querySelectorAll('#theme-selector ul li');
@@ -158,15 +188,16 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     profilsEnregistre.addEventListener('click', onClickProfilsEnregistre);
 
-    await chercheEtAjouteProfils(themeSelected);
+    await chercheEtAjouteProfils(themeSelected, true);
 });
 
 swiperSection.addEventListener('click', function (event) {
     let newActive;
     const wWidth = window.innerWidth;
     const xClick = event.clientX;
+    const clicADroite = xClick > (wWidth / 2);
 
-    if(xClick > (wWidth / 2)) {
+    if(clicADroite) {
         newActive = carouselList.querySelector('.carousel-item[data-pos="1"]');
     } else {
         newActive = carouselList.querySelector('.carousel-item[data-pos="-1"]');
@@ -174,37 +205,31 @@ swiperSection.addEventListener('click', function (event) {
 
     update(newActive);
 
-    //ajouterNouvelleFiche(newActive.dataset.pos);
+    ajouterNouvelleFiche(clicADroite);
 });
 
 function update(newActive) {
     const newActivePos = newActive.dataset.pos;
+    const first = elems.find((elem) => elem.dataset.pos === '-2');
+    const prev = elems.find((elem) => elem.dataset.pos === '-1');
+    const current = elems.find((elem) => elem.dataset.pos === '0');
+    const next = elems.find((elem) => elem.dataset.pos === '1');
+    const last = elems.find((elem) => elem.dataset.pos === '2');
 
-    if(newActivePos !== '0') {  // Pas de défilement si on click sur l'active (celle du milieu)
+    current.classList.remove('carousel__item_active');
 
-        const first = elems.find((elem) => elem.dataset.pos === '-2');
-        const prev = elems.find((elem) => elem.dataset.pos === '-1');
-        const current = elems.find((elem) => elem.dataset.pos === '0');
-        const next = elems.find((elem) => elem.dataset.pos === '1');
-        const last = elems.find((elem) => elem.dataset.pos === '2');
+    [current, prev, next, first, last].forEach(item => {
+        let itemPos = item.dataset.pos;
 
-        current.classList.remove('carousel__item_active');
-
-        [current, prev, next, first, last].forEach(item => {
-            let itemPos = item.dataset.pos;
-
-            item.dataset.pos = getPos(itemPos, newActivePos)
-        });
-    }
+        item.dataset.pos = getNewPos(itemPos, newActivePos)
+    });
 
 
 }
-const getPos = function (current, active) {
+const getNewPos = function (current, active) {
     const diff = current - active;
-
-    if (Math.abs(current - active) > 2) {
+    if (Math.abs(diff) > 2) {
         return -current
     }
-
     return diff;
 }
