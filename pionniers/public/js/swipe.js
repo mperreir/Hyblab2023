@@ -26,7 +26,7 @@ function generateApiParameters(themeSelected) {
 }
 
 function createKeywordItem(Keyword) {
-    const htmlString = `<div class="keyword-item">
+    const htmlString = `<div class="keyword-item flex-row align-items-center">
                             <p>#${Keyword}</p>
                         </div>`;
 
@@ -100,7 +100,11 @@ function createFiche(profil, dataPos) {
     const ficheProfil = createElementFromHTML(htmlString);
     const keywordsSplit = Keywords.split(';');
     const keywordList = ficheProfil.querySelector(".keywords");
-    keywordsSplit.forEach(k => keywordList.append(createKeywordItem(k)));
+    keywordsSplit.forEach(k => {
+        if(k.trim() !== '') {   // Eviler bug mots clés vides
+            keywordList.append(createKeywordItem(k))
+        }
+    });
     return ficheProfil;
 }
 

@@ -104,10 +104,14 @@ p {
     border: none;
     background: var(--blanc-fond);
     font-size: 0.7em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
 }
 
 .bouton-rond:hover {
     cursor: pointer;
+    color: var(--blanc-fond);
+    background: var(--bleu-fonce);
 }
 
 .rainbow-background {
@@ -125,6 +129,11 @@ p {
 .rbg-bottom {
     background-image: url("../img/rainbow_background_bottom.svg");
     background-position: center 58vh;
+}
+
+.rbg-bottom-extreme {
+    background-image: url("../img/rainbow_background_bottom.svg");
+    background-position: center 75vh;
 }
 
 .italic {

@@ -93,7 +93,12 @@ header div img {
     font-size: 0.8em; /* Combiné au 0.5em du p dans general.css */
 }
 
+.keywords {
+    flex-wrap: wrap;
+}
+
 .keyword-item {
+    white-space: nowrap;
     border-radius: 500px;
     background-color: var(--blanc-fond);
     margin-right: 7%;
