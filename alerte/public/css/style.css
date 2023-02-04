@@ -44,7 +44,7 @@ body {
 /* */
 
 
-#first-slide {
+.swiper-wrapper section {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -121,8 +121,7 @@ footer>button {
 }
 
 /* Most of the elements in this demo are absolute positionned with percentages */
-#first-slide header,
-#second-slide header {
+.swiper-wrapper section header {
     width: 100%;
     font-size: 30%;
     z-index: 2;
@@ -161,13 +160,24 @@ main>section {
 }
 
 /* Footer of last slide is at the bottom and content is centered */
-#first-slide footer {
+.swiper-wrapper section footer {
     box-sizing: border-box;
     /* So that padding is not added to width (and width: 100% works) */
     width: 100%;
     /* could also use  width: calc(100% - 2em) if not using box-sizing */
     font-size: 20%;
     text-align: center;
+}
+
+#myProgress {
+    width: 100%;
+    background-color: grey;
+}
+
+#myBar {
+    width: 5%;
+    height: 15px;
+    background-color: red;
 }
 
 

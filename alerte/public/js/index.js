@@ -1,5 +1,20 @@
 "use strict";
 
+let s0 = document.getElementById("s0");
+let s1 = document.getElementById("s1");
+
+let next0 = document.getElementById("next0")
+next0.addEventListener("click", () => {
+  s0.style.display = 'none'
+  s1.style.removeProperty('display')
+})
+
+let btn1 = document.getElementById("next1")
+btn1.addEventListener("click", () => {
+  s0.style.removeProperty('display')
+  s1.style.display = 'none'
+})
+
 // Init of the (touch friendly) Swiper slider
 const swiper = new Swiper("#mySwiper", {
   direction: "horizontal",

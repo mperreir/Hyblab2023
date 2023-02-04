@@ -4,12 +4,13 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "dev": "nodemon server.js",
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
   },
   "author": "MPDS",
-  "license": "MIT",
-  "devDependencies": {}
+  "license": "MIT"
 }
