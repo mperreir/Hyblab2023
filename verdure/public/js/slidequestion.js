@@ -11,34 +11,34 @@ const initSlideQuestion = async function(){
   var cons_1 = document.querySelector("#reponse1")
   var cons_2 = document.querySelector("#reponse2")
 
-  rep_1.addEventListener('click', ()=> {
-    changementThermo(-10)
-    changementMoney(-20)
-    changementHappy(+30)
-    question.style.opacity = 0
-    question.style.height = 0
-    cons_1.style.height = '100%'
-    cons_1.style.opacity = 100
-  })
+  // rep_1.addEventListener('click', ()=> {
+  //   changementThermo(-10)
+  //   changementMoney(-20)
+  //   changementHappy(+30)
+  //   question.style.opacity = 0
+  //   question.style.height = 0
+  //   cons_1.style.height = '100%'
+  //   cons_1.style.opacity = 100
+  // })
 
-  rep_2.addEventListener('click', ()=> {
-    changementThermo(-20)
-    changementMoney(-10)
-    changementHappy(-20)
-    question.style.opacity = 0
-    question.style.height =0
-  })
+  // rep_2.addEventListener('click', ()=> {
+  //   changementThermo(-20)
+  //   changementMoney(-10)
+  //   changementHappy(-20)
+  //   question.style.opacity = 0
+  //   question.style.height =0
+  // })
 
-  setTimeout(()=> {
-    question.style.opacity = 100;
-    cons_1.style.height = 0;
-    cons_2.style.height = 0;
-    page.style.backgroundPositionY = "-10vh";
-    city.style.top = "20%";
-    swiper.enabled= true;
-    swiper.enable();
-},1000
-)
+//   setTimeout(()=> {
+//     question.style.opacity = 100;
+//     cons_1.style.height = 0;
+//     cons_2.style.height = 0;
+//     page.style.backgroundPositionY = "-10vh";
+//     city.style.top = "20%";
+//     swiper.enabled= true;
+//     swiper.enable();
+// },1000
+// )
 
 // questions
 await questions();

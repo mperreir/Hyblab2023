@@ -19,7 +19,7 @@ swiper.on("slideChange", function () {
       break;
     case 1:
       //swiper.enabled= false;
-      swiper.disable()
+      //swiper.disable()
       initSlideQuestion();
       break;
     case 2 :
