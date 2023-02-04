@@ -82,7 +82,7 @@ body{
     animation-duration: 5s;
     animation-iteration-count: infinite;
     transform:scale(0.9);
-        
+
 
 }
 
@@ -203,8 +203,6 @@ header{
     width: 90%;
 }
 
-
-
 #colonne2 {
     width: 45%;
     text-align: center;
@@ -212,6 +210,7 @@ header{
 
 #colonne3{
     width: 27%;
+    padding: 0;
 }
 
 .choix-texte {
@@ -347,9 +346,21 @@ div{
 button.retour{
     left: 0%;
     margin: 2% ;
+    /* Le bouton a un rapport de 43 x 56 => 0.76785714...
+       On utilise ce rapport pour arrondir le bouton
+    */
     width : 10%;
+    height: 7.67%;
+    border-radius: 100%;
+    font-size: 5vw;
+    background-color: transparent;
+    border: transparent;
     text-align: center;
     position: absolute;
+}
+
+button.retour:hover {
+    background-color: #D3D3D3;
 }
 
 p.intitulé {
