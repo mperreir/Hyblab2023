@@ -23,3 +23,25 @@ document.addEventListener("DOMContentLoaded", function() {
         tb.addEventListener('click', onCheck)
     );
 });
+
+
+/*
+  ----------------------------------------------------------------------------------------------------------------------
+  | Leaflet map management                                                                                             |
+  ----------------------------------------------------------------------------------------------------------------------
+ */
+// Init of the TileLayer (Stamen Toner Lite)
+const layer = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
+    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    subdomains: 'abcd',
+    minZoom: 0,
+    maxZoom: 20,
+    ext: 'png'
+});
+// Init of the map (centered on France)
+const map = new L.Map("map", {
+    center: new L.LatLng(47.081012, 2.398782),
+    zoom: 6.25
+});
+// Add the TileLayer to the map
+map.addLayer(layer);

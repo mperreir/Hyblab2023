@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="../css/carte.css">
     <script src="../js/index.js" defer></script>
     <script src="../js/carte.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+          integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+            integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <title>Title</title>
 </head>
 <body>
@@ -21,7 +25,8 @@
                 <li><img class="unchecked" src="../img/pictogrammes_themes/numerique.svg" alt="numerique"></li>
             </ul>
         </header>
-
+        <main id="map">
+        </main>
         <footer id="folder">
             <div id="folder-tab" class="flex-column align-items-center justify-content-center">
                 <p class="gras">Voir mes favoris</p>

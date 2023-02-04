@@ -1,13 +1,34 @@
-#container footer {
-    width: 75%;
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-#container header {
+header#theme-selector, footer#folder {
+    position: absolute;
+}
+
+header {
+    background: var(--gris-clair);
+}
+
+header#theme-selector {
+    z-index: 1;
+    top: 2%;
     width: 60%;
     padding: 2% 7% 2% 7%;
     border-radius: 20px;
 }
 
-header {
-    background: var(--gris-clair);
+footer#folder {
+    z-index: 1;
+    bottom: 0;
+    width: 75%;
+}
+
+main#map {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
 }
