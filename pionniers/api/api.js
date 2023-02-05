@@ -29,6 +29,10 @@ app.get('/map/keywords', function ( req, res ) {
         });
         // Retrieve values from the "Keywords" column as a list and with no duplicates
         data.values = [...new Set(data.values.map(row => row.Keywords.split(";")).flat())];
+        // If "" is in the list, remove it
+        if (data.values.includes("")) {
+            data.values.splice(data.values.indexOf(""), 1);
+        }
         // Order values alphabetically
         data.values.sort();
         // Send it as a JSON object
