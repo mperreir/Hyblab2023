@@ -1,5 +1,7 @@
 "use strict";
 
+
+let next_Question = 1
 // Init of the (touch friendly) Swiper slider
 let swiper = new Swiper("#mySwiper", {
   direction: "vertical",
@@ -18,25 +20,29 @@ swiper.on("slideChange", function () {
       initSlideAccueil();
       break;
     case 1:
-      swiper.disable()
-      initSlideQuestion(currentZoneNumber);
+      initSlideVideo();
       break;
-    case 2 :
-      initSlideAnimationHaut();
+    case 2:
+      swiper.disable();
+      initSlideQuestion1(next_Question);
       break;
-    case 3: 
-      initSlideAnimationDroit();
+    case 3:
+      initSlideAnimationEntreeTexte();
       break;
     case 4: 
-      initSlideAnimationGauche();
+      initSlideAnimationDroit();
       break;
     case 5: 
-      initSlideAnimationBas();
+    swiper.disable();
+      initSlideQuestion2(next_Question);
       break;
     case 6: 
-      initSlideAnimationEntree();
+      initSlideAnimationBas();
       break;
     case 7: 
+      initSlideAnimationEntree();
+      break;
+    case 8: 
       initEndSlide();
       break;
     default:
@@ -60,5 +66,6 @@ setTimeout(() => {
   // Init first slide
   initSlideAccueil();
 }, 1);
+
 
 let selectedZone = ["boulevard0", "parking0", "place0", "friche0"]; // the value of which image to take for each Zone

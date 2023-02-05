@@ -235,49 +235,6 @@ SLIDE QUESTION
     transition: background-position-y 1s;
 }
 
-#question{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    opacity: 0;
-    transition: opacity 1s;
-    background-color: rgba(255, 255, 255, 0.159);
-    
-}
-
-#question p {
-    color: white;
-    text-align: center;
-    font-size: 3vh;
-    margin: 0.2vh;
-}
-
-#reponse {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-}
-
-#reponse p{
-    font-size: 2.5vh;
-    text-align: center;
-    
-    width: 40%;
-    margin-bottom: 0;
-    margin: 0.7vh;
-    padding:1vh;
-
-    background-color: rgb(0, 0, 0);
-    color: white;
-
-    border-color: rgb(255, 255, 255);
-    border-style: solid;
-    border-radius: 10px;
-    border-width: 5px;
-  
-  }
 
 
 
@@ -296,7 +253,7 @@ SLIDE QUESTION
 SLIDE ANIMATION
 ******************/
 
-.animation-slide > img {
+.animation-slide  img {
     width: 40%;
     height: auto;
     text-align: center;
@@ -461,7 +418,7 @@ INDICATEUR
 ****QUESTION***
 ***************/
 
-.question-footer{
+.question-footer1,.question-footer2{
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -471,14 +428,14 @@ INDICATEUR
     
 }
 
-#question-title {
+#question-title1, #question-title2{
     color: white;
     text-align: center;
     font-size: 3vh;
     margin: 0.2vh;
 }
 
-#answer {
+#answer1, #answer2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -486,7 +443,7 @@ INDICATEUR
     padding-bottom: 1vh ;
 }
 
-#answer p{
+#answer1 p, #answer2 p {
     font-size: 2.5vh;
     text-align: center;
     height: 100%;
@@ -515,7 +472,7 @@ INDICATEUR
 ****REPONSE***
 ***************/
 
-#short-answer{
+#short-answer1,#short-answer2{
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -524,7 +481,7 @@ INDICATEUR
     padding-bottom: 1vh;
 }
 
-#show-button{
+#show-button1,#show-button2{
     background-color: rgba(245, 245, 220, 0);
     text-decoration: underline;
     border : none;
@@ -534,7 +491,7 @@ INDICATEUR
     width: 20%;
 }
 
-#answer-title {
+#answer-title1,#answer-title2 {
     color: white;
     text-align: left;
     font-size: 3vh;
@@ -542,14 +499,14 @@ INDICATEUR
     width: 75%;
 }
 
-#consequences{
+#consequences1,#consequences2{
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
 }
 
-#consequences p{
+#consequences1 p,#consequences2 p{
     font-size: 2vh;
     text-align: center;
     height: 100%;
@@ -571,11 +528,11 @@ INDICATEUR
     border-width: 5px;
 }
 
-#consequences #negativ{
+#consequences1 #negativ1,#consequences2 #negativ2{
     border-color: red;
 }
 
-#long-answer{
+#long-answer1,#long-answer2{
     font-size: 2vh;
     color: rgb(9, 74, 26);
     border-color: rgb(160, 255, 101);
@@ -587,7 +544,7 @@ INDICATEUR
     padding: 1vh;
 }
 
-#title{
+#title1,#title2{
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -697,3 +654,25 @@ Derniere slide
     text-decoration: none;    
 }
 
+/**************************
+slide entree texte
+**************************/
+
+
+#presentation1 {
+    width: 75%;
+    height: auto;
+    font-size: small;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+#presentation2 {
+    width: 75%;
+    height: auto;
+    font-size: small;
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+}
