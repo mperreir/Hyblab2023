@@ -1,7 +1,12 @@
 "use strict";
 
 const initSlide5 = function(){
-
+    $("#orientation header button").click(function(){
+        swiper.slidePrev();
+    });
+    $("#pente header button").click(function(){
+        changeBoussole();
+    });
 }
 
 function changeBoussole(){

@@ -36,7 +36,7 @@ body{
     height: 12%;
 }
 
-#Soli1{
+#Soli1{ /* penser a bouger la montgolfiere par raaport a la taille de la page et au nombre de slides associées*/
     width : 40px;
     height: 60px;
     position : absolute;
@@ -229,12 +229,26 @@ header{
     text-align: center;
     width: 100%;
     top: 10%;
-
-    font-size: 30%;
     z-index: 2;
 }
 
 /*mes ajouts*/
+
+footer button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3px 7px;
+    gap: 16px;
+    background: #9185BE;
+    border-radius: 8px;
+    color: #FFFFFF;
+    margin: auto;
+    text-transform: uppercase;
+    font-family: 'Inter';
+    font-style: normal;
+}
 
 div{
     position: relative;
@@ -333,7 +347,6 @@ main > section{
     font-size: 20%;
     text-align: center;
     padding: 1em;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 
