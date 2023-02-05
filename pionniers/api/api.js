@@ -38,7 +38,7 @@ app.get('/map/keywords', function ( req, res ) {
 
 
 /**
- * @api {get} Get all geographical information of entrepreneurs matching the requested topics and optional keyword
+ * @api {get} Get all geographical information of entrepreneurs matching the requested topics and optional keywords
  */
 app.get('/map/topics/:feed/:circular_economy/:energy/:industry/:mobility/:digital/keyword/:keyword?', function ( req, res ) {
     sheet_scrapper.readJSONFromServerFile().then(data => {
@@ -65,8 +65,15 @@ app.get('/map/topics/:feed/:circular_economy/:energy/:industry/:mobility/:digita
         });
         // Filter data to only keep rows with the requested keyword
         if (req.params.keyword) {
+            const paramKeywords = req.params.keyword.split(";");
             data.values = data.values.filter(row => {
-                return row.Keywords.includes(req.params.keyword);
+                const rowKeywords = row.Keywords.split(";");
+                for (const paramKeyword of paramKeywords) {
+                    if (!rowKeywords.includes(paramKeyword)) {
+                        return false;
+                    }
+                }
+                return true;
             });
         }
         // Send it as a JSON object

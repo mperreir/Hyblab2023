@@ -270,7 +270,6 @@ function onKeywordManage() {
     // Process different behavior depending on the text of the keyword management element
     if (keywordManageText.innerHTML === 'Ajouter') {
         getKeywords().then(keywords => {
-            console.log(keywords);
             // Retrieve the keywords list and reset it
             const keywordsList = document.querySelector('#available-keywords-list');
             keywordsList.innerHTML = '';
