@@ -165,6 +165,33 @@ async function getKeywords() {
 
 
 /**
+ * Reorder the keywords in the available-keywords-list element
+ */
+function reorderKeywords() {
+    // Retrieve the available-keywords-list element
+    const availableKeywordsList = document.querySelector('#available-keywords-list');
+    // Retrieve the keywords elements
+    const keywordsElements = availableKeywordsList.querySelectorAll('.keyword-item');
+    // Retrieve the keywords elements as an array
+    const keywordsElementsArray = Array.from(keywordsElements);
+    // Sort the keywords elements by text
+    keywordsElementsArray.sort((a, b) => {
+        const aText = a.querySelector('p').innerHTML;
+        const bText = b.querySelector('p').innerHTML;
+        return aText.localeCompare(bText);
+    });
+    // Remove all the keywords elements from the father node
+    keywordsElementsArray.forEach(k => {
+        availableKeywordsList.removeChild(k);
+    });
+    // Add the keywords elements to the father node in the correct order
+    keywordsElementsArray.forEach(k => {
+        availableKeywordsList.appendChild(k);
+    });
+}
+
+
+/**
  * Event handler for the used keywords
  * @param event The event object
  */
@@ -174,6 +201,8 @@ function onUsedKeywordClick(event){
     // Retrieve the associated text
     const keywordText = keywordElement.querySelector('p').innerHTML;
 
+    // Remove the k-selected class to the keyword element
+    keywordElement.classList.remove('k-selected');
     // Remove the keyword from the list of used keywords
     const indexToRemove = usedKeywords.indexOf(keywordText);
     if (indexToRemove > -1) {
@@ -185,6 +214,16 @@ function onUsedKeywordClick(event){
     selectedKeywordsList.removeChild(keywordElement);
     // Remove the used event listener
     keywordElement.removeEventListener('click', onUsedKeywordClick);
+
+    // Retrieve the available-keywords-list element
+    const availableKeywordsList = document.querySelector('#available-keywords-list');
+    // Add the keyword element to the father node
+    availableKeywordsList.appendChild(keywordElement);
+    // Add the event listener to the keyword element
+    keywordElement.addEventListener('click', onAvailableKeywordClick);
+
+    // Reorder the keywords
+    reorderKeywords();
 }
 
 
@@ -197,8 +236,6 @@ function onAvailableKeywordClick(event) {
     const keywordElement = event.currentTarget;
     // Retrieve the associated text
     const keywordText = keywordElement.querySelector('p').innerHTML;
-
-    console.log(keywordElement)
 
     // Retrieve the keywords list element
     const keywordsList = document.querySelector('#available-keywords-list');
@@ -251,7 +288,7 @@ function onKeywordManage() {
                 keywordDiv.classList.add('keyword-item');
                 keywordDiv.classList.add('flex-row');
                 keywordDiv.classList.add('align-items-center');
-                keywordDiv.innerHTML = `<p>${k}</p>`;
+                keywordDiv.innerHTML = `<p>#${k}</p>`;
                 // Add the keyword element as a child of the keywords list
                 keywordsList.appendChild(keywordDiv);
                 // Add the event listener to the keyword element
