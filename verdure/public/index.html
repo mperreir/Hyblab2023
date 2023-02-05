@@ -12,7 +12,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/slideAccueil.js" defer></script>
-    <script src="js/slideQuestion.js" defer></script>
+    <script src="js/slideQuestionBoul.js" defer></script>
     <script src="js/slideFin.js" defer></script>
     <script src="js/index.js" defer></script>
 
@@ -54,57 +54,60 @@
                 </div>
 
                 <footer>
-
+                   <img src ="img/scroll_down.svg" alt="scroll" class = "indic"> 
                 </footer>
-
-
             </section>
 
 
-            <section id="question-slide" class="swiper-slide">
 
+
+            <!-- ***************
+                ****BOULEVARD***
+                ****************--> 
+            <section class="question-slide swiper-slide"  id ="zone 0">
                 <div class="containerthermo">
                     <div class="thermo"></div>
-                    <img src="img/thermo.png" id="thermoindic" a lt="indicateur de température">
-                </div>
-
-                <div class="containermoney">
+                    <img src = "img/thermo@300x.png" id="thermoindic" alt="indicateur de température">
+                  </div>
+      
+                  <div class="containermoney">
                     <div class="money"></div>
-                    <img src="img/money.png" id="moneyindic" alt="indicateur de dépense">
+                    <img src = "img/money@300x.png" id="moneyindic" alt="indicateur de dépense">
+                  </div>
+      
+                  <div class="containerhappy">
+                    <div class="happy"></div>
+                    <img src = "img/happy@300x.png" id="happyindic" alt="indicateur de satisfaction">
                 </div>
 
-                <div class="containerhappy">
-                    <div class="happy"></div>
-                    <img src="img/happy.png" id="happyindic" alt="indicateur de satisfaction">
-                </div>
+                <img class= "city" src="img/boulevard.png" alt="boulevard">
 
 
                 <div class="question-footer">
                     <div id="question-title">
                         <p id="question-title-text">Question</p>
-                        <input type="button" id="show-button" value="voir plus">
                     </div>
                     <div id="question-answer">
+                
                         <div id="answer">
                         </div>
-                        <div id="short-answer">
-                            <div id="button-answer">
+                        
+                        <div id="short-answer"> 
+                            <div id = "title">
+                            <p id = "answer-title"></p>
+                            <input type="button" id="show-button" value="voir plus">
+                            </div> 
+                            <div id="button-answer"></div>
+                            <div id = "consequences">
+                            <p id = "positiv"></p>
+                            <p id = "negativ"></p>
                             </div>
-                            <p>Points positifs :</p>
-                            <ul id="positive-list">
-
-                            </ul>
-                            <p>Points négatifs :</p>
-                            <ul id="negative-list">
-
-                            </ul>
+                            <p id="long-answer"></p>
                         </div>
-                        <p id="long-answer">
+                        
                         </p>
                     </div>
                 </div>
-
-                <img class="indic" src="./img/icone_clik.png" alt="click">
             </section>
 
 
@@ -132,6 +135,7 @@
                 <img src="./img/boulevard.png" alt="" id="" class="img_bas">
 
             </section>
+
 
             <section id="animationSlideDroit" class="swiper-slide animation-slide">
                 <img src="./img/boulevard.png" alt="" id="" class="img_haut">
