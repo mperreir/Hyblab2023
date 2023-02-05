@@ -16,182 +16,264 @@
   <script src="js/index.js" defer></script>
 </head>
 <body>
-    <!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
-    <div id="container">
-      <!-- Le loader-->
-      <section id="loader">
-        <div id="loader-img" class="ld ld-ring ld-cycle"></div>
-        <p id="loader-text">Veuillez patienter...</p>
+<!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
+<div id="container">
+  <!-- Le loader-->
+  <section id="loader">
+    <div id="loader-img" class="ld ld-ring ld-cycle"></div>
+    <p id="loader-text">Veuillez patienter...</p>
+  </section>
+  <div id="mySwiper" class="swiper">
+    <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
+    <main class = "swiper-wrapper">
+
+      <!-- section d'accueil -->
+      <section id="accueil" class="swiper-slide">
+        <header>
+          <h1 id="titre">Welcome</h1>
+        </header>
+        <div>
+          <div><p>“OBJECTIF SOLEIL
+            Le défi citoyen pour développer l’énergie solaire autour de chez vous”
+          </p></div>
+
+          <div class="conteneur">
+            <img class="objet_vise" src="hyblab_2023.jpg"/>
+            <marquee class="infobulle" direction="up" height="20" scrollamount="1" scrolldelay="50">
+              <p>Salut, je suis Soli. Vous saviez qu’en utilisant mes rayons, vous pourriez faire des économies mais aussi agir en faveur du climat ? Embarquez dans cette quête !</p>
+            </marquee>
+            <p>Panneaux sur votre toit, projet collectif, aides… Commencez le voyage pour trouver des réponses sur-mesure.</p>
+          </div>
+        </div>
+        <footer>
+          <button>Commencer</button>
+        </footer>
       </section>
-      <div id="mySwiper" class="swiper">
-        <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
-        <main class = "swiper-wrapper">
 
-          <!-- section d'accueil -->
-          <section id="accueil" class="swiper-slide">
-            <header>
-              <h1 id="titre">Welcome</h1>
-            </header>
-            
-              <div><p>“OBJECTIF SOLEIL
-                Le défi citoyen pour développer l’énergie solaire autour de chez vous”
-              </p></div>
-              
-              <div class="conteneur">
-                <img class="objet_vise" src="hyblab_2023.jpg"/>
-                <marquee class="infobulle" direction="up" height="20" scrollamount="1" scrolldelay="50">
-                  <p>Salut, je suis Soli. Vous saviez qu’en utilisant mes rayons, vous pourriez faire des économies mais aussi agir en faveur du climat ? Embarquez dans cette quête !</p>
-                </marquee>
-                <p>Panneaux sur votre toit, projet collectif, aides… Commencez le voyage pour trouver des réponses sur-mesure.</p>
-              </div>
-            
-            <footer>
-              <button>Commencer</button>
-            </footer>
+
+      <section id="adresse" class="swiper-slide">
+        <header>
+          <button class="retour">←</button>
+          <p class="intitulé">Où habitez-vous ?</p>
+        </header>
+        <section class="main-location-page">
+          <img class="illustration" src="hyblab_2023.jpg">
+          <div class="commentaire-soli">
+            <img src="hyblab_2023.jpg">
+            <p>“ Ne tombez pas dans le panneau,
+              la solution n’est pas forcément sur
+              votre toit. Pour obtenir la mission
+              la plus pertinente, j’ai besoin de
+              votre adresse. ”</p>
+          </div>
+          <div class="location-input">
+            <input type="text" placeholder="Renseignez votre adresse">
+          </div>
+        </section>
+        <footer>
+          <button>Valider</button>
+        </footer>
+      </section>
+
+      <section id="logement" class="swiper-slide"> <!-- Page du type de logement -->
+        <header>
+          <button class="retour">←</button>
+          <p id="base">
+            Vous habitez dans :
+          </p>
+        </header>
+        <div id="ligne">
+          <section id="image">
+            image
           </section>
-
-
-          <section id="adresse" class="swiper-slide">
-            <header>
-              <button class="retour">retour</button>
-            </header>
-            <section class="main-location-page">
-              <img class="illustration" src="hyblab_2023.jpg">
-              <div class="location-input">
-                <p id="location">Où habitez-vous ?</p>
-                <input type="text" id="" name="Où habitez-vous ?">
-              </div>
-            </section>
-            <footer>
-              <button>Valider</button>
-            </footer>
+          <section id="ligne">
+            <div id="colonne2">
+              <input type="radio" id="contactChoice1"
+                         name="logement" value="logement">
+                  <label for="contactChoice1">Maison</label>
+              <img id="choix-log" src="hyblab_2023.jpg"/>
+            </div>
+            <div id="colonne2">
+              <input type="radio" id="contactChoice2"
+                         name="logement" value="logement">
+                  <label for="contactChoice1">Immeuble</label>
+              <img id="choix-log" src="hyblab_2023.jpg"/>
+            </div>
           </section>
+          <section id="ligne">
+            <div id="colonne2">
+              <input type="radio" id="contactChoice1"
+                         name="propiétaire" value="propiétaire">
+                  <label for="contactChoice1">Propiétaire</label>
+              <img id="choix-log" src="hyblab_2023.jpg"/>
+            </div>
+            <div id="colonne2">
+              <input type="radio" id="contactChoice2"
+                         name="propiétaire" value="propiétaire">
+                  <label for="contactChoice1">Locataire</label>
+              <img id="choix-log" src="hyblab_2023.jpg"/>
+            </div>
+          </section>
+        </div>
+        <div id="jauge">
+          <img id="Soli1" src="hyblab_2023.jpg"/>
+          
 
-            <section id="logement" class="swiper-slide"> <!-- Page du type de logement -->
-              <header>
-                <button class="retour">retour</button>
-                    <p id="base">
-                      Vous habitez dans :
-                    </p>
-                </header>
-                <div id="ligne">
-                  <section id="image">
-                    image
-                  </section>
-                  <section id="ligne">
-                    <div id="colonne2">
-                      <p>Maison</p>
-                      <img id="choix-log" src="hyblab_2023.jpg"/>
-                    </div>
-                    <div id="colonne2">
-                      <p>Immeuble</p>
-                      <img id="choix-log" src="hyblab_2023.jpg"/>
-                    </div>
-                  </section>
-                  <section id="ligne">
-                    <div id="colonne2">
-                      <p>Propiétaire</p>
-                      <img id="choix-log" src="hyblab_2023.jpg"/>
-                    </div>
-                    <div id="colonne2">
-                      <p>Locataire</p>
-                      <img id="choix-log" src="hyblab_2023.jpg"/>
-                    </div>
-                  </section>
-                </div>
-                <div id="jauge">
-                  <img id="Soli1" src="hyblab_2023.jpg"/>
-                </div>
-               
-                <footer>
-                  <button>Valider</button>
-                </footer>
-             
+
+        </div>
+
+        <footer>
+          <button>Valider</button>
+        </footer>
+
+      </section>
+
+      <section id="pente" class="swiper-slide"> <!-- Page de la pente -->
+        <header>
+          <button class="retour">retour</button>
+          <button id="info">I</button> <!-- Bouton Information (à copier sur les autres slide) -->
+          <p id="base">
+            Comment est la pente de votre toit ?
+          </p>
+        </header>
+        <section>
+          <div>
+            <section id="image">
+              image
             </section>
+            <section>
+              <form>
+                <div id="colonne3">
+                  <input type="radio" id="contactChoice1"
+                         name="contact" value="Plat">
+                  <label for="contactChoice1">Plat</label>
+                  <img id="choix-log" src="hyblab_2023.jpg"/>
+                  <p>Toit plat</p>
+                </div>
+                <div id="colonne3">
+                  <input type="radio" id="contactChoice2"
+                         name="contact" value="Standard">
+                  <label for="contactChoice2">Standard</label>
+                  <img id="choix-log" src="hyblab_2023.jpg"/>
+                  <p>Toit plat</p>
+                </div>
+                <div id="colonne3">
+                  <input type="radio" id="contactChoice3"
+                         name="contact" value="Pentu">
+                  <label for="contactChoice3">Pentu</label>
+                  <img id="choix-log" src="hyblab_2023.jpg"/>
+                  <p>Toit plat</p>
+                </div>
+              </form>
+            </section>
+          </div>
+          <div id="jauge">
+            <img id="Soli2" src="hyblab_2023.jpg"/>
+          </div>
+        </section>
+        <footer>
+          <button>Valider</button>
+        </footer>
 
-            <section id="pente" class="swiper-slide"> <!-- Page de la pente -->
-              <header>
-                <button id="retour">retour</button>
-                <button id="info">I</button> <!-- Bouton Information (à copier sur les autres slide) -->
-                <p id="base">
-                      Comment est la pente de votre toit ?
-                </p>
-              </header>
-              <section>
-                <div>
-                  <section id="image">
-                    image
-                  </section>
-                  <section>
-                    <form>
-                      <div id="colonne3">
-                        <input type="radio" id="contactChoice1"
-                        name="contact" value="Plat">
-                        <label for="contactChoice1">Plat</label>
-                        <img id="choix-log" src="hyblab_2023.jpg"/>
-                        <p>Toit plat</p>
-                      </div>
-                      <div id="colonne3">
-                        <input type="radio" id="contactChoice2"
-                        name="contact" value="Standard">
-                        <label for="contactChoice2">Standard</label>
-                        <img id="choix-log" src="hyblab_2023.jpg"/>
-                        <p>Toit plat</p>
-                      </div>
-                      <div id="colonne3">
-                        <input type="radio" id="contactChoice3"
-                        name="contact" value="Pentu">
-                        <label for="contactChoice3">Pentu</label>
-                        <img id="choix-log" src="hyblab_2023.jpg"/>
-                        <p>Toit plat</p>
-                      </div>
-                    </form>
-                  </section>
+      </section>
+      <section id="orientation" class="swiper-slide">
+        <header>
+          <button class="retour">retour</button>
+          <h1>Comment votre toit est-il orienté</h1></header>
+        <div><img class="illustration" src="hyblab_2023.jpg" /></div>
+        <div><img class="illustration boussole" src="hyblab_2023.jpg"></div>
+        <footer><button>Valider</button></footer>
+
+
+      </section>
+      <section id="ombre" class="swiper-slide">
+        <header>
+          <button class="retour">retour</button>
+        </header>
+        <section>
+          <div class="contenu-page">
+            <img class="illustration" src="hyblab_2023.jpg">
+            <div id="choix-ombre">
+              <form >
+                <div id="colonne3">
+                  <input type="radio" id="contactChoice1"
+                         name="contact" value="Jamais">
+                  <label class="choix-texte" for="contactChoice1">Jamais</label>
+                  <img id="choix-log" src="hyblab_2023.jpg"/>
                 </div>
-                <div id="jauge">
-                  <img id="Soli2" src="hyblab_2023.jpg"/>
+                <div id="colonne3">
+                  <input type="radio" id="contactChoice2"
+                         name="contact" value="Pas trop">
+                  <label class="choix-texte" for="contactChoice2">Pas trop</label>
+                  <img id="choix-log" src="hyblab_2023.jpg"/>
                 </div>
+                <div id="colonne3">
+                  <input type="radio" id="contactChoice3"
+                         name="contact" value="Toujours">
+                  <label class="choix-texte" for="contactChoice3">Toujours</label>
+                  <img id="choix-log" src="hyblab_2023.jpg"/>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div id="jauge">
+            <img id="Soli4" src="hyblab_2023.jpg"/>
+          </div>
+        </section>
+        <footer><button>Valider</button></footer>
+      </section>
+      <section id="facultatif" class="swiper-slide">
+        <header>
+          <button class="retour">retour</button>
+          Autres questions
+        </header>
+        <div id = "ligne">
+          <section id="image">
+            Image
+          </section>
+          <section id="ligne">
+            <form >
+              <section id="ligne">
+                <input type="checkbox" id="facul1"
+                       name="contact" value="Jamais">
+                <label class="choix-texte2" for="facul1">Je participe à la vie de ma co propriété</label>
               </section>
-                <footer>
-                  <button>Valider</button>
-                </footer>
-
-            </section>
-            <section id="orientation" class="swiper-slide">
-              <header>
-                <button class="retour">retour</button>
-                <h1>Comment votre toit est-il orienté</h1></header>
-              <div><img class="house" src="hyblab_2023.jpg" /></div>
-              <div><img src="hyblab_2023.jpg"></div>
-              <footer><button>Valider</button></footer>
-              
-
-            </section>
-            <section id="ombre" class="swiper-slide">
-              <header>
-                <button class="retour">retour</button>
-              </header>
-              <footer><button>Valider</button></footer>
-            </section>
-            <section id="facultatif" class="swiper-slide">
-              <header>
-                <button class="retour">retour</button>
-              </header>
-              <footer><button>Valider</button></footer>
-            </section>
-            <section id="resultat" class="swiper-slide">
-              <header>
-                <button class="retour">retour</button>
-              </header>
-            </section>
-            <section id="analyse" class="swiper-slide">
-              <header>
-                <button class="retour">retour</button>
-              </header>
-            </section>
-        </main>
-        <div class="swiper-pagination"></div>
-    </div>
+              <section id="ligne">
+                <input type="checkbox" id="facul2"
+                       name="contact" value="Pas trop">
+                <label class="choix-texte2" for="facul2">Je connais un agriculteur près de chez moi</label>
+              </section>
+              <section id="ligne">
+                <input type="checkbox" id="facul3"
+                       name="contact" value="Toujours">
+                <label class="choix-texte2" for="facul3">Je m'engage aux décisions prises par ma municipalité</label>
+              </section>
+              <section id="ligne">
+                <input type="checkbox" id="facul4"
+                       name="contact" value="Toujours">
+                <label class="choix-texte2" for="facul4">Je m'engage pour la protection de l'environnement</label>
+              </section>
+            </form>
+          </section>
+        </div>
+        <div id="jauge">
+          <img id="Soli5" src="hyblab_2023.jpg"/>
+        </div>
+        <footer><button>Valider</button></footer>
+      </section>
+      <section id="resultat" class="swiper-slide">
+        <header>
+          <button class="retour">retour</button>
+        </header>
+      </section>
+      <section id="analyse" class="swiper-slide">
+        <header>
+          <button class="retour">retour</button>
+        </header>
+      </section>
+    </main>
+    <div class="swiper-pagination"></div>
   </div>
+</div>
 </body>
 </html>

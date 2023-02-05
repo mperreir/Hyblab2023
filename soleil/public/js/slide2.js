@@ -3,7 +3,7 @@
 // Just animate the logo
 const initSlide2 = function(){
   $("#adresse footer button").click(function(){
-    swiper.slideNext()
+    if (isValidAdress($("#adresse input").val())) swiper.slideNext()
     initSlide3();
   });
   $("#adresse header button").click(function(){
@@ -22,3 +22,7 @@ const initSlide2 = function(){
     easing: 'easeOutBounce'  
   });
 };
+
+function isValidAdress(adress){
+  return true;
+}

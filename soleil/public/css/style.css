@@ -32,29 +32,81 @@ body{
 }
 
 #choix-log{
-    width : 60px;
-    height: 30px;
+    width : 24%;
+    height: 12%;
 }
 
 #Soli1{
-  width : 40px;
-  height: 60px;
-  position : absolute;
-  bottom : 5%;
-  right : 5%;
+    width : 40px;
+    height: 60px;
+    position : absolute;
+    bottom : 5%;
+    right : 5%;
+    animation-name: flo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform:scale(0.9);
+        
 
+}
+
+@keyframes flo{
+    50%{
+      transform: translateY(20px);
+    }
 }
 
 #Soli2{
-  width : 40px;
-  height: 60px;
-  position : absolute;
-  bottom : 20%;
-  right : 5%;
+    width : 40px;
+    height: 60px;
+    position : absolute;
+    bottom : 20%;
+    right : 5%;
+    animation-name: flo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform:scale(0.9);
 
 }
 
+#Soli3{
+    width : 40px;
+    height: 60px;
+    position : absolute;
+    bottom : 35%;
+    right : 5%;
+    animation-name: flo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform:scale(0.9);
 
+}
+
+#Soli4{
+    width : 40px;
+    height: 60px;
+    position : absolute;
+    bottom : 50%;
+    right : 5%;
+    animation-name: flo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform:scale(0.9);
+
+}
+
+#Soli5{
+    width : 40px;
+    height: 60px;
+    position : absolute;
+    bottom : 65%;
+    right : 5%;
+    animation-name: flo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform:scale(0.9);
+
+}
 
 div {
     float: left;
@@ -62,26 +114,63 @@ div {
     padding: 0 10px;
     font-size: 24px;
     text-align: center;
-  }
+}
 
 header{
     margin-top: 20px;
 }
 
-  #ligne{
-    width: 90%;
-  }
+.commentaire-soli {
+    max-width: 90%;
+    left: 5%;
+}
 
-  #colonne2 {
+.commentaire-soli p {
+    max-width: 75%;
+    display: inline-block;
+    font-size: 1.9vw;
+}
+
+.commentaire-soli img {
+    max-width: 20%;
+}
+
+.contenu-page {
+    display: inline-block;
+    max-width: 87%;
+    top: 10%;
+}
+
+#ligne{
+    width: 90%;
+}
+
+
+
+#colonne2 {
     width: 45%;
     text-align: center;
-  }
+}
 
-  #colonne3{
+#colonne3{
     width: 27%;
-  }
+}
 
-  #jauge{
+.choix-texte {
+    font-size: 3vw;
+}
+
+.choix-texte2{
+    font-size: 2vw;
+}
+
+#choix-ombre {
+    position: fixed;
+    bottom: 10%;
+}
+
+#jauge{
+    display: inline-block;
     margin-top: 20px;
     height: 60%;
     width: 5%;
@@ -89,7 +178,7 @@ header{
     position :absolute;
     right : 3px;
 
-  }
+}
 
 /* -------------- Loader --------------*/
 #loader{
@@ -153,8 +242,15 @@ div{
 
 button.retour{
     left: 0%;
-    margin: 10px ;
+    margin: 2% ;
+    width : 10%;
+    text-align: center;
     position: absolute;
+}
+
+p.intitulé {
+    padding-top: 2%;
+    font-size: 5vw;
 }
 
 div.conteneur{
@@ -194,7 +290,7 @@ div.conteneur{
         width: 200px;
     }
 
-    .conteneur .objet_vise:hover {
+.conteneur .objet_vise:hover {
     /* ici, on peut modifier l'objet visé au hover si on le veut. Ici, je change sa couleur!*/
     }
 
@@ -229,7 +325,7 @@ main > section{
 }
 
 /* Footer of last slide is at the bottom and content is centered */
-#accueil footer, #adresse footer, #logement footer, #pente footer{
+#accueil footer, #adresse footer, #logement footer, #pente footer, #ombre footer{
     bottom: 5%;
     position: absolute;
     box-sizing: border-box; /* So that padding is not added to width (and width: 100% works) */
@@ -252,44 +348,44 @@ main > section{
     bottom: 0;
     background-color: white;
     font-size: 20%;
-  }
+}
 
-  #bandeau li{
+#bandeau li{
     list-style-type: none;
     display: inline-block;
     vertical-align: middle;
     margin: 0 0.5em;
-  }
+}
 
-  #bandeau img{
+#bandeau img{
     height: 2.5em;
-  }
+}
 
-  #bandeau #hyblab{
+#bandeau #hyblab{
     margin: 1em auto;
     height: 3em;
     display: block;
-  }
+}
 
-  #bandeau #cc, #bandeau #opensource
-  {
+#bandeau #cc, #bandeau #opensource
+{
     height: 1em;
-  }
+}
 
-  #bandeau .stacked{
+#bandeau .stacked{
     display:block;
-  }
+}
 
-  #bandeau ul{
+#bandeau ul{
     text-align: center;
     padding: 0 0;
     margin-bottom: 0.5em;
-  }
+}
 
-  #bandeau .institutionnel
-  {
+#bandeau .institutionnel
+{
     height: 2em;
-  }
+}
 
 /* ---------- Important media queries for easy responsive content :-) ----------------- */
 /* Whatever the devie used, the content will be displayed full width and height if      */
@@ -343,7 +439,6 @@ body{
 
 .illustration{
     max-width: 100%;
-    max-height: 40%;
     height: auto;
 }
 
@@ -370,4 +465,3 @@ body{
     }
 
 }
-
