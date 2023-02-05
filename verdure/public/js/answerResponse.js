@@ -5,11 +5,14 @@ let currentZoneNumber = 0; // tell if the index of the current zone for the imag
 // Create all the answers in the element with the ID 'answer'
 // the answers are button that shows the explanations related to them
 const createAnswers = function (choices) {
+    
+    document.getElementById('answer').style = 'block'
+    document.getElementById('question-title-text').style.display = 'inline';
+
 
     for (let i = 0; i < choices.length; i++) {
-        const input = document.createElement('input')
-        input.type = 'button';
-        input.value = choices[i].prompt;
+        const input = document.createElement('p')
+        input.innerHTML = choices[i].prompt;
         input.addEventListener('click', function () {
             answered(choices[i]);
             document.getElementById('button-answer').style.display = 'none';
@@ -21,7 +24,7 @@ const createAnswers = function (choices) {
 
     // long answer part
     const button = document.getElementById('show-button');
-    button.addEventListener('click', showExplanations);
+    button.addEventListener('click', () => showExplanations());
     button.style.display = 'none';
     document.getElementById('long-answer').style.display = 'none';
 };
@@ -29,24 +32,31 @@ const createAnswers = function (choices) {
 // The function called when a button is pressed to answer a question
 // It will swap the question with the answer text and show all the points of the answer
 const answered = function (chosen) {
+    console.log(chosen)
     document.getElementById('answer').style.display = 'none';
+    document.getElementById('question-title-text').style.display = 'none';
 
-    document.getElementById('question-title-text').innerHTML = chosen.prompt;
+    document.getElementById('answer-title').innerHTML = chosen.prompt;
+
     current_question_number = chosen.nextQuestion;
-    document.getElementById('show-button').style.display = 'block';
+    
+    document.getElementById('show-button').style.display = 'inline-block';
 
     document.getElementById('short-answer').style.display = 'block';
 
-    for (let i = 0; i < chosen.positive.length; i++) {
-        const positiveLI = document.createElement('li');
-        positiveLI.textContent = chosen.positive[i];
-        document.getElementById('positive-list').append(positiveLI);
-    }
+    //Evolution of all indics
+    changementThermo(chosen.temperature * 10);
+    changementHappy(chosen.happiness * 10);
+    changementMoney(chosen.money * 10);
 
-    for (let i = 0; i < chosen.negative.length; i++) {
-        const negativeLI = document.createElement('li');
-        negativeLI.textContent = chosen.negative[i];
-        document.getElementById('negative-list').append(negativeLI);
+    document.getElementById('positiv').innerHTML = chosen.positive;
+   
+    document.getElementById('negativ').innerHTML = chosen.negative;
+
+    const answer = document.getElementById('answer')
+
+    while (answer.firstChild){
+        answer.firstChild.remove()
     }
 
     const longAnswer = document.getElementById('long-answer');
