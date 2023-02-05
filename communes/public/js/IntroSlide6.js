@@ -11,10 +11,10 @@ var iRow; // initialise current row
 
 
 
-const introSlide1 = async function() {
+const introSlide6 = async function() {
     let response = await fetch('../data/data.json');
     const data = await response.json();
-    const data_filter = data.filter(function(item){return item.name === "intro1";})[0]
+    const data_filter = data.filter(function(item){return item.name === "intro6";})[0]
     aText = new Array(data_filter.tchat)
     iIndex = 0;
     iArrLength = aText[0].length;

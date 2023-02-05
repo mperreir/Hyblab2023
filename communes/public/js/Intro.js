@@ -19,7 +19,16 @@ swiper.on("slideChange", function () {
             introSlide2();
             break;
         case 2:
-            //initSlide3();
+            introSlide3();
+            break;
+        case 3:
+            introSlide4();
+            break;
+        case 4:
+            introSlide5();
+            break;
+        case 5:
+            introSlide6();
             break;
     }
 });
@@ -39,3 +48,27 @@ setTimeout(() => {
     // Init first slide
     introSlide1();
 }, 1000);
+const iSpeed = 100;
+const iScrollAt = 20;
+
+function typewriter() {
+    sContents = ' ';
+    iRow = Math.max(0, iIndex - iScrollAt);
+    var destination=document.querySelector(".swiper-slide-active .bubble-text");
+
+    while (iRow < iIndex) {
+        sContents += aText[iRow++] + '<br />';
+    }
+    destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+    if (iTextPos++ === iArrLength) {
+        iTextPos = 0;
+        iIndex++;
+        if (iIndex !== aText.length) {
+            iArrLength = aText[iIndex].length;
+            setTimeout("typewriter()", 500);
+        }
+    } else {
+        setTimeout("typewriter()", iSpeed);
+    }
+}
+
