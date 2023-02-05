@@ -40,7 +40,7 @@ app.get('/map/keywords', function ( req, res ) {
 /**
  * @api {get} Get all geographical information of entrepreneurs matching the requested topics and optional keywords
  */
-app.get('/map/topics/:feed/:circular_economy/:energy/:industry/:mobility/:digital/keyword/:keyword?', function ( req, res ) {
+app.get('/map/topics/:feed/:circular_economy/:energy/:industry/:mobility/:digital/keywords/:keyword?', function ( req, res ) {
     sheet_scrapper.readJSONFromServerFile().then(data => {
         // Filter data to only keep convenient fields
         data.values = data.values.map(row => {

@@ -105,11 +105,12 @@ let geographicalProfiles = [];
 
 /**
  * Get the profiles from the API
+ * @param apiParameters The parameters to send to the API
  * @returns {Promise<any>} The profiles as a JSON object
  */
-async function getProfiles() {
+async function getProfiles(apiParameters) {
     // Fetch the data from the API
-    const response = await fetch("/pionniers/api/map/topics/true/true/true/true/true/true/keyword/");
+    const response = await fetch("/pionniers/api/map/topics/" + apiParameters);
     // Parse the response as JSON and return it
     return await response.json();
 }
@@ -138,7 +139,7 @@ function onTopicCheck(event) {
         }
     }
 
-    getProfiles().then(r => {
+    getProfiles("true/true/true/true/true/true/keywords").then(r => {
         // Markers of previous geographical profiles removal
         geographicalProfiles.forEach(gp => {
             gp.marker.remove();
@@ -304,6 +305,18 @@ function onKeywordManage() {
         keywordsList.classList.add('display-none');
         // Change the keyword management text
         keywordManageText.innerHTML = 'Ajouter';
+
+        // Build the API parameters
+        let apiParameters = "true/true/true/true/true/true/keywords/" + usedKeywords.map(k => k.replace('#', '')).join(';');
+        // If last character is a semicolon, remove it
+        if (apiParameters.charAt(apiParameters.length - 1) === ';') {
+            apiParameters = apiParameters.slice(0, apiParameters.length - 1);
+        }
+        console.log(apiParameters)
+        // Retrieve the profiles matching the keywords
+        getProfiles(apiParameters).then(profiles => {
+            console.log(profiles);
+        });
     }
 }
 
