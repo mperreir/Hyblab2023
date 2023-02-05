@@ -66,5 +66,6 @@ const answered = function (chosen) {
     if (chosen.nextQuestion !== 3 && chosen.nextQuestion !== 5) { // might be type problems (js is bad)
         currentZoneNumber += 1; // change zone iff not in the parking with the destroying solution and in the place
     }
+    swiper.enable();
     selectedZone[currentZoneNumber] = chosen.image;
 };

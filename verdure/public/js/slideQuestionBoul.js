@@ -11,8 +11,7 @@ const initSlideQuestion = async function(currentZoneNumber){
    question.style.opacity = 100;
    page.style.backgroundPositionY = "-10vh";
    city.style.top = "20%";
-   swiper.enabled = true;
-   swiper.enable();
+   swiper.enabled = false;
 },1000
  )
 

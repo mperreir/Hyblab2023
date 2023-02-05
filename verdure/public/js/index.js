@@ -8,7 +8,7 @@ let swiper = new Swiper("#mySwiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  //allowSlidePrev : false,
+  allowSlidePrev : true,
   enabled : true
 });
 
@@ -18,6 +18,7 @@ swiper.on("slideChange", function () {
       initSlideAccueil();
       break;
     case 1:
+      swiper.disable()
       initSlideQuestion(currentZoneNumber);
       break;
     case 2 :
