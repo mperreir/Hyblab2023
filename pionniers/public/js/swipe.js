@@ -302,19 +302,16 @@ document.addEventListener("DOMContentLoaded", async function () {
     const nombreProfilsEnregistresText = profilsEnregistresFolder.querySelector('#nombre-profil p');
 
     // Listener de click pour chaque filtre-theme
-
-    // Récupération des thèmes déjà choisis dans la page précédente
-    let themeSelected = window.localStorage.getItem('themes');
-    themeSelected = themeSelected ? themeSelected.split(',') : [];
-
+    themeSelected = window.localStorage.getItem('theme').split(',');    // Récupération des thèmes déjà choisis dans la page précédente
     themesCheckboxes.forEach(tc =>
         tc.addEventListener('click', onCheck)
     );
 
+    const themePreselectionne = window.localStorage.getItem('themes').split(',');
     themesCheckboxes.forEach(tc => {
             const img = tc.querySelector('img');
             const themeName = img.getAttribute('alt');
-            if(themeSelected.includes(themeName)) {
+            if(themePreselectionne.includes(themeName)) {
                 tc.classList.remove('unchecked');
             }
         }
