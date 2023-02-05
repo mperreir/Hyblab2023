@@ -35,6 +35,9 @@ swiper.on("slideChange", function () {
     case 6: 
       initSlideAnimationEntree();
       break;
+    case 7: 
+      initEndSlide();
+      break;
     default:
       initSlideFin();
       break;

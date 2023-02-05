@@ -591,3 +591,73 @@ figure {
     text-align: center;
 
 } */
+
+
+/**********************
+Derniere slide
+**********************/
+
+/* Dropdown Content (Hidden by Default) */
+.dropdownShareOptions {
+    display: none;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+.conclusion img {
+    width: 15%;
+    height: auto;
+    margin-right: 2%;
+    
+}
+
+.conclusion > p{
+    font-size: small;
+    width: 75%;
+    text-align: center;
+}
+
+.conclusion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8%;
+  }
+#result {
+    position: relative;
+    top: 10%;
+    font-size: xx-large;
+    justify-content: center;
+    text-align: center;
+    color: #0ffc03;
+
+}
+
+#containerEnd{
+    position: absolute;
+    top: 20%;
+}
+
+
+.button {
+    display: flex;
+    justify-content: center;
+    /* align-items: center;  */
+    margin-top: 5%;
+}
+
+.dropdownShareButton, button {
+    height: 50px;
+    width: 150px;
+    margin-right: 10px;
+}
+
+#dropdownShareOptions a{
+    font-size: medium;
+    display: block;
+    margin-top: 5%;
+    text-align: center;
+    text-decoration: none;    
+}
+

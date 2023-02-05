@@ -12,19 +12,19 @@ const initSlideAnimationBas = function(){
   anime({
     targets : "#animationSlideBas .img_haut",
     translateY: -2700,
-    easing: 'easeInElastic(1, .5)',
+    easing: 'easeInElastic(1, 2)',
     delay : 200 
   });
   anime({
     targets : "#animationSlideBas .img_gauche",
     translateY: 2700,
-    easing: 'easeInElastic(1, .5)',
+    easing: 'easeInElastic(1, 2)',
     delay : 700
   });
   anime({
     targets : "#animationSlideBas .img_droit",
     translateX: -2700,
-    easing: 'easeInElastic(1, .5)',
+    easing: 'easeInElastic(1, 2)',
     delay : 1200
   });
 

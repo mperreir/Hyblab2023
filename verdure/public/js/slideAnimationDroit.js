@@ -13,19 +13,19 @@ const initSlideAnimationDroit = function(){
   anime({
     targets : "#animationSlideDroit .img_haut",
     translateY: -2700,
-    easing: 'easeInElastic(1, .5)',
+    easing: 'easeInElastic(1, 2)',
     delay : 200 
   });
   anime({
     targets : "#animationSlideDroit .img_bas",
     translateY: 2700,
-    easing: 'easeInElastic(1, .5)',
+    easing: 'easeInElastic(1, 2)',
     delay : 700
   });
   anime({
     targets : "#animationSlideDroit .img_gauche",
     translateX: -2700,
-    easing: 'easeInElastic(1, .5)',
+    easing: 'easeInElastic(1, 2)',
     delay : 1200
   });
 
