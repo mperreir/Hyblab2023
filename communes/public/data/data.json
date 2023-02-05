@@ -47,33 +47,5 @@
     "file_name": "img/campagne.svg",
     "main_color": "#59A78D",
     "background_color": "#F2FFFB"
-  },
-  {
-    "name": "intro1",
-    "tchat": "Bonjour, je suis Sacha, je suis président.e de l’intercommunalité de Vertville."
-  },
-  {
-    "name": "intro2",
-    "tchat": "Ici, élus et citoyens œuvrent ensemble pour lutter contre le réchauffement climatique."
-  },
-  {
-    "name": "intro3",
-    "tchat": "Nous choisissons de mettre à profit (d’exploiter) nos différentes ressources pour produire des énergies renouvelables. "
-  },
-  {
-    "name": "intro4",
-    "tchat": "Cela nous permet d’être également plus indépendant énergétiquement et de créer des emplois."
-  },
-  {
-    "name": "intro5",
-    "tchat": "Entrez votre code postal pour découvrir le score de votre intercommunalité."
-  },
-  {
-    "name": "intro6",
-    "tchat": " Votre score est de "
-  },
-  {
-    "name": "intro7",
-    "tchat": "Il n’est pas définitif. En consultant nos différentes initiatives, vous aurez l’opportunité de le modifier. Il vous suffira d’augmenter votre production dans chacune des énergies."
   }
 ]
