@@ -298,6 +298,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     const themesCheckboxes = document.querySelectorAll('#theme-selector ul li');
     const profilsEnregistresFolder = document.querySelector('footer#folder');
+    const nombreProfilsEnregistres = profilsEnregistresFolder.querySelector('#nombre-profil');
+    const nombreProfilsEnregistresText = profilsEnregistresFolder.querySelector('#nombre-profil p');
 
     // Listener de click pour chaque filtre-theme
     themeSelected = window.localStorage.getItem('theme').split(',');    // Récupération des thèmes déjà choisis dans la page précédente
@@ -320,6 +322,17 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // Remplissage du carousel/swiper avec les données de l'API, suivant les themes choisis
     await chercheEtAjouteProfilsCarousel(themeSelected, true);
+
+
+    //const idsProfilsEnregistres = window.localStorage.getItem('truc');
+    const idsProfilsEnregistres = [2]; // Test
+    if(idsProfilsEnregistres.length > 0) {
+        nombreProfilsEnregistresText.innerHTML = idsProfilsEnregistres.length.toString();
+    } else {
+        nombreProfilsEnregistres.classList.add('display-none');
+        nombreProfilsEnregistres.classList.remove('flex-row');
+    }
+
 
 
 });

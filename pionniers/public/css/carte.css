@@ -54,11 +54,3 @@ main#map {
     background-color: var(--bleu-fonce);
     color: white;
 }
-
-.display-none {
-    display: none;
-}
-
-.display-flex {
-    display: flex;
-}
