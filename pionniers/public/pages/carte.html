@@ -16,15 +16,34 @@
 <body>
     <div id="container" class="flex-column align-items-center justify-content-space-between">
         <header id="theme-selector">
-            <p class="gras">Modifier mes intérêts</p>
-            <ul class="flex-row justify-content-space-between">
-                <li><img class="unchecked" src="../img/pictogrammes_themes/alimentation.svg" alt="alimentation"></li>
-                <li><img class="unchecked" src="../img/pictogrammes_themes/economie_circulaire.svg" alt="economie_circulaire"></li>
-                <li><img class="unchecked" src="../img/pictogrammes_themes/energie.svg" alt="energie"></li>
-                <li><img class="unchecked" src="../img/pictogrammes_themes/industrie.svg" alt="industrie"></li>
-                <li><img class="unchecked" src="../img/pictogrammes_themes/mobilite.svg" alt="mobilite"></li>
-                <li><img class="unchecked" src="../img/pictogrammes_themes/numerique.svg" alt="numerique"></li>
-            </ul>
+            <div id="topic-related">
+                <p class="gras">Modifier mes intérêts</p>
+                <ul id="theme-list" class="flex-row justify-content-space-between">
+                    <li><img class="unchecked" src="../img/pictogrammes_themes/alimentation.svg" alt="alimentation"></li>
+                    <li><img class="unchecked" src="../img/pictogrammes_themes/economie_circulaire.svg" alt="economie_circulaire"></li>
+                    <li><img class="unchecked" src="../img/pictogrammes_themes/energie.svg" alt="energie"></li>
+                    <li><img class="unchecked" src="../img/pictogrammes_themes/industrie.svg" alt="industrie"></li>
+                    <li><img class="unchecked" src="../img/pictogrammes_themes/mobilite.svg" alt="mobilite"></li>
+                    <li><img class="unchecked" src="../img/pictogrammes_themes/numerique.svg" alt="numerique"></li>
+                </ul>
+            </div>
+            <div id="keyword-related">
+                <p class="gras">Filtrer par mots-clés</p>
+                <section id="selected-keywords-list" class="keywords flex-row">
+                    <div class="keyword-item flex-row align-items-center k-selected">
+                        <p>Test 1</p>
+                    </div>
+                    <div class="keyword-item flex-row align-items-center k-selected">
+                        <p>Test 2</p>
+                    </div>
+                    <div id="keyword-manage" class="keyword-item flex-row align-items-center">
+                        <p>Ajouter</p>
+                    </div>
+                </section>
+                <section id="available-keywords-list" class="keywords flex-row display-none">
+
+                </section>
+            </div>
         </header>
         <main id="map">
         </main>

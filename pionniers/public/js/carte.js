@@ -1,5 +1,7 @@
 'use strict';
 
+// TODO: WHEN SELECTION ON THE PREVIOUS PAGE IS DONE, DISPLAY THE MAP WITH THE SELECTED TOPICS
+
 
 /*
   ----------------------------------------------------------------------------------------------------------------------
@@ -91,7 +93,6 @@ async function addMarkers() {
 }
 
 
-
 /*
   ----------------------------------------------------------------------------------------------------------------------
   | Topics selection management                                                                                        |
@@ -118,7 +119,7 @@ async function getProfiles() {
  * Event handler for the topics checkboxes
  * @param event The event object
  */
-function onCheck(event) {
+function onTopicCheck(event) {
     // Retrieve the image element (HTML tag) from the event
     const topicImg = event.target;
     // Retrieve the topic string from the alt attribute of the image
@@ -148,15 +149,137 @@ function onCheck(event) {
     });
 }
 
+
+let usedKeywords = [];
+
+/**
+ * Get the keywords from the API
+ * @returns {Promise<any>} The keywords as a JSON object
+ */
+async function getKeywords() {
+    // Fetch the data from the API
+    const response = await fetch("/pionniers/api/map/keywords");
+    // Parse the response as JSON and return it
+    return await response.json();
+}
+
+
+/**
+ * Event handler for the used keywords
+ * @param event The event object
+ */
+function onUsedKeywordClick(event){
+    // Retrieve the div element (HTML tag) from the event
+    const keywordElement = event.currentTarget;
+    // Retrieve the associated text
+    const keywordText = keywordElement.querySelector('p').innerHTML;
+
+    // Remove the keyword from the list of used keywords
+    const indexToRemove = usedKeywords.indexOf(keywordText);
+    if (indexToRemove > -1) {
+        usedKeywords.splice(indexToRemove, 1);
+    }
+    // Retrieve the selected-keywords-list element
+    const selectedKeywordsList = document.querySelector('#selected-keywords-list');
+    // Remove the keyword element from the father node
+    selectedKeywordsList.removeChild(keywordElement);
+    // Remove the used event listener
+    keywordElement.removeEventListener('click', onUsedKeywordClick);
+}
+
+
+/**
+ * Event handler for the available keywords
+ * @param event The event object
+ */
+function onAvailableKeywordClick(event) {
+    // Retrieve the div element (HTML tag) from the event
+    const keywordElement = event.currentTarget;
+    // Retrieve the associated text
+    const keywordText = keywordElement.querySelector('p').innerHTML;
+
+    console.log(keywordElement)
+
+    // Retrieve the keywords list element
+    const keywordsList = document.querySelector('#available-keywords-list');
+    // Remove the keyword element from the father node
+    keywordsList.removeChild(keywordElement);
+
+    // Add the keyword to the list of used keywords
+    usedKeywords.push(keywordText);
+    // Add selected class to the keyword element
+    keywordElement.classList.add('k-selected');
+    // Retrieve the selected-keywords-list element
+    const selectedKeywordsList = document.querySelector('#selected-keywords-list');
+    // Add the keyword element to the selected-keywords-list
+    selectedKeywordsList.appendChild(keywordElement);
+    // Add the event listener to the keyword element
+    keywordElement.addEventListener('click', onUsedKeywordClick);
+    // Remove the available event listener
+    keywordElement.removeEventListener('click', onAvailableKeywordClick);
+}
+
+
+/**
+ * Event handler for the keyword management button
+ */
+function onKeywordManage() {
+    // Retrieve the keyword management p element
+    const keywordManageText = document.querySelector('section.keywords #keyword-manage p');
+    // Process different behavior depending on the text of the keyword management element
+    if (keywordManageText.innerHTML === 'Ajouter') {
+        getKeywords().then(keywords => {
+            console.log(keywords);
+            // Retrieve the keywords list and reset it
+            const keywordsList = document.querySelector('#available-keywords-list');
+            keywordsList.innerHTML = '';
+            // Keep only the first 15 keywords
+            keywords = keywords.slice(0, 15);
+            // Set the keyword list as visible
+            keywordsList.classList.remove('display-none');
+
+            // Filter the keywords to keep only the ones that are not already used
+            keywords = keywords.filter(k => !usedKeywords.includes(k));
+            // For each keyword, create the available keyword element as HTML
+            keywords.forEach(k => {
+                // Create the keyword element
+                const keywordDiv = document.createElement('div');
+                keywordDiv.classList.add('keyword-item');
+                keywordDiv.classList.add('flex-row');
+                keywordDiv.classList.add('align-items-center');
+                keywordDiv.innerHTML = `<p>${k}</p>`;
+                // Add the keyword element as a child of the keywords list
+                keywordsList.appendChild(keywordDiv);
+                // Add the event listener to the keyword element
+                keywordDiv.addEventListener('click', onAvailableKeywordClick);
+            });
+
+            // Change the keyword management text
+            keywordManageText.innerHTML = 'Fermer';
+        });
+    } else {
+        // Retrieve the keywords list
+        const keywordsList = document.querySelector('#available-keywords-list');
+        // Set the keyword list as invisible
+        keywordsList.classList.add('display-none');
+        // Change the keyword management text
+        keywordManageText.innerHTML = 'Ajouter';
+    }
+}
+
+
 /**
  * Add the event listener to manage interaction (click) with the topics checkboxes
  */
 document.addEventListener("DOMContentLoaded", function () {
-    const topicCheckboxes = document.querySelectorAll('#theme-selector ul li');
-
+    // Topics management
+    const topicCheckboxes = document.querySelectorAll('#theme-selector #theme-list li');
     topicCheckboxes.forEach(tc =>
-        tc.addEventListener('click', onCheck)
+        tc.addEventListener('click', onTopicCheck)
     );
+    // Keywords management
+    const keywordManageButton = document.querySelector('section.keywords #keyword-manage');
+    keywordManageButton.addEventListener('click', onKeywordManage);
 });
 
 /*
