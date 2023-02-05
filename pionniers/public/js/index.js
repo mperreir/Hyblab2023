@@ -13,7 +13,7 @@ function createElementFromHTML(htmlString) {
 
 /**
  * Supprime tous les element enfant d'un Node
- * @param node : Node
+ * @param node {Element}
  */
 function removeAllChild(node) {
   while (node.firstChild) {

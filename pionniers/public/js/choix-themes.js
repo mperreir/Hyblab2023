@@ -1,43 +1,45 @@
+let themeSelected = [];
 
-/*function createThemeButton(nomTheme) {
-    const htmlString = `<li class="theme flex-row justify-content-center">
-                             <img alt="theme" src="">
-                             <input type="checkbox" id="cb-${nomTheme}"><label for="cb-${nomTheme}">${nomTheme}</label>
-                        </li>
-                        `;
-    return createElementFromHTML(htmlString);
-}*/
+function ajouteTheme(theme) {
+    themeSelected.push(theme);
+    window.localStorage.setItem('themes', themeSelected.toString());
+}
 
+function supprimeTheme(theme) {
+    themeSelected.splice(themeSelected.indexOf(theme), 1);
+    window.localStorage.setItem('themes', themeSelected.toString());
+}
 
 /**
- * Évement déclenché lors de la selection du thème
- * @param evnt : event l'évenement correspondant au cochage/décochage du thème
+ * Évenement déclenché lors de la selection du thème
+ * @param event {Event} l'événement correspondant au cochage/décochage du thème
  */
-function onCheck(evnt) {
-    const checkbox = evnt.target;
-    const currentLi = checkbox.parentNode;
-    const themeLabel = currentLi.querySelector("label");
+function onCheck(event) {
+    let themeBtn = event.target;
 
-    // TODO : Évenements d'animation à choisir + ajout dans la liste de filtre
-    if(checkbox.checked) {
-        console.log("Je suis checked");
-        themeLabel.classList.add("checked-theme");
-    } else {
-        console.log("Je suis unchecked");
-        themeLabel.classList.remove("checked-theme");
+    while (themeBtn.tagName !== 'LI') {
+        themeBtn = themeBtn.parentNode;
     }
+
+    let themeName = themeBtn.querySelector("img");
+    themeName = themeName.getAttribute('alt');
+
+    if (themeBtn.classList.contains("unchecked")) {
+        ajouteTheme(themeName);
+        themeBtn.classList.remove("unchecked");
+
+    } else {
+        supprimeTheme(themeName);
+        themeBtn.classList.add("unchecked");
+    }
+
 }
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    /*// TODO : Thèmes à récupérer depuis l'API de Marin (fonction fetch)
-    const themesTest = ["économie circulaire", "alimentation", "mobilité", "industrie", "numérique", "énergie"];
+    const themes = document.querySelectorAll('#liste-theme ul li');
 
-    const listeThemes = document.querySelector('#liste-theme ul');
-
-    themesTest.forEach((theme) => {
-        const customButton = createThemeButton(theme);
-        customButton.addEventListener('change', onCheck);
-        listeThemes.append(customButton);
-    })*/
+    themes.forEach((t) => {
+        t.addEventListener('click', onCheck);
+    });
 });

@@ -6,6 +6,21 @@ let carouselItems = document.querySelectorAll('.carousel-item');
 let elems = Array.from(carouselItems);
 const swiperSection = document.querySelector('#swiper');
 
+function ajouteTheme(theme) {
+    themeSelected.push(theme);
+    window.localStorage.setItem('themes', themeSelected.toString());
+}
+
+function supprimeTheme(theme) {
+    themeSelected.splice(themeSelected.indexOf(theme), 1);
+    window.localStorage.setItem('themes', themeSelected.toString());
+}
+
+/**
+ * Créer une string traduisant les choix de thème pour l'API
+ * @param themeSelected {Array} thèmes choisis
+ * @returns {string}
+ */
 function generateApiParameters(themeSelected) {
     const theme = ["alimentation", "économie circulaire", "énergie", "industrie", "mobilité", "numérique"]
     let parameterString = "";
@@ -25,6 +40,11 @@ function generateApiParameters(themeSelected) {
     return parameterString;
 }
 
+/**
+ * Créer un element représentant un mot clé de profil
+ * @param Keyword {string} le mot clé
+ * @returns {ChildNode} Node HTML
+ */
 function createKeywordItem(Keyword) {
     const htmlString = `<div class="keyword-item flex-row align-items-center">
                             <p>#${Keyword}</p>
@@ -33,24 +53,22 @@ function createKeywordItem(Keyword) {
     return createElementFromHTML(htmlString);
 }
 
-function tranlateThemeToSimpleChar(topic) {
-    switch (topic) {
-        case 'alimentation' :
-            return 'alimentation';
-        case 'économie circulaire' :
-            return 'economie_circulaire';
-        case 'énergie' :
-            return 'energie';
-        case 'industrie' :
-            return 'industrie';
-        case 'mobilité' :
-            return 'mobilite';
-        case 'numérique' :
-            return 'numerique';
-            
-    }
+/**
+ * Simplifie l'écriture litérale d'un thème (supprime les accents et espace)
+ * @param topic
+ * @returns {string}
+ */
+function translateThemeToSimpleChar(topic) {
+    topic = topic.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    topic = topic.replace(/\s/g, '_');
+    return topic;
 }
 
+/**
+ * Donne la bonne classe de police d'écriture suivant le thème donné
+ * @param topic {string} thème
+ * @returns {string} classe correspondant au thème
+ */
 function getFontClass(topic) {
     switch (topic) {
         case 'alimentation' :
@@ -69,10 +87,20 @@ function getFontClass(topic) {
     }
 }
 
+/**
+ * Créer une fiche (balise <li>), utilisé comme élements dans le carrousel
+ * @param profil {Object} le profil, avec Id, Age, City, Company, Keywords, MiniBio, Name, Status, Topic, URLImage comme attributs
+ * @param dataPos {number} la position de la fiche dans le carrousel
+ * @returns {ChildNode} node HTML
+ */
 function createFiche(profil, dataPos) {
+    // Récupération des attributs de l'objet profil (par méthode destructuring)
     const { Id, Age, City, Company, Keywords, MiniBio, Name, Status, Topic, URLImage } = profil;
-    const tranlatedSimpleTopic = tranlateThemeToSimpleChar(Topic);
+    // Simplification du thème (pas d'accents et d'espace)
+    const tranlatedSimpleTopic = translateThemeToSimpleChar(Topic);
+    // Récupération de la classe relative à la couleur de la police du theme
     const fontClass = getFontClass(tranlatedSimpleTopic);
+    // Node HTML
     const htmlString = `<li class="carousel-item flex-column align-items-center justify-content-space-between" data-pos="${dataPos}" data-id="${Id}">
                             <section class="photo-case">
                                 <img draggable="false" alt="photo-profil" src="${URLImage}">
@@ -98,122 +126,127 @@ function createFiche(profil, dataPos) {
                             </section>
                         </li>`;
     const ficheProfil = createElementFromHTML(htmlString);
+    // Ajout des éléments relatifs aux mots clés dans la fiche précédente, dans la section prévue
     const keywordsSplit = Keywords.split(';');
     const keywordList = ficheProfil.querySelector(".keywords");
     keywordsSplit.forEach(k => {
-        if(k.trim() !== '') {   // Eviler bug mots clés vides
-            keywordList.append(createKeywordItem(k))
+        if(k.trim() !== '') {   // Pour éviter bug mots clés vides
+            keywordList.append(createKeywordItem(k));
         }
     });
     return ficheProfil;
 }
 
-function recreateProfileDeck(profilsTrouves) {
-    const carrousel = document.querySelector('#swiper ul');
-    removeAllChild(carrousel);
+/**
+ * Recrée le contenu du carousel avec les profils trouvés
+ * Seuls les 5 premiers élement de l'array profilsTrouves seront comptabilisés
+ * @param profilsTrouves {Array}
+ */
+function recreeCarouselDeck(profilsTrouves) {
+    const carousel = document.querySelector('#swiper ul');
+
+    // Remise à 0 du contenu du carousel (utile dans le cas où il y avait déjà des fiches avant)
+    removeAllChild(carousel);
+
+    // Remplissage du carrousel de 5 fiches
     for(let i = -2; i < 3; i++) {
-        carrousel.append(createFiche(profilsTrouves[i + 2], i));
+        carousel.append(createFiche(profilsTrouves[i + 2], i));
     }
 }
 
-async function chercheEtAjouteProfils(themeSelected, shuffleResults) {
+/**
+ * Rempli le carousel avec les fiches des profils trouvé suivant les thèmes choisis
+ * @param themeSelected {Array} thèmes sélectionnés
+ * @param shuffleResults {boolean} résultats mélangés aléatoirement
+ * @returns {Promise<void>}
+ */
+async function chercheEtAjouteProfilsCarousel(themeSelected, shuffleResults) {
     const baseURL = document.location.origin;
+
+    // Appel API
     profilsTrouves = await fetch(baseURL + "/pionniers/api/miniature/topics/" + generateApiParameters(themeSelected)).then(r => r.json());
-    if(shuffleResults) {
+
+    if(shuffleResults) {    // Tri aléatoire si souhaité
         profilsTrouves = profilsTrouves.sort(() => 0.5 - Math.random());
     }
-    console.log(profilsTrouves);
-    recreateProfileDeck(profilsTrouves);
 
-    carouselList = document.querySelector('.carousel-list');
-    carouselItems = document.querySelectorAll('.carousel-item');
-    elems = Array.from(carouselItems);
+    // Recrée le contenu du carousel avec les fiches des profils trouvés
+    // (seules les 5 premières sont nécessaires pour avoir un carrousel complet)
+    recreeCarouselDeck(profilsTrouves.slice(0, 5));
+
+    // Met à jour l'état du carrousel
+    miseAJourEtatCarousel();
 }
+
+/**
+ *
+ * @param evnt {Event}
+ * @returns {Promise<void>}
+ */
 async function onCheck(evnt) {
-    const themeImg = evnt.target;  // La cible est l'image dans la <li>
-    const themeString = themeImg.getAttribute('alt');
+    let themeLi = evnt.target;
+    // Remonte jusqu'à la <li> dans le cas où la cible est l'image
+    while (themeLi.tagName !== 'LI') {
+        themeLi = themeLi.parentNode;
+    }
+    let themeString = themeLi.querySelector('img');
+    themeString = themeString.getAttribute('alt');
 
-    if (themeImg.classList.contains("unchecked")) {
-        themeImg.classList.remove("unchecked");
-        themeSelected.push(themeString);
+    if (themeLi.classList.contains("unchecked")) {
+        themeLi.classList.remove("unchecked");
+        ajouteTheme(themeString);
     } else {
-        themeImg.classList.add("unchecked");
-        themeSelected.splice(themeSelected.indexOf(themeString), 1);
+        themeLi.classList.add("unchecked");
+        supprimeTheme(themeString);
     }
 
-    await chercheEtAjouteProfils(themeSelected, true);
+    await chercheEtAjouteProfilsCarousel(themeSelected, true);
 
 }
 
-function onClickProfilsEnregistre() {
-    window.location.href = "./profils-enregistres.html";
-}
-
-
+/**
+ * Ajout d'une fiche unique au carrousel, suite à un mouvement gauche ou droite
+ * @param clicADroite {boolean} true si le click provocant l'appel de cette fonction a été effectué sur la partie droite du swiper, false sinon
+ */
 function ajouterNouvelleFiche(clicADroite) {
-    let posFicheASuppr;
 
-    if(clicADroite) { // Mise en avant la fiche de droite
-        posFicheASuppr = 2;
-    } else {                // Mise en avant la fiche de gauche
-        posFicheASuppr = -2;
-    }
-
+    /*  - Si click à droite, la fiche à supprimer est celle à l'extreme gauche,
+        qui passe alors à l'extrème droite suite à la rotation, donc la position 2
+        - Même logique à l'inverse pour le click à gauche
+       */
+    let posFicheASuppr = clicADroite ? 2 : -2;
     const ficheASuppr = document.querySelector(`.carousel-item[data-pos="${posFicheASuppr}"]`);
     const idFicheASuppr = ficheASuppr.dataset.id;
 
+    // Suppression de la fiche à supprimer dans le carrousel
     carouselList.removeChild(ficheASuppr);
 
+    // Recherche dans la liste de résultats (profilsTrouves) la position du profil supprimé juste avant
     const indexProfilSuppr = profilsTrouves.findIndex(pr => pr.Id === idFicheASuppr);
-    let indexNouveauProfil;
-    if(clicADroite) {
-        indexNouveauProfil = (indexProfilSuppr + 5) % profilsTrouves.length;
-    } else {
-        indexNouveauProfil = indexProfilSuppr - 5;
-        if(indexNouveauProfil < 0) {
-            indexNouveauProfil = profilsTrouves.length + indexNouveauProfil;
-        }
-    }
+    // L'index du nouveau profil à ajouter est celui supprimé + ou - 5 (nombre de fiche dans le carrousel) suivant le mouvement, de manière cyclique
+    const indexNouveauProfil = clicADroite ? (indexProfilSuppr + 5) % profilsTrouves.length : (indexProfilSuppr - 5 + profilsTrouves.length) % profilsTrouves.length;
 
+    // Ajout du nouveau la fiche du nouveau profil
     const newProfil = profilsTrouves[indexNouveauProfil];
-
     carouselList.append(createFiche(newProfil, posFicheASuppr));
 
+    miseAJourEtatCarousel();
+
+}
+
+/**
+ * Met à jour les nodes relatifs au carousel, utilisés pour le calcul du mouvement de rotation
+ */
+function miseAJourEtatCarousel() {
     carouselList = document.querySelector('.carousel-list');
     carouselItems = document.querySelectorAll('.carousel-item');
     elems = Array.from(carouselItems);
 }
 
-document.addEventListener("DOMContentLoaded", async function () {
 
-    const themesCheckboxes = document.querySelectorAll('#theme-selector ul li');
-    const profilsEnregistre = document.querySelector('footer');
-
-    themesCheckboxes.forEach(tb =>
-        tb.addEventListener('click', onCheck)
-    );
-
-    profilsEnregistre.addEventListener('click', onClickProfilsEnregistre);
-
-    await chercheEtAjouteProfils(themeSelected, true);
-});
-
-swiperSection.addEventListener('click', function (event) {
-    let newActive;
-    const wWidth = window.innerWidth;
-    const xClick = event.clientX;
-    const clicADroite = xClick > (wWidth / 2);
-
-    if(clicADroite) {
-        newActive = carouselList.querySelector('.carousel-item[data-pos="1"]');
-    } else {
-        newActive = carouselList.querySelector('.carousel-item[data-pos="-1"]');
-    }
-
-    update(newActive);
-
-    ajouterNouvelleFiche(clicADroite);
-});
+// -----------------------------------------------------
+// ------ FONCTION RELATIVES AU CAROUSEL / SWIPER ------
+// -----------------------------------------------------
 
 function update(newActive) {
     const newActivePos = newActive.dataset.pos;
@@ -240,3 +273,51 @@ const getNewPos = function (current, active) {
     }
     return diff;
 }
+
+swiperSection.addEventListener('click', function (event) {
+    let newActive;
+    const wWidth = window.innerWidth;
+    const xClick = event.clientX;
+    const clicADroite = xClick > (wWidth / 2);
+
+    if(clicADroite) {
+        newActive = carouselList.querySelector('.carousel-item[data-pos="1"]');
+    } else {
+        newActive = carouselList.querySelector('.carousel-item[data-pos="-1"]');
+    }
+
+    update(newActive);
+
+    ajouterNouvelleFiche(clicADroite);
+});
+
+// -----------------------------------------------------
+
+// AU CHARGEMENT DE LA PAGE
+document.addEventListener("DOMContentLoaded", async function () {
+
+    const themesCheckboxes = document.querySelectorAll('#theme-selector ul li');
+    const profilsEnregistresFolder = document.querySelector('footer#folder');
+
+    // Listener de click pour chaque filtre-theme
+    themeSelected = window.localStorage.getItem('theme').split(',');    // Récupération des thèmes déjà choisis dans la page précédente
+    themesCheckboxes.forEach(tc =>
+        tc.addEventListener('click', onCheck)
+    );
+
+    const themePreselectionne = window.localStorage.getItem('themes').split(',');
+    themesCheckboxes.forEach(tc => {
+            const img = tc.querySelector('img');
+            const themeName = img.getAttribute('alt');
+            if(themePreselectionne.includes(themeName)) {
+                tc.classList.remove('unchecked');
+            }
+        }
+    );
+
+    // Vers page profils enregistre
+    profilsEnregistresFolder.addEventListener('click', () => window.location.href = "./profils-enregistres.html");
+
+    // Remplissage du carousel/swiper avec les données de l'API, suivant les themes choisis
+    await chercheEtAjouteProfilsCarousel(themeSelected, true);
+});
