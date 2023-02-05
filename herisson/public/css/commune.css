@@ -4,7 +4,6 @@ body {
 }
 
 .swiper-container {
-    background: #FBC5EB;
     font-family: Prompt, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #0B6E5F;
@@ -17,17 +16,48 @@ body {
     height: 100%;
 }
 
-
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #FBC5EB;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
+#oiseaux-nicheurs {
+    background-image: url("../img/oiseaux-nicheurs.jpg");
+}
+
+#rhopalocères {
+    /*background-image: url("../img/rhopaloceres.jpg");*/
+    background-color: red;
+}
+
+#odonates {
+    /*background-image: url("../img/odonates.jpg");*/
+    background-color: green;
+}
+
+#chiroptères {
+    /*background-image: url("../img/chiropteres.jpg");*/
+    background-color: dodgerblue;
+}
+
+#mammiferes {
+    /*background-image: url("../img/mammiferes.jpg");*/
+    background-color: aqua;
+}
+
+#reptiles {
+    /*background-image: url("../img/reptiles.jpg");*/
+    background-color: blueviolet;
+}
+
+#amphibiens {
+    /*background-image: url("../img/amphibiens.jpg");*/
+    background-color: gold;
+}
 
 .swiper-slide img {
     display: block;
@@ -52,7 +82,6 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-
 
 .button {
     border: none;
@@ -90,19 +119,19 @@ body {
 
 .swiper-pagination-bullet {
     position: relative;
-    width: 1.5vh;
-    height: 1.5vh;
+    width: 1.2vh;
+    height: 1.2vh;
     display: inline-block;
-    border-radius: 100%;
-    background: #FBC5EB;
-    border: 7px solid white;
-    bottom: 17vh;
+    background: none;
+    border: 7px solid #0B6E5F;
+    bottom: 12vh;
+    margin: 0 20px;
 }
 
 .swiper-pagination-bullet-active {
-    background: #FBC5EB;
+    background: none;
+    border: 7px solid #0B6E5F;
 }
-
 
 .swiper-button-prev {
     color: #0B6E5F;
@@ -112,6 +141,7 @@ body {
     margin-left: 1vh;
     top: 50vh;
 }
+
 .swiper-button-next {
     color: #0B6E5F;
     background-size: contain;
