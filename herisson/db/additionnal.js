@@ -4,6 +4,7 @@
 
 const fs = require('fs');
 const axios = require('axios');
+const db = JSON.parse(fs.readFileSync('../public/data/db.json'));
 
 async function getTaxon(id) {
     const response = await axios.get(`https://taxref.mnhn.fr/api/taxa/${id}`);
@@ -52,15 +53,15 @@ function getCDRef(jsonData) {
     }
     return cdRefs;
 }
-const cdRefs = getCDRef(JSON.parse(fs.readFileSync('DB.json', 'utf8')));
+const cdRefs = getCDRef(db);
 
 async function getAllTaxon() {
     let allTaxon = {};
     for (let i = 0; i < cdRefs.length; i++) {
         allTaxon[cdRefs[i]] = await getTaxon(cdRefs[i]);
     }
-    const jsonData = JSON.stringify(allTaxon);
-    fs.writeFileSync("additionnalDB.json", jsonData);
+
+    fs.writeFileSync("../public/data/additionalDB.json", JSON.stringify(allTaxon));
 }
 
 async function getNames(taxon) {
@@ -81,9 +82,9 @@ async function downloadImage(url, path) {
 }
 
 async function getINSEE(taxon) {
-    // get the list of cities where the taxon is present and the number of species present using the DB.json file
-    const jsonData = JSON.parse(fs.readFileSync('DB.json', 'utf8'));
-    const cityData = {};
+// get the list of cities where the taxon is present and the number of species present using the DB.json file
+    const jsonData = db;
+    const cityData = [];
     for (const outerKey in jsonData) {
         const outerValue = jsonData[outerKey];
         for (const innerKey in outerValue) {
@@ -91,16 +92,12 @@ async function getINSEE(taxon) {
             for (const subKey in innerValue) {
                 const subValue = innerValue[subKey];
                 if (subValue.cd_ref === taxon) {
-                    cityData[subValue.INSEE] = { cd_ref: subValue.cd_ref, nb_obs: subValue.nb_obs };
+                    cityData.push({ insee: outerKey, nb_obs: subValue.nb_obs });
                 }
             }
         }
     }
     return cityData;
 }
-
-
-
-
 getAllTaxon();
 

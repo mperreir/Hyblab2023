@@ -9,33 +9,25 @@ async function getData(codeINSEE) {
     return response.data;
 }
 
-function len(information) {
-    let count = 0;
-    for (let i in information) {
-        count++;
-    }
-    return count;
-}
-
 async function getAllData() {
     let allData = {};
+    const promises = [];
     for (let i = 0; i < departements.length; i++) {
         for (let j = 1; j <= 999; j++) {
             let code = departements[i] * 1000 + j;
-            try {
-                let information = await getData(code);
-                if (len(information) > 0) {
+            promises.push(getData(code).then(information => {
+                if (Object.keys(information).length > 0) {
                     allData[code] = information;
                 }
-            } catch (e) {
+            }).catch(error => {
                 console.log(`Error for code ${code}`);
-            }
+            }));
         }
-        console.log("département finit");
     }
+    await Promise.all(promises);
     const jsonData = JSON.stringify(allData);
 
-    fs.writeFileSync("DB.json", jsonData);
+    fs.writeFileSync("../public/data/db.json", JSON.stringify(allData));
 }
 
 getAllData();
