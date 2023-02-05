@@ -18,24 +18,30 @@ swiper.on("slideChange", function () {
       initSlideAccueil();
       break;
     case 1:
+      initSlideVideo();
+      break;
+    case 2:
       initSlideQuestion(currentZoneNumber);
       break;
-    case 2 :
+    case 3:
+      initSlideAnimationEntreeTexte();
+      break;
+    case 4 :
       initSlideAnimationHaut();
       break;
-    case 3: 
+    case 5: 
       initSlideAnimationDroit();
       break;
-    case 4: 
+    case 6: 
       initSlideAnimationGauche();
       break;
-    case 5: 
+    case 7: 
       initSlideAnimationBas();
       break;
-    case 6: 
+    case 8: 
       initSlideAnimationEntree();
       break;
-    case 7: 
+    case 9: 
       initEndSlide();
       break;
     default:
