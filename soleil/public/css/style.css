@@ -1,7 +1,8 @@
 /* ------- Important ! Please at least keep the last part of this CSS ----------- */
 
 p{
-    font-size: 15px;
+    font-size: 14px;
+    
 }
 /* ------- that adapts content width and height so that aspect ratio  ----------- */
 /* ------- is kept between 9/16 a,d 3/4 (portait orientation)         ----------- */
@@ -10,6 +11,8 @@ p{
 *{
     padding:0;
     margin:0;
+    font-family: 'Inter';
+    font-style: normal;
 }
 
 body{
@@ -123,6 +126,8 @@ header{
 .commentaire-soli {
     max-width: 90%;
     left: 5%;
+    right: 7%;
+    position:static;
 }
 
 .commentaire-soli p {
@@ -233,6 +238,29 @@ header{
 }
 
 /*mes ajouts*/
+.boussole{
+    margin: auto;
+    width: 100%;
+    position: relative;
+}
+#adresse input{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 3px 5px;
+    gap: 16px;
+    border: 0.75px solid #000000;
+    border-radius: 8px;
+    position: relative;
+    margin: auto;
+    width: 35%;
+    text-align: center;
+}
+
+img.img-adresse{
+    height: 200px;
+}
 
 footer button{
     display: flex;
@@ -248,6 +276,15 @@ footer button{
     text-transform: uppercase;
     font-family: 'Inter';
     font-style: normal;
+}
+
+.passer{
+    color: #9185BE;
+    text-transform: uppercase;
+    justify-content: center;
+    margin: auto;
+    background-color: #FFFFFF;
+    margin-top: 7px;
 }
 
 div{
@@ -339,7 +376,7 @@ main > section{
 }
 
 /* Footer of last slide is at the bottom and content is centered */
-#accueil footer, #adresse footer, #logement footer, #pente footer, #ombre footer{
+#accueil footer, #adresse footer, #logement footer, #pente footer, #orientation footer, #ombre footer, #facultatif footer{
     bottom: 5%;
     position: absolute;
     box-sizing: border-box; /* So that padding is not added to width (and width: 100% works) */
