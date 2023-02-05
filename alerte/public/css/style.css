@@ -49,7 +49,7 @@ body {
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
-    padding: 50px;
+    padding: 8%;
 }
 
 h1 {
@@ -67,6 +67,10 @@ header {
 #content_main {
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+#s0{
+    padding: 50px;
 }
 
 #content_main img,
@@ -171,14 +175,67 @@ main>section {
 
 #myProgress {
     width: 100%;
-    background-color: grey;
+    background-color: transparent;
+    margin-top: 0%;
 }
 
 #myBar {
     width: 5%;
     height: 15px;
     background-color: red;
+    border-top-right-radius: 40%;
+    border-bottom-right-radius: 40%;
 }
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: $zindex-fixed;
+}
+
+.bubble{
+    width:100%;
+    height:100%;
+    border:3px solid white;
+    font-family: arial, sans-serif;
+    font-size: 0.3em;
+    position: relative;
+    border-radius: 12px;
+}
+
+.bubble::after {
+    content: "";
+    border: 20px solid transparent;
+ 
+    /* (B1-2) NECESSARY TO POSITION THE "TAIL" */
+    position: absolute;
+}
+.bottom.bubble::after{
+    border-top-color: white;
+    border-bottom: 0;
+    
+    /* (B2-2) POSITION AT BOTTOM */
+    bottom: -20px; left: 50%;
+    margin-left: -20px;
+}
+
+.top.bubble::after {
+    /* (C1-1) UP TRIANGLE */
+    border-bottom-color: white;
+    border-top: 0;
+   
+    /* (C1-2) POSITION AT TOP */
+    top: -20px; left: 50%;
+    margin-left: -20px;
+}
+
+.half.bubble::after {
+    border-right-color: white;
+    border-bottom: 0;
+    top: -20px; left: 60%;
+} 
 
 
 /* ---------- Positionning of logos on the last slide -------------------- */
