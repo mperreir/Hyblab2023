@@ -5,11 +5,13 @@ const showExplanations = function(){
     const longAnswer = document.getElementById('long-answer');
     if(longAnswer.style.display === 'none')
     {
+    document.getElementById('consequences').style.display = 'none'
     document.getElementById('long-answer').style.display = 'block';
     document.getElementById('show-button').value = 'voir moins';
     }
     else
     {
+    document.getElementById('consequences').style.display = 'flex';
     document.getElementById('long-answer').style.display = 'none';
     document.getElementById('show-button').value = 'voir plus';
     }
