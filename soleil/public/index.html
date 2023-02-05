@@ -13,6 +13,10 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/slide1.js" defer></script>
   <script src="js/slide2.js" defer></script>
+  <script src="js/slide3.js" defer></script>
+  <script src="js/slide4.js" defer></script>
+  <script src="js/slide5.js" defer></script>
+  <script src="js/slide6.js" defer></script>
   <script src="js/index.js" defer></script>
 </head>
 <body>
@@ -69,6 +73,9 @@
           <div class="location-input">
             <input type="text" placeholder="Renseignez votre adresse">
           </div>
+          <div id="jauge">
+            <img id="Soli2" src="hyblab_2023.jpg"/>
+          </div>
         </section>
         <footer>
           <button>Valider</button>
@@ -85,6 +92,7 @@
         <div id="ligne">
           <section id="image">
             image
+            <p>Pas besoin d’être propriétaire ou d’avoir une maison pour agir en faveur de l’énergie photovoltaïque !</p>
           </section>
           <section id="ligne">
             <div id="colonne2">
@@ -145,21 +153,21 @@
               <form>
                 <div id="colonne3">
                   <input type="radio" id="contactChoice1"
-                         name="contact" value="Plat">
+                         name="pente" value="Plat">
                   <label for="contactChoice1">Plat</label>
                   <img id="choix-log" src="hyblab_2023.jpg"/>
                   <p>Toit plat</p>
                 </div>
                 <div id="colonne3">
                   <input type="radio" id="contactChoice2"
-                         name="contact" value="Standard">
+                         name="pente" value="Standard">
                   <label for="contactChoice2">Standard</label>
                   <img id="choix-log" src="hyblab_2023.jpg"/>
                   <p>Toit plat</p>
                 </div>
                 <div id="colonne3">
                   <input type="radio" id="contactChoice3"
-                         name="contact" value="Pentu">
+                         name="pente" value="Pentu">
                   <label for="contactChoice3">Pentu</label>
                   <img id="choix-log" src="hyblab_2023.jpg"/>
                   <p>Toit plat</p>
@@ -182,6 +190,9 @@
           <h1>Comment votre toit est-il orienté</h1></header>
         <div><img class="illustration" src="hyblab_2023.jpg" /></div>
         <div><img class="illustration boussole" src="hyblab_2023.jpg"></div>
+        <div id="jauge">
+          <img id="Soli2" src="hyblab_2023.jpg"/>
+        </div>
         <footer><button>Valider</button></footer>
 
 
@@ -266,11 +277,13 @@
           <button class="retour">retour</button>
         </header>
       </section>
+
       <section id="analyse" class="swiper-slide">
         <header>
           <button class="retour">retour</button>
         </header>
       </section>
+
     </main>
     <div class="swiper-pagination"></div>
   </div>

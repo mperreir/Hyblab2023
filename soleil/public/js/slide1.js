@@ -1,7 +1,8 @@
 "use strict";
-
+let quiz = {}
 // async init function (because of the awaits on fetches)
 const initSlide1 = async function(){
+  
     $("#accueil button").click(function(){
       swiper.slideNext()
       initSlide2();
@@ -40,7 +41,4 @@ const initSlide1 = async function(){
   response = await fetch('data/dummy.json');
   const data2 = await response.json();
 
-  // Update the DOM to insert topic and data
-  const footer = document.querySelector('footer p');
-  footer.textContent = `Our topic is "${data1.topic}" and here is "${data2.message}" retrieved on the server.`;
 };
