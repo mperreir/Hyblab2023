@@ -176,6 +176,8 @@ p {
 
 #theme-selector ul li {
     border-radius: 100px;
+    transition: 0.2s;
+    height: fit-content;
 }
 
 #theme-selector ul li:hover {
@@ -184,7 +186,6 @@ p {
 
 #theme-selector ul li img {
     height: 6vh;
-    transition: 0.2s;
 }
 
 

@@ -8,6 +8,11 @@ header h2 {
     width: 50%;
 }
 
+
+p {
+    font-size: 1em;
+}
+
 #liste-theme {
     background: var(--gris-clair);
     width: 75%;
@@ -20,6 +25,11 @@ header h2 {
     height: 100%;
     width: 80%;
 }
+
+#liste-theme ul li {
+    transition: 0.2s;
+}
+
 
 #partie-basse {
     height: 80%;
