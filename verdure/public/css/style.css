@@ -229,7 +229,7 @@ SLIDE QUESTION
 
 
 
-#question-slide{
+.question-slide{
 
     background-position-y: 0;
     transition: background-position-y 1s;
@@ -279,18 +279,7 @@ SLIDE QUESTION
   
   }
 
-/*#reponse p{
-    margin: 1vh;
-    padding:1vh;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border-color: rgb(255, 255, 255);
-    border-style: solid;
-    border-radius: 10px;
-    border-width: 5px;
-    font-size: 2.5vh;
-    text-align: center;
-}*/
+
 
 
 
@@ -345,7 +334,6 @@ SLIDE ANIMATION
 /********************************
 INDICATEUR
 *******************************/
-
 /*THERMOMETRE*/
 .containerthermo{
     position:absolute;
@@ -438,6 +426,141 @@ INDICATEUR
     padding: 0px;
 }
 
+/**************
+****QUESTION***
+***************/
+
+.question-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 3s;
+    background-color: rgba(255, 255, 255, 0.159);
+    
+}
+
+#question-title {
+    color: white;
+    text-align: center;
+    font-size: 3vh;
+    margin: 0.2vh;
+}
+
+#answer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 1vh ;
+}
+
+#answer p{
+    font-size: 2.5vh;
+    text-align: center;
+    height: 100%;
+    font-weight: bold;
+    box-shadow: -0.8vh 0.8vh 0.5vh rgb(9, 74, 26);
+
+
+    width: 40%;
+    margin-bottom: 0;
+    margin: 0.7vh;
+    padding:1vh;
+
+    background-color: rgb(255, 255, 255);
+    color: rgb(9, 74, 26);
+
+    border-color: rgb(160, 255, 101);
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 5px;
+  
+}
+
+
+
+/**************
+****REPONSE***
+***************/
+
+#short-answer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transition: opacity 3s;
+    background-color: rgba(255, 255, 255, 0.159); 
+    padding-bottom: 1vh;
+}
+
+#show-button{
+    background-color: rgba(245, 245, 220, 0);
+    text-decoration: underline;
+    border : none;
+    color : rgb(74, 71, 71);
+    font-size: 2vh;
+    right : 0;
+    width: 20%;
+}
+
+#answer-title {
+    color: white;
+    text-align: left;
+    font-size: 3vh;
+    margin-left: 1vh;
+    width: 75%;
+}
+
+#consequences{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+#consequences p{
+    font-size: 2vh;
+    text-align: center;
+    height: 100%;
+    font-weight: bold;
+    box-shadow: -0.8vh 0.8vh 0.5vh rgb(9, 74, 26);
+
+
+    width: 40%;
+    margin-bottom: 0;
+    margin: 0.7vh;
+    padding:1vh;
+
+    background-color: rgb(255, 255, 255);
+    color: rgb(9, 74, 26);
+
+    border-color: rgb(160, 255, 101);
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 5px;
+}
+
+#consequences #negativ{
+    border-color: red;
+}
+
+#long-answer{
+    font-size: 2vh;
+    color: rgb(9, 74, 26);
+    border-color: rgb(160, 255, 101);
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 5px;
+    margin: 1vh;
+    background-color: white;
+    padding: 1vh;
+}
+
+#title{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
 
 /****************
 Nuage
