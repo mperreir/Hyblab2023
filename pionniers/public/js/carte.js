@@ -217,6 +217,10 @@ function onAvailableKeywordClick(event) {
     keywordElement.addEventListener('click', onUsedKeywordClick);
     // Remove the available event listener
     keywordElement.removeEventListener('click', onAvailableKeywordClick);
+
+    // Move the manage button to the end of the list
+    const keywordManage = document.querySelector('#keyword-manage');
+    selectedKeywordsList.appendChild(keywordManage);
 }
 
 

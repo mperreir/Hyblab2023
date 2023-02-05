@@ -37,6 +37,10 @@ main#map {
     flex-wrap: wrap;
 }
 
+.keywords #keyword-manage {
+    font-weight: bold;
+}
+
 .keyword-item {
     white-space: nowrap;
     border-radius: 500px;
