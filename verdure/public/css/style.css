@@ -346,6 +346,17 @@ INDICATEUR
     padding: 0px;
 }
 
+.containerthermofinal{
+    position: absolute;
+    width: 5vh;
+    height: 8vh;
+    left: 3.3vh;
+    top: 2vh;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 0px;
+    padding: 0px;
+}
+
 .thermo{
     position:absolute;
     background-color: red;
@@ -377,6 +388,16 @@ INDICATEUR
     padding: 0px;
 }
 
+.containermoneyfinal{
+    position: absolute;
+    width: 5.5vh;
+    height: 5.5vh;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 0px;
+    padding: 0px;
+    left: 3vh;
+}
+
 .money {
     position:absolute;
     background-color: #0ffc03;
@@ -406,6 +427,16 @@ INDICATEUR
     background-color: rgba(255, 255, 255, 0);
     margin: 0px;
     padding: 0px;
+}
+
+.containerhappyfinal{
+    position: absolute;
+    width: 5.5vh;
+    height: 5.5vh;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 0px;
+    padding: 0px;
+    left: 3vh;
 }
 
 .happy {
@@ -615,7 +646,10 @@ Derniere slide
 .conclusion > p{
     font-size: small;
     width: 75%;
+    font-size: 2vh;
     text-align: center;
+    margin-left: 7vh
+
 }
 
 .conclusion{
@@ -623,7 +657,9 @@ Derniere slide
     justify-content: center;
     align-items: center;
     margin-top: 8%;
-  }
+}
+
+  
 #result {
     position: relative;
     top: 10%;
