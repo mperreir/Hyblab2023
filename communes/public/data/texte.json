@@ -1,0 +1,72 @@
+{
+  "introduction": {
+
+  },
+  "conclusion": {
+    "titre" : "Ton bilan !",
+    "texte1" : "Au niveau national et européen, nous nous sommes fixés des objectifs qui permettront une amélioration de notre santé et de notre impact sur la planète.",
+    "texte2" : "Voici nos objectifs pour 2030 !",
+    "logo" : "../img/mer.svg",
+    "bouton" : "Retour à l’accueil",
+    "color": {
+      "main": ["#59A78D", "#A04952"],
+      "background": ["#D9D9D9", "#F6F6F6"]
+    },
+    "piechart": {
+      "description": "Part d’énergie renouvelable dans le mix énergétique en France",
+      "data": [
+        {
+          "year": 2020,
+          "value": 20
+        },
+        {
+          "year": 2030,
+          "value": 40
+        }
+      ]
+    },
+    "barchart": {
+      "description": "Consommation d’énergie en France sur un an",
+      "data": [
+        {
+          "year": 2020,
+          "value": 2570
+        },
+        {
+          "year": 2050,
+          "value": 1820
+        }
+      ]
+    },
+    "barchart_global": {
+      "description": "Taux de la population favorable à l’installation d’énergies renouvelables",
+      "data": [
+        {
+          "energy": "Solaire",
+          "percent": 75,
+          "color": "#FFAC7F"
+        },
+        {
+          "energy": "Biomasse",
+          "percent": 67,
+          "color": "#59A78D"
+        },
+        {
+          "energy": "Géothermie",
+          "percent": 62,
+          "color": "#A04952"
+        },
+        {
+          "energy": "Hydraulique",
+          "percent": 55,
+          "color": "#73CAD6"
+        },
+        {
+          "energy": "Éolien",
+          "percent": 52,
+          "color": "#5A76B4"
+        }
+      ]
+    }
+  }
+}

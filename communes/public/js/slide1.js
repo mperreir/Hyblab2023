@@ -30,6 +30,9 @@ const initSlide1 = async function(){
     duration: 1500
   });
 
+  //const urlParams = new URLSearchParams(window.location.search);
+  //const name = urlParams.get('name');
+
   const data_filter = data.filter(function(item){return item.name === "La mer";})[0]
   mise_en_forme(data_filter);
   initSlide2(data_filter);
