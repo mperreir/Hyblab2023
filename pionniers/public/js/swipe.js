@@ -8,12 +8,12 @@ const swiperSection = document.querySelector('#swiper');
 
 function ajouteTheme(theme) {
     themeSelected.push(theme);
-    window.localStorage.setItem('themes', themeSelected.toString());
+    //window.localStorage.setItem('themes', themeSelected.toString());
 }
 
 function supprimeTheme(theme) {
     themeSelected.splice(themeSelected.indexOf(theme), 1);
-    window.localStorage.setItem('themes', themeSelected.toString());
+    //window.localStorage.setItem('themes', themeSelected.toString());
 }
 
 /**
@@ -22,7 +22,7 @@ function supprimeTheme(theme) {
  * @returns {string}
  */
 function generateApiParameters(themeSelected) {
-    const theme = ["alimentation", "économie circulaire", "énergie", "industrie", "mobilité", "numérique"]
+    const theme = ["alimentation", "economie_circulaire", "energie", "industrie", "mobilite", "numerique"]
     let parameterString = "";
     for(let i = 0; i < 6; i++) {
         if(themeSelected.includes(theme[i])) {
@@ -320,4 +320,6 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // Remplissage du carousel/swiper avec les données de l'API, suivant les themes choisis
     await chercheEtAjouteProfilsCarousel(themeSelected, true);
+
+
 });
