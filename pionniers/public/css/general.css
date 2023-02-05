@@ -93,6 +93,9 @@ p {
     display: none;
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
 /*  -------------------------------------------------------------------------------------
     -------- PROPRIÉTÉS DE PLACEMENT DES ÉLÉMENTS, UTILISÉES DANS LES PAGES HTML --------
     ---------------------------------------- FLEX-BOX -----------------------------------

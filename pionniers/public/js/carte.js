@@ -288,6 +288,7 @@ function onKeywordManage() {
                 keywordDiv.classList.add('keyword-item');
                 keywordDiv.classList.add('flex-row');
                 keywordDiv.classList.add('align-items-center');
+                keywordDiv.classList.add('cursor-pointer');
                 keywordDiv.innerHTML = `<p>#${k}</p>`;
                 // Add the keyword element as a child of the keywords list
                 keywordsList.appendChild(keywordDiv);
