@@ -1,29 +1,4 @@
-const themeSelected = [];
-
-function onCheck(evnt) {
-    const themeImg = evnt.target;  // La cible est l'image dans la <li>
-    const themeString = themeImg.getAttribute('alt');
-
-    console.log("themeSelected :", themeSelected);
-
-    if (themeImg.classList.contains("unchecked")) {
-        themeImg.classList.remove("unchecked");
-        themeSelected.add(themeString);
-    } else {
-        themeImg.classList.add("unchecked");
-        themeSelected.remove(themeString);
-    }
-
-    // TODO : Appel à l'API pour recréer un jeu de profils, suivant les nouveaux thèmes sélectionnés
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    const themesCheckboxes = document.querySelectorAll('#theme-selector ul li');
-
-    themesCheckboxes.forEach(tb =>
-        tb.addEventListener('click', onCheck)
-    );
-});
+'use strict';
 
 
 /*
@@ -50,20 +25,9 @@ map.addLayer(layer);
 
 
 /**
- * Get the profiles from the API
- * @returns {Promise<any>} The profiles as a JSON object
- */
-async function getProfiles() {
-    // Fetch the data from the API
-    const response = await fetch("/pionniers/api/map/topics/true/true/true/true/true/true/keyword/");
-    // Parse the response as JSON and return it
-    return await response.json();
-}
-
-/**
  * Create the marker icon for a profile
- * @param p
- * @returns {*}
+ * @param p The profile object
+ * @returns {*} The marker icon
  */
 function createIcon(p) {
     switch (p.Topic) {
@@ -113,13 +77,94 @@ function createIcon(p) {
  * @returns {Promise<void>} Nothing
  */
 async function addMarkers() {
-    // Get the profiles from the API
-    const profiles = await getProfiles();
     // Add a marker for each profile
-    profiles.forEach(p => {
-        console.log("p :", p)
-        L.marker([p.Lat, p.Long], {icon: createIcon(p)}).addTo(map);
+    geographicalProfiles.forEach(p => {
+        p.marker = L.marker([p.Lat, p.Long], {icon: createIcon(p)}).addTo(map);
     });
 }
 
-addMarkers().then(() => console.log("Markers added !"));
+
+
+/*
+  ----------------------------------------------------------------------------------------------------------------------
+  | Topics selection management                                                                                        |
+  ----------------------------------------------------------------------------------------------------------------------
+ */
+
+let selectedTopics = [];
+let geographicalProfiles = [];
+
+
+/**
+ * Get the profiles from the API
+ * @returns {Promise<any>} The profiles as a JSON object
+ */
+async function getProfiles(apiTopicParameters) {
+    // Fetch the data from the API
+    const response = await fetch("/pionniers/api/map/topics/" + apiTopicParameters + "keyword/");
+    // Parse the response as JSON and return it
+    return await response.json();
+}
+
+
+/**
+ * Generate the API parameters string from the selected topics
+ * @param topics {string[]} List of selected topics
+ * @returns {string} API parameters string
+ */
+function generateApiParameters(topics) {
+    const topic = ["alimentation", "economie_circulaire", "energie", "industrie", "mobilite", "numerique"]
+    let parameterString = "";
+    // For each topic, add "true" if the topic is selected, "false" otherwise
+    for(let i = 0; i < 6; i++) {
+        parameterString += topics.includes(topic[i]) ? "true" : "false";
+        parameterString += "/";
+    }
+    return parameterString;
+}
+
+
+/**
+ * Event handler for the topics checkboxes
+ * @param event The event object
+ */
+function onCheck(event) {
+    // Retrieve the image element (HTML tag) from the event
+    const topicImg = event.target;
+    // Retrieve the topic string from the alt attribute of the image
+    const topicString = topicImg.getAttribute('alt');
+
+    // Alter the list of selected topics depending on the state of the checkboxes and add/remove the "unchecked" class
+    if (topicImg.classList.contains("unchecked")) {
+        topicImg.classList.remove("unchecked");
+        selectedTopics.push(topicString);
+    } else {
+        topicImg.classList.add("unchecked");
+        // Splice the array to remove the item (only if the item is found)
+        const indexToRemove = selectedTopics.indexOf(topicString);
+        if (indexToRemove > -1) {
+            selectedTopics.splice(indexToRemove, 1);
+        }
+    }
+
+    getProfiles(generateApiParameters(selectedTopics)).then(r => {
+        // Markers of previous geographical profiles removal
+        geographicalProfiles.forEach(gp => {
+            gp.marker.remove();
+        });
+        // Update the geographical profiles
+        geographicalProfiles = r;
+        addMarkers().then(() => console.log("Markers added !"));
+    });
+}
+
+/**
+ * Add the event listener to manage interaction (click) with the topics checkboxes
+ */
+document.addEventListener("DOMContentLoaded", function () {
+    const topicCheckboxes = document.querySelectorAll('#theme-selector ul li');
+
+    topicCheckboxes.forEach(tc =>
+        tc.addEventListener('click', onCheck)
+    );
+});

@@ -1,3 +1,5 @@
+'use strict';
+
 const fs = require('fs');
 
 const {google} = require('googleapis');
@@ -68,6 +70,6 @@ module.exports = {
             exportSheetJSON().then(() => {
                 console.log("Data updated");
             });
-        }, 1000 * 60 * 60);
+        }, 1000 * 60);
     }
 }

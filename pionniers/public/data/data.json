@@ -44,7 +44,7 @@
       "2",
       "1, Mail Pablo Picasso 44000 Nantes",
       "-1.532137",
-      "-1.532137",
+      "47.217039",
       "Nolwenn Belléguic",
       "Lhyfe",
       "Nantes",
@@ -63,7 +63,7 @@
       "",
       "38, Quai de la Douane, 29200 Brest",
       "-4.483707",
-      "-4.483707",
+      "48.383151",
       "Erwan Le Méné",
       "Ecotree",
       "Brest",
@@ -177,7 +177,7 @@
       "9",
       "Le Grand Pâtis, 44850 Saint-Mars-du-Désert",
       "-1.450456",
-      "-1.450456",
+      "47.375225",
       "Chloé Chupin",
       "Florentaise",
       "Saint-Mars-du-Désert (Loire-Atlantique) ",
@@ -234,7 +234,7 @@
       "12",
       "1, rue Pierre Fontaine, 91058 Evry, Ile-de-France",
       "2.451976",
-      "2.451976",
+      "48.620353",
       "Antoine Hubert",
       "Ynsect",
       "Evry / Poulainville (Somme) ",
@@ -376,7 +376,7 @@
       "Algorithmes au service de l’agriculture",
       "Aline Bsaibes, 43 ans, est la PDG d’ITK. Elle est classée, en 2021, parmi les 25 femmes leaders de la tech en Europe selon le cabinet américain The Software Report. Elle est ingénieure agronome, titulaire d’une maîtrise en irrigation et en physique des sols de l’Université américaine de Beyrouth, ainsi que d’un doctorat en modélisation agricole de l’INRA. \n\nITK est un éditeur de logiciels d’aide à la décision dans l’agriculture et l’élevage. L’entreprise développe des solutions technologiques au service de la sécurité alimentaire, de la préservation des ressources et de la protection de l’environnement. Après avoir levé 10 millions d’euros en 2021, l’entreprise basée près de Montpellier évolue sur plusieurs marchés internationaux à fort potentiel dans la décarbonation de ces filières. ",
       "numérique",
-      "Agriculture;Elevage;Logiciels;Décarbonation,",
+      "Agriculture;Elevage;Logiciels;Décarbonation",
       "https://podcast.ausha.co/dirigeant-e-s-demain/des-algorithmes-au-service-de-l-agriculture",
       "",
       "https://media.licdn.com/dms/image/D4D03AQEi1nIup0wqDg/profile-displayphoto-shrink_800_800/0/1670226195054?e=1680739200&v=beta&t=blyf9JJAE982l79XdkeYIjXPdpvImAFn_8lC8g1DDv8",
@@ -395,10 +395,10 @@
       "Paiement en ligne à impact positif",
       "Étienne Beaugrand, 37 ans, est le président de PayGreen. Après avoir obtenu son diplôme d’ingénieur à l’IPSA, il a rejoint, en 2009, l’école de l’EM Normandie Business School où il est aujourd’hui, intervenant. \r\n\r\nLa Fintech rouennaise PayGreen a développé une plateforme de paiement en ligne à impact positif. Ses solutions de paiement pour les professionnels du e-commerce permettent d’agir positivement sur l’environnement. Avec Paygreen, le paiement en ligne est combiné à des outils de collecte de dons en faveur d’associations et une compensation carbone avec l’algorithme « Tree » qui calcule l’impact carbone du parcours d’achat du client. ",
       "numérique",
-      "Fintech;Impact positif;Paiement en ligne;e-commerce,",
+      "Fintech;Impact positif;Paiement en ligne;e-commerce",
       "https://podcast.ausha.co/dirigeant-e-s-demain/paiement-en-ligne-a-impact-positif",
       "",
-      "https://media.licdn.com/dms/image/D4E03AQEcrUhgKRmfXg/profile-displayphoto-shrink_400_400/0/1668674488221?e=1680739200&v=beta&t=nZ6VqTNQB-PQfmch_pY7Z8m2z1Qr9tHhFSoK3jtyXvw",
+      "https://media.licdn.com/dms/image/D4E03AQEcrUhgKRmfXg/profile-displayphoto-shrink_800_800/0/1668674488221?e=1680739200&v=beta&t=He44YtLebum4EEqiX9hR_B1s5nU8oyh-bOvwHQAYtdA",
       "https://www.linkedin.com/in/etienne-beaugrand-0b924b14/"
     ],
     [
@@ -417,7 +417,7 @@
       "Déchets;Construction",
       "https://podcast.ausha.co/dirigeant-e-s-demain/quand-les-dechets-deviennent-granulat-pour-le-btp",
       "https://www.lejournaldesentreprises.com/maine-et-loire-sarthe/article/la-start-industrielle-neolithe-leve-20-millions-deuros-pour-entamer-son-deploiement-commercial-2040063",
-      "https://media.licdn.com/dms/image/C5603AQG9ykVNGezuXw/profile-displayphoto-shrink_400_400/0/1646070375689?e=1680739200&v=beta&t=8Ct-55611kWcix1ul3GxcGCbI3ygPFFAHdmWFQ_bI_s",
+      "https://media.licdn.com/dms/image/C5603AQG9ykVNGezuXw/profile-displayphoto-shrink_800_800/0/1646070375689?e=1680739200&v=beta&t=hpV53KyeKWoMORo8ovVlCQbEyiNiziLaWxW2ROA4Abo",
       "https://www.linkedin.com/in/nicolas-cruaud/   https://www.linkedin.com/in/clement-benassy/"
     ],
     [
@@ -436,7 +436,7 @@
       "Compost;Recyclage ",
       "https://podcast.ausha.co/dirigeant-e-s-demain/transformer-des-masques-jetables-en-seau-a-compost",
       "https://www.lejournaldesentreprises.com/maine-et-loire-sarthe/article/le-groupe-comesa-transforme-les-masques-jetables-en-seaux-compost-2011378",
-      "https://media.licdn.com/dms/image/C4D03AQE-odZpYvMoog/profile-displayphoto-shrink_400_400/0/1638357100231?e=1680739200&v=beta&t=2UiUEaxLscKmExm_YlYJXYI5CJpYO9nR02HRFIt_shk",
+      "https://media.licdn.com/dms/image/C4D03AQE-odZpYvMoog/profile-displayphoto-shrink_800_800/0/1638357100231?e=1680739200&v=beta&t=nPNMBcafAxJWCp83zJBRfO3x5GJ2o2FLHdodvV68wDM",
       "https://www.linkedin.com/in/emmanuel-bardin/"
     ],
     [
@@ -455,7 +455,7 @@
       "véhicules utilitaires;urbaine;décarbonation",
       "https://podcast.ausha.co/dirigeant-e-s-demain/accompagner-proprement-le-dernier-kilometre",
       "",
-      "https://media.licdn.com/dms/image/C4E03AQE_yBdo3HGqrg/profile-displayphoto-shrink_400_400/0/1649349772998?e=1680739200&v=beta&t=ZaKDZ521tPhbAS1QyjRTIUBGxQW7cMBK93j_bP0yBO0",
+      "https://media.licdn.com/dms/image/C4E03AQE_yBdo3HGqrg/profile-displayphoto-shrink_800_800/0/1649349772998?e=1680739200&v=beta&t=7cZ_9dcvNnDHqU1_9b7Xr20j6U8jE6LfC9eNkowr34Y",
       "https://www.linkedin.com/in/patrick-buchard-2b90525b/"
     ],
     [
@@ -474,7 +474,7 @@
       "alimentation;gaspillage;logistique",
       "https://podcast.ausha.co/dirigeant-e-s-demain/lutter-contre-le-gaspillage-alimentaire",
       "https://www.lejournaldesentreprises.com/maine-et-loire-sarthe/article/comerso-poursuit-son-developpement-avec-les-invendus-non-alimentaires-1694822",
-      "https://media.licdn.com/dms/image/C5603AQHGeVLHLju4lQ/profile-displayphoto-shrink_400_400/0/1623861847922?e=1680739200&v=beta&t=9V0TOCeL3wQ3rLKxG_h2sn18Lka3-gjnyxcBTgVOIr0",
+      "https://media.licdn.com/dms/image/C5603AQHGeVLHLju4lQ/profile-displayphoto-shrink_800_800/0/1623861847922?e=1680739200&v=beta&t=jzR1NZ30NIcRWiFOhVvE73nYBLLo7UCT1OdkWVYsfVQ",
       "https://www.linkedin.com/in/pierre-yves-pasquier-4169466b/"
     ],
     [
@@ -493,7 +493,7 @@
       "Engrais;Agriculture;Biostimulant;Recyclage",
       "https://podcast.ausha.co/dirigeant-e-s-demain/pipi-vertueux",
       "https://www.lejournaldesentreprises.com/nouvelle-aquitaine/article/toopi-organics-autorise-commercialiser-son-engrais-base-durine-2048105",
-      "https://media.licdn.com/dms/image/C5603AQFgjW-ZpoMWlg/profile-displayphoto-shrink_400_400/0/1660145023842?e=1680739200&v=beta&t=7kNciGNy4P2WUGCcMYDe6eOT-U0MLnqG_YGDOZxmME0",
+      "https://media.licdn.com/dms/image/C5603AQFgjW-ZpoMWlg/profile-displayphoto-shrink_800_800/0/1660145023842?e=1680739200&v=beta&t=h9UgdZtDQM52BdRu2PE6F-KRDoAwLXLb7XlYUEwqo10",
       "https://www.linkedin.com/in/michael-roes-322994144/"
     ],
     [
@@ -512,7 +512,7 @@
       "décarbonation",
       "https://podcast.ausha.co/dirigeant-e-s-demain/des-trottinettes-electriques-en-libre-service",
       "https://www.lejournaldesentreprises.com/alsace/article/knot-etoffe-son-offre-de-stations-pour-trottinettes-electriques-2049371",
-      "https://media.licdn.com/dms/image/C5603AQEuc-4KLjSojA/profile-displayphoto-shrink_400_400/0/1580151171512?e=1680739200&v=beta&t=gRhKYCdBhQfuxJYzD9BUzq1dc1C1GHMjugP6DtNzFsI",
+      "https://media.licdn.com/dms/image/C5603AQEuc-4KLjSojA/profile-displayphoto-shrink_800_800/0/1580151171512?e=1680739200&v=beta&t=SFHmj-jv4obfC4kLSvxUS5vYxCEbMuFpi-p6Qbc9628",
       "https://www.linkedin.com/in/arthur-keller-99430627/   https://www.linkedin.com/in/polina-knot/"
     ],
     [
@@ -531,7 +531,7 @@
       "agroalimentaire;algues;animale",
       "https://podcast.ausha.co/dirigeant-e-s-demain/des-algues-pour-la-nutrition-animale",
       "",
-      "https://media.licdn.com/dms/image/C4E03AQGBlyLeodjq2A/profile-displayphoto-shrink_400_400/0/1611660726660?e=1680739200&v=beta&t=a3mInsfSpWHIyfdNkrC2h_8NhNmuHGu-pR-dh47cBwc",
+      "https://media.licdn.com/dms/image/C4E03AQGBlyLeodjq2A/profile-displayphoto-shrink_800_800/0/1611660726660?e=1680739200&v=beta&t=Wv4nK5MwlosiXbMJyQIBNpMn_P4PNsfF9jmq0tXIqOw",
       "https://www.linkedin.com/in/mahe-st%C3%A9phane-algood/"
     ],
     [
@@ -550,7 +550,7 @@
       "algues;agroalimentaire",
       "https://podcast.ausha.co/dirigeant-e-s-demain/zalg-s-invite-dans-les-assiettes-avec-ses-des-d-algues",
       "https://www.lejournaldesentreprises.com/morbihan/article/zalg-sinvite-en-cuisine-avec-ses-des-dalgues-poeler-2039952",
-      "https://media.licdn.com/dms/image/C4D03AQESE2l6iIRqFg/profile-displayphoto-shrink_400_400/0/1611669026069?e=1680739200&v=beta&t=kMEQo9MKH-nh-uVo4yTR0srDFrWsYPrM5vRUxotds1s",
+      "https://media.licdn.com/dms/image/C4D03AQESE2l6iIRqFg/profile-displayphoto-shrink_800_800/0/1611669026069?e=1680739200&v=beta&t=Hhu9R_oGumCVl5ZDzhJTg5u3DWhy840owd4IC5MVTuE",
       "https://www.linkedin.com/in/tanguy-gestin/"
     ],
     [
@@ -569,7 +569,7 @@
       "Captation CO2;Recyclage;décarbonation  ",
       "https://podcast.ausha.co/dirigeant-e-s-demain/capter-le-co2-des-fumees-industrielles",
       "https://www.lejournaldesentreprises.com/auvergne-rhone-alpes/breve/revcoo-leve-35-millions-deuros-pour-accelerer-sur-la-captation-de-co2-2041163",
-      "https://static.wixstatic.com/media/a43666_f144c3275235490abc2c689e72cdb063~mv2.png/v1/fill/w_500,h_500,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/Capsule%2093_edited.png",
+      "https://media.licdn.com/dms/image/C4D03AQFoCv70WlRJoA/profile-displayphoto-shrink_800_800/0/1581327091682?e=1680739200&v=beta&t=cqjslWA4zgS39DsMd2CyxLYHLVhmCtEjsoXyJFnS_y8",
       "https://www.linkedin.com/in/hugo-lucas-a21479111/"
     ],
     [
@@ -607,7 +607,7 @@
       "technologies;éclairage;smart city",
       "https://podcast.ausha.co/dirigeant-e-s-demain/innover-dans-et-en-dehors-de-l-entreprise",
       "",
-      "https://media.licdn.com/dms/image/C4E03AQE33ppy9FlERA/profile-displayphoto-shrink_400_400/0/1607386727189?e=1680739200&v=beta&t=ppydnU8uguf9fnPdF1vRhOVpbKuy7xl-8sIqSkpTcCw",
+      "https://media.licdn.com/dms/image/C4D03AQGfyssk5V0qVQ/profile-displayphoto-shrink_800_800/0/1607828757928?e=1680739200&v=beta&t=4zfuZadLeRQ7prhGtc7078l1qjQGhyN-_WpdFPeI7Bg",
       "https://www.linkedin.com/in/green-tech-innovations-david-chquiry/"
     ],
     [
@@ -626,7 +626,7 @@
       "pêche durable;préservation",
       "https://podcast.ausha.co/dirigeant-e-s-demain/la-peche-responsable-prend-le-large",
       "",
-      "https://media.licdn.com/dms/image/C5603AQHj0WV88g5EBQ/profile-displayphoto-shrink_400_400/0/1642780353986?e=1680739200&v=beta&t=inxRv6C_gFqOW-P7LTrQG9zezHBqj8L23XoNoV-EWt8",
+      "https://media.licdn.com/dms/image/C5603AQHj0WV88g5EBQ/profile-displayphoto-shrink_800_800/0/1642780353986?e=1680739200&v=beta&t=kIYIC9OHKhy4S0pPyviKEztL45VKixn6I2LCJD8fx1Q",
       "https://www.linkedin.com/in/jean-fran%C3%A7ois-feillet-37a50949/"
     ],
     [
@@ -645,7 +645,7 @@
       "Production;recyclage;circuit court",
       "https://podcast.ausha.co/dirigeant-e-s-demain/de-l-energie-propre-en-circuit-court",
       "https://www.lejournaldesentreprises.com/region-sud/article/avec-ses-mini-centrales-le-varois-mini-green-power-cible-les-grands-comptes-1784583",
-      "https://media.licdn.com/dms/image/C4E03AQHKY97eZgRW1A/profile-displayphoto-shrink_400_400/0/1639112573420?e=1680739200&v=beta&t=j1uK8GMSaTYKVMnzHrGLvFsQJpJvtkJ7u46Xw37_5NE",
+      "https://media.licdn.com/dms/image/C4E03AQHKY97eZgRW1A/profile-displayphoto-shrink_800_800/0/1639112573420?e=1680739200&v=beta&t=c2BHmVq4oMNFEn2O2yjhE1I0omyyzOEX3ZdBlWgq0do",
       "https://www.linkedin.com/in/jean-riondel-339a6457/"
     ],
     [
@@ -664,7 +664,7 @@
       "mobilité",
       "https://podcast.ausha.co/dirigeant-e-s-demain/rouler-avec-un-nouveau-carburant-vert",
       "",
-      "https://media.licdn.com/dms/image/C4D03AQErW-ZMycaFWA/profile-displayphoto-shrink_400_400/0/1647699101397?e=1680739200&v=beta&t=P5AszqikYIb5Q-TWmZHJ3QT7bCEjS8-igTlUARHbdVU",
+      "https://media.licdn.com/dms/image/C4D03AQErW-ZMycaFWA/profile-displayphoto-shrink_800_800/0/1647699101397?e=1680739200&v=beta&t=rNb16bKziRzyxCLY7YAYXLS4a2srxbraXV234A4bGwY",
       "https://www.linkedin.com/in/marc-lambec-b2a39212b/"
     ],
     [
@@ -683,7 +683,7 @@
       "verte;hydrogène;agriculture;économie circulaire",
       "https://podcast.ausha.co/dirigeant-e-s-demain/une-energie-verte-en-economie-circulaire",
       "",
-      "https://media.licdn.com/dms/image/C5603AQFThOlQ1Yy9FQ/profile-displayphoto-shrink_400_400/0/1571297821208?e=1680739200&v=beta&t=zPVJiYPmXLblb5iAquwiDfyFEwQ9ZZBbzXux5BFcPUI",
+      "https://media.licdn.com/dms/image/C5603AQFThOlQ1Yy9FQ/profile-displayphoto-shrink_800_800/0/1571297821208?e=1680739200&v=beta&t=uB9aCE5VEMDdahFayG5olSCAkv3s1Rfd5Zw0T1NUvaQ",
       "https://www.linkedin.com/in/jean-foyer-01b46812/"
     ],
     [
@@ -719,7 +719,7 @@
       "innovation;stockage;agriculture",
       "https://podcast.ausha.co/dirigeant-e-s-demain/produire-de-l-ammoniac-vert",
       "https://www.lejournaldesentreprises.com/occitanie/article/swan-h-veut-revolutionner-la-filiere-energie-avec-lammoniac-vert-2049959",
-      "https://media.licdn.com/dms/image/D4E03AQFA3F5KANUPHA/profile-displayphoto-shrink_400_400/0/1669651403195?e=1680739200&v=beta&t=ubXb8io-w2d-sDebs8z3puDjAj_G33-oOM-lTSVoj94",
+      "https://media.licdn.com/dms/image/D4E03AQFA3F5KANUPHA/profile-displayphoto-shrink_800_800/0/1669651403195?e=1680739200&v=beta&t=29rGtvnAkqnrEYn7GuJbC46X5eRfL06wW0yu7p49LVQ",
       "https://www.linkedin.com/in/augustin-de-bettignies/"
     ],
     [
@@ -732,13 +732,13 @@
       "Saint-James (Manche)",
       "59 ans",
       "Président",
-      "",
-      "Développement d'un textile Made in France afin de limiter l'import de matières",
+      "Développement d'un textile Made in France",
+      "Luc Lesenecal, 59 ans, est président des Tricots Saint-James dans la Manche. Il est un ardent défenseur du made in France et du savoir-faire d’excellence. Il préside également l’Institut national des métiers d’art et du patrimoine vivant.\n\nSaint James est une entreprise spécialiste du vêtement marin. Elle développe un textile Made in France afin de limiter l'import de matières. Fondée en 1889, la marque fait référence à la ville éponyme, dans la baie du Mont-Saint-Michel. Saint James est également capable de s’adapter à son environnement. Avec le covid elle a fait preuve d’agilité en produisant des masques, au bénéfice de la collectivité.",
       "industrie",
       "made in France;relocalisation",
       "https://podcast.ausha.co/dirigeant-e-s-demain/made-in-france-et-malin",
       "",
-      "https://media.licdn.com/dms/image/C4D03AQGTMV_LlryfFg/profile-displayphoto-shrink_400_400/0/1602498299136?e=1680739200&v=beta&t=bfmGeVqR5aHmbNfd-4tSbr7mOyqbzWxkwN1GAzlJQ_A",
+      "https://media.licdn.com/dms/image/C4D03AQGTMV_LlryfFg/profile-displayphoto-shrink_800_800/0/1602498299136?e=1680739200&v=beta&t=WYIO67JgNaHUVlPyj1l0AxJgbbGSEmFbovziRI03yQM",
       "https://www.linkedin.com/in/luc-les%C3%A9n%C3%A9cal-7b53761b6/"
     ],
     [
@@ -751,8 +751,8 @@
       "Romans-sur-Isère (Drôme)",
       "41 ans",
       "Président fondateur",
-      "",
-      "Fabrication et vente de jeans bio et écoresponsable, industrialisation d'une production de fil de coton recyclé",
+      "Fabrication et vente de jeans bio et écoresponsable",
+      "Thomas Huriez, 41 ans, est le président et le fondateur de l’entreprise « 1083 ». Il a fondé la marque de jeans à Romans-sur-Isère dans la Drôme en 2013. « Ce sont mes valeurs qui m’ont fait m’intéresser à la mode éthique », déclare-t-il notamment. \n\nL’entreprise « 1083 » a réalisé 8 millions d’euros de chiffre d'affaires en 2020 avec 70 salariés, et prouvé qu’il était possible de concevoir et fabriquer localement des jeans bio et écoresponsables. Thomas Huriez veut également industrialiser la production de fil de coton recyclé pour achever la relocalisation de l'ensemble de la filière textile en France.",
       "économie circulaire",
       "circuit court;relocalisation;made in France;textile ",
       "https://podcast.ausha.co/dirigeant-e-s-demain/etre-local-et-ecoresponsable",
@@ -770,13 +770,13 @@
       "Ribeauvillé (Haut-Rhin) ",
       "48 ans",
       "Directrice générale ",
-      "",
       "Élaboration et vente d'eaux minérales neutres en carbone",
+      "Valérie Siegler, 48 ans, est la directrice générale de la filiale française du groupe belge Spadel France. En mars 2022, elle a été élue cheffe d’entreprise de l’année lors de la cérémonie des Trophées des Entreprises d’Alsace.\r\n\r\nPour Valérie Siegler, produire de l’eau nécessite forcément d'être attentif à l’environnement. C’est pourquoi depuis 2020, les eaux minérales Wattwiller et Carola sont certifiées neutres en carbone. « Pour arriver à la neutralité nous avons développé avec notre équipe d’hydrogéologues, un programme de compensation qui permet d'arriver à la neutralité ».",
       "économie circulaire",
       "électricité verte;recyclage;neutralité carbone",
       "https://podcast.ausha.co/dirigeant-e-s-demain/bilans-carbone-aquatiques",
       "",
-      "https://media.licdn.com/dms/image/C4E03AQEZxEZJgeGFvg/profile-displayphoto-shrink_400_400/0/1608386486985?e=1680739200&v=beta&t=mSNSHJuQaLTN_1GlP7FivNhE3NtS5heeTmx6Vcuze10",
+      "https://media.licdn.com/dms/image/C4E03AQEZxEZJgeGFvg/profile-displayphoto-shrink_800_800/0/1608386486985?e=1680739200&v=beta&t=PjUCgCok932GPfB08mplD_vJjPXW6w4JM8Jx5uT5Nz8",
       "https://www.linkedin.com/in/valerie-siegler-ba59578/"
     ],
     [
@@ -789,13 +789,13 @@
       "Montpellier",
       "43 ans",
       "PDG",
-      "",
-      "Création d'une plateforme permettant de répertorier les sources d'émission de gaz à effet de serre afin de participer à l'accélération de la transformation écologique des entreprises",
+      "Création d'une plateforme pour répertorier les sources d'émission de gaz à effet de serre",
+      "Rachel Delacour, 43 ans, est PDG et cofondatrice de Sweep, une start-up montpelliéraine. Elle milite à l'association France digitale, dont elle est vice-présidente puis co-présidente de décembre 2017 à avril 2019\n\nSweep est une plateforme qui permet de cartographier toutes les sources d’émission de gaz à effet de serre au sein de leur organisation, en les classant par marques, produits, ou implantations géographiques. Le but est de participer à l'accélération de la transformation écologique des entreprises. L’entreprise de 15 personnes, qui compte déjà plusieurs grands comptes dans son portfolio, a levé 4,1 millions d’euros dès son lancement commercial, en avril 2021.",
       "numérique",
       "bilan carbone;bilan GES;logiciel",
       "https://podcast.ausha.co/dirigeant-e-s-demain/negocier-le-virage-de-la-transition-ecologique",
       "",
-      "https://media.licdn.com/dms/image/C4E03AQErVbCw0jMZEA/profile-displayphoto-shrink_400_400/0/1626109259402?e=1680739200&v=beta&t=8BhW0_2UzhRsSKLsSTyv1dVmmICUpVw6f2TQ_v_1UoY",
+      "https://media.licdn.com/dms/image/C4E03AQErVbCw0jMZEA/profile-displayphoto-shrink_800_800/0/1626109259402?e=1680739200&v=beta&t=umrxWCxIkHjdgNoPHNwcA37WgmHKFsB_yVwVkR2QBDQ",
       "https://www.linkedin.com/in/wearecloudrachel/"
     ],
     [
@@ -808,13 +808,13 @@
       "Blaringhem (Nord) ",
       "38 ans",
       "Directrice générale",
-      "",
-      "Mise au point d'outils et procédés afin de valoriser tous types de déchets industriels",
+      "Mise au point d'outils et procédés pour valoriser tous types de déchets industriels",
+      "Caroline Poissonnier, 38 ans, est la directrice générale de Baudelet Environnement. En 2022, elle arrive en tête du classement Choiseul qui met en lumière les dirigeants de moins de 40 ans les plus influents de la région Nord.\r\n\r\nLe groupe familial Baudelet Environnement (500 salariés, 130 M€ de CA) met au point des outils et procédés innovants pour mieux valoriser tous types de déchets. « Le groupe a pour objectif de valoriser plus pour stocker moins ». Pour cela, il noue des partenariats avec des acteurs locaux pour diversifier ses filières de valorisation.",
       "industrie",
       "recyclage",
       "https://podcast.ausha.co/dirigeant-e-s-demain/innover-pour-recycler-plus-et-mieux",
       "",
-      "https://media.licdn.com/dms/image/C4D03AQHry2FGLaP22A/profile-displayphoto-shrink_400_400/0/1601891772947?e=1680739200&v=beta&t=sma2Xw0SaN5RXxzOKv_jDUwLPS-yszMYXCzss2CU2rY",
+      "https://media.licdn.com/dms/image/C4D03AQHry2FGLaP22A/profile-displayphoto-shrink_800_800/0/1601891772947?e=1680739200&v=beta&t=heAko9K_Ml4gWuF_VfHogeijAFoluNqUJvsU1oeqKwg",
       "https://www.linkedin.com/in/caroline-poissonnier-a5bb97142/"
     ],
     [
@@ -827,13 +827,13 @@
       "Montjean-sur-Loire (Maine-et-Loire) ",
       "41 ans",
       "Directeur général",
-      "",
       "Fabrication et commercialisation d'une chaussure made in France, écoconçue, réparable et recyclable",
+      "Jean-Olivier Michaux, 41 ans, est le directeur général de la Manufacture. Il est également, depuis 2013, directeur du contrôle financier et de l'audit du groupe Eram, qui détient la Manufacture.\r\n\r\nFiliale du groupe industriel Eram, la Manufacture, qui emploie 160 collaborateurs, a lancé la fabrication de Sessile, une chaussure entièrement made in France, éco-conçue, réparable et recyclable. Le produit est commercialisé sur internet et en circuit court. L’un des objectifs est d’agir sur l’environnement en réduisant fortement l’empreinte carbone du produit.",
       "économie circulaire",
       "chaussure;made in France;écoconception ",
       "https://podcast.ausha.co/dirigeant-e-s-demain/une-chaussure-made-in-france-100-recyclable",
       "",
-      "https://media.licdn.com/dms/image/C5603AQFQ64IfFnSMqg/profile-displayphoto-shrink_400_400/0/1573768494980?e=1680739200&v=beta&t=M6rbFeicAXUf8p0B0DiPAkrizrochQ3SxjhJzJ0X3A8",
+      "https://media.licdn.com/dms/image/C5603AQFQ64IfFnSMqg/profile-displayphoto-shrink_800_800/0/1573768494980?e=1680739200&v=beta&t=aPFEdqkj9GqBuAWLHxvxS9CzeF2rjm7rbUaBg_YQbks",
       "https://www.linkedin.com/in/jean-olivier-michaux-15374b3/"
     ],
     [
@@ -846,13 +846,13 @@
       "Les-Ponts-de-Cé (Maine-et-Loire) ",
       "57 ans",
       "Directeur général",
-      "",
-      "Favoriser les produits reconditionnés et/ou d'occasion afin de limiter la surconsommation industrielle",
+      "Rendre ses produits réparables pour qu'ils soient plus durables",
+      "Jean-Marc Hupé, 57 ans, est le directeur général de Espace Émeraude. Il a multiplié les expériences dans des secteurs comme les travaux publics ou la finance avant de découvrir, il y a 20 ans, la distribution et le commerce.\r\n\r\nForte de plus de 80 magasins, l’enseigne Espace émeraude, spécialisée dans les biens d’équipement du jardin et de la maison, a entamé une réflexion sur ses approvisionnements, la durabilité et la réparabilité de ses produits. C’est pourquoi elle a lancé dans ses points de vente un service de matériel d’occasion.",
       "économie circulaire",
       "distribution;occasion;seconde main",
       "https://podcast.ausha.co/dirigeant-e-s-demain/rendre-ses-produits-reparables-pour-qu-ils-soient-plus-durables",
       "",
-      "https://media.licdn.com/dms/image/C5603AQExkgMoE56Dug/profile-displayphoto-shrink_400_400/0/1520270613272?e=1680739200&v=beta&t=x3HQqRseBcqtEQUANZpqyJ0MAod9P_-KoZvQ73zbzn0",
+      "https://media.licdn.com/dms/image/C5603AQExkgMoE56Dug/profile-displayphoto-shrink_800_800/0/1520270613272?e=1680739200&v=beta&t=t0Lu16nVXqdZdssbxdfb9z0nOE8XFoij7GDZIzJqk08",
       "https://www.linkedin.com/in/jmhupe-64/"
     ],
     [
@@ -865,8 +865,8 @@
       "Paris",
       "34 ans",
       "Président",
-      "",
       "Procédé de recyclage mécanique pour les matériaux avancés",
+      "Benjamin Saada, 34 ans, est le président de Fairmat. Diplômé de l’École des Mines de Paris, cet ingénieur s’est fait connaître en inventant un siège d'avion ultraléger, commercialisé par la société Expliseat, qu'il a fondée avec Jean-Charles Samuelian, le dirigeant d'Alan.\r\n\r\nFairmat industrialise le recyclage de la fibre de carbone dans son usine pilote de Nantes et compte y investir 20 à 30 millions d'euros d'ici 2025. Objectif : industrialiser son procédé de recyclage des matériaux composites en fibre de carbone et devenir un acteur majeur de l'économie circulaire.",
       "industrie",
       "réemploi;économie circulaire",
       "",
@@ -884,13 +884,13 @@
       "Lizio (Morbihan) ",
       "51 et 52 ans",
       "Gérants",
-      "",
-      "Transformation de coquilles d'oeufs fournies par l'industrie agroalimentaire comme amendement calcaire pour les terres agricoles et horticoles",
+      "Transformations des coquilles comme amendements aux terres agricoles et horticoles",
+      "Paul et Florence Chedaleux, 51 et 52 ans, sont les gérants de Terremo’logic. Sur leur exploitation de Lizio, ces producteurs laitiers utilisaient des coquilles d’œufs issues de la casserie de la Pep.\r\n\r\nDepuis 2018, la société Terremo’logic revalorise des coquilles d’œufs sous la forme d’amendement calcaire. L’entreprise commercialise ses produits auprès d’agriculteurs locaux mais aussi auprès d’acteurs majeurs du maraîchage et d’arboriculteurs. « C’est un excellent amendement qui évite d’utiliser de la chaux\", explique Paul-Gilles Chedaleux.",
       "économie circulaire",
       "industrie;agriculture",
       "",
       "https://www.lejournaldesentreprises.com/morbihan/article/terremologic-offre-une-seconde-vie-aux-coquilles-doeufs-2049572",
-      "",
+      "https://media.licdn.com/dms/image/D4E03AQGfDkBDMTetNA/profile-displayphoto-shrink_800_800/0/1668449233213?e=1680739200&v=beta&t=FNXzwrm2tbqcW7YBXqOxpN1FIfvM60FrwZ51VmzkEDI",
       "https://www.linkedin.com/in/paul-gilles-chedaleux-09a0b2255/"
     ],
     [
@@ -903,13 +903,13 @@
       "Montivilliers (Seine-Maritime) ",
       "37 ans",
       "Présidente",
-      "",
-      "Collecte des déchets alimentaires des restaurants et traitement par méthanisation",
+      "Recyclage des déchets alimentaires des restaurants",
+      "Maëlis Lassarat De Witte, 37 ans, est la présidente de BinHappy. L'infirmière de formation a mis en pratique, à grande échelle, ce qu'elle faisait dans son foyer : réduire ses déchets et privilégier la mobilité douce.\r\n\r\nL’entreprise BinHappy, installée près du Havre, et spécialisée dans la collecte et le traitement des bio-déchets. BinHappy a été créée pour \"dévier de l’incinération un maximum de déchets valorisables et les déchets alimentaires en compost ou en biogaz\". Elle a reçu le premier prix Normandy4Good récompensant les entreprises normandes engagées dans l’économie à impact positif.",
       "économie circulaire",
       "restauration;méthanisation",
       "",
       "https://www.lejournaldesentreprises.com/normandie/article/binhappy-developpe-le-recyclage-des-dechets-alimentaires-des-restaurants-1766401?auHash=VfmEuhL_6CGJkcjMsuoZUDeCwrt2SlR8NttCmes2NYw",
-      "",
+      "https://media.licdn.com/dms/image/D4E03AQHRdJp8mMJVdQ/profile-displayphoto-shrink_800_800/0/1669061712635?e=1680739200&v=beta&t=XdTfCNnXS8PZPn0yazGNISgM3mDd4N9o5dDugcucXYs",
       "https://www.linkedin.com/in/ma%C3%ABlis-de-witte-796940142/"
     ],
     [
@@ -922,13 +922,13 @@
       "Mèze (Hérault) ",
       "63 ans",
       "Directeur commercial",
-      "",
-      "Aquaculture, production et commercialisation de micro-algues, notamment pour l'alimentation humaine et animale",
+      "Production et commercialisation de micro-algues destinées à l’alimentation",
+      "Éric Causse, 63 ans, est le directeur commercial de GreenSea. Il a été 12 ans responsable de la production dans l’entreprise avant d’occuper ce poste.\r\n\r\nInstallée à Mèze, l’entreprise GreenSea spécialisée dans la culture de microalgues et leur transformation en ingrédients innovants, va développer un pilote industriel de bioraffinerie afin de produire des molécules à haute valeur ajoutée.",
       "alimentation",
       "algues",
       "",
       "https://www.lejournaldesentreprises.com/occitanie/article/greensea-va-batir-une-bioraffinerie-de-microalgues-2049680",
-      "https://media.licdn.com/dms/image/C4D03AQFU0YvecxhkFA/profile-displayphoto-shrink_400_400/0/1574791030393?e=1680739200&v=beta&t=NkngdDfVfqaBtKJ7l5XBf9spOWl5dpiWDNG6QwVzgbI",
+      "https://media.licdn.com/dms/image/C4D03AQFU0YvecxhkFA/profile-displayphoto-shrink_800_800/0/1574791030393?e=1680739200&v=beta&t=b8hZ7XbqaAaaSRQegz8VxiCm6ajHJTHg8sVg0K6ol7Y",
       "https://www.linkedin.com/in/eric-causse-16960a3b/"
     ],
     [
@@ -941,13 +941,13 @@
       "Saint-Jorioz (Haute-Savoie) ",
       "NC",
       "Directrice générale",
-      "",
-      "Production et commercialisation de bateaux à propulsion électrique ou hydrogène zéro émission pour le transport de passagers sur rivière, sur lac ou côtier.",
+      "Bateaux à propulsion électrique ou hydrogène zéro émission pour le transport de passagers",
+      "Virginie Seurat est la directrice générale de Seabubbles. Selon elle, il faut développer l'hydrogène pour favoriser la transition énergétique, laquelle ne pourra se faire sans une intégration du numérique au mix énergétique. \r\n\r\nFondée en 2016, la société Seabubbles entame la production et la commercialisation de ses bateaux à propulsion électrique ou hydrogène, flottant au-dessus de l’eau. Ils proposent une alternative écologique innovante au transport de passagers sur rivière, sur lac ou proche des côtes.",
       "transport",
       "décarbonation;nautisme",
       "",
       "https://www.lejournaldesentreprises.com/auvergne-rhone-alpes/article/les-bateaux-volants-de-seabubbles-entament-leur-decollage-2049822?auHash=hkPP37bZycX6CTMQvxx12j7Gmjkv8iNgqCNm94oKrQw",
-      "https://media.licdn.com/dms/image/D5603AQEU_okr902Lhw/profile-displayphoto-shrink_400_400/0/1630568336856?e=1680739200&v=beta&t=mAe7TgXw4X6Ig7JKKyRf3-ftQTTS6PittyaqESGzyvU",
+      "https://media.licdn.com/dms/image/D5603AQEU_okr902Lhw/profile-displayphoto-shrink_800_800/0/1630568336856?e=1680739200&v=beta&t=7MioPzGsvNaAdwUdVA_smlFugrx7rijrsHDYVJJCMRo",
       "https://www.linkedin.com/in/virginielucseurat/"
     ],
     [
@@ -966,7 +966,7 @@
       "",
       "",
       "https://www.lejournaldesentreprises.com/loire-atlantique-vendee/article/la-start-des-produits-dentretien-ekovrak-casse-la-baraque-2048651?auHash=7yf1vfQvi6RUNkLzuQYqTROI13umgjcqCyD3ZNDJ0VY",
-      "https://media.licdn.com/dms/image/D4E03AQFvHYMx8DnJkA/profile-displayphoto-shrink_400_400/0/1666692044910?e=1680739200&v=beta&t=fu47ShXM1DViZgx6fBrf9ynppm0R8Iu5AOw2zl0e0hE",
+      "https://media.licdn.com/dms/image/D4E03AQFvHYMx8DnJkA/profile-displayphoto-shrink_800_800/0/1666692044910?e=1680739200&v=beta&t=QJNaVth2-uCwdTf745lMwb8wnsl_hm0j64CP8WLtVGM",
       "https://www.linkedin.com/in/nicolas-dubreuil-essca/"
     ],
     [
@@ -979,13 +979,13 @@
       "Fréjus (Var)",
       "61 ans",
       "Président",
-      "",
       "Production d'hydrogène durable et zéro émission à partir de méthane ",
+      "Gérard Gatt, 61 ans, est le président de Sakowin. « Le développement des start-ups ? Je connais le domaine, après 35 ans d’expérience, dont 10 passés aux Etats-Unis, où j’avais rejoint Citrix Systems (NASDAQ : CTXS) à ses débuts. »\r\n\r\nCréée en 2017 à Fréjus, Sakowin tente de répondre à l’équation suivante : produire sans émission de CO2 de l’hydrogène en masse, à un coût économique abordable. « Pour atteindre l’objectif de neutralité carbone en 2050, il faudra avoir remplacé 85 % de nos énergies actuelles par de l’hydrogène », explique son président.",
       "énergie",
       "hydrogène;décarbonation",
       "",
       "https://www.lejournaldesentreprises.com/region-sud/article/sakowin-mise-sur-le-co-developpement-pour-generaliser-la-production-dhydrogene-decarbone-1817963",
-      "https://media.licdn.com/dms/image/D4E03AQHPP8ZNeGYrdA/profile-displayphoto-shrink_400_400/0/1665239652775?e=1680739200&v=beta&t=YsbtM_KKoxVMJd3wv-BK2OCiUIolKqWwVFTZO8nT7hA",
+      "https://media.licdn.com/dms/image/D4E03AQHPP8ZNeGYrdA/profile-displayphoto-shrink_800_800/0/1665239652775?e=1680739200&v=beta&t=ebc7X1v9vJoDLNFRuaHbnqs5QodslddAJNYISQ88JRM",
       "https://www.linkedin.com/in/gerard-gatt/"
     ],
     [
@@ -998,8 +998,8 @@
       "Le Havre",
       "42 ans",
       "Président",
-      "",
-      "Développement d'un algorithme qui permet aux entreprises de calculer et réduire leur empreinte carbone numérique (site internet, emails), extension prochaine aux cryptomonnaies",
+      "Algorithme qui permet aux entreprises de calculer et réduire leur empreinte carbone numérique",
+      "Mathieu Cottard, 42 ans, est le président de Greenoco. En 2011, il créé son agence web Liziweb, spécialisée dans le référencement et la création de sites web et de commerce. Sensibilisé aux problèmes environnementaux, il développe 10 ans plus tard Greenoco.\r\n\r\nLa start-up havraise Greenoco a développé un algorithme qui permet aux entreprises de prendre conscience de leur empreinte carbone numérique et de la réduire en suivant ses préconisations. Prochain challenge : s’atteler aux cryptomonnaies, \"une catastrophe mondiale pour l’empreinte carbone\" selon Mathieu Cottard.",
       "numérique",
       "décarbonation",
       "",
@@ -1017,13 +1017,13 @@
       "Lorient",
       "35 ans",
       "Directrice générale",
-      "",
       "Construction d'une flotte de cargos à voiles pour le transport de marchandises",
+      "Louise Chopinet, 35 ans, est la directrice générale de Windcoop. Elle a fait une thèse de doctorat en biophysique appliquée au cancer avant de se lancer, en 2014, dans le financement d’entreprise et l’accompagnement d’entrepreneurs.\r\n\r\nSociété coopérative d'intérêt collectif lancée voici quelques mois à Lorient, Windcoop a misé sur le financement responsable pour assurer une partie de la construction d'un cargo à voiles allant rallier la France à Madagascar avec un chargement d'environ 100 conteneurs.  La mise en chantier est prévue l'an prochain pour un budget avoisinant les 20 millions d'euros.",
       " mobilité",
       "transport;maritime;décarbonation",
       "",
       "https://www.lejournaldesentreprises.com/morbihan/article/windcoop-passe-par-lita-pour-accelerer-la-decarbonation-du-fret-maritime-2051749",
-      "https://media.licdn.com/dms/image/C4E03AQEevZxDjola2A/profile-displayphoto-shrink_400_400/0/1647369633045?e=1680739200&v=beta&t=0Byy4zhLOX3vHfEqWMIG4oAeDC32bAmnvBsZ4B2tju4",
+      "https://media.licdn.com/dms/image/C4E03AQEevZxDjola2A/profile-displayphoto-shrink_800_800/0/1647369633045?e=1680739200&v=beta&t=HUdvIYBZbVviV3-ofQHz84HUfhV5m-UwjS8XIjZ-h3A",
       "https://www.linkedin.com/in/louisechopinet/"
     ],
     [
@@ -1042,7 +1042,7 @@
       "électrique;industrie;batteries;décarbonation;automobile",
       "",
       "https://www.lejournaldesentreprises.com/auvergne-rhone-alpes/article/verkor-leve-250-millions-deuros-pour-son-centre-technologique-grenoble-2048510",
-      "https://media.licdn.com/dms/image/D4E03AQH1C8n7xqtg8A/profile-displayphoto-shrink_400_400/0/1630615635091?e=1680739200&v=beta&t=aD7iJetXvXomcUuiVTlVfEoqnr1Y08bsG3AAedaRSTE",
+      "https://media.licdn.com/dms/image/D4E03AQH1C8n7xqtg8A/profile-displayphoto-shrink_800_800/0/1630615635091?e=1680739200&v=beta&t=kb10AB25G8c1sdGqASOAtCNB6XbDfdcBTp-XxWNwfdE",
       "https://www.linkedin.com/in/benoit-lemaignan/"
     ],
     [
@@ -1061,7 +1061,7 @@
       "consigne;réemploi",
       "",
       "https://www.lejournaldesentreprises.com/loire-atlantique-vendee/article/bout-bout-cherche-400-000-euros-pour-accelerer-le-recyclage-des-bouteilles-en-verre-2044848",
-      "https://media.licdn.com/dms/image/C5603AQFHs1TJOdZ5FQ/profile-displayphoto-shrink_400_400/0/1620399580787?e=1680739200&v=beta&t=ieTHGqTNOi6OQa3R8VtiSz_eePTGciHVBxSFbr4RmZw",
+      "https://media.licdn.com/dms/image/C5603AQFHs1TJOdZ5FQ/profile-displayphoto-shrink_800_800/0/1620399580787?e=1680739200&v=beta&t=3lq7juz3HGsADScMa8lGHymP1fKLVS1IMNbjLRrnrPw",
       "https://www.linkedin.com/in/celie-couche/"
     ],
     [
@@ -1080,7 +1080,7 @@
       "décarbonation",
       "",
       "https://www.lejournaldesentreprises.com/hauts-de-france/article/starklab-est-pret-depolluer-lair-du-monde-entier-279966",
-      "https://media.licdn.com/dms/image/C5103AQFsxu7_jiDi-g/profile-displayphoto-shrink_400_400/0/1516276648712?e=1680739200&v=beta&t=QP9j9nlkGdzlOTsnlsN45gWB72OOplhrZbk938g0pQc",
+      "https://media.licdn.com/dms/image/C5103AQFsxu7_jiDi-g/profile-displayphoto-shrink_800_800/0/1516276648712?e=1680739200&v=beta&t=UC8AILS8rFwadPqUgXmSTGl6uG63Bj5q_3l0sRs3Fz4",
       "https://www.linkedin.com/in/jaouad-zemmouri-3344ab1/"
     ],
     [
@@ -1099,7 +1099,7 @@
       "recyclage;plastique",
       "",
       "https://www.lejournaldesentreprises.com/normandie/article/grace-ses-levees-de-fonds-greenbig-accelere-son-developpement-1984775?auHash=ISby7HBsbbrhqu_MTD2Bb8w4sJTwAeWc2y6ItOb6UoU",
-      "https://media.licdn.com/dms/image/D4E03AQGIMGnCXAySmw/profile-displayphoto-shrink_400_400/0/1673814395800?e=1680739200&v=beta&t=y7fDXrrr1QvSaR4ml93JCGe-qZtNa_uveZcdcyaGYkk",
+      "https://media.licdn.com/dms/image/D4E03AQGIMGnCXAySmw/profile-displayphoto-shrink_800_800/0/1673814395800?e=1680739200&v=beta&t=Hn3z4GtcmJrdhzC3v4XMQHuVT1w7ESlDmvOyHEeOpps",
       "https://www.linkedin.com/in/benoitpaget/"
     ],
     [
@@ -1118,7 +1118,7 @@
       "renouvelable;solaire thermique;chaleur;décarbonation",
       "",
       "https://www.lejournaldesentreprises.com/nouvelle-aquitaine/article/newheat-decarbone-la-ville-de-pons-avec-sa-centrale-solaire-thermique-2042818",
-      "https://media.licdn.com/dms/image/C4E03AQE-sxvsLVSVgA/profile-displayphoto-shrink_400_400/0/1656684108440?e=1680739200&v=beta&t=VQoO-U_q8oWaHwq8G9RyiAmIAWqFVRwHggIi0Cjjp-8",
+      "https://media.licdn.com/dms/image/C4E03AQE-sxvsLVSVgA/profile-displayphoto-shrink_800_800/0/1656684108440?e=1680739200&v=beta&t=G8MNnG7EWuGRiRmi-Xj3e3U0FhCJp4X8tQ37MOMFeW4",
       "https://www.linkedin.com/in/hugues-defr%C3%A9ville/"
     ],
     [
@@ -1137,7 +1137,7 @@
       "transport;agroalimentaire;maritime;décarbonation ",
       "",
       "https://www.lejournaldesentreprises.com/finistere/article/grain-de-sail-ouvre-son-capital-bpifrance-et-credit-mutuel-equity-1786810",
-      "https://media.licdn.com/dms/image/C4D03AQEkNgJDlU_YtQ/profile-displayphoto-shrink_400_400/0/1641849227302?e=1680739200&v=beta&t=RKrRhsFkpbfzyF_MjgcODEcYeR20VUheDFpI2lzH8YM",
+      "https://media.licdn.com/dms/image/C4D03AQEkNgJDlU_YtQ/profile-displayphoto-shrink_800_800/0/1641849227302?e=1680739200&v=beta&t=vwlUaBU2dHBvDgT2VMaBU-p541EmYOO8eSIaJANxjPo",
       "https://www.linkedin.com/in/olivier-barreau-191844165/"
     ],
     [
@@ -1156,7 +1156,7 @@
       "décarbonation",
       "https://podcast.ausha.co/dirigeant-e-s-demain/le-velomobile-yxelon-prend-la-route",
       "https://www.lejournaldesentreprises.com/normandie/article/cycle-concept-factory-pedale-pour-lenvironnement-2047897?auHash=bEAYzpLuxSqUq2NIYlRkHTytaAuM6D-xzE2RsTstCkg",
-      "https://media.licdn.com/dms/image/C4D03AQHKEDDJt09tOA/profile-displayphoto-shrink_400_400/0/1629826307047?e=1680739200&v=beta&t=y7n6g1Cy8bFb0suVmTwnDgs2piGjIBlsyAkOpDfvoCI",
+      "https://media.licdn.com/dms/image/C4D03AQHKEDDJt09tOA/profile-displayphoto-shrink_800_800/0/1629826307047?e=1680739200&v=beta&t=yVLJijJxT76hhM-lMz4Ym1FZ21gHWrOwk_s_4D8u1PA",
       "https://www.linkedin.com/in/charles-j-de-donder-a46932100/"
     ],
     [
@@ -1175,7 +1175,7 @@
       "",
       "",
       "https://www.lejournaldesentreprises.com/region-sud/breve/lentreprise-hubcycle-qui-valorise-les-dechets-agroalimentaires-leve-35-millions-deuros-1960152",
-      "https://media.licdn.com/dms/image/C4E03AQHEAAi7196pRQ/profile-displayphoto-shrink_400_400/0/1643970697492?e=1680739200&v=beta&t=ASTlliRqovEFGfFnCOQX6GTAKhAqOMIkazu6vr1hWs4",
+      "https://media.licdn.com/dms/image/C4E03AQHEAAi7196pRQ/profile-displayphoto-shrink_800_800/0/1643970697492?e=1680739200&v=beta&t=XQ3LmvbnO5HwxJDUj0SjpgSao9mNwRT4JTQLXcl0yoc",
       "https://www.linkedin.com/in/julien-lesage-90a9689b/"
     ],
     [
@@ -1194,7 +1194,7 @@
       "décarbonation;transport",
       "",
       "https://www.lejournaldesentreprises.com/region-sud/article/maca-flight-reve-de-competitions-de-voitures-volantes-1946529",
-      "https://media.licdn.com/dms/image/C4E03AQFTdsNX02IMEA/profile-displayphoto-shrink_400_400/0/1516203291620?e=1680739200&v=beta&t=04a0kCdXp6DUBOquYldhCj61PZx-ER5gKyh8ilMR6Hc",
+      "https://media.licdn.com/dms/image/C4E03AQFTdsNX02IMEA/profile-displayphoto-shrink_800_800/0/1516203291620?e=1680739200&v=beta&t=1Nknvdmxz2fVCkmqP4pKHSHI5eF1g3xed7_yubd3q40",
       "https://www.linkedin.com/in/chrispineau/"
     ],
     [
@@ -1213,7 +1213,7 @@
       "transport;décarbonation",
       "",
       "https://www.lejournaldesentreprises.com/region-sud/article/hynova-yachts-lance-la-production-en-serie-du-tout-premier-bateau-lhydrogene-au-monde-1923915",
-      "https://media.licdn.com/dms/image/D4E03AQFRWome3bvdpw/profile-displayphoto-shrink_400_400/0/1666094633252?e=1680739200&v=beta&t=WQcbjCHOSCKzMHlc3_eV8PmOtoCi8YxMy1wlfklFmBQ",
+      "https://media.licdn.com/dms/image/D4E03AQFRWome3bvdpw/profile-displayphoto-shrink_800_800/0/1666094633252?e=1680739200&v=beta&t=9m03nKwyE2kDK4XAb_hRsviGwHJVylNWAZTL16y2Wuk",
       "https://www.linkedin.com/in/chloezaied/"
     ],
     [
@@ -1232,7 +1232,7 @@
       "réemploi;B2B ",
       "",
       "https://www.lejournaldesentreprises.com/occitanie/breve/la-start-montpellieraine-scop3-leve-17-million-deuros-1908182",
-      "https://media.licdn.com/dms/image/C5103AQE5L9bwbkGhHA/profile-displayphoto-shrink_400_400/0/1516570613939?e=1680739200&v=beta&t=A84irQFi1doHgvkOGPb99Ckc_NRdOMLrOoam9aSLHx4",
+      "https://media.licdn.com/dms/image/C5103AQE5L9bwbkGhHA/profile-displayphoto-shrink_800_800/0/1516570613939?e=1680739200&v=beta&t=8KlRoHApCUhwZxmZv6AWWNxgLcnSYfQjKU6aSw8ezQ0",
       "https://www.linkedin.com/in/frederic-salles-26a22b52/"
     ],
     [
@@ -1251,7 +1251,7 @@
       "biotech",
       "",
       "https://www.lejournaldesentreprises.com/occitanie/breve/kyanos-biotechnologies-leve-26-millions-deuros-pour-augmenter-sa-production-de-microalgues-1826113",
-      "https://media.licdn.com/dms/image/C4E03AQHo1WT6L1vANw/profile-displayphoto-shrink_400_400/0/1602697901742?e=1680739200&v=beta&t=DTZFfS-YzyrWvItnAzcYp5ji3dS6POQs79Kh8uHfQSQ",
+      "https://media.licdn.com/dms/image/C4E03AQHo1WT6L1vANw/profile-displayphoto-shrink_800_800/0/1602697901742?e=1680739200&v=beta&t=6RkczTzknncnpdm7GOlXLdpp43paQpu8RYTrOSPv2iY",
       "https://www.linkedin.com/in/vinhly/"
     ],
     [
@@ -1270,7 +1270,7 @@
       "engrais naturels;agriculture",
       "",
       "https://www.lejournaldesentreprises.com/occitanie/article/micropep-technologies-seme-les-nouvelles-graines-de-son-developpement-1948000",
-      "https://media.licdn.com/dms/image/C5603AQHfnR13xLEgIA/profile-displayphoto-shrink_400_400/0/1603274321357?e=1680739200&v=beta&t=MXewoCVyUgj92e0ZyV_Z8MpTLfhNnHe7mZTyZU8kwR8",
+      "https://media.licdn.com/dms/image/C5603AQHfnR13xLEgIA/profile-displayphoto-shrink_800_800/0/1603274321357?e=1680739200&v=beta&t=axIEMo9xxDiDANwyMmgkVNTDhoxYeq0eWPb4UbDvjIE",
       "https://www.linkedin.com/in/thomas-laurent-92127418/"
     ],
     [
@@ -1289,7 +1289,7 @@
       " électrique;débarbonation;transport",
       "https://podcast.ausha.co/dirigeant-e-s-demain/des-velos-cargos-electriques-et-solaires-debarquent-dans-les-villes",
       "https://www.lejournaldesentreprises.com/maine-et-loire-sarthe/article/wello-lance-un-velo-cargo-dote-dun-caisson-frigorifique-2040264",
-      "https://media.licdn.com/dms/image/C5603AQFT6bk2WYz8Yg/profile-displayphoto-shrink_400_400/0/1517399015575?e=1680739200&v=beta&t=tBOBJVz7VzfMJg_EoumJbx827uVYGQXe9voKp8MDerE",
+      "https://media.licdn.com/dms/image/C5603AQFT6bk2WYz8Yg/profile-displayphoto-shrink_800_800/0/1517399015575?e=1680739200&v=beta&t=AgS0eYoRzBN9h_qgZ0meDTjX065chw07f3fsVboy8vk",
       "https://www.linkedin.com/in/arnaud-chereau-46a4b5158/"
     ],
     [
@@ -1308,7 +1308,7 @@
       "maritime",
       "",
       "https://www.lejournaldesentreprises.com/ille-et-vilaine/breve/sweetch-energy-leve-6-millions-deuros-pour-deployer-grande-echelle-lenergie-de-melange-2045583",
-      "https://media.licdn.com/dms/image/C5603AQGvcqpEqHEo3w/profile-displayphoto-shrink_400_400/0/1643638688861?e=1680739200&v=beta&t=_BwbjyVEpTmpQROKzczHoDlLVdUeGLlJqz8TKT2bfF0",
+      "https://media.licdn.com/dms/image/C5603AQGvcqpEqHEo3w/profile-displayphoto-shrink_800_800/0/1643638688861?e=1680739200&v=beta&t=MmflWRdKoGzbTBG09uSPdOFrKZy4hDM8mtDCszEW3SQ",
       "https://www.linkedin.com/in/nicolasheuze/"
     ],
     [
@@ -1327,7 +1327,7 @@
       "futur;agroalimentaire",
       "https://podcast.ausha.co/dirigeant-e-s-demain/le-boom-de-la-viande-vegetale",
       "https://www.lejournaldesentreprises.com/hauts-de-france/article/accro-debute-lindustrialisation-de-sa-viande-vegetale-2046785",
-      "https://media.licdn.com/dms/image/C4E03AQGCbhwuJ3Lomw/profile-displayphoto-shrink_400_400/0/1654521862290?e=1680739200&v=beta&t=Dn3nJIuVMAIJEMaETyuhy9XasO-avFwmFbEWc6ji9_M",
+      "https://media.licdn.com/dms/image/C4E03AQGCbhwuJ3Lomw/profile-displayphoto-shrink_800_800/0/1654521862290?e=1680739200&v=beta&t=Q58xjuj-3gXf266bKlQvvN9O-LY4_P44Y7uWUQEn7Cw",
       "https://www.linkedin.com/in/renaud-saisset-318a927b/"
     ],
     [
@@ -1346,7 +1346,7 @@
       "",
       "",
       "https://www.lejournaldesentreprises.com/hauts-de-france/article/lagritech-jungle-leve-42-millions-deuros-pour-agrandir-sa-ferme-verticale-1115695",
-      "https://media.licdn.com/dms/image/C4E03AQEjUG6wPQimbw/profile-displayphoto-shrink_400_400/0/1650383378010?e=1680739200&v=beta&t=H846s21hcRd9UmILZsptALRUY6N-UX25-V2kMQhFpZ4",
+      "https://media.licdn.com/dms/image/C4E03AQEjUG6wPQimbw/profile-displayphoto-shrink_800_800/0/1650383378010?e=1680739200&v=beta&t=vfwNeYgLCTtbOiIrXkI92EBgVaDnwjayEsnhO-BfFH4",
       "https://www.linkedin.com/in/nicolasseguy/ https://www.linkedin.com/in/gilles-dreyfus-a7a64021/"
     ],
     [
@@ -1365,7 +1365,7 @@
       "",
       "",
       "https://www.lejournaldesentreprises.com/nouvelle-aquitaine/article/flying-whales-leve-122-millions-deuros-pour-son-projet-de-dirigeables-2040808",
-      "https://media.licdn.com/dms/image/C4E03AQFwcK6JhBgwyw/profile-displayphoto-shrink_400_400/0/1547722001571?e=1680739200&v=beta&t=igIJKX5GRwRgt7a-alOVcvBqoryeiQWAc1QHoNs57Bs",
+      "https://media.licdn.com/dms/image/C4E03AQFwcK6JhBgwyw/profile-displayphoto-shrink_800_800/0/1547722001571?e=1680739200&v=beta&t=m5_6c21s986rNXZugkjA8AMe5sUpdbF0LjBtEzzunFs",
       "https://www.linkedin.com/in/sebastien-bougon-25bb6117/"
     ],
     [
@@ -1384,7 +1384,7 @@
       "relocalisation;photovoltaïque",
       "",
       "https://www.lejournaldesentreprises.com/auvergne-rhone-alpes/article/carbon-veut-relocaliser-la-production-de-panneaux-photovoltaiques-1879792",
-      "https://media.licdn.com/dms/image/D4E03AQFNR5k9530bxg/profile-displayphoto-shrink_400_400/0/1671874923039?e=1680739200&v=beta&t=aPpOwdMVHL_QFZxwSaNkDjvEez-XkZUCikgKKY2nUhc",
+      "https://media.licdn.com/dms/image/D4E03AQFNR5k9530bxg/profile-displayphoto-shrink_800_800/0/1671874923039?e=1680739200&v=beta&t=y493C_aYyQT2ygEIzPL255Ax2AVc3Rc-bv6alJMcTA8",
       "https://www.linkedin.com/in/pierre-emmanuel-martin-06054955/"
     ],
     [
@@ -1403,7 +1403,7 @@
       "aéronautique;décarbonation;transport;aérien",
       "",
       "https://www.lejournaldesentreprises.com/auvergne-rhone-alpes/article/eenuee-la-start-qui-veut-faire-redecoller-laeroport-de-saint-etienne-loire-1803228",
-      "https://media.licdn.com/dms/image/C4E03AQGJu-6HNuOlvw/profile-displayphoto-shrink_400_400/0/1650949865017?e=1680739200&v=beta&t=1ufydg7oQ9cs4hyKyjcmGSYerEcMoJ2uQnFD_LHa50A",
+      "https://media.licdn.com/dms/image/C4E03AQGJu-6HNuOlvw/profile-displayphoto-shrink_800_800/0/1650949865017?e=1680739200&v=beta&t=wVFre3jRq3et773yu-pEsHvxUXvuLQ_3ck7j8Evk5b8",
       "https://www.linkedin.com/in/erick-herzberger-698a13a5/"
     ],
     [
@@ -1422,7 +1422,7 @@
       "logistique",
       "",
       "https://www.lejournaldesentreprises.com/nouvelle-aquitaine/article/rediv-accelere-dans-les-vetements-de-seconde-main-en-levant-12-millions-deuros-2040707?auHash=uSPKgzL802fw5vop7tSVtXuT9PYFhhDbSpF_7U449bw",
-      "https://media.licdn.com/dms/image/D4E35AQH6xdBKAdLG7Q/profile-framedphoto-shrink_400_400/0/1672423942116?e=1675782000&v=beta&t=7KdbAnHnQajkt52Ni9iDyU-4MMb2I0MhdNXhcMlNtxQ",
+      "https://media.licdn.com/dms/image/D4E35AQH6xdBKAdLG7Q/profile-framedphoto-shrink_800_800/0/1672423942116?e=1676138400&v=beta&t=V0doP_E8GXKc8rZfoIkPY7J1I-yeUunVDRHMCCDF9JE",
       "https://www.linkedin.com/in/eric-gagnaire-91816a39/"
     ],
     [
@@ -1441,7 +1441,7 @@
       "décarbonation;chimie",
       "",
       "https://www.lejournaldesentreprises.com/nouvelle-aquitaine/article/dioxycle-veut-recycler-le-dioxyde-de-carbone-des-industriels-2039389?auHash=CUttSIA2263EPpFCqKb4KQS23o0iteJkHQP-Lw8iGzM",
-      "https://media.licdn.com/dms/image/D4E35AQFevDxNrkxIEg/profile-framedphoto-shrink_400_400/0/1673814963060?e=1675782000&v=beta&t=8568hzm3WiN2B9ZUTTRJVF7WbhDdlChNFVQn3tf99Hg",
+      "https://media.licdn.com/dms/image/D4E35AQFevDxNrkxIEg/profile-framedphoto-shrink_800_800/0/1673814963060?e=1676156400&v=beta&t=s_SNdg4pQflTQ2eE9-ZSOnHjCjD8g5RZpzMrG9sUANo",
       "https://www.linkedin.com/in/sarah-lamaison-phd-96594068/ https://www.linkedin.com/in/david-wakerley-phd-18b92825/"
     ],
     [
@@ -1460,7 +1460,7 @@
       "électrique",
       "",
       "https://www.lejournaldesentreprises.com/nouvelle-aquitaine/article/gouach-leve-33-millions-deuros-pour-la-commercialisation-de-ses-batteries-reparables-1843498?auHash=vXX4X2VXN0619suRrwVUiITH3qaGktvcxxNl8YPKZBY",
-      "https://media.licdn.com/dms/image/C5603AQEOzX1prlhM3Q/profile-displayphoto-shrink_400_400/0/1577355549640?e=1680739200&v=beta&t=6gBkiVBJ8_CV1-3ch2cQR8Nja2KK3voBulMIbYH-0VQ",
+      "https://media.licdn.com/dms/image/C5603AQEOzX1prlhM3Q/profile-displayphoto-shrink_800_800/0/1577355549640?e=1680739200&v=beta&t=FprbajVUWWk1YqM9gJHNuPUBPKWKPRRnZVJ5ItbZuTo",
       "https://www.linkedin.com/in/vallettea/"
     ],
     [
@@ -1479,7 +1479,7 @@
       "ingénierie",
       "",
       "https://www.lejournaldesentreprises.com/region-sud/breve/seanergy-boucle-sa-premiere-levee-de-fonds-pour-dessaler-leau-de-mer-2046946",
-      "https://media.licdn.com/dms/image/D4E03AQFpPnjuwG-L6w/profile-displayphoto-shrink_400_400/0/1669762805822?e=1680739200&v=beta&t=BhKwcrLmtvhA7Guwt9yqnwiWiAv7f3Qualt2cKqL7D0",
+      "https://media.licdn.com/dms/image/D4E03AQFpPnjuwG-L6w/profile-displayphoto-shrink_800_800/0/1669762805822?e=1680739200&v=beta&t=V3U5npIpVJD-yGq1JYv6rAB6UArkYmM8QXKp4bMgB5Y",
       "https://www.linkedin.com/in/hubertmontcoudiol/ https://www.linkedin.com/in/herv%C3%A9-de-lanversin-62aa67/"
     ],
     [
@@ -1517,7 +1517,7 @@
       "",
       "",
       "https://www.lejournaldesentreprises.com/occitanie/article/cozynergy-se-deploie-dans-les-banques-regionales-du-groupe-bpce-2046105",
-      "https://media.licdn.com/dms/image/C4D03AQG3DzFVknFX_g/profile-displayphoto-shrink_400_400/0/1517222937523?e=1680739200&v=beta&t=LyCzFkVS5maRsx0cD5VpzGwo11Hzlq4urndJLGYAr_c",
+      "https://media.licdn.com/dms/image/C4D03AQG3DzFVknFX_g/profile-displayphoto-shrink_800_800/0/1517222937523?e=1680739200&v=beta&t=iK3OxYuF8i0DSqNfaJBi9J3GxaVI4oE0YGr-GKXPccY",
       "https://www.linkedin.com/in/nicolas-durand-a045a924/"
     ],
     [
