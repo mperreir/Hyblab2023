@@ -30,6 +30,14 @@ map.addLayer(layer);
  * @returns {*} The marker icon
  */
 function createIcon(p) {
+    // The error comes from here because "énergie" is not a valid variable name
+    if (!selectedTopics.includes(translate(p.Topic))) {
+        return L.icon({
+            iconUrl: '../img/pictogrammes_carte/point_inactif.svg',
+            iconSize: [26, 26],
+            iconAnchor: [13, 13]
+        });
+    }
     switch (p.Topic) {
         case 'énergie':
             return L.icon({
@@ -67,7 +75,6 @@ function createIcon(p) {
                 iconSize: [26, 26],
                 iconAnchor: [13, 13]
             });
-
     }
 }
 
@@ -99,28 +106,11 @@ let geographicalProfiles = [];
  * Get the profiles from the API
  * @returns {Promise<any>} The profiles as a JSON object
  */
-async function getProfiles(apiTopicParameters) {
+async function getProfiles() {
     // Fetch the data from the API
-    const response = await fetch("/pionniers/api/map/topics/" + apiTopicParameters + "keyword/");
+    const response = await fetch("/pionniers/api/map/topics/true/true/true/true/true/true/keyword/");
     // Parse the response as JSON and return it
     return await response.json();
-}
-
-
-/**
- * Generate the API parameters string from the selected topics
- * @param topics {string[]} List of selected topics
- * @returns {string} API parameters string
- */
-function generateApiParameters(topics) {
-    const topic = ["alimentation", "economie_circulaire", "energie", "industrie", "mobilite", "numerique"]
-    let parameterString = "";
-    // For each topic, add "true" if the topic is selected, "false" otherwise
-    for(let i = 0; i < 6; i++) {
-        parameterString += topics.includes(topic[i]) ? "true" : "false";
-        parameterString += "/";
-    }
-    return parameterString;
 }
 
 
@@ -147,7 +137,7 @@ function onCheck(event) {
         }
     }
 
-    getProfiles(generateApiParameters(selectedTopics)).then(r => {
+    getProfiles().then(r => {
         // Markers of previous geographical profiles removal
         geographicalProfiles.forEach(gp => {
             gp.marker.remove();
@@ -168,3 +158,28 @@ document.addEventListener("DOMContentLoaded", function () {
         tc.addEventListener('click', onCheck)
     );
 });
+
+/*
+  ----------------------------------------------------------------------------------------------------------------------
+  | Topic translation                                                                                                  |
+  ----------------------------------------------------------------------------------------------------------------------
+ */
+/**
+ * Translate the topic from French to English (To support both database name and img alt attribute)
+ * @param topic The topic to translate
+ * @returns {string} The translated topic
+ */
+function translate(topic) {
+    switch (topic) {
+        case 'économie circulaire' :
+            return 'economie_circulaire';
+        case 'énergie' :
+            return 'energie';
+        case 'mobilité' :
+            return 'mobilite';
+        case 'numérique' :
+            return 'numerique';
+        default:
+            return topic;
+    }
+}
