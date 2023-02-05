@@ -18,9 +18,7 @@ swiper.on("slideChange", function () {
       initSlideAccueil();
       break;
     case 1:
-      //swiper.enabled= false;
-      //swiper.disable()
-      initSlideQuestion();
+      initSlideQuestion(currentZoneNumber);
       break;
     case 2 :
       initSlideAnimationHaut();
