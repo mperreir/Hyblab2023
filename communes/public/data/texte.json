@@ -1,17 +1,51 @@
 {
-  "introduction": {
-
-  },
   "conclusion": {
     "titre" : "Ton bilan !",
     "texte1" : "Au niveau national et européen, nous nous sommes fixés des objectifs qui permettront une amélioration de notre santé et de notre impact sur la planète.",
     "texte2" : "Voici nos objectifs pour 2030 !",
-    "logo" : "../img/mer.svg",
+    "logo" : "../img/logo.svg",
     "bouton" : "Retour à l’accueil",
     "color": {
       "main": ["#59A78D", "#A04952"],
       "background": ["#D9D9D9", "#F6F6F6"]
     },
+    "credits": {
+      "titre": "Crédits",
+      "membres": [{
+        "nom": "Le Gall",
+        "prenom": "Tristan",
+        "ecole": "Polytech Nantes"
+      },{
+        "nom": "Blot",
+        "prenom": "William",
+        "ecole": "Polytech Nantes"
+      },{
+        "nom": "Daudin",
+        "prenom": "Clément",
+        "ecole": "Polytech Nantes"
+      },{
+        "nom": "Sakellariou",
+        "prenom": "Dimitra",
+        "ecole": "Polytech Nantes"
+      },{
+        "nom": "Gasnier",
+        "prenom": "Simon",
+        "ecole": "AGR"
+      },{
+        "nom": "Le Sommer",
+        "prenom": "Adam",
+        "ecole": "AGR"
+      },{
+        "nom": "Nicol",
+        "prenom": "Marie",
+        "ecole": "AGR"
+      },{
+        "nom": "Segura",
+        "prenom": "Léo",
+        "ecole": "EPJT"
+      }]
+    },
+
     "piechart": {
       "description": "Part d’énergie renouvelable dans le mix énergétique en France",
       "data": [

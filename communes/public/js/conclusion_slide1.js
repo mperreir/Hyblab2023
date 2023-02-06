@@ -61,7 +61,25 @@ const initSlide1 = async function(){
         .style("fill", "#FFFFFF")
         .text(Math.round(score*100) + "%");
   }
+
+  function credit(data) {
+    const credit = document.querySelectorAll('.credit-titre');
+    for (let i = 0; i < credit.length; i++) {
+      credit[i].innerHTML = data.credits.titre.toUpperCase();
+      credit[i].style.backgroundColor = data.color.main[0];
+    }
+
+    const credit_text = document.querySelector('#fourth-slide main');
+    for (let i = 0; i < data.credits.membres.length; i++) {
+      const p = document.createElement('p');
+      let member = data.credits.membres[i];
+      p.innerHTML = member.prenom + ' ' + member.nom.toUpperCase() + ' - ' + member.ecole;
+      credit_text.appendChild(p);
+    }
+  }
+
   mise_en_forme(data.conclusion);
+  credit(data.conclusion);
   initSlide2(data.conclusion);
   initSlide3(data.conclusion);
 };
