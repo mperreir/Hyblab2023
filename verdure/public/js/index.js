@@ -35,14 +35,14 @@ swiper.on("slideChange", function () {
       swiper.disable();
       initSlideQuestion2(next_Question);
       }
-      else(swiper.slideTo(7))
+      else(swiper.slideTo(7,1))
       break;
     case 6: 
     if(next_Question == 3){
       swiper.disable();
       initSlideQuestion3(next_Question);
       }
-      else(swiper.slideTo(7))
+      else(swiper.slideTo(7,1))
       break;
     case 7: 
       initSlideAnimationEntree();
@@ -56,7 +56,7 @@ swiper.on("slideChange", function () {
       swiper.disable();
       initSlideQuestion4(next_Question);
       }
-      else(swiper.slideTo(12))
+      else(swiper.slideTo(12,1))
       break;
 
     case 10: 
@@ -64,7 +64,7 @@ swiper.on("slideChange", function () {
       swiper.disable();
       initSlideQuestion5(next_Question);
       }
-      else(swiper.slideTo(11))
+      else(swiper.slideTo(11,1))
       break;
 
     case 11: 
@@ -72,7 +72,7 @@ swiper.on("slideChange", function () {
       swiper.disable();
       initSlideQuestion6(next_Question);
       }
-      else(swiper.slideTo(12))
+      else(swiper.slideTo(12,1))
       break;
 
     //case 12: 
@@ -88,7 +88,7 @@ swiper.on("slideChange", function () {
       swiper.disable();
       initSlideQuestion7(next_Question);
       }
-      else(swiper.slideTo(14))
+      else(swiper.slideTo(14,1))
     break;
 
     case 14: 

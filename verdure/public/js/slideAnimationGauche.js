@@ -38,4 +38,9 @@ const initSlideAnimationGauche = function(){
     direction: 'normal',
     duration :2000,
   })
+
+  setTimeout(()=> {
+    swiper.enable()
+    swiper.slideTo(13,1)
+ },5000)
 };
