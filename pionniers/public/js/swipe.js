@@ -276,19 +276,38 @@ const getNewPos = function (current, active) {
 
 swiperSection.addEventListener('click', function (event) {
     let newActive;
-    const wWidth = window.innerWidth;
-    const xClick = event.clientX;
-    const clicADroite = xClick > (wWidth / 2);
+    let target = event.target;
 
-    if(clicADroite) {
-        newActive = carouselList.querySelector('.carousel-item[data-pos="1"]');
-    } else {
-        newActive = carouselList.querySelector('.carousel-item[data-pos="-1"]');
+    // Le click est possible si la target est la section d'ID swiper,
+    // c-a-d dans la zone à droite ou a gauche de la fiche mise en avant
+    let clickPossible = target.tagName === "SECTION" && target.getAttribute('id') === "swiper";
+    // Dans le cas où la target ne se place pas dans ce cas-là,
+    // il faut vérifier que la fiche correspondante n'est pas celle à la position 0
+    if(!clickPossible) {    // On remonte jusqu'au parent <li> pour accéder à data-pos
+        while(target.tagName !== "LI") {
+            target = target.parentNode;
+        }
+        if(target.dataset.pos !== '0') {
+            clickPossible = true;
+        }
     }
 
-    update(newActive);
+    if(clickPossible) {
+        const wWidth = window.innerWidth;
+        const xClick = event.clientX;
+        const clicADroite = xClick > (wWidth / 2);
 
-    ajouterNouvelleFiche(clicADroite);
+
+        if (clicADroite) {
+            newActive = carouselList.querySelector('.carousel-item[data-pos="1"]');
+        } else {
+            newActive = carouselList.querySelector('.carousel-item[data-pos="-1"]');
+        }
+
+        update(newActive);
+
+        ajouterNouvelleFiche(clicADroite);
+    }
 });
 
 // -----------------------------------------------------
