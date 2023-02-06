@@ -18,12 +18,12 @@ body {
 
 .swiper-slide {
     text-align: center;
-    font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
+
 
 #oiseaux-nicheurs {
     background-image: url("../img/oiseaux-nicheurs.jpg");
@@ -67,15 +67,10 @@ body {
 }
 
 .swiper-slide .commune {
+    position: absolute;
     color: white;
     margin-top: -80%;
-    font-size: 3vh;
-}
-
-.swiper-slide h1 {
-    position: absolute;
-    margin-top: -65%;
-    font-size: 2.5vh;
+    font-size: 4vh;
 }
 
 .swiper {
@@ -95,9 +90,9 @@ body {
     transition-duration: 0.4s;
     cursor: pointer;
     margin-top: 70%;
-    border-radius: 40px;
-    width: 70%;
-    height: 5%
+    border-radius: 60px;
+    width: 80%;
+    height: 7%
 }
 
 .button {
@@ -107,14 +102,21 @@ body {
 }
 
 .decouvrir {
-    font-family: Prompt, Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 2.7vh;
+    font-family: 'Prompt', sans-serif;
+    font-size: 2.5vh;
     margin: auto;
 }
 
 .button:hover {
     background-color: #0B6E5F;
     color: white;
+}
+
+.groupe {
+    position: absolute;
+    font-size: 2vh;
+    color: #0B6E5F;
+    margin-top: 65vh;
 }
 
 .swiper-pagination-bullet {
