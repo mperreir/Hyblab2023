@@ -45,18 +45,29 @@ body{
     width: 20%
 }
 
-#SoliExTex {
+#SoliExTex2 {
+    padding-left: 20px;
     text-align: center;
     width: 70%;
-    margin-top: 5%;
+    bottom: 20%;
+    position: relative;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    
+}
 
-
+#SoliExTex {
+    text-align: center;
+    width: 70%;
+    bottom: 20%;
+    position: relative;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
 
 }
 
@@ -165,6 +176,21 @@ header{
     position:static;
 }
 
+.commentaire-soli2 {
+    max-width: 90%;
+    right: 7%;
+}
+
+.commentaire-soli2 p {
+    max-width: 75%;
+    display: inline-block;
+    font-size: 1.9vw;
+}
+
+.commentaire-soli2 img {
+    max-width: 20%;
+}
+
 .commentaire-soli p {
     max-width: 75%;
     display: inline-block;
@@ -182,10 +208,12 @@ header{
 }
 
 #ligne{
-    width: 90%;
+    width: 100%;
 }
 
-
+#bulle-question {
+    height: 8vw;
+}
 
 #colonne2 {
     width: 45%;
@@ -197,11 +225,20 @@ header{
 }
 
 .choix-texte {
-    font-size: 3vw;
+    font-size: 20px; /* vw pour tous les ecran ? 3vw */
 }
 
 .choix-texte2{
-    font-size: 2vw;
+    font-size: 2vw;  /* 2vw */
+    line-height: 20px;
+    box-sizing: border-box;
+    padding : 1vw;
+    border: 0.75px solid rgba(0, 0, 0, 0.35);
+    border-radius: 8px;
+}
+
+#img-ques {
+    padding-bottom: 10%;
 }
 
 #choix-ombre {
