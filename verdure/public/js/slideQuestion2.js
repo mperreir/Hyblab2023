@@ -13,9 +13,7 @@ const initSlideQuestion2 = async function(currentQuestion){
 
   setTimeout(()=> {
    question.style.opacity = 100;
-   page.style.backgroundPositionY = "-10vh";
    city.style.top = "20%";
-   swiper.enabled = false;
 },1000
  )
 

@@ -66,7 +66,7 @@ const prompts = {
                 "explanation": "En voilà une idée! Préparer le sol pour planter correctement les arbres… \"Un arbre planté dans un sol tassé, pavé, sans place suffisante pour ses racines pousse deux fois moins vite, a moitié moins de feuilles et évapore quatre fois moins\", explique à BFMTV.com Marjorie Musy, directrice de recherche au Centre d'études et d'expertise sur les risques, l'environnement, la mobilité et l'aménagement.</br>"+
                     "Il serait donc judicieux de rendre le sol de nouveau perméable, même si sa composition n’est pas toujours adaptée à la croissance des arbres…</br>" +
                     "Et alors que dire des places de parkings supprimées? Coups de klaxons assurés!",
-                "temperature": 1,
+                "temperature": 0,
                 "happiness": -2,
                 "money": -2,
                 "nextQuestion": 3,
@@ -113,7 +113,7 @@ const prompts = {
                     "happiness": 1,
                     "money": -2,
                     "nextQuestion": 5,
-                    "image": null
+                    "image": "place1"
                 },
                     {
                         "prompt": "NE PAS faire renaître la rivière",
@@ -123,8 +123,8 @@ const prompts = {
                         "temperature": 2,
                         "happiness": 0,
                         "money": 2,
-                        "nextQuestion": 5,
-                        "image": null
+                        "nextQuestion": 6,
+                        "image": "place"
                     }]
             },
             5: {
@@ -139,8 +139,8 @@ const prompts = {
                     "temperature": -1,
                     "happiness": 1,
                     "money": 2,
-                    "nextQuestion": 6,
-                    "image": null
+                    "nextQuestion": 7,
+                    "image": "place4"
                 },
                     {
                         "prompt": "Des arbres",
@@ -151,11 +151,39 @@ const prompts = {
                         "temperature": -2,
                         "happiness": 2,
                         "money": -2,
-                        "nextQuestion": 6,
-                        "image": null
+                        "nextQuestion": 7,
+                        "image": "place5"
                     }]
             },
             6: {
+                "question": "Que voulez-vous planter ?",
+                "choices": [{
+                    "prompt": "De l'herbe",
+                    "positive": "POSITIF</br>- L'herbe permet de diminuer la température</br>- Une bonne alternative aux arbres",
+                    "negative": "NEGATIF</br>- Les gens marchent dessus",
+                    "explanation": "Ramener la nature en ville : c’est une solution pour diminuer la température dans les centres urbains. Planter de l’herbe peut-être une solution. Simple constat : en cas de forte chaleur, une surface bitumée sera 15°C plus chaude qu’une étendue de gazon. Il y a donc un véritable avantage à semer de l’herbe. D’autant plus qu’un tel tapis vert sera apprécié par la population pour les soirées d’été, les sorties des enfants ou la promenade des animaux de compagnie.</br>" +
+                        "À noter que cette utilisation par les habitants peut avoir des conséquences sur l’efficacité du gazon. On parle de ligne de désir. C’est le phénomène par lequel les humains dessinent eux-mêmes leurs passages, en contournant les aménagements bien en place. Conséquence : cela abîme le gazon et diminue son efficacité.</br>" +
+                        "Déjà, vous avez retenu que, pour planter des arbres, il faut prendre en compte le sous-sol. Avec le gazon, cette problématique est moindre.",
+                    "temperature": -1,
+                    "happiness": 1,
+                    "money": 2,
+                    "nextQuestion": 7,
+                    "image": "place3"
+                },
+                    {
+                        "prompt": "Des arbres",
+                        "positive": "POSITIF</br>- Effets importants sur la température</br>- Réduit le phénomène d'îlot de chaleur",
+                        "negative": "NEGATIF</br>- Aménagement long</br>- Coûteux</br>- Nombreuses contraintes",
+                        "explanation": "En voilà une bonne idée ! Transformer la place principale de la ville en un endroit arboré, ombragé. Mais avez-vous pensé au sous-sol ? C’est surement l’endroit le plus délicat pour les racines : tuyaux, réseaux. Qui vous dit qu’il n’y a pas un parking ou une ligne de métro sous cet endroit ? Vous allez nous dire : et si on les plantait dans des pots. Pas de bol, c’est une fausse bonne idée. À l’étroit dans des bacs, les racines ne vont pas pouvoir s’étendre, la croissance de l’arbre va être moindre, et ses effets sur la chaleur seront moins efficaces.</br>" +
+                            "En attendant, l’aménagement est possible, mais il est long à mettre en place, et couteux.",
+                        "temperature": -2,
+                        "happiness": 2,
+                        "money": -2,
+                        "nextQuestion": 7,
+                        "image": "place2"
+                    }]
+            },
+            7: {
                 "question": "Que voulez-vous faire avec cette friche ?",
                 "choices": [{
                     "prompt": "Créer un potager partagé",
@@ -166,8 +194,8 @@ const prompts = {
                     "temperature": -1,
                     "happiness": 1,
                     "money": 1,
-                    "nextQuestion": null,
-                    "image": null
+                    "nextQuestion": 10,
+                    "image": "friche1"
                 },
                     {
                         "prompt": "Construire des bureaux",
@@ -178,8 +206,8 @@ const prompts = {
                         "temperature": 1,
                         "happiness": -1,
                         "money": 2,
-                        "nextQuestion": null,
-                        "image": null
+                        "nextQuestion": 10,
+                        "image": "friche2"
                     },
                     {
                         "prompt": "Créer une forêt",
@@ -191,8 +219,8 @@ const prompts = {
                         "temperature": -2,
                         "happiness": 1,
                         "money": -1,
-                        "nextQuestion": null,
-                        "image": null
+                        "nextQuestion": 10,
+                        "image": "friche3"
                     }]
             }
         }

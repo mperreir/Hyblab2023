@@ -14,7 +14,6 @@ const initSlideQuestion1 = async function(currentQuestion){
   setTimeout(()=> {
    question.style.opacity = 100;
    city.style.top = "20%";
-   swiper.enabled = false;
 },1000
  )
 

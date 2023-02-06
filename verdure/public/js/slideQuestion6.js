@@ -3,7 +3,7 @@
 // async init function (because of the awaits on fetches)
 const initSlideQuestion6 = async function(currentQuestion){
 
-  if(currentQuestion != 6){swiper.enable(); swiper.slideTo(7)}
+  if(currentQuestion != 6){swiper.enable(); swiper.slideTo(12)}
 
   const page = document.getElementById(currentQuestion)
   let question = document.querySelector('.question-footer'+currentQuestion)
@@ -13,9 +13,7 @@ const initSlideQuestion6 = async function(currentQuestion){
 
   setTimeout(()=> {
    question.style.opacity = 100;
-   page.style.backgroundPositionY = "-10vh";
    city.style.top = "20%";
-   swiper.enabled = false;
 },1000
  )
 

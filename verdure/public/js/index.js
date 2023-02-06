@@ -31,22 +31,70 @@ swiper.on("slideChange", function () {
       initSlideAnimationDroit();
       break;
     case 5: 
+      if(next_Question == 2){
       swiper.disable();
       initSlideQuestion2(next_Question);
+      }
+      else(swiper.slideTo(7))
       break;
     case 6: 
+    if(next_Question == 3){
       swiper.disable();
       initSlideQuestion3(next_Question);
+      }
+      else(swiper.slideTo(7))
       break;
     case 7: 
       initSlideAnimationEntree();
       break;
     case 8: 
       initSlideAnimationBas();
-    break;
-    case 9: 
-      initEndSlide();
       break;
+
+    case 9: 
+      if(next_Question == 4){
+      swiper.disable();
+      initSlideQuestion4(next_Question);
+      }
+      else(swiper.slideTo(12))
+      break;
+
+    case 10: 
+    if(next_Question == 5){
+      swiper.disable();
+      initSlideQuestion5(next_Question);
+      }
+      else(swiper.slideTo(11))
+      break;
+
+    case 11: 
+    if(next_Question == 6){
+      swiper.disable();
+      initSlideQuestion6(next_Question);
+      }
+      else(swiper.slideTo(12))
+      break;
+
+    //case 12: 
+      // initSlideAnimationEntree();
+    //break;
+
+    case 12: 
+        initSlideAnimationGauche();
+    break;
+
+    case 13: 
+    if(next_Question == 7){
+      swiper.disable();
+      initSlideQuestion7(next_Question);
+      }
+      else(swiper.slideTo(14))
+    break;
+
+    case 14: 
+      initEndSlide();
+    break;
+
     default:
       initSlideFin();
       break;
