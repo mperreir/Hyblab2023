@@ -68,7 +68,7 @@ async function getAllTaxon() {
         // check if the animalName as , in it
         if (animalName.includes(',')) {
             // apply allTaxon[animalName] = await getTaxon(taxon); to each animalName
-            const animalNames = animalName.split(',');
+            const animalNames = animalName.split(', ');
             for (let j = 0; j < animalNames.length; j++) {
                 allTaxon[animalNames[j]] = await getTaxon(taxon);
             }
