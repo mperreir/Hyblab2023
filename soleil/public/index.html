@@ -33,8 +33,8 @@
           <h1 id="titre">Welcome</h1>
         </header>
         <div>
-          <div><p>“OBJECTIF SOLEIL
-            Le défi citoyen pour développer l’énergie solaire autour de chez vous”
+          <div><p id="objsol">“OBJECTIF SOLEIL</p>
+            <p>Le défi citoyen pour développer l’énergie solaire autour de chez vous”
           </p></div>
 
           <div class="conteneur">
@@ -46,7 +46,7 @@
           </div>
         </div>
         <footer>
-          <button>Commencer</button>
+          <button id = "testB">Commencer</button>
         </footer>
       </section>
 
@@ -57,14 +57,16 @@
           <p class="intitulé">Où habitez-vous ?</p>
         </header>
         <section class="main-location-page">
-          <img class="illustration" src="hyblab_2023.jpg">
-          <div class="commentaire-soli">
-            <img src="hyblab_2023.jpg">
-            <p>“ Ne tombez pas dans le panneau,
+          <img class="illustrationAdresse" src="img/SoliAdresse.png">
+          <img class="illustrationAdresse" src="img/FondAdresse.png">
+          <div id ="SoliExImg" >
+            <img src="img/SoliExplication.png">
+          </div>
+          <div id="SoliExTex">“ Ne tombez pas dans le panneau,
               la solution n’est pas forcément sur
               votre toit. Pour obtenir la mission
               la plus pertinente, j’ai besoin de
-              votre adresse. ”</p>
+              votre adresse. ”
           </div>
           <div class="location-input">
             <input type="text" placeholder="Renseignez votre adresse">
@@ -83,32 +85,37 @@
           </p>
         </header>
         <div id="ligne">
-          <section id="image">
-            image
-          </section>
           <section id="ligne">
             <div id="colonne2">
               <p>Maison</p>
-              <img id="choix-log" src="hyblab_2023.jpg"/>
+              <img src="img/Maison.png"/>
             </div>
             <div id="colonne2">
               <p>Immeuble</p>
-              <img id="choix-log" src="hyblab_2023.jpg"/>
+              <img src="img/Immeuble.png"/>
             </div>
           </section>
           <section id="ligne">
             <div id="colonne2">
               <p>Propiétaire</p>
-              <img id="choix-log" src="hyblab_2023.jpg"/>
+              <img src="img/Propri.png"/>
             </div>
             <div id="colonne2">
               <p>Locataire</p>
-              <img id="choix-log" src="hyblab_2023.jpg"/>
+              <img src="img/Locataire.png"/>
+            </div>
+          </section>
+          <section>
+            <div id="SoliExImg">
+              <img src="img/SoliExplication.png"/>
+            </div>
+            <div id="SoliExTex">
+              “Pas besoin d’être propriétaire ou d’avoir une maison pour agir en faveur de l’énergie photovoltaïque ! ”
             </div>
           </section>
         </div>
         <div id="jauge">
-          <img id="Soli1" src="hyblab_2023.jpg"/>
+          <img id="Soli1" src="img/SoliJauge.png"/>
           
 
 
@@ -131,7 +138,7 @@
         <section>
           <div>
             <section id="image">
-              image
+              <img src="img/ChoixMaison.png">
             </section>
             <section>
               <form>
@@ -160,7 +167,7 @@
             </section>
           </div>
           <div id="jauge">
-            <img id="Soli2" src="hyblab_2023.jpg"/>
+            <img id="Soli2" src="img/SoliJauge.png"/>
           </div>
         </section>
         <footer>
@@ -168,12 +175,19 @@
         </footer>
 
       </section>
+
+
       <section id="orientation" class="swiper-slide">
         <header>
           <button class="retour">retour</button>
-          <h1>Comment votre toit est-il orienté</h1></header>
-        <div><img class="house" src="hyblab_2023.jpg" /></div>
-        <div><img src="hyblab_2023.jpg"></div>
+          <h1>Comment votre toit est-il orienté</h1>
+        </header>
+        <section id="image2" >
+          <img src="img/MaisonCampagne.png">
+        </section>
+        <section id="image2" >
+          <img src="hyblab_2023.jpg">
+        </section>
         <footer><button>Valider</button></footer>
 
 
@@ -209,7 +223,7 @@
             </div>
           </div>
           <div id="jauge">
-            <img id="Soli4" src="hyblab_2023.jpg"/>
+            <img id="Soli4" src="img/SoliJauge.png"/>
           </div>
         </section>
         <footer><button>Valider</button></footer>
@@ -219,7 +233,7 @@
           <button class="retour">retour</button>
           Autres questions
         </header>
-        <div id = "ligne">
+        <div id = "ligne2">
           <section id="image">
             Image
           </section>
@@ -249,7 +263,7 @@
           </section>
         </div>
         <div id="jauge">
-          <img id="Soli5" src="hyblab_2023.jpg"/>
+          <img id="Soli5" src="img/SoliJauge.png"/>
         </div>
         <footer><button>Valider</button></footer>
       </section>

@@ -28,13 +28,40 @@ body{
 #image{
     width : 85%;
     height : 300px;
+    margin :auto
+}
 
+#image2{
+    width : 85%;
+    height : 25%;
+    margin :auto
 }
 
 #choix-log{
     width : 24%;
     height: 12%;
 }
+
+#SoliExImg {
+    text-align: center;
+    width: 20%
+}
+
+#SoliExTex {
+    text-align: center;
+    width: 70%;
+    margin-top: 5%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    
+
+
+
+}
+
 
 #Soli1{
     width : 40px;
@@ -119,6 +146,26 @@ div {
 header{
     margin-top: 20px;
 }
+
+#objsol {
+    font-family: 'Boris';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 26px;
+    text-align: center;
+}
+
+
+#testB {
+
+    width: 146px;
+    height: 30px;
+    background: #9185BE;
+    border-radius: 8px;
+}
+
+
 
 .commentaire-soli {
     max-width: 90%;
@@ -425,6 +472,14 @@ body{
 .valider{
     bottom: 20%;
 }
+
+.illustrationAdresse{
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    margin: auto;
+}
+
 
 .illustration{
     max-width: 100%;
