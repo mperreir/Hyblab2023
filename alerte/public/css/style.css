@@ -64,16 +64,12 @@ header {
     justify-content: center;
 }
 
-#content_main {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
 
-#s0{
+
+#s0 {
     padding: 50px;
 }
 
-#content_main img,
 header img,
 footer button,
 #content_main {
@@ -81,14 +77,25 @@ footer button,
     height: 100%;
 }
 
-footer>button {
+#next0 {
     background-image: url('../img/main_button.svg');
+}
+
+#next2 {
+    background-image: url('../img/start_button.svg');
+    height: 50px;
+    width: 100%;
+
+    margin-top: 25px;
+}
+
+.next-btn {
     background-position: center center;
     background-size: cover;
-
     max-height: 50px;
     border-radius: 25px;
 }
+
 
 #networks {
     display: flex;
@@ -194,58 +201,31 @@ main>section {
     left: 0;
 }
 
-.bubble{
-    width:100%;
-    height:100%;
-    border:3px solid white;
+.bubble {
     position: relative;
-    border-radius: 12px;
-    padding: 10px;
-    max-height: 300px;
+    text-align: center;
+    color: white;
 }
 
-.bubble::after {
-    content: "";
-    border: 20px solid transparent;
- 
-    /* (B1-2) NECESSARY TO POSITION THE "TAIL" */
-    position: absolute;
+.bubble img {
+    height: 100%;
+    width: 100%;
 }
-.bottom.bubble::after{
-    border-top-color: white;
-    border-bottom: 0;
-    
-    /* (B2-2) POSITION AT BOTTOM */
-    bottom: -20px; left: 50%;
-    margin-left: -20px;
-}
-
-.top.bubble::after {
-    /* (C1-1) UP TRIANGLE */
-    border-bottom-color: white;
-    border-top: 0;
-   
-    /* (C1-2) POSITION AT TOP */
-    top: -20px; left: 50%;
-    margin-left: -20px;
-}
-
-.half.bubble::after {
-    border-right-color: white;
-    border-bottom: 0;
-    top: -20px; left: 60%;
-} 
 
 .scroll {
+    /* peut-être changer pour swiper */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: block;
     padding: 5px;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 80%;
     overflow-y: scroll;
     text-align: justify;
     font-family: arial, sans-serif;
     font-size: 0.2em;
-    
 }
 
 
