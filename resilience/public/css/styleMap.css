@@ -234,6 +234,7 @@ body{
     width: 10%;
 }
 
+<<<<<<< HEAD
 #heure {
     font-size: 3vw;
     text-shadow: 1px 1px 1px #000;
@@ -246,4 +247,16 @@ body{
     justify-content: center;
     align-self: center;
     width: 100%;
+=======
+#map{
+    left: 0%;
+    width: 100%;
+}
+
+#heure {
+    font-size: 3vw;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 2vw;
+    background-color: white;
+>>>>>>> 1af530f (Ajout heure)
 }
