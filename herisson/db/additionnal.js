@@ -34,7 +34,7 @@ async function getTaxon(id) {
 
     // select only the fields we need
     const { scientificName, frenchVernacularName } = response.data;
-    return { scientificName, frenchVernacularName, habitat, media, copyright, listCities };
+    return { id, scientificName, frenchVernacularName, habitat, media, copyright, listCities };
 }
 
 function getCDRef(jsonData) {
@@ -57,8 +57,25 @@ const cdRefs = getCDRef(db);
 
 async function getAllTaxon() {
     let allTaxon = {};
+    // for each cd_ref, get the frenchVernacularName if it exists and the scientificName if not
     for (let i = 0; i < cdRefs.length; i++) {
-        allTaxon[cdRefs[i]] = await getTaxon(cdRefs[i]);
+        // create a list of frenchVernacularNam as key with , as separator if not null, else scientificName
+        const { taxon, scientificName, frenchVernacularName } = await getNames(cdRefs[i]);
+        let animalName = frenchVernacularName;
+        if (frenchVernacularName === null) {
+            animalName = scientificName;
+        }
+        // check if the animalName as , in it
+        if (animalName.includes(',')) {
+            // apply allTaxon[animalName] = await getTaxon(taxon); to each animalName
+            const animalNames = animalName.split(',');
+            for (let j = 0; j < animalNames.length; j++) {
+                allTaxon[animalNames[j]] = await getTaxon(taxon);
+            }
+        }
+        else {
+            allTaxon[animalName] = await getTaxon(taxon);
+        }
     }
 
     fs.writeFileSync("../public/data/additionalDB.json", JSON.stringify(allTaxon));
