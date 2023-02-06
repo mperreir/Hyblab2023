@@ -10,7 +10,7 @@ const swiper = new Swiper("#mySwiper", {
 });
 
 swiper.on("slideChange", function () {
-  switch( swiper.activeIndex ) {
+  switch (swiper.activeIndex) {
     case 0:
       initSlide1();
       break;
@@ -22,14 +22,14 @@ swiper.on("slideChange", function () {
 
 // Wait for the content to preload and display 1st slide
 // Here we simulate a loading time of one second
-setTimeout(() => { 
+setTimeout(() => {
   // fade out the loader "slide"
   // and send it to the back (z-index = -1)
   anime({
     delay: 1000,
     targets: '#loader',
     opacity: '0',
-    'z-index' : -1,
+    'z-index': -1,
     easing: 'easeOutQuad',
   });
   // Init first slide
@@ -43,17 +43,30 @@ let ubtn = document.querySelectorAll("#unlock_audio");
 
 ubtn.forEach(element => {
   element.addEventListener('click', () => {
-    if(aud.muted){
+    if (aud.muted) {
       aud.muted = false;
       ubtn.forEach(e => {
         e.setAttribute('src', 'img/unmute.png')
       });
-      
-    }else{
+
+    } else {
       aud.muted = true;
       ubtn.forEach(e => {
         e.setAttribute('src', 'img/mute.png')
       });
     }
   });
+});
+
+document.getElementById("map_link").addEventListener('click', () => {
+  window.localStorage.setItem('compt', "");
+  window.localStorage.setItem('heure', " 8:00 ");
+  window.localStorage.setItem('_8', "false");
+  window.localStorage.setItem('_9', "false");
+  window.localStorage.setItem('_10', "false");
+  window.localStorage.setItem('_11', "false");
+  window.localStorage.setItem('_12', "false");
+  window.localStorage.setItem('_13', "false");
+  window.localStorage.setItem('_14', "false");
+  window.localStorage.setItem('_16', "false");
 });
