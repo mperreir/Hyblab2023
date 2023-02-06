@@ -12,14 +12,13 @@ async function initConversation() {
     response = await fetch(`data/conversation${conversationId}.json`);
     const conversation = await response.json();
 
-
-    conversation.names.forEach(name => {
+    let names = conversation.names;
+    names.forEach(name => {
         let htmlName = document.createElement('p');
         htmlName.classList.add('name');
         htmlName.textContent = name
         htmlDialogueHead.appendChild(htmlName);
-    })
-
+    });
 
     runConversation(conversation.messages, names);
 };

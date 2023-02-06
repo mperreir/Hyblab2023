@@ -4,6 +4,9 @@
 
 
 header {
+    display: flex;
+    justify-content: space-between;
+    
     position: absolute;
     width: 100%;
     height: 43px;
