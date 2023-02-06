@@ -257,10 +257,10 @@ SLIDE QUESTION
 
 
 /*****************
-SLIDE ANIMATION
+SLIDE ANIMATION SORTIE+ZOOM
 ******************/
 
-.animation-slide  img {
+.img_gauche, .img_bas, .img_droit, .img_haut {
     width: 40%;
     height: auto;
     text-align: center;
@@ -270,30 +270,79 @@ SLIDE ANIMATION
 
 .img_bas{
     position: absolute;
-    top: 49%;
+    top: 47.6%;
     text-align: center;
-    left: 30%;
+    left: 32%;
 }
 
 .img_haut{
     position: absolute;
-    top: 32%;
+    top: 33.5%;
     text-align: center;
-    left: 30%;
+    left: 32%;
 }
 
 .img_gauche{
     position: absolute;
-    top: 40%;
+    top: 39.55%;
     text-align: center;
-    left: 10%;
+    left: 7.5%;
 }
 
 .img_droit{
     position: absolute;
-    top: 41%;
+    top: 41.3%;
     text-align: center;
-    right: 10%;
+    right: 3%;
+}
+
+.route{
+    width: 50%;
+    height: auto;
+    position:absolute;
+    top: 40%;
+    left: 27%;
+    text-align: center;
+}
+
+/*************************
+ANIMATION ENTREE 
+*************************/
+
+.img_gauche_Entree, .img_bas_Entree, .img_droit_Entree, .img_haut_Entree {
+    width: 40%;
+    height: auto;
+    text-align: center;
+
+}
+
+
+.img_bas_Entree{
+    position: absolute;
+    top: 49.5%;
+    text-align: center;
+    left: 32.1%;
+}
+
+.img_haut_Entree{
+    position: absolute;
+    top: 33.5%;
+    text-align: center;
+    left: 32%;
+}
+
+.img_gauche_Entree{
+    position: absolute;
+    top: 41.2%;
+    text-align: center;
+    left: 7.5%;
+}
+
+.img_droit_Entree{
+    position: absolute;
+    top: 41.3%;
+    text-align: center;
+    right: 3%;
 }
 /********************************
 INDICATEUR
@@ -682,4 +731,24 @@ slide entree texte
     position: absolute;
     bottom: 15%;
     left: 5%;
+}
+
+
+/**********************
+GREENTA 
+*********************/
+
+
+
+.greenTa{
+    text-align: center;
+    width: 50%;
+    left: 50%;
+    top: 10%;
+    margin-left:-25%;
+    margin-top:calc(-7.5% * 9 / 16 ); /* margins are relative to the element width... :-( */
+    position: absolute;
+    font-size: 50%;
+    z-index: 2;
+    cursor: pointer;
 }

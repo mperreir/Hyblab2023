@@ -8,6 +8,18 @@ const initSlideAnimationDroit = function(){
   droit.setAttribute('style', 'transform :scale(1);');
 
   // Animate it
+  /********************LOGO */
+  const logo2 = document.querySelector('.greenTa');
+
+  // (Re)set initial scale of logo
+  logo2.setAttribute('style', 'transform : translateY(-50vh);');
+  
+  // Animate hyblab logo and make shrink on click
+  anime({
+    targets: '.greenTa',
+    translateY: 0,
+    easing: 'easeOutBounce'
+  });
 
 /*****Easing elastic */
   anime({
@@ -33,8 +45,17 @@ const initSlideAnimationDroit = function(){
   anime({
     targets: "#animationSlideDroit .img_droit",
     scale: 3,
-    translateX : -20,
+    translateX : -30,
     delay : 1300,
+    easing: 'easeInOutSine',
+    direction: 'normal',
+    duration :2000,
+  })
+
+  anime({
+    targets : "#animationSlideDroit .route",
+    scale:0,
+    delay : 100,
     easing: 'easeInOutSine',
     direction: 'normal',
     duration :2000,
