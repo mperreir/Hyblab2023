@@ -4,22 +4,62 @@
     <meta charset="UTF-8">
     <title>Liste des Animaux de cette Famille</title>
     <link rel="styleSheet" href="./css/listeAnimauxStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <header>
-        <img src="./img/logo_faunare.png" id="logo" alt="logo of the app">
-        <button id="burger">blablabla</button>
-    </header>
-    <main>
-        <div id="titles">
-            <h1>Categorie</h1>
-            <h3>City</h3>
-        </div>
-        <div id="rec"></div>
-        <div id="animals-buttons">
-           <script src="js/createButtons.js"></script>
-        </div>
-    </main>
+    <div id="pop-up">
+        <header class="pop-up">
+            <img src="./img/croix.png" id="quit" alt="exit button">
+            <img id="animal-picture" src="./img/bearTest.jpg" alt="animal picture">
+            <h6 id="copyright">E. SANSAULT - ANEPE</h6>
+        </header>
+        <main class="pop-up">
+            <div id="popupRec"></div>
+            <h1 id="animal-name">Ours Brun</h1>
+            <h5 id="desc">Les mammifères de Bordeaux</h5>
+            <div id="menace">
+                <h5 id="menace-txt">enjeu de conservation</h5>
+                <h5 id="menace-level">MAJEUR</h5>
+            </div>
+            <div id="vus">
+                <h5 id="nb">40,</h5>
+                <h5 id="vus-txt">vus dans votre commune</h5>
+            </div>
+            <div id="map"><h5>Carte des espèces de la région</h5></div>
+        </main>
+        <footer class="pop-up">
+            <img id="mascotte" src="./img/charadesign-ficheanimal.png" alt="mascotte">
+            <div id="tips">
+                <h5>Le saviez-vous ?</h5>
+                <img src="./img/ligne_le_saviez_vous.png" alt="ligne" id="line-le-saviez-vous">
+            </div>
+            <h5 id="tips-text">Découvrez comment vous pouvez aider les</h5>
+            <img src="./img/fleche_beige.png" id="fleche2" alt="arrow button">
+        </footer>
+    </div>
+    <div id="main">
+        <header class="main">
+            <img src="./img/logo_faunare.png" id="logo" alt="logo of the app">
+            <img src="./img/menu.png" id="burger" alt="burger button">
+        </header>
+        <main class="main">
+            <div id="titles">
+                <h1 id="category"></h1>
+                <h5 id="commune"></h5>
+            </div>
+            <div id="rec"></div>
+            <div id="animals-buttons"></div>
+        </main>
+        <footer class="main">
+            <div>
+                <h5 id="footerText"><script src="js/animalCategory.js"></script></h5>
+            </div>
+            <img src="./img/fleche_beige.png" id="fleche" alt="arrow button">
+        </footer>
+    </div>
 </body>
 </html>
