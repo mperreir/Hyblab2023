@@ -46,13 +46,13 @@ ubtn.forEach(element => {
     if (aud.muted) {
       aud.muted = false;
       ubtn.forEach(e => {
-        e.setAttribute('src', 'img/unmute.png')
+        e.setAttribute('src', 'img/ux_kit/Son.svg')
       });
 
     } else {
       aud.muted = true;
       ubtn.forEach(e => {
-        e.setAttribute('src', 'img/mute.png')
+        e.setAttribute('src', 'img/ux_kit/Son_off.svg')
       });
     }
   });
