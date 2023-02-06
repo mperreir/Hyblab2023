@@ -45,58 +45,61 @@ map.addLayer(layer);
  * @returns {*} The marker icon
  */
 function createIcon(p) {
+    // Define the global icon size and global icon anchor
+    const globalIconSize = isMobileDevice() ? [50, 50] : [30, 30];
+    const globalIconAnchor = isMobileDevice() ? [25, 25] : [15, 15];
     // If the used keywords list is not empty and the profile doesn't contain all the keywords, return the inactive icon
     if (!usedKeywords.map(k => k.replace('#', '')).every(keyword => p.Keywords.includes(keyword))) {
         return L.icon({
             iconUrl: '../img/pictogrammes_carte/point_inactif.svg',
-            iconSize: [26, 26],
-            iconAnchor: [13, 13]
+            iconSize: globalIconSize,
+            iconAnchor: globalIconAnchor
         });
     }
     // The error comes from here because "énergie" is not a valid variable name
     if (!selectedTopics.includes(translate(p.Topic))) {
         return L.icon({
             iconUrl: '../img/pictogrammes_carte/point_inactif.svg',
-            iconSize: [26, 26],
-            iconAnchor: [13, 13]
+            iconSize: globalIconSize,
+            iconAnchor: globalIconAnchor
         });
     }
     switch (p.Topic) {
         case 'énergie':
             return L.icon({
                 iconUrl: '../img/pictogrammes_carte/point_energie.svg',
-                iconSize: [26, 26],
-                iconAnchor: [13, 13]
+                iconSize: globalIconSize,
+                iconAnchor: globalIconAnchor
             });
         case 'alimentation':
             return L.icon({
                 iconUrl: '../img/pictogrammes_carte/point_alimentation.svg',
-                iconSize: [26, 26],
-                iconAnchor: [13, 13]
+                iconSize: globalIconSize,
+                iconAnchor: globalIconAnchor
             });
         case 'industrie':
             return L.icon({
                 iconUrl: '../img/pictogrammes_carte/point_industrie.svg',
-                iconSize: [26, 26],
-                iconAnchor: [13, 13]
+                iconSize: globalIconSize,
+                iconAnchor: globalIconAnchor
             });
         case 'économie circulaire':
             return L.icon({
                 iconUrl: '../img/pictogrammes_carte/point_economie_circulaire.svg',
-                iconSize: [26, 26],
-                iconAnchor: [13, 13]
+                iconSize: globalIconSize,
+                iconAnchor: globalIconAnchor
             });
         case 'mobilité':
             return L.icon({
                 iconUrl: '../img/pictogrammes_carte/point_mobilite.svg',
-                iconSize: [26, 26],
-                iconAnchor: [13, 13]
+                iconSize: globalIconSize,
+                iconAnchor: globalIconAnchor
             });
         case 'numérique':
             return L.icon({
                 iconUrl: '../img/pictogrammes_carte/point_numerique.svg',
-                iconSize: [26, 26],
-                iconAnchor: [13, 13]
+                iconSize: globalIconSize,
+                iconAnchor: globalIconAnchor
             });
     }
 }
@@ -111,8 +114,6 @@ function updateMap(){
         geographicalProfiles.forEach(gp => {
             gp.marker.remove();
         });
-        console.log(usedKeywords);
-        console.log(selectedTopics);
         // Update the geographical profiles
         geographicalProfiles = r;
         addMarkers().then(() => console.log("Markers added !"));
@@ -374,4 +375,18 @@ function translate(topic) {
     topic = topic.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     topic = topic.replace(/\s/g, '_');
     return topic;
+}
+
+
+/*
+  ----------------------------------------------------------------------------------------------------------------------
+  | Device detection                                                                                                   |
+  ----------------------------------------------------------------------------------------------------------------------
+ */
+/**
+ * Check if the device is a mobile device
+ * @returns {boolean} True if the device is a mobile device, false otherwise
+ */
+function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
