@@ -21,7 +21,7 @@ next4_2.addEventListener("click", () => {
 })
 
 function display(id) {
-  let slides = document.getElementsByClassName("swiper-slide")
+  let slides = document.getElementsByClassName("slides")
   for (let slide of slides) {
     slide.style.display = 'none'
   }
@@ -42,5 +42,10 @@ setTimeout(() => {
     easing: 'easeOutQuad',
   });
   // Init first slide
-  initSlide1();
 }, 1000);
+
+var mySwiper = new Swiper('.swiper-container', {
+  pagination: {
+    el: '.swiper-pagination',
+  },
+});
