@@ -47,8 +47,11 @@ const answered = function (chosen) {
 
     //Evolution of all indics
     changementThermo(chosen.temperature * 10);
+    IndicThermo += chosen.temperature * 10;
     changementHappy(chosen.happiness * 10);
+    IndicHappy += chosen.happiness * 10;
     changementMoney(chosen.money * 10);
+    IndicMoney += chosen.money *10;
 
     document.getElementById('positiv'+current_question_number).innerHTML = chosen.positive;
    
@@ -64,7 +67,10 @@ const answered = function (chosen) {
     longAnswer.innerHTML = chosen.explanation;
     longAnswer.style.display = 'none';
 
-    if (chosen.nextQuestion !== 3 && chosen.nextQuestion !== 5) { // might be type problems (js is bad)
+    selectedZone[currentZoneNumber] = chosen.image;
+    console.log(selectedZone);
+
+    if ((chosen.nextQuestion !== 3 && chosen.nextQuestion !== 5 && chosen.nextQuestion !== 6)|| chosen.prompt == "Planter des arbres directement sur le parking" ) { // might be type problems (js is bad)
         currentZoneNumber += 1; // change zone iff not in the parking with the destroying solution and in the place
     }
     swiper.enable();
@@ -72,5 +78,6 @@ const answered = function (chosen) {
     currentquestion_save = current_question_number;
     current_question_number = chosen.nextQuestion;
     next_Question = chosen.nextQuestion
-    selectedZone[currentZoneNumber] = chosen.image;
+    
+   
 };

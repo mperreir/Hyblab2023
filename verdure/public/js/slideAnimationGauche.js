@@ -1,6 +1,8 @@
 "use strict";
 
 const initSlideAnimationGauche = function(){
+
+  UpdateSrcImage('#animationSlideGauche');
     const droit = document.querySelector('#animationSlideGauche .img_droit');
 
     // (Re)set initial position of img

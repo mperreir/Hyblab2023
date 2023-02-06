@@ -2,6 +2,8 @@
 
 // Just animate the logo
 const initSlideAnimationDroit = function(){
+
+  UpdateSrcImage('#animationSlideDroit');
   const droit = document.querySelector('#animationSlideDroit .img_droit');
 
     // (Re)set initial position of img

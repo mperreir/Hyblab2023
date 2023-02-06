@@ -1,6 +1,8 @@
 "use strict";
 
 const initSlideAnimationEntreeTexte = function(){
+
+    UpdateSrcImage('#quatre-zones');
     const droit = document.querySelector('#quatre-zones .img_droit');
     const haut = document.querySelector('#quatre-zones .img_haut');
     const bas = document.querySelector('#quatre-zones .img_bas');
@@ -56,3 +58,11 @@ setTimeout(()=> {
 },5000)
   
 };
+
+function UpdateSrcImage(id){
+  document.querySelector(id + ' .img_droit').src = './img/'+selectedZone[1]+'.png';
+  document.querySelector(id+' .img_haut').src =  './img/'+selectedZone[0]+'.png';
+  document.querySelector(id+' .img_bas').src =  './img/'+selectedZone[2]+'.png';
+  document.querySelector(id+' .img_gauche').src =  './img/'+selectedZone[3]+'.png';
+
+}

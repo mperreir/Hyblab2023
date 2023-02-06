@@ -1,6 +1,8 @@
 "use strict";
 
 const initSlideAnimationBas = function(){
+
+  UpdateSrcImage('#animationSlideBas');
   const droit = document.querySelector('#animationSlideBas .img_droit');
 
     // (Re)set initial position of img

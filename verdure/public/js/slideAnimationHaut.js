@@ -2,6 +2,8 @@
 
 // Just animate the logo
 const initSlideAnimationHaut = function(){
+
+  UpdateSrcImage('#animationSlideHaut');
   const haut = document.querySelector('.img_haut');
     
 

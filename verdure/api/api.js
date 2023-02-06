@@ -116,7 +116,7 @@ const prompts = {
                     "image": "place1"
                 },
                     {
-                        "prompt": "NE PAS faire renaître la rivière",
+                        "prompt": "Ne pas faire renaître la rivière",
                         "positive": "POSITIF</br>- Ne coûte rien",
                         "negative": "NEGATIF</br>- La ville n'évolue pas",
                         "explanation": "Ne pas faire renaître la rivière a peu d'effets. La ville ne changera pas et les habitants ne seront pas impactés. Malheureusement, le plein potentiel de la rivière reste coincé sous terre.",

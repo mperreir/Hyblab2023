@@ -538,13 +538,12 @@ INDICATEUR
 }
 
 #show-button1,#show-button2,#show-button3,#show-button4,#show-button5,#show-button6,#show-button7{
-    background-color: rgba(245, 245, 220, 0);
-    text-decoration: underline;
     border : none;
-    color : rgb(74, 71, 71);
+    color : rgb(0, 0, 0);
     font-size: 2vh;
     right : 0;
-    width: 20%;
+    width: 10%;
+    background-color: rgba(240, 248, 255, 0);
 }
 
 #answer-title1,#answer-title2,#answer-title3,#answer-title4,#answer-title5,#answer-title6,#answer-title7 {
@@ -552,10 +551,7 @@ INDICATEUR
     text-align: center;
     font-size: 3vh;
     margin-left: 1vh;
-    width: 75%;
-    border-right: 2px;
-    border-right-color: antiquewhite;
-    border-right-style: solid;
+    width: 85%;
 }
 
 #consequences1,#consequences2,#consequences3,#consequences4,#consequences5,#consequences6,#consequences7{

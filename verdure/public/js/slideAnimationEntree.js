@@ -1,6 +1,8 @@
 "use strict";
 
 const initSlideAnimationEntree = function(){
+  
+  UpdateSrcImage('#animationSlideEntree');
     const droit = document.querySelector('#animationSlideEntree .img_droit');
     const haut = document.querySelector('#animationSlideEntree .img_haut');
     const bas = document.querySelector('#animationSlideEntree .img_bas');

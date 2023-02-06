@@ -1,6 +1,8 @@
 "use strict";
 
 const initEndSlide = function () {
+    
+    loadTextindic();
     document.getElementById("dropdownShareButton").style.display = "block";
 
     const titre = document.querySelector('#result');
@@ -30,6 +32,31 @@ const initEndSlide = function () {
 
 
 
+}
+
+
+
+
+async function loadTextindic(){
+    console.log(IndicHappy)
+    console.log(IndicThermo)
+    console.log(IndicMoney)
+
+    let pThermo = document.getElementById("final-thermo");
+    let pMoney = document.getElementById('final-money');
+    let pHappy = document.getElementById('final-happy');
+
+    if( 70 < IndicThermo < 100){pThermo.innerHTML = "Malheuresement la température de votre ville n'a pas baissé!";}
+    else if( 50 < IndicThermo <= 70){pThermo.innerHTML = "Encourageant, la température de votre ville a légérement baissé!";}
+    else{pThermo.innerHTML = "Bravo, la température à fortement chuté dans votre ville !";}
+
+    if( 70 < IndicMoney < 100){pMoney.innerHTML = "Félicitation! Il vous reste beaucoup d'argent";}
+    else if( 50 < IndicMoney <= 70){pMoney.innerHTML = "Vous avez su dépenser de façon à garder des dépenses équilibrées";}
+    else{pMoney.innerHTML = "Attention ! Vous avez beaucoup dépensé. Mais finalement n'est ce pas une étape obligatoire dans cette lutte ?";}
+
+    if( 70 < IndicHappy < 100){pHappy.innerHTML = "Félicitation! Votre population est très heureuse";}
+    else if( 50 < IndicHappy<= 70){pHappy.innerHTML = "Vous avez su faire les bons choix pour garder une population satisfaite";}
+    else{pHappy.innerHTML = "Attention ! Vos choix ont beaucoup inpacté votre population";}
 }
 
 const toggleDropdownShareMenu = function () {

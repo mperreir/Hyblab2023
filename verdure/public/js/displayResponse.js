@@ -7,12 +7,12 @@ const showExplanations = function(){
     {
     document.getElementById('consequences'+currentquestion_save).style.display = 'none'
     document.getElementById('long-answer'+currentquestion_save).style.display = 'block';
-    document.getElementById('show-button'+currentquestion_save).value = 'voir moins';
+    document.getElementById('show-button'+currentquestion_save).value = '-';
     }
     else
     {
     document.getElementById('consequences'+currentquestion_save).style.display = 'flex';
     document.getElementById('long-answer'+currentquestion_save).style.display = 'none';
-    document.getElementById('show-button'+currentquestion_save).value = 'voir plus';
+    document.getElementById('show-button'+currentquestion_save).value = '+';
     }
 };

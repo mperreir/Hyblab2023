@@ -1,6 +1,11 @@
 "use strict";
 
 
+//TODO AJUSTER A LA VALEUR DE DEBUT
+let IndicThermo = 85;
+let IndicMoney = 80;
+let IndicHappy = 50;
+
 let next_Question = 1
 // Init of the (touch friendly) Swiper slider
 let swiper = new Swiper("#mySwiper", {
@@ -27,6 +32,7 @@ swiper.on("slideChange", function () {
       initSlideAnimationEntreeTexte();
       break;
     case 4: 
+    console.log(IndicHappy)
     swiper.disable();
       initSlideAnimationDroit();
       break;
@@ -118,4 +124,4 @@ setTimeout(() => {
 }, 1);
 
 
-let selectedZone = ["boulevard0", "parking0", "place0", "friche0"]; // the value of which image to take for each Zone
+let selectedZone = ["boulevard", "parking", "place", "friche"]; // the value of which image to take for each Zone
