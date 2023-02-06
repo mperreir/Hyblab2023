@@ -163,6 +163,21 @@ function recreeCarouselDeck(profilsTrouves) {
 async function chercheEtAjouteProfilsCarousel(themeSelected, shuffleResults) {
     const baseURL = document.location.origin;
 
+    carouselItems.forEach(f => {
+        if(f.dataset.pos === '-2' || f.dataset.pos === '2') {
+            f.classList.remove('recreate-deck-animation-1');
+        }
+
+        if(f.dataset.pos === '-1' || f.dataset.pos === '1') {
+            f.classList.remove('recreate-deck-animation-2');
+        }
+
+        if(f.dataset.pos === '0') {
+            f.classList.remove('recreate-deck-animation-3');
+        }
+    });
+
+
     // Appel API
     profilsTrouves = await fetch(baseURL + "/pionniers/api/miniature/topics/" + generateApiParameters(themeSelected)).then(r => r.json());
 
@@ -176,6 +191,22 @@ async function chercheEtAjouteProfilsCarousel(themeSelected, shuffleResults) {
 
     // Met à jour l'état du carrousel
     miseAJourEtatCarousel();
+
+    carouselItems.forEach(f => {
+        if(f.dataset.pos === '-2' || f.dataset.pos === '2') {
+            f.classList.add('recreate-deck-animation-1');
+        }
+
+        if(f.dataset.pos === '-1' || f.dataset.pos === '1') {
+            f.classList.add('recreate-deck-animation-2');
+        }
+
+        if(f.dataset.pos === '0') {
+            f.classList.add('recreate-deck-animation-3');
+        }
+    });
+
+
 }
 
 /**
@@ -231,8 +262,8 @@ function ajouterNouvelleFiche(clicADroite) {
     carouselList.append(createFiche(newProfil, posFicheASuppr));
 
     miseAJourEtatCarousel();
-
 }
+
 
 /**
  * Met à jour les nodes relatifs au carousel, utilisés pour le calcul du mouvement de rotation
@@ -256,15 +287,11 @@ function update(newActive) {
     const next = elems.find((elem) => elem.dataset.pos === '1');
     const last = elems.find((elem) => elem.dataset.pos === '2');
 
-    current.classList.remove('carousel__item_active');
-
     [current, prev, next, first, last].forEach(item => {
         let itemPos = item.dataset.pos;
 
         item.dataset.pos = getNewPos(itemPos, newActivePos)
     });
-
-
 }
 const getNewPos = function (current, active) {
     const diff = current - active;
@@ -347,14 +374,12 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 
     //const idsProfilsEnregistres = window.localStorage.getItem('truc');
-    const idsProfilsEnregistres = [2]; // Test
+    const idsProfilsEnregistres = []; // Test
     if(idsProfilsEnregistres.length > 0) {
         nombreProfilsEnregistresText.innerHTML = idsProfilsEnregistres.length.toString();
     } else {
         nombreProfilsEnregistres.classList.add('display-none');
         nombreProfilsEnregistres.classList.remove('flex-row');
     }
-
-
 
 });

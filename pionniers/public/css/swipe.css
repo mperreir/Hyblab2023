@@ -122,3 +122,90 @@ header div img {
 .topic p {
     margin-left: 5px;
 }
+
+.recreate-deck-animation-1 {
+    animation-duration: 0.5s;
+    animation-name: suffle-card-1;
+}
+
+.recreate-deck-animation-2 {
+    animation-duration: 1s;
+    animation-name: suffle-card-2;
+}
+
+.recreate-deck-animation-3 {
+    animation-duration: 1s;
+    animation-name: suffle-card-3;
+}
+
+@keyframes suffle-card-1 {
+    0% {
+        transform: translateY(0%);
+    }
+
+    10% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(-5%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes suffle-card-1 {
+    0% {
+        transform: translateY(0%);
+    }
+
+    10% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(-5%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes suffle-card-2 {
+    0% {
+        transform: translateY(0%);
+    }
+
+    20% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(-10%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes suffle-card-3 {
+    0% {
+        transform: translateY(0%);
+    }
+
+    30% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(-20%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
