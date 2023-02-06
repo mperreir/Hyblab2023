@@ -50,5 +50,9 @@ const initSlideAnimationEntreeTexte = function(){
 //     direction: 'normal',
 //     duration :2000,
 //   })
+
+setTimeout(()=> {
+  swiper.enable()
+},5000)
   
 };

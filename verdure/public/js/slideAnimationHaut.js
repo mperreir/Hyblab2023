@@ -49,5 +49,5 @@ const initSlideAnimationHaut = function(){
     duration :2000,
   })
 
-  swiper.slideTo(4)
+
 };
