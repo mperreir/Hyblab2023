@@ -34,7 +34,7 @@
       <!-- section d'accueil -->
       <section id="accueil" class="swiper-slide">
         <header>
-          <h1 id="titre">Welcome</h1>
+          <h1 class="titre">Welcome</h1>
         </header>
         <div>
           <div><p id="objsol">“OBJECTIF SOLEIL</p>
@@ -50,7 +50,7 @@
           </div>
         </div>
         <footer>
-          <button id = "testB">Commencer</button>
+          <button>Commencer</button>
         </footer>
       </section>
 
@@ -58,17 +58,18 @@
       <section id="adresse" class="swiper-slide">
         <header>
           <button class="retour">←</button>
-          <p class="intitulé">Où habitez-vous ?</p>
+          <p class="titre">Où habitez-vous ?</p>
         </header>
         <section class="main-location-page">
           <img class="img-adresse" src="img/soliAdresse.png">
           <div class="commentaire-soli">
             <img src="img/soliMontgolfiere.png">
-            <p id="SoliExTex">“ Ne tombez pas dans le panneau,
+
+              <p id="SoliExTex">“ Ne tombez pas dans le panneau,
               la solution n’est pas forcément sur
               votre toit. Pour obtenir la mission
               la plus pertinente, j’ai besoin de
-              votre adresse. ”
+              votre adresse. ” </p>
           </div>
           <div class="location-input">
             <input type="text" placeholder="Renseignez votre adresse">
@@ -82,7 +83,7 @@
       <section id="logement" class="swiper-slide"> <!-- Page du type de logement -->
         <header>
           <button class="retour">←</button>
-          <p id="base">
+          <p class="titre">
             Vous habitez dans :
           </p>
         </header>
@@ -103,6 +104,7 @@
                 </div>
           </section>
           <section id="ligne">
+            <p class="titre">Vous êtes : </p>
             <div id="colonne2">
               <input type="radio" id="contactChoice1"
                          name="propiétaire" value="propiétaire">
@@ -138,7 +140,7 @@
         <header>
           <button class="retour">retour</button>
           <button id="info">I</button> <!-- Bouton Information (à copier sur les autres slide) -->
-          <p id="base">
+          <p class="titre">
             Comment est la pente de votre toit ?
           </p>
         </header>
@@ -193,7 +195,7 @@
         <header>
           <button class="retour">retour</button>
 
-          <h1>Comment votre toit est-il orienté</h1>
+          <h1 class="titre">Comment votre toit est-il orienté</h1>
         </header>
         <section id="image2" >
           <img src="img/MaisonCampagne.png">
@@ -250,7 +252,7 @@
       <section id="facultatif" class="swiper-slide">
         <header>
           <button class="retour">retour</button>
-          Autres questions
+          <p class="titre">Autres questions</p>
         </header>
         <div id = "ligne">
           <img src="img/montgolfiereAvancee.png">

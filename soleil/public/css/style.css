@@ -22,18 +22,6 @@ body{
     font-family: sans-serif;
 }
 
-#base{
-    padding: 10px;
-    font-size: 36px;
-    text-align: center;
-}
-
-#image{
-    width : 85%;
-    height : 300px;
-    margin :auto
-}
-
 #image{
     width : 85%;
     height : 150px;
@@ -148,7 +136,7 @@ div {
     float: left;
     height: 150px;
     padding: 0 10px;
-    font-size: 24px;
+    font-size: 15px;
     text-align: center;
 }
 
@@ -163,15 +151,6 @@ header{
     font-size: 24px;
     line-height: 26px;
     text-align: center;
-}
-
-
-#testB {
-
-    width: 146px;
-    height: 30px;
-    background: #9185BE;
-    border-radius: 8px;
 }
 
 
@@ -281,8 +260,16 @@ header{
     width: 100%;
 }
 
+.titre{
+    font-size: 18px;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+}
+
 /* Most of the elements in this demo are absolute positionned with percentages */
-#accueil header, #logement header, #second-slide header{
+header{
     margin-bottom: 20px;
     text-align: center;
     width: 100%;
@@ -429,7 +416,7 @@ main > section{
 }
 
 /* Footer of last slide is at the bottom and content is centered */
-#accueil footer, #adresse footer, #logement footer, #pente footer, #orientation footer, #ombre footer, #facultatif footer{
+footer{
     bottom: 5%;
     position: absolute;
     box-sizing: border-box; /* So that padding is not added to width (and width: 100% works) */
