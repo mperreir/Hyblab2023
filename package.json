@@ -4,13 +4,13 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "createDB": "sqlite3 ./communes/api/communes.db < ./communes/api/createDB.sql",
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.4"
   },
   "author": "MPDS",
-  "license": "MIT",
-  "devDependencies": {
-  }
+  "license": "MIT"
 }
