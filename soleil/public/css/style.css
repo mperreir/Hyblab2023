@@ -153,7 +153,10 @@ header{
     text-align: center;
 }
 
-
+#Choix2 {
+    width: 100%;
+    height: auto;
+}
 
 .commentaire-soli {
     max-width: 90%;
