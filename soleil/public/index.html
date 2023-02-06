@@ -34,11 +34,11 @@
       <!-- section d'accueil -->
       <section id="accueil" class="swiper-slide">
         <header>
-          <h1 id="titre">Welcome</h1>
+          <h1 class="titre">Welcome</h1>
         </header>
         <div>
-          <div><p>“OBJECTIF SOLEIL
-            Le défi citoyen pour développer l’énergie solaire autour de chez vous”
+          <div><p id="objsol">“OBJECTIF SOLEIL</p>
+            <p>Le défi citoyen pour développer l’énergie solaire autour de chez vous”
           </p></div>
 
           <div class="conteneur">
@@ -58,7 +58,7 @@
       <section id="adresse" class="swiper-slide">
         <header>
           <button class="retour">←</button>
-          <p class="intitulé">Où habitez-vous ?</p>
+          <p class="titre">Où habitez-vous ?</p>
         </header>
         <section class="main-location-page">
           <img class="img-adresse" src="img/soliAdresse.png">
@@ -68,8 +68,7 @@
               la solution n’est pas forcément sur
               votre toit. Pour obtenir la mission
               la plus pertinente, j’ai besoin de
-              votre adresse. ”</p>
-            <button class="text">ici</button>
+              votre adresse. ”
           </div>
           <div class="location-input">
             <input type="text" placeholder="Renseignez votre adresse">
@@ -83,7 +82,7 @@
       <section id="logement" class="swiper-slide"> <!-- Page du type de logement -->
         <header>
           <button class="retour">←</button>
-          <p id="base">
+          <p class="titre">
             Vous habitez dans :
           </p>
         </header>
@@ -94,28 +93,29 @@
               <input type="radio" id="contactChoice1"
                          name="logement" value="logement">
                   <label for="contactChoice1">Maison</label>
-              <img id="choix-log" src="hyblab_2023.jpg"/>
-            </div>
+                  <img src="img/Maison.png"/>
+                </div>
             <div id="colonne2">
               <input type="radio" id="contactChoice2"
                          name="logement" value="logement">
                   <label for="contactChoice1">Immeuble</label>
-              <img id="choix-log" src="hyblab_2023.jpg"/>
-            </div>
+                  <img src="img/Immeuble.png"/>
+                </div>
           </section>
           <section id="ligne">
+            <p class="titre">Vous êtes : </p>
             <div id="colonne2">
               <input type="radio" id="contactChoice1"
                          name="propiétaire" value="propiétaire">
                   <label for="contactChoice1">Propiétaire</label>
-              <img id="choix-log" src="hyblab_2023.jpg"/>
-            </div>
+                  <img src="img/Propri.png"/>
+                </div>
             <div id="colonne2">
               <input type="radio" id="contactChoice2"
                          name="propiétaire" value="propiétaire" placeholder="Renseignez votre adresse">
                   <label for="contactChoice1">Locataire</label>
-              <img id="choix-log" src="hyblab_2023.jpg"/>
-            </div>
+                  <img src="img/Locataire.png"/>
+                </div>
           </section>
           <section id="image">
             <div class="commentaire-soli">
@@ -139,12 +139,15 @@
         <header>
           <button class="retour">retour</button>
           <button id="info">I</button> <!-- Bouton Information (à copier sur les autres slide) -->
-          <p id="base">
+          <p class="titre">
             Comment est la pente de votre toit ?
           </p>
         </header>
         <section>
           <div>
+            <section id="image3">
+              <img src="img/ChoixMaison.png">
+            </section>
             <section>
               <form>
                 <div id="colonne3">
@@ -170,10 +173,10 @@
                 </div>
               </form>
             </section>
-          </div>
-          <div class="commentaire-soli">
+          <section class="commentaire-soli">
             <img src="img/soliMontgolfiere.png">
             <p>Mais pourquoi parler de l’inclinaison du toit ? C’est essentiel pour la performance de votre module photovoltaïque. </p>
+          </section>
           </div>
           
           <div id="jauge">
@@ -185,11 +188,17 @@
         </footer>
 
       </section>
+
+
       <section id="orientation" class="swiper-slide">
         <header>
           <button class="retour">retour</button>
-          <h1>Comment votre toit est-il orienté</h1></header>
-        <div><img class="illustration" src="hyblab_2023.jpg" /></div>
+
+          <h1 class="titre">Comment votre toit est-il orienté</h1>
+        </header>
+        <section id="image2" >
+          <img src="img/MaisonCampagne.png">
+        </section>
         <div class="boussole"><img class="illustration" src="img/bousolle.png" alt="0">
         <p>Appuier sur la boussole 
           pour choisir votre orientation</p></div>
@@ -242,7 +251,7 @@
       <section id="facultatif" class="swiper-slide">
         <header>
           <button class="retour">retour</button>
-          Autres questions
+          <p class="titre">Autres questions</p>
         </header>
         <div id = "ligne">
           <img src="img/montgolfiereAvancee.png">

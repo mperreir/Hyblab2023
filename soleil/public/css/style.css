@@ -22,21 +22,42 @@ body{
     font-family: sans-serif;
 }
 
-#base{
-    padding: 10px;
-    font-size: 36px;
-    text-align: center;
-}
-
 #image{
     width : 85%;
-    height : 300px;
+    height : 150px;
+    margin :auto
+}
 
+
+#image2{
+    width : 85%;
+    height : 25%;
+    margin :auto
 }
 
 #choix-log{
     width : 24%;
     height: 12%;
+}
+
+#SoliExImg {
+    text-align: center;
+    width: 20%
+}
+
+#SoliExTex {
+    text-align: center;
+    width: 70%;
+    margin-top: 5%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    
+
+
+
 }
 
 #Soli1{ /* penser a bouger la montgolfiere par raaport a la taille de la page et au nombre de slides associées*/
@@ -115,13 +136,24 @@ div {
     float: left;
     height: 150px;
     padding: 0 10px;
-    font-size: 24px;
+    font-size: 15px;
     text-align: center;
 }
 
 header{
     margin-top: 20px;
 }
+
+#objsol {
+    font-family: 'Boris';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 26px;
+    text-align: center;
+}
+
+
 
 .commentaire-soli {
     max-width: 90%;
@@ -228,8 +260,16 @@ header{
     width: 100%;
 }
 
+.titre{
+    font-size: 18px;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+}
+
 /* Most of the elements in this demo are absolute positionned with percentages */
-#accueil header, #logement header, #second-slide header{
+header{
     margin-bottom: 20px;
     text-align: center;
     width: 100%;
@@ -376,7 +416,7 @@ main > section{
 }
 
 /* Footer of last slide is at the bottom and content is centered */
-#accueil footer, #adresse footer, #logement footer, #pente footer, #orientation footer, #ombre footer, #facultatif footer{
+footer{
     bottom: 5%;
     position: absolute;
     box-sizing: border-box; /* So that padding is not added to width (and width: 100% works) */
@@ -486,6 +526,14 @@ body{
 .valider{
     bottom: 20%;
 }
+
+.illustrationAdresse{
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    margin: auto;
+}
+
 
 .illustration{
     max-width: 100%;
