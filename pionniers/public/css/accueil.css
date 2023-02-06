@@ -2,6 +2,14 @@
     width: 75%;
 }
 
+header {
+    margin-top: 25%;
+}
+
+header h2 {
+    width: 50%;
+}
+
 header div {
     padding: 5% 7% 5% 7%;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -18,3 +26,30 @@ header div img {
 footer {
     height: 20%;
 }
+
+.flex-column.align-items-center.justify-content-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
+    max-height: 500px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 500%;
+    max-height: 100%;
+}
+
+footer.flex-row.align-items-center.justify-content-space-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+button.bouton-rond {
+    margin-left: auto;
+}
+
