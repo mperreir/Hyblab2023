@@ -7,10 +7,21 @@ async function achievement() {
 
     for (let i = 0; i < achievements.achievements.length; i++) {
         let achiev = achievements.achievements[i];
-        let htmlAchiev = document.createElement('p');
+        let htmlAchiev = document.createElement('div');
         htmlAchiev.classList.add('achievement');
         htmlAchiev.classList.add(`achievement-${achiev.ID}`);
-        htmlAchiev.textContent = achiev.name;
+
+        let htmlID = document.createElement('div');
+        htmlID.textContent = `ID: ${achiev.ID}`;
+
+        let htmlName = document.createElement('h2');
+        htmlName.textContent = achiev.name;
+
+        let htmlDesc = document.createElement('p');
+        htmlDesc.classList.add('shortDescription');
+        htmlDesc.classList.add(`shortDescription-${achiev.ID}`);
+        htmlDesc.textContent = achiev.shortDescription;
+
         let isOpen = false;
 
         htmlAchiev.addEventListener('click', function () {
@@ -18,22 +29,17 @@ async function achievement() {
             if (currentDescription) {
                 currentDescription.remove();
             }
-            let htmlDesc = document.createElement('p');
-            htmlDesc.classList.add('shortDescription');
-            htmlDesc.classList.add(`shortDescription-${achiev.ID}`);
-            htmlDesc.textContent = achiev.shortDescription;
-            htmlAchiev.after(htmlDesc);
             if (isOpen) {
-                let htmlDesc = result.querySelector('.shortDescription');
                 htmlDesc.remove();
                 isOpen = false;
             } else {
+                htmlAchiev.appendChild(htmlDesc);
                 isOpen = true;
             }
-
         });
 
-
+        htmlAchiev.appendChild(htmlID);
+        htmlAchiev.appendChild(htmlName);
         result.appendChild(htmlAchiev);
 
     }
