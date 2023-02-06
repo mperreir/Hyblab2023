@@ -6,10 +6,7 @@ let next_Question = 1
 let swiper = new Swiper("#mySwiper", {
   direction: "vertical",
   mousewheel: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: false,
-  },
+  
   allowSlidePrev : true,
   enabled : true
 });

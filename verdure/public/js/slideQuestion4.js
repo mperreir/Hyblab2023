@@ -7,7 +7,7 @@ const initSlideQuestion4 = async function(currentQuestion){
 
   const page = document.getElementById(currentQuestion)
   let question = document.querySelector('.question-footer'+currentQuestion)
-  let city = document.querySelector('.city'+currentQuestion)
+  let city = document.querySelector('#city'+currentQuestion)
 
 
 

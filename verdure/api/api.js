@@ -28,7 +28,7 @@ const prompts = {
             "happiness": 1,
             "money": -1,
             "nextQuestion": 2,
-            "image": "boul1"
+            "image": "boulevard1"
         },
             {
                 "prompt": "Planter beaucoup d’arbres mais ronger sur une voie de circulation",
@@ -41,7 +41,7 @@ const prompts = {
                 "happiness": -1,
                 "money": -2,
                 "nextQuestion": 2,
-                "image": "boul2"
+                "image": "boulevard2"
             }]
     },
     2: {
@@ -61,8 +61,8 @@ const prompts = {
         },
             {
                 "prompt": "Destruction de la chaussée et déperméabilisation pour planter des arbres",
-                "positive": "POSITIF </br>- Les arbres ont de la place",
-                "negative": "NEGATIF </br>- Moins de stationnements pour les voitures",
+                "positive": "POSITIF</br>- Les arbres ont de la place",
+                "negative": "NEGATIF</br>- Moins de stationnements pour les voitures",
                 "explanation": "En voilà une idée! Préparer le sol pour planter correctement les arbres… \"Un arbre planté dans un sol tassé, pavé, sans place suffisante pour ses racines pousse deux fois moins vite, a moitié moins de feuilles et évapore quatre fois moins\", explique à BFMTV.com Marjorie Musy, directrice de recherche au Centre d'études et d'expertise sur les risques, l'environnement, la mobilité et l'aménagement.</br>"+
                     "Il serait donc judicieux de rendre le sol de nouveau perméable, même si sa composition n’est pas toujours adaptée à la croissance des arbres…</br>" +
                     "Et alors que dire des places de parkings supprimées? Coups de klaxons assurés!",
@@ -77,19 +77,19 @@ const prompts = {
         "question": "Comment planter ces arbres ?",
         "choices": [{
             "prompt": "Avec un parc exotique",
-            "positive": [],
-            "negative": [],
+            "positive": "POSITIF</br>",
+            "negative": "NEGATIF</br>",
             "explanation": "On a tous besoin d’évasion. Mais créer un parc exotique, pas sûr que ce soit très productif. On parle alors de verdissement. Ok, c’est agréable de se promener sous des palmiers. Mais la biodiversité ne peut pas s’adapter à ce genre d’espèces. Il s’agit davantage de notions d’urbanismes que de préservation de l’environnement.</br>Au moins, ça attire les curieux !",
             "temperature": -1,
             "happiness": 3,
             "money": -2,
             "nextQuestion": 4,
-            "image": null
+            "image": "parking3"
         },
             {
                 "prompt": "Implanter une forêt naturelle",
-                "positive": [],
-                "negative": [],
+                "positive": "POSITIF</br>",
+                "negative": "NEGATIF</br>",
                 "explanation": "C’est sûrement LA solution la plus efficace pour lutter contre les fortes chaleurs. On parle alors de renaturation, un mot associé à “réparation”. Il désigne le processus par lequel la nature se réinstalle spontanément dans la ville. Il s'agit de restaurer le bon état écologique des sites à travers des opérations d'aménagement, de gestion des espaces et de sensibilisation des usagers.</br>"+
                     "L’Agence régionale de la biodiversité d’Île-de-France distingue trois étapes dans la renaturalisation : la reconquête de la biodiversité, l’adaptation aux changements climatiques et l’amélioration de la santé et du cadre de vie.</br>" +
                     "Objectif : redonner à la nature ses droits !",
@@ -97,10 +97,105 @@ const prompts = {
                 "happiness": 1,
                 "money": 1,
                 "nextQuestion": 4,
-                "image": null
+                "image": "parking4"
             }]
-    }
-}
+        },
+            4: {
+                "question": "Que voulez-vous faire sur cette place ?",
+                "choices": [{
+                    "prompt": "Faire renaître la rivière",
+                    "positive": "POSITIF</br>- Intéressant pour la biodiversité et le bien-être de la population</br>- Réduit le risque d'inondation accentué par le béton",
+                    "negative": "NEGATIF</br>- Coûteux",
+                    "explanation": "Il s’agit de renaturalisation : ramener la nature là où elle était avant. Dans les villes, les rivières ont été recouvertes pendant l’urbanisation. Pourtant, elles permettent d’apporter de la fraîcheur et de l’humidité dans les centre-ville, un bon moyen de lutter contre la chaleur. D’un autre côté, diminuer le béton en ville diminue le risque d’inondation : en cas de pluie, l’eau rejoint la rivière plutôt que de couler à toute vitesse dans les caniveaux.</br>" +
+                        "Surtout, rouvrir une rivière permet de recréer un écosystème avec les espèces qui vivent en ville.</br>" +
+                        "Plusieurs exemples montrent aussi que le retour de l’eau dans les centre-ville est utile pour le commerce et le bien-être de la population.",
+                    "temperature": -1,
+                    "happiness": 1,
+                    "money": -2,
+                    "nextQuestion": 5,
+                    "image": null
+                },
+                    {
+                        "prompt": "NE PAS faire renaître la rivière",
+                        "positive": "POSITIF</br>- Ne coûte rien",
+                        "negative": "NEGATIF</br>- La ville n'évolue pas",
+                        "explanation": "Ne pas faire renaître la rivière a peu d'effets. La ville ne changera pas et les habitants ne seront pas impactés. Malheureusement, le plein potentiel de la rivière reste coincé sous terre.",
+                        "temperature": 2,
+                        "happiness": 0,
+                        "money": 2,
+                        "nextQuestion": 5,
+                        "image": null
+                    }]
+            },
+            5: {
+                "question": "Que voulez-vous planter ?",
+                "choices": [{
+                    "prompt": "De l'herbe",
+                    "positive": "POSITIF</br>- L'herbe permet de diminuer la température</br>- Une bonne alternative aux arbres",
+                    "negative": "NEGATIF</br>- Les gens marchent dessus",
+                    "explanation": "Ramener la nature en ville : c’est une solution pour diminuer la température dans les centres urbains. Planter de l’herbe peut-être une solution. Simple constat : en cas de forte chaleur, une surface bitumée sera 15°C plus chaude qu’une étendue de gazon. Il y a donc un véritable avantage à semer de l’herbe. D’autant plus qu’un tel tapis vert sera apprécié par la population pour les soirées d’été, les sorties des enfants ou la promenade des animaux de compagnie.</br>" +
+                        "À noter que cette utilisation par les habitants peut avoir des conséquences sur l’efficacité du gazon. On parle de ligne de désir. C’est le phénomène par lequel les humains dessinent eux-mêmes leurs passages, en contournant les aménagements bien en place. Conséquence : cela abîme le gazon et diminue son efficacité.</br>" +
+                        "Déjà, vous avez retenu que, pour planter des arbres, il faut prendre en compte le sous-sol. Avec le gazon, cette problématique est moindre.",
+                    "temperature": -1,
+                    "happiness": 1,
+                    "money": 2,
+                    "nextQuestion": 6,
+                    "image": null
+                },
+                    {
+                        "prompt": "Des arbres",
+                        "positive": "POSITIF</br>- Effets importants sur la température</br>- Réduit le phénomène d'îlot de chaleur",
+                        "negative": "NEGATIF</br>- Aménagement long</br>- Coûteux</br>- Nombreuses contraintes",
+                        "explanation": "En voilà une bonne idée ! Transformer la place principale de la ville en un endroit arboré, ombragé. Mais avez-vous pensé au sous-sol ? C’est surement l’endroit le plus délicat pour les racines : tuyaux, réseaux. Qui vous dit qu’il n’y a pas un parking ou une ligne de métro sous cet endroit ? Vous allez nous dire : et si on les plantait dans des pots. Pas de bol, c’est une fausse bonne idée. À l’étroit dans des bacs, les racines ne vont pas pouvoir s’étendre, la croissance de l’arbre va être moindre, et ses effets sur la chaleur seront moins efficaces.</br>" +
+                            "En attendant, l’aménagement est possible, mais il est long à mettre en place, et couteux.",
+                        "temperature": -2,
+                        "happiness": 2,
+                        "money": -2,
+                        "nextQuestion": 6,
+                        "image": null
+                    }]
+            },
+            6: {
+                "question": "Que voulez-vous faire avec cette friche ?",
+                "choices": [{
+                    "prompt": "Créer un potager partagé",
+                    "positive": "POSITIF</br>-Grande étendue verte",
+                    "negative": "NEGATIF</br>- Sélection des espèces",
+                    "explanation": "Cultiver ses propres légumes en pleine ville… C’est l’idée des jardins partagés. La friche devient une vaste étendue verte. Les riverains s’emparent de l’endroit, créent du lien social, se mettent au vert et se ressourcent. Plein de points positifs pour les habitants ! Pour la biodiversité, les insectes pollinisateurs sont contents. Seul bémol, la sélection des espèces atténue les effets sur l’environnement. En effet, les apprentis jardiniers préfèreront planter des espèces hybrides, plutôt que des espèces naturelles, qui sont alors menacés. Les animaux du coin ne sont pas non plus habitués et risquent de déserter les lieux. Charge à la municipalité de sensibiliser sa population.</br>" +
+                        "Mais pour lutter contre la chaleur, là c’est sûr, on est au bon endroit.",
+                    "temperature": -1,
+                    "happiness": 1,
+                    "money": 1,
+                    "nextQuestion": null,
+                    "image": null
+                },
+                    {
+                        "prompt": "Construire des bureaux",
+                        "positive": "POSITIF</br>- Évite l'étalement urbain</br>- Crée de l'emploi pour la population",
+                        "negative": "NEGATIF</br>- Moins de verdure",
+                        "explanation": "Ce n’est sûrement pas le choix le plus intuitif. Mais il est quand même cohérent. Construire un bâtiment sur une friche inoccupée, ça évite l’étalement urbain. En périphérie de la ville, des espaces naturels vont donc être préservés. En plus, construire du neuf permet de rendre le bâtiment économe, adapté aux contraintes environnementales. Le choix des matériaux est aussi possible, et peuvent être écoresponsables. En plus ces bureaux vont permettre de créer de l’emploi, bon point pour la population.</br>" +
+                            "Mais c’est sur que cela va manquer un peu de verdure, et il risque de faire chaud.",
+                        "temperature": 1,
+                        "happiness": -1,
+                        "money": 2,
+                        "nextQuestion": null,
+                        "image": null
+                    },
+                    {
+                        "prompt": "Créer une forêt",
+                        "positive": "POSITIF</br>- La nature reprend ses droits !</br>- Retour de la biodiversité</br>- Bien-être de la population",
+                        "negative": "NEGATIF</br>- Des sources de pollution à prendre en compte",
+                        "explanation": "Voilà un choix avec beaucoup de bénéfices pour la biodiversité, et bien utile pour réduire la chaleur dans les villes. D’abord, un foret luttera contre les îlots de chaleurs. Par exemple, avec 100 m2 d’arbres, la température peut descendre d’un degré jusqu’à 100 mètres alentour. Il faut par contre garder en tête sa lente croissance : les effets seront vraiment significatifs dans quelques années. Autant d’arbres vont aussi améliorer la qualité de l’air : des arbres en villes réduisent de 50% les particules fines. Le sol deviendra perméable et l’eau permettre d’alimenter la biodiversité du sol. Et évidemment, la qualité de vie des habitants va reprendre des couleurs.</br>" +
+                            "Mais d’un autre côté, une foret urbaine fait face à de nombreux facteurs de stress : la pollution de l’air, de l’eau, des sols sont autant de facteurs qui vont avoir des conséquences sur la croissance de la foret.</br>" +
+                            "Alors, une solution à envisager :<a href='https://permafforest.fr/blog/micro-foret/methode-miyawaki/'>la méthode Miyawaki</a>",
+                        "temperature": -2,
+                        "happiness": 1,
+                        "money": -1,
+                        "nextQuestion": null,
+                        "image": null
+                    }]
+            }
+        }
 
 app.get('/question/:questionId', function (req, res) {
     const questionId = parseInt(req?.params?.questionId, 10);

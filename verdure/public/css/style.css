@@ -237,7 +237,7 @@ SLIDE QUESTION
 
 
 
-#city1, .city2,.city3, .city4,.city5, .city6{
+#city1, #city2,#city3, #city4,#city5, #city6{
     position : absolute;
     top : 27%;
     right :0;
@@ -246,7 +246,7 @@ SLIDE QUESTION
     width: 100%;
 }
 
-#boul1,#boul2,#parking1,#parking2{
+#boulevard1,#boulevard2,#parking1,#parking2,#parking3,#parking4{
     position : absolute;
     top : 20%;
     right :0;
