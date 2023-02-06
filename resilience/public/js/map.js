@@ -33,9 +33,13 @@ function load() {
     window.localStorage.setItem('started', 1);
     document.getElementById("heure").value = window.localStorage.getItem('heure');
     document.getElementById("steps").value = " " + window.localStorage.getItem('steps') + "/8 ";
+    if(window.localStorage.getItem("popup") == "true" ){
+        document.getElementById("popup").style.visibility = "visible";
+    }
     regions.forEach(element => {
         if (window.localStorage.getItem(element.id) == "true") {
             element.setAttribute('filter', "url(#saturation1)");
+            element.style.cursor = "pointer";
         }
     });
 }
@@ -45,6 +49,8 @@ function init() {
     window.localStorage.setItem('steps', 0);
     window.localStorage.setItem('compt', "");
     window.localStorage.setItem('heure', "8:00 ");
+    window.localStorage.setItem('heure', " 8:00 ");
+    window.localStorage.setItem("popup", "false");
     window.localStorage.setItem('_8', "false");
     window.localStorage.setItem('_9', "false");
     window.localStorage.setItem('_10', "false");
@@ -68,3 +74,12 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+function manger() {
+    compt = window.localStorage.getItem("compt");
+    window.localStorage.setItem('compt', compt + 1);
+    window.localStorage.setItem('heure', " 14:00 ");
+    window.localStorage.setItem("popup", "false");
+    window.location = "./dialogue.html?15";
+}
+
+load();

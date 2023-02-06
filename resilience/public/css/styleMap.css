@@ -325,3 +325,31 @@ body{
     font-size: 0.5em;
   }
   
+
+.popup {
+    z-index:1;
+    position: absolute !important;
+    background-size: 80%, 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    top: 40%;
+    bottom: 40%;
+    left: 5%;
+    right: 5%;
+    border-radius: 40px;
+    border-color: black;
+    border-width: thick;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.popup .popuptext {
+    font-size: 5vw;
+    color: black;
+    font-family: 'Montserrat';
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px
+}
