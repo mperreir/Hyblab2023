@@ -59,6 +59,8 @@ ubtn.forEach(element => {
 });
 
 document.getElementById("map_link").addEventListener('click', () => {
+  window.localStorage.setItem('started', 0);
+  window.localStorage.setItem('steps', 0);
   window.localStorage.setItem('compt', "");
   window.localStorage.setItem('heure', " 8:00 ");
   window.localStorage.setItem('_8', "false");

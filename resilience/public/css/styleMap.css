@@ -181,6 +181,11 @@ body{
         width: 100vw; /* content is full width (and full height because of the default rule for container height */
     }
 
+    .modal {
+        margin-left: 0 !important;
+        width: 100vw !important; 
+    }
+
     /* We set a default font size here. It will be the base for all other font sizes */
     /* Here the font size is proportional to content width */
     body{
@@ -198,6 +203,11 @@ body{
         height: calc(100 * 16vw / 9); /* adjust height so that aspect ratio is 9/16 */
     }
 
+    .modal {
+        margin-left:0 !important;
+        width: 100vw !important; 
+    }
+
     /* We set a default font size here. It will be the base for all other font sizes */
     /* Here the font size is proportional to content width */
     body{
@@ -208,7 +218,9 @@ body{
 /*********************************************************************/
 
 #page-map{
-    background-color: #baffc9;
+    /*background-color:#296C2B;*/
+    background: rgb(51,134,53);
+    background: linear-gradient(180deg, rgba(51,134,53,1) 26%, rgba(38,85,39,1) 100%);
     width: 100%;
     height: 100%;
     display: flex;
@@ -217,33 +229,99 @@ body{
 
 #header-icons{
     height: 10%;
+    width: auto;
+    padding-left: 5%;
+    padding-right: 5%;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
-    align-items: baseline;
+    align-items: center;
+    margin-top:5px;
 }
 
 #credits{
+    filter: drop-shadow(1px 1px 5px rgb(0 0 0 / 0.8));
     width: 100%;
 }
 
 #trophe{
+    filter: drop-shadow(1px 1px 5px rgb(0 0 0 / 0.8));
     width: 100%;
 }
 
 #unlock_audio{
-    width: 10%;
+    width: 100%;
+    filter: brightness(0) invert(1) drop-shadow(1px 1px 5px rgb(0 0 0 / 0.8));
 }
 
-#heure {
-    font-size: 3vw;
-    text-shadow: 1px 1px 1px #000;
-    border-radius: 2vw;
-    background-color: white;
+#logo{
+    filter: drop-shadow(1px 1px 5px rgb(0 0 0 / 0.8));
+    width: 100%;
 }
 
 #map{
     width: 100%;
+    height: 83%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-self: center;
+    cursor: pointer;
 }
+
+#bottom{
+    display: flex;
+    height:7%;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: -5px;
+}
+
+#heure{
+    font-size: 4vh;
+    color: white;
+    text-shadow: 1px 1px 1px #000;
+    background: none;
+    border: none;
+}
+
+#steps{
+    font-size: 4vh;
+    color: white;
+    text-shadow: 1px 1px 1px #000;
+    background: none;
+    border: none;
+}
+
+/* The Modal (background) */
+.modal {
+    margin-left: calc((100vw - 100 * 3vh / 4) / 2);
+    width: calc(100 * 3vh / 4);
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    top: 0;
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    cursor:pointer;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    width:80%;    
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    text-align:center;
+    font-family:cursive;
+    cursor:pointer;
+  }
+
+  .modal-content p {
+    font-size: 0.5em;
+  }
+  
