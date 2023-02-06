@@ -1,16 +1,23 @@
 "use strict";
 
-let s0 = document.getElementById("s0");
-let s1 = document.getElementById("s1");
-
 let next0 = document.getElementById("next0")
 next0.addEventListener("click", () => {
   display("s1")
 })
 
-let btn1 = document.getElementById("next1")
-btn1.addEventListener("click", () => {
+let next1 = document.getElementById("next1")
+next1.addEventListener("click", () => {
   display("s4_1")
+})
+
+let next4_1 = document.getElementById("next4_1")
+next4_1.addEventListener("click", () => {
+  display("s5")
+})
+
+let next4_2 = document.getElementById("next4_2")
+next4_2.addEventListener("click", () => {
+  display("s5")
 })
 
 function display(id) {

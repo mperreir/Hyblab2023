@@ -194,11 +194,10 @@ main>section {
 }
 
 #myBar {
-    width: 5%;
     height: 15px;
     background-color: red;
-    border-top-right-radius: 40%;
-    border-bottom-right-radius: 40%;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
 }
 
 .fixed-top {
