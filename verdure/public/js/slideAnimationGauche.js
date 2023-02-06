@@ -28,6 +28,15 @@ const initSlideAnimationGauche = function(){
     delay : 1200
   });
 
+  anime({
+    targets : "#animationSlideGauche .route",
+    scale:0,
+    delay : 100,
+    easing: 'easeInOutSine',
+    direction: 'normal',
+    duration :2000,
+  })
+
   //animation finale
   anime({
     targets: "#animationSlideGauche .img_gauche",
@@ -39,8 +48,10 @@ const initSlideAnimationGauche = function(){
     duration :2000,
   })
 
+
   setTimeout(()=> {
     swiper.enable()
     swiper.slideTo(13,1)
  },5000)
+
 };
