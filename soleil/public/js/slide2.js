@@ -8,8 +8,13 @@ const initSlide2 = async function(){
       swiper.slideNext();
       initSlide3();
     }
+
     
   });
+  $("#adresse button.text").click(function(){
+    console.log("button");
+    changeText();
+  })
   $("#adresse header button").click(function(){
     swiper.slidePrev();
   })
@@ -17,4 +22,9 @@ const initSlide2 = async function(){
 
 function isValidAdress(adress){
   return true;
+}
+
+function changeText(){
+  console.log("ici");
+  $("#adresse commentaire-soli p").html("Vous me trouvez trop curieux ? Votre adresse va servir à calculer votre potentiel d’ensoleillement.")
 }

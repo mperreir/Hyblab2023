@@ -34,7 +34,7 @@
       <!-- section d'accueil -->
       <section id="accueil" class="swiper-slide">
         <header>
-          <h1 id="titre">Welcome</h1>
+          <h1 class="titre">Welcome</h1>
         </header>
         <div>
           <div><p id="objsol">“OBJECTIF SOLEIL</p>
@@ -50,7 +50,7 @@
           </div>
         </div>
         <footer>
-          <button id = "testB">Commencer</button>
+          <button>Commencer</button>
         </footer>
       </section>
 
@@ -58,17 +58,19 @@
       <section id="adresse" class="swiper-slide">
         <header>
           <button class="retour">←</button>
-          <p class="intitulé">Où habitez-vous ?</p>
+          <p class="titre">Où habitez-vous ?</p>
         </header>
         <section class="main-location-page">
           <img class="img-adresse" src="img/soliAdresse.png">
+          <img class="illustrationAdresse" src="img/FondAdresse.png">
           <div class="commentaire-soli">
             <img src="img/soliMontgolfiere.png">
-            <p>“ Ne tombez pas dans le panneau,
+
+              <p id="SoliExTex">“ Ne tombez pas dans le panneau,
               la solution n’est pas forcément sur
               votre toit. Pour obtenir la mission
               la plus pertinente, j’ai besoin de
-              votre adresse. ”
+              votre adresse. ” </p>
           </div>
           <div class="location-input">
             <input type="text" placeholder="Renseignez votre adresse">
@@ -82,7 +84,7 @@
       <section id="logement" class="swiper-slide"> <!-- Page du type de logement -->
         <header>
           <button class="retour">←</button>
-          <p id="base">
+          <p class="titre">
             Vous habitez dans :
           </p>
         </header>
@@ -90,36 +92,69 @@
           
           <section id="ligne">
             <div id="colonne2">
-              <input type="radio" id="contactChoice1"
-                         name="logement" value="logement">
-                  <label for="contactChoice1">Maison</label>
+              <section id="Choix2">
+                <label for="contactChoice1">Maison</label>
+              </section>
+              <section id="Choix2">
+                <label for="contactChoice1">
                   <img src="img/Maison.png"/>
-                </div>
+                </label>
+              </section>
+              <section id="Choix2">
+                <input type="radio" id="contactChoice1"
+                           name="logement" value="logement">
+              </section>
+            </div>
             <div id="colonne2">
-              <input type="radio" id="contactChoice2"
-                         name="logement" value="logement">
-                  <label for="contactChoice1">Immeuble</label>
+              <section id="Choix2">
+                <label for="contactChoice2">Immeuble</label>
+              </section>
+              <section id="Choix2">
+                <label for="contactChoice2">
                   <img src="img/Immeuble.png"/>
-                </div>
+                </label>
+              </section>
+              <section id="Choix2">
+                <input type="radio" id="contactChoice2"
+                name="logement" value="logement">
+              </section>
+            </div>
           </section>
           <section id="ligne">
+            <p class="titre">Vous êtes : </p>
             <div id="colonne2">
-              <input type="radio" id="contactChoice1"
-                         name="propiétaire" value="propiétaire">
-                  <label for="contactChoice1">Propiétaire</label>
+              <section id="Choix2">
+                <label for="contactChoice3">Propiétaire</label>
+              </section>
+              <section id="Choix2">
+                <label for="contactChoice3">
                   <img src="img/Propri.png"/>
-                </div>
+                </label>
+              </section>
+              <section id="Choix2">
+                <input type="radio" id="contactChoice3"
+                         name="propiétaire" value="propiétaire">
+              </section>
+            </div>
             <div id="colonne2">
-              <input type="radio" id="contactChoice2"
-                         name="propiétaire" value="propiétaire" placeholder="Renseignez votre adresse">
-                  <label for="contactChoice1">Locataire</label>
+              <section id="Choix2">
+                <label for="contactChoice4">Locataire</label>
+              </section>
+              <section id="Choix2">
+                <label for="contactChoice4">
                   <img src="img/Locataire.png"/>
-                </div>
+                </label>
+              </section>
+              <section id="Choix2">
+                <input type="radio" id="contactChoice4"
+                         name="propiétaire" value="propiétaire" placeholder="Renseignez votre adresse">
+              </section>
+            </div>
           </section>
           <section id="image">
-            <div class="commentaire-soli">
+            <div class="commentaire-soli2">
               <img src="img/soliMontgolfiere.png">
-            <p>Pas besoin d’être propriétaire ou d’avoir une maison pour agir en faveur de l’énergie photovoltaïque !</p>
+            <p id="SoliExTex2">Pas besoin d’être propriétaire ou d’avoir une maison pour agir en faveur de l’énergie photovoltaïque !</p>
             </div>
             
           </section>
@@ -138,7 +173,7 @@
         <header>
           <button class="retour">retour</button>
           <button id="info">I</button> <!-- Bouton Information (à copier sur les autres slide) -->
-          <p id="base">
+          <p class="titre">
             Comment est la pente de votre toit ?
           </p>
         </header>
@@ -174,7 +209,7 @@
             </section>
           <section class="commentaire-soli">
             <img src="img/soliMontgolfiere.png">
-            <p>Mais pourquoi parler de l’inclinaison du toit ? C’est essentiel pour la performance de votre module photovoltaïque. </p>
+            <p id="SoliExTex">Mais pourquoi parler de l’inclinaison du toit ? C’est essentiel pour la performance de votre module photovoltaïque. </p>
           </section>
           </div>
           
@@ -193,16 +228,18 @@
         <header>
           <button class="retour">retour</button>
 
-          <h1>Comment votre toit est-il orienté</h1>
+          <h1 class="titre">Comment votre toit est-il orienté</h1>
         </header>
-        <section id="image2" >
-          <img src="img/MaisonCampagne.png">
-        </section>
-        <div class="boussole"><img class="illustration" src="img/bousolle.png" alt="0">
-        <p>Appuier sur la boussole 
-          pour choisir votre orientation</p></div>
+        <div id="ligne">
+          <section id="image" >
+            <img src="img/MaisonCampagne.png">
+          </section>
+          <div class="boussole"><img class="illustration" src="img/bousolle.png" alt="0">
+          <p>Appuier sur la boussole 
+            pour choisir votre orientation</p></div>
+        </div>
         <div id="jauge">
-          <img id="Soli2" src="img/montgolfiereAvancee.svg"/>
+          <img id="Soli3" src="img/montgolfiereAvancee.svg"/>
         </div>
         <footer>
           <button>Valider</button>
@@ -213,10 +250,13 @@
       <section id="ombre" class="swiper-slide">
         <header>
           <button class="retour">retour</button>
+          <p class="titre">
+            Il y a t’il de l’ombre sur votre toit ?
+          </p>
         </header>
         <section>
           <div class="contenu-page">
-            <img class="illustration" src="hyblab_2023.jpg">
+            <img id="image" src="hyblab_2023.jpg">
             <div id="choix-ombre">
               <form >
                 <div id="colonne3">
@@ -238,6 +278,15 @@
                   <img id="choix-log" src="hyblab_2023.jpg"/>
                 </div>
               </form>
+              <section class="commentaire-soli">
+                <img src="img/soliMontgolfiere.png">
+                <p id="SoliExTex">   “ il faut aussi que
+                  les modules soient inclinés vers
+                  l’équateur. La France est située
+                  dans l’hémisphère nord, alors,
+                  vous avez tout intérêt à orienter
+                  vos panneaux vers le sud.”</p>
+              </section>
             </div>
           </div>
           <div id="jauge">
@@ -250,28 +299,28 @@
       <section id="facultatif" class="swiper-slide">
         <header>
           <button class="retour">retour</button>
-          Autres questions
+          <p class="titre">Autres questions</p>
         </header>
         <div id = "ligne">
-          <img src="img/montgolfiereAvancee.png">
+          <img id="img-ques" src="img/SoliQuestion.png">
           <section id="ligne">
             <form >
-              <section id="ligne">
+              <section id="bulle-question">
                 <input type="checkbox" id="facul1"
                        name="contact" value="Jamais">
                 <label class="choix-texte2" for="facul1">Je participe à la vie de ma co propriété</label>
               </section>
-              <section id="ligne">
+              <section id="bulle-question">
                 <input type="checkbox" id="facul2"
                        name="contact" value="Pas trop">
                 <label class="choix-texte2" for="facul2">Je connais un agriculteur près de chez moi</label>
               </section>
-              <section id="ligne">
+              <section id="bulle-question">
                 <input type="checkbox" id="facul3"
                        name="contact" value="Toujours">
                 <label class="choix-texte2" for="facul3">Je m'engage aux décisions prises par ma municipalité</label>
               </section>
-              <section id="ligne">
+              <section id="bulle-question">
                 <input type="checkbox" id="facul4"
                        name="contact" value="Toujours">
                 <label class="choix-texte2" for="facul4">Je m'engage pour la protection de l'environnement</label>
