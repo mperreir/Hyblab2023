@@ -147,6 +147,18 @@ footer>button {
 }
 */
 
+#little-logo-meuh{
+    width: 20%;
+    position: fixed;
+    top: 3%;
+    left: 10%;
+}
+
+#content_main_img{
+    width: 100%;
+    margin-top: 10%;
+}
+
 /* Last slide image is centered */
 #img-fini {
     width: 70%;
