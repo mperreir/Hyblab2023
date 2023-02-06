@@ -13,16 +13,12 @@ h1 {
     color: white;
     border-bottom-right-radius: 1rem;
     border-top-right-radius: 1rem;
-
-
     display: flex;
     justify-content: center;
     align-items: center;
 
 
     text-align: center;
-
-    font-family: 'Montserrat', serif;
     font-style: normal;
     text-transform: uppercase;
 }
@@ -31,9 +27,6 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
-
-
-
 }
 
 #titre {
@@ -46,19 +39,19 @@ header {
 
 .achievement {
     color: black;
-    position: relative;
-    padding: 1em 0.75em;
-    font-size: 0.2em;
+    width: 100%;
+    height: auto;
+    padding: 1em 1em 2em;
+    font-size: 0.3em;
     border-radius: 1rem;
-
-
+    box-sizing: border-box;
+    margin-top:-25px;
     display: flex;
     flex-flow : wrap;
     align-content :space-between;
     justify-content :left;
-
-    margin-bottom: 1rem;
 }
+
 
 .ID {
     width: 2rem;
@@ -68,12 +61,12 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
 }
 
 
 .name {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
@@ -91,15 +84,13 @@ header {
 }
 
 
-.achievement:not(:first-of-type) {
-    position: relative;
-    top: -30px;
-}
+
 
 
 
 .shortDescription-1, .achievement-1 {
     background-color: #CFCCF9;
+
 }
 
 .shortDescription-2, .achievement-2 {
