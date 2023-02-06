@@ -2,22 +2,6 @@
 #container > * {
     width: 75%;
 }
-header#logo-appli {
-    margin-top: 3%;
-}
-header#logo-appli div {
-    padding: 3% 5%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    background-color: var(--gris-clair);
-    border-radius: 500px;
-    width: fit-content;
-}
-
-header#logo-appli div img {
-    min-height: 5vh;
-    max-height: 6vh;
-    transform: translateX(6%);
-}
 
 #presentation {
     font-size: 1.4em;
