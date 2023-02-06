@@ -237,7 +237,7 @@ SLIDE QUESTION
 
 
 
-#city1, #city2,#city3, #city4,#city5, #city6{
+#city1, #city2,#city3, #city4,#city5, #city6,#city7{
     position : absolute;
     top : 27%;
     right :0;
@@ -246,7 +246,7 @@ SLIDE QUESTION
     width: 100%;
 }
 
-#boulevard1,#boulevard2,#parking1,#parking2,#parking3,#parking4{
+#boulevard1,#boulevard2,#parking1,#parking2,#parking3,#parking4,#place1,#place2,#place3,#place4,#place5,#place6,#friche1,#friche2,#friche3,#place{
     position : absolute;
     top : 20%;
     right :0;
@@ -474,7 +474,7 @@ INDICATEUR
 ****QUESTION***
 ***************/
 
-.question-footer1,.question-footer2,.question-footer3,.question-footer4,.question-footer5,.question-footer6{
+.question-footer1,.question-footer2,.question-footer3,.question-footer4,.question-footer5,.question-footer6,.question-footer7{
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -484,14 +484,14 @@ INDICATEUR
     
 }
 
-#question-title1, #question-title2,#question-title3, #question-title4,#question-title5, #question-title6{
+#question-title1, #question-title2,#question-title3, #question-title4,#question-title5, #question-title6, #question-title7{
     color: white;
     text-align: center;
     font-size: 3vh;
     margin: 0.2vh;
 }
 
-#answer1, #answer2,#answer3, #answer4, #answer5, #answer6  {
+#answer1, #answer2,#answer3, #answer4, #answer5, #answer6 , #answer7 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -499,7 +499,7 @@ INDICATEUR
     padding-bottom: 1vh ;
 }
 
-#answer1 p, #answer2 p ,#answer3 p, #answer4 p, #answer5 p, #answer6 p{
+#answer1 p, #answer2 p ,#answer3 p, #answer4 p, #answer5 p, #answer6 p, #answer7 p{
     font-size: 2vh;
     text-align: center;
     height: 100%;
@@ -528,7 +528,7 @@ INDICATEUR
 ****REPONSE***
 ***************/
 
-#short-answer1,#short-answer2,#short-answer3,#short-answer4,#short-answer5,#short-answer6{
+#short-answer1,#short-answer2,#short-answer3,#short-answer4,#short-answer5,#short-answer6,#short-answer7{
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -537,7 +537,7 @@ INDICATEUR
     padding-bottom: 1vh;
 }
 
-#show-button1,#show-button2,#show-button3,#show-button4,#show-button5,#show-button6{
+#show-button1,#show-button2,#show-button3,#show-button4,#show-button5,#show-button6,#show-button7{
     background-color: rgba(245, 245, 220, 0);
     text-decoration: underline;
     border : none;
@@ -547,22 +547,25 @@ INDICATEUR
     width: 20%;
 }
 
-#answer-title1,#answer-title2,#answer-title3,#answer-title4,#answer-title5,#answer-title6 {
+#answer-title1,#answer-title2,#answer-title3,#answer-title4,#answer-title5,#answer-title6,#answer-title7 {
     color: white;
-    text-align: left;
+    text-align: center;
     font-size: 3vh;
     margin-left: 1vh;
     width: 75%;
+    border-right: 2px;
+    border-right-color: antiquewhite;
+    border-right-style: solid;
 }
 
-#consequences1,#consequences2,#consequences3,#consequences4,#consequences5,#consequences6{
+#consequences1,#consequences2,#consequences3,#consequences4,#consequences5,#consequences6,#consequences7{
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
 }
 
-#consequences1 p,#consequences2 p,#consequences3 p,#consequences4 p,#consequences5 p,#consequences6 p{
+#consequences1 p,#consequences2 p,#consequences3 p,#consequences4 p,#consequences5 p,#consequences6 p,#consequences7 p{
     font-size: 2vh;
     text-align: center;
     height: 100%;
@@ -584,11 +587,11 @@ INDICATEUR
     border-width: 5px;
 }
 
-#consequences1 #negativ1,#consequences2 #negativ2,#consequences3 #negativ3,#consequences4 #negativ4,#consequences5 #negativ5,#consequences6 #negativ6{
+#consequences1 #negativ1,#consequences2 #negativ2,#consequences3 #negativ3,#consequences4 #negativ4,#consequences5 #negativ5,#consequences6 #negativ6,#consequences7 #negativ7{
     border-color: red;
 }
 
-#long-answer1,#long-answer2,#long-answer3,#long-answer4,#long-answer5,#long-answer6{
+#long-answer1,#long-answer2,#long-answer3,#long-answer4,#long-answer5,#long-answer6,#long-answer7{
     font-size: 2vh;
     color: rgb(9, 74, 26);
     border-color: rgb(160, 255, 101);
@@ -600,7 +603,7 @@ INDICATEUR
     padding: 1vh;
 }
 
-#title1,#title2,#title3,#title4,#title5,#title6{
+#title1,#title2,#title3,#title4,#title5,#title6,#title7{
     height: 100%;
     display: flex;
     justify-content: space-between;

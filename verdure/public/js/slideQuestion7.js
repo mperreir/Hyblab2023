@@ -1,9 +1,9 @@
 "use strict";
 
 // async init function (because of the awaits on fetches)
-const initSlideQuestion3 = async function(currentQuestion){
+const initSlideQuestion7 = async function(currentQuestion){
 
-  if(currentQuestion != 3){swiper.enable(); swiper.slideTo(7)}
+  if(currentQuestion != 7){swiper.enable(); swiper.slideTo(15)}
 
   const page = document.getElementById(currentQuestion)
   let question = document.querySelector('.question-footer'+currentQuestion)
