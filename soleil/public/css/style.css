@@ -205,8 +205,8 @@ header{
 }
 
 #choix-ombre {
-    position: fixed;
-    bottom: 10%;
+    position: static;
+    margin-top: 10%;
 }
 
 #jauge{
