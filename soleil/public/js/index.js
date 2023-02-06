@@ -4,10 +4,6 @@
 const swiper = new Swiper("#mySwiper", {
   direction: "vertical",
   mousewheel: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
 });
 
 swiper.on("slideChange", function () {
@@ -18,6 +14,14 @@ swiper.on("slideChange", function () {
     case 1:
       initSlide2();
       break;
+    case 2:
+      initSlide3();
+    case 3:
+      initSlide4();
+    case 4:
+      initSlide5();
+    case 5:
+      initSlide6();
   }
 });
 

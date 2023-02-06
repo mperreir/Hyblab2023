@@ -13,6 +13,10 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/slide1.js" defer></script>
   <script src="js/slide2.js" defer></script>
+  <script src="js/slide3.js" defer></script>
+  <script src="js/slide4.js" defer></script>
+  <script src="js/slide5.js" defer></script>
+  <script src="js/slide6.js" defer></script>
   <script src="js/index.js" defer></script>
 </head>
 <body>
@@ -57,12 +61,10 @@
           <p class="intitulé">Où habitez-vous ?</p>
         </header>
         <section class="main-location-page">
-          <img class="illustrationAdresse" src="img/SoliAdresse.png">
-          <img class="illustrationAdresse" src="img/FondAdresse.png">
-          <div id ="SoliExImg" >
-            <img src="img/SoliExplication.png">
-          </div>
-          <div id="SoliExTex">“ Ne tombez pas dans le panneau,
+          <img class="img-adresse" src="img/soliAdresse.png">
+          <div class="commentaire-soli">
+            <img src="img/soliMontgolfiere.png">
+            <p>“ Ne tombez pas dans le panneau,
               la solution n’est pas forcément sur
               votre toit. Pour obtenir la mission
               la plus pertinente, j’ai besoin de
@@ -85,40 +87,45 @@
           </p>
         </header>
         <div id="ligne">
+          
           <section id="ligne">
             <div id="colonne2">
-              <p>Maison</p>
-              <img src="img/Maison.png"/>
+              <input type="radio" id="contactChoice1"
+                         name="logement" value="logement">
+                  <label for="contactChoice1">Maison</label>
+              <img id="choix-log" src="hyblab_2023.jpg"/>
             </div>
             <div id="colonne2">
-              <p>Immeuble</p>
-              <img src="img/Immeuble.png"/>
+              <input type="radio" id="contactChoice2"
+                         name="logement" value="logement">
+                  <label for="contactChoice1">Immeuble</label>
+              <img id="choix-log" src="hyblab_2023.jpg"/>
             </div>
           </section>
           <section id="ligne">
             <div id="colonne2">
-              <p>Propiétaire</p>
-              <img src="img/Propri.png"/>
+              <input type="radio" id="contactChoice1"
+                         name="propiétaire" value="propiétaire">
+                  <label for="contactChoice1">Propiétaire</label>
+              <img id="choix-log" src="hyblab_2023.jpg"/>
             </div>
             <div id="colonne2">
-              <p>Locataire</p>
-              <img src="img/Locataire.png"/>
+              <input type="radio" id="contactChoice2"
+                         name="propiétaire" value="propiétaire" placeholder="Renseignez votre adresse">
+                  <label for="contactChoice1">Locataire</label>
+              <img id="choix-log" src="hyblab_2023.jpg"/>
             </div>
           </section>
-          <section>
-            <div id="SoliExImg">
-              <img src="img/SoliExplication.png"/>
+          <section id="image">
+            <div class="commentaire-soli">
+              <img src="img/soliMontgolfiere.png">
+            <p>Pas besoin d’être propriétaire ou d’avoir une maison pour agir en faveur de l’énergie photovoltaïque !</p>
             </div>
-            <div id="SoliExTex">
-              “Pas besoin d’être propriétaire ou d’avoir une maison pour agir en faveur de l’énergie photovoltaïque ! ”
-            </div>
+            
           </section>
         </div>
         <div id="jauge">
-          <img id="Soli1" src="img/SoliJauge.png"/>
-          
-
-
+          <img id="Soli1" src="img/montgolfiereAvancee.png"/>
         </div>
 
         <footer>
@@ -144,21 +151,21 @@
               <form>
                 <div id="colonne3">
                   <input type="radio" id="contactChoice1"
-                         name="contact" value="Plat">
+                         name="pente" value="Plat">
                   <label for="contactChoice1">Plat</label>
                   <img id="choix-log" src="hyblab_2023.jpg"/>
                   <p>Toit plat</p>
                 </div>
                 <div id="colonne3">
                   <input type="radio" id="contactChoice2"
-                         name="contact" value="Standard">
+                         name="pente" value="Standard">
                   <label for="contactChoice2">Standard</label>
                   <img id="choix-log" src="hyblab_2023.jpg"/>
                   <p>Toit plat</p>
                 </div>
                 <div id="colonne3">
                   <input type="radio" id="contactChoice3"
-                         name="contact" value="Pentu">
+                         name="pente" value="Pentu">
                   <label for="contactChoice3">Pentu</label>
                   <img id="choix-log" src="hyblab_2023.jpg"/>
                   <p>Toit plat</p>
@@ -166,8 +173,13 @@
               </form>
             </section>
           </div>
+          <div class="commentaire-soli">
+            <img src="img/soliMontgolfiere.png">
+            <p>Mais pourquoi parler de l’inclinaison du toit ? C’est essentiel pour la performance de votre module photovoltaïque. </p>
+          </div>
+          
           <div id="jauge">
-            <img id="Soli2" src="img/SoliJauge.png"/>
+            <img id="Soli2" src="img/montgolfiereAvancee.png"/>
           </div>
         </section>
         <footer>
@@ -180,15 +192,17 @@
       <section id="orientation" class="swiper-slide">
         <header>
           <button class="retour">retour</button>
-          <h1>Comment votre toit est-il orienté</h1>
-        </header>
-        <section id="image2" >
-          <img src="img/MaisonCampagne.png">
-        </section>
-        <section id="image2" >
-          <img src="hyblab_2023.jpg">
-        </section>
-        <footer><button>Valider</button></footer>
+          <h1>Comment votre toit est-il orienté</h1></header>
+        <div><img class="illustration" src="hyblab_2023.jpg" /></div>
+        <div class="boussole"><img class="illustration" src="img/bousolle.png" alt="0">
+        <p>Appuier sur la boussole 
+          pour choisir votre orientation</p></div>
+        <div id="jauge">
+          <img id="Soli2" src="img/montgolfiereAvancee.svg"/>
+        </div>
+        <footer>
+          <button>Valider</button>
+        </footer>
 
 
       </section>
@@ -223,20 +237,19 @@
             </div>
           </div>
           <div id="jauge">
-            <img id="Soli4" src="img/SoliJauge.png"/>
+            <img id="Soli4" src="img/montgolfiereAvancee.png"/>
           </div>
         </section>
         <footer><button>Valider</button></footer>
       </section>
+
       <section id="facultatif" class="swiper-slide">
         <header>
           <button class="retour">retour</button>
           Autres questions
         </header>
-        <div id = "ligne2">
-          <section id="image">
-            Image
-          </section>
+        <div id = "ligne">
+          <img src="img/montgolfiereAvancee.png">
           <section id="ligne">
             <form >
               <section id="ligne">
@@ -263,20 +276,26 @@
           </section>
         </div>
         <div id="jauge">
-          <img id="Soli5" src="img/SoliJauge.png"/>
+          <img id="Soli5" src="img/montgolfiereAvancee.png"/>
         </div>
-        <footer><button>Valider</button></footer>
+        <footer>
+          <button>Valider</button>
+          <button class="passer">Passer</button>
+        </footer>
       </section>
+
       <section id="resultat" class="swiper-slide">
         <header>
           <button class="retour">retour</button>
         </header>
       </section>
+
       <section id="analyse" class="swiper-slide">
         <header>
           <button class="retour">retour</button>
         </header>
       </section>
+
     </main>
     <div class="swiper-pagination"></div>
   </div>
