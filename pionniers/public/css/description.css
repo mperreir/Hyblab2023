@@ -37,6 +37,10 @@
     padding: 2%;
 }
 
+.bouton-rond {
+    height: fit-content;
+}
+
 footer {
     height: 15%;
 }
