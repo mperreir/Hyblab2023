@@ -1,79 +1,192 @@
-[{
-  "name": "La ville",
-  "file_name": "img/ville.svg",
-  "main_color": "#A04952",
-  "background_color": "#FFEDEF",
-  "intro": "Lorem ipsum dolor sit amet at imperdiet nulla sit est volutpat. Luptatum duis amet sed et dolor et aliquyam sea tempor kasd vel nonumy justo clita ea. Sadipscing praesent sit elitr duis sed sed lorem. At amet sit labore illum nonumy lorem gubergren amet. Dolor amet dolore sed et accusam consetetur eos euismod labore feugiat nihil stet magna velit invidunt molestie. Eos et accusam odio sed volutpat lorem accusam labore vero invidunt et lorem duis vulputate. Sit eos duis sea clita magna. Dolor amet et sed diam et ea nonumy ut et et molestie. Clita nibh et elit erat clita tempor invidunt tempor. Magna ut gubergren et dolore dolores ut no sit labore diam et et.",
-  "exemple": {
-    "ville": "Paris",
-    "video": "https://www.youtube.com/embed/1Q8fG0TtVAY",
-    "description": "Lorem ipsum dolor sit amet voluptua labore duo ipsum at labore labore lorem. Sadipscing dolor eos amet. Ipsum lobortis diam exerci rebum takimata."
-  },
-  "carte": {
-    "name": "La géothermie en France",
-    "api": "https://api-adresse.data.gouv.fr/search/?q={search}"
-  }
-},
-  {
-    "name": "La mer",
-    "file_name": "img/mer.svg",
-    "main_color": "#5A76B4",
-    "background_color": "#EDF3FF",
-    "intro": "Lorem ipsum dolor sit amet at imperdiet nulla sit est volutpat. Luptatum duis amet sed et dolor et aliquyam sea tempor kasd vel nonumy justo clita ea. Sadipscing praesent sit elitr duis sed sed lorem. At amet sit labore illum nonumy lorem gubergren amet. Dolor amet dolore sed et accusam consetetur eos euismod labore feugiat nihil stet magna velit invidunt molestie. Eos et accusam odio sed volutpat lorem accusam labore vero invidunt et lorem duis vulputate. Sit eos duis sea clita magna. Dolor amet et sed diam et ea nonumy ut et et molestie. Clita nibh et elit erat clita tempor invidunt tempor. Magna ut gubergren et dolore dolores ut no sit labore diam et et.",
-    "exemple": {
-      "ville": "Strasbourg",
-      "video": "https://civam.fr/wp-content/uploads/sites/4/2014/10/big_buck_bunny.mp4",
-      "description": "Lorem ipsum dolor sit amet voluptua labore duo ipsum at labore labore lorem. Sadipscing dolor eos amet. Ipsum lobortis diam exerci rebum takimata."
+{
+  "main": [
+    {
+      "name": "La ville",
+      "file_name": "img/ville.svg",
+      "main_color": "#A04952",
+      "background_color": "#FFEDEF",
+      "intro": "Lorem ipsum dolor sit amet at imperdiet nulla sit est volutpat. Luptatum duis amet sed et dolor et aliquyam sea tempor kasd vel nonumy justo clita ea. Sadipscing praesent sit elitr duis sed sed lorem. At amet sit labore illum nonumy lorem gubergren amet. Dolor amet dolore sed et accusam consetetur eos euismod labore feugiat nihil stet magna velit invidunt molestie. Eos et accusam odio sed volutpat lorem accusam labore vero invidunt et lorem duis vulputate. Sit eos duis sea clita magna. Dolor amet et sed diam et ea nonumy ut et et molestie. Clita nibh et elit erat clita tempor invidunt tempor. Magna ut gubergren et dolore dolores ut no sit labore diam et et.",
+      "exemple": {
+        "ville": "Paris",
+        "video": "https://www.youtube.com/embed/1Q8fG0TtVAY",
+        "description": "Lorem ipsum dolor sit amet voluptua labore duo ipsum at labore labore lorem. Sadipscing dolor eos amet. Ipsum lobortis diam exerci rebum takimata."
+      },
+      "carte": {
+        "name": "La géothermie en France",
+        "api": "https://api-adresse.data.gouv.fr/search/?q={search}"
+      }
     },
-    "carte": {
-      "name": "La géothermie en France",
-      "api": "https://api-adresse.data.gouv.fr/search/?q={search}"
+    {
+      "name": "La mer",
+      "file_name": "img/mer.svg",
+      "main_color": "#5A76B4",
+      "background_color": "#EDF3FF",
+      "intro": "Lorem ipsum dolor sit amet at imperdiet nulla sit est volutpat. Luptatum duis amet sed et dolor et aliquyam sea tempor kasd vel nonumy justo clita ea. Sadipscing praesent sit elitr duis sed sed lorem. At amet sit labore illum nonumy lorem gubergren amet. Dolor amet dolore sed et accusam consetetur eos euismod labore feugiat nihil stet magna velit invidunt molestie. Eos et accusam odio sed volutpat lorem accusam labore vero invidunt et lorem duis vulputate. Sit eos duis sea clita magna. Dolor amet et sed diam et ea nonumy ut et et molestie. Clita nibh et elit erat clita tempor invidunt tempor. Magna ut gubergren et dolore dolores ut no sit labore diam et et.",
+      "exemple": {
+        "ville": "Strasbourg",
+        "video": "https://civam.fr/wp-content/uploads/sites/4/2014/10/big_buck_bunny.mp4",
+        "description": "Lorem ipsum dolor sit amet voluptua labore duo ipsum at labore labore lorem. Sadipscing dolor eos amet. Ipsum lobortis diam exerci rebum takimata."
+      },
+      "carte": {
+        "name": "La géothermie en France",
+        "api": "https://api-adresse.data.gouv.fr/search/?q={search}"
+      }
+    },
+    {
+      "name": "La friche",
+      "file_name": "img/friche.svg",
+      "main_color": "#FFAC7F",
+      "background_color": "#FFF5EF"
+    },
+    {
+      "name": "La rivière",
+      "file_name": "img/riviere.svg",
+      "main_color": "#73CAD6",
+      "background_color": "#F2FDFF"
+    },
+    {
+      "name": "La campagne et la forêt",
+      "file_name": "img/campagne.svg",
+      "main_color": "#59A78D",
+      "background_color": "#F2FFFB"
     }
-  },
-  {
-    "name": "La friche",
-    "file_name": "img/friche.svg",
-    "main_color": "#FFAC7F",
-    "background_color": "#FFF5EF"
-  },
-  {
-    "name": "La rivière",
-    "file_name": "img/riviere.svg",
-    "main_color": "#73CAD6",
-    "background_color": "#F2FDFF"
-  },
-  {
-    "name": "La campagne et la forêt",
-    "file_name": "img/campagne.svg",
-    "main_color": "#59A78D",
-    "background_color": "#F2FFFB"
-  },
-  {
-    "name": "intro1",
-    "tchat": "Bonjour, je suis Sacha, je suis président.e de l’intercommunalité de Vertville."
-  },
-  {
-    "name": "intro2",
-    "tchat": "Ici, élus et citoyens œuvrent ensemble pour lutter contre le réchauffement climatique."
-  },
-  {
-    "name": "intro3",
-    "tchat": "Nous choisissons de mettre à profit (d’exploiter) nos différentes ressources pour produire des énergies renouvelables. "
-  },
-  {
-    "name": "intro4",
-    "tchat": "Cela nous permet d’être également plus indépendant énergétiquement et de créer des emplois."
-  },
-  {
-    "name": "intro5",
-    "tchat": "Entrez votre code postal pour découvrir le score de votre intercommunalité."
-  },
-  {
-    "name": "intro6",
-    "tchat": " Votre score est de "
-  },
-  {
-    "name": "intro7",
-    "tchat": "Il n’est pas définitif. En consultant nos différentes initiatives, vous aurez l’opportunité de le modifier. Il vous suffira d’augmenter votre production dans chacune des énergies."
+  ],
+  "intro": [
+    {
+      "name": "intro0",
+      "tchat": "Bonjour, je suis Sacha, je suis président.e de l’intercommunalité de Vertville."
+    },
+    {
+      "name": "intro1",
+      "tchat": "Bonjour, je suis Sacha, je suis président.e de l’intercommunalité de Vertville."
+    },
+    {
+      "name": "intro2",
+      "tchat": "Ici, élus et citoyens œuvrent ensemble pour lutter contre le réchauffement climatique."
+    },
+    {
+      "name": "intro3",
+      "tchat": "Nous choisissons de mettre à profit (d’exploiter) nos différentes ressources pour produire des énergies renouvelables. "
+    },
+    {
+      "name": "intro4",
+      "tchat": "Cela nous permet d’être également plus indépendant énergétiquement et de créer des emplois."
+    },
+    {
+      "name": "intro5",
+      "tchat": "Entrez votre code postal pour découvrir le score de votre intercommunalité."
+    },
+    {
+      "name": "intro6",
+      "tchat": " Votre score est de "
+    },
+    {
+      "name": "intro7",
+      "tchat": "Il n’est pas définitif. En consultant nos différentes initiatives, vous aurez l’opportunité de le modifier. Il vous suffira d’augmenter votre production dans chacune des énergies."
+    }
+  ],
+  "conclusion": {
+    "titre" : "Ton bilan !",
+    "texte1" : "Au niveau national et européen, nous nous sommes fixés des objectifs qui permettront une amélioration de notre santé et de notre impact sur la planète.",
+    "texte2" : "Voici nos objectifs pour 2030 !",
+    "logo" : "../img/logo.svg",
+    "bouton" : "Retour à l’accueil",
+    "color": {
+      "main": ["#59A78D", "#A04952"],
+      "background": ["#D9D9D9", "#F6F6F6"]
+    },
+    "credits": {
+      "titre": "Crédits",
+      "membres": [{
+        "nom": "Le Gall",
+        "prenom": "Tristan",
+        "ecole": "Polytech Nantes"
+      },{
+        "nom": "Blot",
+        "prenom": "William",
+        "ecole": "Polytech Nantes"
+      },{
+        "nom": "Daudin",
+        "prenom": "Clément",
+        "ecole": "Polytech Nantes"
+      },{
+        "nom": "Sakellariou",
+        "prenom": "Dimitra",
+        "ecole": "Polytech Nantes"
+      },{
+        "nom": "Gasnier",
+        "prenom": "Simon",
+        "ecole": "AGR"
+      },{
+        "nom": "Le Sommer",
+        "prenom": "Adam",
+        "ecole": "AGR"
+      },{
+        "nom": "Nicol",
+        "prenom": "Marie",
+        "ecole": "AGR"
+      },{
+        "nom": "Segura",
+        "prenom": "Léo",
+        "ecole": "EPJT"
+      }]
+    },
+
+    "piechart": {
+      "description": "Part d’énergie renouvelable dans le mix énergétique en France",
+      "data": [
+        {
+          "year": 2020,
+          "value": 20
+        },
+        {
+          "year": 2030,
+          "value": 40
+        }
+      ]
+    },
+    "barchart": {
+      "description": "Consommation d’énergie en France sur un an",
+      "data": [
+        {
+          "year": 2020,
+          "value": 2570
+        },
+        {
+          "year": 2050,
+          "value": 1820
+        }
+      ]
+    },
+    "barchart_global": {
+      "description": "Taux de la population favorable à l’installation d’énergies renouvelables",
+      "data": [
+        {
+          "energy": "Solaire",
+          "percent": 75,
+          "color": "#FFAC7F"
+        },
+        {
+          "energy": "Biomasse",
+          "percent": 67,
+          "color": "#59A78D"
+        },
+        {
+          "energy": "Géothermie",
+          "percent": 62,
+          "color": "#A04952"
+        },
+        {
+          "energy": "Hydraulique",
+          "percent": 55,
+          "color": "#73CAD6"
+        },
+        {
+          "energy": "Éolien",
+          "percent": 52,
+          "color": "#5A76B4"
+        }
+      ]
+    }
   }
-]
+}

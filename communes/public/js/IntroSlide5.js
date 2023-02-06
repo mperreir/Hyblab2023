@@ -14,7 +14,7 @@ var iRow; // initialise current row
 const introSlide5 = async function() {
     let response = await fetch('../data/data.json');
     const data = await response.json();
-    const data_filter = data.filter(function(item){return item.name === "intro5";})[0]
+    const data_filter = data.intro.filter(function(item){return item.name === "intro5";})[0]
     aText = new Array(data_filter.tchat)
     iIndex = 0;
     iArrLength = aText[0].length;

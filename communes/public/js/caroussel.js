@@ -21,7 +21,7 @@ fetch('../data/data.json')
     .then(data => {
         // get element by id
         const carousel = document.querySelector('#carousel');
-        data.forEach(item => {
+        data.main.forEach(item => {
             // create a div element
             const div = document.createElement('div');
             // add class
