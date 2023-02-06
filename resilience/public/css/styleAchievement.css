@@ -1,6 +1,6 @@
 #container {
     background-color: white;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 h1 {
@@ -88,11 +88,13 @@ header {
     margin-top: 1rem;
     margin-left: 1rem;
 
-
 }
 
 
-
+.achievement:not(:first-of-type) {
+    position: relative;
+    top: -30px;
+}
 
 
 
