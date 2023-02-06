@@ -25,9 +25,13 @@ regions.forEach(element => {
 
 function load() {
     document.getElementById("heure").value = window.localStorage.getItem('heure');
+    if(window.localStorage.getItem("popup") == "true" ){
+        document.getElementById("popup").style.visibility = "visible";
+    }
     regions.forEach(element => {
         if (window.localStorage.getItem(element.id) == "true") {
             element.setAttribute('filter', "url(#saturation1)");
+            element.style.cursor = "pointer";
         }
     });
 }
@@ -35,6 +39,7 @@ function load() {
 function init() {
     window.localStorage.setItem('compt', "");
     window.localStorage.setItem('heure', " 8:00 ");
+    window.localStorage.setItem("popup", "false");
     window.localStorage.setItem('_8', "false");
     window.localStorage.setItem('_9', "false");
     window.localStorage.setItem('_10', "false");
@@ -43,6 +48,14 @@ function init() {
     window.localStorage.setItem('_13', "false");
     window.localStorage.setItem('_14', "false");
     window.localStorage.setItem('_16', "false");
+}
+
+function manger() {
+    compt = window.localStorage.getItem("compt");
+    window.localStorage.setItem('compt', compt + 1);
+    window.localStorage.setItem('heure', " 14:00 ");
+    window.localStorage.setItem("popup", "false");
+    window.location = "./dialogue.html?15";
 }
 
 load();

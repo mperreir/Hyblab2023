@@ -142,6 +142,14 @@ function displayAnswer(message, names) {
     });
 };
 
+document.getElementById('left-arrow').addEventListener('click', function () {
+    if (window.localStorage.getItem("compt").length == 3) {
+        window.localStorage.setItem("popup","true")
+    }
+    window.location = "./map.html"
+
+});
+
 initConversation();
 
 // Path : http://localhost:8080/resilience/dialogue.html?id=2
