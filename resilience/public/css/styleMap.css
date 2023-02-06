@@ -211,43 +211,27 @@ body{
     background-color: #baffc9;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-#header-icons{
-    height: 10%;
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
 }
 
 #parametres{
-    width: 100%;
+    width: 10%;
+    margin-top: 5%;
+    margin-left: 7%;
 }
 
 #trophe{
-    width: 100%;
+    position:absolute;
+    width: 10%;
+    top: 5%;
+    right: 7%;
 }
 
 #unlock_audio{
-    width: 10%;
+    width: 7%;
+    top: 5%;
+    left: 20%;
 }
 
-<<<<<<< HEAD
-#heure {
-    font-size: 3vw;
-    text-shadow: 1px 1px 1px #000;
-    border-radius: 2vw;
-    background-color: white;
-}
-
-#map{
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    width: 100%;
-=======
 #map{
     left: 0%;
     width: 100%;
@@ -258,5 +242,4 @@ body{
     text-shadow: 1px 1px 1px #000;
     border-radius: 2vw;
     background-color: white;
->>>>>>> 1af530f (Ajout heure)
 }
