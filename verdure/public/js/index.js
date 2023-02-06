@@ -8,7 +8,7 @@ let swiper = new Swiper("#mySwiper", {
   mousewheel: true,
   pagination: {
     el: ".swiper-pagination",
-    clickable: true,
+    clickable: false,
   },
   allowSlidePrev : true,
   enabled : true
@@ -30,19 +30,24 @@ swiper.on("slideChange", function () {
       initSlideAnimationEntreeTexte();
       break;
     case 4: 
+    swiper.disable();
       initSlideAnimationDroit();
       break;
     case 5: 
-    swiper.disable();
+      swiper.disable();
       initSlideQuestion2(next_Question);
       break;
     case 6: 
-      initSlideAnimationBas();
+      swiper.disable();
+      initSlideQuestion3(next_Question);
       break;
     case 7: 
       initSlideAnimationEntree();
       break;
     case 8: 
+      initSlideAnimationBas();
+    break;
+    case 9: 
       initEndSlide();
       break;
     default:

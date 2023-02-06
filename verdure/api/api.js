@@ -28,7 +28,7 @@ const prompts = {
             "happiness": 1,
             "money": -1,
             "nextQuestion": 2,
-            "image": null
+            "image": "boul1"
         },
             {
                 "prompt": "Planter beaucoup d’arbres mais ronger sur une voie de circulation",
@@ -41,7 +41,7 @@ const prompts = {
                 "happiness": -1,
                 "money": -2,
                 "nextQuestion": 2,
-                "image": null
+                "image": "boul2"
             }]
     },
     2: {
@@ -57,7 +57,7 @@ const prompts = {
             "happiness": -2,
             "money": -1,
             "nextQuestion": 4,
-            "image": null
+            "image": "parking1"
         },
             {
                 "prompt": "Destruction de la chaussée et déperméabilisation pour planter des arbres",
@@ -70,7 +70,7 @@ const prompts = {
                 "happiness": -2,
                 "money": -2,
                 "nextQuestion": 3,
-                "image": null
+                "image": "parking2"
             }]
     },
     3: {

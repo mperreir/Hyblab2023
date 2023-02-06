@@ -39,4 +39,11 @@ const initSlideAnimationDroit = function(){
     direction: 'normal',
     duration :2000,
   })
+
+
+  setTimeout(()=> {
+    swiper.enable()
+    swiper.slideTo(5,1)
+ },5000)
+  
 };

@@ -7,13 +7,12 @@ const initSlideQuestion1 = async function(currentQuestion){
 
   const page = document.getElementById(currentQuestion)
   let question = document.querySelector('.question-footer'+currentQuestion)
-  let city = document.querySelector('.city')
+  let city = document.querySelector('#city'+currentQuestion)
 
 
 
   setTimeout(()=> {
    question.style.opacity = 100;
-   page.style.backgroundPositionY = "-10vh";
    city.style.top = "20%";
    swiper.enabled = false;
 },1000

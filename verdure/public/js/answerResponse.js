@@ -42,6 +42,9 @@ const answered = function (chosen) {
 
     document.getElementById('short-answer'+current_question_number).style.display = 'block';
 
+    document.getElementById('city'+current_question_number).style.opacity = '0';
+    document.getElementById(chosen.image).style.opacity = '100'
+
     //Evolution of all indics
     changementThermo(chosen.temperature * 10);
     changementHappy(chosen.happiness * 10);
