@@ -2,31 +2,29 @@
 let params = new URLSearchParams(window.location.search);
 let conversationId = params.get('id') || 1;
 
+let htmlDialogue = document.querySelector('#dialogue');
+let htmlDialogueHead = document.querySelector('#head');
+let htmlDialogueMessages = document.querySelector('#messages');
+
+
+
 async function initConversation() {
     response = await fetch(`data/conversation${conversationId}.json`);
     const conversation = await response.json();
-    const names = conversation.names;
-
-    let htmlDialogueHead = document.querySelector('#head');
-
-    let htmlNameLeft = document.createElement('p');
-    htmlNameLeft.classList.add('name');
-    htmlNameLeft.classList.add('left');
-    htmlNameLeft.textContent = conversation.names[0];
-    htmlDialogueHead.appendChild(htmlNameLeft);
-    let htmlNameRigth = document.createElement('p');
-    htmlNameRigth.classList.add('name');
-    htmlNameRigth.classList.add('right');
-    htmlNameRigth.textContent = conversation.names[1];
-    htmlDialogueHead.appendChild(htmlNameRigth);
 
 
-    let htmlDialogue = document.querySelector('#dialogue');
-    let htmlDialogueMessages = document.querySelector('#messages');
-    runConversation(conversation.messages, names, htmlDialogue, htmlDialogueMessages);
+    conversation.names.forEach(name => {
+        let htmlName = document.createElement('p');
+        htmlName.classList.add('name');
+        htmlName.textContent = name
+        htmlDialogueHead.appendChild(htmlName);
+    })
+
+
+    runConversation(conversation.messages, names);
 };
 
-function runConversation(messages, names, htmlDialogue, htmlDialogueMessages) {
+function runConversation(messages, names) {
     let message;
     let paused = false;
 
@@ -47,13 +45,13 @@ function runConversation(messages, names, htmlDialogue, htmlDialogueMessages) {
 
             switch (message.type) {
                 case 'message':
-                    displayMessage(message, names, htmlDialogue, htmlDialogueMessages);
+                    displayMessage(message, names);
                     break;
                 case 'question':
-                    displayQuestion(message, names, htmlDialogue, htmlDialogueMessages);
+                    displayQuestion(message, names);
                     break;
                 case 'answer':
-                    displayAnswer(message, names, htmlDialogue, htmlDialogueMessages);
+                    displayAnswer(message, names);
                     break;
                 default:
                     console.log('Unknown message type');
@@ -65,7 +63,7 @@ function runConversation(messages, names, htmlDialogue, htmlDialogueMessages) {
 };
                     
 
-function displayMessage(message, names, htmlDialogue, htmlDialogueMessages) {
+function displayMessage(message, names) {
     let htmlMessage = document.createElement('p');
     htmlMessage.classList.add('message');
 
@@ -81,7 +79,7 @@ function displayMessage(message, names, htmlDialogue, htmlDialogueMessages) {
     htmlDialogueMessages.appendChild(htmlMessage);
 };
 
-function displayQuestion(message, names, htmlDialogue, htmlDialogueMessages) {
+function displayQuestion(message, names) {
     let htmlQuestionList = []; // Keep track of all the answers we create
 
     // While there are questions to ask
@@ -119,7 +117,7 @@ function displayQuestion(message, names, htmlDialogue, htmlDialogueMessages) {
 };
 
 
-function displayAnswer(message, names, htmlDialogue, htmlDialogueMessages) {
+function displayAnswer(message, names) {
     let htmlanswerList = []; // Keep track of all the answers we create
     // Create each answer
     message.answer.forEach(answerLine => {
@@ -138,7 +136,7 @@ function displayAnswer(message, names, htmlDialogue, htmlDialogueMessages) {
                 otherAnswer.remove();
             });
 
-            runConversation(answerLine, names, htmlDialogue);
+            runConversation(answerLine, names);
         });
 
         htmlanswerList.push(htmlAnswer);    // Add it to the list
