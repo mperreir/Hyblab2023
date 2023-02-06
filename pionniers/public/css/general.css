@@ -189,7 +189,7 @@ p {
 /* Fond sur le dernier quart en bas */
 .rbg-bottom-extreme {
     background-image: url("../img/rainbow_background_bottom.svg");
-    background-position: center 75vh;
+    background-position: center 80vh;
 }
 
 /*  ----------------------------------------------------------
@@ -283,7 +283,6 @@ footer#folder { /* Pour coller le folder en bas de la page */
     height: 3vh;
     width: 3vh;
     padding: 2%;
-    align-items: center;
 }
 
 
