@@ -30,6 +30,15 @@ const initSlideAnimationHaut = function(){
     delay : 1200
   });
 
+  anime({
+    targets : "#animationSlideHaut .route",
+    scale:0,
+    delay : 100,
+    easing: 'easeInOutSine',
+    direction: 'normal',
+    duration :2000,
+  })
+
   //animation finale
   anime({
     targets: "#animationSlideHaut .img_haut",

@@ -28,12 +28,23 @@ const initSlideAnimationBas = function(){
     delay : 1200
   });
 
+  anime({
+    targets : "#animationSlideBas .route",
+    scale:0,
+    delay : 100,
+    easing: 'easeInOutSine',
+    direction: 'normal',
+    duration :2000,
+  })
+
+  
+
   //animation finale
   anime({
     targets: "#animationSlideBas .img_bas",
     scale: 3,
     translateY : -15,
-    translateX :5,
+    translateX :0,
     delay : 1300,
     easing: 'easeInOutSine',
     direction: 'normal',

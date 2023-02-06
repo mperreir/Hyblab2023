@@ -6,7 +6,7 @@ const initSlideAnimationEntree = function(){
     const bas = document.querySelector('#animationSlideEntree .img_bas');
     const gauche = document.querySelector('#animationSlideEntree .img_gauche');
 
-    // (Re)set initial position of img
+    //(Re)set initial position of img
   droit.setAttribute('style', 'transform :translateX(300%);');
   gauche.setAttribute('style', 'transform :translateX(-300%);');
   haut.setAttribute('style', 'transform :translateY(-300%);');
