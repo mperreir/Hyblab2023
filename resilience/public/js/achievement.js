@@ -12,9 +12,11 @@ async function achievement() {
         htmlAchiev.classList.add(`achievement-${achiev.ID}`);
 
         let htmlID = document.createElement('div');
-        htmlID.textContent = `ID: ${achiev.ID}`;
+        htmlID.classList.add('ID');
+        htmlID.textContent = `${achiev.ID}`;
 
         let htmlName = document.createElement('h2');
+        htmlName.classList.add('name');
         htmlName.textContent = achiev.name;
 
         let htmlDesc = document.createElement('p');
