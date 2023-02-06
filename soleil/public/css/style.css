@@ -34,6 +34,13 @@ body{
     margin :auto
 }
 
+#image{
+    width : 85%;
+    height : 150px;
+    margin :auto
+}
+
+
 #image2{
     width : 85%;
     height : 25%;
