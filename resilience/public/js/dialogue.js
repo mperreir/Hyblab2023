@@ -5,14 +5,15 @@ let conversationId = params.get('id') || 1;
 let htmlDialogue = document.querySelector('#dialogue');
 let htmlDialogueHead = document.querySelector('#head');
 let htmlDialogueMessages = document.querySelector('#messages');
-
+var messages = [];
+var names = [];
 
 
 async function initConversation() {
     response = await fetch(`data/conversation${conversationId}.json`);
     const conversation = await response.json();
 
-    let names = conversation.names;
+    names = conversation.names;
     await names.forEach(name => {
         let htmlName = document.createElement('p');
         htmlName.classList.add('name');
@@ -20,10 +21,11 @@ async function initConversation() {
         htmlDialogueHead.appendChild(htmlName);
     });
 
-    runConversation(conversation.messages, names);
+    messages = conversation.messages;
+    runConversation();
 };
 
-function runConversation(messages, names) {
+function runConversation() {
     let message;
     let paused = false;
 
@@ -33,6 +35,8 @@ function runConversation(messages, names) {
             console.log("click");
             paused = true;
 
+            console.log(messages);
+            
             message = messages.shift() || null;
 
             // If we run out of messages, stop listening to clicks
@@ -44,47 +48,58 @@ function runConversation(messages, names) {
 
             switch (message.type) {
                 case 'message':
-                    displayMessage(message, names);
+                    displayMessage(message);
                     break;
                 case 'one':
-                    messages = chooseOne(messages, message, names);
+                    messages = choose(message, false);
                     break;
                 case 'all':
-
+                    messages = choose(message, true);
                     break;
                 default:
                     console.log('Unknown message type');
             };
+
+            console.log(messages);
 
             paused = false;
         };
     });
 };
               
-function chooseOne(messages, message, names) {
+function choose(message, all) {
     let htmlSubMessageList = []; // Keep track of all the answers we create
     // Create each answer
     message.messages.forEach(subMessageLine => {
-        let subMessage = subMessageLines[0]; // First message of the sub-conversation is the answer
+        let subMessage = subMessageLine[0]; // First message of the sub-conversation is the answer
 
         let htmlMessage = document.createElement('p');
         htmlMessage.classList.add('choice');
-        htmlMessage.textContent = answer.text;
+        htmlMessage.textContent = subMessage.text;
 
         htmlDialogueMessages.appendChild(htmlMessage);
 
         let onclick = htmlMessage.addEventListener('click', function () {
-            // Remove all the answers and stop listening to clicks
+
             htmlSubMessageList.forEach(otherMessage => {
                 otherMessage.removeEventListener('click', onclick);
                 otherMessage.remove();
             });
 
-            displayMessage(subMessage, names);
-            console.log(messages)
-            const newMessages = [...subMessageLine.splice[1], ...messages];
-            console.log(newMessages)
-            return newMessages;
+            displayMessage(subMessage);
+            console.log("subMessageLine", subMessageLine);
+            console.log("messages", messages);
+            
+            let newMessages;
+            if (all) {
+                newMessages = [...subMessageLine.shift(), ...messages];
+            }
+            else {
+                newMessages = [...subMessageLine, ...messages];
+            }
+            messages = newMessages;
+            console.log("messages", messages);
+
         });
 
         htmlSubMessageList.push(htmlMessage);    // Add it to the list
@@ -92,12 +107,7 @@ function chooseOne(messages, message, names) {
 }
 
           
-function chooseAll(messages, message, names) {
-    
-}
-
-
-function displayMessage(message, names) {
+function displayMessage(message) {
     let htmlMessage = document.createElement('p');
     htmlMessage.classList.add('message');
 
@@ -111,70 +121,6 @@ function displayMessage(message, names) {
 
     htmlMessage.textContent = message.text;
     htmlDialogueMessages.appendChild(htmlMessage);
-};
-
-function displayQuestion(message, names) {
-    let htmlQuestionList = []; // Keep track of all the answers we create
-
-    // While there are questions to ask
-    //while (message.question.length > 0) {
-    for (let i = 0; i < message.question.length; i++) {
-
-    console.log(message.question);
-    // Create each question
-    message.question.forEach(questionLine => {
-        let question = questionLine[0]; // First message of the sub-conversation is the question
-
-        let htmlQuestion = document.createElement('p');
-        htmlQuestion.classList.add('answer');
-        htmlQuestion.textContent = question.text;
-
-        htmlDialogueMessages.appendChild(htmlQuestion);
-
-        htmlQuestionList.push(htmlQuestion);    // Add it to the list
-
-        // When the question is clicked, start the sub-conversation
-        let onclick = htmlQuestion.addEventListener('click', function () {
-            // Remove all the answers and stop listening to clicks
-            htmlQuestionList.forEach(otherQuestion => {
-                otherQuestion.removeEventListener('click', onclick);
-                otherQuestion.remove();
-            });
-
-            runConversation(questionLine, names, htmlDialogue);
-
-            message.question.splice(message.question.indexOf(questionLine), 1);
-        });
-    });
-    console.log(message.question);
-    };
-};
-
-
-function displayAnswer(message, names) {
-    let htmlanswerList = []; // Keep track of all the answers we create
-    // Create each answer
-    message.answer.forEach(answerLine => {
-        let answer = answerLine[0]; // First message of the sub-conversation is the answer
-
-        let htmlAnswer = document.createElement('p');
-        htmlAnswer.classList.add('answer');
-        htmlAnswer.textContent = answer.text;
-
-        htmlDialogueMessages.appendChild(htmlAnswer);
-
-        let onclick = htmlAnswer.addEventListener('click', function () {
-            // Remove all the answers and stop listening to clicks
-            htmlanswerList.forEach(otherAnswer => {
-                otherAnswer.removeEventListener('click', onclick);
-                otherAnswer.remove();
-            });
-
-            runConversation(answerLine, names);
-        });
-
-        htmlanswerList.push(htmlAnswer);    // Add it to the list
-    });
 };
 
 document.getElementById('left-arrow').addEventListener('click', function () {
