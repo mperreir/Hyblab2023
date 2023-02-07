@@ -6,12 +6,12 @@ let currentZoneNumber = 0; // tell if the index of the current zone for the imag
 // the answers are button that shows the explanations related to them
 const createAnswers = function (choices) {
     
-    document.getElementById('answer'+current_question_number).style = 'block'
+    document.getElementById('answer'+current_question_number).style.display = 'grid'
     document.getElementById('question-title-text'+current_question_number).style.display = 'inline';
 
 
     for (let i = 0; i < choices.length; i++) {
-        const input = document.createElement('p')
+        const input = document.createElement('div')
         input.innerHTML = choices[i].prompt;
         input.addEventListener('click', function () {
             answered(choices[i]);
@@ -70,7 +70,7 @@ const answered = function (chosen) {
     selectedZone[currentZoneNumber] = chosen.image;
     console.log(selectedZone);
 
-    if ((chosen.nextQuestion !== 3 && chosen.nextQuestion !== 5 && chosen.nextQuestion !== 6)|| chosen.prompt == "Planter des arbres directement sur le parking" ) { // might be type problems (js is bad)
+    if ((chosen.nextQuestion !== 3 && chosen.nextQuestion !== 5 && chosen.nextQuestion !== 6)|| chosen.prompt === "Planter des arbres directement sur le parking" ) {
         currentZoneNumber += 1; // change zone iff not in the parking with the destroying solution and in the place
     }
     swiper.enable();

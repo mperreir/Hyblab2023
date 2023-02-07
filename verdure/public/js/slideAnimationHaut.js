@@ -12,6 +12,26 @@ const initSlideAnimationHaut = function(){
     // (Re)set initial position of img
   haut.setAttribute('style', 'transform :scale(1);');
 
+  
+  /*******
+   * GREEN Ta place
+   */
+
+  var logo2 = document.querySelector('#logoSlideHaut');
+
+  // (Re)set initial scale of logo
+  logo2.setAttribute('style', 'transform : translateY(-50vh);');
+  logo2.setAttribute('style', 'transform : scale(1);');
+  
+  // Animate hyblab logo and make shrink on click
+  anime({
+    targets: '.greenTa',
+    translateY: 0,
+    scale: 1.2,
+    easing: 'easeOutBounce',
+    loop : true,
+    direction: "alternate"
+  });
   // Animate it
 
 /*****Easing elastic */

@@ -38,12 +38,5 @@ const initSlideQuestion4 = async function(currentQuestion){
 // questions
 await questions();
 
-const indic = document.querySelector('.indic');
-  anime({
-    targets: '.indic',
-    scale: 1.2,
-    easing: 'easeInOutQuad',
-    direction: 'alternate',
-    loop: true
-  });
+
 };
