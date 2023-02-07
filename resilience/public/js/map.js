@@ -3,10 +3,22 @@ const mairie = document.getElementById("_16");
 const heure = document.getElementById("heure").value;
 const heures = ['8:00', '9:30', '11:00', '12:30', '14:00', '15:30', '17:00', '18:30', '20:00', '21:00'];
 var modal = document.getElementById("myModal");
+var dict_achiev = new Map();
+dict_achiev.set("_8", [1, 2, 3, 4, 5]);
+dict_achiev.set("_9", [6, 7, 8]);
+dict_achiev.set("_10", []);
+dict_achiev.set("_11", []);
+dict_achiev.set("_12", []);
+dict_achiev.set("_13", []);
+dict_achiev.set("_14", []);
+dict_achiev.set("_15", []);
+dict_achiev.set("_16", []);
 
 regions.forEach(element => {
     element.addEventListener('click', () => {
-        window.localStorage.setItem('achievement4', "true");
+        dict_achiev.get(element.id).forEach(e => {
+            window.localStorage.setItem('achievement'.concat(e), "true");
+        });
         compt = window.localStorage.getItem("compt");
         if (element.id != "_16" || compt.length > 6) {
             if (window.localStorage.getItem(element.id) == "false") {
@@ -20,7 +32,7 @@ regions.forEach(element => {
             window.localStorage.setItem('steps', steps);
             str = element.id;
             nb_region = str.substr(1);
-            path = "./dialogue.html?".concat(nb_region);
+            path = "./dialogue.html?id=".concat(nb_region);
             window.location = path
         }
     });
@@ -39,6 +51,8 @@ function load() {
     regions.forEach(element => {
         if (window.localStorage.getItem(element.id) == "true") {
             element.setAttribute('filter', "url(#saturation1)");
+        } else {
+            element.setAttribute('filter', "url(#saturation0)");
         }
         element.style.cursor = "pointer";
     });
@@ -74,7 +88,7 @@ function manger() {
     window.localStorage.setItem('compt', compt + 1);
     window.localStorage.setItem('heure', " 14:00 ");
     window.localStorage.setItem("popup", "false");
-    window.location = "./dialogue.html?15";
+    window.location = "./dialogue.html?id=15";
 }
 
 load();
