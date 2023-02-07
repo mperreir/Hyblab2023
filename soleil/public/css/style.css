@@ -146,9 +146,6 @@ body{
 }
 
 div {
-    float: left;
-    height: 150px;
-    padding: 0 10px;
     font-size: 15px;
     text-align: center;
 }
@@ -313,12 +310,23 @@ header{
     font-weight: bold;
     text-align: center;
     margin: auto;
+    width: 70%;
 }
 
 /* Most of the elements in this demo are absolute positionned with percentages */
-
+header{
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    top: 10%;
+    z-index: 2;
+}
 
 /*mes ajouts*/
+video{
+    margin:auto;
+}
+
 .boussole{
     margin: auto;
     width: 100%;
@@ -335,7 +343,7 @@ header{
     border-radius: 8px;
     position: relative;
     margin: auto;
-    width: 35%;
+    width: 12em;
     text-align: center;
 }
 
@@ -405,43 +413,6 @@ div.conteneur{
     position: absolute;
     right : 10%;
 }
-
-/* infobulle */
-.conteneur {
-    position: relative;
-    height: 200px;
-    /*width: 200px;*/
-    overflow: visible;
-    margin:auto;
-    }
-
-    .conteneur .objet_vise {
-        width: 200px;
-        display: inline-block;
-    }
-
-    .conteneur > p{
-        text-align: center;
-        width: 200px;
-    }
-
-.conteneur .objet_vise:hover {
-    /* ici, on peut modifier l'objet visé au hover si on le veut. Ici, je change sa couleur!*/
-    }
-
-
-    .conteneur .infobulle {
-        padding: 17px;
-        text-align: center;
-    position: absolute;
-    top: 40px;
-    left: 80px;
-    width: 150px;
-    height: 100px;
-    border-radius: 100px / 50px;
-    background-color: #e6e0e0;
-    opacity: 1;
-    }
 
 
 /* Last slide image is centered */
@@ -560,8 +531,8 @@ body{
 
 .location-input{
     height: 20%;
-    margin: 0;
-    padding: 0;
+    margin: auto;
+    padding: 5%;
     float: none;
     text-align: center;
     font-size: medium;
@@ -606,4 +577,77 @@ body{
         font-size: 15vw;
     }
 
+}
+
+/* Bouton Info */
+
+*{
+    box-sizing: border-box;
+}
+
+  /* Fixez le bouton sur le côté gauche de la page the button on the left side of the page */
+.open-btn {
+display: flex;
+justify-content: flex-start;
+}
+/* Stylez et fixez le bouton sur la page */
+.open-button {
+background-color: white;
+position: absolute;
+right: 5%;
+border: none;
+}
+
+/* Positionnez la forme Popup */
+.login-popup {
+position: relative;
+text-align: center;
+width: 100%;
+}
+/* Masquez la forme Popup */
+.form-popup {
+display: none;
+position: absolute;
+left: 45%;
+top: 5%;
+transform: translate(-45%, 5%);
+border: 2px solid #666;
+z-index: 9;
+border-radius: 5px;
+height: 90%;
+width : 90%;
+
+
+}
+/* Styles pour le conteneur de la forme */
+.form-container {
+width: 90%;
+height : 100%;
+padding: 20px;
+background-color: #fff;
+}
+
+/* Stylez le bouton pour annuler */
+.form-container .cancel {
+    display:inline-block;
+    border:#666 1px solid;
+    margin:2px;
+    font-size:24px;
+    cursor:pointer;
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    font-size: small;
+    position: absolute;
+    right : 10%;
+}
+/* Planez les effets pour les boutons */
+.form-container .btn:hover,
+.open-button:hover {
+opacity: 1;
+}
+
+#Saut {
+    padding-top : 2vw;
+    font-size: 3vw;
 }
