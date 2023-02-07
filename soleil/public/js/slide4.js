@@ -1,7 +1,7 @@
 "use strict";
 
 const initSlide4 = function(){
-    $("#pente header button").click(function(){
+    $("#pente header button.retour").click(function(){
         swiper.slidePrev();
     });
 

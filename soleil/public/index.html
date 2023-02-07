@@ -36,24 +36,24 @@
         <header>
         </header>
         <div class="video" width="100%" margin="auto">
-
-          <video controls width="95%" src="animation/soli-01.mp4" autoplay loop muted>
+          
+          <video width="95%" src="animation/soli-01.mp4" autoplay muted cache="false">
           </video>
-
+            
         </div>
         <footer>
           <button>Commencer</button>
         </footer>
       </section>
 
-      <!-- section adresse -->
+
       <section id="adresse" class="swiper-slide">
         <header>
           <button class="retour">←</button>
           <p class="titre">Où habitez-vous ?</p>
         </header>
         <section class="main-location-page">
-          <video controls width="95%" src="animation/geo-01.mp4" autoplay loop muted>
+          <video width="95%" src="animation/geo-01.mp4" autoplay loop muted>
         </video>
           <div class="commentaire-soli">
             <img src="img/soliMontgolfiere.png">
@@ -73,8 +73,7 @@
         </footer>
       </section>
 
-      <!-- Page du type de logement -->
-      <section id="logement" class="swiper-slide">
+      <section id="logement" class="swiper-slide"> <!-- Page du type de logement -->
         <header>
           <button class="retour">←</button>
           <p class="titre">
@@ -162,20 +161,19 @@
 
       </section>
 
-      <!-- Page de la pente -->
-      <section id="pente" class="swiper-slide">
+      <section id="pente" class="swiper-slide"> <!-- Page de la pente -->
         <header>
           <div class="form-popup" id="popupForm">
             <form action="/action_page.php" class="form-container">
               <button type="button" class="btn cancel" onclick="closeForm()">X</button>
-              <p id="Saut"> Mais pourquoi parler de l’inclinaison du toit ? C’est essentiel pour la performance de votre module photovoltaïque.
+              <p id="Saut"> Mais pourquoi parler de l’inclinaison du toit ? C’est essentiel pour la performance de votre module photovoltaïque. 
               </p>
               <p id="Saut">
-                Si votre toit est incliné, vos panneaux le seront aussi. Idéalement, ils doivent être
-                perpendiculaires au rayon du soleil. Un petit peu de physique pour mieux comprendre
-                (rien de bien méchant). Pour maximiser l’énergie produite sur l’année, il faut que les
-                panneaux soient inclinés en fonction de l’ordre de latitude du point où vous vous trouvez.
-                Vous ne comprenez pas ? Pas de panique, voici un exemple. En France, la latitude varie entre 40 et 45 degrés.
+                Si votre toit est incliné, vos panneaux le seront aussi. Idéalement, ils doivent être 
+                perpendiculaires au rayon du soleil. Un petit peu de physique pour mieux comprendre 
+                (rien de bien méchant). Pour maximiser l’énergie produite sur l’année, il faut que les 
+                panneaux soient inclinés en fonction de l’ordre de latitude du point où vous vous trouvez. 
+                Vous ne comprenez pas ? Pas de panique, voici un exemple. En France, la latitude varie entre 40 et 45 degrés. 
                 Inclinez-donc vos panneaux selon cet ordre pour maximiser l’énergie produite sur l’année. Et si votre toit est plat ? Rien à faire dans ce cas !
               </p>
             </form>
@@ -195,18 +193,31 @@
         <section>
           <div id="ligne">
             <section id="image3">
-              <img class="img-pente" src="img/PenteHaut.png">
-              <p>Standard</p>
-              <p></p>
+              <img src="img/ChoixMaison.png">
             </section>
             <section>
               <form>
+                <div id="colonne3">
                   <input type="radio" id="contactChoice1"
                          name="pente" value="Plat">
+                  <label for="contactChoice1">Plat</label>
+                  <img id="choix-log" src="hyblab_2023.jpg"/>
+                  <p>Toit plat</p>
+                </div>    
+                <div id="colonne3">
                   <input type="radio" id="contactChoice2"
                          name="pente" value="Standard">
+                  <label for="contactChoice2">Standard</label>
+                  <img id="choix-log" src="hyblab_2023.jpg"/>
+                  <p>Toit plat</p>
+                </div>
+                <div id="colonne3">
                   <input type="radio" id="contactChoice3"
                          name="pente" value="Pentu">
+                  <label for="contactChoice3">Pentu</label>
+                  <img id="choix-log" src="hyblab_2023.jpg"/>
+                  <p>Toit plat</p>
+                </div>
               </form>
             </section>
           <section class="commentaire-soli">
@@ -225,7 +236,7 @@
 
       </section>
 
-      <!-- section orientation -->
+
       <section id="orientation" class="swiper-slide">
         <header>
           <button class="retour">retour</button>
@@ -236,11 +247,9 @@
           <section id="image" >
             <img src="img/MaisonCampagne.png">
           </section>
-          <div class="boussole">
-            <img class="illustration" src="img/bousolle.png" alt="0">
-            <p>Appuier sur la boussole
-            pour choisir votre orientation</p>
-          </div>
+          <div class="boussole"><img class="illustration" src="img/bousolle.png" alt="0">
+          <p>Appuier sur la boussole 
+            pour choisir votre orientation</p></div>
         </div>
         <div id="jauge">
           <img id="Soli3" src="img/montgolfiereAvancee.svg"/>
@@ -248,9 +257,9 @@
         <footer>
           <button>Valider</button>
         </footer>
-      </section>
 
-      <!-- section ombre -->
+
+      </section>
       <section id="ombre" class="swiper-slide">
         <header>
           <button class="retour">retour</button>
@@ -300,7 +309,6 @@
         <footer><button>Valider</button></footer>
       </section>
 
-      <!-- section facultative -->
       <section id="facultatif" class="swiper-slide">
         <header>
           <button class="retour">retour</button>
@@ -342,14 +350,21 @@
         </footer>
       </section>
 
-      <!-- section résultat-->
       <section id="resultat" class="swiper-slide">
         <header>
           <button class="retour">retour</button>
         </header>
       </section>
 
-      <!-- section analyse -->
+
+      <section id="mission" class="swiper-slide">
+        <header>
+          <button class="retour">Accueil A rajouter</button>
+          <p class="titre">Des idées ?</p>
+        </header>
+
+      </section>
+
       <section id="analyse" class="swiper-slide">
         <header>
           <button class="retour">retour</button>
