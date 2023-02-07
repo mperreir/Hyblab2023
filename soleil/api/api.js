@@ -9,74 +9,61 @@ const data = require('./data/densite.json');
 
 app.use(express.json());
 
-// Retrieves a correct match for the address and sends it
-app.get('/searchAddress', async function (req, res) {
-    const addressList = await getAddressFromText(req.body['searchText']);
-
-    const output = [];
-
-    addressList.forEach(elt => {
-        output.push(elt.address.address + " " + elt.address.zip_code + " " + elt.address.town);
+// Retrieves multiple matches for the address and sends it
+app.get('/searchAddresses', async function (req, res) {
+    const apiCall = await NominatimJS.search({
+        q: req.body['searchText']
     });
 
-    res.json(output);
+    const results = [];
+
+    apiCall.slice(0, req.body['resultsCount']).forEach(apiElement => {
+        let address = {
+            'street_number': 0,
+            'street': "",
+            'zip_code': 0,
+            'town': ""
+        };
+
+        const addressInfo = apiElement.display_name.split(', ');
+
+        // Security to avoid problems later on
+        if (addressInfo.pop() !== "France") return "Service not available outside of France";
+
+        // We need to check if the returned address starts with a number, or is just the name of the street
+        address = addressInfo[0].match(/^\d/) ? {
+            'street_number': addressInfo[0],
+            'street': addressInfo[1],
+            'zip_code': addressInfo.pop(),
+            'town': addressInfo[3]
+        } : {
+            'street_number': 0,
+            'street': addressInfo[0],
+            'zip_code': addressInfo.pop(),
+            'town': addressInfo[2]
+        };
+
+        results.push({
+            'latitude': apiElement.lat,
+            'longitude': apiElement.lon,
+            'full_address': address,
+            'address_text': address.street_number + " " + address.street + ", " + address.zip_code + " " + address.town.toUpperCase()
+        });
+    });
+
+    res.json(await getAddressesFromText(results));
 });
 
 // Retrieves all data regarding the input
 app.get('/addressInfo', async function (req, res) {
     // Uses our parser to turn the text input into a valid address
-    let location = (await getAddressFromText(req.body['searchText']))[0];
+    let address = req.body;
 
     // Retrieves the density of the town the person lives in
-    let density = data.find(e => e["Libellé commune"] === location.address.town)["Degré de Densité"];
+    let density = data.find(e => e["Libellé commune"] === address.full_address.town)["Degré de Densité"];
 
     res.json({location, 'density': density});
 });
-
-// Retrieve a legit address from text input
-async function getAddressFromText(text) {
-    const apiCall = await NominatimJS.search({
-        q: text
-    });
-
-    const result = [];
-
-    apiCall.forEach(elt => {
-        let address = {
-            'address': "",
-            'zip_code': 0,
-            'town': ""
-        };
-
-        const addressInfo = elt.display_name.split(', ');
-    
-        // Security to avoid problems later on
-        if (addressInfo.pop() !== "France") return "Service not avaliable outside of France";
-
-        // We need to check if the returned address starts with a number, or is just the name of the street
-        if (addressInfo[0].match(/^\d/)) {
-            address = {
-                'address': addressInfo[0] + ", " + addressInfo[1],
-                'zip_code': addressInfo.pop(),
-                'town': addressInfo[3]
-            };
-        } else {
-            address = {
-                'address': addressInfo[0],
-                'zip_code': addressInfo.pop(),
-                'town': addressInfo[2]
-            };
-        }
-        
-        result.push({
-            'latitude': elt.lat,
-            'longitude': elt.lon,
-            'address': address
-        });
-    });
-
-    return result;
-}
 
 // TODO finir cette fonction
 function getRadiationData(latitude, longitude, altitude, date_begin, date_end, time_ref, summatization) {
