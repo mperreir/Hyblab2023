@@ -35,7 +35,7 @@ fetch('../data/data.json')
             // add class
             div.classList.add('carousel-item');
             // add id by using the name of the item
-            div.id = item.name.replace(' ', '-').toLowerCase();
+            div.id = item.name.replaceAll(' ', '-').toLowerCase();
 
             // create an img element
             const obj = document.createElement('object');
@@ -59,3 +59,8 @@ fetch('../data/data.json')
         M.Carousel.init(document.querySelectorAll('.carousel'), options);
     });
 
+function openEnv(){
+    let idEnv=document.querySelector(".active").id
+    sessionStorage.setItem("visit",idEnv)
+    location.href = "home.html"
+}

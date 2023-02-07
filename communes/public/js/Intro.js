@@ -45,7 +45,7 @@ setTimeout(() => {
     // Init first slide
     introSlide1();
 }, 1000);
-const iSpeed = 100;
+const iSpeed = 50;
 const iScrollAt = 20;
 
 function typewriter() {
@@ -74,3 +74,13 @@ function typewriter() {
 document.querySelector(".skip").addEventListener("click", function () {
     swiper.slideTo(4);
 });
+
+function submitPostal(){
+    let codePostal = document.querySelector("#name").value
+    if (codePostal === "44470"){
+        location.href="actualstate.html";
+    }else{
+        alert("code postal non valide")
+    }
+    console.log(codePostal)
+}

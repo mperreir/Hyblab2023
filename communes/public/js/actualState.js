@@ -17,7 +17,7 @@ const swiper = new Swiper("#mySwiper", {
 swiper.on("slideChange", function () {
     introSlide2();
 });
-const iSpeed = 100;
+const iSpeed = 50;
 const iScrollAt = 20;
 
 function typewriter() {
@@ -45,3 +45,6 @@ function typewriter() {
 }
 introSlide2();
 
+function accueil(){
+    location.href="accueil.html"
+}
