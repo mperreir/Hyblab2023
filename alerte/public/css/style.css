@@ -123,6 +123,14 @@ header img,
     margin-top: 25px;
 }
 
+#next11_1 {
+    background-image: url('../img/utils/btn/btn-next.svg');
+}
+
+#next11_2 {
+    background-image: url('../img/utils/btn/btn-next.svg');
+}
+
 .next-btn {
     background-position: center center;
     background-size: cover;
