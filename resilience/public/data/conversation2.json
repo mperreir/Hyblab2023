@@ -21,8 +21,8 @@
             "text": "Comment vas-tu ?"
         },
         {
-            "type": "answer",
-            "answer": [
+            "type": "one",
+            "messages": [
                 [
                     {
                         "type": "message",
@@ -40,8 +40,8 @@
             ]
         },
         {
-            "type": "question",
-            "question": [
+            "type": "all",
+            "messages": [
                 [
                     {
                         "type": "message",

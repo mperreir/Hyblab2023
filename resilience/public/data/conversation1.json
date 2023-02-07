@@ -1,9 +1,9 @@
 {
     "place": "Polytech",
-    "names": {
-        "0": "Tristan",
-        "1": "Maxime"
-    },
+    "names": [
+        "Tristan",
+        "Maxime"
+    ],
     "messages": [
         {
             "type": "message",
