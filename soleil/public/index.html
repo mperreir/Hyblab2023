@@ -171,8 +171,29 @@
 
       <section id="pente" class="swiper-slide"> <!-- Page de la pente -->
         <header>
+          <div class="form-popup" id="popupForm">
+            <form action="/action_page.php" class="form-container">
+              <button type="button" class="btn cancel" onclick="closeForm()">X</button>
+              <p id="Saut"> Mais pourquoi parler de l’inclinaison du toit ? C’est essentiel pour la performance de votre module photovoltaïque. 
+              </p>
+              <p id="Saut">
+                Si votre toit est incliné, vos panneaux le seront aussi. Idéalement, ils doivent être 
+                perpendiculaires au rayon du soleil. Un petit peu de physique pour mieux comprendre 
+                (rien de bien méchant). Pour maximiser l’énergie produite sur l’année, il faut que les 
+                panneaux soient inclinés en fonction de l’ordre de latitude du point où vous vous trouvez. 
+                Vous ne comprenez pas ? Pas de panique, voici un exemple. En France, la latitude varie entre 40 et 45 degrés. 
+                Inclinez-donc vos panneaux selon cet ordre pour maximiser l’énergie produite sur l’année. Et si votre toit est plat ? Rien à faire dans ce cas !
+              </p>
+            </form>
+          </div>
           <button class="retour">retour</button>
-          <button id="info">I</button> <!-- Bouton Information (à copier sur les autres slide) -->
+          <button class="open-button" onclick="openForm()"><img src="img/Info.png"></button>
+          <!--<div class="open-btn">   <button id="info">I</button>
+            <button class="open-button" onclick="openForm()"><strong>Info</strong></button>
+          </div>-->
+          <div class="login-popup">
+          </div>
+           <!-- Bouton Information (à copier sur les autres slide) -->
           <p class="titre">
             Comment est la pente de votre toit ?
           </p>
