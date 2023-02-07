@@ -216,9 +216,9 @@ SLIDE QUESTION
 
 .indic{
     text-align: center;
-    width: 10%;
-    left: 70%;
-    top: 90%;
+    width: 8%;
+    left: 72%;
+    top: 94%;
     margin-left: -25%;
     margin-top: calc(-7.5% * 9 / 16 ); /* margins are relative to the element width... :-( */
     position: absolute;
