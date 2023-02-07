@@ -58,10 +58,6 @@ h1 {
     font-size: 16px;
 }
 
-p{
-    font-size: 0.2em;
-}
-
 h1, h2, h3, h4, h5, p{
     text-align: justify;
     font-family: arial, sans-serif;
@@ -110,6 +106,19 @@ header img,
 
 #next4_1 {
     background-image: url('../img/btn-next.svg');
+}
+
+#next4_2 {
+    background-image: url('../img/btn-nextWhite.svg');
+}
+
+#next6 {
+    background-image: url('../img/btn-next.svg');
+}
+
+#next7 {
+    background-image: url('../img/btn-next.svg');
+    margin-top: 25px;
 }
 
 .next-btn {
@@ -223,6 +232,10 @@ main>section {
     background-size: 100% 100%;
 }
 
+.slidesWhite {
+    background-color: aliceblue;
+}
+
 /* Footer of last slide is at the bottom and content is centered */
 .acceuil section footer {
     box-sizing: border-box;
@@ -274,6 +287,27 @@ main>section {
 
 .bubble img {
     height: 100%;
+    max-width: 100%;
+}
+
+.bubbleWhite {
+    color: black;
+    border-color: aliceblue;
+}
+
+#labelDep {
+    color: gray;
+    font-size: small;
+}
+
+#dep {
+    color: aliceblue;
+    text-align: center;
+    width: 50px;
+    line-height: 50px;
+    background-color: black;
+    border: solid 3px aliceblue;
+    border-radius: 15px;
 }
 
 /* white navigation bullets */
@@ -318,6 +352,17 @@ main>section {
     width: 85%;
     height: 56%;
     overflow-y: scroll;
+}
+.content2 {
+    position: absolute;
+    top: 50%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    width: 65%;
+    height: 90%;
+    text-align: justify;
+    font-family: arial, sans-serif;
 }
 
 .content {
