@@ -1,15 +1,22 @@
 # Descriptif du projet
 
-Porteur de projet :
+Porteur de projet : Guénolé SEILER
 
-Sujet :
+Sujet : Impact du réchauffement climatique sur les vins
 
-Nom d'équipe :
+Nom d'équipe : Raizinzin (Equipe Raisin)
 
 Participants : 
 
-- AGR :
+- AGR : 
+             Bérénice LEGROS
+             Lea COUTURIER
+             William CARDOSO
 
-- EPJT
+- EPJT :
+             Tom DEMARS-GRANJA
 
-- Polytech :  
+- Polytech : Paul BODIN
+             Lucas CHATTELEYN
+             Alexander SAUVIGNET
+             Léopold VARLET
