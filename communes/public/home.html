@@ -1,0 +1,77 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <title>Hyblab 2023</title>
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/style_energy.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script src="https://cdn.rawgit.com/aparshin/leaflet-boundary-canvas/f00b4d35/src/BoundaryCanvas.js"></script>
+
+    <script src="js/change_svg_color.js" defer></script>
+  <script src="js/slide1.js" defer></script>
+  <script src="js/slide2.js" defer></script>
+  <script src="js/slide3.js" defer></script>
+  <script src="js/index.js" defer></script>
+</head>
+<body>
+    <!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
+    <div id="container">
+      <!-- Le loader-->
+      <section id="loader">
+        <div id="loader-img" class="ld ld-ring ld-cycle"></div>
+        <p id="loader-text">Veuillez patienter...</p>
+      </section>
+      <div id="mySwiper" class="swiper">
+        <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
+        <main class = "swiper-wrapper">
+            <section id="first-slide" class="swiper-slide">
+                <header>
+                    <object id="logo-environment" data="img/friche.svg" width="35%" type="image/svg+xml"></object>
+                    <h1 id="titre"></h1>
+                </header>
+                <!-- le footer sera rempli à partir de données lues dans un fichier Json-->
+                <main>
+                  <p id="introduction"></p>
+                </main>
+            </section>
+
+            <section id="second-slide" class="swiper-slide">
+            <header>
+            </header>
+            <main>
+                <h2 id="exemple-title">This was...</h2>
+                <!-- video -->
+                <div id="video-container">
+                    <video id="video" width="100%" height="100%" controls>
+                        <source src="" type="video/mp4">
+                    </video>
+                </div>
+                <p id="exemple-text"></p>
+
+            </main>
+            </section>
+
+            <section id="third-slide" class="swiper-slide">
+                <header>
+                </header>
+                <main>
+                    <h2 id="map-title">This was...</h2>
+                    <div id="map"></div>
+                </main>
+            </section>
+        </main>
+        <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -7,7 +7,7 @@ header div {
 }
 .textElu{
     margin-top: 10%;
-    font-size: 0.4em;
+    font-size: 0.3em;
     font-weight: 100;
     display: inline-block;
     background-color: #d7d1d1;
@@ -17,9 +17,9 @@ header div {
     margin-left: 25%;
 }
 .Elu{
-    display: inline-block;
+
     width: 40%;
-    margin-top: 10%
+    margin-bottom: 10%
 }
 
 .form__group {
