@@ -15,6 +15,7 @@ const introSlide2 = async function() {
     let response = await fetch('../data/data.json');
     const data = await response.json();
     const data_filter = data.intro.filter(function(item){return item.name === "intro2";})[0]
+    document.querySelector("#Elu2").data=data_filter.file_name
     aText = new Array(data_filter.tchat)
     iIndex = 0;
     iArrLength = aText[0].length;

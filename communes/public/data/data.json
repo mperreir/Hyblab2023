@@ -53,36 +53,45 @@
   ],
   "intro": [
     {
-      "name": "intro0",
-      "tchat": "Bonjour, je suis Sacha, je suis président.e de l’intercommunalité de Vertville."
-    },
-    {
       "name": "intro1",
-      "tchat": "Bonjour, je suis Sacha, je suis président.e de l’intercommunalité de Vertville."
+      "tchat": "Bonjour, je suis Sacha, je suis président.e de l’intercommunalité de Vertville.",
+      "background_color": "#F2FFFB",
+      "file_name": "../img/Bonhomme_1.svg"
     },
     {
       "name": "intro2",
-      "tchat": "Ici, élus et citoyens œuvrent ensemble pour lutter contre le réchauffement climatique."
+      "tchat": "Ici, élus et citoyens œuvrent ensemble pour lutter contre le réchauffement climatique.",
+      "background_color": "#F2FFFB",
+      "file_name": "../img/Bonhomme_2.svg"
     },
     {
       "name": "intro3",
-      "tchat": "Nous choisissons de mettre à profit (d’exploiter) nos différentes ressources pour produire des énergies renouvelables. "
+      "tchat": "Nous choisissons de mettre à profit (d’exploiter) nos différentes ressources pour produire des énergies renouvelables. ",
+      "background_color": "#F2FFFB",
+      "file_name": "../img/Bonhomme_3.svg"
     },
     {
       "name": "intro4",
-      "tchat": "Cela nous permet d’être également plus indépendant énergétiquement et de créer des emplois."
+      "tchat": "Cela nous permet d’être également plus indépendant énergétiquement et de créer des emplois.",
+      "background_color": "#F2FFFB",
+      "file_name": "../img/Bonhomme_4.svg"
     },
     {
       "name": "intro5",
-      "tchat": "Entrez votre code postal pour découvrir le score de votre intercommunalité."
+      "tchat": "Entrez votre code postal pour découvrir le score de votre intercommunalité.",
+      "background_color": "#F2FFFB",
+      "file_name": "../img/Bonhomme_5.svg"
     },
     {
       "name": "intro6",
-      "tchat": " Votre score est de "
+      "tchat": " Votre score est de ",
+      "background_color": "#F2FFFB",
+      "file_name": "../img/Bonhomme_6.svg"
     },
     {
       "name": "intro7",
-      "tchat": "Il n’est pas définitif. En consultant nos différentes initiatives, vous aurez l’opportunité de le modifier. Il vous suffira d’augmenter votre production dans chacune des énergies."
+      "tchat": "Il n’est pas définitif. En consultant nos différentes initiatives, vous aurez l’opportunité de le modifier. Il vous suffira d’augmenter votre production dans chacune des énergies.",
+      "background_color": "#F2FFFB"
     }
   ],
   "conclusion": {
