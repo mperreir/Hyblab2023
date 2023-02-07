@@ -3,40 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleMain.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/styleMain.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="js/menuPopup.js"></script>
 
 </head>
 <header>
-    <h1>Hyblab 2023</h1>
-</header>
-<body>
-    <div class="texte-intro">
-        <p>
-            aaa<br/>
-            aaa<br/>
-            aaa<br/>
-            aaa<br/>
+    <div id="iconeHeader">
+        <img src="img/logo_faunare.png" alt="logo" id="logo" style="position: absolute; top: 0; z-index: 2" width="450px">
+        <img src="img/menu.png" alt="menu" id="popUpNav" width="51" style="position: absolute; right: 50px; top: 55px; z-index: 2">
+    </div>
+    <div id="texteMenu">
+        <h1 class="menuTitre"> MENU </h1>
+        <h2 class="sousTitresMenu"> <a href="sources.html"> SOURCES SCIENTIFIQUES </a> </h2>
+        <h2 class="sousTitresMenu"> CONTACT </h2>
+        <h2 class="sousTitresMenu"> CRÉDITS </h2>
+        <hr class="ligneSeparation"/>
+        <p class="texteFinMenu">
+            Nous œuvrons tous ensemble pour préserver les animaux !
         </p>
     </div>
-    <div style="text-align: center;">
+</header>
+<body>
+
+    <div class="texte-intro">
+        <p>
+            Des animaux près de chez vous sont en danger, apprenez à les connaître pour mieux les protéger.
+        </p>
+    </div>
+    <div class="texte-Elie">
+        <p>
+            Bonjour ! Moi c’est Elie,
+            <br/>découvrez avec moi les animaux de votre commune !
+        </p>
+        <img src="img/ligne_home_elie.png">
+    </div>
+    <div class="mascotte">
+        <img src="img/mascotte-home.png" alt="Elie" id="elie">
+    </div>
+    <div class="barres-recherche">
 <!--         <p id="text">Indiquez la commune ou le code postal</p>-->
         <form class="search" id="searchCommune" action="nbChoc.html" method="get" name="RechercheCommune">
             <input class="searchBar" type="text" name="searchCommune" placeholder="Nom de votre commune">
-            <button class="search-btn">
-                <i class="fa fa-search"></i>
-            </button>
+            <button class="bouton-recherche"> </button>
         </form>
 
         <form class="search" action="animal.html" method="get" name="RechercheAnimal">
-                <input class="searchBar" type="text" name="searchAnimal" placeholder="Nom de l'animal">
-            <button class="search-btn">
-                <i class="fa fa-search"></i>
-            </button>
+                <input id="textbox_id" class="searchBar" type="text" name="searchAnimal" placeholder="Nom de l'animal">
+            <button class="bouton-recherche"> </button>
         </form>
 
 <!--         <div style="display: flex; align-items: center;">-->
@@ -48,8 +69,6 @@
 <!--             <label style="margin-left: auto;" for="switch">Animal</label>-->
 <!--         </div>-->
     </div>
-
-    <div class="mascotte"></div>
 
 
 

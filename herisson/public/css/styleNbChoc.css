@@ -13,9 +13,8 @@ body
     padding-top: 100px;
     font-weight: 700;
     font-family: 'Prompt', sans-serif;
-    color: #FFF8F1;
-    -webkit-text-stroke-width: 5px;
-    -webkit-text-stroke-color: #FBC5EB;
+    color: #FBC5EB;
+    margin-top: 200px;
 }
 
 div
@@ -42,8 +41,7 @@ div
 }
 
 #fleche {
-    width: 100px;
-    color: #0B6E5F;
+    padding-bottom: 3em;
 }
 .round-background
 {
@@ -51,9 +49,7 @@ div
     border-radius: 100px;
     width: 90%;
     height: 90%;
-    margin: auto;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin: 2em auto;
 }
 
 /*@keyframes slideUp {*/

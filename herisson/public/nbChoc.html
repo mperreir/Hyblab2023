@@ -3,26 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="styleNbChoc.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleNbChoc.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;700&display=swap" rel="stylesheet">
-    <script src="https://hammerjs.github.io/dist/hammer.js"></script>-->
-    <script src="scriptNbChoc.js"></script>-->
+<!--    <script src="https://hammerjs.github.io/dist/hammer.js"></script>-->
+<!--    <script src="scriptNbChoc.js"></script>-->
 
-
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="js/menuPopup.js"></script>
 
 </head>
 <header>
-    <h1>Hyblab 2023</h1>
+    <div id="iconeHeader">
+        <img src="img/logo_faunare.png" alt="logo" id="logo" style="position: absolute; top: 0; left: 0; z-index: 2" width="450px">
+        <img src="img/menu.png" alt="menu" id="popUpNav" width="51" style="position: absolute; right: 50px; top: 55px; z-index: 2">
+    </div>
+    <div id="texteMenu">
+        <h1 class="menuTitre"> MENU </h1>
+        <h2 class="sousTitresMenu"> <a href="sources.html"> SOURCES SCIENTIFIQUES </a> </h2>
+        <h2 class="sousTitresMenu"> CONTACT </h2>
+        <h2 class="sousTitresMenu"> CRÉDITS </h2>
+        <hr class="ligneSeparation"/>
+        <p class="texteFinMenu">
+            Nous œuvrons tous ensemble pour préserver les animaux !
+        </p>
+    </div>
 </header>
 <body>
     <div class="round-background">
         <p id="nbChoc"> 40 </p>
         <p id="texteExplication"></p>
         <p id="texteDanger"> Dont <span id="nbDanger">20 en danger</span>, voici comment vous pouvez les protéger ! </p>
-        <a href="main.html"> <img src="fleche.png" alt="fleche vers le bas" id="fleche"> </a>
+        <a href="main.html"> <img src="img/fleche_verte.png" alt="fleche vers le bas" id="fleche"> </a>
     </div>
     <script>
         const search = new URLSearchParams(window.location.search).get('searchCommune');
