@@ -1,6 +1,19 @@
 'use strict';
 
 // TODO: WHEN SELECTION ON THE PREVIOUS PAGE IS DONE, DISPLAY THE MAP WITH THE SELECTED TOPICS
+// commerce;agroalimentaire dans Numérique et Mobilité
+//
+// TODO : mettre à jour la carte lors d'un retrait d'un mot-clé (quand le manage button est à "Ajouter")
+
+// MEILLEUR MOYEN DE GERER LES MOTS CLES METTRE UN PARAMETRE POUR LES MARKERS SUR KEYWORD BOOLEEN et le mettre dans le IF
+/*
+  ----------------------------------------------------------------------------------------------------------------------
+  | Global variables                                                                                                   |
+  ---------------------------------------------------------------------------------------------------------------------
+ */
+let selectedTopics = [];
+let geographicalProfiles = [];
+let usedKeywords = [];
 
 
 /*
@@ -32,52 +45,79 @@ map.addLayer(layer);
  * @returns {*} The marker icon
  */
 function createIcon(p) {
+    // Define the global icon size and global icon anchor
+    const globalIconSize = isMobileDevice() ? [50, 50] : [30, 30];
+    const globalIconAnchor = isMobileDevice() ? [25, 25] : [15, 15];
+    // If the used keywords list is not empty and the profile doesn't contain all the keywords, return the inactive icon
+    if (!usedKeywords.map(k => k.replace('#', '')).every(keyword => p.Keywords.includes(keyword))) {
+        return L.icon({
+            iconUrl: '../img/pictogrammes_carte/point_inactif.svg',
+            iconSize: globalIconSize,
+            iconAnchor: globalIconAnchor
+        });
+    }
     // The error comes from here because "énergie" is not a valid variable name
     if (!selectedTopics.includes(translate(p.Topic))) {
         return L.icon({
             iconUrl: '../img/pictogrammes_carte/point_inactif.svg',
-            iconSize: [26, 26],
-            iconAnchor: [13, 13]
+            iconSize: globalIconSize,
+            iconAnchor: globalIconAnchor
         });
     }
     switch (p.Topic) {
         case 'énergie':
             return L.icon({
                 iconUrl: '../img/pictogrammes_carte/point_energie.svg',
-                iconSize: [26, 26],
-                iconAnchor: [13, 13]
+                iconSize: globalIconSize,
+                iconAnchor: globalIconAnchor
             });
         case 'alimentation':
             return L.icon({
                 iconUrl: '../img/pictogrammes_carte/point_alimentation.svg',
-                iconSize: [26, 26],
-                iconAnchor: [13, 13]
+                iconSize: globalIconSize,
+                iconAnchor: globalIconAnchor
             });
         case 'industrie':
             return L.icon({
                 iconUrl: '../img/pictogrammes_carte/point_industrie.svg',
-                iconSize: [26, 26],
-                iconAnchor: [13, 13]
+                iconSize: globalIconSize,
+                iconAnchor: globalIconAnchor
             });
         case 'économie circulaire':
             return L.icon({
                 iconUrl: '../img/pictogrammes_carte/point_economie_circulaire.svg',
-                iconSize: [26, 26],
-                iconAnchor: [13, 13]
+                iconSize: globalIconSize,
+                iconAnchor: globalIconAnchor
             });
         case 'mobilité':
             return L.icon({
                 iconUrl: '../img/pictogrammes_carte/point_mobilite.svg',
-                iconSize: [26, 26],
-                iconAnchor: [13, 13]
+                iconSize: globalIconSize,
+                iconAnchor: globalIconAnchor
             });
         case 'numérique':
             return L.icon({
                 iconUrl: '../img/pictogrammes_carte/point_numerique.svg',
-                iconSize: [26, 26],
-                iconAnchor: [13, 13]
+                iconSize: globalIconSize,
+                iconAnchor: globalIconAnchor
             });
     }
+}
+
+
+/**
+ * Update the map with the selected topics and keywords
+ */
+function updateMap(){
+    getProfiles("true/true/true/true/true/true").then(r => {
+        // Markers of previous geographical profiles removal
+        geographicalProfiles.forEach(gp => {
+            gp.marker.remove();
+        });
+        // Update the geographical profiles
+        geographicalProfiles = r;
+        addMarkers().then(() => console.log("Markers added !"));
+    });
 }
 
 
@@ -98,9 +138,6 @@ async function addMarkers() {
   | Topics selection management                                                                                        |
   ----------------------------------------------------------------------------------------------------------------------
  */
-
-let selectedTopics = [];
-let geographicalProfiles = [];
 
 
 /**
@@ -139,19 +176,9 @@ function onTopicCheck(event) {
         }
     }
 
-    getProfiles("true/true/true/true/true/true/keywords").then(r => {
-        // Markers of previous geographical profiles removal
-        geographicalProfiles.forEach(gp => {
-            gp.marker.remove();
-        });
-        // Update the geographical profiles
-        geographicalProfiles = r;
-        addMarkers().then(() => console.log("Markers added !"));
-    });
+    updateMap();
 }
 
-
-let usedKeywords = [];
 
 /**
  * Get the keywords from the API
@@ -225,6 +252,14 @@ function onUsedKeywordClick(event){
 
     // Reorder the keywords
     reorderKeywords();
+
+    // Retrieve the keyword management p element
+    const keywordManageText = document.querySelector('section.keywords #keyword-manage p');
+    // Process map update only if the manage button is in the "Ajouter" state
+    if (keywordManageText.innerHTML === 'Ajouter') {
+        // Update the map
+        updateMap();
+    }
 }
 
 
@@ -306,18 +341,8 @@ function onKeywordManage() {
         keywordsList.classList.add('display-none');
         // Change the keyword management text
         keywordManageText.innerHTML = 'Ajouter';
-
-        // Build the API parameters
-        let apiParameters = "true/true/true/true/true/true/keywords/" + usedKeywords.map(k => k.replace('#', '')).join(';');
-        // If last character is a semicolon, remove it
-        if (apiParameters.charAt(apiParameters.length - 1) === ';') {
-            apiParameters = apiParameters.slice(0, apiParameters.length - 1);
-        }
-        console.log(apiParameters)
-        // Retrieve the profiles matching the keywords
-        getProfiles(apiParameters).then(profiles => {
-            console.log(profiles);
-        });
+        // Update the map
+        updateMap();
     }
 }
 
@@ -347,16 +372,21 @@ document.addEventListener("DOMContentLoaded", function () {
  * @returns {string} The translated topic
  */
 function translate(topic) {
-    switch (topic) {
-        case 'économie circulaire' :
-            return 'economie_circulaire';
-        case 'énergie' :
-            return 'energie';
-        case 'mobilité' :
-            return 'mobilite';
-        case 'numérique' :
-            return 'numerique';
-        default:
-            return topic;
-    }
+    topic = topic.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    topic = topic.replace(/\s/g, '_');
+    return topic;
+}
+
+
+/*
+  ----------------------------------------------------------------------------------------------------------------------
+  | Device detection                                                                                                   |
+  ----------------------------------------------------------------------------------------------------------------------
+ */
+/**
+ * Check if the device is a mobile device
+ * @returns {boolean} True if the device is a mobile device, false otherwise
+ */
+function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }

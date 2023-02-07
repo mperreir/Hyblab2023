@@ -27,14 +27,22 @@ app.get('/map/keywords', function ( req, res ) {
             row.Keywords = row.Keywords.trim();
             return row;
         });
-        // Retrieve values from the "Keywords" column as a list and with no duplicates
-        data.values = [...new Set(data.values.map(row => row.Keywords.split(";")).flat())];
+        // Transform values to a list using ";" as separator
+        data.values = data.values.map(row => {
+            row.Keywords = row.Keywords.split(";");
+            // Trim values
+            row.Keywords = row.Keywords.map(str => str.trim().toLowerCase());
+            return row;
+        });
+        // Create a set of all values
+        data.values = [...new Set(data.values.map(row => row.Keywords).flat())];
         // If "" is in the list, remove it
         if (data.values.includes("")) {
             data.values.splice(data.values.indexOf(""), 1);
         }
         // Order values alphabetically
         data.values.sort();
+        console.log(data.values)
         // Send it as a JSON object
         res.json(data.values);
     });
@@ -42,9 +50,9 @@ app.get('/map/keywords', function ( req, res ) {
 
 
 /**
- * @api {get} Get all geographical information of entrepreneurs matching the requested topics and optional keywords
+ * @api {get} Get all geographical information of entrepreneurs matching the requested topics
  */
-app.get('/map/topics/:feed/:circular_economy/:energy/:industry/:mobility/:digital/keywords/:keyword?', function ( req, res ) {
+app.get('/map/topics/:feed/:circular_economy/:energy/:industry/:mobility/:digital', function ( req, res ) {
     sheet_scrapper.readJSONFromServerFile().then(data => {
         // Filter data to only keep convenient fields
         data.values = data.values.map(row => {
@@ -67,19 +75,6 @@ app.get('/map/topics/:feed/:circular_economy/:energy/:industry/:mobility/:digita
                 (req.params.mobility === "true" && row.Topic.includes("mobilité")) ||
                 (req.params.digital === "true" && row.Topic.includes("numérique"));
         });
-        // Filter data to only keep rows with the requested keyword
-        if (req.params.keyword) {
-            const paramKeywords = req.params.keyword.split(";");
-            data.values = data.values.filter(row => {
-                const rowKeywords = row.Keywords.split(";");
-                for (const paramKeyword of paramKeywords) {
-                    if (!rowKeywords.includes(paramKeyword)) {
-                        return false;
-                    }
-                }
-                return true;
-            });
-        }
         // Send it as a JSON object
         res.json(data.values);
     });
@@ -127,7 +122,7 @@ app.get('/miniature/:id', function ( req, res ) {
 /**
  * @api {get} Get all miniatures of entrepreneurs matching the requested topics
  */
-app.get('/miniature/topics/:feed/:circular_economy/:energy/:industry/:mobility/:digital?', function ( req, res ) {
+app.get('/miniature/topics/:feed/:circular_economy/:energy/:industry/:mobility/:digital', function ( req, res ) {
     sheet_scrapper.readJSONFromServerFile().then(data => {
         // Filter data to only keep convenient fields
         data.values = data.values.map(row => {

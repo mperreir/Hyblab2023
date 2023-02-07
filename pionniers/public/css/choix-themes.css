@@ -1,65 +1,64 @@
-
-header {
-    height: 20%;
+#container > * {
     width: 75%;
 }
 
-header h2 {
-    width: 50%;
+#theme-selector-long {
+    height: 50%;
+    margin-top: 10%;
+}
+
+#label-selector p {
+    width: fit-content;
+    font-size: 1.2em;
+    margin-bottom: 5%;
+}
+
+#label-selector p {
+    width: fit-content;
+    font-size: 1.2em;
+}
+
+#label-selector img {
+    height: 4vh;
+    transform: translateY(11%);
 }
 
 
-p {
-    font-size: 1em;
-}
 
 #liste-theme {
     background: var(--gris-clair);
-    width: 75%;
-    height: 60%;
+    width: 100%;
+    height: 80%;
     border-radius: 5%;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 #liste-theme ul {
-    height: 100%;
-    width: 80%;
+    height: 80%;
+    width: 40%;
 }
 
 #liste-theme ul li {
     transition: 0.2s;
+    user-select: none;
+    cursor: pointer;
+    background: var(--blanc-fond);
+    border-radius: 500px;
+    padding: 5% 7% 5% 5%;
+
 }
 
+#liste-theme ul li img {
+    height: 5vh;
+    margin-right: 1vw;
+}
 
 #partie-basse {
     height: 80%;
     width: 100%;
 }
 
-input[type="checkbox"] {
-    display: none;
-}
-
-.theme {
-    user-select: none;
-    cursor: pointer;
-    background: var(--blanc-fond);
-    border-radius: 500px;
-    font-size: 0.6em;
-    padding: 2% 5% 2% 5%;
-    white-space: nowrap;
-}
-
-.theme img {
-    height: 5vh;
-    margin-right: 1vw;
-}
-
-
-.checked-theme {
-    color: yellow;
-}
-
 footer {
     width: 75%;
+    height: 15%;
 }

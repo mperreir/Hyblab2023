@@ -42,4 +42,14 @@ document.addEventListener("DOMContentLoaded", function() {
     themes.forEach((t) => {
         t.addEventListener('click', onCheck);
     });
+
+    themeSelected = localStorage.getItem('themes').split(',');
+
+    themes.forEach(tc => {
+        const img = tc.querySelector('img');
+        const themeName = img.getAttribute('alt');
+        if(themeSelected.includes(themeName)) {
+            tc.classList.remove('unchecked');
+        }
+    });
 });
