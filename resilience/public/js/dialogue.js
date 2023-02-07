@@ -13,7 +13,7 @@ async function initConversation() {
     const conversation = await response.json();
 
     let names = conversation.names;
-    names.forEach(name => {
+    await names.forEach(name => {
         let htmlName = document.createElement('p');
         htmlName.classList.add('name');
         htmlName.textContent = name
@@ -46,11 +46,11 @@ function runConversation(messages, names) {
                 case 'message':
                     displayMessage(message, names);
                     break;
-                case 'question':
-                    displayQuestion(message, names);
+                case 'one':
+                    messages = chooseOne(messages, message, names);
                     break;
-                case 'answer':
-                    displayAnswer(message, names);
+                case 'all':
+
                     break;
                 default:
                     console.log('Unknown message type');
@@ -60,7 +60,42 @@ function runConversation(messages, names) {
         };
     });
 };
-                    
+              
+function chooseOne(messages, message, names) {
+    let htmlSubMessageList = []; // Keep track of all the answers we create
+    // Create each answer
+    message.messages.forEach(subMessageLine => {
+        let subMessage = subMessageLines[0]; // First message of the sub-conversation is the answer
+
+        let htmlMessage = document.createElement('p');
+        htmlMessage.classList.add('choice');
+        htmlMessage.textContent = answer.text;
+
+        htmlDialogueMessages.appendChild(htmlMessage);
+
+        let onclick = htmlMessage.addEventListener('click', function () {
+            // Remove all the answers and stop listening to clicks
+            htmlSubMessageList.forEach(otherMessage => {
+                otherMessage.removeEventListener('click', onclick);
+                otherMessage.remove();
+            });
+
+            displayMessage(subMessage, names);
+            console.log(messages)
+            const newMessages = [...subMessageLine.splice[1], ...messages];
+            console.log(newMessages)
+            return newMessages;
+        });
+
+        htmlSubMessageList.push(htmlMessage);    // Add it to the list
+    });
+}
+
+          
+function chooseAll(messages, message, names) {
+    
+}
+
 
 function displayMessage(message, names) {
     let htmlMessage = document.createElement('p');
