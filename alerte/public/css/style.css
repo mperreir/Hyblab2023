@@ -125,6 +125,7 @@ header img,
     min-height: 50px;
     margin: 2%;
     font-size: 0.2em;
+    justify-content: center;
 }
 
 .answer-container{
@@ -195,9 +196,10 @@ header img,
 }
 */
 
-#little-logo-meuh {
+#petit_logo {
     width: 20%;
     position: relative;
+    left: 20%;
 }
 
 #side-by-side{
@@ -251,7 +253,20 @@ main>section {
     left: 0;
 }
 
-.bubble, .little-bubble {
+.bubble{
+    position: relative;
+    text-align: justify;
+    color: white;
+    font-size: 0.2em;
+    font-family: "Inter";
+    height:100%
+}
+
+.content_intro{
+    height: 100%;
+}
+
+.little-bubble {
     position: relative;
     text-align: center;
     color: white;

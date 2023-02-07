@@ -2,7 +2,7 @@
 
 let next0 = document.getElementById("next0")
 next0.addEventListener("click", () => {
-  display("s3")
+  display("s1")
 })
 
 let next1 = document.getElementById("next1")
