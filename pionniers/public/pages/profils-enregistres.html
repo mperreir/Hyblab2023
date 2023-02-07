@@ -11,7 +11,7 @@
   <link rel="icon" type="image/png" href="../img/icon.png"/>
 </head>
 <body>
-<div id="container" class="flex-column align-items-center justify-content-space-evenly rainbow-background rbg-bottom">
+<div id="container" class="flex-column align-items-center justify-content-space-between rainbow-background rbg-bottom">
   <header class="flex-column align-items-center justify-content-center" id="logo-appli">
     <a href="choix-themes.html">
       <div class="flex-column align-items-center justify-content-center">
@@ -19,10 +19,15 @@
       </div>
     </a>
   </header>
-
-  <ul id="liste-profils" class="flex-column">
-
-  </ul>
+  <section id="folder">
+  <div id="folder-tab" class="flex-row align-items-center justify-content-space-evenly">
+    <p class="gras">Voir mes
+      <span class="gras" id="nombre-profil" ></span> favoris</p>
+  </div>
+  <div id="folder-back-body">
+    <ul id="liste-profils" class="flex-column"> </ul>
+  </div>
+  </section>
 </div>
 </body>
 </html>
