@@ -74,9 +74,9 @@ setTimeout(()=> {
 
 function UpdateSrcImage(id){
 
-  if(id === '#animationSlideBas' ){selectedZone[1]='parking'}
-  else if(id === '#animationSlideDroit'){selectedZone[3] = 'friche'}
-  else if(id === '#animationSlideHaut'){selectedZone[2] = 'place'}
+  if(id === '#animationSlideBas' ){selectedZone[1]='parking';};
+  if(id === '#animationSlideDroit'){selectedZone[3] = 'friche';};
+  if(id === '#animationSlideHaut'){selectedZone[2] = 'place';};
 
 
   document.querySelector(id + ' .img_bas').src = './img/'+selectedZone[1]+'.png';
