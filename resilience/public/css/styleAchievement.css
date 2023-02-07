@@ -38,7 +38,7 @@
 .ID {
     width: 3rem;
     height: 3rem;
-    border-radius: 4vw;
+    border-radius: 50%;
     border: 1px solid black;
     display: flex;
     justify-content: center;
