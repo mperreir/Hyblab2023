@@ -12,7 +12,7 @@ const initSlideAnimationEntree = function(){
   droit.setAttribute('style', 'transform :translateX(300%);');
   gauche.setAttribute('style', 'transform :translateX(-300%);');
   haut.setAttribute('style', 'transform :translateY(-300%);');
-  bas.setAttribute('style', 'transform :translateY(300%);');
+  bas.setAttribute('style', 'transform :translateY(400%);');
 
 
   // Animate it
@@ -21,17 +21,20 @@ const initSlideAnimationEntree = function(){
   anime({
     targets : "#animationSlideEntree .img_haut",
     translateY: 0,
-    delay : 200 
+    delay : 200,
+    duration:2000
   });
   anime({
     targets : "#animationSlideEntree .img_gauche",
     translateX: 0,
-    delay : 700
+    delay : 700,
+    duration:2000
   });
   anime({
     targets : "#animationSlideEntree .img_droit",
     translateX: 0,
-    delay : 1200
+    delay : 1200,
+    duration:2000
   });
 
   //animation finale
