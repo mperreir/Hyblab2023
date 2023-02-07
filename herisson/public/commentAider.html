@@ -40,67 +40,79 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 <script>
+    async function createPageConseil() {
 
-    // Dictionnaire de dictionnaires :
-    // Ex : {'mammiferes': mammiferes, 'oiseaux': oiseaux, ...} avec mammiferes = {conseil1: description, conseil2: description, ...}
+        async function getData(dbPath) {
+            const response = await fetch(dbPath)
+            return await response.json()
+        }
 
-    animaux = {'conseil 1': 'Ceci est une description. Elle donne des idées pour aider les mammifères. Merci de respecter ces conseils à la lettre.',
-        'conseil 2': 'Ceci est une description. Elle indique comment aider les mammifères. Merci de respecter ces conseils à la lettre.'}
+        const donnees = await getData("data/tipsDB.json")
 
-    const name = 'mammifères'
+        const name = 'Mammifères'
 
-    const wrapper = document.getElementsByClassName("swiper-wrapper")[0]
+        const dictionnaire = donnees[name]
 
-    for(let conseil in animaux) {
+        console.log(dictionnaire)
 
-        // On créé l'objet HMTL pour le slide
-        let slide = document.createElement("div")
-        // Changer l'id
-        slide.id = name
-        // Changer la classe
-        slide.className = "swiper-slide"
+        const wrapper = document.getElementsByClassName("swiper-wrapper")[0]
 
-        let titreCategorie = document.createElement("p")
-        titreCategorie.className = "categorie"
-        titreCategorie.innerText = "AIDEZ LES " + name.toUpperCase()
+        for (let conseil in dictionnaire) {
 
-        let titreConseil = document.createElement("p")
-        titreConseil.className = "conseil"
+            // On créé l'objet HMTL pour le slide
+            let slide = document.createElement("div")
+            // Changer l'id
+            slide.id = name
+            // Changer la classe
+            slide.className = "swiper-slide"
 
-        let description = document.createElement("p")
-        description.className = "description"
+            let titreCategorie = document.createElement("p")
+            titreCategorie.className = "categorie"
+            titreCategorie.innerText = "AIDEZ LES " + name.toUpperCase()
 
-        let action = document.createElement("p")
-        action.className = "action"
-        action.innerText = "Choisissez votre action"
+            let titreConseil = document.createElement("p")
+            titreConseil.className = "conseil"
 
-        // Pour chaque clé conseil
-        let desc = animaux[conseil]
+            let description = document.createElement("p")
+            description.className = "description"
 
-        titreConseil.innerText = conseil
-        description.innerText = desc
+            let action = document.createElement("p")
+            action.className = "action"
+            action.innerText = "Choisissez votre action"
 
-        slide.appendChild(titreCategorie)
-        slide.appendChild(titreConseil)
-        slide.appendChild(description)
-        slide.appendChild(action)
+            // Pour chaque clé conseil
+            let desc = dictionnaire[conseil]
 
-        wrapper.appendChild(slide)
+            titreConseil.innerText = conseil
+            description.innerText = desc
+
+            slide.appendChild(titreCategorie)
+            slide.appendChild(titreConseil)
+            slide.appendChild(description)
+            slide.appendChild(action)
+
+            wrapper.appendChild(slide)
+        }
+
+        // Slider horizontal
+        var horizontalSlider = new Swiper('.horizontal-slider', {
+            loop: true,
+            nested: true,
+            navigation: {
+                prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-button-next',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
     }
 
-    // Slider horizontal
-    var horizontalSlider = new Swiper('.horizontal-slider', {
-        loop: true,
-        nested: true,
-        navigation: {
-            prevEl: '.swiper-button-prev',
-            nextEl: '.swiper-button-next',
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-    });
+    createPageConseil();
+
+
 
 </script>
 </html>

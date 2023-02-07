@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Swiper demo</title>
+    <title>Différentes familles d'animaux</title>
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=1" />
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -11,10 +11,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;700&display=swap" rel="stylesheet">
-
+    <!-- HEADER -->
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="js/menuPopup.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
 </head>
 
 <body>
+<header id="headerMenu" class="main"> </header>
 <!-- Swiper -->
 <!-- Swiper horizontal -->
 <div class="swiper-container horizontal-slider">
@@ -117,18 +121,11 @@
         groupe.className = "groupe"
         groupe.innerText = "Choisissez votre groupe"
 
-        console.log(nomCommune)
-        console.log(bouton)
-        console.log(groupe)
-
         slide.appendChild(nomCommune)
         slide.appendChild(bouton)
         slide.appendChild(groupe)
 
         wrapper.appendChild(slide)
-        console.log(wrapper)
-
-        console.log(slide)
     }
 
     // Slider horizontal
