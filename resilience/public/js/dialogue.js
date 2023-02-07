@@ -14,6 +14,11 @@ async function initConversation() {
     response = await fetch(`data/conversation${conversationId}.json`);
     const conversation = await response.json();
 
+    let title = document.getElementById("titre");
+    let htmlTitle = document.createElement('h1');
+    htmlTitle.textContent = conversation.place;
+    title.appendChild(htmlTitle);
+
     names = conversation.names;
     await names.forEach(name => {
         let htmlName = document.createElement('p');
