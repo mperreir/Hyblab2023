@@ -119,7 +119,7 @@ const createMap = async function (taxon) {
     };
 
     info.update = function (props) {
-        this._div.innerHTML = '<h4>Commune :</h4>' + (props ? '<b>' + props.nom + '</b><br />' + (props.nb_obs ? props.nb_obs + ' observations' : 'Aucune observation') : 'Survolez une commune');
+        this._div.innerHTML = '<h4>Commune :</h4>' + (props ? '<b>' + props.nom + '</b><br />' + (props.nb_obs ? props.nb_obs + ' observations' : 'Aucune observation') : 'Cliquez sur une commune');
     };
 
     info.addTo(map);

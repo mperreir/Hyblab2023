@@ -17,7 +17,12 @@ async function getAllData() {
             let code = departements[i] * 1000 + j;
             promises.push(getData(code).then(information => {
                 if (Object.keys(information).length > 0) {
-                    allData[code] = information;
+                    const codeToNameUrl = `https://geo.api.gouv.fr/communes/${code}?fields=nom`;
+                    axios.get(codeToNameUrl).then(response => {
+                        allData[response.data.nom] = information;
+                    }).catch(error => {
+                        console.log(`Error for code ${code}`);
+                    });
                 }
             }).catch(error => {
                 console.log(`Error for code ${code}`);
