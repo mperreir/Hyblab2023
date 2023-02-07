@@ -1,0 +1,21 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+html {
+    height: 100vh;
+}
+body {
+    height: 100vh;
+}
+
+#container > * {
+    width: 75%;
+}
+
+
+#profils {
+    background-color: var(--gris-clair);
+
+
+}
