@@ -60,5 +60,5 @@ main#map {
 }
 
 .leaflet-map-pane .leaflet-tile-pane {
-    filter: brightness(90%);
+    filter: brightness(85%);
 }
