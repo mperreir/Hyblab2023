@@ -58,11 +58,10 @@ ubtn.forEach(element => {
   });
 });
 
-document.getElementById("map_link").addEventListener('click', () => {
-  window.localStorage.setItem('started', 0);
-  window.localStorage.setItem('steps', 0);
+function init_storage() {
   window.localStorage.setItem('compt', "");
   window.localStorage.setItem('heure', " 8:00 ");
+  window.localStorage.setItem("popup", "false");
   window.localStorage.setItem('_8', "false");
   window.localStorage.setItem('_9', "false");
   window.localStorage.setItem('_10', "false");
@@ -71,4 +70,13 @@ document.getElementById("map_link").addEventListener('click', () => {
   window.localStorage.setItem('_13', "false");
   window.localStorage.setItem('_14', "false");
   window.localStorage.setItem('_16', "false");
-});
+  window.localStorage.setItem('achievement1', "false");
+  window.localStorage.setItem('achievement2', "false");
+  window.localStorage.setItem('achievement3', "false");
+  window.localStorage.setItem('achievement4', "false");
+  window.localStorage.setItem('achievement5', "false");
+  window.localStorage.setItem('achievement6', "false");
+  window.localStorage.setItem('achievement7', "false");
+  window.localStorage.setItem('achievement8', "false");
+  window.location= "./map.html"
+}

@@ -45,11 +45,11 @@ header {
     font-size: 0.3em;
     border-radius: 1rem;
     box-sizing: border-box;
-    margin-top:-25px;
+    margin-top: -25px;
     display: flex;
-    flex-flow : wrap;
-    align-content :space-between;
-    justify-content :left;
+    flex-flow: wrap;
+    align-content: space-between;
+    justify-content: left;
 }
 
 
@@ -57,7 +57,7 @@ header {
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    border : 1px solid black;
+    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,7 +72,7 @@ header {
 }
 
 
-.shortDescription{
+.shortDescription {
     display: flex;
     font-size: 1rem;
     color: black;
@@ -88,30 +88,43 @@ header {
 
 
 
-.shortDescription-1, .achievement-1 {
-    background-color: #CFCCF9;
+.shortDescription-1,
+.achievement-any {
+    background-color: #D3D3D3;
 
 }
 
-.shortDescription-2, .achievement-2 {
+.shortDescription-2,
+.achievement-2 {
     background-color: #A4A4FC;
 }
 
-.shortDescription-3, .achievement-3 {
+.shortDescription-3,
+.achievement-3 {
     background-color: #9088FF;
 }
-.shortDescription-4, .achievement-4 {
+
+.shortDescription-4,
+.achievement-4 {
     background-color: #FFC8A2;
 }
-.shortDescription-5, .achievement-5 {
+
+.shortDescription-5,
+.achievement-5 {
     background-color: #FFB84E;
 }
-.shortDescription-6, .achievement-6 {
+
+.shortDescription-6,
+.achievement-6 {
     background-color: #F89E62;
 }
-.shortDescription-7, .achievement-7 {
+
+.shortDescription-7,
+.achievement-7 {
     background-color: #FD9E98;
 }
-.shortDescription-8, .achievement-8 {
+
+.shortDescription-8,
+.achievement-8 {
     background-color: #FF73BA;
 }
