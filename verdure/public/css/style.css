@@ -227,8 +227,6 @@ SLIDE QUESTION
 }
 
 
-.question-slide {
-
 .question-slide{
     background-position-y: 0;
     transition: background-position-y 1s;
