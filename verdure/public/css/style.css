@@ -620,6 +620,10 @@ INDICATEUR
     padding: 1vh;
 }
 
+li{
+    margin-bottom: 1vh;
+}
+
 #title1, #title2, #title3, #title4, #title5, #title6, #title7 {
     height: 100%;
     display: flex;
