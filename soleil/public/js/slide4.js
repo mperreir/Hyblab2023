@@ -1,28 +1,29 @@
 "use strict";
+var executed4 = false;
 
 const initSlide4 = async function(){
-    changePente();
-    console.log("initSlide4");
-    $("#pente header button.retour").click(function(){
-        swiper.slidePrev();
-    });
-
-    $("#pente input[name=pente]").click(function(){
+    if(!executed4){
+        executed4 = true;
         changePente();
-    })
 
-    $("#pente footer button").click(function(){
-        quiz["pente"] = $("#logement input[type=radio][name=pente]:checked").val();
-        if (quiz["pente"] == "Plat"){
-            swiper.slideNext();
-            swiper.slideNext();
-            //initSlide6();
-        }
-        else{
-            swiper.slideNext()
-            //initSlide5();
-        }
-    });
+        $("#pente input[name=pente]").click(function(){
+            changePente();
+        })
+    
+        $("#pente footer button").click(function(){
+            quiz["pente"] = $("#logement input[type=radio][name=pente]:checked").val();
+            if (quiz["pente"] == "Plat"){
+                swiper.slideNext();
+                swiper.slideNext();
+                //initSlide6();
+            }
+            else{
+                swiper.slideNext()
+                //initSlide5();
+            }
+        });
+    }
+    
 }
 
 function changePente(){

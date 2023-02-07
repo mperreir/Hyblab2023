@@ -1,23 +1,25 @@
 "use strict";
 
+var executed2 = false;
 // Just animate the logo
 const initSlide2 = async function(){
-  $("#adresse footer button").click(function(){
-    if (isValidAdress($("#adresse input").val())) {
-      quiz["adress"] = $("#adresse input").val();
-      swiper.slideNext();
-      //initSlide3();
-    }
-
-    
-  });
-  $("#adresse button.text").click(function(){
-    console.log("button");
-    changeText();
-  })
-  $("#adresse header button.retour").click(function(){
-    swiper.slidePrev();
-  })
+  if(!executed2){
+    $("#adresse footer button").click(function(){
+      if (isValidAdress($("#adresse input").val())) {
+        quiz["adress"] = $("#adresse input").val();
+          swiper.slideNext();      
+      }
+  
+      
+    });
+    $("#adresse button.text").click(function(){
+      console.log("button");
+      changeText();
+    })
+    executed2 = true;
+  }
+  
+  
 };
 
 function isValidAdress(adress){

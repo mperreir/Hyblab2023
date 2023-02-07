@@ -1,12 +1,14 @@
 "use strict";
+var executed5 = false;
 
 const initSlide5 = function(){
-    $("#orientation header button.retour").click(function(){
-        swiper.slidePrev();
-    });
-    $("#orientation header button").click(function(){
-        changeBoussole();
-    });
+    if(!executed5){
+        executed5 = true;
+        $("#orientation header button").click(function(){
+            changeBoussole();
+        });
+    }
+    
 }
 
 function changeBoussole(){

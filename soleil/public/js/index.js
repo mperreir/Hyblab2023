@@ -1,8 +1,10 @@
 "use strict";
 
+
 // Init of the (touch friendly) Swiper slider
 const swiper = new Swiper("#mySwiper", {
   direction: "vertical",
+  observer: true,
   //mousewheel: true,
 });
 
@@ -41,3 +43,7 @@ setTimeout(() => {
   // Init first slide
   initSlide1();
 }, 1000);
+
+$(".retour").click(function(){
+  swiper.slidePrev();
+})

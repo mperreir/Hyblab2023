@@ -1,8 +1,8 @@
 "use strict";
+var executed6 = false;
 
 const initSlide6 = function(){
-    $("#ombre header button.retour").click(function(){
-        swiper.slidePrev();
-        swiper.slidePrev();
-    });
+    if(!executed6){
+        executed6 = true;
+    }
 }
