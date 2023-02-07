@@ -86,10 +86,6 @@ footer {
     width: 100%;
 }
 
-#content_main_img {
-    margin-top: 25px;
-}
-
 
 #s0 {
     padding: 50px;
@@ -211,6 +207,13 @@ header img,
 }
 */
 
+.little-logo-meuh {
+    position: fixed;
+    left: 0;
+    top: 15px;
+    height: 30px;
+}
+
 #petit_logo {
     width: 20%;
     position: relative;
@@ -305,6 +308,36 @@ main>section {
 #labelDep {
     color: gray;
     font-size: small;
+}
+
+#btnquizz {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 150%;
+    grid-gap: 25px;
+    align-items: center;
+    justify-items: center;
+}
+
+#btnquizz button {
+    line-height: 50px;
+    border-radius: 15px;
+}
+
+.btn8 {
+    background-color: aliceblue;
+    width: 100%;
+    color: black;
+    border-radius: 15px;
+}
+
+.btn8 img {
+    width: 100%;
+}
+
+.btn8 p {
+    text-align: center;
+    font-size: 0.2em;
 }
 
 #dep {
