@@ -66,9 +66,7 @@ body{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-
+    font-size: 4vw;
 }
 
 /* ---------- Animation de Soli-mongolfière dans la jauge ------------ */
@@ -174,7 +172,7 @@ header{
 }
 
 .commentaire-soli {
-    max-width: 90%;
+    max-width: 95%;
     left: 5%;
     right: 7%;
     position:static;
@@ -274,8 +272,8 @@ header{
 }
 
 #loader-img{
-    top:40%;
-    left:40%;
+    top:50%;
+    left:50%;
     position: absolute;
 }
 
@@ -311,7 +309,7 @@ header{
 }
 
 .titre{
-    font-size: 18px;
+    font-size: 5vw;
     padding: 10px;
     font-weight: bold;
     text-align: center;
@@ -349,6 +347,7 @@ video{
     margin: auto;
     width: 12em;
     text-align: center;
+    font-size: 4vw;
 }
 
 img.img-adresse{
@@ -360,16 +359,20 @@ footer button{
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    padding: 3px 7px;
+
+    padding: 5px 9px;
     gap: 16px;
     background: #9185BE;
     border-radius: 8px;
     color: #FFFFFF;
     margin: auto;
+    border: transparent;
+
     text-transform: uppercase;
     font-family: 'Inter';
     font-style: normal;
-    border: transparent;
+    font-weight: 400;
+    font-size: 5vw;
 }
 
 .passer{
@@ -390,6 +393,7 @@ button.retour{
     margin: 2% ;
     width : 10%;
     text-align: center;
+    font-size: 5vw;
     position: absolute;
     background-color: transparent;
     border: transparent;
@@ -575,21 +579,39 @@ body{
         height: calc(100 * 16vw / 9); /* adjust height so that aspect ratio is 9/16 */
         padding-left: 0;
     }
+    /* --------------------------------------- Notes FAQ -------------------------------------- */
+    /*  Pour ce format, on met le bouton commencer un peu + haut sur la page d'accueil ? (sinon c'est nikel)
 
+
+    */
     /* We set a default font size here. It will be the base for all other font sizes */
     /* Here the font size is proportional to content width */
     body{
         font-size: 15vw;
     }
 
+/* Détails page adresse */
+    #adresse input {
+        margin-top: 10%;
+    }
 }
 
 @media screen and (min-aspect-ratio: 3/4) {
     #container {
         padding-left: 0;
         width: 100vw;
-
     }
+/* Page adresse*/
+    header {
+        margin-bottom: 0;
+    }
+    video {
+        max-width: 85%;
+    }
+    .main-location-page {
+        padding-top: 0;
+    }
+
 }
 
 
