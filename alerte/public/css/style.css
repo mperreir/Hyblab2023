@@ -58,13 +58,28 @@ h1 {
     font-size: 16px;
 }
 
+p{
+    font-size: 0.2em;
+}
+
+h1, h2, h3, h4, h5, p{
+    text-align: justify;
+    font-family: arial, sans-serif;
+}   
+
 header {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
 }
 
-
+.little-bubble-text{
+    padding-top: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 15%;
+    
+}
 
 #s0 {
     padding: 50px;
@@ -94,6 +109,30 @@ footer button,
     background-size: cover;
     max-height: 50px;
     border-radius: 25px;
+}
+
+.answer-btn{
+    min-width: 50px;
+    min-height: 50px;
+    margin: 2%;
+    font-size: 0.2em;
+}
+
+.answer-container{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.answer{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
 }
 
 
@@ -156,9 +195,11 @@ footer button,
 
 #little-logo-meuh {
     width: 20%;
-    position: fixed;
-    top: 3%;
-    left: 10%;
+}
+
+#side-by-side{
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* Last slide image is centered */
@@ -207,7 +248,7 @@ main>section {
     left: 0;
 }
 
-.bubble {
+.bubble, .little-bubble {
     position: relative;
     text-align: center;
     color: white;
@@ -218,10 +259,11 @@ main>section {
     width: 100%;
 }
 
+
 .scroll {
     /* peut-être changer pour swiper */
     position: absolute;
-    top: 50%;
+    top: 53%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: block;
@@ -229,11 +271,18 @@ main>section {
     width: 90%;
     height: 80%;
     overflow-y: scroll;
-    text-align: justify;
-    font-family: arial, sans-serif;
-    font-size: 0.2em;
 }
 
+.scroll-little-bubble {
+    /* peut-être changer pour swiper */
+    position: absolute;
+    top: 13%;
+    left: 11%;
+    display: block;
+    width: 85%;
+    height: 56%;
+    overflow-y: scroll;
+}
 
 /* ---------- Positionning of logos on the last slide -------------------- */
 /* here we have a contraint on the height of the logos (not the width)     */

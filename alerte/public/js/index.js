@@ -7,7 +7,17 @@ next0.addEventListener("click", () => {
 
 let next1 = document.getElementById("next1")
 next1.addEventListener("click", () => {
+  display("s3")
+})
+
+let next3_1= document.getElementById("next3-bad-answer")
+next3_1.addEventListener("click", () => {
   display("s4_1")
+})
+
+let next3_2= document.getElementById("next3-good-answer")
+next3_2.addEventListener("click", () => {
+  display("s4_2")
 })
 
 let next4_1 = document.getElementById("next4_1")
