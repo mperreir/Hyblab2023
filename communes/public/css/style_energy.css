@@ -14,8 +14,22 @@ body{
     overflow: hidden;   /* to avoid slider bugs on some browsers */
     font-family: "Poppins", sans-serif;
 }
+.carousel{
+    align-content: center;
+    position: relative;
+    height: 200px;
+}
+.carousel-items{
+    width: 30%;
+}
+#carousel-text{
+    text-align: center;
+    margin-top: 40%;
 
+}
 h1{
+    font-size:100%;
+    margin:0;
     font-weight: 600;
     color: #e81313;
 }

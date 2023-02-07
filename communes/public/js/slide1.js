@@ -1,5 +1,12 @@
 "use strict";
-
+let visited = sessionStorage.getItem("alreadyVisited")
+if(visited ===""){
+  visited = sessionStorage.getItem("visit")
+}else{
+  visited=visited+";"+sessionStorage.getItem("visit")
+}
+sessionStorage.setItem("alreadyVisited",visited)
+console.log(sessionStorage.getItem("alreadyVisited"))
 // async init function (because of the awaits on fetches)
 const initSlide1 = async function(){
   let response = await fetch('../data/data.json');

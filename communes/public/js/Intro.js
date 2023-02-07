@@ -1,4 +1,5 @@
 "use strict";
+sessionStorage.setItem("alreadyVisited","")
 var monObjet = document.querySelectorAll('.logo');
 for (var i = 0; i < monObjet.length; i++) {
     monObjet[i].data = "../img/logo.svg";
