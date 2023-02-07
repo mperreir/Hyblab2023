@@ -1,7 +1,10 @@
 const init = async function(){
-// Retrieve the partner's topic from our API
-    let response = await fetch('../../api/energy/test');
+    // Retrieve the partner's topic from our API
+    let response = await fetch('api/energy/test');
     const data1 = await response.json();
+
+    console.log(data1);
+
 
     const footer = document.querySelector('body');
     data1.forEach((data) => {
