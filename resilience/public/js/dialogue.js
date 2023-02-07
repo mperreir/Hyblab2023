@@ -7,6 +7,7 @@ let htmlDialogueHead = document.querySelector('#head');
 let htmlDialogueMessages = document.querySelector('#messages');
 var messages = [];
 var names = [];
+var paused = false;
 
 
 async function initConversation() {
@@ -27,16 +28,11 @@ async function initConversation() {
 
 function runConversation() {
     let message;
-    let paused = false;
-
     let onClick = htmlDialogue.addEventListener('click', function () {
         console.log(paused);
         if (!paused) {
             console.log("click");
-            paused = true;
-
-            console.log(messages);
-            
+            paused = true;            
             message = messages.shift() || null;
 
             // If we run out of messages, stop listening to clicks
@@ -51,18 +47,16 @@ function runConversation() {
                     displayMessage(message);
                     break;
                 case 'one':
-                    messages = choose(message, false);
+                    choose(message, false);
                     break;
                 case 'all':
-                    messages = choose(message, true);
+                    choose(message, true);
                     break;
                 default:
-                    console.log('Unknown message type');
+                    console.log('Unknown message type : ' + message.type);
             };
 
             console.log(messages);
-
-            paused = false;
         };
     });
 };
@@ -87,26 +81,36 @@ function choose(message, all) {
             });
 
             displayMessage(subMessage);
-            console.log("subMessageLine", subMessageLine);
-            console.log("messages", messages);
             
-            let newMessages;
+            
+
+
             if (all) {
-                newMessages = [...subMessageLine.shift(), ...messages];
+                if (message.messages.size == 1) {
+                    message = message.messages;
+                }
+                else {
+                    message = {
+                        "type": "all",
+                        "messages": message.messages.filter(subLine => subLine[0].text != subMessage.text)
+                    };
+                };
+                subMessageLine = subMessageLine.splice(1) || [];
+                messages = [...subMessageLine, message, ...messages];
             }
             else {
-                newMessages = [...subMessageLine, ...messages];
-            }
-            messages = newMessages;
-            console.log("messages", messages);
-
+                subMessageLine = subMessageLine.splice(1) || [];
+                messages = [...subMessageLine, ...messages];
+            };
+            
+            if (message == []) message = null;
         });
 
         htmlSubMessageList.push(htmlMessage);    // Add it to the list
     });
-}
+};
 
-          
+
 function displayMessage(message) {
     let htmlMessage = document.createElement('p');
     htmlMessage.classList.add('message');
@@ -121,6 +125,8 @@ function displayMessage(message) {
 
     htmlMessage.textContent = message.text;
     htmlDialogueMessages.appendChild(htmlMessage);
+
+    paused = false;
 };
 
 document.getElementById('left-arrow').addEventListener('click', function () {
