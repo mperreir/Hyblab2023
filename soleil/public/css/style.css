@@ -320,13 +320,7 @@ header{
 }
 
 /* Most of the elements in this demo are absolute positionned with percentages */
-header{
-    margin-bottom: 20px;
-    text-align: center;
-    width: 100%;
-    top: 10%;
-    z-index: 2;
-}
+
 
 /*mes ajouts*/
 video{
@@ -338,6 +332,7 @@ video{
     width: 100%;
     position: relative;
 }
+
 #adresse input{
     box-sizing: border-box;
     display: flex;
@@ -575,6 +570,7 @@ body{
         margin-top: calc(-50 * 16vw / 9); /* move the content half the height to the top */
         top:50%; /* then center it ! */
         height: calc(100 * 16vw / 9); /* adjust height so that aspect ratio is 9/16 */
+        padding-left: 0;
     }
 
     /* We set a default font size here. It will be the base for all other font sizes */
@@ -584,6 +580,15 @@ body{
     }
 
 }
+
+@media screen and (min-aspect-ratio: 3/4) {
+    #container {
+        padding-left: 0;
+        width: 100vw;
+
+    }
+}
+
 
 /* Bouton Info */
 
