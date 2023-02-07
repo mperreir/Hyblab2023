@@ -270,7 +270,7 @@ SLIDE ANIMATION SORTIE+ZOOM
 
 .img_bas{
     position: absolute;
-    top: 49%;
+    top: 47.7%;
     text-align: center;
     left: 32%;
 }
@@ -291,7 +291,7 @@ SLIDE ANIMATION SORTIE+ZOOM
 
 .img_droit{
     position: absolute;
-    top: 39.6%;
+    top: 41.5%;
     text-align: center;
     right: 3%;
 }
@@ -756,37 +756,3 @@ GREENTA
 /*******************
 Slide video
 ******************/
-
-video{
-    /* position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    object-fit: cover; */
-
-    /* position :absolute;
-  top :0;
-  left: 0;
-  display :block;
-  width :150%;
-  height :100%;
-  object-fit :cover; */
-}
-
-.bloc{
-    position: relative;
-    height: 100%;
-    width: 100%;
-    /* overflow: hidden; */
-}
-
-.bloc video{
-    position: absolute;
-    min-width: 100%;
-    min-height: 100%;
-    /* top: 50%;
-    left: 50%; */
-    /* z-index: -100; */
-    /* transform: translate(-50%,-50%); */
-}
