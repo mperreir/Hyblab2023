@@ -188,6 +188,15 @@ body{
 SLIDE ACCUEIL
 ************************************/
 
+
+
+#backgroundFirstSlide{
+    opacity: 12.5%;
+    margin-top: 42%;
+    margin-left: 11%;
+    width: 169%;
+}
+
 #logo-verdure{
     text-align: center;
     width: 70%;
