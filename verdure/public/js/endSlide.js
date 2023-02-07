@@ -3,7 +3,9 @@
 const initEndSlide = function () {
     
     loadTextindic(IndicHappy,IndicMoney,IndicThermo);
-    document.getElementById("dropdownShareButton").style.display = "block";
+    let b = document.getElementById("endButtons");
+    b.style.display = "none";
+
 
     const titre = document.querySelector('#result');
 
@@ -29,6 +31,12 @@ const initEndSlide = function () {
         }, 40 * i);
     });
 });
+
+    setTimeout(function(){
+        $("#endButtons").fadeIn();
+        b.style.display = "flex";
+        document.getElementById("dropdownShareButton").style.display = "block";
+    }, 5000);
 
 
 
