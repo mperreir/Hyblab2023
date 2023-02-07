@@ -279,7 +279,7 @@ main>section {
     position: relative;
     text-align: justify;
     color: white;
-    font-size: 0.2em;
+    font-size: 0.18em;
     font-family: "Inter";
     height: 100%
 }
@@ -292,7 +292,7 @@ main>section {
     position: relative;
     text-align: justify;
     color: white;
-    font-size: 0.15em;
+    font-size: 0.16em;
     font-family: "Inter";
     height: 100%
 }
@@ -383,7 +383,7 @@ main>section {
     top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 8px;
+    padding: 5px;
     width: 100%;
     height: 90%;
     overflow-y: scroll;
@@ -416,6 +416,7 @@ main>section {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
+    padding: 20px;
 }
 
 .draw {
