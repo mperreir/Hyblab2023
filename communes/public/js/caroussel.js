@@ -19,6 +19,14 @@ let options = {
 fetch('../data/data.json')
     .then(response => response.json())
     .then(data => {
+        // for each element
+        const titre = document.querySelector('#titre');
+        titre.innerHTML = titre.innerHTML.toUpperCase();
+        titre.style.color = data.conclusion.color.main[0];
+
+
+
+
         // get element by id
         const carousel = document.querySelector('#carousel');
         data.main.forEach(item => {
@@ -50,3 +58,4 @@ fetch('../data/data.json')
         });
         M.Carousel.init(document.querySelectorAll('.carousel'), options);
     });
+

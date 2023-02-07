@@ -17,7 +17,6 @@ const initSlide2 = function(data){
   const bar_width = bar_chart.clientWidth;
   const bar_height = bar_chart.clientHeight;
 
-
   create_bar_chart(data.barchart.data, bar_chart, bar_width, bar_height, data.color.main.slice(0, 2), data.color.background[0]);
 };
 
