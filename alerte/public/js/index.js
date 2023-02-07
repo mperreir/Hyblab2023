@@ -8,7 +8,7 @@ function changeBackground(color) {
 
 let next0 = document.getElementById("next0")
 next0.addEventListener("click", () => {
-  display("s13_1")
+  display("s1")
   changeBackground('#121212')
 })
 
@@ -24,6 +24,7 @@ for (let btn of btns3) {
             btn.style.backgroundColor = 'green'
             setTimeout(() => {
                 display("s4_2")
+                changeBackground('aliceblue')
             }, 2000)
         })
     } else {
@@ -36,6 +37,7 @@ for (let btn of btns3) {
             }
             setTimeout(() => {
                 display("s4_1")
+                changeBackground('#121212')
             }, 2000)
         })
     }
