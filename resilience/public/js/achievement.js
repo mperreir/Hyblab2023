@@ -33,18 +33,19 @@ async function achievement() {
         let isOpen = false;
 
         htmlAchiev.addEventListener('click', function () {
-            console.log(htmlAchiev.id);
-            if (window.localStorage.getItem("achievement".concat(htmlAchiev.id))) {
-                let currentDescription = document.querySelector('.shortDescription');
-                if (currentDescription) {
-                    currentDescription.remove();
-                }
-                if (isOpen) {
-                    htmlDesc.remove();
-                    isOpen = false;
-                } else {
-                    htmlAchiev.appendChild(htmlDesc);
-                    isOpen = true;
+            if (window.localStorage.getItem("achievement".concat(htmlAchiev.id)) == "true") {
+                if (window.localStorage.getItem("achievement".concat(htmlAchiev.id))) {
+                    let currentDescription = document.querySelector('.shortDescription');
+                    if (currentDescription) {
+                        currentDescription.remove();
+                    }
+                    if (isOpen) {
+                        htmlDesc.remove();
+                        isOpen = false;
+                    } else {
+                        htmlAchiev.appendChild(htmlDesc);
+                        isOpen = true;
+                    }
                 }
             }
         });
