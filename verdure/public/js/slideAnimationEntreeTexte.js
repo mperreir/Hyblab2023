@@ -61,9 +61,9 @@ setTimeout(()=> {
 };
 
 function UpdateSrcImage(id){
-  document.querySelector(id + ' .img_droit').src = './img/'+selectedZone[1]+'.png';
-  document.querySelector(id+' .img_haut').src =  './img/'+selectedZone[0]+'.png';
-  document.querySelector(id+' .img_bas').src =  './img/'+selectedZone[2]+'.png';
-  document.querySelector(id+' .img_gauche').src =  './img/'+selectedZone[3]+'.png';
+  document.querySelector(id + ' .img_bas').src = './img/'+selectedZone[1]+'.png';
+  document.querySelector(id + ' .img_gauche').src =  './img/'+selectedZone[0]+'.png';
+  document.querySelector(id + ' .img_haut').src =  './img/'+selectedZone[2]+'.png';
+  document.querySelector(id + ' .img_droit').src =  './img/'+selectedZone[3]+'.png';
 
 }

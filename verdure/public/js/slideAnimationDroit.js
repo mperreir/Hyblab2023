@@ -73,7 +73,7 @@ const initSlideAnimationDroit = function(){
 
   setTimeout(()=> {
     swiper.enable()
-    swiper.slideTo(5,1)
+    swiper.slideTo(13,1)
  },5000)
   
 };

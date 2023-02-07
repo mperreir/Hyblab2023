@@ -1,12 +1,12 @@
 "use strict";
 
-
-//TODO AJUSTER A LA VALEUR DE DEBUT
 let IndicThermo = 85;
 let IndicMoney = 80;
 let IndicHappy = 50;
 
 let next_Question = 1
+
+
 // Init of the (touch friendly) Swiper slider
 let swiper = new Swiper("#mySwiper", {
   direction: "vertical",
@@ -31,11 +31,12 @@ swiper.on("slideChange", function () {
     case 3:
       initSlideAnimationEntreeTexte();
       break;
+
     case 4: 
-    console.log(IndicHappy)
-    swiper.disable();
-      initSlideAnimationDroit();
+      swiper.disable();
+      initSlideAnimationBas();
       break;
+
     case 5: 
       if(next_Question == 2){
       swiper.disable();
@@ -43,6 +44,7 @@ swiper.on("slideChange", function () {
       }
       else(swiper.slideTo(7,1))
       break;
+
     case 6: 
     if(next_Question == 3){
       swiper.disable();
@@ -50,11 +52,13 @@ swiper.on("slideChange", function () {
       }
       else(swiper.slideTo(7,1))
       break;
+
     case 7: 
       initSlideAnimationEntree();
       break;
     case 8: 
-      initSlideAnimationBas();
+      swiper.disable();
+      initSlideAnimationHaut();
       break;
 
     case 9: 
@@ -86,7 +90,8 @@ swiper.on("slideChange", function () {
     //break;
 
     case 12: 
-        initSlideAnimationGauche();
+        swiper.disable();
+        initSlideAnimationDroit();
     break;
 
     case 13: 
@@ -124,4 +129,4 @@ setTimeout(() => {
 }, 1);
 
 
-let selectedZone = ["boulevard", "parking", "place", "friche"]; // the value of which image to take for each Zone
+let selectedZone = ["b&w_boulevard", "b&w_parking", "b&w_place", "b&w_friche"]; // the value of which image to take for each Zone
