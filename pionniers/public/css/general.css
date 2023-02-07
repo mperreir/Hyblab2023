@@ -8,12 +8,12 @@
 
 /* Variables des couleurs - charte graphique - nuancier */
 :root {
-    /* Couleurs catégories */
+    /* Couleurs thèmes/catégories */
     --orange: #F5AF0A;
     --caca-doie: #C8AF37;
     --vert: #9BAF64;
     --turquoise: #6EAF91;
-    --cyan: #6EAF91;
+    --cyan: #41AFBE;
     --bleu-clair: #14AFF0;
 
 
@@ -271,6 +271,10 @@ footer#folder { /* Pour coller le folder en bas de la page */
     position: relative;
 }
 
+#folder-tab p {
+    width: 85%;
+}
+
 #folder-back-body {
     width: 100%;
     height: 10vh;
@@ -294,8 +298,8 @@ footer#folder { /* Pour coller le folder en bas de la page */
 }
 
 #nombre-profil {
-    background-color: var(--bleu-fonce);
-    color: var(--blanc-fond);
+
+    color: var(--bleu-fonce);
     border-radius: 100%;
     height: 3vh;
     width: 3vh;

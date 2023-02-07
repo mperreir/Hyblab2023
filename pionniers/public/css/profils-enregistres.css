@@ -1,8 +1,51 @@
-.fiche-minia {
-    height: 7%;
-    width: 100%;
+html, body {
+    padding: 0;
+    margin: 0;
+}
+html {
+    height: 100vh;
+}
+body {
+    height: 100vh;
 }
 
-.fiche-minia .contenu-fiche-minia img {
-    max-height: 100px;
+#container > * {
+    width: 75%;
+}
+
+
+#liste-profils {
+
+
+}
+
+.information-fiche {
+    margin-left: 5%;
+    height: 60%;
+    width: 80%;
+}
+.fiche-minia {
+    user-select: none;
+    width: 100%;
+    height: 60%;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.5);
+    background: var(--gris-clair);
+}
+
+.fiche-minia-item {
+
+}
+
+.photo-case img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px 0 0 15px;
+    margin-bottom: -9%;
+
+}
+
+
+.photo-case {
+    width: 40%;
 }

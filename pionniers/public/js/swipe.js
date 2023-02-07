@@ -235,6 +235,30 @@ async function onCheck(evnt) {
 
 }
 
+/*
+ * Ajout d'une fiche unique au carrousel, suite à un mouvement de swipe vers le bas
+ */
+function ajouterNouvelleFicheSwipeBas(idFicheSuppr) {
+
+    console.log("profilsTrouves :", profilsTrouves);
+
+    // Recherche dans la liste de résultats (profilsTrouves) la position du profil supprimé juste avant
+    const indexProfilSuppr = profilsTrouves.findIndex(pr => pr.Id === idFicheSuppr);
+    profilsTrouves.splice(indexProfilSuppr, 1);
+
+    console.log("indexProfilSuppr :", indexProfilSuppr);
+
+    const indexNouveauProfil = (indexProfilSuppr + 3) % profilsTrouves.length;
+
+    console.log("indexNouveauProfil :", indexNouveauProfil);
+
+    // Ajout du nouveau la fiche du nouveau profil
+    const newProfil = profilsTrouves[indexNouveauProfil];
+    carouselList.append(createFiche(newProfil, '2'));
+
+    miseAJourEtatCarousel();
+}
+
 /**
  * Ajout d'une fiche unique au carrousel, suite à un mouvement gauche ou droite
  * @param clicADroite {boolean} true si le click provocant l'appel de cette fonction a été effectué sur la partie droite du swiper, false sinon
@@ -285,10 +309,6 @@ function miseAJourEtatCarousel() {
 // -----------------------------------------------------
 // ------ FONCTION RELATIVES AU CAROUSEL / SWIPER ------
 // -----------------------------------------------------
-
-// update ici
-
-
 
 swiperSection.addEventListener('click', function (event) {
     let newActive;
@@ -366,158 +386,135 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 });
 function updateFolder() {
-    console.log("par ici");
     const profilsEnregistresFolder = document.querySelector('footer#folder');
     const nombreProfilsEnregistres = profilsEnregistresFolder.querySelector('#nombre-profil');
-    const nombreProfilsEnregistresText = profilsEnregistresFolder.querySelector('#nombre-profil p');
-    const idsProfilsEnregistres = window.localStorage.getItem("profilsFavoris") // Test
-    let nombreProfilFavoris=0;
+   // const nombreProfilsEnregistresText = profilsEnregistresFolder.querySelector('#nombre-profil p');
+    const idsProfilsEnregistres = window.localStorage.getItem("profilsFavoris");
+    let nombreProfilFavoris = 0;
+
     if (idsProfilsEnregistres !== null){
         nombreProfilFavoris = idsProfilsEnregistres.split(",").length;
     }
 
-
-    // idsProfilsEnregistres.length > 0
     if (nombreProfilFavoris > 0) {
         nombreProfilsEnregistres.classList.remove('display-none');
-        nombreProfilsEnregistres.classList.add('flex-row');
-        nombreProfilsEnregistresText.innerHTML = nombreProfilFavoris.toString();
-        //idsProfilsEnregistres.length.toString();
+        //nombreProfilsEnregistres.classList.add('flex-row');
+        nombreProfilsEnregistres.innerHTML = nombreProfilFavoris.toString();
     } else {
         nombreProfilsEnregistres.classList.add('display-none');
-        nombreProfilsEnregistres.classList.remove('flex-row');
+        //nombreProfilsEnregistres.classList.remove('flex-row');
     }
 }
 function swipe(current, next, prev) {
-        console.log("ici swipe");
+    const topcard = current;
+    const nextcard = next;
+    const previouscard = prev;
 
-        let topcard = current;
-        let nextcard = next;
-        let previouscard = prev;
+    if (carouselItems.length > 0) {
+        const hammer = new Hammer(topcard)
+        hammer.add(new Hammer.Tap())
+        hammer.add(new Hammer.Pan({
+            position: Hammer.position_ALL,
+            threshold: 0
+        }))
 
-        if (carouselItems.length > 0) {
-            console.log(carouselItems);
-            console.log(topcard);
-            console.log(nextcard);
-            console.log(previouscard);
+        hammer.on('pan', (e) => {
+            onPan(e)
+        })
 
+        function onPan(e) {
+            const board = document.querySelector('#swiper');
 
-            //if (hammer) hammer.destroy()
+            // remove transition properties
+            topcard.style.transition = null
+            //if (nextcard) nextcard.style.transition = null
 
-            const hammer = new Hammer(topcard)
-            hammer.add(new Hammer.Tap())
-            hammer.add(new Hammer.Pan({
-                position: Hammer.position_ALL,
-                threshold: 0
-            }))
-            hammer.on('pan', (e) => {
-                onPan(e)
-            })
+            // get top card coordinates in pixels
+            let style = window.getComputedStyle(topcard)
+            let mx = style.transform.match(/^matrix\((.+)\)$/)
+            let startPosX = mx ? parseFloat(mx[1].split(', ')[4]) : 0
+            let startPosY = mx ? parseFloat(mx[1].split(', ')[5]) : 0
 
+            // get top card bounds
+            let bounds = topcard.getBoundingClientRect()
 
-            function onPan(e) {
-                const board = document.querySelector('#swiper');
-
-                // remove transition properties
-                topcard.style.transition = null
-                //if (nextcard) nextcard.style.transition = null
-
-                // get top card coordinates in pixels
-                let style = window.getComputedStyle(topcard)
-                let mx = style.transform.match(/^matrix\((.+)\)$/)
-                startPosX = mx ? parseFloat(mx[1].split(', ')[4]) : 0
-                startPosY = mx ? parseFloat(mx[1].split(', ')[5]) : 0
-
-                // get top card bounds
-                let bounds = topcard.getBoundingClientRect()
-
-                // get finger position on top card, top (1) or bottom (-1)
-                isDraggingFrom =
-                    (e.center.y - bounds.top) > topcard.clientHeight / 2 ? -1 : 1
+            // get finger position on top card, top (1) or bottom (-1)
+            let isDraggingFrom = (e.center.y - bounds.top) > topcard.clientHeight / 2 ? -1 : 1
 
 
-                // get new coordinates
-                let posX = e.deltaX + startPosX
-                let posY = e.deltaY + startPosY
+            // get new coordinates
+            let posX = e.deltaX + startPosX
+            let posY = e.deltaY + startPosY
 
-                // get ratio between swiped pixels and the axes
-                let propX = e.deltaX / board.clientWidth
-                let propY = e.deltaY / board.clientHeight
+            // get ratio between swiped pixels and the axes
+            let propX = e.deltaX / board.clientWidth;
+            let propY = e.deltaY / board.clientHeight;
 
-                // get swipe direction, left (-1) or right (1)
-                let dirX = e.deltaX < 0 ? -1 : 1
+            // get swipe direction, left (-1) or right (1)
+            let dirX = e.deltaX < 0 ? -1 : 1
 
-                // get degrees of rotation, between 0 and +/- 45
-                let deg = isDraggingFrom * dirX * Math.abs(propX) * 45
+            // get degrees of rotation, between 0 and +/- 45
+            let deg = isDraggingFrom * dirX * Math.abs(propX) * 45
 
-                // get scale ratio, between .95 and 1
-                let scale = (95 + (5 * Math.abs(propX))) / 100
-
-
-                if (e.isFinal) {
-
-                    let successful = false
+            // get scale ratio, between .95 and 1
+            let scale = (95 + (5 * Math.abs(propX))) / 100
 
 
-                    // check threshold and movement direction
-                    if (e.direction == Hammer.DIRECTION_RIGHT) {
+            if (e.isFinal) {
+                let successful = false
 
-                        /*update(previouscard);
-                        console.log("preced");*/
+                // check threshold and movement direction
+                if (e.direction == Hammer.DIRECTION_RIGHT) {
 
-                    } else if (e.direction == Hammer.DIRECTION_LEFT) {
+                    /*update(previouscard);
+                    console.log("preced");*/
 
-                        /*  update(nextcard);
-                          console.log("suiv");*/
+                } else if (e.direction == Hammer.DIRECTION_LEFT) {
 
-                    } else if (propY < 30 && e.direction == Hammer.DIRECTION_DOWN) {
+                    /*  update(nextcard);
+                      console.log("suiv");*/
 
-                        successful = true
-                        // get top border position
-                        posY = +(board.clientHeight + topcard.clientHeight)
+                } else if (propY < 30 && e.direction == Hammer.DIRECTION_DOWN) {
 
-                    }
-
-                    if (successful) {
-
-                        // animation de la carte qui va vers le bas
-                        topcard.style.transform =
-                            'translateX(' + posX + 'px) translateY(' + posY + 'px) rotate(' + deg + 'deg)'
-
-                        // quand la transition est finie, on stock l'id de la carte et on passe a la suivante
-                        setTimeout(() => {
-                            // enleve la carte swipe
-                            nextcard.setAttribute("data-pos", "0");
-                            let avantDerniere = elems.find(elem => elem.getAttribute("data-pos") === '2');
-                            avantDerniere.setAttribute("data-pos", "1");
-                            previouscard.setAttribute("data-pos", "-1");
-                            console.log(previouscard.dataset.pos);
-                            console.log(carouselList);
-
-
-                            // stock la carte et on affiche la prochaine
-                            let recuperationProfils = window.localStorage.getItem("profilsFavoris");
-                            if (recuperationProfils !== null) {
-                                console.log("ici c'est pas null");
-                                if (!recuperationProfils.split(",").includes(topcard.getAttribute("data-id"))){
-                                    recuperationProfils = recuperationProfils + "," + topcard.getAttribute("data-id");
-
-                                    window.localStorage.setItem("profilsFavoris", recuperationProfils);
-                                }
-                            }else{
-                                console.log("trop null");
-                                window.localStorage.setItem("profilsFavoris",topcard.getAttribute("data-id") );
-                            }
-                            topcard.remove();
-                            miseAJourEtatCarousel();
-                        }, 200)
-
-                    }
+                    successful = true
+                    // get top border position
+                    posY = +(board.clientHeight + topcard.clientHeight)
 
                 }
 
+                if (successful) {
+                    // animation de la carte qui va vers le bas
+                    topcard.style.transform = 'translateX(' + posX + 'px) translateY(' + posY + 'px) rotate(' + deg + 'deg)'
+
+                    // quand la transition est finie, on stock l'id de la carte et on passe a la suivante
+                    setTimeout(() => {
+                        // enleve la carte swipe
+                        nextcard.setAttribute("data-pos", "0");
+                        let avantDerniere = elems.find(elem => elem.getAttribute("data-pos") === '2');
+                        avantDerniere.setAttribute("data-pos", "1");
+                        previouscard.setAttribute("data-pos", "-1");
+                        const idFicheSuppr = topcard.getAttribute('data-id');
+
+                        ajouterNouvelleFicheSwipeBas(idFicheSuppr);
+
+                        // stock la carte et on affiche la prochaine
+                        let recuperationProfils = window.localStorage.getItem("profilsFavoris");
+                        if (recuperationProfils !== null) {
+                            if (!recuperationProfils.split(",").includes(topcard.getAttribute("data-id"))){
+                                recuperationProfils = recuperationProfils + "," + topcard.getAttribute("data-id");
+
+                                window.localStorage.setItem("profilsFavoris", recuperationProfils);
+                            }
+                        } else {
+                            window.localStorage.setItem("profilsFavoris",topcard.getAttribute("data-id") );
+                        }
+                        topcard.remove();
+                        miseAJourEtatCarousel();
+                    }, 200)
+                }
             }
         }
+    }
 }
 
 
