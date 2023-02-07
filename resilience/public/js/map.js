@@ -20,7 +20,7 @@ regions.forEach(element => {
             window.localStorage.setItem('achievement'.concat(e), "true");
         });
         compt = window.localStorage.getItem("compt");
-        if (element.id != "_16" || compt.length > 6) {
+        if (element.id != "_16" || compt.length > 7) {
             if (window.localStorage.getItem(element.id) == "false") {
                 window.localStorage.setItem('compt', compt + 1);
                 time = " ".concat(heures[compt.length + 1], " ");
@@ -88,7 +88,7 @@ function manger() {
     window.localStorage.setItem('compt', compt + 1);
     window.localStorage.setItem('heure', " 14:00 ");
     window.localStorage.setItem("popup", "false");
-    window.location = "./dialogue.html?id=15";
+window.location = "./dialogue.html?id=15";
 }
 
 load();

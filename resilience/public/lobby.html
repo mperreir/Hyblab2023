@@ -7,13 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
   <title>Hyblab 2023</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/styleLobby.css">
+  <link rel="stylesheet" href="css/styleGlobal.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/slide1.js" defer></script>
   <script src="js/slide2.js" defer></script>
-  <script src="js/index.js" defer></script>
+  <script src="js/slide3.js" defer></script>
+  <script src="js/lobby.js" defer></script>
 </head>
 
 <body>
@@ -24,23 +27,26 @@
     <div id="mySwiper" class="swiper">
 
       <main class="swiper-wrapper">
+
+
         <section id="first-slide" class="swiper-slide">
 
           <img src="img/logo_ecotopie.svg" id="logo-ecotopie" />
-          <img src="img/voyage_ecotopie.svg" id="voy-ecotopie" />
+          <img src="img/nouveau_titre.svg" id="voy-ecotopie" />
 
           <p> En 2023, l’état de la planète s’aggrave. Les bouleversements liés au dérèglement <b>climatique</b> s’accélèrent, et plus personne ne peut nier l’impact de l’activité <b>humaine</b> sur ce dernier.</p>
           
-          <img src="img/ux_kit/fleche_bas.svg" class="fleche_bas" />
+          <img src="img/ux_kit/fleche_bas.svg" class="fleche_bas" onclick="swiper.slideNext()"/>
 
           <footer>
-            <p></p>
           </footer>
         </section>
 
+
         <section id="second-slide" class="swiper-slide">
 
-          <img src="img/ux_kit/fleche_haut.svg" class="fleche_haut" />
+          <img src="img/nuages2.svg" class="nuages"/>
+          <img src="img/ux_kit/fleche_haut.svg" class="fleche_haut" onclick="swiper.slidePrev()"/>
 
           <div class="text-front-page">
             <p>
@@ -52,9 +58,11 @@
             Tout semblait aller… pour le mieux.
             </p>
           </div>
-          
-          <img src="img/ux_kit/fleche_bas.svg" class="fleche_bas" />
 
+          <img src="img/colline2.svg" id="colline2"/>
+          <img src="img/colline1.svg" id="colline1"/>
+          
+          <img src="img/ux_kit/fleche_bas.svg" class="fleche_bas" onclick="swiper.slideNext()"/>
 
           <footer>
           </footer>
@@ -63,7 +71,8 @@
 
         <section id="third-slide" class="swiper-slide">
 
-          <img src="img/ux_kit/fleche_haut.svg" class="fleche_haut" />
+          <img src="img/nuages1.svg" class="nuages"/>
+          <img src="img/ux_kit/fleche_haut.svg" class="fleche_haut" onclick="swiper.slidePrev()"/>
          
           <div class="text-front-page">
             <p> 
@@ -77,10 +86,14 @@
             </p>
           </div>
          
+          <img src="img/colline3.svg" id="colline3"/>
+
           <img src="img/ux_kit/grande_fleche.svg" id="g_fleche" onclick="init_storage()" />
 
           <footer></footer>
         </section>
+
+
       </main>
       <div class="swiper-pagination"></div>
     </div>

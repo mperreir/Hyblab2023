@@ -56,62 +56,6 @@ body{
 }
 
 /* Most of the elements in this demo are absolute positionned with percentages */
-.swiper-slide header{
-    text-align: center;
-    width: 100%;
-    top: 10%;
-    position: absolute;
-    font-size: 30%;
-    margin-bottom: 20%;
-    z-index: 2;
-}
-
-#logo-ecotopie{
-    width: 40%;
-    position: absolute;
-    margin-left: 30%;
-    margin-right: 30%;
-}
-
-#voy-ecotopie{
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 80%;
-    position: absolute;
-    margin-top: 45%;
-}
-
-.swiper-slide p{
-    font-size: 25%;
-    text-align: center;
-    margin: 10%;
-}
-
-.fleche_haut{
-    width: 10%;
-    position: absolute;
-    margin-left: 45%;
-    margin-right: 45%;
-    margin-top: 10%;
-}
-
-.fleche_bas{
-    width: 10%;
-    position: absolute;
-    margin-left: 45%;
-    margin-right: 45%;
-    margin-bottom: 10%;
-}
-
-#first-slide p{
-    margin-top: 80%;
-}
-
-.text-front-page{
-    margin-top: 40%;
-    z-index: 0;
-}
-
 #logo-hyblab{
     text-align: center;
     width: 50%;
