@@ -8,12 +8,12 @@
 
 /* Variables des couleurs - charte graphique - nuancier */
 :root {
-    /* Couleurs catégories */
+    /* Couleurs thèmes/catégories */
     --orange: #F5AF0A;
     --caca-doie: #C8AF37;
     --vert: #9BAF64;
     --turquoise: #6EAF91;
-    --cyan: #6EAF91;
+    --cyan: #41AFBE;
     --bleu-clair: #14AFF0;
 
 
