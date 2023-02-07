@@ -8,8 +8,7 @@
   },
   "dependencies": {
     "express": "^4.18.2",
-    "googleapis": "^110.0.0",
-    "hammerjs": "^2.0.8"
+    "googleapis": "^110.0.0"
   },
   "author": "MPDS",
   "license": "MIT"
