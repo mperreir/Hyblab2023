@@ -3,39 +3,9 @@
     overflow-y: scroll;
 }
 
-h1 {
-    font-size: 0.25em;
-    line-height: 1em;
-    background-color: #FFB84E;
-    margin: 1rem 0;
-    padding: 5% 30% 5% 30%;
-    color: white;
-    border-bottom-right-radius: 2em;
-    border-top-right-radius: 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
 
-    text-align: center;
-    font-style: normal;
-    text-transform: uppercase;
-}
 
-header {
-    display: flex;
-    justify-content: space-between;
-    width: 95%;
-    align-items: center;
-    margin-bottom: 1em;
-    margin-top: 0.2em;
-}
-
-#titre {
-    display: flex;
-    height: 100%;
-    width: 60%;
-}
 
 #left-arrow {
     display: flex;
@@ -75,20 +45,20 @@ header {
 
 
 .ID {
-    width: 4vw;
-    height: 4vw;
+    width: 3rem;
+    height: 3rem;
     border-radius: 4vw;
     border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 1rem;
-    font-size: 3em;
+    font-size: 2rem;
 }
 
 .cadenas {
-    width: 4vw;
-    height: 4vw;
+    width: 3rem;
+    height: 3rem;
     border-radius: 4vw;
     border: 1px solid rgba(0, 0, 0, 0);
     display: flex;
@@ -102,7 +72,7 @@ header {
 }
 
 .name {
-    font-size: 2vw;
+    font-size: 1.5rem;
     font-weight: normal;
     max-width: 80%;
 }

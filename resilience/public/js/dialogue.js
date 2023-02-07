@@ -124,18 +124,20 @@ function displayMessage(message) {
     htmlMessage.classList.add('message');
 
     const leftName = names[0];
-    if (leftName == message.name) {
+    if (leftName === message.name) {
         htmlMessage.classList.add('left');
+        htmlMessage.style.backgroundColor= '#FD9E98';
+
     }
     else {
         htmlMessage.classList.add('right');
-    };
+    }
 
     htmlMessage.textContent = message.text;
     htmlDialogueMessages.appendChild(htmlMessage);
 
     paused = false;
-};
+}
 
 document.getElementById('left-arrow').addEventListener('click', function () {
     if (window.localStorage.getItem("compt").length == 3) {

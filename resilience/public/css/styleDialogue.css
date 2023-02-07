@@ -3,50 +3,19 @@
 }
 
 
-header {
-    display: flex;
-    justify-content: space-between;
-    
-    position: absolute;
-    width: 100%;
-    height: 43px;
-    top: 23px;
-}
 
-#place {
-    display: flex;
-    background: #79B77B;
-    height: 100%;
-    width: 70%;
-    border-radius: 0px 30px 30px 0px;
-}
-
-h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-    text-align: center;
-
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-size: 15px;
-    text-transform: uppercase;
-
-    /*color: #FFFFFF;*/
-    color: #FFB84E;
-}
 
 #dialogue {
     overflow-y: auto;
     position: absolute;
-    height: 100%;
+    height: 60%;
     width: 100%;
     top: 40%;
-    background-color: lightgreen;
+    background-color: white;
     border-top-right-radius: 40px;
     border-top-left-radius: 40px;
+
+    border: 1px solid #000000;
 }
 
 #head {
@@ -57,7 +26,7 @@ h1 {
 .name {
     padding: 1.5em 1.5em;
     font-size: 1.25rem;
-    color: white;
+    color: black;
     font-weight: bold;
     margin-right: 0.5em;
 }
@@ -78,7 +47,6 @@ h1 {
     
     padding: 0.5em 0.75em;
     font-size: 0.2em;
-    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
     bottom: 1rem;
     width: 75%;
     margin-bottom: 0.5rem;
@@ -99,12 +67,13 @@ h1 {
 
 .left {
     float: left;
-    background-color: white;
+    margin-left: 8%;
 }
 
 .right {
     align-self: flex-end;
     float: right;
-    background-color: #FFB84E;
+    background-color: White;
+    margin-right: 8%;
 }
 
