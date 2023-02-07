@@ -1,11 +1,11 @@
 {
-    "place": "Polytech",
+    "place": "Ferme urbaine de Manon",
     "names": [
         "Manon",
         "Voyageur"
     ],
-    "background-color": "",
-    "text-color": "",
+    "background_color": "#FD9E98",
+    "text_color": "black",
     "messages": [
         {
             "type": "message",

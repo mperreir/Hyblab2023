@@ -1,13 +1,15 @@
 {
     "place": "AGR",
     "names": [
-        "Tristan",
-        "Guillaume"
+        "Guillaume",
+        "Voyageur"
     ],
+    "background_color": "#79B77B",
+    "text_color": "white",
     "messages": [
         {
             "type": "message",
-            "name": "Tristan",
+            "name": "Voyageur",
             "text": "Bonjour Guillaume !"
         },
         {
@@ -26,14 +28,14 @@
                 [
                     {
                         "type": "message",
-                        "name": "Tristan",
+                        "name": "Voyageur",
                         "text": "Bien !"
                     }
                 ],
                 [
                     {
                         "type": "message",
-                        "name": "Tristan",
+                        "name": "Voyageur",
                         "text": "Pas bien !"
                     }
                 ]
@@ -45,24 +47,24 @@
                 [
                     {
                         "type": "message",
-                        "name": "Guillaume",
+                        "name": "Voyageur",
                         "text": "D'où viens-tu ?"
                     },
                     {
                         "type": "message",
-                        "name": "Tristan",
+                        "name": "Guillaume",
                         "text": "La chapelle sur Erdre."
                     }
                 ],
                 [
                     {
                         "type": "message",
-                        "name": "Guillaume",
+                        "name": "Voyageur",
                         "text": "Que fais-tu ?"
                     },
                     {
                         "type": "message",
-                        "name": "Tristan",
+                        "name": "Guillaume",
                         "text": "Je fait du Hyblab."
                     }
                 ]

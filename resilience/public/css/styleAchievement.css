@@ -3,59 +3,35 @@
     overflow-y: scroll;
 }
 
-h1 {
-    font-size: 0.25em;
-    line-height: 1em;
-    background-color: #FFB84E;
-    margin: 1rem 0;
-    padding: 5% 30% 5% 30%;
-    color: white;
-    border-bottom-right-radius: 2em;
-    border-top-right-radius: 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
+#presentation {
+    font-size: 3vh;
+    color: black;
     text-align: center;
-    font-style: normal;
-    text-transform: uppercase;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    width: 95%;
-    align-items: center;
-    margin-bottom: 1em;
-    margin-top: 0.2em;
-}
-
-#titre {
-    display: flex;
-    height: 100%;
-    width: 60%;
-}
-
-#left-arrow {
-    display: flex;
-    width: 11%;
+    margin-bottom: 10%;
 }
 
 .achievement {
+
     color: black;
     width: 100%;
     height: auto;
-    padding: 1em 1em 2em;
     font-size: 0.3em;
     border-top-right-radius: 3rem;
     border-top-left-radius: 3rem;
     box-sizing: border-box;
-    margin-top: -8%;
+
     display: flex;
     align-items: center;
     justify-content: left;
     flex-wrap: wrap;
+}
+
+.achievement:not(:first-of-type) {
+    margin-top: -34%;
+}
+
+.achievement:not(:last-of-type) {
+    padding: 1rem 1rem 8rem;
 }
 
 #visible {
@@ -77,7 +53,7 @@ header {
 .ID {
     width: 3rem;
     height: 3rem;
-    border-radius: 4vw;
+    border-radius: 50%;
     border: 1px solid black;
     display: flex;
     justify-content: center;

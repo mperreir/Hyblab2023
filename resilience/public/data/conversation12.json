@@ -1,0 +1,21 @@
+{
+    "place": "Fab’lim",
+    "names": [
+        "Charlotte",
+        "Voyageur"
+    ],
+    "background_color": "#A0DAFF",
+    "text_color": "black",
+    "messages": [
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Bonjour"
+        },
+        {
+            "type": "message",
+            "name": "Charlotte",
+            "text": "Ah oui ?"
+        }
+    ]
+}
