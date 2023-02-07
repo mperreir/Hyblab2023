@@ -208,6 +208,8 @@ header{
 
 #ligne{
     width: 100%;
+    float: left;
+    height: 150px;
 }
 
 #bulle-question {
@@ -217,10 +219,14 @@ header{
 #colonne2 {
     width: 45%;
     text-align: center;
+    float: left;
+    height: 150px;
 }
 
 #colonne3{
     width: 27%;
+    float: left;
+    height: 150px;
 }
 
 .choix-texte {
@@ -569,4 +575,77 @@ body{
         font-size: 15vw;
     }
 
+}
+
+/* Bouton Info */
+
+*{
+    box-sizing: border-box;
+}
+
+  /* Fixez le bouton sur le côté gauche de la page the button on the left side of the page */
+.open-btn {
+display: flex;
+justify-content: flex-start;
+}
+/* Stylez et fixez le bouton sur la page */
+.open-button {
+background-color: white;
+position: absolute;
+right: 5%;
+border: none;
+}
+
+/* Positionnez la forme Popup */
+.login-popup {
+position: relative;
+text-align: center;
+width: 100%;
+}
+/* Masquez la forme Popup */
+.form-popup {
+display: none;
+position: absolute;
+left: 45%;
+top: 5%;
+transform: translate(-45%, 5%);
+border: 2px solid #666;
+z-index: 9;
+border-radius: 5px;
+height: 90%;
+width : 90%;
+
+
+}
+/* Styles pour le conteneur de la forme */
+.form-container {
+width: 90%;
+height : 100%;
+padding: 20px;
+background-color: #fff;
+}
+
+/* Stylez le bouton pour annuler */
+.form-container .cancel {
+    display:inline-block;
+    border:#666 1px solid;
+    margin:2px;
+    font-size:24px;
+    cursor:pointer;
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    font-size: small;
+    position: absolute;
+    right : 10%;
+}
+/* Planez les effets pour les boutons */
+.form-container .btn:hover,
+.open-button:hover {
+opacity: 1;
+}
+
+#Saut {
+    padding-top : 2vw;
+    font-size: 3vw;
 }
