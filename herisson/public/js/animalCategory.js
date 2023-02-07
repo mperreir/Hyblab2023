@@ -1,5 +1,5 @@
 const animaldata = "Oiseaux";
-const commune = "16007";
+const commune = "Bordeaux";
 const db = "data/db.json";
 const dbAdd = "data/additionalDB.json";
 const currentURL = window.location.href;
