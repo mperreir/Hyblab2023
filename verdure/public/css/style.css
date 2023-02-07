@@ -73,7 +73,7 @@ body {
 #img-fini {
     width: 70%;
     left: 50%;
-    top: 25%;
+    top: 30vh;
     position: absolute;
     margin-left: -35%;
     margin-top: calc(-25% * 9 / 16); /* margins are relative to the element width... :-( */
@@ -330,9 +330,9 @@ SLIDE ANIMATION SORTIE+ZOOM
 }
 
 /*************************
-ANIMATION ENTREE 
+ANIMATION ENTREE
 *************************/
-/* 
+/*
 .img_gauche_Entree, .img_bas_Entree, .img_droit_Entree, .img_haut_Entree {
     width: 40%;
     height: auto;
@@ -545,9 +545,8 @@ INDICATEUR
     grid-column: span 2;
 }
 
-#answer1:last-child:nth-child(2n-1), #answer2:last-child:nth-child(2n-1), #answer3:last-child:nth-child(2n-1), #answer4:last-child:nth-child(2n-1), #answer5:last-child:nth-child(2n-1), #answer6:last-child:nth-child(2n-1), #answer7:last-child:nth-child(2n-1) {
-    grid-column-end: 3;
-    background-color: #282828;
+#answer7 div:last-child {
+    grid-column-end: 4;
 }
 
 /**************
@@ -685,10 +684,8 @@ Derniere slide
 }
 
 .conclusion > p {
-    font-size: small;
     width: 75%;
     font-size: 2vh;
-    text-align: center;
     margin-left: 7vh
 
 }
@@ -721,7 +718,7 @@ Derniere slide
     display: flex;
     justify-content: center;
     /* align-items: center;  */
-    margin-top: 5%;
+    margin-top: 5vh;
 }
 
 .dropdownShareButton, button {
@@ -741,6 +738,18 @@ Derniere slide
 #dropdownShareOptions img {
     height: auto;
     width: 120px;
+}
+
+#dropdownShareButton, #replayButton{
+    color: #282828;
+    background-color: white;
+    border: none;
+    font-size: 2vh;
+    right: 0;
+    width: 10vh;
+    height: 7vh;
+    box-shadow: -2px 2px #306947;
+    padding: 1vh;
 }
 
 /**************************
@@ -770,7 +779,7 @@ slide entree texte
 
 
 /**********************
-GREENTA 
+GREENTA
 *********************/
 
 
@@ -788,7 +797,7 @@ GREENTA
 }
 
 #photo-table {
-    margin: 57% auto auto;
+    margin: 50vh auto auto;
     font-size: 15%;
 }
 
