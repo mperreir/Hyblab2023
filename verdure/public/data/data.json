@@ -53,8 +53,8 @@
     "question": "Comment planter ces arbres ?",
     "choices": [{
       "prompt": "Avec un parc exotique",
-      "positive": "POSITIF</br>",
-      "negative": "NEGATIF</br>",
+      "positive": "POSITIF</br>- Endroit agréable pour la population",
+      "negative": "NEGATIF</br>- Des végétaux qui ne sont pas adaptés au climat et à la biodiversité locale",
       "explanation": "On a tous besoin d’évasion. Mais créer un parc exotique, pas sûr que ce soit très productif. On parle alors de verdissement. Ok, c’est agréable de se promener sous des palmiers. Mais la biodiversité ne peut pas s’adapter à ce genre d’espèces. Il s’agit davantage de notions d’urbanismes que de préservation de l’environnement.</br>Au moins, ça attire les curieux !",
       "temperature": -1,
       "happiness": 3,
@@ -64,8 +64,8 @@
     },
       {
         "prompt": "Implanter une forêt naturelle",
-        "positive": "POSITIF</br>",
-        "negative": "NEGATIF</br>",
+        "positive": "POSITIF</br>- Un îlot de fraîcheur et de la nature en ville",
+        "negative": "NEGATIF</br>- Risque d’un entretien trop intensif",
         "explanation": "C’est sûrement LA solution la plus efficace pour lutter contre les fortes chaleurs. On parle alors de renaturation, un mot associé à “réparation”. Il désigne le processus par lequel la nature se réinstalle spontanément dans la ville. Il s'agit de restaurer le bon état écologique des sites à travers des opérations d'aménagement, de gestion des espaces et de sensibilisation des usagers.</br>L’Agence régionale de la biodiversité d’Île-de-France distingue trois étapes dans la renaturalisation : la reconquête de la biodiversité, l’adaptation aux changements climatiques et l’amélioration de la santé et du cadre de vie.</br>Objectif : redonner à la nature ses droits !",
         "temperature": -2,
         "happiness": 1,

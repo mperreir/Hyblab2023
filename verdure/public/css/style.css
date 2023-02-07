@@ -726,7 +726,8 @@ slide entree texte
 #presentation1 {
     width: 75%;
     height: auto;
-    font-size: small;
+    font-size: 18%;
+    color:black;
     position: absolute;
     top: 5%;
     left: 5%;
@@ -734,11 +735,12 @@ slide entree texte
 
 #presentation2 {
     width: 75%;
+    color:black;
     height: auto;
-    font-size: small;
+    font-size: 18%;
     position: absolute;
     bottom: 15%;
-    left: 5%;
+    left:5%;
 }
 
 
