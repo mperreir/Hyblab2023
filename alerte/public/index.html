@@ -3,382 +3,378 @@
 <html lang="fr">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <title>Hyblab 2023</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css"/>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script src="js/slide1.js" defer></script>
-    <script src="js/slide2.js" defer></script>
-    <script src="js/index.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <title>Hyblab 2023</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.17/paper-full.min.js"></script>
+  <script src="js/slide1.js" defer></script>
+  <script src="js/slide2.js" defer></script>
+  <script src="js/index.js" defer></script>
 </head>
 
 <body>
-<!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
-<div id="container">
+  <!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
+  <div id="container">
     <!-- Le loader-->
     <section id="loader">
-        <div id="loader-img" class="ld ld-ring ld-cycle"></div>
-        <p id="loader-text">Veuillez patienter...</p>
+      <div id="loader-img" class="ld ld-ring ld-cycle"></div>
+      <p id="loader-text">Veuillez patienter...</p>
     </section>
     <div id="app">
-        <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
-        <main class="accueil">
-            <section id="s0" class="slides">
-                <header>
-                    <h1 id="titre">Bienvenue sur</h1>
-                    <img src="img/illustrations/logos/logo-meuh.svg" id="logo_meuh" alt="l'usine à meuh"/>
-                </header>
-                <img src="img/illustrations/dessins/main.svg" id="content_main_img"
-                     alt="Contenu de la page principale"/>
-                <!-- le footer sera rempli à partir de données lues dans un fichier Json-->
-                <footer>
-                    <button id="next0" class="next-btn"></button> <!-- Boutton commencer -->
-                    <div id="networks">
-                        <div>
-                            <a href="https://www.facebook.com/disclose.ngo/"><img id="fb" src="./img/networks/fb.svg"/></a>
-                            <a href="https://twitter.com/disclose_ngo?lang=fr"><img id="twitter"
-                                                                                    src="./img/networks/twitter.svg"/></a>
-                            <a href=""><img id="about" src="./img/networks/about.svg"/></a>
-                        </div>
-                        <a href="https://www.disclose.ngo"><img id="disclose" src="./img/networks/disclose.svg"/></a>
-                    </div>
-                </footer>
-            </section>
+      <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
+      <main class="accueil">
+        <section id="s0" class="slides">
+          <header>
+            <h1 id="titre">Bienvenue sur</h1>
+            <img src="img/illustrations/logos/logo-meuh.svg" id="logo_meuh" alt="l'usine à meuh" />
+          </header>
+          <img src="img/illustrations/dessins/main.svg" id="content_main_img" alt="Contenu de la page principale" />
+          <!-- le footer sera rempli à partir de données lues dans un fichier Json-->
+          <footer>
+            <button id="next0" class="next-btn"></button> <!-- Boutton commencer -->
+            <div id="networks">
+              <div>
+                <a href="https://www.facebook.com/disclose.ngo/"><img id="fb" src="./img/networks/fb.svg" /></a>
+                <a href="https://twitter.com/disclose_ngo?lang=fr"><img id="twitter"
+                    src="./img/networks/twitter.svg" /></a>
+                <a href=""><img id="about" src="./img/networks/about.svg" /></a>
+              </div>
+              <a href="https://www.disclose.ngo"><img id="disclose" src="./img/networks/disclose.svg" /></a>
+            </div>
+          </footer>
+        </section>
 
-            <section id="s1" class="slides" style="display: none">
-                <header>
-                    <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh" alt="little-logo-meuh"/>
-                </header>
-                <img src="img/illustrations/dessins/chicken-8.svg" id="content_main_img" alt="Illustration"/>
-                <section id="content_intro">
-                    <div class="bubble">
-                        <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
-                        <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    On y trouve des dizaines de milliers de poules, de vaches ou de cochons. En France,
-                                    9 départements
-                                    sur
-                                    10 accueillent des fermes-usines : des exploitations agricoles géantes qui font
-                                    peser le risque de
-                                    désastres écologiques sur tout le territoire.
-                                </div>
-                                <div class="swiper-slide">
-                                    « Ferme-usine » n’est pas un terme officiel. L’Etat les classe parmi les ICPE, les
-                                    Installations
-                                    classées pour la protection de l’environnement. C’est-à-dire qu’elles sont, au même
-                                    titre que
-                                    d’autres
-                                    industries, susceptibles de polluer l’environnement et de nuire à la santé des
-                                    riverains.
-                                </div>
-                                <div class="swiper-slide">
-                                    Les fermes-usines sont plus proches de chez vous que vous ne l’imaginez.
-                                    Découvrez-les grâce à notre
-                                    mini-jeu, connecté aux données du ministère de la transition écologique. Et poussez
-                                    la porte de ces
-                                    usines à animaux souvent privés de lumière du jour.
-                                    <button id="next1" class="next-btn"></button>
-                                    <!-- Boutton commencer -->
-                                </div>
-                            </div>
-                            <!-- Add pagination -->
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-                </section>
-            </section>
-
-            <section id="s3" class="swiper-slide" style="display: none">
-                <header>
-                    <div>
-                        <img src="img/illustrations/logos/logo-small.svg" id="petit_logo" alt="petit logo meuh"/>
-                    </div>
-                    <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 5%"></div>
-                    </div>
-                    <img src="img/illustrations/dessins/pigs-3.svg" id="content_main_img" alt="élevage de porcs"/>
-                </header>
-                <div>
-                    <img src="img/illustrations/dessins/heads/head-neutral.svg" id="cow-head" alt="tête de vache"
-                         style="float: left;"/>
-                    <div class="little-bubble" style="float: right;">
-                        <img src="img/utils/bubbles/bubble-smaller-side.svg" id="bulle" alt="petite bulle"/>
-                        <div class="scroll-little-bubble">
-                            <p>
-                                On y trouve des dizaines de milliers de poules, de vaches ou de cochons. En France, 9
-                                départements sur
-                                10 accueillent des fermes-usines
-                            </p>
-                        </div>
-                    </div>
+        <section id="s1" class="slides" style="display: none">
+          <header>
+            <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh" alt="little-logo-meuh" />
+          </header>
+          <img src="img/illustrations/dessins/chicken-8.svg" id="content_main_img" alt="Illustration" />
+          <section id="content_intro">
+            <div class="bubble">
+              <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle" />
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    On y trouve des dizaines de milliers de poules, de vaches ou de cochons. En France,
+                    9 départements
+                    sur
+                    10 accueillent des fermes-usines : des exploitations agricoles géantes qui font
+                    peser le risque de
+                    désastres écologiques sur tout le territoire.
+                  </div>
+                  <div class="swiper-slide">
+                    « Ferme-usine » n’est pas un terme officiel. L’Etat les classe parmi les ICPE, les
+                    Installations
+                    classées pour la protection de l’environnement. C’est-à-dire qu’elles sont, au même
+                    titre que
+                    d’autres
+                    industries, susceptibles de polluer l’environnement et de nuire à la santé des
+                    riverains.
+                  </div>
+                  <div class="swiper-slide">
+                    Les fermes-usines sont plus proches de chez vous que vous ne l’imaginez.
+                    Découvrez-les grâce à notre
+                    mini-jeu, connecté aux données du ministère de la transition écologique. Et poussez
+                    la porte de ces
+                    usines à animaux souvent privés de lumière du jour.
+                    <button id="next1" class="next-btn"></button>
+                    <!-- Boutton commencer -->
+                  </div>
                 </div>
-                <div class="answer-container">
-                    <div class="answers">
-                        <button id="next3-bad-answer" class="answer-btn"></button>
-                        <button id="next3-good-answer" class="answer-btn"></button>
-                    </div>
-                    <div class="answers">
-                        <button id="next3-bad-answer" class="answer-btn"></button>
-                        <button id="next3-good-answer" class="answer-btn"></button>
-                    </div>
+                <!-- Add pagination -->
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section id="s3" class="swiper-slide" style="display: none">
+          <header>
+            <div>
+              <img src="img/illustrations/logos/logo-small.svg" id="petit_logo" alt="petit logo meuh" />
+            </div>
+            <div id="myProgress" class="fixed-top">
+              <div id="myBar" style="width: 5%"></div>
+            </div>
+            <img src="img/illustrations/dessins/pigs-3.svg" id="content_main_img" alt="élevage de porcs" />
+          </header>
+          <div>
+            <img src="img/illustrations/dessins/heads/head-neutral.svg" id="cow-head" alt="tête de vache"
+              style="float: left;" />
+            <div class="little-bubble" style="float: right;">
+              <img src="img/utils/bubbles/bubble-smaller-side.svg" id="bulle" alt="petite bulle" />
+              <div class="scroll-little-bubble">
+                <p>
+                  On y trouve des dizaines de milliers de poules, de vaches ou de cochons. En France, 9
+                  départements sur
+                  10 accueillent des fermes-usines
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="answer-container">
+            <div class="answers">
+              <button id="next3-bad-answer" class="answer-btn"></button>
+              <button id="next3-good-answer" class="answer-btn"></button>
+            </div>
+            <div class="answers">
+              <button id="next3-bad-answer" class="answer-btn"></button>
+              <button id="next3-good-answer" class="answer-btn"></button>
+            </div>
+          </div>
+        </section>
+
+        <section id="s4_1" class="slides" style="display: none">
+          <header>
+            <div>
+              <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh" alt="little-logo-meuh" />
+            </div>
+            <div id="myProgress" class="fixed-top">
+              <div id="myBar" style="width: 5%"></div>
+            </div>
+          </header>
+          <img src="img/illustrations/dessins/cow-wrong.svg" id="vache_4_1" alt="Illustration" />
+          <section id="content_quizz">
+            <div class="bubble">
+              <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle" />
+              <div class="content">
+                <h2>Dommage !</h2>
+                <p>
+                  Dans un rapport publié en 2018, l’ONG Greenpeace estimait qu’en France, plus de la
+                  moitié des
+                  porcs, poulets et œufs provenaient de 4 870 fermes. Dans leurs domaines respectifs,
+                  celles-ci
+                  concentrent au moins 20 000 têtes de bétail chacune. Update : en 2020
+                </p>
+                <button id="next4_1" class="next-btn" style="height: 50px; width: 100%"></button>
+                <!-- Passer à la question suivante-->
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section id="s4_2" class="slides slidesWhite" style="display: none">
+          <header>
+            <div>
+              <img src="img/illustrations/logos/logo-small-inv.svg" class="little-logo-meuh" alt="little-logo-meuh" />
+            </div>
+            <div id="myProgress" class="fixed-top">
+              <div id="myBar" style="width: 5%"></div>
+            </div>
+          </header>
+          <img src="img/illustrations/dessins/cow-right.svg" id="content_main_img" alt="vache dans un pré" />
+          <section id="content_quizz">
+            <div class="bubble bubbleWhite">
+              <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle" />
+              <div class="content">
+                <h2>Bravo !</h2>
+                <p>
+                  Dans un rapport publié en 2018, l’ONG Greenpeace estimait qu’en France, plus de la
+                  moitié des porcs, poulets et œufs provenaient de 4 870 fermes. Dans leurs domaines
+                  respectifs, celles-ci concentrent au moins 20 000 têtes de bétail chacune. Update : en
+                  2020
+                </p>
+                <button id="next4_2" class="next-btn" style="height: 50px; width: 100%"></button>
+                <!-- Passer à la question suivante-->
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section id="s5" class="slides" style="display: none">
+          <header>
+            <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh" alt="little-logo-meuh" />
+          </header>
+          <img src="img/illustrations/dessins/graph-5.svg" alt="Courbe" />
+          <div class="cow-head-container">
+            <div class="cow-head">
+              <img src="img/illustrations/dessins/heads/head-open.svg" id="cow-head-img" alt="tête de vache" />
+            </div>
+            <div class="little-bubble cow-head">
+              <img src="img/utils/bubbles/bubble-small-side.svg" id="bulle" alt="petite bulle" />
+              <div class="scroll-little-bubble">
+                <p>
+                  D’ailleurs, quelle est l’évolution du nombre d’exploitations en France métropolitaine
+                  depuis 1970 ?
+                </p>
+              </div>
+            </div>
+          </div>
+          <canvas id="canvas"></canvas>
+        </section>
+
+        <section id="s6" class="slides" style="display: none">
+          <header>
+            <div>
+              <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh" alt="little-logo-meuh" />
+            </div>
+            <div id="myProgress" class="fixed-top">
+              <div id="myBar" style="width: 5%"></div>
+            </div>
+          </header>
+          <img src="img/illustrations/dessins/cow-6.svg" id="vache_6" alt="Illustration" />
+          <section id="content_quizz">
+            <div class="bubble">
+              <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle" />
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <h2>Dommage !</h2>
+                    <img src="img/illustrations/dessins/graph-6.svg">
+                  </div>
+                  <div class="swiper-slide">
+                     Une ferme sur cinq a disparu entre 2010 et 2020. Cette baisse est particulièrement
+                    importante si l’on se concentre sur l’élevage, avec 30 % d’exploitations en moins
+                    sur la même période. Pourtant, la superficie agricole utilisée, elle, reste
+                    quasiment inchangée. En 2020, trois fermes sur cinq mesuraient plus de 20 hectares,
+                    un chiffre en hausse.
+                    <!-- Passer à la question suivante-->
+                    <button id="next6" class="next-btn" style="height: 50px; width: 100%"></button>
+                  </div>
                 </div>
-            </section>
+                <!-- Add pagination -->
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </section>
+        </section>
 
-            <section id="s4_1" class="slides" style="display: none">
-                <header>
-                    <div>
-                        <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh"
-                             alt="little-logo-meuh"/>
-                    </div>
-                    <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 5%"></div>
-                    </div>
-                </header>
-                <img src="img/illustrations/dessins/cow-wrong.svg" id="vache_4_1" alt="Illustration"/>
-                <section id="content_quizz">
-                    <div class="bubble">
-                        <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
-                        <div class="content">
-                            <h2>Dommage !</h2>
-                            <p>
-                                Dans un rapport publié en 2018, l’ONG Greenpeace estimait qu’en France, plus de la
-                                moitié des
-                                porcs, poulets et œufs provenaient de 4 870 fermes. Dans leurs domaines respectifs,
-                                celles-ci
-                                concentrent au moins 20 000 têtes de bétail chacune. Update : en 2020
-                            </p>
-                            <button id="next4_1" class="next-btn" style="height: 50px; width: 100%"></button>
-                            <!-- Passer à la question suivante-->
-                        </div>
-                    </div>
-                </section>
-            </section>
+        <section id="s7" class="slides" style="display: none">
+          <img src="img/illustrations/dessins/map-7.svg">
+          <div>
+            <div class="bubble">
+              <img src="img/illustrations/dessins/heads/head-open.svg">
+              <img src="img/utils/bubbles/bubble-small-side.svg">
+              <div class="content2">
+                <p>
+                  Et maintenant, découvrons les fermes-usines du département de votre choix.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label id="labelDep">Saisissez votre département</label>
+          </div>
+          <div>
+            <input id="dep" type="number" autofocus>
+          </div>
+          <button id="next7" class="next-btn" style="height: 50px; width: 100%"></button>
+        </section>
 
-            <section id="s4_2" class="slides slidesWhite" style="display: none">
-                <header>
-                    <div>
-                        <img src="img/illustrations/logos/logo-small-inv.svg" class="little-logo-meuh"
-                             alt="little-logo-meuh"/>
-                    </div>
-                    <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 5%"></div>
-                    </div>
-                </header>
-                <img src="img/illustrations/dessins/cow-right.svg" id="content_main_img" alt="vache dans un pré"/>
-                <section id="content_quizz">
-                    <div class="bubble bubbleWhite">
-                        <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle"/>
-                        <div class="content">
-                            <h2>Bravo !</h2>
-                            <p>
-                                Dans un rapport publié en 2018, l’ONG Greenpeace estimait qu’en France, plus de la
-                                moitié des porcs, poulets et œufs provenaient de 4 870 fermes. Dans leurs domaines
-                                respectifs, celles-ci concentrent au moins 20 000 têtes de bétail chacune. Update : en
-                                2020
-                            </p>
-                            <button id="next4_2" class="next-btn" style="height: 50px; width: 100%"></button>
-                            <!-- Passer à la question suivante-->
-                        </div>
-                    </div>
-                </section>
-            </section>
+        <section id="s8" class="slides" style="display: none">
 
-            <section id="s5" class="slides" style="display: none">
-                <header>
-                    <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh" alt="little-logo-meuh"/>
-                </header>
-                <img src="img/illustrations/dessins/graph-5.svg" alt="Courbe"/>
-                <div class="cow-head-container">
-                    <div class="cow-head">
-                        <img src="img/illustrations/dessins/heads/head-open.svg" id="cow-head-img" alt="tête de vache"/>
-                    </div>
-                    <div class="little-bubble cow-head">
-                        <img src="img/utils/bubbles/bubble-small-side.svg" id="bulle" alt="petite bulle"/>
-                        <div class="scroll-little-bubble">
-                            <p>
-                                D’ailleurs, quelle est l’évolution du nombre d’exploitations en France métropolitaine
-                                depuis 1970 ?
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+        </section>
 
-            <section id="s6" class="slides" style="display: none">
-                <header>
-                    <div>
-                        <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh"
-                             alt="little-logo-meuh"/>
-                    </div>
-                    <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 5%"></div>
-                    </div>
-                </header>
-                <img src="img/illustrations/dessins/cow-6.svg" id="vache_6" alt="Illustration"/>
-                <section id="content_quizz">
-                    <div class="bubble">
-                        <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
-                        <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <h2>Dommage !</h2>
-                                    <img src="img/illustrations/dessins/graph-6.svg">
-                                </div>
-                                <div class="swiper-slide">
-                                     Une ferme sur cinq a disparu entre 2010 et 2020. Cette baisse est particulièrement
-                                    importante si l’on se concentre sur l’élevage, avec 30 % d’exploitations en moins
-                                    sur la même période. Pourtant, la superficie agricole utilisée, elle, reste
-                                    quasiment inchangée. En 2020, trois fermes sur cinq mesuraient plus de 20 hectares,
-                                    un chiffre en hausse.
-                                    <!-- Passer à la question suivante-->
-                                    <button id="next6" class="next-btn" style="height: 50px; width: 100%"></button>
-                                </div>
-                            </div>
-                            <!-- Add pagination -->
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-                </section>
-            </section>
+        <section id="s9_1" class="slides" style="display: none">
+          <header>
+            <div>
+              <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh" alt="little-logo-meuh" />
+            </div>
+            <div id="myProgress" class="fixed-top">
+              <div id="myBar" style="width: 5%"></div>
+            </div>
+          </header>
+          <img src="img/illustrations/dessins/cow-wrong.svg" id="vache_4_1" alt="Illustration" />
+          <section id="content_quizz">
+            <div class="bubble">
+              <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle" />
+              <div class="content">
+                <h2>Dommage !</h2>
+                <p>
+                  Dans votre département, ce sont les porcs qui sont les plus nombreux parmi les animaux
+                  d’élevage. On en dénombre pas moins de [Entrer un chiffre] dans les [Entrer un chiffre]
+                  fermes-usines de ce département.
+                </p>
+                <button id="next9_1" class="next-btn" style="height: 50px; width: 100%"></button>
+                <!-- Passer à la question suivante-->
+              </div>
+            </div>
+          </section>
+        </section>
 
-            <section id="s7" class="slides" style="display: none">
-                <img src="img/illustrations/dessins/map-7.svg">
-                <div>
-                    <div class="bubble">
-                        <img src="img/illustrations/dessins/heads/head-open.svg">
-                        <img src="img/utils/bubbles/bubble-small-side.svg">
-                        <div class="content2">
-                            <p>
-                                Et maintenant, découvrons les fermes-usines du département de votre choix.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <label id="labelDep">Saisissez votre département</label>
-                </div>
-                <div>
-                    <input id="dep" type="number" autofocus>
-                </div>
-                <button id="next7" class="next-btn" style="height: 50px; width: 100%"></button>
-            </section>
+        <section id="s9_2" class="slides" style="display: none">
+          <header>
+            <div>
+              <img src="img/illustrations/logos/logo-small-inv.svg" class="little-logo-meuh" alt="little-logo-meuh" />
+            </div>
+            <div id="myProgress" class="fixed-top">
+              <div id="myBar" style="width: 5%"></div>
+            </div>
+          </header>
+          <img src="img/illustrations/dessins/cow-right.svg" id="content_main_img" alt="vache dans un pré" />
+          <section id="content_quizz">
+            <div class="bubble bubbleWhite">
+              <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle" />
+              <div class="content">
+                <h2>Bravo !</h2>
+                <p>
+                  Dans votre département, ce sont les porcs qui sont les plus nombreux parmi les animaux
+                  d’élevage. On en dénombre pas moins de [Entrer un chiffre] dans les [Entrer un chiffre]
+                  fermes-usines de ce département.
+                </p>
+                <button id="next9_2" class="next-btn" style="height: 50px; width: 100%"></button>
+                <!-- Passer à la question suivante-->
+              </div>
+            </div>
+          </section>
+        </section>
 
-            <section id="s8" class="slides" style="display: none">
+        <section id="s10" class="slides" style="display: none">
 
-            </section>
+        </section>
 
-            <section id="s9_1" class="slides" style="display: none">
-                <header>
-                    <div>
-                        <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh"
-                             alt="little-logo-meuh"/>
-                    </div>
-                    <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 5%"></div>
-                    </div>
-                </header>
-                <img src="img/illustrations/dessins/cow-wrong.svg" id="vache_4_1" alt="Illustration"/>
-                <section id="content_quizz">
-                    <div class="bubble">
-                        <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
-                        <div class="content">
-                            <h2>Dommage !</h2>
-                            <p>
-                                Dans votre département, ce sont les porcs qui sont les plus nombreux parmi les animaux
-                                d’élevage. On en dénombre pas moins de [Entrer un chiffre] dans les [Entrer un chiffre]
-                                fermes-usines de ce département.
-                            </p>
-                            <button id="next9_1" class="next-btn" style="height: 50px; width: 100%"></button>
-                            <!-- Passer à la question suivante-->
-                        </div>
-                    </div>
-                </section>
-            </section>
+        <section id="s11_1" class="slides" style="display: none">
 
-            <section id="s9_2" class="slides" style="display: none">
-                <header>
-                    <div>
-                        <img src="img/illustrations/logos/logo-small-inv.svg" class="little-logo-meuh"
-                             alt="little-logo-meuh"/>
-                    </div>
-                    <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 5%"></div>
-                    </div>
-                </header>
-                <img src="img/illustrations/dessins/cow-right.svg" id="content_main_img" alt="vache dans un pré"/>
-                <section id="content_quizz">
-                    <div class="bubble bubbleWhite">
-                        <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle"/>
-                        <div class="content">
-                            <h2>Bravo !</h2>
-                            <p>
-                                Dans votre département, ce sont les porcs qui sont les plus nombreux parmi les animaux
-                                d’élevage. On en dénombre pas moins de [Entrer un chiffre] dans les [Entrer un chiffre]
-                                fermes-usines de ce département.
-                            </p>
-                            <button id="next9_2" class="next-btn" style="height: 50px; width: 100%"></button>
-                            <!-- Passer à la question suivante-->
-                        </div>
-                    </div>
-                </section>
-            </section>
+        </section>
 
-            <section id="s10" class="slides" style="display: none">
+        <section id="s11_2" class="slides" style="display: none">
 
-            </section>
+        </section>
 
-            <section id="s11_1" class="slides" style="display: none">
+        <section id="s12" class="slides" style="display: none">
 
-            </section>
+        </section>
 
-            <section id="s11_2" class="slides" style="display: none">
+        <section id="s13_1" class="slides" style="display: none">
 
-            </section>
+        </section>
 
-            <section id="s12" class="slides" style="display: none">
+        <section id="s13_2" class="slides" style="display: none">
 
-            </section>
+        </section>
 
-            <section id="s13_1" class="slides" style="display: none">
+        <section id="s14" class="slides" style="display: none">
 
-            </section>
+        </section>
 
-            <section id="s13_2" class="slides" style="display: none">
+        <section id="s15_1" class="slides" style="display: none">
 
-            </section>
+        </section>
 
-            <section id="s14" class="slides" style="display: none">
+        <section id="s15_2" class="slides" style="display: none">
 
-            </section>
+        </section>
 
-            <section id="s15_1" class="slides" style="display: none">
+        <section id="s16" class="slides" style="display: none">
 
-            </section>
+        </section>
 
-            <section id="s15_2" class="slides" style="display: none">
+        <section id="s17_1" class="slides" style="display: none">
 
-            </section>
+        </section>
 
-            <section id="s16" class="slides" style="display: none">
+        <section id="s17_2" class="slides" style="display: none">
 
-            </section>
+        </section>
 
-            <section id="s17_1" class="slides" style="display: none">
-
-            </section>
-
-            <section id="s17_2" class="slides" style="display: none">
-
-            </section>
-
-        </main>
+      </main>
     </div>
-</div>
+  </div>
 </body>
 
 </html>

@@ -23,7 +23,7 @@ next3_2.addEventListener("click", () => {
 })
 
 let next4_1 = document.getElementById("next4_1")
-next4_1.addEventListener("mouseup", () => {
+next4_1.addEventListener("click", () => {
   display("s5")
 })
 
@@ -31,6 +31,39 @@ let next4_2 = document.getElementById("next4_2")
 next4_2.addEventListener("click", () => {
   display("s5")
 })
+
+/*
+let next5 = document.getElementById("canvas")
+next5.addEventListener("click", () => {
+  console.log("oui")
+  //display("s6")
+})
+*/
+paper.install(window);
+paper.setup("canvas");
+
+let path;
+let isDrawing = false;
+
+view.onMouseDown = (event) => {
+  isDrawing = true;
+  path = new Path();
+  path.strokeColor = "white";
+  path.smoothness = 1;
+  path.strokeWidth = 5;
+  path.add(event.point);
+};
+
+view.onMouseDrag = (event) => {
+  if (!isDrawing) return;
+  path.add(event.point);
+};
+
+view.onMouseUp = () => {
+  isDrawing = false;
+  display("s6")
+};
+
 
 let next6 = document.getElementById("next6")
 next6.addEventListener("click", () => {

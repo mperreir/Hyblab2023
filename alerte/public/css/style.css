@@ -392,6 +392,13 @@ main>section {
     width: 100%;
 }
 
+#canvas {
+    border: solid white 2px;
+    border-radius: 27px;
+    min-width: 275px;
+    min-height: 237px;
+}
+
 /* ---------- Positionning of logos on the last slide -------------------- */
 /* here we have a contraint on the height of the logos (not the width)     */
 /* so we cannot use % and use em (which are proportinal to the size of the */
