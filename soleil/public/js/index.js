@@ -19,12 +19,22 @@ swiper.on("slideChange", function () {
       break;
     case 2:
       initSlide3();
+      break;
     case 3:
       initSlide4();
+      break;
     case 4:
       initSlide5();
+      break;
     case 5:
       initSlide6();
+      break;
+    case 6:
+      initSlide7();
+      break;
+    case 7:
+      initSlide8();
+      break;
   }
 });
 

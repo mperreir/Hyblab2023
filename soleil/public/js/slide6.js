@@ -1,7 +1,7 @@
 "use strict";
 var executed6 = false;
 
-const initSlide6 = function(){
+const initSlide6 = async function(){
     if(!executed6){
         changeOmbre();
         executed6 = true;
