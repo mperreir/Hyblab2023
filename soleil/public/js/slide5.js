@@ -7,6 +7,9 @@ const initSlide5 = function(){
         $("#orientation header button").click(function(){
             changeBoussole();
         });
+        $("#orientation footer button").click(function(){
+            swiper.slideNext();
+        })
     }
     
 }
