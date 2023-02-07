@@ -6,7 +6,7 @@ let currentZoneNumber = 0; // tell if the index of the current zone for the imag
 // the answers are button that shows the explanations related to them
 const createAnswers = function (choices) {
     
-    document.getElementById('answer'+current_question_number).style.display = 'table'
+    document.getElementById('answer'+current_question_number).style.display = 'grid'
     document.getElementById('question-title-text'+current_question_number).style.display = 'inline';
 
 

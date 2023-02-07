@@ -479,7 +479,7 @@ INDICATEUR
     opacity: 0;
     transition: opacity 3s;
     background-color: #ffffff;
-
+    padding-bottom: 3vh;
 }
 
 #question-title1, #question-title2, #question-title3, #question-title4, #question-title5, #question-title6, #question-title7 {
@@ -490,27 +490,26 @@ INDICATEUR
 }
 
 #answer1, #answer2, #answer3, #answer4, #answer5, #answer6, #answer7 {
-    display: table;
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    padding-bottom: 1vh;
+    padding: 3vh;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3vh;
 }
 
 #answer1 div, #answer2 div, #answer3 div, #answer4 div, #answer5 div, #answer6 div, #answer7 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2vh;
     text-align: center;
-    display: table-cell;
+    height: 90%;
     font-weight: bold;
-    box-shadow: -2px 2px 2px #306947;
-
-    width: 40%;
-    margin: 0.7vh 0.7vh 0.7vh 2vh;
+    box-shadow: -2px 2px #306947;
     padding: 1vh;
-
     background-color: #ffffff;
-
-    flex: 40%;
 }
 
 /**************
@@ -534,11 +533,11 @@ INDICATEUR
     right: 0;
     width: 15%;
     height: 5vh;
-    box-shadow: -2px 2px 2px #306947;
+    box-shadow: -2px 2px #306947;
 }
 
 #answer-title1, #answer-title2, #answer-title3, #answer-title4, #answer-title5, #answer-title6, #answer-title7 {
-    text-align: center;
+    text-align: left;
     font-size: 3vh;
     margin: 0 1vh;
     width: 85%;
@@ -546,24 +545,23 @@ INDICATEUR
 }
 
 #consequences1, #consequences2, #consequences3, #consequences4, #consequences5, #consequences6, #consequences7 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
     height: 100%;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3vh;
 }
 
 #consequences1 p, #consequences2 p, #consequences3 p, #consequences4 p, #consequences5 p, #consequences6 p, #consequences7 p {
     font-size: 2vh;
-    height: 100%;
-    font-weight: bold;
-
     width: 40%;
-    margin: 0.7vh 2vh;
+    margin: 0 auto;
     padding: 1vh;
 }
 
 #consequences1 p p, #consequences2 p p, #consequences3 p p, #consequences4 p p, #consequences5 p p, #consequences6 p p, #consequences7 p p {
     margin: 0 auto;
+    font-weight: bold;
 }
 
 .positive-titles {

@@ -11,7 +11,7 @@ const showExplanations = function(){
     }
     else
     {
-    document.getElementById('consequences'+currentquestion_save).style.display = 'flex';
+    document.getElementById('consequences'+currentquestion_save).style.display = 'grid';
     document.getElementById('long-answer'+currentquestion_save).style.display = 'none';
     document.getElementById('show-button'+currentquestion_save).value = 'voir plus';
     }
