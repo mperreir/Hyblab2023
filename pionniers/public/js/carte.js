@@ -46,8 +46,8 @@ map.addLayer(layer);
  */
 function createIcon(p) {
     // Define the global icon size and global icon anchor
-    const globalIconSize = isMobileDevice() ? [50, 50] : [30, 30];
-    const globalIconAnchor = isMobileDevice() ? [25, 25] : [15, 15];
+    const globalIconSize = isMobileDevice() ? [100, 100] : [30, 30];
+    const globalIconAnchor = isMobileDevice() ? [50, 50] : [15, 15];
     // If the used keywords list is not empty and the profile doesn't contain all the keywords, return the inactive icon
     if (!usedKeywords.map(k => k.replace('#', '')).every(keyword => p.Keywords.includes(keyword))) {
         return L.icon({
