@@ -40,7 +40,6 @@
 aside
 {
     height: 100%;
-    background-color: #FBC5EB;
 }
 
 .texteFinMenu
@@ -57,9 +56,12 @@ aside
 
 header
 {
-    height: 1px;
+    position: fixed;
+    height: 130px;
     display: flex;
+    width: 101%;
     background-color: #FBC5EB;
+    z-index: 5;
 }
 
 #texteMenu {
