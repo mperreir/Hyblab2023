@@ -8,6 +8,7 @@ const initSlideAnimationEntreeTexte = function(){
     const bas = document.querySelector('#quatre-zones .img_bas');
     const gauche = document.querySelector('#quatre-zones .img_gauche');
     const zones = document.querySelector('#quatre-zones');
+    
 
     // (Re)set initial position of img
   droit.setAttribute('style', 'transform :translateX(300%);');

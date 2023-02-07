@@ -4,10 +4,12 @@ const initSlideAnimationGauche = function(){
 
   UpdateSrcImage('#animationSlideGauche');
     const droit = document.querySelector('#animationSlideGauche .img_droit');
+    let route = document.getElementById('#route');
+    route.style.opacity = 0;
 
     // (Re)set initial position of img
-  droit.setAttribute('style', 'transform :scale(1);');
-
+    droit.setAttribute('style', 'transform :scale(1);');
+  
   // Animate it
 
 
@@ -50,14 +52,7 @@ const initSlideAnimationGauche = function(){
     delay : 1200
   });
 
-  anime({
-    targets : "#animationSlideGauche .route",
-    scale:0,
-    delay : 100,
-    easing: 'easeInOutSine',
-    direction: 'normal',
-    duration :2000,
-  })
+
 
   //animation finale
   anime({
