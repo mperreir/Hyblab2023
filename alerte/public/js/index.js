@@ -8,8 +8,8 @@ function changeBackground(color) {
 
 let next0 = document.getElementById("next0")
 next0.addEventListener("click", () => {
-  display("s11_1")
-  changeBackground('aliceblue')
+  display("s13_1")
+  changeBackground('#121212')
 })
 
 let next1 = document.getElementById("next1")
