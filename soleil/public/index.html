@@ -8,70 +8,363 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/slide1.js" defer></script>
   <script src="js/slide2.js" defer></script>
+  <script src="js/slide3.js" defer></script>
+  <script src="js/slide4.js" defer></script>
+  <script src="js/slide5.js" defer></script>
+  <script src="js/slide6.js" defer></script>
   <script src="js/index.js" defer></script>
 </head>
 <body>
-    <!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
-    <div id="container">
-      <!-- Le loader-->
-      <section id="loader">
-        <div id="loader-img" class="ld ld-ring ld-cycle"></div>
-        <p id="loader-text">Veuillez patienter...</p>
+<!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
+<div id="container">
+  <!-- Le loader-->
+  <section id="loader">
+    <div id="loader-img" class="ld ld-ring ld-cycle"></div>
+    <p id="loader-text">Veuillez patienter...</p>
+  </section>
+  <div id="mySwiper" class="swiper">
+    <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
+    <main class = "swiper-wrapper">
+
+      <!-- section d'accueil -->
+      <section id="accueil" class="swiper-slide">
+        <header>
+        </header>
+        <div class="video" width="100%" margin="auto">
+          
+          <video controls width="95%" src="animation/soli-01.mp4" autoplay loop muted>
+          </video>
+            
+        </div>
+        <footer>
+          <button>Commencer</button>
+        </footer>
       </section>
-      <div id="mySwiper" class="swiper">
-        <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
-        <main class = "swiper-wrapper">
-            <section id="first-slide" class="swiper-slide">
-                <header>
-                    <h1 id="titre">Welcome to</h1>
-                </header>
-                
-                <img src="img/logo_hyblab.png" id="logo-hyblab" alt="logo hyblab"></img>
 
 
-                <!-- le footer sera rempli à partir de données lues dans un fichier Json-->
-                <footer>
-                  <p></p>
-                </footer>
+      <section id="adresse" class="swiper-slide">
+        <header>
+          <button class="retour">←</button>
+          <p class="titre">Où habitez-vous ?</p>
+        </header>
+        <section class="main-location-page">
+          <video controls width="95%" src="animation/geo-01.mp4" autoplay loop muted>
+        </video>
+          <div class="commentaire-soli">
+            <img src="img/soliMontgolfiere.png">
+
+              <p id="SoliExTex">“ Ne tombez pas dans le panneau,
+              la solution n’est pas forcément sur
+              votre toit. Pour obtenir la mission
+              la plus pertinente, j’ai besoin de
+              votre adresse. ” </p>
+          </div>
+          <div class="location-input">
+            <input type="text" placeholder="Renseignez votre adresse">
+          </div>
+        </section>
+        <footer>
+          <button>Valider</button>
+        </footer>
+      </section>
+
+      <section id="logement" class="swiper-slide"> <!-- Page du type de logement -->
+        <header>
+          <button class="retour">←</button>
+          <p class="titre">
+            Vous habitez dans :
+          </p>
+        </header>
+        <div id="ligne">
+          
+          <section id="ligne">
+            <div id="colonne2">
+              <section id="Choix2">
+                <label for="contactChoice1">Maison</label>
+              </section>
+              <section id="Choix2">
+                <label for="contactChoice1">
+                  <img src="img/Maison.png"/>
+                </label>
+              </section>
+              <section id="Choix2">
+                <input type="radio" id="contactChoice1"
+                           name="logement" value="logement">
+              </section>
+            </div>
+            <div id="colonne2">
+              <section id="Choix2">
+                <label for="contactChoice2">Immeuble</label>
+              </section>
+              <section id="Choix2">
+                <label for="contactChoice2">
+                  <img src="img/Immeuble.png"/>
+                </label>
+              </section>
+              <section id="Choix2">
+                <input type="radio" id="contactChoice2"
+                name="logement" value="logement">
+              </section>
+            </div>
+          </section>
+          <section id="ligne">
+            <p class="titre">Vous êtes : </p>
+            <div id="colonne2">
+              <section id="Choix2">
+                <label for="contactChoice3">Propiétaire</label>
+              </section>
+              <section id="Choix2">
+                <label for="contactChoice3">
+                  <img src="img/Propri.png"/>
+                </label>
+              </section>
+              <section id="Choix2">
+                <input type="radio" id="contactChoice3"
+                         name="propiétaire" value="propiétaire">
+              </section>
+            </div>
+            <div id="colonne2">
+              <section id="Choix2">
+                <label for="contactChoice4">Locataire</label>
+              </section>
+              <section id="Choix2">
+                <label for="contactChoice4">
+                  <img src="img/Locataire.png"/>
+                </label>
+              </section>
+              <section id="Choix2">
+                <input type="radio" id="contactChoice4"
+                         name="propiétaire" value="propiétaire" placeholder="Renseignez votre adresse">
+              </section>
+            </div>
+          </section>
+          <section id="image">
+            <div class="commentaire-soli2">
+              <img src="img/soliMontgolfiere.png">
+            <p id="SoliExTex2">Pas besoin d’être propriétaire ou d’avoir une maison pour agir en faveur de l’énergie photovoltaïque !</p>
+            </div>
+            
+          </section>
+        </div>
+        <div id="jauge">
+          <img id="Soli1" src="img/montgolfiereAvancee.png"/>
+        </div>
+
+        <footer>
+          <button>Valider</button>
+        </footer>
+
+      </section>
+
+      <section id="pente" class="swiper-slide"> <!-- Page de la pente -->
+        <header>
+          <div class="form-popup" id="popupForm">
+            <form action="/action_page.php" class="form-container">
+              <button type="button" class="btn cancel" onclick="closeForm()">X</button>
+              <p id="Saut"> Mais pourquoi parler de l’inclinaison du toit ? C’est essentiel pour la performance de votre module photovoltaïque. 
+              </p>
+              <p id="Saut">
+                Si votre toit est incliné, vos panneaux le seront aussi. Idéalement, ils doivent être 
+                perpendiculaires au rayon du soleil. Un petit peu de physique pour mieux comprendre 
+                (rien de bien méchant). Pour maximiser l’énergie produite sur l’année, il faut que les 
+                panneaux soient inclinés en fonction de l’ordre de latitude du point où vous vous trouvez. 
+                Vous ne comprenez pas ? Pas de panique, voici un exemple. En France, la latitude varie entre 40 et 45 degrés. 
+                Inclinez-donc vos panneaux selon cet ordre pour maximiser l’énergie produite sur l’année. Et si votre toit est plat ? Rien à faire dans ce cas !
+              </p>
+            </form>
+          </div>
+          <button class="retour">retour</button>
+          <button class="open-button" onclick="openForm()"><img src="img/Info.png"></button>
+          <!--<div class="open-btn">   <button id="info">I</button>
+            <button class="open-button" onclick="openForm()"><strong>Info</strong></button>
+          </div>-->
+          <div class="login-popup">
+          </div>
+           <!-- Bouton Information (à copier sur les autres slide) -->
+          <p class="titre">
+            Comment est la pente de votre toit ?
+          </p>
+        </header>
+        <section>
+          <div>
+            <section id="image3">
+              <img src="img/ChoixMaison.png">
             </section>
-            <section id="second-slide" class="swiper-slide">
-                <header>
-                  <h1>This was...</h1>
-                </header>
-                <img id="img-fini" src="hyblab_2023.jpg">
-                <footer id="bandeau">
-                        <!-- Logo Hyblab -->
-                          <a href="http://www.hyblab.fr/"><img id="hyblab" src="logo_hyblab.png" alt="Hyblab DataSport"></a>
-                      
-                          <!-- Les organisateurs -->
-                          <ul>
-                            <li><a href="http://www.ouestmedialab.fr/"><img src="logo_oml.png" alt="Ouest Médialab"></a></li>
-                            <li><a href="http://www.agrnantes.fr"><img src="ecoles/logo_agr.png" alt="AGR école de l'image"></a></li>
-                            <li><a href="https://epjt.fr/"><img src="ecoles/logo_epjt.svg" alt="Ecole publique de journalisme de Tours"></a></li>
-                            <li><a href="http://www.polytech.univ-nantes.fr/"><img src="ecoles/logo_polytech.png" alt="Polytech Nantes"></a></li>
-                          <!-- Les autres logos -->
-                          <ul>
-                            <!-- Logos CC et opensource -->
-                            <li>
-                            <ul>
-                              <li class="stacked"><img id="cc" src="logo_cc.png" alt="Creative commons"></li>
-                              <li class="stacked"><img id="opensource" src="logo_opensource.png" alt="Open source"></li>
-                            </ul>
-                            </li>
-                            <!-- Logo de votre porteur de projet -->
-                            <li><a href="http://www.mon-porteur-de-projet.org"><img src="no-logo.png" alt="Logo de mon porteur de projet"></a></li>
-                            <!-- Partenaires institutionnels -->
-                            <li><a href="http://www.nantesmetropole.fr/"><img class="institutionnel" src="institutionnels/logo_nantesmetropole.png" alt="Nantes Métropole"></a></li>
-                          </ul>
-                </footer>
+            <section>
+              <form>
+                <div id="colonne3">
+                  <input type="radio" id="contactChoice1"
+                         name="pente" value="Plat">
+                  <label for="contactChoice1">Plat</label>
+                  <img id="choix-log" src="hyblab_2023.jpg"/>
+                  <p>Toit plat</p>
+                </div>
+                <div id="colonne3">
+                  <input type="radio" id="contactChoice2"
+                         name="pente" value="Standard">
+                  <label for="contactChoice2">Standard</label>
+                  <img id="choix-log" src="hyblab_2023.jpg"/>
+                  <p>Toit plat</p>
+                </div>
+                <div id="colonne3">
+                  <input type="radio" id="contactChoice3"
+                         name="pente" value="Pentu">
+                  <label for="contactChoice3">Pentu</label>
+                  <img id="choix-log" src="hyblab_2023.jpg"/>
+                  <p>Toit plat</p>
+                </div>
+              </form>
             </section>
-        </main>
-        <div class="swiper-pagination"></div>
-    </div>
+          <section class="commentaire-soli">
+            <img src="img/soliMontgolfiere.png">
+            <p id="SoliExTex">Mais pourquoi parler de l’inclinaison du toit ? C’est essentiel pour la performance de votre module photovoltaïque. </p>
+          </section>
+          </div>
+          
+          <div id="jauge">
+            <img id="Soli2" src="img/montgolfiereAvancee.png"/>
+          </div>
+        </section>
+        <footer>
+          <button>Valider</button>
+        </footer>
+
+      </section>
+
+
+      <section id="orientation" class="swiper-slide">
+        <header>
+          <button class="retour">retour</button>
+
+          <h1 class="titre">Comment votre toit est-il orienté</h1>
+        </header>
+        <div id="ligne">
+          <section id="image" >
+            <img src="img/MaisonCampagne.png">
+          </section>
+          <div class="boussole"><img class="illustration" src="img/bousolle.png" alt="0">
+          <p>Appuier sur la boussole 
+            pour choisir votre orientation</p></div>
+        </div>
+        <div id="jauge">
+          <img id="Soli3" src="img/montgolfiereAvancee.svg"/>
+        </div>
+        <footer>
+          <button>Valider</button>
+        </footer>
+
+
+      </section>
+      <section id="ombre" class="swiper-slide">
+        <header>
+          <button class="retour">retour</button>
+          <p class="titre">
+            Il y a t’il de l’ombre sur votre toit ?
+          </p>
+        </header>
+        <section>
+          <div class="contenu-page">
+            <img id="image" src="hyblab_2023.jpg">
+            <div id="choix-ombre">
+              <form >
+                <div id="colonne3">
+                  <input type="radio" id="contactChoice1"
+                         name="contact" value="Jamais">
+                  <label class="choix-texte" for="contactChoice1">Jamais</label>
+                  <img id="choix-log" src="hyblab_2023.jpg"/>
+                </div>
+                <div id="colonne3">
+                  <input type="radio" id="contactChoice2"
+                         name="contact" value="Pas trop">
+                  <label class="choix-texte" for="contactChoice2">Pas trop</label>
+                  <img id="choix-log" src="hyblab_2023.jpg"/>
+                </div>
+                <div id="colonne3">
+                  <input type="radio" id="contactChoice3"
+                         name="contact" value="Toujours">
+                  <label class="choix-texte" for="contactChoice3">Toujours</label>
+                  <img id="choix-log" src="hyblab_2023.jpg"/>
+                </div>
+              </form>
+              <section class="commentaire-soli">
+                <img src="img/soliMontgolfiere.png">
+                <p id="SoliExTex">   “ il faut aussi que
+                  les modules soient inclinés vers
+                  l’équateur. La France est située
+                  dans l’hémisphère nord, alors,
+                  vous avez tout intérêt à orienter
+                  vos panneaux vers le sud.”</p>
+              </section>
+            </div>
+          </div>
+          <div id="jauge">
+            <img id="Soli4" src="img/montgolfiereAvancee.png"/>
+          </div>
+        </section>
+        <footer><button>Valider</button></footer>
+      </section>
+
+      <section id="facultatif" class="swiper-slide">
+        <header>
+          <button class="retour">retour</button>
+          <p class="titre">Autres questions</p>
+        </header>
+        <div id = "ligne">
+          <img id="img-ques" src="img/SoliQuestion.png">
+          <section id="ligne">
+            <form >
+              <section id="bulle-question">
+                <input type="checkbox" id="facul1"
+                       name="contact" value="Jamais">
+                <label class="choix-texte2" for="facul1">Je participe à la vie de ma co propriété</label>
+              </section>
+              <section id="bulle-question">
+                <input type="checkbox" id="facul2"
+                       name="contact" value="Pas trop">
+                <label class="choix-texte2" for="facul2">Je connais un agriculteur près de chez moi</label>
+              </section>
+              <section id="bulle-question">
+                <input type="checkbox" id="facul3"
+                       name="contact" value="Toujours">
+                <label class="choix-texte2" for="facul3">Je m'engage aux décisions prises par ma municipalité</label>
+              </section>
+              <section id="bulle-question">
+                <input type="checkbox" id="facul4"
+                       name="contact" value="Toujours">
+                <label class="choix-texte2" for="facul4">Je m'engage pour la protection de l'environnement</label>
+              </section>
+            </form>
+          </section>
+        </div>
+        <div id="jauge">
+          <img id="Soli5" src="img/montgolfiereAvancee.png"/>
+        </div>
+        <footer>
+          <button>Valider</button>
+          <button class="passer">Passer</button>
+        </footer>
+      </section>
+
+      <section id="resultat" class="swiper-slide">
+        <header>
+          <button class="retour">retour</button>
+        </header>
+      </section>
+
+      <section id="analyse" class="swiper-slide">
+        <header>
+          <button class="retour">retour</button>
+        </header>
+      </section>
+
+    </main>
+    <div class="swiper-pagination"></div>
   </div>
+</div>
 </body>
 </html>

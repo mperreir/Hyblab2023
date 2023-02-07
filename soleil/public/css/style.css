@@ -1,4 +1,9 @@
 /* ------- Important ! Please at least keep the last part of this CSS ----------- */
+
+p{
+    font-size: 14px;
+    
+}
 /* ------- that adapts content width and height so that aspect ratio  ----------- */
 /* ------- is kept between 9/16 a,d 3/4 (portait orientation)         ----------- */
 
@@ -6,13 +11,249 @@
 *{
     padding:0;
     margin:0;
+    font-family: 'Inter';
+    font-style: normal;
 }
 
 body{
     background-color: black;
-    color: white;
+    color: black;
     overflow: hidden;   /* to avoid slider bugs on some browsers */
     font-family: sans-serif;
+}
+
+#image{
+    width : 85%;
+    height : 150px;
+    margin :auto
+}
+
+
+#image2{
+    width : 85%;
+    height : 25%;
+    margin :auto
+}
+
+#choix-log{
+    width : 24%;
+    height: 12%;
+}
+
+#SoliExImg {
+    text-align: center;
+    width: 20%
+}
+
+#SoliExTex2 {
+    padding-left: 20px;
+    text-align: center;
+    width: 70%;
+    bottom: 20%;
+    position: relative;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+#SoliExTex {
+    text-align: center;
+    width: 70%;
+    bottom: 20%;
+    position: relative;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+}
+
+#Soli1{ /* penser a bouger la montgolfiere par raaport a la taille de la page et au nombre de slides associées*/
+    width : 40px;
+    height: 60px;
+    position : absolute;
+    bottom : 5%;
+    right : 5%;
+    animation-name: flo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform:scale(0.9);
+        
+
+}
+
+@keyframes flo{
+    50%{
+      transform: translateY(20px);
+    }
+}
+
+#Soli2{
+    width : 40px;
+    height: 60px;
+    position : absolute;
+    bottom : 20%;
+    right : 5%;
+    animation-name: flo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform:scale(0.9);
+
+}
+
+#Soli3{
+    width : 40px;
+    height: 60px;
+    position : absolute;
+    bottom : 35%;
+    right : 5%;
+    animation-name: flo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform:scale(0.9);
+
+}
+
+#Soli4{
+    width : 40px;
+    height: 60px;
+    position : absolute;
+    bottom : 50%;
+    right : 5%;
+    animation-name: flo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform:scale(0.9);
+
+}
+
+#Soli5{
+    width : 40px;
+    height: 60px;
+    position : absolute;
+    bottom : 65%;
+    right : 5%;
+    animation-name: flo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform:scale(0.9);
+
+}
+
+div {
+    font-size: 15px;
+    text-align: center;
+}
+
+header{
+    margin-top: 20px;
+    
+}
+
+
+#objsol {
+    font-family: 'Boris';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 26px;
+    text-align: center;
+}
+
+#Choix2 {
+    width: 100%;
+    height: auto;
+}
+
+.commentaire-soli {
+    max-width: 90%;
+    left: 5%;
+    right: 7%;
+    position:static;
+}
+
+.commentaire-soli2 {
+    max-width: 90%;
+    right: 7%;
+}
+
+.commentaire-soli2 p {
+    max-width: 75%;
+    display: inline-block;
+    font-size: 1.9vw;
+}
+
+.commentaire-soli2 img {
+    max-width: 20%;
+}
+
+.commentaire-soli p {
+    max-width: 75%;
+    display: inline-block;
+    font-size: 1.9vw;
+}
+
+.commentaire-soli img {
+    max-width: 20%;
+}
+
+.contenu-page {
+    display: inline-block;
+    max-width: 87%;
+    top: 10%;
+}
+
+#ligne{
+    width: 100%;
+}
+
+#bulle-question {
+    height: 8vw;
+}
+
+#colonne2 {
+    width: 45%;
+    text-align: center;
+}
+
+#colonne3{
+    width: 27%;
+}
+
+.choix-texte {
+    font-size: 20px; /* vw pour tous les ecran ? 3vw */
+}
+
+.choix-texte2{
+    font-size: 2vw;  /* 2vw */
+    line-height: 20px;
+    box-sizing: border-box;
+    padding : 1vw;
+    border: 0.75px solid rgba(0, 0, 0, 0.35);
+    border-radius: 8px;
+}
+
+#img-ques {
+    padding-bottom: 10%;
+}
+
+#choix-ombre {
+    position: static;
+    margin-top: 10%;
+}
+
+#jauge{
+    display: inline-block;
+    margin-top: 20px;
+    height: 60%;
+    width: 5%;
+    background-color: blue;
+    position :absolute;
+    right : 3px;
+
 }
 
 /* -------------- Loader --------------*/
@@ -31,7 +272,6 @@ body{
     text-align: center;
     font-size: 25%;
     position: absolute;
-    top:60%;
     width: 100%
 }
 /* -------------- End of Loader --------------*/
@@ -50,33 +290,122 @@ body{
 
 /* the slides and the loader should fill the whole 9:16 zone */
 .swiper-wrapper section, #loader{
-    background-color: dodgerblue;
+    background-color: white;
     width: 100%;
     height: 100%;
 }
 
+#accueil{
+    width: 100%;
+}
+
+.titre{
+    font-size: 18px;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    width: 70%;
+}
+
 /* Most of the elements in this demo are absolute positionned with percentages */
-#first-slide header, #second-slide header{
+header{
+    margin-bottom: 20px;
     text-align: center;
     width: 100%;
     top: 10%;
-    position: absolute;
-    font-size: 30%;
     z-index: 2;
 }
 
-#logo-hyblab{
-    text-align: center;
-    width: 50%;
-    left: 50%;
-    top: 50%;
-    margin-left:-25%;
-    margin-top:calc(-7.5% * 9 / 16 ); /* margins are relative to the element width... :-( */
-    position: absolute;
-    font-size: 50%;
-    z-index: 2;
-    cursor: pointer;
+/*mes ajouts*/
+video{
+    margin:auto;
 }
+
+.boussole{
+    margin: auto;
+    width: 100%;
+    position: relative;
+}
+#adresse input{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 3px 5px;
+    gap: 16px;
+    border: 0.75px solid #000000;
+    border-radius: 8px;
+    position: relative;
+    margin: auto;
+    width: 12em;
+    text-align: center;
+}
+
+img.img-adresse{
+    height: 200px;
+}
+
+footer button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3px 7px;
+    gap: 16px;
+    background: #9185BE;
+    border-radius: 8px;
+    color: #FFFFFF;
+    margin: auto;
+    text-transform: uppercase;
+    font-family: 'Inter';
+    font-style: normal;
+}
+
+.passer{
+    color: #9185BE;
+    text-transform: uppercase;
+    justify-content: center;
+    margin: auto;
+    background-color: #FFFFFF;
+    margin-top: 7px;
+}
+
+div{
+    position: relative;
+}
+
+button.retour{
+    left: 0%;
+    margin: 2% ;
+    width : 10%;
+    text-align: center;
+    position: absolute;
+}
+
+p.intitulé {
+    padding-top: 2%;
+    font-size: 5vw;
+}
+
+div.conteneur{
+    margin: auto;
+}
+
+#info{
+    display:inline-block;
+    border:#666 1px solid;
+    margin:2px;
+    font-size:24px;
+    cursor:pointer;
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    font-size: small;
+    position: absolute;
+    right : 10%;
+}
+
 
 /* Last slide image is centered */
 #img-fini{
@@ -89,12 +418,12 @@ body{
 }
 
 main > section{
-    background-image: url('../img/background.svg');
+    /*background-image: url('../img/background.svg');*/
     background-size: 100% 100%;
 }
 
 /* Footer of last slide is at the bottom and content is centered */
-#first-slide footer{
+footer{
     bottom: 5%;
     position: absolute;
     box-sizing: border-box; /* So that padding is not added to width (and width: 100% works) */
@@ -102,7 +431,6 @@ main > section{
     font-size: 20%;
     text-align: center;
     padding: 1em;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 
@@ -117,44 +445,44 @@ main > section{
     bottom: 0;
     background-color: white;
     font-size: 20%;
-  }
+}
 
-  #bandeau li{
+#bandeau li{
     list-style-type: none;
     display: inline-block;
     vertical-align: middle;
     margin: 0 0.5em;
-  }
+}
 
-  #bandeau img{
+#bandeau img{
     height: 2.5em;
-  }
+}
 
-  #bandeau #hyblab{
+#bandeau #hyblab{
     margin: 1em auto;
     height: 3em;
     display: block;
-  }
+}
 
-  #bandeau #cc, #bandeau #opensource
-  {
+#bandeau #cc, #bandeau #opensource
+{
     height: 1em;
-  }
+}
 
-  #bandeau .stacked{
+#bandeau .stacked{
     display:block;
-  }
+}
 
-  #bandeau ul{
+#bandeau ul{
     text-align: center;
     padding: 0 0;
     margin-bottom: 0.5em;
-  }
+}
 
-  #bandeau .institutionnel
-  {
+#bandeau .institutionnel
+{
     height: 2em;
-  }
+}
 
 /* ---------- Important media queries for easy responsive content :-) ----------------- */
 /* Whatever the devie used, the content will be displayed full width and height if      */
@@ -162,7 +490,7 @@ main > section{
 
 /* When the aspect ratio is smaller that 3/4, display a 3/4 content */
 #container{
-    position: fixed; /* To set the size of the container to 100% of the visible viewport height AND for absolute positionning of child elements*/ 
+    position: fixed; /* To set the size of the container to 100% of the visible viewport height AND for absolute positionning of child elements*/
     height: 100%;   /* even on mobile devices with url or navigation bars */
     margin-left: calc((100vw - 100 * 3vh / 4) / 2); /* Add black bands on left and right */
     width: calc(100 * 3vh / 4); /* Force 3/4 aspect ratio */
@@ -188,7 +516,44 @@ body{
     }
 }
 
-/* The content is displayed at 9/16 If the aspect ratio is higher that 9/16  */ 
+.main-location-page{
+    position: unset;
+    padding-top: 10%;
+}
+
+.location-input{
+    height: 20%;
+    margin: auto;
+    padding: 5%;
+    float: none;
+    text-align: center;
+    font-size: medium;
+}
+
+.valider{
+    bottom: 20%;
+}
+
+.illustrationAdresse{
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    margin: auto;
+}
+
+
+.illustration{
+    max-width: 100%;
+    height: auto;
+}
+
+.div-adresse{
+    width: 100%;
+    padding: 0;
+    height: 300px;
+}
+
+/* The content is displayed at 9/16 If the aspect ratio is higher that 9/16  */
 @media screen and (max-aspect-ratio: 9/16) {
     #container{
         margin-left: 0; /* reset left margin */
@@ -203,5 +568,78 @@ body{
     body{
         font-size: 15vw;
     }
+
 }
 
+/* Bouton Info */
+
+*{
+    box-sizing: border-box;
+}
+
+  /* Fixez le bouton sur le côté gauche de la page the button on the left side of the page */
+.open-btn {
+display: flex;
+justify-content: flex-start;
+}
+/* Stylez et fixez le bouton sur la page */
+.open-button {
+background-color: white;
+position: absolute;
+right: 5%;
+border: none;
+}
+
+/* Positionnez la forme Popup */
+.login-popup {
+position: relative;
+text-align: center;
+width: 100%;
+}
+/* Masquez la forme Popup */
+.form-popup {
+display: none;
+position: absolute;
+left: 45%;
+top: 5%;
+transform: translate(-45%, 5%);
+border: 2px solid #666;
+z-index: 9;
+border-radius: 5px;
+height: 90%;
+width : 90%;
+
+
+}
+/* Styles pour le conteneur de la forme */
+.form-container {
+width: 90%;
+height : 100%;
+padding: 20px;
+background-color: #fff;
+}
+
+/* Stylez le bouton pour annuler */
+.form-container .cancel {
+    display:inline-block;
+    border:#666 1px solid;
+    margin:2px;
+    font-size:24px;
+    cursor:pointer;
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    font-size: small;
+    position: absolute;
+    right : 10%;
+}
+/* Planez les effets pour les boutons */
+.form-container .btn:hover,
+.open-button:hover {
+opacity: 1;
+}
+
+#Saut {
+    padding-top : 2vw;
+    font-size: 3vw;
+}
