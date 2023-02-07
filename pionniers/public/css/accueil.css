@@ -19,7 +19,8 @@ header div {
 }
 
 header div img {
-    height: 13vh;
+    width: 40vw;
+    height: auto;
     transform: translateX(2%);
 }
 
