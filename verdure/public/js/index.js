@@ -62,6 +62,7 @@ swiper.on("slideChange", function () {
     case 7: 
       initSlideAnimationEntree();
       break;
+      
     case 8: 
       swiper.disable();
       initSlideAnimationHaut();

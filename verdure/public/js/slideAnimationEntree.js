@@ -71,7 +71,7 @@ const initSlideAnimationEntree = function(){
 
 const initSlideAnimationEntree2 = function(){
   
-  UpdateSrcImage('#animationSlideEntree2');
+    UpdateSrcImage('#animationSlideEntree2');
     const droit = document.querySelector('#animationSlideEntree2 .img_droit');
     const haut = document.querySelector('#animationSlideEntree2 .img_haut');
     const bas = document.querySelector('#animationSlideEntree2 .img_bas');

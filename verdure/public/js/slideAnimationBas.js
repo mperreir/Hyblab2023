@@ -67,7 +67,7 @@ const initSlideAnimationBas = function(){
 
   //animation finale
   anime({
-    targets: " .img_bas",
+    targets: "#animationSlideBas .img_bas",
     scale: 3,
     translateY : -15,
     translateX :0,

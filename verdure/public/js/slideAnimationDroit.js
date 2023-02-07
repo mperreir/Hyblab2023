@@ -3,7 +3,7 @@
 // Just animate the logo
 const initSlideAnimationDroit = function(){
 
-  UpdateSrcImage('#animationSlideDroit');
+ // UpdateSrcImage('#animationSlideDroit');
   const droit = document.querySelector('#animationSlideDroit .img_droit');
   let route = document.getElementById('route3');
     route.style.opacity = 0;

@@ -2,7 +2,7 @@
 
 const initSlideAnimationGauche = function(){
 
-  UpdateSrcImage('#animationSlideGauche');
+    UpdateSrcImage('#animationSlideGauche');
     const droit = document.querySelector('#animationSlideGauche .img_droit');
     let route = document.getElementById('#route');
     route.style.opacity = 0;
