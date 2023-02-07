@@ -13,7 +13,7 @@ const initSlideAnimationEntreeTexte = function(){
   droit.setAttribute('style', 'transform :translateX(300%);');
   gauche.setAttribute('style', 'transform :translateX(-300%);');
   haut.setAttribute('style', 'transform :translateY(-300%);');
-  bas.setAttribute('style', 'transform :translateY(300%);');
+  bas.setAttribute('style', 'transform :translateY(500%);');
   
 
 
@@ -23,26 +23,27 @@ const initSlideAnimationEntreeTexte = function(){
   anime({
     targets : "#quatre-zones .img_haut",
     translateY: 0,
-    delay : 200 
+    delay : 200,
+    duration:2000
   });
   anime({
     targets : "#quatre-zones .img_gauche",
     translateX: 0,
-    delay : 700
+    delay : 700,
+    duration:2000
   });
   anime({
     targets : "#quatre-zones .img_droit",
     translateX: 0,
-    delay : 1200
+    delay : 1200,
+    duration:2000
   });
 
-  //animation finale
   anime({
     targets: "#quatre-zones .img_bas",
     translateY : 0,
     delay : 1300,
-    direction: 'normal',
-    duration :2000,
+    duration :2500,
   })
 
 //   anime({
