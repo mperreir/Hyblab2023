@@ -102,28 +102,28 @@ header img,
 }
 
 #next0 {
-    background-image: url('../img/main_button.svg');
+    background-image: url('../img/utils/btn/btn-main.svg');
 }
 
 #next1 {
-    background-image: url('../img/start_button.svg');
+    background-image: url('../img/utils/btn/btn-start.svg');
     margin-top: 25px;
 }
 
 #next4_1 {
-    background-image: url('../img/btn-next.svg');
+    background-image: url('../img/utils/btn/btn-next.svg');
 }
 
 #next4_2 {
-    background-image: url('../img/btn-nextWhite.svg');
+    background-image: url('../img/utils/btn/btn-next-inv.svg');
 }
 
 #next6 {
-    background-image: url('../img/btn-next.svg');
+    background-image: url('../img/utils/btn/btn-next.svg');
 }
 
 #next7 {
-    background-image: url('../img/btn-next.svg');
+    background-image: url('../img/utils/btn/btn-next.svg');
     margin-top: 25px;
 }
 
