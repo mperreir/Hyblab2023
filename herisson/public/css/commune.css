@@ -148,23 +148,37 @@ body {
     border: 7px solid #0B6E5F;
 }
 
+.swiper-button-next::after,
+.swiper-button-prev::after,
+.swiper-button-prev::before,
+.swiper-button-next::before {
+    content: "";
+}
 
 .swiper-button-prev {
     color: #0B6E5F;
+    background-image: url("../img/fleche_verte.png") !important;
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: contain;
-    width: 2vh;
-    height: 2vh;
+    width: 4vh;
+    height: 3vh;
     margin-left: 1vh;
-    top: 50vh;
+    rotate: 90deg;
+    margin-top: 32vh;
 }
 
 .swiper-button-next {
     color: #0B6E5F;
+    background-image: url("../img/fleche_verte.png") !important;
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: contain;
-    width: 2vh;
-    height: 2vh;
+    width: 4vh;
+    height: 3vh;
     margin-right: 1vh;
-    top: 50vh;
+    rotate: -90deg;
+    margin-top: 32vh;
 }
 
 
