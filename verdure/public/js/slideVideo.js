@@ -5,7 +5,7 @@ const initSlideVideo =function(){
   // Get logo element
   setTimeout(()=>{
     swiper.slideNext();
-  },13000)
+  },10000)
   
   
 

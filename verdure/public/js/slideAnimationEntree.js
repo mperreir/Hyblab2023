@@ -22,19 +22,22 @@ const initSlideAnimationEntree = function(){
     targets : "#animationSlideEntree .img_haut",
     translateY: 0,
     delay : 200,
-    duration:2000
+    duration :1200,
+    easing : "linear"
   });
   anime({
     targets : "#animationSlideEntree .img_gauche",
     translateX: 0,
     delay : 700,
-    duration:2000
+    duration :1200,
+    easing : "linear"
   });
   anime({
     targets : "#animationSlideEntree .img_droit",
     translateX: 0,
     delay : 1200,
-    duration:2000
+    duration :1200,
+    easing : "linear"
   });
 
   //animation finale
@@ -42,16 +45,23 @@ const initSlideAnimationEntree = function(){
     targets: "#animationSlideEntree .img_bas",
     translateY : 0,
     delay : 1300,
+    duration :1200,
+    easing : "linear"
+  })
+
+  anime({
+    targets: "#animationSlideEntree ",
+    delay : 1400,
     direction: 'normal',
     duration :2000,
   })
 
   anime({
-    targets: "#animationSlideEntree ",
-    scale: 1.5,
-    delay : 1400,
-    direction: 'normal',
-    duration :2000,
+    targets :'#scrollEntree1',
+    translateY: 10,
+    direction: 'alternate',
+    easing: 'easeInOutSine',
+    loop : true
   })
 };
 
@@ -81,35 +91,44 @@ const initSlideAnimationEntree2 = function(){
     targets : "#animationSlideEntree2 .img_haut",
     translateY: 0,
     delay : 200,
-    duration:2000
+    duration :1200,
+    easing : "linear"
   });
   anime({
     targets : "#animationSlideEntree2 .img_gauche",
     translateX: 0,
     delay : 700,
-    duration:2000
+    duration :1200,
+    easing : "linear"
   });
   anime({
     targets : "#animationSlideEntree2 .img_droit",
     translateX: 0,
     delay : 1200,
-    duration:2000
+    duration :1200,
+    easing : "linear"
   });
 
-  //animation finale
   anime({
     targets: "#animationSlideEntree2 .img_bas",
     translateY : 0,
     delay : 1300,
+    duration :1200,
+    easing : "linear"
+  })
+
+  anime({
+    targets: "#animationSlideEntree2 ",
+    delay : 1400,
     direction: 'normal',
     duration :2000,
   })
 
   anime({
-    targets: "#animationSlideEntree2 ",
-    scale: 1.5,
-    delay : 1400,
-    direction: 'normal',
-    duration :2000,
+    targets :'#scrollEntree2',
+    translateY: 10,
+    direction: 'alternate',
+    easing: 'easeInOutSine',
+    loop : true
   })
 };

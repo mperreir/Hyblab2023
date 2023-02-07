@@ -13,7 +13,7 @@ const initSlideAnimationEntreeTexte = function(){
     // (Re)set initial position of img
   droit.setAttribute('style', 'transform :translateX(300%);');
   gauche.setAttribute('style', 'transform :translateX(-300%);');
-  haut.setAttribute('style', 'transform :translateY(-300%);');
+  haut.setAttribute('style', 'transform :translateY(-400%);');
   bas.setAttribute('style', 'transform :translateY(500%);');
   
 
@@ -25,28 +25,39 @@ const initSlideAnimationEntreeTexte = function(){
     targets : "#quatre-zones .img_haut",
     translateY: 0,
     delay : 200,
-    duration:2000
+    duration :1200,
+    easing : "linear"
   });
   anime({
     targets : "#quatre-zones .img_gauche",
     translateX: 0,
     delay : 700,
-    duration:2000
+    duration :1200,
+    easing : "linear"
   });
   anime({
     targets : "#quatre-zones .img_droit",
     translateX: 0,
     delay : 1200,
-    duration:2000
+    duration :1200,
+    easing : "linear"
   });
 
   anime({
     targets: "#quatre-zones .img_bas",
     translateY : 0,
     delay : 1300,
-    duration :2500,
+    duration :1200,
+    easing : "linear"
   })
 
+  anime({
+    targets :'#scrollEntreeTexte',
+    translateY: 10,
+    direction: 'alternate',
+    easing: 'easeInOutSine',
+    loop : true
+  })
 //   anime({
 //     targets: "#quatre-zones ",
 //     scale: 1.2,
