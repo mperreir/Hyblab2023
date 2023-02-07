@@ -21,7 +21,6 @@ app.get('/map/keywords/:feed/:circular_economy/:energy/:industry/:mobility/:digi
         data.values = data.values.filter(row => row.Id);
         // Filter data to only keep rows with the requested topics
         data.values = data.values.filter(row => {
-            console.log(row);
             return (req.params.feed === "true" && row.Topic.includes("alimentation")) ||
                 (req.params.circular_economy === "true" && row.Topic.includes("économie circulaire")) ||
                 (req.params.energy === "true" && row.Topic.includes("énergie")) ||
@@ -51,7 +50,6 @@ app.get('/map/keywords/:feed/:circular_economy/:energy/:industry/:mobility/:digi
         }
         // Order values alphabetically
         data.values.sort();
-        console.log(data.values)
         // Send it as a JSON object
         res.json(data.values);
     });
