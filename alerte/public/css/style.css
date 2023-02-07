@@ -289,6 +289,7 @@ main>section {
     position: relative;
     text-align: center;
     color: white;
+    font-size: 0.15em;
 }
 
 .bubble img {
