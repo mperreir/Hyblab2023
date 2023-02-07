@@ -1,7 +1,7 @@
 const createMap = async function (taxon) {
     const map = L.map('map').setView([45.7, 0.3], 7);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
         minZoom: 7,
         maxZoom: 10,
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
