@@ -19,7 +19,7 @@ header div {
 }
 
 header div img {
-    width: 40vw;
+    width: 70%;
     height: auto;
     transform: translateX(2%);
 }
