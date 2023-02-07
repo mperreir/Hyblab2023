@@ -34,7 +34,6 @@ app.get('/energy/:name', function ( req, res ) {
             res.status(500).send('Internal Server Error');
         }
         else {
-            console.log(rows);
             res.json(rows);
         }
     });
