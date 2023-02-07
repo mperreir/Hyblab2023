@@ -535,16 +535,17 @@ INDICATEUR
     border: none;
     font-size: 2vh;
     right: 0;
-    width: 15%;
+    width: auto;
     height: 5vh;
     box-shadow: -2px 2px #306947;
+    padding: 1vh;
 }
 
 #answer-title1, #answer-title2, #answer-title3, #answer-title4, #answer-title5, #answer-title6, #answer-title7 {
     text-align: left;
     font-size: 3vh;
     margin: 0 1vh;
-    width: 85%;
+    width: auto;
     font-weight: bold;
 }
 
