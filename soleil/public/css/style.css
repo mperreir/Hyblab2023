@@ -323,6 +323,9 @@ header{
 
 
 /*mes ajouts*/
+.img-pente{
+    width: 80%;
+}
 video{
     margin:auto;
 }
