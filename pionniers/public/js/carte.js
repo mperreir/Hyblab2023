@@ -1,9 +1,10 @@
 'use strict';
 
 // TODO: WHEN SELECTION ON THE PREVIOUS PAGE IS DONE, DISPLAY THE MAP WITH THE SELECTED TOPICS
-// commerce;agroalimentaire dans Numérique et Mobilité
 //
-// TODO : mettre à jour la carte lors d'un retrait d'un mot-clé (quand le manage button est à "Ajouter")
+// TODO : faire l'union des mots-clés au lieu de l'intersection
+//
+// TODO : reordonner les résultats colorés devant les autres
 
 // MEILLEUR MOYEN DE GERER LES MOTS CLES METTRE UN PARAMETRE POUR LES MARKERS SUR KEYWORD BOOLEEN et le mettre dans le IF
 /*
@@ -114,9 +115,33 @@ function updateMap(){
         geographicalProfiles.forEach(gp => {
             gp.marker.remove();
         });
+        // Reorder the JSON to display profiles with the selected topics and keywords first
+        // TODO : WATCH HOW TO APPLY Z INDEX TO MARKERS (BECAUSE IT DOESN'T WORK WITH JSON ORDER)
+        r.sort((a, b) => {
+            if (usedKeywords.map(k => k.replace('#', '')).every(keyword => a.Keywords.includes(keyword)) &&
+                !usedKeywords.map(k => k.replace('#', '')).every(keyword => b.Keywords.includes(keyword))) {
+                return -1;
+            }
+            if (!usedKeywords.map(k => k.replace('#', '')).every(keyword => a.Keywords.includes(keyword)) &&
+                usedKeywords.map(k => k.replace('#', '')).every(keyword => b.Keywords.includes(keyword))) {
+                return 1;
+            }
+            if (selectedTopics.includes(translate(a.Topic)) && !selectedTopics.includes(translate(b.Topic))) {
+                return -1;
+            }
+            if (!selectedTopics.includes(translate(a.Topic)) && selectedTopics.includes(translate(b.Topic))) {
+                return 1;
+            }
+            return 0;
+        });
         // Update the geographical profiles
         geographicalProfiles = r;
-        addMarkers().then(() => console.log("Markers added !"));
+        addMarkers().then(() => {
+            console.log("Markers added !");
+            geographicalProfiles.forEach(gp => {
+                gp.marker.setForceZIndex(9999);
+            });
+        });
     });
 }
 
