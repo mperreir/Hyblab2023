@@ -9,10 +9,11 @@
 }
 
 body {
+    
     background-color: black;
     color: #282828;
     overflow: hidden; /* to avoid slider bugs on some browsers */
-    font-family: sans-serif;
+    font-family: raleway;
 }
 
 /* -------------- Loader --------------*/
