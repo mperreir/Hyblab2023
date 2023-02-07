@@ -17,17 +17,24 @@ let swiper = new Swiper("#mySwiper", {
 });
 
 swiper.on("slideChange", function () {
+  console.log(swiper.activeIndex);
   switch( swiper.activeIndex ) {
+   
     case 0:
-      initSlideAccueil();
-      break;
-    case 1:
+      
       initSlideVideo();
       break;
+
+    case 1:
+     
+      initSlideAccueil();
+      break;
+
     case 2:
       swiper.disable();
       initSlideQuestion1(next_Question);
       break;
+
     case 3:
       initSlideAnimationEntreeTexte();
       break;
@@ -125,7 +132,7 @@ setTimeout(() => {
     easing: 'easeOutQuad',
   });
   // Init first slide
-  initSlideAccueil();
+  initSlideVideo();
 }, 1);
 
 

@@ -31,7 +31,7 @@ const initSlideQuestion3 = async function(currentQuestion){
 
   setTimeout(()=> {
    question.style.opacity = 100;
-   city.style.top = "20%";
+   city.style.top = "30%";
 },1000
  )
 
