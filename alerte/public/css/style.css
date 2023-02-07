@@ -324,6 +324,10 @@ main>section {
     border-radius: 15px;
 }
 
+.btn3 {
+    width: 100%;
+}
+
 .btn8 {
     background-color: aliceblue;
     width: 100%;
