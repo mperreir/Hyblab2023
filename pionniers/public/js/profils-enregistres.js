@@ -1,3 +1,5 @@
+import {storage} from "googleapis/build/src/apis/storage";
+
 function createFicheMinia(profil) {
     const htmlString = `<div class="fiche-minia">
                             <img alt="supprimer-profil" src="">
@@ -38,4 +40,5 @@ document.addEventListener("DOMContentLoaded", function() {
         const ficheMinia = createFicheMinia(profil);
         listeProfils.append(ficheMinia);
     });
+
 });
