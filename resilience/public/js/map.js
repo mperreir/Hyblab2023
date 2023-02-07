@@ -26,10 +26,15 @@ regions.forEach(element => {
                 time = " ".concat(heures[compt.length + 1], " ");
                 window.localStorage.setItem('heure', time);
                 window.localStorage.setItem(element.id, "true");
+                
+                //gestion steps (nb de zones vues)
+                if (compt.length<4) {
+                    steps = " ".concat(compt.length + 1);
+                }
+                else steps = " ".concat(compt.length); //le repas fait prendre +1 a compt mais n'est pas compté comme une zone vue
+                window.localStorage.setItem('steps', steps);
             }
-            steps = window.localStorage.getItem('steps');
-            if (steps < 8) steps++;
-            window.localStorage.setItem('steps', steps);
+            
             str = element.id;
             nb_region = str.substr(1);
             path = "./dialogue.html?id=".concat(nb_region);
@@ -98,9 +103,9 @@ modal.onclick = function() {
     modal.style.display = "none";
   }
   
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
