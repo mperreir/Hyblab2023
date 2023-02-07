@@ -234,7 +234,7 @@ header img,
 .little-logo-meuh {
     position: fixed;
     left: 0;
-    top: 15px;
+    top: 20px;
     height: 30px;
 }
 
@@ -368,6 +368,10 @@ main>section {
 .btn8 p {
     text-align: center;
     font-size: 0.2em;
+}
+
+.btn12 {
+    width: 100%;
 }
 
 #dep {
