@@ -11,7 +11,6 @@
 body {
 
     background-color: black;
-    color: white;
     overflow: hidden; /* to avoid slider bugs on some browsers */
     font-family: raleway, sans-serif;
     color: #282828;
@@ -63,7 +62,7 @@ body {
 #end-slide header {
     text-align: center;
     width: 100%;
-    top: 10%;
+    top: 5%;
     position: absolute;
     font-size: 30%;
     z-index: 2;
@@ -74,7 +73,7 @@ body {
 #img-fini {
     width: 70%;
     left: 50%;
-    top: 40%;
+    top: 25%;
     position: absolute;
     margin-left: -35%;
     margin-top: calc(-25% * 9 / 16); /* margins are relative to the element width... :-( */
@@ -788,3 +787,22 @@ GREENTA
     cursor: pointer;
 }
 
+#photo-table {
+    margin: 57% auto auto;
+    font-size: 15%;
+}
+
+.profile-photo {
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+}
+
+#photo-table a {
+    color: #282828;
+    text-decoration: none;
+}
+
+#photo-table th {
+    width: 50vh;
+}
