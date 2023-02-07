@@ -9,10 +9,10 @@
 }
 
 body {
-    
+
     background-color: black;
     color: white;
-    overflow: hidden;   /* to avoid slider bugs on some browsers */
+    overflow: hidden; /* to avoid slider bugs on some browsers */
     font-family: raleway, sans-serif;
     color: #282828;
 }
@@ -52,7 +52,7 @@ body {
 }
 
 /* the slides and the loader should fill the whole 9:16 zone */
-.swiper-wrapper section, #loader{
+.swiper-wrapper section, #loader {
     background: rgb(180, 219, 251);
     /*background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,252,146,1) 100%);*/
     width: 100%;
@@ -206,8 +206,8 @@ SLIDE ACCUEIL
     width: 70%;
     left: 50%;
     top: 5%;
-    margin-left:-25%;
-    margin-top:calc(-7.5% * 9 / 16 ); /* margins are relative to the element width... :-( */
+    margin-left: -25%;
+    margin-top: calc(-7.5% * 9 / 16); /* margins are relative to the element width... :-( */
     position: absolute;
     font-size: 50%;
     z-index: 2;
@@ -251,7 +251,7 @@ SLIDE QUESTION
 }
 
 
-.question-slide{
+.question-slide {
     background-position-y: 0;
     transition: background-position-y 1s;
 }
@@ -325,9 +325,9 @@ SLIDE ANIMATION SORTIE+ZOOM
     text-align: center;
 }
 
-#route1, #route2, #route3{
-opacity: 100;
-transition : opacity 1s;
+#route1, #route2, #route3 {
+    opacity: 100;
+    transition: opacity 1s;
 }
 
 /*************************
@@ -374,8 +374,8 @@ ANIMATION ENTREE
 INDICATEUR
 *******************************/
 /*THERMOMETRE*/
-.containerthermo{
-    position:absolute;
+.containerthermo {
+    position: absolute;
     width: 4.2vh;
 
     height: 6vh;
@@ -528,7 +528,7 @@ INDICATEUR
     height: 100%;
     padding: 3vh;
     grid-auto-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 3vh;
 }
 
@@ -543,6 +543,12 @@ INDICATEUR
     box-shadow: -2px 2px #306947;
     padding: 1vh;
     background-color: #ffffff;
+    grid-column: span 2;
+}
+
+#answer1:last-child:nth-child(2n-1), #answer2:last-child:nth-child(2n-1), #answer3:last-child:nth-child(2n-1), #answer4:last-child:nth-child(2n-1), #answer5:last-child:nth-child(2n-1), #answer6:last-child:nth-child(2n-1), #answer7:last-child:nth-child(2n-1) {
+    grid-column-end: 3;
+    background-color: #282828;
 }
 
 /**************
@@ -733,9 +739,9 @@ Derniere slide
     text-decoration: none;
 }
 
-#dropdownShareOptions img{
-    height:auto;
-    width:120px;
+#dropdownShareOptions img {
+    height: auto;
+    width: 120px;
 }
 
 /**************************
@@ -747,7 +753,7 @@ slide entree texte
     width: 75%;
     height: auto;
     font-size: 18%;
-    color:black;
+    color: black;
     position: absolute;
     top: 5%;
     left: 5%;
@@ -755,12 +761,12 @@ slide entree texte
 
 #presentation2 {
     width: 75%;
-    color:black;
+    color: black;
     height: auto;
     font-size: 18%;
     position: absolute;
     bottom: 15%;
-    left:5%;
+    left: 5%;
 }
 
 
