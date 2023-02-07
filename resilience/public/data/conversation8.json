@@ -4,8 +4,8 @@
         "Manon",
         "Voyageur"
     ],
-    "background-color": "#FD9E98",
-    "text-color": "",
+    "background_color": "#FD9E98",
+    "text_color": "black",
     "messages": [
         {
             "type": "message",

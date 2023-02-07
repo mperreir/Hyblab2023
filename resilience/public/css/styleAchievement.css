@@ -3,15 +3,6 @@
     overflow-y: scroll;
 }
 
-
-
-
-
-#left-arrow {
-    display: flex;
-    width: 11%;
-}
-
 .achievement {
     color: black;
     width: 100%;

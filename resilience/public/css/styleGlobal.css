@@ -40,3 +40,13 @@ header {
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
+#left-arrow {
+    display: flex;
+    width: 11%;
+}
+
+#right-arrow {
+    display: flex;
+    width: 11%;
+}

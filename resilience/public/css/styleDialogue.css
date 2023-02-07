@@ -36,13 +36,10 @@
     justify-content: space-between;
 
     box-sizing: border-box;
-
-    border: 1px solid #000000;
     border-radius: 10px;
 }
 
 .message {
-    color: black;
     max-width: 30em;
     
     padding: 0.5em 0.75em;
@@ -72,8 +69,10 @@
 
 .right {
     align-self: flex-end;
+    border: 1px solid #000000;
     float: right;
     background-color: White;
+    color: black;
     margin-right: 8%;
 }
 
