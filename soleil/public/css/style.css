@@ -276,6 +276,7 @@ header{
     background-color: blue;
     position :absolute;
     right : 3px;
+    top: 10%;
 
 }
 
@@ -364,6 +365,11 @@ header{
 
 
 /*mes ajouts*/
+.choix-logement img{
+    display: inline-block;
+    margin-right: 5%;
+}
+
 .img-pente{
     width: 80%;
 }
