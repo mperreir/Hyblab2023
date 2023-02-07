@@ -2,9 +2,14 @@
 
 let dep
 
+function changeBackground(color) {
+  document.body.style.background = color;
+}
+
 let next0 = document.getElementById("next0")
 next0.addEventListener("click", () => {
-  display("s5")
+  display("s11_1")
+  changeBackground('aliceblue')
 })
 
 let next1 = document.getElementById("next1")
@@ -39,11 +44,13 @@ for (let btn of btns3) {
 let next4_1 = document.getElementById("next4_1")
 next4_1.addEventListener("click", () => {
     display("s5")
+    changeBackground('#121212')
 })
 
 let next4_2 = document.getElementById("next4_2")
 next4_2.addEventListener("click", () => {
     display("s5")
+    changeBackground('#121212')
 })
 
 paper.install(window);
@@ -75,22 +82,38 @@ view.onMouseUp = () => {
 let next6 = document.getElementById("next6")
 next6.addEventListener("click", () => {
     display("s7")
+    changeBackground('#121212')
 })
 
 let next7 = document.getElementById("next7")
 next7.addEventListener("click", () => {
     dep = document.getElementById('dep')
     display("s8")
+    changeBackground('#121212')
 })
 
 let next9_1 = document.getElementById("next9_1")
 next9_1.addEventListener("click", () => {
     display("s10")
+    changeBackground('#121212')
 })
 
 let next9_2 = document.getElementById("next9_2")
 next9_2.addEventListener("click", () => {
     display("s10")
+    changeBackground('#121212')
+})
+
+let next11_1 = document.getElementById("next11_1")
+next11_1.addEventListener("click", () => {
+    display("s12")
+    changeBackground('#121212')
+})
+
+let next11_2 = document.getElementById("next11_2")
+next11_2.addEventListener("click", () => {
+    display("s12")
+    changeBackground('#121212')
 })
 
 function display(id) {
