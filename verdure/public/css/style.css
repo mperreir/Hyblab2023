@@ -554,11 +554,11 @@ INDICATEUR
     grid-auto-rows: 1fr;
     grid-template-columns: 1fr 1fr;
     grid-gap: 3vh;
+    padding: 2vh 3vh;
 }
 
 #consequences1 p, #consequences2 p, #consequences3 p, #consequences4 p, #consequences5 p, #consequences6 p, #consequences7 p {
     font-size: 2vh;
-    width: 40%;
     margin: 0 auto;
     padding: 1vh;
 }
