@@ -296,11 +296,11 @@ function miseAJourEtatCarousel() {
     carouselList = document.querySelector('.carousel-list');
     carouselItems = document.querySelectorAll('.carousel-item');
     elems = Array.from(carouselItems);
-
-
+    // mes ajouts
     let cur = elems.find(elem => elem.getAttribute("data-pos") === '0');
     let suiv = elems.find(elem => elem.getAttribute("data-pos") === '1');
     let prec= elems.find(elem => elem.getAttribute("data-pos") === '-1');
+    console.log(elems);
     updateFolder();
     swipe(cur,suiv,prec);
 
@@ -388,7 +388,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 function updateFolder() {
     const profilsEnregistresFolder = document.querySelector('footer#folder');
     const nombreProfilsEnregistres = profilsEnregistresFolder.querySelector('#nombre-profil');
-    const nombreProfilsEnregistresText = profilsEnregistresFolder.querySelector('#nombre-profil p');
+   // const nombreProfilsEnregistresText = profilsEnregistresFolder.querySelector('#nombre-profil p');
     const idsProfilsEnregistres = window.localStorage.getItem("profilsFavoris");
     let nombreProfilFavoris = 0;
 
@@ -398,11 +398,11 @@ function updateFolder() {
 
     if (nombreProfilFavoris > 0) {
         nombreProfilsEnregistres.classList.remove('display-none');
-        nombreProfilsEnregistres.classList.add('flex-row');
-        nombreProfilsEnregistresText.innerHTML = nombreProfilFavoris.toString();
+        //nombreProfilsEnregistres.classList.add('flex-row');
+        nombreProfilsEnregistres.innerHTML = nombreProfilFavoris.toString();
     } else {
         nombreProfilsEnregistres.classList.add('display-none');
-        nombreProfilsEnregistres.classList.remove('flex-row');
+        //nombreProfilsEnregistres.classList.remove('flex-row');
     }
 }
 function swipe(current, next, prev) {
