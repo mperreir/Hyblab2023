@@ -50,8 +50,8 @@ body{
 
 /* the slides and the loader should fill the whole 9:16 zone */
 .swiper-wrapper section, #loader{
-    background: rgb(63,94,251);
-    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,252,146,1) 100%);
+    background: rgb(180, 219, 251);
+    /*background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,252,146,1) 100%);*/
     width: 100%;
     height: 100%;
 }
@@ -190,9 +190,9 @@ SLIDE ACCUEIL
 
 #logo-verdure{
     text-align: center;
-    width: 50%;
+    width: 70%;
     left: 50%;
-    top: 10%;
+    top: 5%;
     margin-left:-25%;
     margin-top:calc(-7.5% * 9 / 16 ); /* margins are relative to the element width... :-( */
     position: absolute;
@@ -230,7 +230,6 @@ SLIDE QUESTION
 
 
 .question-slide{
-
     background-position-y: 0;
     transition: background-position-y 1s;
 }
@@ -303,6 +302,11 @@ SLIDE ANIMATION SORTIE+ZOOM
     top: 40%;
     left: 27%;
     text-align: center;
+}
+
+#route1, #route2, #route3{
+opacity: 100;
+transition : opacity 1s;
 }
 
 /*************************

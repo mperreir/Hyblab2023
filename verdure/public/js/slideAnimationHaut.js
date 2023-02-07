@@ -5,6 +5,8 @@ const initSlideAnimationHaut = function(){
 
   UpdateSrcImage('#animationSlideHaut');
   const haut = document.querySelector('.img_haut');
+  let route = document.getElementById('route2');
+    route.style.opacity = 0;
     
 
     // (Re)set initial position of img

@@ -5,6 +5,8 @@ const initSlideAnimationDroit = function(){
 
   UpdateSrcImage('#animationSlideDroit');
   const droit = document.querySelector('#animationSlideDroit .img_droit');
+  let route = document.getElementById('route3');
+    route.style.opacity = 0;
 
     // (Re)set initial position of img
   droit.setAttribute('style', 'transform :scale(1);');
