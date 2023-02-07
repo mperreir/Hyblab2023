@@ -88,7 +88,7 @@ function manger() {
     window.localStorage.setItem('compt', compt + 1);
     window.localStorage.setItem('heure', " 14:00 ");
     window.localStorage.setItem("popup", "false");
-    window.location = "./dialogue.html?id=15";
+window.location = "./dialogue.html?id=15";
 }
 
 load();
