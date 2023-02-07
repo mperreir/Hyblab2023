@@ -108,7 +108,7 @@ async function getINSEE(taxon) {
             for (const subKey in innerValue) {
                 const subValue = innerValue[subKey];
                 if (subValue.cd_ref === taxon) {
-                    cityData.push({ commune: outerKey, nb_obs: subValue.nb_obs });
+                    cityData.push({ commune: outerKey, nb_obs: subValue.nb_obs, enjeu_conservation: subValue.enjeu_conservation, categorie: innerKey});
                 }
             }
         }

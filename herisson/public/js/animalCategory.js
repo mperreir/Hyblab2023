@@ -1,37 +1,85 @@
-const animaldata = "Mammifère";
-const commune = "Bordeaux";
-const footercontainer = document.getElementById("footerText")
-const h1container = document.getElementById("category")
-const citycontainer = document.getElementById("commune")
+const animaldata = "Amphibiens";
+const commune = "Aix";
+const db = "data/db.json";
 
-const dataTest = ["animal1", "animal2", "animal3", "animal4", 1 , 2, 3, 4, 5, 6, 7, 8, 9];
-const buttonContainer = document.getElementById("animals-buttons");
+async function animalCategory() {
+    /*function to create a dictionary of the wanted animals*/
+    async function getData(dbPath) {
+        const response = await fetch(dbPath);
+        const data1 = await response.json();
+        console.log(data1);
+        return data1[commune][animaldata];
+    }
 
-const main = document.querySelector("main.main");
-const footer = document.querySelector("footer.main")
+    /*call it*/
+    const dataTest = await getData(db);
+    console.log(dataTest);
 
-h1container.textContent = animaldata;
-citycontainer.textContent = commune;
-newAnimalData = animaldata.toLowerCase();
-footercontainer.textContent = "Comment aider ces " + newAnimalData + "s ?";
-footercontainer.style.color= "#FBC5EB";
+    const footercontainer = document.getElementById("footerText")
+    const h1container = document.getElementById("category")
+    const citycontainer = document.getElementById("commune")
+    const buttonContainer = document.getElementById("animals-buttons");
 
+    const main = document.querySelector("main.main");
+    const footer = document.querySelector("footer.main")
 
+    h1container.textContent = animaldata.split(" ").shift();
+    citycontainer.textContent = commune;
+    footercontainer.textContent = "Comment aider ces " + animaldata.toLowerCase() + " ?";
+    footercontainer.style.color = "#FBC5EB";
 
-buttonContainer.style.width = "innerWidth";
-buttonContainer.style.display = "flex";
-buttonContainer.style.flexDirection = "column";
+    buttonContainer.style.width = "innerWidth";
+    buttonContainer.style.display = "flex";
+    buttonContainer.style.flexDirection = "column";
 
-dataTest.forEach(function(item){
-    const button = document.createElement("button");
-    button.id = item;
-    button.textContent = item;
-    button.style.margin = "2vw 0";
-    buttonContainer.appendChild(button);
-});
+    /*create each animal's buttons */
+    for (const key in dataTest) {
+        const button = document.createElement("button");
+        button.className = "animalButton";
+        if(dataTest[key]["nom_vern"] == null){
+            animalName = dataTest[key]["lb_nom"];
+        } else {
+            animalName = dataTest[key]["nom_vern"];
+        }
+        button.id = animalName;
+        button.textContent = animalName;
+        button.style.margin = "2vw 0";
+        buttonContainer.appendChild(button);
+    }
 
+    /* manage the main height */
+    if(buttonContainer.offsetHeight > 1760) {
+        main.style.minHeight = `${buttonContainer.offsetHeight + footer.offsetHeight}px`;
+    }
+    else{
+        main.style.minHeight = '71.7vh';
+    }
 
-main.style.minHeight = `${buttonContainer.offsetHeight + footer.offsetHeight}px`;
+    /* put the pop-up visible */
+    async function selectAnimal(){
+        const mainDiv = document.getElementById("main");
+        const popDiv = document.getElementById("pop-up");
+        const buttons = document.getElementsByClassName("animalButton");
+        for (let i = 0; i < buttons.length; i++) {
+            buttons.item(i).addEventListener("click", function(){
+                mainDiv.style.display = "none";
+                popDiv.style.display = "block";
+            });
+        }
+    }
+    /* quit the pop-up */
+    async function quitPopUp(){
+        const mainDiv = document.getElementById("main");
+        const popDiv = document.getElementById("pop-up");
+        const quitButton = document.getElementById("quit");
+        quitButton.addEventListener("click", function(){
+            mainDiv.style.display = "block";
+            popDiv.style.display = "none";
+        })
+    }
 
+    await selectAnimal();
+    await quitPopUp();
+}
 
-
+animalCategory();
