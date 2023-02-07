@@ -71,6 +71,8 @@ body{
 
 }
 
+/* ---------- Animation de Soli-mongolfière dans la jauge ------------ */
+
 #Soli1{ /* penser a bouger la montgolfiere par raaport a la taille de la page et au nombre de slides associées*/
     width : 40px;
     height: 60px;
@@ -150,9 +152,12 @@ div {
 
 header{
     margin-top: 20px;
-    
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    top: 10%;
+    z-index: 2;
 }
-
 
 #objsol {
     font-family: 'Boris';
@@ -315,13 +320,7 @@ header{
 }
 
 /* Most of the elements in this demo are absolute positionned with percentages */
-header{
-    margin-bottom: 20px;
-    text-align: center;
-    width: 100%;
-    top: 10%;
-    z-index: 2;
-}
+
 
 /*mes ajouts*/
 video{
@@ -333,6 +332,7 @@ video{
     width: 100%;
     position: relative;
 }
+
 #adresse input{
     box-sizing: border-box;
     display: flex;
@@ -366,6 +366,7 @@ footer button{
     text-transform: uppercase;
     font-family: 'Inter';
     font-style: normal;
+    border: transparent;
 }
 
 .passer{
@@ -387,6 +388,8 @@ button.retour{
     width : 10%;
     text-align: center;
     position: absolute;
+    background-color: transparent;
+    border: transparent;
 }
 
 p.intitulé {
@@ -567,6 +570,7 @@ body{
         margin-top: calc(-50 * 16vw / 9); /* move the content half the height to the top */
         top:50%; /* then center it ! */
         height: calc(100 * 16vw / 9); /* adjust height so that aspect ratio is 9/16 */
+        padding-left: 0;
     }
 
     /* We set a default font size here. It will be the base for all other font sizes */
@@ -576,6 +580,15 @@ body{
     }
 
 }
+
+@media screen and (min-aspect-ratio: 3/4) {
+    #container {
+        padding-left: 0;
+        width: 100vw;
+
+    }
+}
+
 
 /* Bouton Info */
 
