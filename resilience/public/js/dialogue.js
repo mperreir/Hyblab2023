@@ -23,6 +23,9 @@ async function initConversation() {
     });
 
     messages = conversation.messages;
+
+    displayMessage(messages.shift());
+
     runConversation();
 };
 
