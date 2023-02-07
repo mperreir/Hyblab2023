@@ -2,7 +2,7 @@
 
 // async init function (because of the awaits on fetches)
 const initSlide1 = async function(){
-  let response = await fetch('data/data.json');
+  let response = await fetch('../data/data.json');
   const data = await response.json();
 
   function mise_en_forme(data) {
@@ -16,7 +16,7 @@ const initSlide1 = async function(){
     document.querySelectorAll('.swiper-slide main').forEach((main) => {main.style.backgroundColor = data.main_color;});
 
     const objectElement = document.querySelector('#logo-environment');
-    objectElement.data = data.file_name;
+    objectElement.data = "../"+data.file_name;
 
     change_svg_color(objectElement, data.main_color);
   }

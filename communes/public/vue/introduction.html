@@ -12,11 +12,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="../js/IntroSlide1.js" defer></script>
-    <script src="../js/IntroSlide2.js" defer></script>
-    <script src="../js/IntroSlide3.js" defer></script>
-    <script src="../js/IntroSlide4.js" defer></script>
-    <script src="../js/IntroSlide5.js" defer></script>
-    <script src="../js/IntroSlide6.js" defer></script>
     <script src="../js/Intro.js" defer></script>
     <script src="../js/change_svg_color.js"></script>
 </head>
@@ -24,17 +19,13 @@
 <!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
 <div id="container">
     <!-- Le loader-->
-    <section id="loader">
-        <div id="loader-img" class="ld ld-ring ld-cycle"></div>
-        <img src="../img/logo.svg" class="logo" id="logo-hyblab" alt="logo hyblab"></img>
-    </section>
     <div id="mySwiper" class="swiper">
         <header>
             <div class="headerOne">
                 <object class="logo" type="image/svg+xml"></object>
 
             </div>
-            <div class="headerThree">
+            <div class="headerThree skip">
                 Passer le scénario
             </div>
         </header>
@@ -102,22 +93,13 @@
                 <div class="form__group field">
                     <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
                     <label for="name" class="form__label">Code Postal</label>
+                    <input type="submit"/>
+
+                </div>
+                <div>
                 </div>
                 <div class = Elu>
                     <object id="Elu5"></object>
-                </div>
-                <footer>
-                    <p></p>
-                </footer>
-            </section>
-            <section id="sixth-slide" class="swiper-slide">
-                <!-- le footer sera rempli à partir de données lues dans un fichier Json-->
-                <div class="textElu" >
-                    <p class="bubble-text" id="textElu6">
-                    </p>
-                </div>
-                <div class = Elu>
-                    <object id="Elu6"></object>
                 </div>
                 <footer>
                     <p></p>

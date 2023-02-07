@@ -91,7 +91,8 @@
     {
       "name": "intro7",
       "tchat": "Il n’est pas définitif. En consultant nos différentes initiatives, vous aurez l’opportunité de le modifier. Il vous suffira d’augmenter votre production dans chacune des énergies.",
-      "background_color": "#F2FFFB"
+      "background_color": "#F2FFFB",
+      "file_name": "../img/Bonhomme_1.svg"
     }
   ],
   "conclusion": {

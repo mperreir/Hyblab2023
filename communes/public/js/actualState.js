@@ -15,36 +15,8 @@ const swiper = new Swiper("#mySwiper", {
 });
 
 swiper.on("slideChange", function () {
-    introSlide1();
-});
-const swiper2 = new Swiper("#mySecondSwiper", {
-    direction: "horizontal",
-    mousewheel: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-});
-
-swiper2.on("slideChange", function () {
     introSlide2();
 });
-
-// Wait for the content to preload and display 1st slide
-// Here we simulate a loading time of one second
-setTimeout(() => {
-    // fade out the loader "slide"
-    // and send it to the back (z-index = -1)
-    anime({
-        delay: 1000,
-        targets: '#loader',
-        opacity: '0',
-        'z-index' : -1,
-        easing: 'easeOutQuad',
-    });
-    // Init first slide
-    introSlide1();
-}, 1000);
 const iSpeed = 100;
 const iScrollAt = 20;
 
@@ -71,6 +43,5 @@ function typewriter() {
         }
     }
 }
-document.querySelector(".skip").addEventListener("click", function () {
-    swiper.slideTo(4);
-});
+introSlide2();
+

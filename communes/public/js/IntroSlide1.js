@@ -14,8 +14,24 @@ var iRow; // initialise current row
 const introSlide1 = async function() {
     let response = await fetch('../data/data.json');
     const data = await response.json();
-    const data_filter = data.intro.filter(function(item){return item.name === "intro1";})[0]
-    document.querySelector("#Elu1").data=data_filter.file_name
+    const value = swiper.activeIndex +1
+    const data_filter = data.intro.filter(function(item){return item.name === "intro"+value;})[0]
+    document.querySelector("#Elu"+value).data=data_filter.file_name
+    aText = new Array(data_filter.tchat)
+    iIndex = 0;
+    iArrLength = aText[0].length;
+    iTextPos = 0;
+    sContents = '';
+    iRow = 0;
+
+    typewriter();
+}
+const introSlide2 = async function() {
+    let response = await fetch('../data/data.json');
+    const data = await response.json();
+    const value = swiper.activeIndex +6
+    const data_filter = data.intro.filter(function(item){return item.name === "intro"+value;})[0]
+    document.querySelector("#Elu"+value).data=data_filter.file_name
     aText = new Array(data_filter.tchat)
     iIndex = 0;
     iArrLength = aText[0].length;
