@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Hyblab 2023</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css"/>
@@ -32,6 +35,7 @@
     <script src="js/endSlide.js"></script>
     <script src="js/slideAnimationEntreeTexte.js"></script>
     <script src="js/slideVideo.js"></script>
+   
 
 </head>
 <body>
@@ -46,6 +50,18 @@
         <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
         <main class="swiper-wrapper">
 
+
+
+            <!-- ************************************
+                ****ANIMATION SLIDE Video
+            **************************************-->
+
+            <section id="slidevideo" class="swiper-slide">
+                <div class="bloc">
+                    <video width="100%" height="100%" autoplay muted><source src="./img/video_intro.mp4" type=video/mp4></video>
+                </div>
+            </section>
+
             <!-- ************************************
                 ****ANIMATION SLIDE Accueil
             **************************************-->
@@ -55,12 +71,9 @@
                 <img src="img/01_logo-03.png" id="logo-verdure" alt="logo verdure"></img>
                 <div id="fond"></div>
 
-
                 <div>
                     <p id="presentation-jeu">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                        totam iure deserunt aspernatur quod quo, vero repellendus, placeat reiciendis
-                        rerum consequatur ipsa perferendis numquam nobis. Dolorem soluta quidem numquam commodi!
+                        Il fait bon vivre à Green Ta Ville. Sauf quand il fait chaud ! D’où l’intérêt de planter des arbres, de rouvrir des rivières, de laisser la nature reprendre ses droits… Et si vous essayiez d’aménager Green Ta Ville ? À vous de jouer !
                     </p>
                 </div>
 
@@ -68,20 +81,8 @@
                    <img src ="img/swippe.png" alt="scroll" class = "indic" id="scrollAccueil" >
                    <p>Scroll pour découvrir</p>
                 </footer>
+
             </section>
-
-            <!-- ************************************
-                ****ANIMATION SLIDE Video
-            **************************************-->
-
-            <section id="slidevideo" class="swiper-slide">
-                <div class="bloc">
-                    <video width="100%" height="100%" autoplay muted><source src="./img/video_intro.mp4" type=video/mp4>
-                    </video>
-                </div>
-            </section>
-
-
 
             <!-- ***************
                 ****BOULEVARD***Q1
@@ -92,17 +93,17 @@
 
                 <div class="containerthermo">
                     <div class="thermo"></div>
-                    <img src = "img/thermo@300x.png" id="thermoindic" alt="indicateur de température">
+                    <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
                 </div>
       
                 <div class="containermoney">
                     <div class="money"></div>
-                    <img src = "img/money@300x.png" id="moneyindic" alt="indicateur de dépense">
+                    <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
                 </div>
       
                 <div class="containerhappy">
                     <div class="happy"></div>
-                    <img src = "img/happy@300x.png" id="happyindic" alt="indicateur de satisfaction">
+                    <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
                 </div>
 
                 <img id= "city1" src="img/boulevard.png" alt="boulevard">
@@ -121,7 +122,7 @@
                         <div id="short-answer1"> 
                             <div id = "title1">
                             <p id = "answer-title1"></p>
-                            <input type="button" id="show-button1" value="+">
+                            <input type="button" id="show-button1" value="voir plus">
                             </div> 
                             <div id="button-answer1"></div>
                             <div id = "consequences1">
@@ -144,19 +145,19 @@
 
                 <div class="containerthermo">
                     <div class="thermo"></div>
-                    <img src = "img/thermo@300x.png" id="thermoindic" alt="indicateur de température">
+                    <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
                 </div>
       
                 <div class="containermoney">
                     <div class="money"></div>
-                    <img src = "img/money@300x.png" id="moneyindic" alt="indicateur de dépense">
+                    <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
                 </div>
       
                 <div class="containerhappy">
                     <div class="happy"></div>
-                    <img src = "img/happy@300x.png" id="happyindic" alt="indicateur de satisfaction">
+                    <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
                 </div>
-                <p id="presentation1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ullam esse libero reiciendis aut consectetur quas optio ex cupiditate assumenda quis repudiandae fugit consequatur quisquam, laboriosam fuga distinctio omnis ipsam.</p>
+                <p id="presentation1">Bien joué, vous avez fait votre premier changement dans la ville !</br></br>Sur la droite, vous pouvez voir l'impact de vos décisions sur la température, le budget et le bonheur des habitants.</br></br>Votre but ? Faire baisser la température tout en gardant de l'argent et en rendant les habitants heureux.
                 <div id="quatre-zones">
 
                     <img src="img/route.png" alt="" class="route" id="route">
@@ -166,10 +167,12 @@
                     <img src="./img/parking2.png" alt="" id="" class="img_bas">
 
                 </div>
+
                 <p id="presentation2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem asperiores dolorum ab corporis quo ex doloremque reiciendis itaque nemo, veritatis voluptatum, harum quaerat quas. Neque quasi aliquam iusto nemo.</p>
                 <footer class="footer">
                     <img src ="img/swippe.png" alt="scroll" class = "indic" id="scrollEntreeTexte">
                     <p>Scroll pour découvrir</p>
+
                  </footer>
             </section>
 
@@ -183,17 +186,17 @@
 
                 <div class="containerthermo">
                     <div class="thermo"></div>
-                    <img src = "img/thermo@300x.png" id="thermoindic" alt="indicateur de température">
+                    <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
                 </div>
       
                 <div class="containermoney">
                     <div class="money"></div>
-                    <img src = "img/money@300x.png" id="moneyindic" alt="indicateur de dépense">
+                    <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
                 </div>
       
                 <div class="containerhappy">
                     <div class="happy"></div>
-                    <img src = "img/happy@300x.png" id="happyindic" alt="indicateur de satisfaction">
+                    <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
                 </div>
 
 
@@ -215,17 +218,17 @@
     
                     <div class="containerthermo">
                         <div class="thermo"></div>
-                        <img src = "img/thermo@300x.png" id="thermoindic" alt="indicateur de température">
+                        <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
                     </div>
           
                     <div class="containermoney">
                         <div class="money"></div>
-                        <img src = "img/money@300x.png" id="moneyindic" alt="indicateur de dépense">
+                        <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
                     </div>
           
                     <div class="containerhappy">
                         <div class="happy"></div>
-                        <img src = "img/happy@300x.png" id="happyindic" alt="indicateur de satisfaction">
+                        <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
                     </div>
     
                     <img id= "city2" src="img/parking.png" alt="boulevard">
@@ -244,7 +247,7 @@
                             <div id="short-answer2"> 
                                 <div id = "title2">
                                 <p id = "answer-title2"></p>
-                                <input type="button" id="show-button2" value="+">
+                                <input type="button" id="show-button2" value="voir plus">
                                 </div> 
                                 <div id="button-answer2"></div>
                                 <div id = "consequences2">
@@ -269,17 +272,17 @@
 
                     <div class="containerthermo">
                         <div class="thermo"></div>
-                        <img src = "img/thermo@300x.png" id="thermoindic" alt="indicateur de température">
+                        <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
                     </div>
           
                     <div class="containermoney">
                         <div class="money"></div>
-                        <img src = "img/money@300x.png" id="moneyindic" alt="indicateur de dépense">
+                        <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
                     </div>
           
                     <div class="containerhappy">
                         <div class="happy"></div>
-                        <img src = "img/happy@300x.png" id="happyindic" alt="indicateur de satisfaction">
+                        <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
                     </div>
     
                     <img id= "city3" src="img/parking2.png" alt="boulevard">
@@ -299,7 +302,7 @@
                             <div id="short-answer3"> 
                                 <div id = "title3">
                                 <p id = "answer-title3"></p>
-                                <input type="button" id="show-button3" value="+">
+                                <input type="button" id="show-button3" value="voir plus">
                                 </div> 
                                 <div id="button-answer3"></div>
                                 <div id = "consequences3">
@@ -322,17 +325,17 @@
 
                     <div class="containerthermo">
                         <div class="thermo"></div>
-                        <img src = "img/thermo@300x.png" id="thermoindic" alt="indicateur de température">
+                        <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
                     </div>
           
                     <div class="containermoney">
                         <div class="money"></div>
-                        <img src = "img/money@300x.png" id="moneyindic" alt="indicateur de dépense">
+                        <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
                     </div>
           
                     <div class="containerhappy">
                         <div class="happy"></div>
-                        <img src = "img/happy@300x.png" id="happyindic" alt="indicateur de satisfaction">
+                        <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
                     </div>
                     <img src="img/route.png" alt="" class="route" id="route">
                     <!-- <img src="./img/boulevard.png" alt="" id="" class="img_haut_Entree">
@@ -362,17 +365,17 @@
             <section id="animationSlideHaut" class="swiper-slide animation-slide">
                 <div class="containerthermo">
                     <div class="thermo"></div>
-                    <img src = "img/thermo@300x.png" id="thermoindic" alt="indicateur de température">
+                    <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
                 </div>
       
                 <div class="containermoney">
                     <div class="money"></div>
-                    <img src = "img/money@300x.png" id="moneyindic" alt="indicateur de dépense">
+                    <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
                 </div>
       
                 <div class="containerhappy">
                     <div class="happy"></div>
-                    <img src = "img/happy@300x.png" id="happyindic" alt="indicateur de satisfaction">
+                    <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
                 </div>
 
                 <img src="img/GreenTaPlace.png" class="greenTa" alt="logo verdure" id="logoSlideHaut"></img>
@@ -395,17 +398,17 @@
 
                 <div class="containerthermo">
                     <div class="thermo"></div>
-                    <img src = "img/thermo@300x.png" id="thermoindic" alt="indicateur de température">
+                    <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
                 </div>
         
                 <div class="containermoney">
                     <div class="money"></div>
-                    <img src = "img/money@300x.png" id="moneyindic" alt="indicateur de dépense">
+                    <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
                 </div>
         
                 <div class="containerhappy">
                     <div class="happy"></div>
-                    <img src = "img/happy@300x.png" id="happyindic" alt="indicateur de satisfaction">
+                    <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
                 </div>
 
                 <img id="city4" src="img/place.png" alt="boulevard">
@@ -425,7 +428,7 @@
                         <div id="short-answer4"> 
                             <div id = "title4">
                             <p id = "answer-title4"></p>
-                            <input type="button" id="show-button4" value="+">
+                            <input type="button" id="show-button4" value="voir plus">
                             </div> 
                             <div id="button-answer4"></div>
                             <div id = "consequences4">
@@ -451,17 +454,17 @@
 
                     <div class="containerthermo">
                         <div class="thermo"></div>
-                        <img src = "img/thermo@300x.png" id="thermoindic" alt="indicateur de température">
+                        <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
                     </div>
             
                     <div class="containermoney">
                         <div class="money"></div>
-                        <img src = "img/money@300x.png" id="moneyindic" alt="indicateur de dépense">
+                        <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
                     </div>
             
                     <div class="containerhappy">
                         <div class="happy"></div>
-                        <img src = "img/happy@300x.png" id="happyindic" alt="indicateur de satisfaction">
+                        <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
                     </div>
     
                     <img id="city5" src="img/place1.png" alt="boulevard">
@@ -481,7 +484,7 @@
                             <div id="short-answer5"> 
                                 <div id = "title5">
                                 <p id = "answer-title5"></p>
-                                <input type="button" id="show-button5" value="+">
+                                <input type="button" id="show-button5" value="voir plus">
                                 </div> 
                                 <div id="button-answer5"></div>
                                 <div id = "consequences5">
@@ -506,17 +509,17 @@
 
                 <div class="containerthermo">
                     <div class="thermo"></div>
-                    <img src = "img/thermo@300x.png" id="thermoindic" alt="indicateur de température">
+                    <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
                 </div>
         
                 <div class="containermoney">
                     <div class="money"></div>
-                    <img src = "img/money@300x.png" id="moneyindic" alt="indicateur de dépense">
+                    <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
                 </div>
         
                 <div class="containerhappy">
                     <div class="happy"></div>
-                    <img src = "img/happy@300x.png" id="happyindic" alt="indicateur de satisfaction">
+                    <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
                 </div>
 
                 <img id="city6" src="img/place.png" alt="boulevard">
@@ -536,7 +539,7 @@
                         <div id="short-answer6"> 
                             <div id = "title6">
                             <p id = "answer-title6"></p>
-                            <input type="button" id="show-button6" value="+">
+                            <input type="button" id="show-button6" value="voir plus">
                             </div> 
                             <div id="button-answer6"></div>
                             <div id = "consequences6">
@@ -559,17 +562,17 @@
 
                     <div class="containerthermo">
                         <div class="thermo"></div>
-                        <img src = "img/thermo@300x.png" id="thermoindic" alt="indicateur de température">
+                        <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
                     </div>
           
                     <div class="containermoney">
                         <div class="money"></div>
-                        <img src = "img/money@300x.png" id="moneyindic" alt="indicateur de dépense">
+                        <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
                     </div>
           
                     <div class="containerhappy">
                         <div class="happy"></div>
-                        <img src = "img/happy@300x.png" id="happyindic" alt="indicateur de satisfaction">
+                        <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
                     </div>
                     <img src="img/route.png" alt="" class="route" id="route">
                     <!-- <img src="./img/boulevard.png" alt="" id="" class="img_haut_Entree">
@@ -596,17 +599,17 @@
             <section id="animationSlideDroit" class="swiper-slide animation-slide">
                 <div class="containerthermo">
                     <div class="thermo"></div>
-                    <img src = "img/thermo@300x.png" id="thermoindic" alt="indicateur de température">
+                    <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
                 </div>
       
                 <div class="containermoney">
                     <div class="money"></div>
-                    <img src = "img/money@300x.png" id="moneyindic" alt="indicateur de dépense">
+                    <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
                 </div>
       
                 <div class="containerhappy">
                     <div class="happy"></div>
-                    <img src = "img/happy@300x.png" id="happyindic" alt="indicateur de satisfaction">
+                    <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
                 </div>
 
                 <img src="img/GreenTaFriche.png" class="greenTa" alt="logo verdure" id="logoSlideDroit"></img>
@@ -630,17 +633,17 @@
 
                 <div class="containerthermo">
                     <div class="thermo"></div>
-                    <img src = "img/thermo@300x.png" id="thermoindic" alt="indicateur de température">
+                    <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
                 </div>
         
                 <div class="containermoney">
                     <div class="money"></div>
-                    <img src = "img/money@300x.png" id="moneyindic" alt="indicateur de dépense">
+                    <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
                 </div>
         
                 <div class="containerhappy">
                     <div class="happy"></div>
-                    <img src = "img/happy@300x.png" id="happyindic" alt="indicateur de satisfaction">
+                    <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
                 </div>
 
                 <img id="city7" src="img/friche.png" alt="friche">
@@ -660,7 +663,7 @@
                         <div id="short-answer7"> 
                             <div id = "title7">
                             <p id = "answer-title7"></p>
-                            <input type="button" id="show-button7" value="+">
+                            <input type="button" id="show-button7" value="voir plus">
                             </div> 
                             <div id="button-answer7"></div>
                             <div id = "consequences7">
@@ -688,7 +691,7 @@
                     <div id="temp" class="conclusion">
                         <div class="containerthermofinal">
                             <div class="thermo" id ="thermofinal"></div>
-                            <img src = "img/thermo@300x.png" id="thermoindic" alt="indicateur de température">
+                            <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
                         </div>
                 
                         <p id="final-thermo">Vous avez fait un bon travail, la température de votre ville a baisser</p>
@@ -698,7 +701,7 @@
 
                         <div class="containermoneyfinal">
                             <div class="money" id ="moneyfinal"></div>
-                            <img src = "img/money@300x.png" id="moneyindic" alt="indicateur de dépense">
+                            <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
                         </div>
 
                         <p id="final-money">Vous avez fait un bon travail, votre tésorerie se porte bien</p>
@@ -707,14 +710,14 @@
                     <div id="satisfaction" class="conclusion" >
                         <div class="containerhappyfinal">
                             <div class="happy" id ="happyfinal"></div>
-                            <img src = "img/happy@300x.png" id="happyindic" alt="indicateur de satisfaction">
+                            <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
                         </div>
                         <p id="final-happy">Vous avez fait un bon travail, vos citoyens sont heureux Lo</p>
                     </div>
 
     
 
-                    <div class="button">
+                    <div class="button" id="endButtons">
                         <div class="dropdownShare">
                             <button onclick="toggleDropdownShareMenu()" id="dropdownShareButton" class="dropdownShareButton">Partager</button>
                             <div id="dropdownShareOptions" class="dropdownShareOptions">
@@ -722,7 +725,7 @@
                                 <a href="https://www.facebook.com/sharer/sharer.php?u=http://hyblab.polytech.univ-nantes.fr/verdure" target="_blank">
                                     <img src="img/facebook-logo.png" alt="facebookLogo">
                                 </a>
-                                <a href="http://twitter.com/share?url=http://hyblab.polytech.univ-nantes.fr/verdure" target="_blank">
+                                <a href="https://twitter.com/intent/tweet?url=http://hyblab.polytech.univ-nantes.fr/verdure" target="_blank">
                                     <img src="img/twitter-logo.png" alt="twitterLogo">
                                 </a>
                                 <a href="https://wa.me/?text=http://hyblab.polytech.univ-nantes.fr/verdure" target="_blank">

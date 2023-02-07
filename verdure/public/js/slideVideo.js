@@ -1,12 +1,12 @@
 "use strict";
 
 // async init function (because of the awaits on fetches)
-const initSlideVideo =function(){
-  // Get logo element
+const initSlideVideo = async function(){
+  swiper.disable();
   setTimeout(()=>{
-    swiper.slideNext();
-  },10000)
-  
-  
+    swiper.enable();
+    swiper.slideTo(1);
+  },8000)
+
 
 };
