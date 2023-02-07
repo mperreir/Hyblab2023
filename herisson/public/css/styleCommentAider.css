@@ -1,3 +1,4 @@
+
 body {
     position: relative;
     height: 100%;
@@ -24,7 +25,6 @@ body {
 
 .swiper-slide {
     text-align: center;
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -42,34 +42,27 @@ body {
     background-size: cover;
 }
 
-#Oiseaux {
-    background-image: url("../img/decors-mascotte-oiseaux.png");
+.conseil {
+    font-size: 2.7vh;
+    color: #0B6E5F;
+    font-weight: bold;
+    margin-top: 10vh;
 }
 
-#Rhopalocères {
-    background-image: url("../img/decors_rhopaloceres.png");
+.description {
+    font-size: 2.7vh;
+    color: #0B6E5F;
+    margin-top: -2vh;
 }
 
-#Odonates {
-    /*background-image: url("../img/odonates.jpg");*/
-    background-color: #FBC5EB;
-}
-
-#Chiroptères {
-    /*background-image: url("../img/chiropteres.jpg");*/
-    background-color: #FBC5EB;
-}
-
-#Mammifères {
-    background-image: url("../img/decors-mammiferes.png");
-}
-
-#Reptiles {
-    background-image: url("../img/decors-mascotte-reptiles.png");
-}
-
-#Amphibiens {
-    background-image: url("../img/decors-mascotte-amphibiens.png");
+.action {
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 2vh;
+    color: #FFF8F1;
+    bottom: 0;
+    margin-bottom: 16vh;
 }
 
 .swiper-slide img {
@@ -79,58 +72,13 @@ body {
     object-fit: cover;
 }
 
-.swiper-slide .commune {
-    position: absolute;
-    margin-top: -120%;
+.swiper-slide .categorie {
+    text-align:center;
+    vertical-align: middle;
     font-size: 4vh;
-}
-
-.green {
-    color: #0B6E5F;
-}
-
-.white {
     color: #FFF8F1;
-}
-
-.button {
-    border: none;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    margin-top: 70%;
-    border-radius: 60px;
-    width: 80%;
-    height: 7%
-}
-
-.button {
-    background-color: #FBC5EB;
-    color: #0B6E5F;
-    border: 0.4vh solid #0B6E5F;
-}
-
-.decouvrir {
-    font-family: 'Prompt', sans-serif;
-    font-size: 2.5vh;
-    margin: auto;
-}
-
-.button:hover {
-    background-color: #0B6E5F;
-    color: #FFF8F1;
-}
-
-.groupe {
-    position: absolute;
-    font-size: 2vh;
-    color: #0B6E5F;
-    margin-top: 65vh;
+    margin-top: 10vh;
+    font-weight: bold;
 }
 
 .swiper-pagination-bullet {
@@ -139,14 +87,14 @@ body {
     height: 1.2vh;
     display: inline-block;
     background: none;
-    border: 7px solid #0B6E5F;
+    border: 7px solid #FFF8F1;
     bottom: 12vh;
     margin: 0 20px;
 }
 
 .swiper-pagination-bullet-active {
-    background: #0B6E5F;
-    border: 7px solid #0B6E5F;
+    background: #FFF8F1;
+    border: 7px solid #FFF8F1;
 }
 
 .swiper-button-next::after,
@@ -157,7 +105,7 @@ body {
 }
 
 .swiper-button-prev {
-    background-image: url("../img/fleche_verte.png") !important;
+    background-image: url("../img/fleche_beige.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -169,7 +117,7 @@ body {
 }
 
 .swiper-button-next {
-    background-image: url("../img/fleche_verte.png") !important;
+    background-image: url("../img/fleche_beige.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -179,7 +127,3 @@ body {
     rotate: -90deg;
     margin-top: 32vh;
 }
-
-
-
-

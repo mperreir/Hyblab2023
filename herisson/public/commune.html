@@ -19,10 +19,11 @@
 <!-- Swiper horizontal -->
 <div class="swiper-container horizontal-slider">
     <div class="swiper-wrapper">
-        <div class="swiper-slide" id="oiseaux-nicheurs">
+        <!--
+        <div class="swiper-slide" id="oiseaux">
             <h1 class="commune green" >BORDEAUX</h1>
             <button class="button">
-                <span class="decouvrir">Découvrir les oiseaux nicheurs</span>
+                <span class="decouvrir">Découvrir les oiseaux</span>
             </button>
             <a class="groupe">Choisissez votre groupe</a>
         </div>
@@ -68,6 +69,7 @@
             </button>
             <a class="groupe">Choisissez votre groupe</a>
         </div>
+        -->
     </div>
     <!-- Arrows -->
     <div class="swiper-button-prev"></div>
@@ -79,46 +81,55 @@
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-<!-- Initialize Swiper -->
-<!--
 <script>
-    var swiper = new Swiper(".mySwiper", {
-        direction: "vertical",
-        spaceBetween: 50,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true
-        },
-        navigation: {
-            nextEl: "swiper-button-next",
-        },
-    });
-    var swiper2 = new Swiper(".mySwiper2", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
-</script>
--->
-<script>
-    /*
-    // Slider vertical
-    var verticalSlider = new Swiper('.vertical-slider', {
-        direction: 'vertical',
-        initialSlide: 0,
-        navigation: {
-            nextEl: '.vertical-arrow'
-        },
-    });
-    */
+
+    const wrapper = document.getElementsByClassName("swiper-wrapper")[0]
+
+    // Exemple avec commune nommée 'Laluque'
+    dataCommune = {"Laluque":{"Amphibiens":{"774683":{"cd_ref":774683,"lb_nom":"Hyla molleri","lb_auteur":"Bedriaga, 1889","nom_vern":"Rainette ibérique (La)","enjeu_conservation":"Majeur","presence_regionale":"Présence certaine","nb_obs":2}},"Chiroptères":{"60295":{"cd_ref":60295,"lb_nom":"Rhinolophus ferrumequinum","lb_auteur":"(Schreber, 1774)","nom_vern":"Grand rhinolophe","enjeu_conservation":"Fort","presence_regionale":"Présence certaine","nb_obs":141},"60457":{"cd_ref":60457,"lb_nom":"Nyctalus lasiopterus","lb_auteur":"(Schreber, 1780)","nom_vern":"Grande Noctule","enjeu_conservation":"Majeur","presence_regionale":"Présence certaine","nb_obs":657},"60468":{"cd_ref":60468,"lb_nom":"Nyctalus noctula","lb_auteur":"(Schreber, 1774)","nom_vern":"Noctule commune","enjeu_conservation":"Fort","presence_regionale":"Présence certaine","nb_obs":336}}}}
+
+    console.log(Object.keys(dataCommune)[0])
+
+    for (let categorie in dataCommune[Object.keys(dataCommune)[0]]) {
+        // Pour chaque catégorie d'animaux dans le dictionnaire de la ville
+        // Categorie est la clé du dictionnaire dataCommune
+
+        let slide = document.createElement("div")
+        slide.className = "swiper-slide"
+        slide.id = categorie
+
+        // ----- TITRE COMMUNE -----
+        let nomCommune = document.createElement("h1")
+        nomCommune.className = "commune white"
+        nomCommune.innerText = Object.keys(dataCommune)[0].toUpperCase()
+
+        // ----- BOUTON -----
+        let bouton = document.createElement("button")
+        bouton.className = "button"
+
+        let boutonText = document.createElement("span")
+        boutonText.className = "decouvrir"
+        boutonText.innerText = "Découvrir les " + categorie
+
+        bouton.appendChild(boutonText)
+
+        let groupe = document.createElement("a")
+        groupe.className = "groupe"
+        groupe.innerText = "Choisissez votre groupe"
+
+        console.log(nomCommune)
+        console.log(bouton)
+        console.log(groupe)
+
+        slide.appendChild(nomCommune)
+        slide.appendChild(bouton)
+        slide.appendChild(groupe)
+
+        wrapper.appendChild(slide)
+        console.log(wrapper)
+
+        console.log(slide)
+    }
 
     // Slider horizontal
     var horizontalSlider = new Swiper('.horizontal-slider', {
@@ -133,6 +144,7 @@
             clickable: true,
         },
     });
+
 </script>
 </body>
 </html>
