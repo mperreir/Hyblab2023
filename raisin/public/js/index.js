@@ -76,7 +76,7 @@ async function loadApp() {
 
     $(".header").hide();
     setPage();
-    data = await fetchData("/data/data.json");
+    data = await fetchData("data/data.json");
 
     //Page par défaut;
     setPage("#page-title","fade");
