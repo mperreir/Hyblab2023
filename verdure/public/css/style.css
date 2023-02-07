@@ -3,43 +3,44 @@
 /* ------- is kept between 9/16 a,d 3/4 (portait orientation)         ----------- */
 
 /* Normalize margin and padding to ease elements positioning */
-*{
-    padding:0;
-    margin:0;
+* {
+    padding: 0;
+    margin: 0;
 }
 
-body{
+body {
     background-color: black;
-    color: white;
-    overflow: hidden;   /* to avoid slider bugs on some browsers */
+    color: #282828;
+    overflow: hidden; /* to avoid slider bugs on some browsers */
     font-family: sans-serif;
 }
 
 /* -------------- Loader --------------*/
-#loader{
+#loader {
     z-index: 2;
-    position:absolute;
-}
-
-#loader-img{
-    top:40%;
-    left:40%;
     position: absolute;
 }
 
-#loader-text{
+#loader-img {
+    top: 40%;
+    left: 40%;
+    position: absolute;
+}
+
+#loader-text {
     text-align: center;
     font-size: 25%;
     position: absolute;
-    top:60%;
+    top: 60%;
     width: 100%
 }
+
 /* -------------- End of Loader --------------*/
 
 /* Swiper slider. Need to fill the container */
-#mySwiper{
+#mySwiper {
     width: 100%;
-    height:100%;
+    height: 100%;
     position: absolute;
 }
 
@@ -57,7 +58,7 @@ body{
 }
 
 /* Most of the elements in this demo are absolute positionned with percentages */
-#end-slide header{
+#end-slide header {
     text-align: center;
     width: 100%;
     top: 10%;
@@ -68,16 +69,16 @@ body{
 
 
 /* Last slide image is centered */
-#img-fini{
+#img-fini {
     width: 70%;
     left: 50%;
     top: 40%;
     position: absolute;
-    margin-left:-35%;
-    margin-top:calc(-25% * 9 / 16 ); /* margins are relative to the element width... :-( */
+    margin-left: -35%;
+    margin-top: calc(-25% * 9 / 16); /* margins are relative to the element width... :-( */
 }
 
-main > section{
+main > section {
     background-image: url('../img/background.svg');
     background-size: 100% 100%;
 }
@@ -89,50 +90,47 @@ main > section{
 /* slide because of body's font size rule at the end of this CSS           */
 #bandeau {
     padding-top: 3%;
-    width:100%;
+    width: 100%;
     position: absolute;
     bottom: 0;
     background-color: white;
     font-size: 20%;
-  }
+}
 
-  #bandeau li{
+#bandeau li {
     list-style-type: none;
     display: inline-block;
     vertical-align: middle;
     margin: 0 0.5em;
-  }
+}
 
-  #bandeau img{
+#bandeau img {
     height: 2.5em;
-  }
+}
 
-  #bandeau #hyblab{
+#bandeau #hyblab {
     margin: 1em auto;
     height: 3em;
     display: block;
-  }
+}
 
-  #bandeau #cc, #bandeau #opensource
-  {
+#bandeau #cc, #bandeau #opensource {
     height: 1em;
-  }
+}
 
-  #bandeau .stacked{
-    display:block;
-  }
+#bandeau .stacked {
+    display: block;
+}
 
-  #bandeau ul{
+#bandeau ul {
     text-align: center;
     padding: 0 0;
     margin-bottom: 0.5em;
-  }
+}
 
-  #bandeau .institutionnel
-  {
+#bandeau .institutionnel {
     height: 2em;
-  }
-
+}
 
 
 /* ---------- Important media queries for easy responsive content :-) ----------------- */
@@ -140,46 +138,46 @@ main > section{
 /* the aspect ratio is between 3/4 and 9/16. If not it is locked to either 3/4 or 3/16  */
 
 /* When the aspect ratio is smaller that 3/4, display a 3/4 content */
-#container{
-    position: fixed; /* To set the size of the container to 100% of the visible viewport height AND for absolute positionning of child elements*/ 
-    height: 100%;   /* even on mobile devices with url or navigation bars */
+#container {
+    position: fixed; /* To set the size of the container to 100% of the visible viewport height AND for absolute positionning of child elements*/
+    height: 100%; /* even on mobile devices with url or navigation bars */
     margin-left: calc((100vw - 100 * 3vh / 4) / 2); /* Add black bands on left and right */
     width: calc(100 * 3vh / 4); /* Force 3/4 aspect ratio */
 }
 
 /* We set a default font size here. It will be the base for all other font sizes */
 /* Here the font size is proportional to content width */
-body{
+body {
     font-size: calc(15vh * 3 / 4);
 }
 
 /* Fill the whole viewport when its aspect ratio is between 9/16 and 3/4 */
 @media screen and (max-aspect-ratio: 3/4) {
-    #container{
+    #container {
         margin-left: 0; /* reset margin-left */
         width: 100vw; /* content is full width (and full height because of the default rule for container height */
     }
 
     /* We set a default font size here. It will be the base for all other font sizes */
     /* Here the font size is proportional to content width */
-    body{
+    body {
         font-size: 15vw;
     }
 }
 
-/* The content is displayed at 9/16 If the aspect ratio is higher that 9/16  */ 
+/* The content is displayed at 9/16 If the aspect ratio is higher that 9/16  */
 @media screen and (max-aspect-ratio: 9/16) {
-    #container{
+    #container {
         margin-left: 0; /* reset left margin */
-        width: 100vw;   /* content is full width */
+        width: 100vw; /* content is full width */
         margin-top: calc(-50 * 16vw / 9); /* move the content half the height to the top */
-        top:50%; /* then center it ! */
+        top: 50%; /* then center it ! */
         height: calc(100 * 16vw / 9); /* adjust height so that aspect ratio is 9/16 */
     }
 
     /* We set a default font size here. It will be the base for all other font sizes */
     /* Here the font size is proportional to content width */
-    body{
+    body {
         font-size: 15vw;
     }
 }
@@ -188,7 +186,7 @@ body{
 SLIDE ACCUEIL
 ************************************/
 
-#logo-verdure{
+#logo-verdure {
     text-align: center;
     width: 70%;
     left: 50%;
@@ -201,32 +199,32 @@ SLIDE ACCUEIL
     cursor: pointer;
 }
 
-#presentation-jeu{
-    font-size: 25% ;
+#presentation-jeu {
+    font-size: 25%;
     position: absolute;
-    top : 25%;
-    width : 50%;
+    top: 25%;
+    width: 50%;
     left: 10%;
-    
+
 
 }
+
 /*************************
 SLIDE QUESTION
 *************************/
 
-.indic{
+.indic {
     text-align: center;
     width: 8%;
     left: 72%;
     top: 94%;
     margin-left: -25%;
-    margin-top: calc(-7.5% * 9 / 16 ); /* margins are relative to the element width... :-( */
+    margin-top: calc(-7.5% * 9 / 16); /* margins are relative to the element width... :-( */
     position: absolute;
     font-size: 80%;
     z-index: 2;
     cursor: pointer;
 }
-
 
 
 .question-slide{
@@ -235,21 +233,20 @@ SLIDE QUESTION
 }
 
 
-
-#city1, #city2,#city3, #city4,#city5, #city6,#city7{
-    position : absolute;
-    top : 27%;
-    right :0;
-    opacity :100;
+#city1, #city2, #city3, #city4, #city5, #city6, #city7 {
+    position: absolute;
+    top: 27%;
+    right: 0;
+    opacity: 100;
     transition: top 3s, opacity 3s;
     width: 100%;
 }
 
-#boulevard1,#boulevard2,#parking1,#parking2,#parking3,#parking4,#place1,#place2,#place3,#place4,#place5,#place6,#friche1,#friche2,#friche3,#place{
-    position : absolute;
-    top : 20%;
-    right :0;
-    opacity :0;
+#boulevard1, #boulevard2, #parking1, #parking2, #parking3, #parking4, #place1, #place2, #place3, #place4, #place5, #place6, #friche1, #friche2, #friche3, #place {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    opacity: 0;
     transition: opacity 3s;
     width: 100%;
 }
@@ -267,38 +264,38 @@ SLIDE ANIMATION SORTIE+ZOOM
 }
 
 
-.img_bas{
+.img_bas {
     position: absolute;
     top: 47.7%;
     text-align: center;
     left: 32%;
 }
 
-.img_haut{
+.img_haut {
     position: absolute;
     top: 33.5%;
     text-align: center;
     left: 32%;
 }
 
-.img_gauche{
+.img_gauche {
     position: absolute;
     top: 41.5%;
     text-align: center;
     left: 7.5%;
 }
 
-.img_droit{
+.img_droit {
     position: absolute;
     top: 41.5%;
     text-align: center;
     right: 3%;
 }
 
-.route{
+.route {
     width: 50%;
     height: auto;
-    position:absolute;
+    position: absolute;
     top: 40%;
     left: 27%;
     text-align: center;
@@ -321,39 +318,40 @@ ANIMATION ENTREE
 }
 
 
-.img_bas_Entree{
+.img_bas_Entree {
     position: absolute;
     top: 49.5%;
     text-align: center;
     left: 32.1%;
 }
 
-.img_haut_Entree{
+.img_haut_Entree {
     position: absolute;
     top: 33.5%;
     text-align: center;
     left: 32%;
 }
 
-.img_gauche_Entree{
+.img_gauche_Entree {
     position: absolute;
     top: 41.2%;
     text-align: center;
     left: 7.5%;
 }
 
-.img_droit_Entree{
+.img_droit_Entree {
     position: absolute;
     top: 41.3%;
     text-align: center;
     right: 3%;
-} */
+}
+
 /********************************
 INDICATEUR
 *******************************/
 /*THERMOMETRE*/
-.containerthermo{
-    position:absolute;
+.containerthermo {
+    position: absolute;
     width: 3vh;
     height: 6vh;
     right: 2.5vh;
@@ -363,7 +361,7 @@ INDICATEUR
     padding: 0px;
 }
 
-.containerthermofinal{
+.containerthermofinal {
     position: absolute;
     width: 5vh;
     height: 8vh;
@@ -374,16 +372,16 @@ INDICATEUR
     padding: 0px;
 }
 
-.thermo{
-    position:absolute;
+.thermo {
+    position: absolute;
     background-color: red;
-    width:  100%;
+    width: 100%;
     height: 85%;
     bottom: 0px;
     transition: height 3s, background-color 3s;
 }
 
-#thermoindic{
+#thermoindic {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -394,8 +392,8 @@ INDICATEUR
 
 /*MONEY*/
 
-.containermoney{
-    position:absolute;
+.containermoney {
+    position: absolute;
     width: 4.5vh;
     height: 4.5vh;
     right: 1.7vh;
@@ -405,7 +403,7 @@ INDICATEUR
     padding: 0px;
 }
 
-.containermoneyfinal{
+.containermoneyfinal {
     position: absolute;
     width: 5.5vh;
     height: 5.5vh;
@@ -416,9 +414,9 @@ INDICATEUR
 }
 
 .money {
-    position:absolute;
+    position: absolute;
     background-color: #0ffc03;
-    width:  100%;
+    width: 100%;
     height: 80%;
     bottom: 0px;
     transition: height 3s, background-color 3s;
@@ -435,8 +433,8 @@ INDICATEUR
 
 /*HAPPY*/
 
-.containerhappy{
-    position:absolute;
+.containerhappy {
+    position: absolute;
     width: 4.5vh;
     height: 4.5vh;
     right: 1.7vh;
@@ -446,7 +444,7 @@ INDICATEUR
     padding: 0px;
 }
 
-.containerhappyfinal{
+.containerhappyfinal {
     position: absolute;
     width: 5.5vh;
     height: 5.5vh;
@@ -457,9 +455,9 @@ INDICATEUR
 }
 
 .happy {
-    position:absolute;
+    position: absolute;
     background-color: #d2fc03;
-    width:  100%;
+    width: 100%;
     height: 50%;
     bottom: 0px;
     transition: height 3s, background-color 3s;
@@ -478,135 +476,122 @@ INDICATEUR
 ****QUESTION***
 ***************/
 
-.question-footer1,.question-footer2,.question-footer3,.question-footer4,.question-footer5,.question-footer6,.question-footer7{
+.question-footer1, .question-footer2, .question-footer3, .question-footer4, .question-footer5, .question-footer6, .question-footer7 {
     position: absolute;
     bottom: 0;
     width: 100%;
     opacity: 0;
     transition: opacity 3s;
-    background-color: rgba(255, 255, 255, 0.159);
-    
+    background-color: #ffffff;
+    padding-bottom: 3vh;
 }
 
-#question-title1, #question-title2,#question-title3, #question-title4,#question-title5, #question-title6, #question-title7{
-    color: white;
+#question-title1, #question-title2, #question-title3, #question-title4, #question-title5, #question-title6, #question-title7 {
     text-align: center;
     font-size: 3vh;
-    margin: 0.2vh;
+    margin: 2vh;
+    font-weight: bold;
 }
 
-#answer1, #answer2,#answer3, #answer4, #answer5, #answer6 , #answer7 {
-    display: flex;
+#answer1, #answer2, #answer3, #answer4, #answer5, #answer6, #answer7 {
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    padding-bottom: 1vh ;
+    padding: 3vh;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3vh;
 }
 
-#answer1 p, #answer2 p ,#answer3 p, #answer4 p, #answer5 p, #answer6 p, #answer7 p{
+#answer1 div, #answer2 div, #answer3 div, #answer4 div, #answer5 div, #answer6 div, #answer7 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2vh;
     text-align: center;
-    height: 100%;
+    height: 90%;
     font-weight: bold;
-    box-shadow: -0.8vh 0.8vh 0.5vh rgb(9, 74, 26);
-
-
-    width: 40%;
-    margin-bottom: 0;
-    margin: 0.7vh;
-    padding:1vh;
-
-    background-color: rgb(255, 255, 255);
-    color: rgb(9, 74, 26);
-
-    border-color: rgb(160, 255, 101);
-    border-style: solid;
-    border-radius: 10px;
-    border-width: 5px;
-  
+    box-shadow: -2px 2px #306947;
+    padding: 1vh;
+    background-color: #ffffff;
 }
-
-
 
 /**************
 ****REPONSE***
 ***************/
 
-#short-answer1,#short-answer2,#short-answer3,#short-answer4,#short-answer5,#short-answer6,#short-answer7{
+#short-answer1, #short-answer2, #short-answer3, #short-answer4, #short-answer5, #short-answer6, #short-answer7 {
     position: absolute;
     bottom: 0;
     width: 100%;
     transition: opacity 3s;
-    background-color: rgba(255, 255, 255, 0.159); 
+    background-color: #ffffff;
     padding-bottom: 1vh;
 }
 
-#show-button1,#show-button2,#show-button3,#show-button4,#show-button5,#show-button6,#show-button7{
-    border : none;
-    color : rgb(0, 0, 0);
+#show-button1, #show-button2, #show-button3, #show-button4, #show-button5, #show-button6, #show-button7 {
+    color: #282828;
+    background-color: transparent;
+    border: none;
     font-size: 2vh;
-    right : 0;
-    width: 10%;
-    background-color: rgba(240, 248, 255, 0);
-}
-
-#answer-title1,#answer-title2,#answer-title3,#answer-title4,#answer-title5,#answer-title6,#answer-title7 {
-    color: white;
-    text-align: center;
-    font-size: 3vh;
-    margin-left: 1vh;
-    width: 85%;
-}
-
-#consequences1,#consequences2,#consequences3,#consequences4,#consequences5,#consequences6,#consequences7{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-}
-
-#consequences1 p,#consequences2 p,#consequences3 p,#consequences4 p,#consequences5 p,#consequences6 p,#consequences7 p{
-    font-size: 2vh;
-    text-align: center;
-    height: 100%;
-    font-weight: bold;
-    box-shadow: -0.8vh 0.8vh 0.5vh rgb(9, 74, 26);
-
-
-    width: 40%;
-    margin-bottom: 0;
-    margin: 0.7vh;
-    padding:1vh;
-
-    background-color: rgb(255, 255, 255);
-    color: rgb(9, 74, 26);
-
-    border-color: rgb(160, 255, 101);
-    border-style: solid;
-    border-radius: 10px;
-    border-width: 5px;
-}
-
-#consequences1 #negativ1,#consequences2 #negativ2,#consequences3 #negativ3,#consequences4 #negativ4,#consequences5 #negativ5,#consequences6 #negativ6,#consequences7 #negativ7{
-    border-color: red;
-}
-
-#long-answer1,#long-answer2,#long-answer3,#long-answer4,#long-answer5,#long-answer6,#long-answer7{
-    font-size: 2vh;
-    color: rgb(9, 74, 26);
-    border-color: rgb(160, 255, 101);
-    border-style: solid;
-    border-radius: 10px;
-    border-width: 5px;
-    margin: 1vh;
-    background-color: white;
+    right: 0;
+    width: auto;
+    height: 5vh;
+    box-shadow: -2px 2px #306947;
     padding: 1vh;
 }
 
-#title1,#title2,#title3,#title4,#title5,#title6,#title7{
+#answer-title1, #answer-title2, #answer-title3, #answer-title4, #answer-title5, #answer-title6, #answer-title7 {
+    text-align: left;
+    font-size: 3vh;
+    margin: 0 1vh;
+    width: auto;
+    font-weight: bold;
+}
+
+#consequences1, #consequences2, #consequences3, #consequences4, #consequences5, #consequences6, #consequences7 {
+    display: grid;
+    height: 100%;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3vh;
+    padding: 2vh 3vh;
+}
+
+#consequences1 p, #consequences2 p, #consequences3 p, #consequences4 p, #consequences5 p, #consequences6 p, #consequences7 p {
+    font-size: 2vh;
+    margin: 0 auto;
+    padding: 1vh;
+}
+
+#consequences1 p p, #consequences2 p p, #consequences3 p p, #consequences4 p p, #consequences5 p p, #consequences6 p p, #consequences7 p p {
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.positive-titles {
+    color: #95CC4A;
+}
+
+.negative-titles {
+    color: #F36654;
+}
+
+#consequences1 #negativ1, #consequences2 #negativ2, #consequences3 #negativ3, #consequences4 #negativ4, #consequences5 #negativ5, #consequences6 #negativ6, #consequences7 #negativ7 {
+    border-color: red;
+}
+
+#long-answer1, #long-answer2, #long-answer3, #long-answer4, #long-answer5, #long-answer6, #long-answer7 {
+    font-size: 2vh;
+    margin: 1vh;
+    padding: 1vh;
+}
+
+#title1, #title2, #title3, #title4, #title5, #title6, #title7 {
     height: 100%;
     display: flex;
     justify-content: space-between;
+    margin: 2vh;
 }
 
 /****************
@@ -623,13 +608,17 @@ figure {
     /* overflow: hidden; */
     background: url(http://res.cloudinary.com/duqzvuawc/image/upload/c_scale,h_424/v1508813537/clouds_tile_efhbuh.jpg);
     animation: clouds_animation 75s linear infinite;
-  }
-  
-  @keyframes clouds_animation {
-    
-    0%  {background-position: 0 0;}
-    100%  {background-position: -2122px 0;}
-  }
+}
+
+@keyframes clouds_animation {
+
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -2122px 0;
+    }
+}
 
 /*********/
 /* #ville > img {
@@ -650,16 +639,18 @@ Derniere slide
 }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
+.show {
+    display: block;
+}
 
 .conclusion img {
     width: 15%;
     height: auto;
     margin-right: 2%;
-    
+
 }
 
-.conclusion > p{
+.conclusion > p {
     font-size: small;
     width: 75%;
     font-size: 2vh;
@@ -668,14 +659,14 @@ Derniere slide
 
 }
 
-.conclusion{
+.conclusion {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 8%;
 }
 
-  
+
 #result {
     position: relative;
     top: 10%;
@@ -686,7 +677,7 @@ Derniere slide
 
 }
 
-#containerEnd{
+#containerEnd {
     position: absolute;
     top: 20%;
 }
@@ -705,12 +696,17 @@ Derniere slide
     margin-right: 10px;
 }
 
-#dropdownShareOptions a{
+#dropdownShareOptions a {
     font-size: medium;
     display: block;
     margin-top: 5%;
     text-align: center;
-    text-decoration: none;    
+    text-decoration: none;
+}
+
+#dropdownShareOptions img{
+    height:auto;
+    width:120px;
 }
 
 /**************************
@@ -742,21 +738,16 @@ GREENTA
 *********************/
 
 
-
-.greenTa{
+.greenTa {
     text-align: center;
     width: 50%;
     left: 50%;
     top: 10%;
-    margin-left:-25%;
-    margin-top:calc(-7.5% * 9 / 16 ); /* margins are relative to the element width... :-( */
+    margin-left: -25%;
+    margin-top: calc(-7.5% * 9 / 16); /* margins are relative to the element width... :-( */
     position: absolute;
     font-size: 50%;
     z-index: 2;
     cursor: pointer;
 }
 
-
-/*******************
-Slide video
-******************/

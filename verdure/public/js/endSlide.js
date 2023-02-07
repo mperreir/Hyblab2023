@@ -76,5 +76,5 @@ window.onclick = function(event) {
 }
 
 const goBackToBeginning = function (){
-    window.location.reload(); 
+    window.location.reload();
 }

@@ -48,7 +48,7 @@ const initSlideAnimationBas = function(){
   });
   anime({
     targets : "#animationSlideBas .img_droit",
-    translateX: -2700,
+    translateX: 2700,
     easing: 'easeInElastic(1, 2)',
     delay : 1200
   });
