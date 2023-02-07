@@ -1,9 +1,12 @@
 'use strict';
 
 // TODO: WHEN SELECTION ON THE PREVIOUS PAGE IS DONE, DISPLAY THE MAP WITH THE SELECTED TOPICS
-// commerce;agroalimentaire dans Numérique et Mobilité
 //
-// TODO : mettre à jour la carte lors d'un retrait d'un mot-clé (quand le manage button est à "Ajouter")
+// TODO : ne proposer que des mots clés correspondant aux topics selectionnés
+//
+// TODO : interaction sur les points pour afficher la miniature
+//
+// TODO : interaction de la miniature avec le swipe dans le dossier
 
 // MEILLEUR MOYEN DE GERER LES MOTS CLES METTRE UN PARAMETRE POUR LES MARKERS SUR KEYWORD BOOLEEN et le mettre dans le IF
 /*
@@ -21,6 +24,7 @@ let usedKeywords = [];
   | Leaflet map management                                                                                             |
   ----------------------------------------------------------------------------------------------------------------------
  */
+
 // Init of the TileLayer (Stamen Toner Lite)
 const layer = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
     attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -37,7 +41,8 @@ const map = new L.Map("map", {
 });
 // Add the TileLayer to the map
 map.addLayer(layer);
-
+// Add listener to the map to update markers when the map is zoomed
+map.on('zoomend', updateSelectedMarkersPosition);
 
 /**
  * Create the marker icon for a profile
@@ -48,16 +53,16 @@ function createIcon(p) {
     // Define the global icon size and global icon anchor
     const globalIconSize = isMobileDevice() ? [75, 75] : [26, 26];
     const globalIconAnchor = isMobileDevice() ? [37.5, 37.5] : [13, 13];
-    // If the used keywords list is not empty and the profile doesn't contain all the keywords, return the inactive icon
-    if (!usedKeywords.map(k => k.replace('#', '')).every(keyword => p.Keywords.includes(keyword))) {
+    // If the selected topics list is not empty and the profile doesn't contain all the selected topics, return the inactive icon
+    if (selectedTopics.length > 0 && !selectedTopics.includes(translate(p.Topic))) {
         return L.icon({
             iconUrl: '../img/pictogrammes_carte/point_inactif.svg',
             iconSize: globalIconSize,
             iconAnchor: globalIconAnchor
         });
     }
-    // The error comes from here because "énergie" is not a valid variable name
-    if (!selectedTopics.includes(translate(p.Topic))) {
+    // If the used keywords list is not empty and the profile doesn't contain at least one of the used keywords, return the inactive icon
+    if (usedKeywords.length > 0 && !usedKeywords.map(k => k.replace('#', '')).some(keyword => p.Keywords.includes(keyword))) {
         return L.icon({
             iconUrl: '../img/pictogrammes_carte/point_inactif.svg',
             iconSize: globalIconSize,
@@ -108,7 +113,7 @@ function createIcon(p) {
 /**
  * Update the map with the selected topics and keywords
  */
-function updateMap(){
+function updateMap() {
     getProfiles("true/true/true/true/true/true").then(r => {
         // Markers of previous geographical profiles removal
         geographicalProfiles.forEach(gp => {
@@ -116,7 +121,27 @@ function updateMap(){
         });
         // Update the geographical profiles
         geographicalProfiles = r;
-        addMarkers().then(() => console.log("Markers added !"));
+        addMarkers().then(() => {
+            console.log("Markers added !");
+            updateSelectedMarkersPosition();
+        });
+    });
+}
+
+
+/**
+ * Update the z-index of each marker (markers corresponding to the selected topics and keywords are displayed on top of the others)
+ */
+function updateSelectedMarkersPosition() {
+    // Retrieve each image of a marker
+    const images = document.querySelectorAll(".leaflet-marker-icon");
+    // For each image, if src attribute contains "point_inactif", set the z-index to 0, otherwise set it to 1000
+    images.forEach(i => {
+        if (i.src.includes("point_inactif")) {
+            i.style.zIndex = 0;
+        } else {
+            i.style.zIndex = 1;
+        }
     });
 }
 
@@ -138,7 +163,6 @@ async function addMarkers() {
   | Topics selection management                                                                                        |
   ----------------------------------------------------------------------------------------------------------------------
  */
-
 
 /**
  * Get the profiles from the API
@@ -181,12 +205,27 @@ function onTopicCheck(event) {
 
 
 /**
+ * Build the API parameters from the selected topics
+ * @returns {string} The API parameters
+ */
+function buildApiParameters() {
+    const topics = ["alimentation", "economie_circulaire", "energie", "industrie", "mobilite", "numerique"]
+    let apiString = "";
+    topics.forEach(t => {
+        apiString += selectedTopics.includes(t) ? "true" : "false";
+        apiString += "/";
+    });
+    return apiString;
+}
+
+
+/**
  * Get the keywords from the API
  * @returns {Promise<any>} The keywords as a JSON object
  */
 async function getKeywords() {
     // Fetch the data from the API
-    const response = await fetch("/pionniers/api/map/keywords");
+    const response = await fetch("/pionniers/api/map/keywords/" + buildApiParameters());
     // Parse the response as JSON and return it
     return await response.json();
 }
@@ -223,7 +262,7 @@ function reorderKeywords() {
  * Event handler for the used keywords
  * @param event The event object
  */
-function onUsedKeywordClick(event){
+function onUsedKeywordClick(event) {
     // Retrieve the div element (HTML tag) from the event
     const keywordElement = event.currentTarget;
     // Retrieve the associated text
@@ -347,20 +386,6 @@ function onKeywordManage() {
 }
 
 
-/**
- * Add the event listener to manage interaction (click) with the topics checkboxes
- */
-document.addEventListener("DOMContentLoaded", function () {
-    // Topics management
-    const topicCheckboxes = document.querySelectorAll('#theme-selector #theme-list li');
-    topicCheckboxes.forEach(tc =>
-        tc.addEventListener('click', onTopicCheck)
-    );
-    // Keywords management
-    const keywordManageButton = document.querySelector('section.keywords #keyword-manage');
-    keywordManageButton.addEventListener('click', onKeywordManage);
-});
-
 /*
   ----------------------------------------------------------------------------------------------------------------------
   | Topic translation                                                                                                  |
@@ -390,3 +415,23 @@ function translate(topic) {
 function isMobileDevice() {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
+
+
+/*
+  ----------------------------------------------------------------------------------------------------------------------
+  | Entry point of the file                                                                                            |
+  ----------------------------------------------------------------------------------------------------------------------
+ */
+/**
+ * Add the event listener to manage interaction (click) with the topics checkboxes
+ */
+document.addEventListener("DOMContentLoaded", function () {
+    // Topics management
+    const topicCheckboxes = document.querySelectorAll('#theme-selector #theme-list li');
+    topicCheckboxes.forEach(tc =>
+        tc.addEventListener('click', onTopicCheck)
+    );
+    // Keywords management
+    const keywordManageButton = document.querySelector('section.keywords #keyword-manage');
+    keywordManageButton.addEventListener('click', onKeywordManage);
+});

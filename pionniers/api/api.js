@@ -7,19 +7,27 @@ const sheet_scrapper = require('./sheet_scrapper');
 /**
  * @api {get} Get all used keywords
  */
-app.get('/map/keywords', function ( req, res ) {
+app.get('/map/keywords/:feed/:circular_economy/:energy/:industry/:mobility/:digital', function ( req, res ) {
     sheet_scrapper.readJSONFromServerFile().then(data => {
         // Filter data to only keep convenient fields
         data.values = data.values.map(row => {
             return {
                 "Id": row[0].toString().trim(),
+                "Topic": row[11].toString().trim().toLowerCase(),
                 "Keywords": row[12].toString().trim()
             }
         });
         // Remove lines with no Id
         data.values = data.values.filter(row => row.Id);
-        // Remove header row
-        data.values.shift();
+        // Filter data to only keep rows with the requested topics
+        data.values = data.values.filter(row => {
+            return (req.params.feed === "true" && row.Topic.includes("alimentation")) ||
+                (req.params.circular_economy === "true" && row.Topic.includes("économie circulaire")) ||
+                (req.params.energy === "true" && row.Topic.includes("énergie")) ||
+                (req.params.industry === "true" && row.Topic.includes("industrie")) ||
+                (req.params.mobility === "true" && row.Topic.includes("mobilité")) ||
+                (req.params.digital === "true" && row.Topic.includes("numérique"));
+        });
         // Remove empty rows
         data.values = data.values.filter(row => row.Keywords);
         // Trim values
@@ -42,7 +50,6 @@ app.get('/map/keywords', function ( req, res ) {
         }
         // Order values alphabetically
         data.values.sort();
-        console.log(data.values)
         // Send it as a JSON object
         res.json(data.values);
     });
