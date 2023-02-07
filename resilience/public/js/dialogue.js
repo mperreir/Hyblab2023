@@ -32,7 +32,7 @@ async function initConversation() {
     displayMessage(messages.shift());
 
     runConversation();
-};
+}
 
 function runConversation() {
     let message;
@@ -70,13 +70,14 @@ function runConversation() {
 function choose(message, all) {
     let htmlSubMessageList = []; // Keep track of all the answers we create
     // Create each answer
+    let htmlMessage = document.createElement('div');
+    htmlMessage.classList.add('choices');
     message.messages.forEach(subMessageLine => {
         let subMessage = subMessageLine[0]; // First message of the sub-conversation is the answer
 
         let htmlMessage = document.createElement('p');
         htmlMessage.classList.add('choice');
         htmlMessage.textContent = subMessage.text;
-
         htmlDialogueMessages.appendChild(htmlMessage);
 
         let onclick = htmlMessage.addEventListener('click', function () {

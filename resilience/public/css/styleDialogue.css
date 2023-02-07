@@ -2,11 +2,14 @@
     background-color: white;
 }
 
-
+h1 {
+    background-color: #79B77B;
+}
 
 
 #dialogue {
     overflow-y: auto;
+    scroll-behavior: smooth;
     position: absolute;
     height: 60%;
     width: 100%;
@@ -17,11 +20,14 @@
 
     border: 1px solid #000000;
 }
-
+#messages {
+    margin-bottom: 5rem;
+}
 #head {
     display: flex;
     justify-content: space-between;
 }
+
 
 .name {
     padding: 1.5em 1.5em;
@@ -48,19 +54,23 @@
     width: 75%;
     margin-bottom: 0.5rem;
 }
-
-
-.answer {
-    color: black;
+.choice {
     max-width: 30em;
-
     padding: 0.5em 0.75em;
     font-size: 0.2em;
-    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
     bottom: 1rem;
-    width: 75%;
+    color: black;
+    width: 100%;
     margin-bottom: 0.5rem;
+    border: 2px solid red;
+    margin-right: auto;
+    margin-left: auto;
 }
+
+.choice:hover, .choice:focus{
+    background-color: red;
+}
+
 
 .left {
     float: left;
@@ -68,7 +78,7 @@
 }
 
 .right {
-    align-self: flex-end;
+
     border: 1px solid #000000;
     float: right;
     background-color: White;
