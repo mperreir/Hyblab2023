@@ -1,5 +1,5 @@
 const db = "data/additionalDB.json";
-const animal = "Sonneur à ventre jaune (Le)";
+const animal = "Belette d'Europe";
 
 async function animalInfoJS() {
     /*function to get the datas of a given animal */
@@ -27,7 +27,7 @@ async function animalInfoJS() {
     } else if(animal.length > 27){
         animalName.style.fontSize = '3.5vh';
     }
-    animalName.textContent = animal;
+    animalName.textContent = animal.toUpperCase();
     desc.textContent = "Les " + dataTest["listCities"][0]["categorie"].toLowerCase();
     menace.textContent = dataTest["listCities"][0]["enjeu_conservation"].toUpperCase();
     map.textContent = "Carte";

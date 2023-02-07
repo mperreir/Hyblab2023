@@ -16,6 +16,11 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100vw;
+    /*if no picture*/
+    font-size: 2vh;
+    text-align: center;
+    color: #0B6E5F;
+    font-family: 'Prompt', sans-serif;
 }
 #copyright{
     z-index: 100;
@@ -39,7 +44,7 @@ main{
     margin-top: -15%;
     background-color: #FBC5EB;
     border-radius: 10vw 10vw 0 0;
-    height: 67.9vh;
+    height: 68.2vh;
 }
 
 #animal-name{
