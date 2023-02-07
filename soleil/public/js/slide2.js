@@ -15,7 +15,7 @@ const initSlide2 = async function(){
     console.log("button");
     changeText();
   })
-  $("#adresse header button").click(function(){
+  $("#adresse header button.retour").click(function(){
     swiper.slidePrev();
   })
 };

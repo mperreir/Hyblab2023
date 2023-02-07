@@ -2,7 +2,7 @@
 
 console.log('open');
 const initSlide3 = async function(){
-    $("#logement header button").click(function(){
+    $("#logement header button.retour").click(function(){        
         swiper.slidePrev();
     })
     $("#logement footer button").click(function(){
