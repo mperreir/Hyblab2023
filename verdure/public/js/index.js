@@ -11,9 +11,8 @@ let next_Question = 1
 let swiper = new Swiper("#mySwiper", {
   direction: "vertical",
   mousewheel: true,
-  
-  allowSlidePrev : true,
-  enabled : true
+  allowSlidePrev : false,
+  enabled : true,
 });
 
 swiper.on("slideChange", function () {
