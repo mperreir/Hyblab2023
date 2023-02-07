@@ -256,6 +256,10 @@ main>section {
     justify-content: space-between;
 }
 
+.draw {
+    border: solid 1px #fff;
+    border-radius: 20%;
+}
 
 /* ---------- Positionning of logos on the last slide -------------------- */
 /* here we have a contraint on the height of the logos (not the width)     */

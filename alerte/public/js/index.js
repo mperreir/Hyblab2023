@@ -2,7 +2,7 @@
 
 let next0 = document.getElementById("next0")
 next0.addEventListener("click", () => {
-  display("s1")
+  display("s5")
 })
 
 let next1 = document.getElementById("next1")
@@ -11,7 +11,7 @@ next1.addEventListener("click", () => {
 })
 
 let next4_1 = document.getElementById("next4_1")
-next4_1.addEventListener("click", () => {
+next4_1.addEventListener("mouseup", () => {
   display("s5")
 })
 
