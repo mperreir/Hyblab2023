@@ -1,6 +1,5 @@
 // create an additionnalDB.json file with the following content:
-// the key is the taxon id
-// the values are scientificname, frenchvernacularName, habitat, media
+// the key is the animal name in french if exwisting or scientific name
 
 const fs = require('fs');
 const axios = require('axios');
@@ -109,7 +108,7 @@ async function getINSEE(taxon) {
             for (const subKey in innerValue) {
                 const subValue = innerValue[subKey];
                 if (subValue.cd_ref === taxon) {
-                    cityData.push({ insee: outerKey, nb_obs: subValue.nb_obs });
+                    cityData.push({ commune: outerKey, nb_obs: subValue.nb_obs });
                 }
             }
         }
