@@ -85,24 +85,24 @@ swiper.on("slideChange", function () {
       else(swiper.slideTo(12,1))
       break;
 
-    //case 12: 
-      // initSlideAnimationEntree();
-    //break;
-
     case 12: 
+       initSlideAnimationEntree2();
+    break;
+
+    case 13: 
         swiper.disable();
         initSlideAnimationDroit();
     break;
 
-    case 13: 
+    case 14: 
     if(next_Question == 7){
       swiper.disable();
       initSlideQuestion7(next_Question);
       }
-      else(swiper.slideTo(14,1))
+      else(swiper.slideTo(15,1))
     break;
 
-    case 14: 
+    case 15: 
       initEndSlide();
     break;
 

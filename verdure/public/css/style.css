@@ -713,6 +713,11 @@ Derniere slide
     text-decoration: none;    
 }
 
+#dropdownShareOptions img{
+    height:auto;
+    width:120px;
+}
+
 /**************************
 slide entree texte
 **************************/

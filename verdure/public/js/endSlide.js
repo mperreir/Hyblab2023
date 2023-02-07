@@ -76,5 +76,5 @@ window.onclick = function(event) {
 }
 
 const goBackToBeginning = function (){
-    swiper.slideTo(0, 1000);
+    window.location.reload();
 }
