@@ -1,5 +1,7 @@
 "use strict";
 
+let dep
+
 let next0 = document.getElementById("next0")
 next0.addEventListener("click", () => {
   display("s5")
@@ -28,6 +30,17 @@ next4_1.addEventListener("mouseup", () => {
 let next4_2 = document.getElementById("next4_2")
 next4_2.addEventListener("click", () => {
   display("s5")
+})
+
+let next6 = document.getElementById("next6")
+next6.addEventListener("click", () => {
+  display("s7")
+})
+
+let next7 = document.getElementById("next7")
+next7.addEventListener("click", () => {
+  dep = document.getElementById('dep')
+  display("s8")
 })
 
 function display(id) {

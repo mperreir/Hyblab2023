@@ -58,10 +58,6 @@ h1 {
     font-size: 16px;
 }
 
-p {
-    font-size: 0.2em;
-}
-
 h1,
 h2,
 h3,
@@ -118,6 +114,19 @@ header img,
     background-image: url('../img/btn-next.svg');
 }
 
+#next4_2 {
+    background-image: url('../img/btn-nextWhite.svg');
+}
+
+#next6 {
+    background-image: url('../img/btn-next.svg');
+}
+
+#next7 {
+    background-image: url('../img/btn-next.svg');
+    margin-top: 25px;
+}
+
 .next-btn {
     background-position: center center;
     background-size: cover;
@@ -131,6 +140,7 @@ header img,
     min-height: 50px;
     margin: 2%;
     font-size: 0.2em;
+    justify-content: center;
 }
 
 .answer-container {
@@ -201,9 +211,10 @@ header img,
 }
 */
 
-#little-logo-meuh {
+#petit_logo {
     width: 20%;
     position: relative;
+    left: 20%;
 }
 
 #side-by-side {
@@ -225,6 +236,10 @@ header img,
 main>section {
     background-color: #121212;
     background-size: 100% 100%;
+}
+
+.slidesWhite {
+    background-color: aliceblue;
 }
 
 /* Footer of last slide is at the bottom and content is centered */
@@ -257,7 +272,19 @@ main>section {
     left: 0;
 }
 
-.bubble,
+.bubble {
+    position: relative;
+    text-align: justify;
+    color: white;
+    font-size: 0.2em;
+    font-family: "Inter";
+    height: 100%
+}
+
+.content_intro {
+    height: 100%;
+}
+
 .little-bubble {
     position: relative;
     text-align: center;
@@ -266,6 +293,27 @@ main>section {
 
 .bubble img {
     height: 100%;
+    max-width: 100%;
+}
+
+.bubbleWhite {
+    color: black;
+    border-color: aliceblue;
+}
+
+#labelDep {
+    color: gray;
+    font-size: small;
+}
+
+#dep {
+    color: aliceblue;
+    text-align: center;
+    width: 50px;
+    line-height: 50px;
+    background-color: black;
+    border: solid 3px aliceblue;
+    border-radius: 15px;
 }
 
 /* white navigation bullets */
@@ -310,6 +358,18 @@ main>section {
     width: 85%;
     height: 56%;
     overflow-y: scroll;
+}
+
+.content2 {
+    position: absolute;
+    top: 50%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    width: 65%;
+    height: 90%;
+    text-align: justify;
+    font-family: arial, sans-serif;
 }
 
 .content {
