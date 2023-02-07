@@ -5,7 +5,7 @@ const init = async function(){
     body.appendChild(p1);
 
     // Retrieve the partner's topic from our API
-    let response = await fetch('api/energy/test');
+    let response = await fetch('../api/energy/test');
     const data1 = await response.json();
 
     console.log(data1);
