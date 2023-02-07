@@ -2,6 +2,7 @@
 
 console.log('open');
 const initSlide3 = async function(){
+    
     $("#logement header button.retour").click(function(){        
         swiper.slidePrev();
     })
@@ -11,7 +12,6 @@ const initSlide3 = async function(){
         quiz["logement"] = $("#logement input[type=radio][name=logement]:checked").val();
         quiz["propriétaire"] = $("#logement input[type=radio][name=propriétaire]:checked").val();
         swiper.slideNext();
-        initSlide4();
     }
     
     });

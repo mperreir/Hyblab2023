@@ -6,7 +6,7 @@ const initSlide2 = async function(){
     if (isValidAdress($("#adresse input").val())) {
       quiz["adress"] = $("#adresse input").val();
       swiper.slideNext();
-      initSlide3();
+      //initSlide3();
     }
 
     

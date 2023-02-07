@@ -325,7 +325,13 @@ header{
 /*mes ajouts*/
 .img-pente{
     width: 80%;
+
 }
+
+form{
+    position: relative;
+}
+
 video{
     margin:auto;
 }

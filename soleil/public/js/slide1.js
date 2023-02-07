@@ -5,7 +5,7 @@ const initSlide1 = async function(){
   
     $("#accueil button").click(function(){
       swiper.slideNext()
-      initSlide2();
+      //initSlide2();
     });
   
   // Get logo element
