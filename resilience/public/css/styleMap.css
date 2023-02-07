@@ -287,7 +287,7 @@ body{
 }
 
 #heure{
-    font-size: 4vh;
+    font-size: 3vh;
     color: white;
     /*text-shadow: 1px 1px 1px #000;*/
     background: none;
@@ -295,7 +295,7 @@ body{
 }
 
 #steps{
-    font-size: 4vh;
+    font-size: 3vh;
     color: white;
     /*text-shadow: 1px 1px 1px #000;*/
     background: none;
