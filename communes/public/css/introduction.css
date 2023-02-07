@@ -1,13 +1,16 @@
 header div {
     margin: 4%;
+    font-size: 12pt;
+
 }
 
 #mySwiper, .swiper-slide{
-    background-color: #F2FFFB
+    background-color: #F2FFFB;
+    margin: 0;
 }
 .textElu{
     margin-top: 10%;
-    font-size: 0.3em;
+    font-size: 7pt;
     font-weight: 100;
     display: inline-block;
     background-color: #d7d1d1;
@@ -17,15 +20,17 @@ header div {
     margin-left: 25%;
 }
 .Elu{
-
+    position: absolute;
     width: 40%;
-    margin-bottom: 10%
+    bottom: 30%;
+
 }
 
 .form__group {
-    position: relative;
+    position: absolute;
     padding: 15px 0 0;
-    margin-top: 10px;
+    bottom: 50%;
+    right: 5%;
     width: 50%;
 }
 
@@ -35,7 +40,7 @@ header div {
     border: 0;
     border-bottom: 2px solid #9b9b9b;
     outline: 0;
-    font-size: 1.3rem;
+    font-size: 70%;
     color: #000000;
     padding: 7px 0;
     background: transparent;
@@ -43,14 +48,14 @@ header div {
 }
 
 .form__field::placeholder {
-     color: transparent;
- }
+    color: transparent;
+}
 
 .form__field:placeholder-shown ~ .form__label {
-     font-size: 1.3rem;
-     cursor: text;
-     top: 20px;
- }
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+}
 
 .form__label {
     position: absolute;
@@ -82,9 +87,10 @@ body {
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
     font-size: 1.5rem;
     background-color:#222222;
+}
+.swiper-pagination-bullet-active{
+    background-color : #35A88A;
 }

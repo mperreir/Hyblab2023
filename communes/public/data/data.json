@@ -2,6 +2,7 @@
   "main": [
     {
       "name": "La ville",
+      "id": "la-ville",
       "file_name": "img/ville.svg",
       "main_color": "#A04952",
       "background_color": "#FFEDEF",
@@ -18,6 +19,7 @@
     },
     {
       "name": "La mer",
+      "id": "la-mer",
       "file_name": "img/mer.svg",
       "main_color": "#5A76B4",
       "background_color": "#EDF3FF",
@@ -40,12 +42,14 @@
     },
     {
       "name": "La rivière",
+      "id": "la-rivière",
       "file_name": "img/riviere.svg",
       "main_color": "#73CAD6",
       "background_color": "#F2FDFF"
     },
     {
       "name": "La campagne et la forêt",
+      "id": "la-campagne-et-la-forêt",
       "file_name": "img/campagne.svg",
       "main_color": "#59A78D",
       "background_color": "#F2FFFB"
@@ -91,7 +95,8 @@
     {
       "name": "intro7",
       "tchat": "Il n’est pas définitif. En consultant nos différentes initiatives, vous aurez l’opportunité de le modifier. Il vous suffira d’augmenter votre production dans chacune des énergies.",
-      "background_color": "#F2FFFB"
+      "background_color": "#F2FFFB",
+      "file_name": "../img/Bonhomme_1.svg"
     }
   ],
   "conclusion": {
