@@ -270,7 +270,7 @@ SLIDE ANIMATION SORTIE+ZOOM
 
 .img_bas{
     position: absolute;
-    top: 47.6%;
+    top: 49%;
     text-align: center;
     left: 32%;
 }
@@ -284,14 +284,14 @@ SLIDE ANIMATION SORTIE+ZOOM
 
 .img_gauche{
     position: absolute;
-    top: 39.55%;
+    top: 41.5%;
     text-align: center;
     left: 7.5%;
 }
 
 .img_droit{
     position: absolute;
-    top: 41.3%;
+    top: 39.6%;
     text-align: center;
     right: 3%;
 }
@@ -308,7 +308,7 @@ SLIDE ANIMATION SORTIE+ZOOM
 /*************************
 ANIMATION ENTREE 
 *************************/
-
+/* 
 .img_gauche_Entree, .img_bas_Entree, .img_droit_Entree, .img_haut_Entree {
     width: 40%;
     height: auto;
@@ -343,7 +343,7 @@ ANIMATION ENTREE
     top: 41.3%;
     text-align: center;
     right: 3%;
-}
+} */
 /********************************
 INDICATEUR
 *******************************/
