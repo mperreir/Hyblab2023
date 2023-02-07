@@ -18,7 +18,7 @@ const createMap = async function (taxon) {
 
     $.getJSON("https://france-geojson.gregoiredavid.fr/repo/regions/nouvelle-aquitaine/communes-nouvelle-aquitaine.geojson", function (data) {
         const geoData = data.features.map(feature => {
-            const match = communeData.listCities.find(city => feature.properties.code === city.insee);
+            const match = communeData.listCities.find(city => feature.properties.nom === city.commune);
             if (match) {
                 feature.properties.nb_obs = match.nb_obs;
                 return feature;
@@ -88,7 +88,7 @@ const createMap = async function (taxon) {
 
     $.getJSON("https://france-geojson.gregoiredavid.fr/repo/regions/nouvelle-aquitaine/communes-nouvelle-aquitaine.geojson", function (data) {
         const mappedData = data.features.map(feature => {
-            const matchingCommune = communeData.listCities.find(city => city.insee === feature.properties.code);
+            const matchingCommune = communeData.listCities.find(city => city.commune === feature.properties.nom);
             if (matchingCommune) {
                 feature.properties.nb_obs = matchingCommune.nb_obs;
                 feature.style = {fillColor: getColor(feature.properties.nb_obs)};
@@ -110,7 +110,7 @@ const createMap = async function (taxon) {
         }).addTo(map);
     });
 
-    var info = L.control();
+    let info = L.control();
 
     info.onAdd = function (map) {
         this._div = L.DomUtil.create('div', 'info');

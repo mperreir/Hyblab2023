@@ -1,6 +1,3 @@
-// create an additionnalDB.json file with the following content:
-// the key is the animal name in french if exwisting or scientific name
-
 const fs = require('fs');
 const axios = require('axios');
 const db = JSON.parse(fs.readFileSync('../public/data/db.json'));
