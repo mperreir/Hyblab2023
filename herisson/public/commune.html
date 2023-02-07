@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/commune.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<!-- Swiper -->
+<!-- Swiper horizontal -->
+<div class="swiper-container horizontal-slider">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" id="oiseaux-nicheurs">
+            <h1 class="commune green" >BORDEAUX</h1>
+            <button class="button">
+                <span class="decouvrir">Découvrir les oiseaux nicheurs</span>
+            </button>
+            <a class="groupe">Choisissez votre groupe</a>
+        </div>
+        <div class="swiper-slide" id="rhopalocères">
+            <h1 class="commune white" >BORDEAUX</h1>
+            <button class="button">
+                <span class="decouvrir">Découvrir les rhopalocères</span>
+            </button>
+            <a class="groupe">Choisissez votre groupe</a>
+        </div>
+        <div class="swiper-slide" id="odonates">
+            <h1 class="commune white" >BORDEAUX</h1>
+            <button class="button">
+                <span class="decouvrir">Découvrir les odonates</span>
+            </button>
+            <a class="groupe">Choisissez votre groupe</a>
+        </div>
+        <div class="swiper-slide" id="chiroptères">
+            <h1 class="commune white" >BORDEAUX</h1>
+            <button class="button">
+                <span class="decouvrir">Découvrir les chiroptères</span>
+            </button>
+            <a class="groupe">Choisissez votre groupe</a>
+        </div>
+        <div class="swiper-slide" id="mammiferes">
+            <h1 class="commune white" >BORDEAUX</h1>
+            <button class="button">
+                <span class="decouvrir">Découvrir les mammifères</span>
+            </button>
+            <a class="groupe">Choisissez votre groupe</a>
+        </div>
+        <div class="swiper-slide" id="reptiles">
+            <h1 class="commune white" >BORDEAUX</h1>
+            <button class="button">
+                <span class="decouvrir">Découvrir les reptiles</span>
+            </button>
+            <a class="groupe">Choisissez votre groupe</a>
+        </div>
+        <div class="swiper-slide" id="amphibiens">
+            <h1 class="commune white" >BORDEAUX</h1>
+            <button class="button">
+                <span class="decouvrir">Découvrir les amphibiens</span>
+            </button>
+            <a class="groupe">Choisissez votre groupe</a>
+        </div>
+    </div>
+    <!-- Arrows -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<!--
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        spaceBetween: 50,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+        navigation: {
+            nextEl: "swiper-button-next",
+        },
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+-->
+<script>
+    /*
+    // Slider vertical
+    var verticalSlider = new Swiper('.vertical-slider', {
+        direction: 'vertical',
+        initialSlide: 0,
+        navigation: {
+            nextEl: '.vertical-arrow'
+        },
+    });
+    */
+
+    // Slider horizontal
+    var horizontalSlider = new Swiper('.horizontal-slider', {
+        loop: true,
+        nested: true,
+        navigation: {
+            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+</script>
+</body>
+</html>

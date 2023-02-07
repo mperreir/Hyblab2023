@@ -1,0 +1,67 @@
+body
+{
+    background-color: #FBC5EB;
+    font-family: 'Prompt', sans-serif;
+    color : #0B6E5F;
+}
+
+#nbChoc
+{
+    font-size: 37.5em;
+    line-height: 0.8em;
+    margin: auto;
+    padding-top: 100px;
+    font-weight: 700;
+    font-family: 'Prompt', sans-serif;
+    color: #FBC5EB;
+}
+
+div
+{
+    text-align: center;
+}
+
+#texteExplication
+{
+    font-size: 60px;
+    margin-left : 1em;
+    margin-right : 1em;
+}
+
+#texteDanger
+{
+    font-size: 45px;
+    margin: 3em 5em 5em;
+}
+
+#nbDanger
+{
+    font-weight: 700;
+}
+
+#fleche {
+    padding-bottom: 3em;
+}
+.round-background
+{
+    background-color: #FFF8F1;
+    border-radius: 100px;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+/*@keyframes slideUp {*/
+/*    from {*/
+/*        transform: translateY(100%);*/
+/*    }*/
+/*    to {*/
+/*        transform: translateY(0);*/
+/*    }*/
+/*}*/
+
+/*body {*/
+/*    transition: all 1s ease-in-out;*/
+/*}*/
