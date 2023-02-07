@@ -4,7 +4,6 @@
 const initSlideVideo = async function(){
   swiper.disable();
   setTimeout(()=>{
-    
     swiper.enable();
     swiper.slideTo(1);
   },8000)

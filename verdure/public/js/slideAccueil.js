@@ -16,7 +16,7 @@ const initSlideAccueil = async function(){
   });
 
   anime({
-    targets :'#scroll',
+    targets :'#scrollAccueil',
     translateY: 10,
     direction: 'alternate',
     easing: 'easeInOutSine',
