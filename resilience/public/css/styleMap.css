@@ -220,7 +220,7 @@ body{
 #page-map{
     /*background-color:#296C2B;*/
     background: rgb(51,134,53);
-    background: linear-gradient(180deg, rgba(51,134,53,1) 26%, rgba(38,85,39,1) 100%);
+    /*background: linear-gradient(180deg, rgba(51,134,53,1) 26%, rgba(38,85,39,1) 100%);*/
     width: 100%;
     height: 100%;
     display: flex;
@@ -240,22 +240,22 @@ body{
 }
 
 #credits{
-    filter: drop-shadow(1px 1px 5px rgb(0 0 0 / 0.8));
+    /*filter: drop-shadow(1px 1px 5px rgb(0 0 0 / 0.8));*/
     width: 100%;
 }
 
 #trophe{
-    filter: drop-shadow(1px 1px 5px rgb(0 0 0 / 0.8));
+    /*filter: drop-shadow(1px 1px 5px rgb(0 0 0 / 0.8));*/
     width: 100%;
 }
 
 #unlock_audio{
     width: 100%;
-    filter: brightness(0) invert(1) drop-shadow(1px 1px 5px rgb(0 0 0 / 0.8));
+    filter: brightness(0) invert(1) /*drop-shadow(1px 1px 5px rgb(0 0 0 / 0.8));*/
 }
 
 #logo{
-    filter: drop-shadow(1px 1px 5px rgb(0 0 0 / 0.8));
+    /*filter: drop-shadow(1px 1px 5px rgb(0 0 0 / 0.8));*/
     width: 100%;
 }
 
@@ -307,10 +307,10 @@ body{
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
     cursor:pointer;
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
+}
+
+/* Modal Content/Box */
+.modal-content {
     position: absolute;
     top: 50%;
     width:80%;    
@@ -319,11 +319,11 @@ body{
     text-align:center;
     font-family:cursive;
     cursor:pointer;
-  }
+}
 
-  .modal-content p {
+.modal-content p {
     font-size: 0.5em;
-  }
+}
   
 
 .popup {
