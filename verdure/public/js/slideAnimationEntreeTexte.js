@@ -73,6 +73,12 @@ setTimeout(()=> {
 };
 
 function UpdateSrcImage(id){
+
+  if(id === '#animationSlideBas' ){selectedZone[1]='parking'}
+  else if(id === '#animationSlideDroit'){selectedZone[3] = 'friche'}
+  else if(id === '#animationSlideHaut'){selectedZone[2] = 'place'}
+
+
   document.querySelector(id + ' .img_bas').src = './img/'+selectedZone[1]+'.png';
   document.querySelector(id + ' .img_gauche').src =  './img/'+selectedZone[0]+'.png';
   document.querySelector(id + ' .img_haut').src =  './img/'+selectedZone[2]+'.png';

@@ -2,6 +2,7 @@
 
 const initSlideAnimationBas = function(){
 
+
   UpdateSrcImage('#animationSlideBas');
   const droit = document.querySelector('#animationSlideBas .img_droit');
   var route = document.getElementById('route1');
@@ -66,7 +67,7 @@ const initSlideAnimationBas = function(){
 
   //animation finale
   anime({
-    targets: "#animationSlideBas .img_bas",
+    targets: " .img_bas",
     scale: 3,
     translateY : -15,
     translateX :0,

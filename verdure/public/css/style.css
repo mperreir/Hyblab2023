@@ -71,8 +71,11 @@ body {
 
 /* Last slide image is centered */
 #img-fini {
-    width: 70%;
-    left: 50%;
+
+    width: 47%;
+    left: 61%;
+
+
     top: 30vh;
     position: absolute;
     margin-left: -35%;
@@ -191,7 +194,7 @@ SLIDE ACCUEIL
 
 
 #backgroundFirstSlide{
-    opacity: 12.5%;
+    opacity: 35%;
     margin-top: 42%;
     margin-left: 11%;
     width: 169%;
@@ -267,7 +270,7 @@ SLIDE QUESTION
 
 #boulevard1, #boulevard2, #parking1, #parking2, #parking3, #parking4, #place1, #place2, #place3, #place4, #place5, #place6, #friche1, #friche2, #friche3, #place {
     position: absolute;
-    top: 20%;
+    top: 23%;
     right: 0;
     opacity: 0;
     transition: opacity 3s;
@@ -403,7 +406,7 @@ INDICATEUR
     width: 95%;
     height: 85%;
     bottom: 2%;
-    left: 2%;
+    left: 0.1vh;
 }
 
 #thermoindic {
@@ -444,7 +447,7 @@ INDICATEUR
 
     width: 90%;
     height: 80%;
-    bottom: 2%;
+    bottom: 0.2vh;
     left: 2%;
     transition: height 3s, background-color 3s;
 }
@@ -484,11 +487,12 @@ INDICATEUR
 .happy {
     position: absolute;
     background-color: #d2fc03;
-    width: 100%;
+    width: 95%;
     height: 50%;
-    left: 1%;
+    left: 0.1vh;
     bottom: 2%;
     transition: height 3s, background-color 3s;
+
 }
 
 #happyindic {
@@ -509,7 +513,7 @@ INDICATEUR
     bottom: 0;
     width: 100%;
     opacity: 0;
-    transition: opacity 3s;
+    transition: opacity 1.5s;
     background-color: #ffffff;
     padding-bottom: 3vh;
 }
@@ -576,7 +580,7 @@ INDICATEUR
 
 #answer-title1, #answer-title2, #answer-title3, #answer-title4, #answer-title5, #answer-title6, #answer-title7 {
     text-align: left;
-    font-size: 3vh;
+    font-size: 2.5vh;
     margin: 0 1vh;
     width: auto;
     font-weight: bold;
@@ -588,7 +592,7 @@ INDICATEUR
     grid-auto-rows: 1fr;
     grid-template-columns: 1fr 1fr;
     grid-gap: 3vh;
-    padding: 2vh 3vh;
+    padding: 1vh 2vh 2vh 2vh;
 }
 
 #consequences1 p, #consequences2 p, #consequences3 p, #consequences4 p, #consequences5 p, #consequences6 p, #consequences7 p {
@@ -790,8 +794,8 @@ GREENTA
 .greenTa {
     text-align: center;
     width: 50%;
-    left: 50%;
-    top: 10%;
+    left: 32%;
+    top: 6%;
     margin-left: -25%;
     margin-top: calc(-7.5% * 9 / 16); /* margins are relative to the element width... :-( */
     position: absolute;
@@ -801,7 +805,8 @@ GREENTA
 }
 
 #photo-table {
-    margin: 50vh auto auto;
+    margin: 40vh auto auto;;
+
     font-size: 15%;
 }
 

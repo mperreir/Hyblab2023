@@ -3,6 +3,7 @@
 // Just animate the logo
 const initSlideFin = function(){
   // Get img element
+  console.log("ok")
   swipper.allowSlidePrev = true;
   const img = document.querySelector('#img-fini');
 
