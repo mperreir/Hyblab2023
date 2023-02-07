@@ -3,8 +3,8 @@ async function achievement() {
     const achievements = await response.json();
     let result = document.querySelector('#achievements');
 
-
     for (let i = 0; i < achievements.achievements.length; i++) {
+        
         let achiev = achievements.achievements[i];
         let htmlAchiev = document.createElement('div');
         if (window.localStorage.getItem("achievement".concat(i + 1)) == "true") {
@@ -18,8 +18,17 @@ async function achievement() {
         }
 
         let htmlID = document.createElement('div');
-        htmlID.classList.add('ID');
-        htmlID.textContent = `${achiev.ID}`;
+        if (window.localStorage.getItem("achievement".concat(i + 1)) == "true") {
+            htmlID.classList.add('ID');
+            htmlID.textContent = `${achiev.ID}`;
+        } else {
+            htmlID.classList.add('cadenas');
+            var img = document.createElement("img");
+            img.src = "./img/ux_kit/Cadenas.svg";
+            img.id = "image_cadenas";
+            htmlID.appendChild(img);
+        }
+
 
         let htmlName = document.createElement('h2');
         htmlName.classList.add('name');
@@ -50,9 +59,14 @@ async function achievement() {
             }
         });
 
-        htmlAchiev.appendChild(htmlID);
-        htmlAchiev.appendChild(htmlName);
+        let htmlAchievVisible = document.createElement('div');
+        htmlAchievVisible.setAttribute('id','visible');
+        htmlAchievVisible.appendChild(htmlID);
+        htmlAchievVisible.appendChild(htmlName);
+        htmlAchiev.appendChild(htmlAchievVisible);
         result.appendChild(htmlAchiev);
+        console.log(result);
+
 
     }
 
@@ -60,3 +74,7 @@ async function achievement() {
 }
 
 achievement();
+
+function map() {
+    window.location = "./map.html"
+}

@@ -8,6 +8,7 @@
   <title>Map</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/styleMap.css">
+  <link rel="stylesheet" href="css/styleGlobal.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
@@ -20,17 +21,18 @@
   <div id="container">
     <div id="page-map">
       <div id="header-icons">
-
-        <a href="a_propos.html">
-          <img id="credits"  src="./img/ux_kit/Crédits_white.svg">
-        </a>
-        <a href="#">
-        <img id="unlock_audio" src="./img/ux_kit/Son_off.svg">
-        <audio controls id="audio" muted autoplay loop hidden>
-          <source src="sound/jingleSncf.mp3" type="audio/mpeg">
-          <source src="sound/jingleSncf.ogg" type="audio/ogg">
-        </audio>
-        </a>
+        <div id="credits-audio"> <!--flexbox pour rassembler les icones credits et audio-->
+          <a href="a_propos.html">
+            <img id="credits"  src="./img/ux_kit/Crédits_white.svg">
+          </a>
+          <a href="#">
+          <img id="unlock_audio" src="./img/ux_kit/Son_off.svg">
+          <audio controls id="audio" muted autoplay loop hidden>
+            <source src="sound/jingleSncf.mp3" type="audio/mpeg">
+            <source src="sound/jingleSncf.ogg" type="audio/ogg">
+          </audio>
+          </a>
+        </div>
         <a href="#">
         <img id="logo" src="./img/Logo_white.svg">
           </a>

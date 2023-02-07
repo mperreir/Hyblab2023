@@ -236,22 +236,30 @@ body{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin-top:5px;
+    margin-top: 0.3em; /*5px*/
+}
+
+#credits-audio{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 #credits{
     /*filter: drop-shadow(1px 1px 5px rgb(0 0 0 / 0.8));*/
-    width: 100%;
+    max-width: 100%;
 }
 
 #trophe{
     /*filter: drop-shadow(1px 1px 5px rgb(0 0 0 / 0.8));*/
-    width: 100%;
+    max-width: 100%;
 }
 
 #unlock_audio{
-    width: 100%;
-    filter: brightness(0) invert(1) /*drop-shadow(1px 1px 5px rgb(0 0 0 / 0.8));*/
+    width: 42px;
+    height: 42px;
+    max-width: 100%;
+    filter: brightness(0) invert(1); /*drop-shadow(1px 1px 5px rgb(0 0 0 / 0.8));*/
 }
 
 #logo{
@@ -261,7 +269,7 @@ body{
 
 #map{
     width: 100%;
-    height: 83%;
+    height: 81%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -273,23 +281,23 @@ body{
     display: flex;
     height:7%;
     justify-content: space-between;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: -5px;
+    margin-left: 0.6em; /*10px*/
+    margin-right: 0.6em;
+    margin-top: -0.3em; /*-5px*/
 }
 
 #heure{
-    font-size: 4vh;
+    font-size: 3vh;
     color: white;
-    text-shadow: 1px 1px 1px #000;
+    /*text-shadow: 1px 1px 1px #000;*/
     background: none;
     border: none;
 }
 
 #steps{
-    font-size: 4vh;
+    font-size: 3vh;
     color: white;
-    text-shadow: 1px 1px 1px #000;
+    /*text-shadow: 1px 1px 1px #000;*/
     background: none;
     border: none;
 }
