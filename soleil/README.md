@@ -1,15 +1,23 @@
 # Descriptif du projet
 
-Porteur de projet : Aurélie
+Porteur de projet : Groupe Nice-Matin
 
 Sujet : Soleil
 
-Nom d'équipe : Equinoxe
+Nom d'équipe : Équinoxe
 
-Participants : 
+Participants :
 
 - AGR :
+    - Maëlys BACHELIER
+    - Théo CHEVALIER
 
-- EPJT : Anne-France
+- EPJT :
+    - Marie-France MARCHAND
 
-- Polytech :  
+- Polytech :
+    - Sean BOGOSAVAC
+    - Julien RAYNAL
+    - Léa GRASSIEN
+    - Pierre BONNET
+    - Virgile SIEGLER
