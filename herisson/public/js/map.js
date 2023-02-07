@@ -44,14 +44,14 @@ const createMap = async function (taxon) {
     });
 
     function getColor(d) {
-        return d > 500 ? '#800026' :
-            d > 100 ? '#BD0026' :
-                d > 50 ? '#E31A1C' :
-                    d > 25 ? '#FC4E2A' :
-                        d > 10 ? '#FD8D3C' :
-                            d > 5 ? '#FEB24C' :
-                                d > 1 ? '#FED976' :
-                                    '#FFFFFF';
+        return d > 500 ? '#661852' :
+            d > 100 ? '#99237A' :
+                d > 50 ? '#CC2FA3' :
+                    d > 25 ? '#D659B5' :
+                        d > 10 ? '#E082C8' :
+                            d > 5 ? '#FBC5EB' :
+                                d > 1 ? '#F5D5ED' :
+                                    '#FFF8F1';
     }
 
     function highlightFeature(e) {
