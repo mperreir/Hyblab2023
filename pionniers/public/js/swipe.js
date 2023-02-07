@@ -272,34 +272,23 @@ function miseAJourEtatCarousel() {
     carouselList = document.querySelector('.carousel-list');
     carouselItems = document.querySelectorAll('.carousel-item');
     elems = Array.from(carouselItems);
-}
+    // mes ajouts
+    let cur = elems.find(elem => elem.getAttribute("data-pos") === '0');
+    let suiv = elems.find(elem => elem.getAttribute("data-pos") === '1');
+    let prec= elems.find(elem => elem.getAttribute("data-pos") === '-1');
+    console.log(elems);
+    updateFolder();
+    swipe(cur,suiv,prec);
 
+}
 
 // -----------------------------------------------------
 // ------ FONCTION RELATIVES AU CAROUSEL / SWIPER ------
 // -----------------------------------------------------
 
-function update(newActive) {
-    const newActivePos = newActive.dataset.pos;
-    const first = elems.find((elem) => elem.dataset.pos === '-2');
-    const prev = elems.find((elem) => elem.dataset.pos === '-1');
-    const current = elems.find((elem) => elem.dataset.pos === '0');
-    const next = elems.find((elem) => elem.dataset.pos === '1');
-    const last = elems.find((elem) => elem.dataset.pos === '2');
+// update ici
 
-    [current, prev, next, first, last].forEach(item => {
-        let itemPos = item.dataset.pos;
 
-        item.dataset.pos = getNewPos(itemPos, newActivePos)
-    });
-}
-const getNewPos = function (current, active) {
-    const diff = current - active;
-    if (Math.abs(diff) > 2) {
-        return -current
-    }
-    return diff;
-}
 
 swiperSection.addEventListener('click', function (event) {
     let newActive;
@@ -373,13 +362,190 @@ document.addEventListener("DOMContentLoaded", async function () {
     await chercheEtAjouteProfilsCarousel(themeSelected, true);
 
 
-    //const idsProfilsEnregistres = window.localStorage.getItem('truc');
-    const idsProfilsEnregistres = []; // Test
-    if(idsProfilsEnregistres.length > 0) {
-        nombreProfilsEnregistresText.innerHTML = idsProfilsEnregistres.length.toString();
+
+
+});
+function updateFolder() {
+    console.log("par ici");
+    const profilsEnregistresFolder = document.querySelector('footer#folder');
+    const nombreProfilsEnregistres = profilsEnregistresFolder.querySelector('#nombre-profil');
+    const nombreProfilsEnregistresText = profilsEnregistresFolder.querySelector('#nombre-profil p');
+    const idsProfilsEnregistres = window.localStorage.getItem("profilsFavoris") // Test
+    let nombreProfilFavoris=0;
+    if (idsProfilsEnregistres !== null){
+        nombreProfilFavoris = idsProfilsEnregistres.split(",").length;
+    }
+
+
+    // idsProfilsEnregistres.length > 0
+    if (nombreProfilFavoris > 0) {
+        nombreProfilsEnregistres.classList.remove('display-none');
+        nombreProfilsEnregistres.classList.add('flex-row');
+        nombreProfilsEnregistresText.innerHTML = nombreProfilFavoris.toString();
+        //idsProfilsEnregistres.length.toString();
     } else {
         nombreProfilsEnregistres.classList.add('display-none');
         nombreProfilsEnregistres.classList.remove('flex-row');
     }
+}
+function swipe(current, next, prev) {
+        console.log("ici swipe");
 
-});
+        let topcard = current;
+        let nextcard = next;
+        let previouscard = prev;
+
+        if (carouselItems.length > 0) {
+            console.log(carouselItems);
+            console.log(topcard);
+            console.log(nextcard);
+            console.log(previouscard);
+
+
+            //if (hammer) hammer.destroy()
+
+            const hammer = new Hammer(topcard)
+            hammer.add(new Hammer.Tap())
+            hammer.add(new Hammer.Pan({
+                position: Hammer.position_ALL,
+                threshold: 0
+            }))
+            hammer.on('pan', (e) => {
+                onPan(e)
+            })
+
+
+            function onPan(e) {
+                const board = document.querySelector('#swiper');
+
+                // remove transition properties
+                topcard.style.transition = null
+                //if (nextcard) nextcard.style.transition = null
+
+                // get top card coordinates in pixels
+                let style = window.getComputedStyle(topcard)
+                let mx = style.transform.match(/^matrix\((.+)\)$/)
+                startPosX = mx ? parseFloat(mx[1].split(', ')[4]) : 0
+                startPosY = mx ? parseFloat(mx[1].split(', ')[5]) : 0
+
+                // get top card bounds
+                let bounds = topcard.getBoundingClientRect()
+
+                // get finger position on top card, top (1) or bottom (-1)
+                isDraggingFrom =
+                    (e.center.y - bounds.top) > topcard.clientHeight / 2 ? -1 : 1
+
+
+                // get new coordinates
+                let posX = e.deltaX + startPosX
+                let posY = e.deltaY + startPosY
+
+                // get ratio between swiped pixels and the axes
+                let propX = e.deltaX / board.clientWidth
+                let propY = e.deltaY / board.clientHeight
+
+                // get swipe direction, left (-1) or right (1)
+                let dirX = e.deltaX < 0 ? -1 : 1
+
+                // get degrees of rotation, between 0 and +/- 45
+                let deg = isDraggingFrom * dirX * Math.abs(propX) * 45
+
+                // get scale ratio, between .95 and 1
+                let scale = (95 + (5 * Math.abs(propX))) / 100
+
+
+                if (e.isFinal) {
+
+                    let successful = false
+
+
+                    // check threshold and movement direction
+                    if (e.direction == Hammer.DIRECTION_RIGHT) {
+
+                        /*update(previouscard);
+                        console.log("preced");*/
+
+                    } else if (e.direction == Hammer.DIRECTION_LEFT) {
+
+                        /*  update(nextcard);
+                          console.log("suiv");*/
+
+                    } else if (propY < 30 && e.direction == Hammer.DIRECTION_DOWN) {
+
+                        successful = true
+                        // get top border position
+                        posY = +(board.clientHeight + topcard.clientHeight)
+
+                    }
+
+                    if (successful) {
+
+                        // animation de la carte qui va vers le bas
+                        topcard.style.transform =
+                            'translateX(' + posX + 'px) translateY(' + posY + 'px) rotate(' + deg + 'deg)'
+
+                        // quand la transition est finie, on stock l'id de la carte et on passe a la suivante
+                        setTimeout(() => {
+                            // enleve la carte swipe
+                            nextcard.setAttribute("data-pos", "0");
+                            let avantDerniere = elems.find(elem => elem.getAttribute("data-pos") === '2');
+                            avantDerniere.setAttribute("data-pos", "1");
+                            previouscard.setAttribute("data-pos", "-1");
+                            console.log(previouscard.dataset.pos);
+                            console.log(carouselList);
+
+
+                            // stock la carte et on affiche la prochaine
+                            let recuperationProfils = window.localStorage.getItem("profilsFavoris");
+                            if (recuperationProfils !== null) {
+                                console.log("ici c'est pas null");
+                                if (!recuperationProfils.split(",").includes(topcard.getAttribute("data-id"))){
+                                    recuperationProfils = recuperationProfils + "," + topcard.getAttribute("data-id");
+
+                                    window.localStorage.setItem("profilsFavoris", recuperationProfils);
+                                }
+                            }else{
+                                console.log("trop null");
+                                window.localStorage.setItem("profilsFavoris",topcard.getAttribute("data-id") );
+                            }
+                            topcard.remove();
+                            miseAJourEtatCarousel();
+                        }, 200)
+
+                    }
+
+                }
+
+            }
+        }
+}
+
+
+
+function update(newActive) {
+    const newActivePos = newActive.dataset.pos;
+    const first = elems.find((elem) => elem.dataset.pos === '-2');
+    const prev = elems.find((elem) => elem.dataset.pos === '-1');
+    const current = elems.find((elem) => elem.dataset.pos === '0');
+    const next = elems.find((elem) => elem.dataset.pos === '1');
+    const last = elems.find((elem) => elem.dataset.pos === '2');
+
+    current.classList.remove('carousel__item_active');
+
+    [current, prev, next, first, last].forEach(item => {
+        let itemPos = item.dataset.pos;
+
+        item.dataset.pos = getNewPos(itemPos, newActivePos)
+    });
+
+
+
+}
+const getNewPos = function (current, active) {
+    const diff = current - active;
+    if (Math.abs(diff) > 2) {
+        return -current
+    }
+    return diff;
+}
+
