@@ -58,14 +58,19 @@ h1 {
     font-size: 16px;
 }
 
-p{
+p {
     font-size: 0.2em;
 }
 
-h1, h2, h3, h4, h5, p{
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
     text-align: justify;
     font-family: arial, sans-serif;
-}   
+}
 
 header {
     display: flex;
@@ -73,13 +78,14 @@ header {
     justify-content: center;
 }
 
-.little-bubble-text{
+.little-bubble-text {
     padding-top: 0;
     padding-left: 10%;
     padding-right: 10%;
     padding-bottom: 15%;
-    
+
 }
+
 footer {
     width: 100%;
 }
@@ -120,14 +126,14 @@ header img,
     border-radius: 25px;
 }
 
-.answer-btn{
+.answer-btn {
     min-width: 50px;
     min-height: 50px;
     margin: 2%;
     font-size: 0.2em;
 }
 
-.answer-container{
+.answer-container {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -135,7 +141,7 @@ header img,
     width: 100%;
 }
 
-.answer{
+.answer {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -200,7 +206,7 @@ header img,
     position: relative;
 }
 
-#side-by-side{
+#side-by-side {
     display: inline-block;
     vertical-align: middle;
 }
@@ -251,7 +257,8 @@ main>section {
     left: 0;
 }
 
-.bubble, .little-bubble {
+.bubble,
+.little-bubble {
     position: relative;
     text-align: center;
     color: white;
@@ -314,6 +321,14 @@ main>section {
 .draw {
     border: solid 1px #fff;
     border-radius: 20%;
+}
+
+.cow-head-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
 }
 
 /* ---------- Positionning of logos on the last slide -------------------- */
