@@ -28,6 +28,12 @@ body{
     margin :auto
 }
 
+#imageLog{
+    margin :auto;
+    width: 100%;
+    float: left;
+    height: 150px;
+}
 
 #image2{
     width : 85%;
@@ -49,13 +55,14 @@ body{
     padding-left: 20px;
     text-align: center;
     width: 70%;
-    bottom: 20%;
     position: relative;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 4vw;
+    bottom: 15px;
+
+
 }
 
 #SoliExTex {
@@ -66,9 +73,7 @@ body{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-
+    font-size: 4vw;
 }
 
 /* ---------- Animation de Soli-mongolfière dans la jauge ------------ */
@@ -174,7 +179,7 @@ header{
 }
 
 .commentaire-soli {
-    max-width: 90%;
+    max-width: 95%;
     left: 5%;
     right: 7%;
     position:static;
@@ -182,7 +187,7 @@ header{
 
 .commentaire-soli2 {
     max-width: 90%;
-    right: 7%;
+    bottom: 7%;
 }
 
 .commentaire-soli2 p {
@@ -215,6 +220,13 @@ header{
     width: 100%;
     float: left;
     height: 150px;
+}
+
+#lignelongue{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+
 }
 
 #bulle-question {
@@ -267,6 +279,35 @@ header{
 
 }
 
+/* -------------- Slide Mission --------------*/
+
+#flex-miss{
+    display :flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Contour{
+    border: 0.75px solid #000000;
+    border-radius: 8px;
+    height: auto;
+    width: 50%;
+    text-align: center;
+    padding-top : 10%;
+
+}
+
+#LdM{
+    display: inline-block;
+    margin-right: 10%;
+}
+
+#numero {
+    display: inline-block;
+}
+
+
 /* -------------- Loader --------------*/
 #loader{
     z-index: 2;
@@ -274,8 +315,8 @@ header{
 }
 
 #loader-img{
-    top:40%;
-    left:40%;
+    top:50%;
+    left:50%;
     position: absolute;
 }
 
@@ -311,7 +352,7 @@ header{
 }
 
 .titre{
-    font-size: 18px;
+    font-size: 5vw;
     padding: 10px;
     font-weight: bold;
     text-align: center;
@@ -325,13 +366,7 @@ header{
 /*mes ajouts*/
 .img-pente{
     width: 80%;
-
 }
-
-form{
-    position: relative;
-}
-
 video{
     margin:auto;
 }
@@ -355,6 +390,7 @@ video{
     margin: auto;
     width: 12em;
     text-align: center;
+    font-size: 4vw;
 }
 
 img.img-adresse{
@@ -366,16 +402,20 @@ footer button{
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    padding: 3px 7px;
+
+    padding: 5px 9px;
     gap: 16px;
     background: #9185BE;
     border-radius: 8px;
     color: #FFFFFF;
     margin: auto;
+    border: transparent;
+
     text-transform: uppercase;
     font-family: 'Inter';
     font-style: normal;
-    border: transparent;
+    font-weight: 400;
+    font-size: 5vw;
 }
 
 .passer{
@@ -396,6 +436,7 @@ button.retour{
     margin: 2% ;
     width : 10%;
     text-align: center;
+    font-size: 5vw;
     position: absolute;
     background-color: transparent;
     border: transparent;
@@ -422,8 +463,24 @@ div.conteneur{
     font-size: small;
     position: absolute;
     right : 10%;
+    animation: glowing 8000ms infinite;
+      
 }
 
+@keyframes glowing {
+    0% {
+    background-color: white;
+    box-shadow: 0 0 5px white;
+    }
+    50% {
+    background-color: #f7fd61;
+    box-shadow: 0 0 20px #f7fd61;
+    }
+    100% {
+    background-color: white;
+    box-shadow: 0 0 5px white;
+    }
+}
 
 /* Last slide image is centered */
 #img-fini{
@@ -581,21 +638,39 @@ body{
         height: calc(100 * 16vw / 9); /* adjust height so that aspect ratio is 9/16 */
         padding-left: 0;
     }
+    /* --------------------------------------- Notes FAQ -------------------------------------- */
+    /*  Pour ce format, on met le bouton commencer un peu + haut sur la page d'accueil ? (sinon c'est nikel)
 
+
+    */
     /* We set a default font size here. It will be the base for all other font sizes */
     /* Here the font size is proportional to content width */
     body{
         font-size: 15vw;
     }
 
+/* Détails page adresse */
+    #adresse input {
+        margin-top: 10%;
+    }
 }
 
 @media screen and (min-aspect-ratio: 3/4) {
     #container {
         padding-left: 0;
         width: 100vw;
-
     }
+/* Page adresse*/
+    header {
+        margin-bottom: 0;
+    }
+    video {
+        max-width: 85%;
+    }
+    .main-location-page {
+        padding-top: 0;
+    }
+
 }
 
 
@@ -616,6 +691,8 @@ background-color: white;
 position: absolute;
 right: 5%;
 border: none;
+animation: glowing 2000ms infinite;
+height: 22px;
 }
 
 /* Positionnez la forme Popup */
