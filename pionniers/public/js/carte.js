@@ -2,7 +2,7 @@
 
 // TODO: WHEN SELECTION ON THE PREVIOUS PAGE IS DONE, DISPLAY THE MAP WITH THE SELECTED TOPICS
 //
-// TODO : faire l'union des mots-clés au lieu de l'intersection
+// TODO : ne proposer que des mots clés correspondant aux topics selectionnés
 //
 // TODO : interaction sur les points pour afficher la miniature
 //
@@ -61,7 +61,7 @@ function createIcon(p) {
             iconAnchor: globalIconAnchor
         });
     }
-    // If the used keywords list is not empty and the profile doesn't contain all the keywords, return the inactive icon
+    // If the used keywords list is not empty and the profile doesn't contain at least one of the used keywords, return the inactive icon
     if (usedKeywords.length > 0 && !usedKeywords.map(k => k.replace('#', '')).some(keyword => p.Keywords.includes(keyword))) {
         return L.icon({
             iconUrl: '../img/pictogrammes_carte/point_inactif.svg',
@@ -205,12 +205,27 @@ function onTopicCheck(event) {
 
 
 /**
+ * Build the API parameters from the selected topics
+ * @returns {string} The API parameters
+ */
+function buildApiParameters() {
+    const topics = ["alimentation", "economie_circulaire", "energie", "industrie", "mobilite", "numerique"]
+    let apiString = "";
+    topics.forEach(t => {
+        apiString += selectedTopics.includes(t) ? "true" : "false";
+        apiString += "/";
+    });
+    return apiString;
+}
+
+
+/**
  * Get the keywords from the API
  * @returns {Promise<any>} The keywords as a JSON object
  */
 async function getKeywords() {
     // Fetch the data from the API
-    const response = await fetch("/pionniers/api/map/keywords");
+    const response = await fetch("/pionniers/api/map/keywords/" + buildApiParameters());
     // Parse the response as JSON and return it
     return await response.json();
 }
