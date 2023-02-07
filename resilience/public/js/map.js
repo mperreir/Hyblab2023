@@ -32,7 +32,7 @@ regions.forEach(element => {
             window.localStorage.setItem('steps', steps);
             str = element.id;
             nb_region = str.substr(1);
-            path = "./dialogue.html?".concat(nb_region);
+            path = "./dialogue.html?id=".concat(nb_region);
             window.location = path
         }
     });
@@ -88,7 +88,7 @@ function manger() {
     window.localStorage.setItem('compt', compt + 1);
     window.localStorage.setItem('heure', " 14:00 ");
     window.localStorage.setItem("popup", "false");
-    window.location = "./dialogue.html?15";
+    window.location = "./dialogue.html?id=15";
 }
 
 load();
