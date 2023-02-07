@@ -86,11 +86,14 @@ header {
 
 
 
-
-
-.shortDescription-1,
 .achievement-any {
     background-color: #D3D3D3;
+
+}
+
+.shortDescription-1,
+.achievement-1 {
+    background-color: #CFCCF9;
 
 }
 
