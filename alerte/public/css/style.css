@@ -92,6 +92,10 @@ header img,
     margin-top: 25px;
 }
 
+#next4_1 {
+    background-image: url('../img/btn-next.svg');
+}
+
 .next-btn {
     background-position: center center;
     background-size: cover;
@@ -209,7 +213,6 @@ main>section {
 
 .bubble img {
     height: 100%;
-    width: 100%;
 }
 
 /* white navigation bullets */
@@ -233,7 +236,8 @@ main>section {
     padding: 20px;
 }
 
-.swiper-container {
+.swiper-container,
+.content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -244,6 +248,12 @@ main>section {
     text-align: justify;
     font-family: arial, sans-serif;
     font-size: 0.2em;
+}
+
+.content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
 }
 
 
