@@ -9,19 +9,9 @@ body {
     align-items: center
 }
 
-.vertical-slider {
-    font-family: Prompt, sans-serif;
-    font-size: 14px;
-    color: #0B6E5F;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-}
-
 .horizontal-slider {
     font-family: Prompt, sans-serif;
     font-size: 14px;
-    color: #0B6E5F;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -45,37 +35,33 @@ body {
 
 
 #oiseaux-nicheurs {
-    background-image: url("../img/oiseaux-nicheurs.jpg");
+    background-image: url("../img/decors-mascotte-oiseauxnicheurs.png");
 }
 
 #rhopalocères {
-    /*background-image: url("../img/rhopaloceres.jpg");*/
-    background-color: red;
+    background-image: url("../img/decors_rhopaloceres.png");
 }
 
 #odonates {
     /*background-image: url("../img/odonates.jpg");*/
-    background-color: green;
+    background-color: #FBC5EB;
 }
 
 #chiroptères {
     /*background-image: url("../img/chiropteres.jpg");*/
-    background-color: dodgerblue;
+    background-color: #FBC5EB;
 }
 
 #mammiferes {
-    /*background-image: url("../img/mammiferes.jpg");*/
-    background-color: aqua;
+    background-image: url("../img/decors-mammiferes.png");
 }
 
 #reptiles {
-    /*background-image: url("../img/reptiles.jpg");*/
-    background-color: blueviolet;
+    background-image: url("../img/decors-mascotte-reptiles.png");
 }
 
 #amphibiens {
-    /*background-image: url("../img/amphibiens.jpg");*/
-    background-color: gold;
+    background-image: url("../img/decors-mascotte-amphibiens.png");
 }
 
 .swiper-slide img {
@@ -87,9 +73,16 @@ body {
 
 .swiper-slide .commune {
     position: absolute;
-    color: white;
-    margin-top: -80%;
+    margin-top: -100%;
     font-size: 4vh;
+}
+
+.green {
+    color: #0B6E5F;
+}
+
+.white {
+    color: #FFF8F1;
 }
 
 .button {
@@ -156,7 +149,6 @@ body {
 }
 
 .swiper-button-prev {
-    color: #0B6E5F;
     background-image: url("../img/fleche_verte.png") !important;
     background-repeat: no-repeat;
     background-position: center;
@@ -169,7 +161,6 @@ body {
 }
 
 .swiper-button-next {
-    color: #0B6E5F;
     background-image: url("../img/fleche_verte.png") !important;
     background-repeat: no-repeat;
     background-position: center;
@@ -182,15 +173,5 @@ body {
 }
 
 
-.vertical-arrow {
-    position: fixed;
-    margin-top: 40vh;
-    margin-right: 29vh;
-    color: #0B6E5F;
-    background-size: contain;
-    width: 2vh;
-    height: 2vh;
-    rotate: 90deg;
-}
 
 
