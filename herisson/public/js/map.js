@@ -7,18 +7,24 @@ const createMap = async function (taxon) {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    async function getCommuneData(taxon) {
-        const response = await fetch('data/additionalDB.json');
-        const data = await response.json();
-        return data[taxon];
+    async function getAnimalData(taxon) {
+        const dataAnimal = await
+        fetch(`http://127.0.0.1:8080/herisson/api/animal/${taxon}`)
+            .then(response => response.json())
+            .then(data => {
+                return data.filteredData[taxon];
+            }
+            );
+        return dataAnimal;
     }
 
-    const communeData = await getCommuneData(taxon);
+    const animalData = await getAnimalData(taxon);
+    console.log(animalData);
     let geojson;
 
     $.getJSON("https://france-geojson.gregoiredavid.fr/repo/regions/nouvelle-aquitaine/communes-nouvelle-aquitaine.geojson", function (data) {
         const geoData = data.features.map(feature => {
-            const match = communeData.listCities.find(city => feature.properties.nom === city.commune);
+            const match = animalData.listCities.find(city => feature.properties.nom === city.commune);
             if (match) {
                 feature.properties.nb_obs = match.nb_obs;
                 return feature;
@@ -88,7 +94,7 @@ const createMap = async function (taxon) {
 
     $.getJSON("https://france-geojson.gregoiredavid.fr/repo/regions/nouvelle-aquitaine/communes-nouvelle-aquitaine.geojson", function (data) {
         const mappedData = data.features.map(feature => {
-            const matchingCommune = communeData.listCities.find(city => city.commune === feature.properties.nom);
+            const matchingCommune = animalData.listCities.find(city => city.commune === feature.properties.nom);
             if (matchingCommune) {
                 feature.properties.nb_obs = matchingCommune.nb_obs;
                 feature.style = {fillColor: getColor(feature.properties.nb_obs)};
@@ -125,7 +131,7 @@ const createMap = async function (taxon) {
     info.addTo(map);
 
 
-    geojson = L.geoJson(communeData, {
+    geojson = L.geoJson(animalData, {
         onEachFeature: onEachFeature
     }).addTo(map);
 
