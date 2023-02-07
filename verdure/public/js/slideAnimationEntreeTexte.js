@@ -8,6 +8,7 @@ const initSlideAnimationEntreeTexte = function(){
     const bas = document.querySelector('#quatre-zones .img_bas');
     const gauche = document.querySelector('#quatre-zones .img_gauche');
     const zones = document.querySelector('#quatre-zones');
+    
 
     // (Re)set initial position of img
   droit.setAttribute('style', 'transform :translateX(300%);');
@@ -61,9 +62,9 @@ setTimeout(()=> {
 };
 
 function UpdateSrcImage(id){
-  document.querySelector(id + ' .img_droit').src = './img/'+selectedZone[1]+'.png';
-  document.querySelector(id+' .img_haut').src =  './img/'+selectedZone[0]+'.png';
-  document.querySelector(id+' .img_bas').src =  './img/'+selectedZone[2]+'.png';
-  document.querySelector(id+' .img_gauche').src =  './img/'+selectedZone[3]+'.png';
+  document.querySelector(id + ' .img_bas').src = './img/'+selectedZone[1]+'.png';
+  document.querySelector(id + ' .img_gauche').src =  './img/'+selectedZone[0]+'.png';
+  document.querySelector(id + ' .img_haut').src =  './img/'+selectedZone[2]+'.png';
+  document.querySelector(id + ' .img_droit').src =  './img/'+selectedZone[3]+'.png';
 
 }

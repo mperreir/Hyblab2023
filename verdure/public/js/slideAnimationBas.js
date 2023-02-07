@@ -4,6 +4,8 @@ const initSlideAnimationBas = function(){
 
   UpdateSrcImage('#animationSlideBas');
   const droit = document.querySelector('#animationSlideBas .img_droit');
+  var route = document.getElementById('route1');
+  route.style.opacity = "0";
 
     // (Re)set initial position of img
   droit.setAttribute('style', 'transform :scale(1);');
@@ -15,7 +17,7 @@ const initSlideAnimationBas = function(){
    * GREEN TON place
    */
 
-  var logo2 = document.querySelector('.greenTa');
+  var logo2 = document.querySelector('#logoSlideBas');
 
   // (Re)set initial scale of logo
   logo2.setAttribute('style', 'transform : translateY(-50vh);');
@@ -51,14 +53,14 @@ const initSlideAnimationBas = function(){
     delay : 1200
   });
 
-  anime({
-    targets : "#animationSlideBas .route",
-    scale:0,
-    delay : 100,
-    easing: 'easeInOutSine',
-    direction: 'normal',
-    duration :2000,
-  })
+  // anime({
+  //   targets : "#animationSlideBas .route",
+  //   scale:0,
+  //   delay : 100,
+  //   easing: 'easeInOutSine',
+  //   direction: 'normal',
+  //   duration :2000,
+  // })
 
   
 
@@ -76,6 +78,6 @@ const initSlideAnimationBas = function(){
 
   setTimeout(()=> {
     swiper.enable()
-    swiper.slideTo(9,1)
+    swiper.slideTo(5,1)
  },5000)
 };

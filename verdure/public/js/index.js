@@ -1,12 +1,12 @@
 "use strict";
 
-
-//TODO AJUSTER A LA VALEUR DE DEBUT
 let IndicThermo = 85;
 let IndicMoney = 80;
 let IndicHappy = 50;
 
 let next_Question = 1
+
+
 // Init of the (touch friendly) Swiper slider
 let swiper = new Swiper("#mySwiper", {
   direction: "vertical",
@@ -31,11 +31,12 @@ swiper.on("slideChange", function () {
     case 3:
       initSlideAnimationEntreeTexte();
       break;
+
     case 4: 
-    console.log(IndicHappy)
-    swiper.disable();
-      initSlideAnimationDroit();
+      swiper.disable();
+      initSlideAnimationBas();
       break;
+
     case 5: 
       if(next_Question == 2){
       swiper.disable();
@@ -43,6 +44,7 @@ swiper.on("slideChange", function () {
       }
       else(swiper.slideTo(7,1))
       break;
+
     case 6: 
     if(next_Question == 3){
       swiper.disable();
@@ -50,11 +52,13 @@ swiper.on("slideChange", function () {
       }
       else(swiper.slideTo(7,1))
       break;
+
     case 7: 
       initSlideAnimationEntree();
       break;
     case 8: 
-      initSlideAnimationBas();
+      swiper.disable();
+      initSlideAnimationHaut();
       break;
 
     case 9: 
@@ -81,23 +85,24 @@ swiper.on("slideChange", function () {
       else(swiper.slideTo(12,1))
       break;
 
-    //case 12: 
-      // initSlideAnimationEntree();
-    //break;
-
     case 12: 
-        initSlideAnimationGauche();
+       initSlideAnimationEntree2();
     break;
 
     case 13: 
+        swiper.disable();
+        initSlideAnimationDroit();
+    break;
+
+    case 14: 
     if(next_Question == 7){
       swiper.disable();
       initSlideQuestion7(next_Question);
       }
-      else(swiper.slideTo(14,1))
+      else(swiper.slideTo(15,1))
     break;
 
-    case 14: 
+    case 15: 
       initEndSlide();
     break;
 
@@ -124,4 +129,4 @@ setTimeout(() => {
 }, 1);
 
 
-let selectedZone = ["boulevard", "parking", "place", "friche"]; // the value of which image to take for each Zone
+let selectedZone = ["b&w_boulevard", "b&w_parking", "b&w_place", "b&w_friche"]; // the value of which image to take for each Zone

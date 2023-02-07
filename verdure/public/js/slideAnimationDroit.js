@@ -5,13 +5,15 @@ const initSlideAnimationDroit = function(){
 
   UpdateSrcImage('#animationSlideDroit');
   const droit = document.querySelector('#animationSlideDroit .img_droit');
+  let route = document.getElementById('route3');
+    route.style.opacity = 0;
 
     // (Re)set initial position of img
   droit.setAttribute('style', 'transform :scale(1);');
 
   // Animate it
   /********************LOGO */
-  var logo2 = document.querySelector('.greenTa');
+  var logo2 = document.querySelector('#logoSlideDroit');
 /*******
    * GREEN TON parking
    */
@@ -73,7 +75,7 @@ const initSlideAnimationDroit = function(){
 
   setTimeout(()=> {
     swiper.enable()
-    swiper.slideTo(5,1)
+    swiper.slideTo(14,1)
  },5000)
   
 };

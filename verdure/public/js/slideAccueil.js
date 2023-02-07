@@ -15,6 +15,14 @@ const initSlideAccueil = async function(){
     easing: 'easeOutBounce'
   });
 
+  anime({
+    targets :'#scroll',
+    translateY: 10,
+    direction: 'alternate',
+    easing: 'easeInOutSine',
+    loop : true
+  })
+
   // Add click listener
   logo.addEventListener('click', () => {
     anime({

@@ -50,8 +50,8 @@ body{
 
 /* the slides and the loader should fill the whole 9:16 zone */
 .swiper-wrapper section, #loader{
-    background: rgb(63,94,251);
-    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,252,146,1) 100%);
+    background: rgb(180, 219, 251);
+    /*background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,252,146,1) 100%);*/
     width: 100%;
     height: 100%;
 }
@@ -190,9 +190,9 @@ SLIDE ACCUEIL
 
 #logo-verdure{
     text-align: center;
-    width: 50%;
+    width: 70%;
     left: 50%;
-    top: 10%;
+    top: 5%;
     margin-left:-25%;
     margin-top:calc(-7.5% * 9 / 16 ); /* margins are relative to the element width... :-( */
     position: absolute;
@@ -216,9 +216,9 @@ SLIDE QUESTION
 
 .indic{
     text-align: center;
-    width: 10%;
-    left: 70%;
-    top: 90%;
+    width: 8%;
+    left: 72%;
+    top: 94%;
     margin-left: -25%;
     margin-top: calc(-7.5% * 9 / 16 ); /* margins are relative to the element width... :-( */
     position: absolute;
@@ -230,7 +230,6 @@ SLIDE QUESTION
 
 
 .question-slide{
-
     background-position-y: 0;
     transition: background-position-y 1s;
 }
@@ -270,7 +269,7 @@ SLIDE ANIMATION SORTIE+ZOOM
 
 .img_bas{
     position: absolute;
-    top: 47.6%;
+    top: 47.7%;
     text-align: center;
     left: 32%;
 }
@@ -284,14 +283,14 @@ SLIDE ANIMATION SORTIE+ZOOM
 
 .img_gauche{
     position: absolute;
-    top: 39.55%;
+    top: 41.5%;
     text-align: center;
     left: 7.5%;
 }
 
 .img_droit{
     position: absolute;
-    top: 41.3%;
+    top: 41.5%;
     text-align: center;
     right: 3%;
 }
@@ -305,10 +304,15 @@ SLIDE ANIMATION SORTIE+ZOOM
     text-align: center;
 }
 
+#route1, #route2, #route3{
+opacity: 100;
+transition : opacity 1s;
+}
+
 /*************************
 ANIMATION ENTREE 
 *************************/
-
+/* 
 .img_gauche_Entree, .img_bas_Entree, .img_droit_Entree, .img_haut_Entree {
     width: 40%;
     height: auto;
@@ -343,7 +347,7 @@ ANIMATION ENTREE
     top: 41.3%;
     text-align: center;
     right: 3%;
-}
+} */
 /********************************
 INDICATEUR
 *******************************/
@@ -761,37 +765,3 @@ GREENTA
 /*******************
 Slide video
 ******************/
-
-video{
-    /* position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    object-fit: cover; */
-
-    /* position :absolute;
-  top :0;
-  left: 0;
-  display :block;
-  width :150%;
-  height :100%;
-  object-fit :cover; */
-}
-
-.bloc{
-    position: relative;
-    height: 100%;
-    width: 100%;
-    /* overflow: hidden; */
-}
-
-.bloc video{
-    position: absolute;
-    min-width: 100%;
-    min-height: 100%;
-    /* top: 50%;
-    left: 50%; */
-    /* z-index: -100; */
-    /* transform: translate(-50%,-50%); */
-}

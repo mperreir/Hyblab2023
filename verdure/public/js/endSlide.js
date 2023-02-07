@@ -45,16 +45,16 @@ async function loadTextindic(Happy,Money,Thermo){
     let pHappy = document.getElementById('final-happy');
 
     if( 70 < Thermo){pThermo.innerHTML = "Malheuresement la température de votre ville n'a pas baissé!";}
-    else if( 50 < Thermo){pThermo.innerHTML = "Encourageant, la température de votre ville a légérement baissé!";}
-    else{pThermo.innerHTML = "Bravo, la température à fortement chuté dans votre ville !";}
+    else if( 50 < Thermo){pThermo.innerHTML = "C'est encourageant, la température de votre ville a légérement baissé! Continuez dans cette voix";}
+    else{pThermo.innerHTML = "Bravo, la température à fortement chuté dans votre ville ! Vous êtes engagé pour sauver le climat";}
 
-    if( 70 < Money){pMoney.innerHTML = "Félicitation! Il vous reste beaucoup d'argent";}
-    else if( 50 < Money){pMoney.innerHTML = "Vous avez su dépenser de façon à garder des dépenses équilibrées";}
+    if( 70 < Money){pMoney.innerHTML = "Il vous reste beaucoup d'argent. Peut-être auriez vous pu dépenser un peu plus pou réaliser des choix impactants";}
+    else if( 50 < Money){pMoney.innerHTML = "Vous avez su dépenser de façon à garder des dépenses équilibrées. Félications !";}
     else{pMoney.innerHTML = "Attention ! Vous avez beaucoup dépensé. Mais finalement n'est ce pas une étape obligatoire dans cette lutte ?";}
 
-    if( 70 < Happy){pHappy.innerHTML = "Félicitation! Votre population est très heureuse";}
+    if( 70 < Happy){pHappy.innerHTML = "Félicitation! Votre population est très heureuse.";}
     else if( 50 < Happy){pHappy.innerHTML = "Vous avez su faire les bons choix pour garder une population satisfaite";}
-    else{pHappy.innerHTML = "Attention ! Vos choix ont beaucoup inpacté votre population";}
+    else{pHappy.innerHTML = "Attention ! Vos choix ont beaucoup inpacté votre population. Il ne faut pas que cela s'aggrave dans le futur";}
 }
 
 const toggleDropdownShareMenu = function () {

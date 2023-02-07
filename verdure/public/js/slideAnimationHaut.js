@@ -5,6 +5,8 @@ const initSlideAnimationHaut = function(){
 
   UpdateSrcImage('#animationSlideHaut');
   const haut = document.querySelector('.img_haut');
+  let route = document.getElementById('route2');
+    route.style.opacity = 0;
     
 
     // (Re)set initial position of img
@@ -51,5 +53,9 @@ const initSlideAnimationHaut = function(){
     duration :2000,
   })
 
+  setTimeout(()=> {
+    swiper.enable()
+    swiper.slideTo(9,1)
+ },5000)
 
 };
