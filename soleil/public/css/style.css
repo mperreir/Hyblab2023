@@ -369,6 +369,9 @@ header{
     display: inline-block;
     margin-right: 5%;
 }
+.choix-logement{
+    margin-top: 10%;
+}
 
 .img-pente{
     width: 80%;
