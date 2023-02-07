@@ -15,7 +15,7 @@ const initSlideAnimationBas = function(){
    * GREEN TON place
    */
 
-  var logo2 = document.querySelector('.greenTa');
+  var logo2 = document.querySelector('#logoSlideBas');
 
   // (Re)set initial scale of logo
   logo2.setAttribute('style', 'transform : translateY(-50vh);');

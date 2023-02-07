@@ -11,7 +11,7 @@ const initSlideAnimationDroit = function(){
 
   // Animate it
   /********************LOGO */
-  var logo2 = document.querySelector('.greenTa');
+  var logo2 = document.querySelector('#logoSlideDroit');
 /*******
    * GREEN TON parking
    */

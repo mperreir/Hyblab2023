@@ -15,7 +15,7 @@ const initSlideAnimationGauche = function(){
    * GREEN TON friche
    */
 
-  var logo2 = document.querySelector('.greenTa');
+  var logo2 = document.querySelector('#logoSlideGauche');
 
   // (Re)set initial scale of logo
   logo2.setAttribute('style', 'transform : translateY(-50vh);');
