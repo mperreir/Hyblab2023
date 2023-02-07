@@ -2,7 +2,7 @@
 
 let next0 = document.getElementById("next0")
 next0.addEventListener("click", () => {
-  display("s1")
+  display("s3")
 })
 
 let next1 = document.getElementById("next1")
@@ -21,7 +21,7 @@ next3_2.addEventListener("click", () => {
 })
 
 let next4_1 = document.getElementById("next4_1")
-next4_1.addEventListener("click", () => {
+next4_1.addEventListener("mouseup", () => {
   display("s5")
 })
 
@@ -31,7 +31,7 @@ next4_2.addEventListener("click", () => {
 })
 
 function display(id) {
-  let slides = document.getElementsByClassName("swiper-slide")
+  let slides = document.getElementsByClassName("slides")
   for (let slide of slides) {
     slide.style.display = 'none'
   }
@@ -52,5 +52,10 @@ setTimeout(() => {
     easing: 'easeOutQuad',
   });
   // Init first slide
-  initSlide1();
 }, 1000);
+
+var mySwiper = new Swiper('.swiper-container', {
+  pagination: {
+    el: '.swiper-pagination',
+  },
+});
