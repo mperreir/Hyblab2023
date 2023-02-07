@@ -5,6 +5,11 @@ const initSlide1 = async function(){
   let response = await fetch('../data/data.json');
   const data = await response.json();
 
+  /*
+  let map_response = await fetch('../api/energy/test');
+  const data_map = await map_response.json();
+  */
+
   function mise_en_forme(data) {
     // Slide 1
     document.querySelector('#introduction').innerHTML = data.intro;
@@ -36,5 +41,5 @@ const initSlide1 = async function(){
   const data_filter = data.main.filter(function(item){return item.name === "La mer";})[0]
   mise_en_forme(data_filter);
   initSlide2(data_filter);
-  initSlide3(data_filter);
+  initSlide3(data_filter, []);
 };
