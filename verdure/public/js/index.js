@@ -21,7 +21,7 @@ swiper.on("slideChange", function () {
   switch( swiper.activeIndex ) {
    
     case 0:
-      swiper.disable();
+      
       initSlideVideo();
       break;
 

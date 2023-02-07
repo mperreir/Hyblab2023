@@ -11,9 +11,10 @@
 body {
     
     background-color: black;
+    color: white;
+    overflow: hidden;   /* to avoid slider bugs on some browsers */
+    font-family: raleway, sans-serif;
     color: #282828;
-    overflow: hidden; /* to avoid slider bugs on some browsers */
-    font-family: raleway;
 }
 
 /* -------------- Loader --------------*/
