@@ -16,7 +16,8 @@
 
 <body>
 <!-- Swiper -->
-<div class="swiper-container">
+<!-- Swiper horizontal -->
+<div class="swiper-container horizontal-slider">
     <div class="swiper-wrapper">
         <div class="swiper-slide" id="oiseaux-nicheurs">
             <h1 class="commune" >BORDEAUX</h1>
@@ -68,8 +69,10 @@
             <a class="groupe">Choisissez votre groupe</a>
         </div>
     </div>
-    <div class="swiper-button-next"></div>
+    <!-- Arrows -->
     <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <!-- Pagination -->
     <div class="swiper-pagination"></div>
 </div>
 
@@ -77,8 +80,20 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 <!-- Initialize Swiper -->
+<!--
 <script>
-    var swiper = new Swiper(".swiper-container", {
+    var swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        spaceBetween: 50,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+        navigation: {
+            nextEl: "swiper-button-next",
+        },
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
         slidesPerView: 1,
         spaceBetween: 30,
         loop: true,
@@ -92,6 +107,32 @@
         },
     });
 </script>
-</body>
+-->
+<script>
+    /*
+    // Slider vertical
+    var verticalSlider = new Swiper('.vertical-slider', {
+        direction: 'vertical',
+        initialSlide: 0,
+        navigation: {
+            nextEl: '.vertical-arrow'
+        },
+    });
+    */
 
+    // Slider horizontal
+    var horizontalSlider = new Swiper('.horizontal-slider', {
+        loop: true,
+        nested: true,
+        navigation: {
+            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+</script>
+</body>
 </html>

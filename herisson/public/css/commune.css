@@ -1,14 +1,30 @@
 body {
     position: relative;
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.swiper-container {
-    font-family: Prompt, Helvetica Neue, Helvetica, Arial, sans-serif;
+.swiper-wrapper {
+    align-items: center
+}
+
+.vertical-slider {
+    font-family: Prompt, sans-serif;
     font-size: 14px;
     color: #0B6E5F;
     margin: 0;
     padding: 0;
+    height: 100vh;
+}
+
+.horizontal-slider {
+    font-family: Prompt, sans-serif;
+    font-size: 14px;
+    color: #0B6E5F;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
 }
 
 .swiper {
@@ -22,6 +38,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #FBC5EB;
+    font-family: 'Prompt', sans-serif;
+    color : #0B6E5F;
 }
 
 
@@ -73,14 +92,8 @@ body {
     font-size: 4vh;
 }
 
-.swiper {
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .button {
     border: none;
-    color: white;
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
@@ -135,6 +148,7 @@ body {
     border: 7px solid #0B6E5F;
 }
 
+
 .swiper-button-prev {
     color: #0B6E5F;
     background-size: contain;
@@ -152,3 +166,17 @@ body {
     margin-right: 1vh;
     top: 50vh;
 }
+
+
+.vertical-arrow {
+    position: fixed;
+    margin-top: 40vh;
+    margin-right: 29vh;
+    color: #0B6E5F;
+    background-size: contain;
+    width: 2vh;
+    height: 2vh;
+    rotate: 90deg;
+}
+
+
