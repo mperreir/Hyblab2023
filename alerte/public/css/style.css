@@ -139,6 +139,14 @@ header img,
     background-image: url('../img/utils/btn/btn-next.svg');
 }
 
+#next13_1 {
+    background-image: url('../img/utils/btn/btn-next.svg');
+}
+
+#next13_2 {
+    background-image: url('../img/utils/btn/btn-next.svg');
+}
+
 .next-btn {
     background-position: center center;
     background-size: cover;
