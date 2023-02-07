@@ -58,3 +58,7 @@ main#map {
 .display-none {
     display: none;
 }
+
+.leaflet-map-pane .leaflet-tile-pane {
+    filter: brightness(85%);
+}
