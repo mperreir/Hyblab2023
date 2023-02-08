@@ -33,7 +33,7 @@ function onCheck(event) {
 
         if (themeSelected.length === 1) {
             document.getElementById('modal').style.display = 'block';
-            document.getElementById('modal-close').addEventListener('click', function () {
+            document.getElementById('modal-close').addEventListener('click', function (e) {
                 document.getElementById('modal').style.display = 'none';
             })
 
@@ -47,26 +47,37 @@ function onCheck(event) {
 }
 document.addEventListener("DOMContentLoaded", function() {
     const themes = document.querySelectorAll('#liste-theme ul li');
+    console.log(window.localStorage.getItem("themes"));
+    if (window.localStorage.getItem("themes") === null){
+        themes.forEach((t) => {
+            const theme = t.querySelector('img');
+            let nomtheme = theme.getAttribute('alt');
+            ajouteTheme(nomtheme);
+            t.addEventListener('click', onCheck);
+        });
+    }else {
+        themeSelected = localStorage.getItem('themes').split(',');
+
+        themes.forEach((t) => {
+            const theme = t.querySelector('img');
+            let nomtheme = theme.getAttribute('alt');
+            if (!themeSelected.includes(nomtheme)){
+                t.classList.add('unchecked');
+            }
+            t.addEventListener('click', onCheck);
+
+        });
 
 
-    themes.forEach((t) => {
-        const theme = t.querySelector('p');
-        let nomtheme = theme.textContent;
-        ajouteTheme(nomtheme);
-        t.addEventListener('click', onCheck);
-
-    });
 
 
-
-    themeSelected = localStorage.getItem('themes').split(',');
-
-    themes.forEach(tc => {
-        const img = tc.querySelector('img');
-        const themeName = img.getAttribute('alt');
-        if(themeSelected.includes(themeName)) {
-            tc.classList.remove('unchecked');
-        }
-    });
+        themes.forEach(tc => {
+            const img = tc.querySelector('img');
+            const themeName = img.getAttribute('alt');
+            if (themeSelected.includes(themeName)) {
+                tc.classList.remove('unchecked');
+            }
+        });
+    }
 });
 
