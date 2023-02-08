@@ -23,32 +23,46 @@
       <div id="header-icons">
         <div id="credits-audio"> <!--flexbox pour rassembler les icones credits et audio-->
           <a href="a_propos.html">
-            <img id="credits"  src="./img/ux_kit/Crédits_white.svg">
+            <img id="credits" src="./img/ux_kit/Crédits_white.svg">
           </a>
           <a href="#">
-          <img id="unlock_audio" src="./img/ux_kit/Son_off.svg">
-          <audio controls id="audio" muted autoplay loop hidden>
-            <source src="sound/jingleSncf.mp3" type="audio/mpeg">
-            <source src="sound/jingleSncf.ogg" type="audio/ogg">
-          </audio>
+            <img id="unlock_audio" src="./img/ux_kit/Son_off.svg">
+            <audio controls id="audio" muted autoplay loop hidden>
+              <source src="sound/jingleSncf.mp3" type="audio/mpeg">
+              <source src="sound/jingleSncf.ogg" type="audio/ogg">
+            </audio>
           </a>
         </div>
         <a href="#">
-        <img id="logo" src="./img/Logo_white.svg">
-          </a>
+          <img id="logo" src="./img/Logo_white.svg">
+        </a>
         <a href="achievement.html">
           <img id="trophe" src="./img/ux_kit/Trophee_white.svg">
         </a>
 
       </div>
 
-      <div id="popup" class="popup" onclick="manger()">
-        <span class="popuptext" id="myPopup">C'est l'heure de manger</span>
+      <div id="popup" class="popup">
+        <div class="text">
+          <span class="popuptext" id="myPopup">
+            <div>Il est 12:30, c'est l'heure du repas</div>
+            <div>Que voulez vous faire ?</div>
+          </span>
+        </div>
+        <div class="popup-bouton">
+          <button id="pipi" onclick="toilette()" class="bouton-repas">
+            <div class="text-bouton">Faire pipi</div>
+          </button>
+          <button id="manger" onclick="manger()" class="bouton-repas">
+            <div class="text-bouton">Manger</div>
+          </button>
+        </div>
       </div>
 
       <div id="map">
         <?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="1523 1380 1200 1550"> <!--style="filter: drop-shadow(5px 7px 5px rgb(0 0 0 / 0.3));"-->
+          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="1523 1380 1200 1550">
+          <!--style="filter: drop-shadow(5px 7px 5px rgb(0 0 0 / 0.3));"-->
           <defs>
 
             <filter id="saturation0">
@@ -1982,18 +1996,18 @@
         <span style="font-size: 4vh;"> <input id="steps" type="button" value=" 0/8 " disabled>🌻</span>
         <span style="font-size: 4vh;">🕔<input id="heure" type="button" value=" 8:00 " disabled></span>
       </div>
-      
+
     </div>
   </div>
   <div id="myModal" class="modal">
 
     <!-- Modal content -->
     <div class="modal-content">
-      <p>👉<br/>Clique sur la carte pour commencer l'aventure !🌷</p>
+      <p>👉<br />Clique sur la carte pour commencer l'aventure !🌷</p>
     </div>
-  
+
   </div>
-  
+
 </body>
 
 </html>
