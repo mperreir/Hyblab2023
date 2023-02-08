@@ -32,18 +32,21 @@ ul#liste-profils {
     height: 100%;
 }
 
+ul#liste-profils::-webkit-scrollbar-track {
+    background: red;
+}
+
 ul#liste-profils li {
     height: 35vh;
     width: 100%;
 }
 
 
-
 .fiche-minia {
     user-select: none;
     width: 100%;
     height: 100%;
-    border-radius: 40px;
+    border-radius: 1em;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     background: var(--gris-clair);
 }
@@ -57,7 +60,7 @@ ul#liste-profils li {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 15px 0 0 15px;
+    border-radius: 1em 0 0 1em;
 }
 
 .information-fiche {
@@ -67,6 +70,10 @@ ul#liste-profils li {
 
 .information-fiche > div {
     margin-left: 5%;
+}
+
+.information-fiche > div > section {
+    margin: 5% 0 5% 0;
 }
 
 .overflow-buttons-top {
@@ -96,11 +103,36 @@ ul#liste-profils li {
     transform: translateY(-50%);
     margin-right: 10%;
     font-size: 1em;
-    height: 100%;
-    width: 25%;
-    padding: 2% 0 2% 0;
+    padding: 3%;
 }
 
+.bouton {
+    font-family: 'Poppins', sans-serif;
+    color: var(--bleu-fonce);
+    border-radius: 500px;
+    padding: 3%;
+    border: none;
+    background: var(--blanc-fond);
+    font-size: 0.5em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
+}
+
+.bouton:hover {
+    cursor: pointer;
+    color: var(--blanc-fond);
+    background: var(--bleu-fonce);
+}
+
+
+#fermeture-miniature {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 20%;
+    width: 10%;
+    height: 10%;
+}
 
 #folder{
     height: 85%;

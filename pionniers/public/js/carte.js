@@ -4,9 +4,11 @@
 //
 // TODO : interaction de la miniature avec le swipe dans le dossier
 //
-// TODO : interdire la suppression des topics selectionnés s'il n'en reste plus qu'un
-//
 // TODO : si l'utilisateur accède direct à la carte, cocher tous les topics par défaut
+//
+// TODO : bien cancel la déselection des topics quand il ne reste plus qu'un topic
+//
+// TODO : supprimer l'overlay après avoir mis dans le dossier et reinitialiser la position de la miniature
 
 /*
   ----------------------------------------------------------------------------------------------------------------------
@@ -562,4 +564,78 @@ document.addEventListener("DOMContentLoaded", function () {
         // Undisplay the popup
         document.querySelector('main div#popup').classList.add('display-none');
     });
+    // Manage the swipe action on the miniature
+    const miniature = document.querySelector('main div#miniature-related');
+    const hammer = new Hammer(miniature);
+    hammer.add(new Hammer.Pan({
+        position: Hammer.position_ALL,
+        threshold: 0
+    }));
+    hammer.on('pan', onPan);
+
+    const folder = document.querySelector('#folder');
+
+    folder.addEventListener('click', () => {
+        window.location.href = './profils-enregistres.html';
+        window.localStorage.setItem('pagePrecedente', "carte");
+    });
 });
+
+/*
+  ----------------------------------------------------------------------------------------------------------------------
+  | Swipe action management                                                                                            |
+  ----------------------------------------------------------------------------------------------------------------------
+ */
+function onPan(e) {
+    const miniature = document.querySelector('main div#miniature-related');
+    // Remove transition properties
+    miniature.style.transition = null;
+    // Get miniature coordinates
+    let style = window.getComputedStyle(miniature);
+    let mx = style.transform.match(/^matrix\((.+)\)$/);
+    let startPosX = mx ? parseFloat(mx[1].split(', ')[4]) : 0;
+    let startPosY = mx ? parseFloat(mx[1].split(', ')[5]) : 0;
+    // Get top card bounds
+    let bounds = miniature.getBoundingClientRect();
+    // Get finger position on top card, top (1) or bottom (-1)
+    let isDraggingFrom = (e.center.y - bounds.top) > miniature.clientHeight / 2 ? -1 : 1;
+    // Get new coordinates
+    let posX = e.deltaX + startPosX;
+    let posY = e.deltaY + startPosY;
+    // Get ratio between swiped pixels and the axes
+    let propX = e.deltaX / miniature.clientWidth;
+    let propY = e.deltaY / miniature.clientHeight;
+    // Get swipe direction, left (-1) or right (1)
+    let dirX = e.deltaX < 0 ? -1 : 1;
+    // Get degrees of rotation, between 0 and +/- 45
+    let deg = isDraggingFrom * dirX * Math.abs(propX) * 45;
+    // Get scale ratio, between .95 and 1
+    let scale = (95 + (5 * Math.abs(propX))) / 100;
+
+    let successful = false;
+    // Check if the card is dragged down
+    if (propY < 30 && e.direction === Hammer.DIRECTION_DOWN) {
+        successful = true;
+        // Get top border position
+        posY = +(miniature.clientHeight + miniature.clientHeight);
+    }
+
+    if (e.isFinal && successful) {
+        let start = null;
+        let duration = 1000; // 1 second
+
+        function animation(timestamp) {
+            if (!start) start = timestamp;
+            let progress = timestamp - start;
+            let translateY = posY * (progress / duration);
+            miniature.style.transform = `translateX(${posX}px) translateY(${translateY}px) rotate(${deg}deg)`;
+            if (progress < duration) {
+                requestAnimationFrame(animation);
+            } else {
+                console.log('transition finished');
+            }
+        }
+
+        requestAnimationFrame(animation);
+    }
+}

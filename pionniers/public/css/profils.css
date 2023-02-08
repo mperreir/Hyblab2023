@@ -2,20 +2,70 @@ html, body {
     padding: 0;
     margin: 0;
 }
+
 html {
     height: 100vh;
 }
+
 body {
     height: 100vh;
+}
+
+header {
+    position: sticky;
+    top: 0;
 }
 
 #container > * {
     width: 75%;
 }
 
+#retour {
+    margin-right: auto;
+}
+
+#petit-rond {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: calc(3vh + 3vw);
+    width: 4vh;
+    height: 4vh;
+    color: var(--bleu-fonce);
+    background: var(--blanc-fond);
+    border-radius: 100px;
+    margin-left: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
+}
+
 
 #profils {
     background-color: var(--gris-clair);
+    border-radius: 15px;
 
+}
 
+.photo-case {
+    height: 100%;
+    width: 40%;
+}
+
+.photo-case img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 15px 0 0 15px;
+}
+
+#identity {
+    padding: 0 0.5em 0 0.5em;
+}
+
+#resume {
+    align-self: start;
+    height: fit-content;
+    width: 100%;
+    height: 25%;
 }

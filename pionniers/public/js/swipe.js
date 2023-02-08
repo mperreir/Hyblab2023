@@ -5,7 +5,7 @@ let carouselList = document.querySelector('.carousel-list');
 let carouselItems = document.querySelectorAll('.carousel-item');
 let elems = Array.from(carouselItems);
 const swiperSection = document.querySelector('#swiper');
-
+const folderProfilEnr = document.querySelector('#folder');
 
 /*  --------------------------------------------------------
     ------------------ CREATION DOM FICHE ------------------
@@ -492,6 +492,11 @@ swiperSection.addEventListener('click', function (event) {
     }
 });
 
+folderProfilEnr.addEventListener('click', () => {
+    window.location.href = './profils-enregistres.html';
+    window.localStorage.setItem('pagePrecedente', "swipe");
+})
+
 // -----------------------------------------------------
 
 // AU CHARGEMENT DE LA PAGE, RECUPERATION DES VALEUR POUR REMPLIR LES DIFFERENTES COMPOSANTES DE LA PAGE
@@ -559,17 +564,16 @@ function updateDownSwipeListener(current) {
         topcard.style.transition = null
 
         // get top card coordinates in pixels
-        let style = window.getComputedStyle(topcard)
-        let mx = style.transform.match(/^matrix\((.+)\)$/)
-        let startPosX = mx ? parseFloat(mx[1].split(', ')[4]) : 0
-        let startPosY = mx ? parseFloat(mx[1].split(', ')[5]) : 0
+        let style = window.getComputedStyle(topcard);
+        let mx = style.transform.match(/^matrix\((.+)\)$/);
+        let startPosX = mx ? parseFloat(mx[1].split(', ')[4]) : 0;
+        let startPosY = mx ? parseFloat(mx[1].split(', ')[5]) : 0;
 
         // get top card bounds
         let bounds = topcard.getBoundingClientRect()
 
         // get finger position on top card, top (1) or bottom (-1)
         let isDraggingFrom = (e.center.y - bounds.top) > topcard.clientHeight / 2 ? -1 : 1
-
 
         // get new coordinates
         let posX = e.deltaX + startPosX
@@ -591,8 +595,6 @@ function updateDownSwipeListener(current) {
 
         if (e.isFinal) {
             let successful = false
-
-
 
             // check threshold and movement direction
             if (e.direction === Hammer.DIRECTION_RIGHT) {
@@ -625,9 +627,8 @@ function updateDownSwipeListener(current) {
                     // enleve la carte swipe
                     topcard.remove();
                     miseAJourEtatCarousel();
+                    updateFolder();
                 }, 200);
-
-                updateFolder();
             }
         }
     }
