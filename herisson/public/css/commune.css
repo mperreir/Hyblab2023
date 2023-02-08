@@ -156,29 +156,23 @@ body {
 }
 
 .swiper-button-prev {
-    background-image: url("../img/fleche_verte.png") !important;
+    background-image: url("../img/fleche_decor_g.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    width: 4vh;
-    height: 3vh;
+    width: 6vw;
+    height: 8vh;
     margin-left: 1vh;
-    rotate: 90deg;
-    margin-top: 32vh;
+    margin-top: 30vh;
 }
 
 .swiper-button-next {
-    background-image: url("../img/fleche_verte.png") !important;
+    background-image: url("../img/fleche_decor_d.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    width: 4vh;
-    height: 3vh;
+    width: 6vw;
+    height: 8vh;
     margin-right: 1vh;
-    rotate: -90deg;
-    margin-top: 32vh;
+    margin-top: 30vh;
 }
-
-
-
-

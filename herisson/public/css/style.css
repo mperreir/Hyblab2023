@@ -89,7 +89,9 @@ body{
 }
 
 main > section{
-    background-image: url('../img/background.svg');
+    background-color: #FBC5EB;
+    font-family: 'Prompt', sans-serif;
+    color : #0B6E5F;
     background-size: 100% 100%;
 }
 

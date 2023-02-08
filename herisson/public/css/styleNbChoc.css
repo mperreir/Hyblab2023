@@ -3,6 +3,7 @@ body
     background-color: #FBC5EB;
     font-family: 'Prompt', sans-serif;
     color : #0B6E5F;
+    margin: 0;
 }
 
 #nbChoc
@@ -14,6 +15,7 @@ body
     font-weight: 700;
     font-family: 'Prompt', sans-serif;
     color: #FBC5EB;
+    margin-top: 200px;
 }
 
 div
@@ -23,7 +25,7 @@ div
 
 #texteExplication
 {
-    font-size: 60px;
+    font-size: 55px;
     margin-left : 1em;
     margin-right : 1em;
 }
@@ -31,7 +33,7 @@ div
 #texteDanger
 {
     font-size: 45px;
-    margin: 3em 5em 5em;
+    margin: 2.5em 5em 5em;
 }
 
 #nbDanger
@@ -48,9 +50,7 @@ div
     border-radius: 100px;
     width: 90%;
     height: 90%;
-    margin: auto;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin: 2em auto;
 }
 
 /*@keyframes slideUp {*/

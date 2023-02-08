@@ -1,147 +1,157 @@
-window.onload = function() {
-    const header = document.getElementById("headerMenu");
-
-    const divIconeHeader = document.createElement("div");
-    divIconeHeader.id = "iconeHeader";
-
-    const lienLogo = document.createElement("a");
-    lienLogo.href = "main.html";
-    lienLogo.style.textDecoration = "none";
-
-    const imgLogo = document.createElement("img");
-    imgLogo.src = "img/logo_faunare.png";
-    imgLogo.alt = "logo";
-    imgLogo.id = "logo";
-    imgLogo.style.position = "absolute";
-    imgLogo.style.top = "0";
-    imgLogo.style.left = "0px";
-    imgLogo.style.zIndex = "2";
-    imgLogo.style.width = "450px";
-
-    lienLogo.appendChild(imgLogo);
-
-    const imgMenuBurger = document.createElement("img");
-    imgMenuBurger.src = "img/menu.png";
-    imgMenuBurger.alt = "menu";
-    imgMenuBurger.id = "popUpNav";
-    imgMenuBurger.style.position = "absolute";
-    imgMenuBurger.style.top = "50px";
-    imgMenuBurger.style.right = "50px";
-    imgMenuBurger.style.zIndex = "2";
-
-    divIconeHeader.appendChild(lienLogo);
-    divIconeHeader.appendChild(imgMenuBurger);
-    header.appendChild(divIconeHeader);
 
 
-    const divMenu = document.createElement("div");
-    divMenu.id = "texteMenu";
+/////HEADER
 
-    const h1MenuTitre = document.createElement("h1");
-    h1MenuTitre.className = "menuTitre";
-    h1MenuTitre.innerHTML = "MENU";
+const header = document.getElementById("headerMenu");
 
-    const lienSources = document.createElement("a");
-    lienSources.href = "sources.html";
-    lienSources.style.textDecoration = "none";
+const divIconeHeader = document.createElement("div");
+divIconeHeader.id = "iconeHeader";
 
-    const h2Sources = document.createElement("h2");
-    h2Sources.className = "sousTitresMenu";
-    h2Sources.innerHTML = "SOURCES SCIENTIFIQUES";
+const lienLogo = document.createElement("a");
+lienLogo.href = "index.html";
+lienLogo.style.textDecoration = "none";
 
-    lienSources.appendChild(h2Sources);
+const imgLogo = document.createElement("img");
+imgLogo.src = "img/logo_faunare.png";
+imgLogo.alt = "logo";
+imgLogo.id = "logo";
+imgLogo.style.position = "absolute";
+imgLogo.style.top = "0";
+imgLogo.style.left = "0px";
+imgLogo.style.zIndex = "2";
+imgLogo.style.width = "450px";
 
-    const lienContact = document.createElement("a");
-    lienContact.href = "contact.html";
-    lienContact.style.textDecoration = "none";
+lienLogo.appendChild(imgLogo);
 
-    const h2Contact = document.createElement("h2");
-    h2Contact.className = "sousTitresMenu";
-    h2Contact.innerHTML = "CONTACT";
+const imgMenuBurger = document.createElement("img");
+imgMenuBurger.src = "img/menu.png";
+imgMenuBurger.alt = "menu";
+imgMenuBurger.id = "popUpNav";
+imgMenuBurger.style.position = "absolute";
+imgMenuBurger.style.top = "50px";
+imgMenuBurger.style.right = "50px";
+imgMenuBurger.style.zIndex = "2";
 
-    lienContact.appendChild(h2Contact);
+divIconeHeader.appendChild(lienLogo);
+divIconeHeader.appendChild(imgMenuBurger);
+header.appendChild(divIconeHeader);
 
-    const lienCredits = document.createElement("a");
-    lienCredits.href = "credits.html";
-    lienCredits.style.textDecoration = "none";
+/////MENU
 
-    const h2Credits = document.createElement("h2");
-    h2Credits.className = "sousTitresMenu";
-    h2Credits.innerHTML = "CRÉDITS";
+const divMenu = document.createElement("div");
+divMenu.id = "texteMenu";
 
-    lienCredits.appendChild(h2Credits);
+const h1MenuTitre = document.createElement("h1");
+h1MenuTitre.className = "menuTitre";
+h1MenuTitre.innerHTML = "MENU";
 
-    const hrSeparateur = document.createElement("hr");
-    hrSeparateur.className = "ligneSeparation";
+const lienSources = document.createElement("a");
+lienSources.href = "sources.html";
+lienSources.style.textDecoration = "none";
 
-    const pFinMenu = document.createElement("p");
-    pFinMenu.className = "texteFinMenu";
-    pFinMenu.innerHTML = "Nous œuvrons tous ensemble pour préserver les animaux !";
+const h2Sources = document.createElement("h2");
+h2Sources.className = "sousTitresMenu";
+h2Sources.innerHTML = "SOURCES SCIENTIFIQUES";
 
-    divMenu.appendChild(h1MenuTitre);
-    divMenu.appendChild(lienSources);
-    divMenu.appendChild(lienContact);
-    divMenu.appendChild(lienCredits);
-    divMenu.appendChild(hrSeparateur);
-    divMenu.appendChild(pFinMenu);
-    header.appendChild(divMenu);
+lienSources.appendChild(h2Sources);
 
-    imgMenuBurger.addEventListener("click", function () {
+const lienContact = document.createElement("a");
+lienContact.href = "contact.html";
+lienContact.style.textDecoration = "none";
 
-        // Page commune et conseils
+const h2Contact = document.createElement("h2");
+h2Contact.className = "sousTitresMenu";
+h2Contact.innerHTML = "CONTACT";
+
+lienContact.appendChild(h2Contact);
+
+const lienCredits = document.createElement("a");
+lienCredits.href = "credits.html";
+lienCredits.style.textDecoration = "none";
+
+const h2Credits = document.createElement("h2");
+h2Credits.className = "sousTitresMenu";
+h2Credits.innerHTML = "CRÉDITS";
+
+lienCredits.appendChild(h2Credits);
+
+const hrSeparateur = document.createElement("hr");
+hrSeparateur.className = "ligneSeparation";
+
+const pFinMenu = document.createElement("p");
+pFinMenu.className = "texteFinMenu";
+pFinMenu.innerHTML = "Nous œuvrons tous ensemble pour préserver les animaux !";
+
+divMenu.appendChild(h1MenuTitre);
+divMenu.appendChild(lienSources);
+divMenu.appendChild(lienContact);
+divMenu.appendChild(lienCredits);
+divMenu.appendChild(hrSeparateur);
+divMenu.appendChild(pFinMenu);
+header.appendChild(divMenu);
+
+imgMenuBurger.addEventListener("click", function () {
+    // Page commune et conseils
+    try {
         var swiperPrev = document.querySelector('.swiper-button-prev');
         var swiperNext = document.querySelector('.swiper-button-next');
         var pagination = document.querySelector('.swiper-pagination');
+    } catch (error) {
+        console.log(error);
+    }
 
-        if (divMenu.style.display === "block") {
-
-            // Page commune et conseils
+    if (divMenu.style.display === "block") {
+        // Page commune et conseils
+        try {
             swiperPrev.style.display = 'block';
             swiperNext.style.display = 'block';
             pagination.style.display = 'block';
-
-            divMenu.style.left = "100%";
-            setTimeout(function () {
-                divMenu.style.display = "none";
-            }, 1000);
-            anime({
-                targets: imgMenuBurger,
-                scale: [1, 0.5, 1],
-                easing: 'easeInOutQuad',
-                duration: 1000,
-                update: function (anim) {
-                    if (anim.progress < 75) {
-                        imgMenuBurger.src = "img/croix.png";
-                    } else {
-                        imgMenuBurger.src = "img/menu.png";
-                    }
+        } catch (error) {
+            console.log(error);
+        }
+        divMenu.style.left = "100%";
+        setTimeout(function () {
+            divMenu.style.display = "none";
+        }, 1000);
+        anime({
+            targets: imgMenuBurger,
+            scale: [1, 0.5, 1],
+            easing: 'easeInOutQuad',
+            duration: 1000,
+            update: function (anim) {
+                if (anim.progress < 75) {
+                    imgMenuBurger.src = "img/croix.png";
+                } else {
+                    imgMenuBurger.src = "img/menu.png";
                 }
-            });
-        } else {
-
-            // Page commune et conseils
+            }
+        });
+    } else {
+        // Page commune et conseils
+        try {
             swiperPrev.style.display = 'none';
             swiperNext.style.display = 'none';
             pagination.style.display = 'none';
-
-            divMenu.style.display = "block";
-            setTimeout(function () {
-                divMenu.style.left = "0";
-            }, 1);
-            anime({
-                targets: imgMenuBurger,
-                scale: [1, 0.5, 1],
-                easing: 'easeInOutQuad',
-                duration: 1000,
-                update: function(anim) {
-                    if(anim.progress < 75) {
-                        imgMenuBurger.src = "img/menu.png";
-                    } else {
-                        imgMenuBurger.src = "img/croix.png";
-                    }
-                }
-            });
+        } catch (error) {
+            console.log(error);
         }
-    })
+        divMenu.style.display = "block";
+        setTimeout(function () {
+            divMenu.style.left = "0";
+        }, 1);
+        anime({
+            targets: imgMenuBurger,
+            scale: [1, 0.5, 1],
+            easing: 'easeInOutQuad',
+            duration: 1000,
+            update: function(anim) {
+                if(anim.progress < 75) {
+                    imgMenuBurger.src = "img/menu.png";
+                } else {
+                    imgMenuBurger.src = "img/croix.png";
+                }
+            }
+        });
+    }
+});
 
-};
