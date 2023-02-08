@@ -206,13 +206,12 @@ function filterProfilsTrouves() {
  * Met à jour les nodes relatifs au carrousel, utilisés pour le calcul du mouvement de rotation
  */
 function miseAJourEtatCarousel() {
-
-    const cur = elems.find(elem => elem.getAttribute("data-pos") === '0');
-    updateDownSwipe(cur);
-
     carouselList = document.querySelector('.carousel-list');
     carouselItems = document.querySelectorAll('.carousel-item');
     elems = Array.from(carouselItems);
+
+    const cur = elems.find(elem => elem.getAttribute("data-pos") === '0');
+    updateDownSwipeListener(cur);
 }
 
 /**
@@ -265,8 +264,6 @@ async function chercheEtAjouteProfilsCarousel(themeSelected, shuffleResults) {
 
     filterProfilsTrouves();
 
-    console.log("profilsTrouves :", profilsTrouves);
-
     // Recrée le contenu du carousel avec les fiches des profils trouvés
     // (seules les 5 premières sont nécessaires pour avoir un carrousel complet)
     recreeCarouselDeck(profilsTrouves.slice(0, 5));
@@ -313,7 +310,7 @@ function ajouterNouvelleFicheSwipeBas(idFicheSuppr) {
     // Suppresion du profil dans la liste des prochains résultats
     profilsTrouves.splice(indexProfilSuppr, 1);
 
-    const indexNouveauProfil = (indexProfilSuppr + 3) % profilsTrouves.length;
+    const indexNouveauProfil = (indexProfilSuppr + 2) % profilsTrouves.length;
 
     // Ajout du nouveau la fiche du nouveau profil
     const newProfil = profilsTrouves[indexNouveauProfil];
@@ -458,7 +455,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     updateFolder();
 });
 
-function updateDownSwipe(current) {
+function updateDownSwipeListener(current) {
     const topcard = current;
 
     const hammer = new Hammer(topcard)
@@ -514,17 +511,17 @@ function updateDownSwipe(current) {
             let successful = false
 
             // check threshold and movement direction
-            if (e.direction == Hammer.DIRECTION_RIGHT) {
+            if (e.direction === Hammer.DIRECTION_RIGHT) {
 
                 /*update(previouscard);
                 console.log("preced");*/
 
-            } else if (e.direction == Hammer.DIRECTION_LEFT) {
+            } else if (e.direction === Hammer.DIRECTION_LEFT) {
 
                 /*  update(nextcard);
                   console.log("suiv");*/
 
-            } else if (propY < 30 && e.direction == Hammer.DIRECTION_DOWN) {
+            } else if (propY < 30 && e.direction === Hammer.DIRECTION_DOWN) {
 
                 successful = true
                 // get top border position
