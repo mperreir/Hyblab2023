@@ -136,7 +136,7 @@ p{
     /*width: 100%; /* could also use  width: calc(100% - 2em) if not using box-sizing */
     border-radius: 20px;
     width: 90%;
-    font-size: 20%;
+    font-size: x-small;
     text-align: center;
     padding: 1em 1em;
     margin-left: 5%;
