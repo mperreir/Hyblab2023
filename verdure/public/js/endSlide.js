@@ -28,7 +28,7 @@ const initEndSlide = function () {
     textArray.forEach((letter, i) => {
     setTimeout(() => {
         element.innerHTML += letter;
-        }, 40 * i);
+        }, 15 * i);
     });
 });
 
@@ -36,7 +36,7 @@ const initEndSlide = function () {
         $("#endButtons").fadeIn();
         b.style.display = "flex";
         document.getElementById("dropdownShareButton").style.display = "block";
-    }, 5000);
+    }, 3000);
 
 
 

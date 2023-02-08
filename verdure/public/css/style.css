@@ -745,7 +745,7 @@ Derniere slide
 
 #dropdownShareOptions img {
     height: auto;
-    width: 120px;
+    width: 10vh;
 }
 
 #dropdownShareButton, #replayButton{
