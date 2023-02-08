@@ -37,11 +37,11 @@ async function achievement() {
         let htmlDesc = document.createElement('p');
         htmlDesc.classList.add('shortDescription');
         htmlDesc.classList.add(`shortDescription-${achiev.ID}`);
-        htmlDesc.textContent = achiev.shortDescription;
+        htmlDesc.innerHTML = achiev.shortDescription;
 
         let isOpen = false;
 
-        htmlAchiev.addEventListener('click', function () {
+        htmlName.addEventListener('click', function () {
             if (window.localStorage.getItem("achievement".concat(htmlAchiev.id)) == "true") {
                 if (window.localStorage.getItem("achievement".concat(htmlAchiev.id))) {
                     let currentDescription = document.querySelector('.shortDescription');

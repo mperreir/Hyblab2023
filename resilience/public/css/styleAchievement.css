@@ -7,15 +7,14 @@
     font-size: 3vh;
     color: black;
     text-align: center;
-    margin-bottom: 10%;
+    margin-bottom: 5vh;
 }
 
 .achievement {
-
     color: black;
     width: 100%;
     height: auto;
-    font-size: 0.3em;
+    font-size: 10%;
     border-top-right-radius: 3rem;
     border-top-left-radius: 3rem;
     box-sizing: border-box;
@@ -24,22 +23,23 @@
     align-items: center;
     justify-content: left;
     flex-wrap: wrap;
+    padding: 1rem 1rem 3rem;
 }
 
 .achievement:not(:first-of-type) {
-    margin-top: -34%;
+    margin-top: -40px;
 }
 
 .achievement:not(:last-of-type) {
-    padding: 1rem 1rem 8rem;
+    padding: 1rem 1rem 3rem;
 }
 
 #visible {
     color: black;
     width: 100%;
     height: auto;
-    padding: 0em 1em 3em;
-    font-size: 0.3em;
+    padding: 0 1em 3em;
+    font-size: 30%;
     border-top-right-radius: 3rem;
     border-top-left-radius: 3rem;
     box-sizing: border-box;
@@ -85,7 +85,7 @@
 
 
 .shortDescription {
-    display: flex;
+    /*display: flex;*/
     font-size: 1rem;
     color: black;
     flex-basis: 100%;

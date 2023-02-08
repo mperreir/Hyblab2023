@@ -64,6 +64,8 @@ function runConversation() {
                     console.log('Unknown message type : ' + message.type);
             };
         };
+        let dialogue = document.getElementById("dialogue")
+        htmlDialogue.scrollTo(0,dialogue.scrollHeight)
     });
 };
               
@@ -146,6 +148,11 @@ document.getElementById('right-arrow').addEventListener('click', function () {
     window.location = "./map.html"
 
 });
+
+/*
+document.getElementById("dialogue").addEventListener('scroll', function (that) {
+    htmlDialogue.scrollTo(0,1000)
+});*/
 
 initConversation();
 

@@ -11,14 +11,14 @@ h1 {
     overflow-y: auto;
     scroll-behavior: smooth;
     position: absolute;
-    height: 60%;
+    height: 53%;
     width: 100%;
-    top: 40%;
+    top: 45%;
     background-color: white;
     border-top-right-radius: 40px;
     border-top-left-radius: 40px;
 
-    border: 1px solid #000000;
+    border-top: 1px solid #000000;
 }
 #messages {
     margin-bottom: 5rem;
@@ -60,11 +60,11 @@ h1 {
     font-size: 0.2em;
     bottom: 1rem;
     color: black;
-    width: 100%;
+    width: 75%;
     margin-bottom: 0.5rem;
     border: 2px solid red;
-    margin-right: auto;
-    margin-left: auto;
+    float: right;
+    margin-right: 8%;
 }
 
 .choice:hover, .choice:focus{

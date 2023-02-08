@@ -14,6 +14,31 @@
         },
         {
             "type": "message",
+            "name": "Voyageur",
+            "text": "Bonjour Guillaume !"
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Bonjour Guillaume !"
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Bonjour Guillaume !"
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Bonjour Guillaume !"
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Bonjour Guillaume !"
+        },
+        {
+            "type": "message",
             "name": "Guillaume",
             "text": "Bonjour Tristan !"
         },
