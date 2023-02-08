@@ -1,0 +1,1492 @@
+[
+  {
+    "name": "HUBBARD",
+    "rubric_id": "2112",
+    "unite": "u",
+    "departement": 45,
+    "type": "VOLAILLES",
+    "quantite_mean": 2073200.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1.0
+  },
+  {
+    "name": "MARANGER NADINE",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 36,
+    "type": "VOLAILLES",
+    "quantite_mean": 216000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1.0
+  },
+  {
+    "name": "GAEC DE TREGUEE",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 29,
+    "type": "VOLAILLES",
+    "quantite_mean": 92138.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 2.0
+  },
+  {
+    "name": "SOCAVIC",
+    "rubric_id": "2112",
+    "unite": "u",
+    "departement": 40,
+    "type": "VOLAILLES",
+    "quantite_mean": 1845000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 2.0
+  },
+  {
+    "name": "EARL AVI-ROULAIS",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 44,
+    "type": "VOLAILLES",
+    "quantite_mean": 81600.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 3.0
+  },
+  {
+    "name": "GOUBAUD (ETS)",
+    "rubric_id": "2112",
+    "unite": "u",
+    "departement": 49,
+    "type": "VOLAILLES",
+    "quantite_mean": 538560.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 3.0
+  },
+  {
+    "name": "SCEA DOMAINE DE ROUILLY M. MITEAULT",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 86,
+    "type": "VOLAILLES",
+    "quantite_mean": 81101.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 4.0
+  },
+  {
+    "name": "EARL DE CASTELBON (ex PUJOS J.P & S)",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 32,
+    "type": "VOLAILLES",
+    "quantite_mean": 77108.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 5.0
+  },
+  {
+    "name": "COUVOIR RICOUR",
+    "rubric_id": "2112",
+    "unite": "u",
+    "departement": 59,
+    "type": "VOLAILLES",
+    "quantite_mean": 500000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 6.0
+  },
+  {
+    "name": "EARL DU BOIS SALMON",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 35,
+    "type": "VOLAILLES",
+    "quantite_mean": 77040.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 6.0
+  },
+  {
+    "name": "ETS LE GAL SA",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 56,
+    "type": "VOLAILLES",
+    "quantite_mean": 468188.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 7.0
+  },
+  {
+    "name": "HENDRIX GENETICS (EX SAS GRELIER )",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 72,
+    "type": "VOLAILLES",
+    "quantite_mean": 76500.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 7.5
+  },
+  {
+    "name": "EARL ELEVAGE DU HAUT QUARTIER",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 22,
+    "type": "VOLAILLES",
+    "quantite_mean": 76500.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 7.5
+  },
+  {
+    "name": "PIGOREAU ALBERT",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 41,
+    "type": "VOLAILLES",
+    "quantite_mean": 75000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 9.0
+  },
+  {
+    "name": "HENDRIX GENETICS",
+    "rubric_id": "2112",
+    "unite": "u",
+    "departement": 72,
+    "type": "VOLAILLES",
+    "quantite_mean": 412800.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 9.0
+  },
+  {
+    "name": "GFA de PIERPONT",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 81,
+    "type": "VOLAILLES",
+    "quantite_mean": 386000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 10.0
+  },
+  {
+    "name": "EARL LE PASSEREAU",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 85,
+    "type": "VOLAILLES",
+    "quantite_mean": 74160.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 10.0
+  },
+  {
+    "name": "PRIMAULT CHRISTOPHE",
+    "rubric_id": "2112",
+    "unite": "u",
+    "departement": 35,
+    "type": "VOLAILLES",
+    "quantite_mean": 360000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 12.0
+  },
+  {
+    "name": "DE CARTRAFOY",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 56,
+    "type": "VOLAILLES",
+    "quantite_mean": 67500.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 12.0
+  },
+  {
+    "name": "COPPOOLSE Adrien",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 45,
+    "type": "VOLAILLES",
+    "quantite_mean": 66000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 13.0
+  },
+  {
+    "name": "GAEC LA GUILBAUDIERE",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 85,
+    "type": "VOLAILLES",
+    "quantite_mean": 335000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 14.0
+  },
+  {
+    "name": "SOCIETE ARBOR FRANCE S.A.S",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 33,
+    "type": "VOLAILLES",
+    "quantite_mean": 302400.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 16.0
+  },
+  {
+    "name": "EURL MULOR",
+    "rubric_id": "2112",
+    "unite": "u",
+    "departement": 64,
+    "type": "VOLAILLES",
+    "quantite_mean": 300000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 17.0
+  },
+  {
+    "name": "ELEVAGE AVICOLE DE TERRASSON (ex GFA DE PIERPONT)",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 24,
+    "type": "VOLAILLES",
+    "quantite_mean": 61600.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 17.0
+  },
+  {
+    "name": "GAEC CHABAUTY",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 79,
+    "type": "BOVINS",
+    "quantite_mean": 260000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 19.0
+  },
+  {
+    "name": "MARANGER NADINE",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 36,
+    "type": "VOLAILLES",
+    "quantite_mean": 216000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 22.0
+  },
+  {
+    "name": "SARL MULOR",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 40,
+    "type": "VOLAILLES",
+    "quantite_mean": 59680.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 23.0
+  },
+  {
+    "name": "GAEC GADONNA FRERES",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 29,
+    "type": "PORCS",
+    "quantite_mean": 190000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 31.0
+  },
+  {
+    "name": "EARL LES VOLAILLES DU GRAND CHEMIN",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 44,
+    "type": "BOVINS",
+    "quantite_mean": 177000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 32.0
+  },
+  {
+    "name": "GAEC SEMIS (LE)",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 53,
+    "type": "BOVINS",
+    "quantite_mean": 175555.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 33.0
+  },
+  {
+    "name": "EARL LES FORTUMES",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 18,
+    "type": "VOLAILLES",
+    "quantite_mean": 51000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 38.0
+  },
+  {
+    "name": "GAEC DE LIMERMONT",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 60,
+    "type": "BOVINS",
+    "quantite_mean": 167130.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 38.0
+  },
+  {
+    "name": "SAS LES FERMIERS DU SUD EST",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 26,
+    "type": "VOLAILLES",
+    "quantite_mean": 167040.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 39.0
+  },
+  {
+    "name": "EARL DE LA FORGE",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 51,
+    "type": "VOLAILLES",
+    "quantite_mean": 150000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 44.5
+  },
+  {
+    "name": "EARL GUILHAMOU",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 64,
+    "type": "VOLAILLES",
+    "quantite_mean": 48700.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 45.0
+  },
+  {
+    "name": "EARL DE COET PARQUET",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 22,
+    "type": "BOVINS",
+    "quantite_mean": 140160.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 49.0
+  },
+  {
+    "name": "ORCHIDEE (EARL DE L')",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 49,
+    "type": "VOLAILLES",
+    "quantite_mean": 42000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 58.5
+  },
+  {
+    "name": "GAEC DU MAYNOT",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 47,
+    "type": "VOLAILLES",
+    "quantite_mean": 40000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 66.5
+  },
+  {
+    "name": "MAILLOT Pierre Maximin",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 974,
+    "type": "VOLAILLES",
+    "quantite_mean": 120000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 76.0
+  },
+  {
+    "name": "EARL PLISE-SIM",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 61,
+    "type": "VOLAILLES",
+    "quantite_mean": 112429.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 86.0
+  },
+  {
+    "name": "DNJ ALEXANDRE (EARL)",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 28,
+    "type": "VOLAILLES",
+    "quantite_mean": 108747.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 91.0
+  },
+  {
+    "name": "SCEA DES BASSOTS",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 58,
+    "type": "VOLAILLES",
+    "quantite_mean": 107000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 95.0
+  },
+  {
+    "name": "SCEA DU CHAMP DES AUGERONS",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 18,
+    "type": "BOVINS",
+    "quantite_mean": 100000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 118.0
+  },
+  {
+    "name": "ELEVAGE AVICOLE DE TERRASSON (ex GFA DE PIERPONT)",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 24,
+    "type": "VOLAILLES",
+    "quantite_mean": 100000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 118.0
+  },
+  {
+    "name": "LOIRAT Mickael",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 41,
+    "type": "VOLAILLES",
+    "quantite_mean": 99820.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 122.0
+  },
+  {
+    "name": "OTT FREDERIC",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 67,
+    "type": "VOLAILLES",
+    "quantite_mean": 30000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 142.5
+  },
+  {
+    "name": "EARL LES RAMBAUDIERES",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 79,
+    "type": "BOVINS",
+    "quantite_mean": 30000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 142.5
+  },
+  {
+    "name": "EARL POULAILLER KOLLY",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 25,
+    "type": "VOLAILLES",
+    "quantite_mean": 30000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 142.5
+  },
+  {
+    "name": "GAEC BARRAIZE (DE)",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 53,
+    "type": "VOLAILLES",
+    "quantite_mean": 30000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 142.5
+  },
+  {
+    "name": "SARL VADEZ",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 10,
+    "type": "VOLAILLES",
+    "quantite_mean": 30000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 142.5
+  },
+  {
+    "name": "TERRAIL LAURENT",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 26,
+    "type": "VOLAILLES",
+    "quantite_mean": 30000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 142.5
+  },
+  {
+    "name": "SCEA LOPA",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 63,
+    "type": "BOVINS",
+    "quantite_mean": 90600.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 156.0
+  },
+  {
+    "name": "TERRAZZONI Fr\u00e8res (SCEA)",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 20,
+    "type": "VOLAILLES",
+    "quantite_mean": 90000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 162.0
+  },
+  {
+    "name": "CORDIER Thierry",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 55,
+    "type": "VOLAILLES",
+    "quantite_mean": 29990.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 166.5
+  },
+  {
+    "name": "GSTALTER GEORGES",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 58,
+    "type": "VOLAILLES",
+    "quantite_mean": 29800.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 173.5
+  },
+  {
+    "name": "PATURAT (GAEC DU)",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 43,
+    "type": "VOLAILLES",
+    "quantite_mean": 28500.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 187.5
+  },
+  {
+    "name": "EARL NOTRE DAME DE LA PAIX",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 974,
+    "type": "VOLAILLES",
+    "quantite_mean": 28315.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 191.0
+  },
+  {
+    "name": "EARL LES SERINS",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 17,
+    "type": "BOVINS",
+    "quantite_mean": 81000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 200.5
+  },
+  {
+    "name": "SARL ELEVAGE DUYCK",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 59,
+    "type": "VOLAILLES",
+    "quantite_mean": 27150.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 203.0
+  },
+  {
+    "name": "GAEC RECONNU DE LA SALVARDERIE",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 37,
+    "type": "BOVINS",
+    "quantite_mean": 80000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 207.5
+  },
+  {
+    "name": "VOISIN (GAEC)",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 50,
+    "type": "VOLAILLES",
+    "quantite_mean": 27000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 209.0
+  },
+  {
+    "name": "LABOURIER Jacques",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 63,
+    "type": "VOLAILLES",
+    "quantite_mean": 27000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 209.0
+  },
+  {
+    "name": "CHAUVINIERE (EARL DE LA)",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 14,
+    "type": "BOVINS",
+    "quantite_mean": 79584.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 215.0
+  },
+  {
+    "name": "EARL CHARTON DE LA MAISON ROUGE",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 71,
+    "type": "BOVINS",
+    "quantite_mean": 26400.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 222.5
+  },
+  {
+    "name": "EARL LES PRES DU MORVAN",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 89,
+    "type": "VOLAILLES",
+    "quantite_mean": 25200.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 248.5
+  },
+  {
+    "name": "PEDENON EARL",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 19,
+    "type": "BOVINS",
+    "quantite_mean": 75000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 250.0
+  },
+  {
+    "name": "BUSIPELLI Josette",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 32,
+    "type": "VOLAILLES",
+    "quantite_mean": 72000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 266.0
+  },
+  {
+    "name": "EARL DE LAFONTADE",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 46,
+    "type": "VOLAILLES",
+    "quantite_mean": 24000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 272.0
+  },
+  {
+    "name": "EARL DU PETIT BUT",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 61,
+    "type": "BOVINS",
+    "quantite_mean": 22500.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 297.5
+  },
+  {
+    "name": "EARL DE LA GREVELETTE",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 51,
+    "type": "VOLAILLES",
+    "quantite_mean": 21300.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 313.0
+  },
+  {
+    "name": "EARL CICE",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 37,
+    "type": "VOLAILLES",
+    "quantite_mean": 21000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 316.0
+  },
+  {
+    "name": "EARL DU BOBET",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 69,
+    "type": "VOLAILLES",
+    "quantite_mean": 21000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 316.0
+  },
+  {
+    "name": "GAEC DU REGAIN - DORIN",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 71,
+    "type": "VOLAILLES",
+    "quantite_mean": 66000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 317.0
+  },
+  {
+    "name": "GAEC DE LA MAISON DES CHAMPS",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 89,
+    "type": "BOVINS",
+    "quantite_mean": 66000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 317.0
+  },
+  {
+    "name": "MONSIEUR PIERRE KACZMAREK",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 80,
+    "type": "VOLAILLES",
+    "quantite_mean": 20400.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 325.5
+  },
+  {
+    "name": "SCEA DE VENTADOUR",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 87,
+    "type": "BOVINS",
+    "quantite_mean": 17600.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 369.5
+  },
+  {
+    "name": "SOC ABATTAGE COMMERCIALISATION LAFAYE",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 16,
+    "type": "VOLAILLES",
+    "quantite_mean": 17000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 381.0
+  },
+  {
+    "name": "INRA LE MAGNERAUD",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 17,
+    "type": "VOLAILLES",
+    "quantite_mean": 13598.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 426.0
+  },
+  {
+    "name": "MONSIEUR THIERRY GUILLAUMOT",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 21,
+    "type": "VOLAILLES",
+    "quantite_mean": 13200.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 432.0
+  },
+  {
+    "name": "EARL CHARMES",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 12,
+    "type": "VOLAILLES",
+    "quantite_mean": 11000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 453.0
+  },
+  {
+    "name": "CASTELIN CYRIL",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 27,
+    "type": "VOLAILLES",
+    "quantite_mean": 10400.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 461.5
+  },
+  {
+    "name": "OTT FREDERIC",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 67,
+    "type": "VOLAILLES",
+    "quantite_mean": 53000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 477.5
+  },
+  {
+    "name": "GAEC LAJOINIE TEIL",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 19,
+    "type": "BOVINS",
+    "quantite_mean": 8800.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 486.0
+  },
+  {
+    "name": "BRIEU LA TULLIERE (GAEC DU)",
+    "rubric_id": "2111",
+    "unite": "Animaux-Eq",
+    "departement": 14,
+    "type": "BOVINS",
+    "quantite_mean": 8600.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 493.5
+  },
+  {
+    "name": "PONSON PHILIPPE",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 42,
+    "type": "VOLAILLES",
+    "quantite_mean": 51000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 504.5
+  },
+  {
+    "name": "SARL GEORGENFELD",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 68,
+    "type": "PORCS",
+    "quantite_mean": 4956.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 538.0
+  },
+  {
+    "name": "EARL POULAILLER KOLLY",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 25,
+    "type": "VOLAILLES",
+    "quantite_mean": 48973.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 541.0
+  },
+  {
+    "name": "SOULEIE (GAEC DE LA)",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 43,
+    "type": "VOLAILLES",
+    "quantite_mean": 48700.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 542.0
+  },
+  {
+    "name": "SCEA GENE CAUX",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 76,
+    "type": "PORCS",
+    "quantite_mean": 3691.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 565.0
+  },
+  {
+    "name": "GAEC DE TRINQ",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 81,
+    "type": "PORCS",
+    "quantite_mean": 3544.4,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 574.0
+  },
+  {
+    "name": "EARL POLYVO",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 86,
+    "type": "BOVINS",
+    "quantite_mean": 43300.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 621.0
+  },
+  {
+    "name": "EARL AVI-SR",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 52,
+    "type": "VOLAILLES",
+    "quantite_mean": 42000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 638.5
+  },
+  {
+    "name": "EARL LAURENT MOTTET",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 39,
+    "type": "PORCS",
+    "quantite_mean": 3111.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 657.0
+  },
+  {
+    "name": "MEUNIER Vianney",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 38,
+    "type": "VOLAILLES",
+    "quantite_mean": 40000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 728.0
+  },
+  {
+    "name": "EARL MARIUS VOELTZEL",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 27,
+    "type": "VOLAILLES",
+    "quantite_mean": 40000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 728.0
+  },
+  {
+    "name": "DAUSSE LOIC",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 39,
+    "type": "VOLAILLES",
+    "quantite_mean": 40000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 728.0
+  },
+  {
+    "name": "EARL SOMMANT JEAN PASCAL",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 21,
+    "type": "VOLAILLES",
+    "quantite_mean": 40000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 728.0
+  },
+  {
+    "name": "SCEA DES CRETES",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 57,
+    "type": "VOLAILLES",
+    "quantite_mean": 40000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 728.0
+  },
+  {
+    "name": "VOLEA SASA (ex ANDRE MICHELE)",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 11,
+    "type": "VOLAILLES",
+    "quantite_mean": 40000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 728.0
+  },
+  {
+    "name": "SCEA  FERME DE L'AUBETIN",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 77,
+    "type": "PORCS",
+    "quantite_mean": 2834.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 800.0
+  },
+  {
+    "name": "EARL FERME DE LA CONDAMINE",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 76,
+    "type": "VOLAILLES",
+    "quantite_mean": 39980.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 829.0
+  },
+  {
+    "name": "EARL DE LA ROUSSELLERIE",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 87,
+    "type": "VOLAILLES",
+    "quantite_mean": 39600.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 880.5
+  },
+  {
+    "name": "SINDT Jean-Marc",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 57,
+    "type": "PORCS",
+    "quantite_mean": 2690.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 882.0
+  },
+  {
+    "name": "SCEA DU BIEF ROUGE",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 70,
+    "type": "VOLAILLES",
+    "quantite_mean": 39015.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 919.0
+  },
+  {
+    "name": "SARL RIGAL Fr\u00e8res",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 31,
+    "type": "PORCS",
+    "quantite_mean": 2635.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 927.0
+  },
+  {
+    "name": "GAEC DES HAUTS DE HURLEVENT",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 54,
+    "type": "PORCS",
+    "quantite_mean": 2622.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 936.0
+  },
+  {
+    "name": "JOURDAIN Hugues",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 23,
+    "type": "PORCS",
+    "quantite_mean": 2616.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 943.0
+  },
+  {
+    "name": "LA VERDRIGUE",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 971,
+    "type": "VOLAILLES",
+    "quantite_mean": 38800.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 957.5
+  },
+  {
+    "name": "EARL TREBOR",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 13,
+    "type": "PORCS",
+    "quantite_mean": 2600.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 959.0
+  },
+  {
+    "name": "EARL ELEVAGE DES QUATRE VENTS",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 69,
+    "type": "VOLAILLES",
+    "quantite_mean": 38306.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 984.0
+  },
+  {
+    "name": "GAEC LES FERMIERS DE MARIN",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 74,
+    "type": "VOLAILLES",
+    "quantite_mean": 36900.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1054.0
+  },
+  {
+    "name": "PRADEL Pierre-Louis",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 12,
+    "type": "VOLAILLES",
+    "quantite_mean": 36000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1116.0
+  },
+  {
+    "name": "LES GRILLONS (SARL)",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 84,
+    "type": "VOLAILLES",
+    "quantite_mean": 35000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1182.0
+  },
+  {
+    "name": "EARL LA FERME DE ROQUEROUSSE",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 13,
+    "type": "VOLAILLES",
+    "quantite_mean": 35000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1182.0
+  },
+  {
+    "name": "DES QUATRE VENTS",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 55,
+    "type": "VOLAILLES",
+    "quantite_mean": 35000.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1182.0
+  },
+  {
+    "name": "GAEC DE SAINTOU",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 82,
+    "type": "PORCS",
+    "quantite_mean": 2292.7,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1243.0
+  },
+  {
+    "name": "PEREJEAN",
+    "rubric_id": "2111",
+    "unite": "u",
+    "departement": 65,
+    "type": "VOLAILLES",
+    "quantite_mean": 33850.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1246.0
+  },
+  {
+    "name": "SCEA LES GAUDINOTS",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 70,
+    "type": "PORCS",
+    "quantite_mean": 2265.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1276.0
+  },
+  {
+    "name": "SCEA des Longchamps",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 90,
+    "type": "PORCS",
+    "quantite_mean": 2252.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1291.5
+  },
+  {
+    "name": "SCEA ANCENEAUX",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 971,
+    "type": "PORCS",
+    "quantite_mean": 2190.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1382.0
+  },
+  {
+    "name": "GAEC DE MARGNAC",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 16,
+    "type": "BOVINS",
+    "quantite_mean": 6122.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1428.0
+  },
+  {
+    "name": "GAEC DE CHATENONGE",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 52,
+    "type": "PORCS",
+    "quantite_mean": 2106.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1489.5
+  },
+  {
+    "name": "SARL GEORGENFELD",
+    "rubric_id": "3660",
+    "unite": "u",
+    "departement": 68,
+    "type": "PORCS",
+    "quantite_mean": 3188.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1499.0
+  },
+  {
+    "name": "MARCHE MAURIAC",
+    "rubric_id": "2101",
+    "unite": "u",
+    "departement": 15,
+    "type": "BOVINS",
+    "quantite_mean": 2600.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1540.0
+  },
+  {
+    "name": "EARL DE BONNELEAU",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 60,
+    "type": "PORCS",
+    "quantite_mean": 2045.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1575.0
+  },
+  {
+    "name": "SEPAB (SARL)",
+    "rubric_id": "2101",
+    "unite": "u",
+    "departement": 34,
+    "type": "BOVINS",
+    "quantite_mean": 1100.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1601.0
+  },
+  {
+    "name": "EARL DE BASSIGNY",
+    "rubric_id": "2101",
+    "unite": "u",
+    "departement": 54,
+    "type": "BOVINS",
+    "quantite_mean": 800.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1654.5
+  },
+  {
+    "name": "GAEC DE COMBELON",
+    "rubric_id": "2101",
+    "unite": "u",
+    "departement": 46,
+    "type": "BOVINS",
+    "quantite_mean": 800.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1654.5
+  },
+  {
+    "name": "SAS la Ferme de Saint Martial_M. LACROCQ",
+    "rubric_id": "2101",
+    "unite": "u",
+    "departement": 23,
+    "type": "BOVINS",
+    "quantite_mean": 800.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1654.5
+  },
+  {
+    "name": "EARL DE LA HAUTE MAISON",
+    "rubric_id": "2101",
+    "unite": "u",
+    "departement": 88,
+    "type": "BOVINS",
+    "quantite_mean": 800.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1654.5
+  },
+  {
+    "name": "PORCHERIE DOUVAINE",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 74,
+    "type": "PORCS",
+    "quantite_mean": 1990.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1685.0
+  },
+  {
+    "name": "SARL En Ducasse",
+    "rubric_id": "2101",
+    "unite": "u",
+    "departement": 31,
+    "type": "BOVINS",
+    "quantite_mean": 600.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1761.0
+  },
+  {
+    "name": "FERME DE BISSY EARL",
+    "rubric_id": "2101",
+    "unite": "u",
+    "departement": 78,
+    "type": "BOVINS",
+    "quantite_mean": 515.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1825.0
+  },
+  {
+    "name": "SCEA LA VOGLANAISE D ELEVAGE",
+    "rubric_id": "2101",
+    "unite": "u",
+    "departement": 73,
+    "type": "BOVINS",
+    "quantite_mean": 491.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1854.0
+  },
+  {
+    "name": "SOCIETE ELEVAGE DUCAT ASSOCIE",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 973,
+    "type": "PORCS",
+    "quantite_mean": 1876.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1868.0
+  },
+  {
+    "name": "EARL PORMIL",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 42,
+    "type": "PORCS",
+    "quantite_mean": 1860.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 1901.0
+  },
+  {
+    "name": "SCEA CASTERAN ET FILS",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 65,
+    "type": "PORCS",
+    "quantite_mean": 1782.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 2039.0
+  },
+  {
+    "name": "GAEC de l'ESPERANCE",
+    "rubric_id": "2101",
+    "unite": "u",
+    "departement": 66,
+    "type": "BOVINS",
+    "quantite_mean": 240.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 2210.0
+  },
+  {
+    "name": "EARL DU PAQUIS DE LA RAPPE",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 88,
+    "type": "PORCS",
+    "quantite_mean": 1661.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 2299.5
+  },
+  {
+    "name": "CUILHE Jean-Louis",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 33,
+    "type": "PORCS",
+    "quantite_mean": 1594.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 2450.0
+  },
+  {
+    "name": "LES PORCS DU PLATEAU (EARL)",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 38,
+    "type": "PORCS",
+    "quantite_mean": 1580.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 2478.5
+  },
+  {
+    "name": "GAEC FESTILAIT",
+    "rubric_id": "2101",
+    "unite": "u",
+    "departement": 90,
+    "type": "BOVINS",
+    "quantite_mean": 180.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 2576.0
+  },
+  {
+    "name": "SOC COOPERATIVE DES PRADES",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 15,
+    "type": "PORCS",
+    "quantite_mean": 1457.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 2780.0
+  },
+  {
+    "name": "PORCHERIE DE LA NOJAREDE",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 48,
+    "type": "PORCS",
+    "quantite_mean": 1350.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 3046.5
+  },
+  {
+    "name": "THURIES DOMINIQUE EARL DU CAZAL",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 11,
+    "type": "PORCS",
+    "quantite_mean": 1340.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 3082.5
+  },
+  {
+    "name": "GAEC WILLIAM ET CHRISTINE MOULIN",
+    "rubric_id": "2101",
+    "unite": "u",
+    "departement": 48,
+    "type": "BOVINS",
+    "quantite_mean": 110.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 3294.0
+  },
+  {
+    "name": "ELEVAGE DU BUGEY",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 73,
+    "type": "PORCS",
+    "quantite_mean": 1200.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 3476.0
+  },
+  {
+    "name": "ETABLISSEMENTS GUY HARANG",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 78,
+    "type": "PORCS",
+    "quantite_mean": 800.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 4856.5
+  },
+  {
+    "name": "ALLUE ET MAEGHT (EARL)",
+    "rubric_id": "2102",
+    "unite": "Animaux-Eq",
+    "departement": 34,
+    "type": "PORCS",
+    "quantite_mean": 750.0,
+    "departement_unite_rank": 1.0,
+    "france_unite_rank": 5033.5
+  }
+]
