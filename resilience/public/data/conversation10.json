@@ -1,0 +1,21 @@
+{
+    "place": "La légumerie du coin",
+    "names": [
+        "Catherine",
+        "Voyageur"
+    ],
+    "background_color": "#FF73BA",
+    "text_color": "black",
+    "messages": [
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Bonjour"
+        },
+        {
+            "type": "message",
+            "name": "Catherine",
+            "text": "Ah oui ?"
+        }
+    ]
+}

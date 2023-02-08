@@ -1,0 +1,96 @@
+{
+    "place": "Moulin de Fabien",
+    "names": [
+        "Fabien",
+        "Voyageur"
+    ],
+    "background_color": "#9088FF",
+    "text_color": "black",
+    "messages": [
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Bonjour, je ne vous dérange pas ? J’étais en train de regarder le moulin… De là où je viens, on n’en voit plus beaucoup !"
+        },
+        {
+            "type": "message",
+            "name": "Fabien",
+            "text": "Ah oui ? Vous devez venir de loin alors, c’est assez courant par ici."
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Et il fonctionne ?"
+        },
+        {
+            "type": "message",
+            "name": "Fabien",
+            "text": "Oui oui (rire), il nous sert à moudre nos céréales pour les transformer en farine, qu’on revend ensuite à des boulangers essentiellement, un peu en commerce également. Mais pardon, je me présente, je suis Fabien, je gère l’exploitation."
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Enchanté.e. En fait, c’est Manon de la Ferme Urbaine, qui m’a dit de venir vous voir… Je reviens d’un long voyage et je me rends compte qu’il y a des fermes un peu partout par ici. Bien plus qu’à mon époq… Enfin, j’essaie de comprendre, voilà, comment ça fonctionne."
+        },
+        {
+            "type": "message",
+            "name": "Fabien",
+            "text": "D’accord. Et bien, vous n’êtes pas sans savoir que le dérèglement climatique nous a joué quelques tours ces 30 dernières années… Jusqu’à menacer le système agricole de l’époque, qui était déjà défaillant de toute façon. Donc, pour pallier les aléas du climat (et aussi essayer de limiter notre empreinte carbone), l’état a lancé un vaste programme de résilience alimentaire, dont l’objectif était notamment de pouvoir bien nourrir tous ses citoyens, même en cas de crise majeure (climatique, économique, et j’en passe.)"
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Et comment vous y êtes parvenus ? J'imagine que vous avez dû changer vos habitudes alimentaires, vos pratiques agricoles."
+        },
+        {
+            "type": "message",
+            "name": "Fabien",
+            "text": "Effectivement, ça n’a pas été simple, mais il y avait urgence à changer les choses et tout le monde était d’accord là-dessus. Et puis notre système alimentaire de l’époque était aberrant. Non seulement il ne suffisait pas à nourrir convenablement tout le monde, mais en plus il était responsable d’un tiers des émissions de gaz à effet de serre. Sans oublier que les pratiques agricoles intensives étaient très gourmandes en eau, appauvrissaient les sols et tuaient la biodiversité."
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "D’où la mise en place de fermes agro-écologiques ?"
+        },
+        {
+            "type": "message",
+            "name": "Fabien",
+            "text": "C’est ça. l’État a lancé un grand plan national de soutien à l'installation de fermes \"nourricières\", c'est-à-dire des fermes dédiées à l’alimentation humaine et capables de nourrir les habitants des territoires alentours. Il a aussi fallu revoir notre régime alimentaire, en y incorporant plus de végétal, et en diminuant par deux notre consommation de viande - la plupart des champs céréaliers de l’époque servaient à nourrir les bêtes, ça occupait beaucoup trop de terres, qui servent maintenant à l’alimentation humaine. Et enfin, il a fallu diversifier les cultures, créer des synergies entre territoires. Pour faire très simple. Mais dites-moi, vous n’avez rien retenu de vos cours d’école ?"
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Heu, comme je vous le disais, j’ai vécu loin d’ici…  Mais donc il a fallu trouver du monde pour gérer et travailler dans ces fermes ? Il y a eu des candidats pour se lancer ? Parce que de là où je viens, le métier est usant et très mal payé."
+        },
+        {
+            "type": "message",
+            "name": "Fabien",
+            "text": "Oui c'était comme ça avant chez nous aussi, mes parents étaient agriculteurs, et ça n'a pas toujours été simple. Maintenant les choses ont bien changé. ll y a eu une \"fonctionnalisation\" du métier puisque pas mal de fermes sont régies par des collectivités ou fortement soutenues - notamment par la mise à disposition des moyens de production, qui coûtent très chers. Et puis avec le développement de la commande publique, la baisse des marges distributeurs et surtout les débouchés locaux assurés par le conventionnement des produits, le métier est plus sécurisé."
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Et il y a assez de surface cultivable pour nourrir tout le monde ?"
+        },
+        {
+            "type": "message",
+            "name": "Fabien",
+            "text": "Ô que oui ! Il y a des disparités entre territoires, c'est sûr, mais on travaille main dans la main. Il y a quoi, une vingtaine d'années, on a cessé d'artificialiser les sols, de construire dessus quoi. Et presque toutes les zones cultivables ont été classées en zone agricole protégée (en prenant bien soin bien sûr de ne pas toucher aux bois, landes et zones naturelles). Et on a aussi récupéré pas mal de surface agricole avec la diminution des élevages."
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Et… comme je commence à avoir un peu faim là, je me demandais :  qu’est ce que vous faites de tous les produits transformés comme les pâtes, les sauces en boîte, les biscuits… ?"
+        },
+        {
+            "type": "message",
+            "name": "Fabien",
+            "text": "Et bien on produit un maximum tout cela sur place, soit directement à la ferme, soit dans des usines de transformation. Allez donc voir La Légumerie du coin. C’est à trois arrêts d’ici en repartant vers la ville."
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Ok, merci pour votre temps. Bonne journée !"
+        }
+    ]
+}

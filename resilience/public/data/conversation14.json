@@ -1,0 +1,21 @@
+{
+    "place": "Toilettes sèches",
+    "names": [
+        "Charles",
+        "Voyageur"
+    ],
+    "background_color": "#FEA2E1",
+    "text_color": "black",
+    "messages": [
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Bonjour"
+        },
+        {
+            "type": "message",
+            "name": "Charles",
+            "text": "Ah oui ?"
+        }
+    ]
+}

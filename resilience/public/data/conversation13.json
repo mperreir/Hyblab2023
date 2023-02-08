@@ -1,0 +1,23 @@
+{
+    "place": "Cantine populaire",
+    "names": [
+        "Quentin",
+        "Stephanie",
+        "Voyageur"
+    ],
+    "background_color": "#A4A4FC",
+    "background_color": "#615FC2",
+    "text_color": "black",
+    "messages": [
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Bonjour"
+        },
+        {
+            "type": "message",
+            "name": "Quentin",
+            "text": "Ah oui ?"
+        }
+    ]
+}
