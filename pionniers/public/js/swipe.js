@@ -6,15 +6,11 @@ let carouselItems = document.querySelectorAll('.carousel-item');
 let elems = Array.from(carouselItems);
 const swiperSection = document.querySelector('#swiper');
 
-function ajouteTheme(theme) {
-    themeSelected.push(theme);
-    //window.localStorage.setItem('themes', themeSelected.toString());
-}
 
-function supprimeTheme(theme) {
-    themeSelected.splice(themeSelected.indexOf(theme), 1);
-    //window.localStorage.setItem('themes', themeSelected.toString());
-}
+/*  --------------------------------------------------------
+    ------------------ CREATION DOM FICHE ------------------
+    --------------------------------------------------------
+ */
 
 /**
  * Créer une string traduisant les choix de thème pour l'API
@@ -38,53 +34,6 @@ function generateApiParameters(themeSelected) {
     }
 
     return parameterString;
-}
-
-/**
- * Créer un element représentant un mot clé de profil
- * @param Keyword {string} le mot clé
- * @returns {ChildNode} Node HTML
- */
-function createKeywordItem(Keyword) {
-    const htmlString = `<div class="keyword-item flex-row align-items-center">
-                            <p>#${Keyword}</p>
-                        </div>`;
-
-    return createElementFromHTML(htmlString);
-}
-
-/**
- * Simplifie l'écriture litérale d'un thème (supprime les accents et espace)
- * @param topic
- * @returns {string}
- */
-function translateThemeToSimpleChar(topic) {
-    topic = topic.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    topic = topic.replace(/\s/g, '_');
-    return topic;
-}
-
-/**
- * Donne la bonne classe de police d'écriture suivant le thème donné
- * @param topic {string} thème
- * @returns {string} classe correspondant au thème
- */
-function getFontClass(topic) {
-    switch (topic) {
-        case 'alimentation' :
-            return 'orange-font';
-        case 'economie_circulaire' :
-            return 'caca-doie-font';
-        case 'energie' :
-            return 'vert-font';
-        case 'industrie' :
-            return 'turquoise-font';
-        case 'mobilite' :
-            return 'cyan-font';
-        case 'numerique' :
-            return 'bleu-clair-font';
-
-    }
 }
 
 /**
@@ -138,8 +87,136 @@ function createFiche(profil, dataPos) {
 }
 
 /**
+ * Créer un element représentant un mot clé de profil
+ * @param Keyword {string} le mot clé
+ * @returns {ChildNode} Node HTML
+ */
+function createKeywordItem(Keyword) {
+    const htmlString = `<div class="keyword-item flex-row align-items-center">
+                            <p>#${Keyword}</p>
+                        </div>`;
+
+    return createElementFromHTML(htmlString);
+}
+
+/**
+ * Simplifie l'écriture litérale d'un thème (supprime les accents et espace)
+ * @param topic
+ * @returns {string}
+ */
+function translateThemeToSimpleChar(topic) {
+    topic = topic.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    topic = topic.replace(/\s/g, '_');
+    return topic;
+}
+
+
+/**
+ * Donne la bonne classe de police d'écriture suivant le thème donné
+ * @param topic {string} thème
+ * @returns {string} classe correspondant au thème
+ */
+function getFontClass(topic) {
+    switch (topic) {
+        case 'alimentation' :
+            return 'orange-font';
+        case 'economie_circulaire' :
+            return 'caca-doie-font';
+        case 'energie' :
+            return 'vert-font';
+        case 'industrie' :
+            return 'turquoise-font';
+        case 'mobilite' :
+            return 'cyan-font';
+        case 'numerique' :
+            return 'bleu-clair-font';
+    }
+}
+
+/*  ----------------------------------------------------------------
+    ------------------ MANIPULATION LOCAL STORAGE ------------------
+    ----------------------------------------------------------------
+ */
+
+function ajouteTheme(theme) {
+    themeSelected.push(theme);
+}
+
+function supprimeTheme(theme) {
+    themeSelected.splice(themeSelected.indexOf(theme), 1);
+}
+
+/**
+ * Donne la liste des Ids des profils favoris, liste vide si pas de profils  fav
+ * @returns {string[]|*[]}
+ */
+function getProfilsFav() {
+    const profFav = window.localStorage.getItem("profilsFavoris");
+    if(profFav) {
+        return profFav.split(',');
+    } else {
+        return [];
+    }
+}
+
+
+function pushProfilFav(id) {
+    const profFav = getProfilsFav();
+    profFav.push(id);
+    window.localStorage.setItem("profilsFavoris", profFav.toString());
+}
+
+/**
+ * Supprime tous les objets avec un attribut ayant une valeur incluse dans un array fournis
+ * @param fieldName {string} nom de l'attribut/champ à traiter
+ * @param objectArray {Array} array d'objet, comportant au moins un champ de nom fieldName
+ * @param array2 {Array}
+ * @returns {*[]}
+ */
+function removeAllItemCorrespondingToField(fieldName, objectArray, array2) {
+    let arrayFiltered = [];
+
+    objectArray.forEach(item => {
+        let aucuneCorrespondance = true;
+        array2.forEach(value => {
+            if(item[fieldName] === value) {
+                aucuneCorrespondance = false;
+            }
+        });
+        if(aucuneCorrespondance) {
+            arrayFiltered.push(item);
+        }
+    });
+    return arrayFiltered;
+}
+
+function filterProfilsTrouves() {
+    let idsProfilsFav = getProfilsFav();
+    if(idsProfilsFav.length > 0) {
+        profilsTrouves = removeAllItemCorrespondingToField("Id", profilsTrouves, idsProfilsFav);
+    }
+}
+
+/*  ------------------------------------------------------------------
+    ------------------ MISE À JOUR DES ELEMENTS DOM ------------------
+    ------------------------------------------------------------------
+ */
+
+/**
+ * Met à jour les nodes relatifs au carrousel, utilisés pour le calcul du mouvement de rotation
+ */
+function miseAJourEtatCarousel() {
+    carouselList = document.querySelector('.carousel-list');
+    carouselItems = document.querySelectorAll('.carousel-item');
+    elems = Array.from(carouselItems);
+
+    const cur = elems.find(elem => elem.getAttribute("data-pos") === '0');
+    updateDownSwipeListener(cur);
+}
+
+/**
  * Recrée le contenu du carousel avec les profils trouvés
- * Seuls les 5 premiers élement de l'array profilsTrouves seront comptabilisés
+ * Seuls les 5 premiers élements de l'array profilsTrouves seront comptabilisés
  * @param profilsTrouves {Array}
  */
 function recreeCarouselDeck(profilsTrouves) {
@@ -164,15 +241,15 @@ async function chercheEtAjouteProfilsCarousel(themeSelected, shuffleResults) {
     const baseURL = document.location.origin;
 
     carouselItems.forEach(f => {
-        if(f.dataset.pos === '-2' || f.dataset.pos === '2') {
+        if (f.dataset.pos === '-2' || f.dataset.pos === '2') {
             f.classList.remove('recreate-deck-animation-1');
         }
 
-        if(f.dataset.pos === '-1' || f.dataset.pos === '1') {
+        if (f.dataset.pos === '-1' || f.dataset.pos === '1') {
             f.classList.remove('recreate-deck-animation-2');
         }
 
-        if(f.dataset.pos === '0') {
+        if (f.dataset.pos === '0') {
             f.classList.remove('recreate-deck-animation-3');
         }
     });
@@ -181,9 +258,11 @@ async function chercheEtAjouteProfilsCarousel(themeSelected, shuffleResults) {
     // Appel API
     profilsTrouves = await fetch(baseURL + "/pionniers/api/miniature/topics/" + generateApiParameters(themeSelected)).then(r => r.json());
 
-    if(shuffleResults) {    // Tri aléatoire si souhaité
+    if (shuffleResults) {    // Tri aléatoire si souhaité
         profilsTrouves = profilsTrouves.sort(() => 0.5 - Math.random());
     }
+
+    filterProfilsTrouves();
 
     // Recrée le contenu du carousel avec les fiches des profils trouvés
     // (seules les 5 premières sont nécessaires pour avoir un carrousel complet)
@@ -193,24 +272,90 @@ async function chercheEtAjouteProfilsCarousel(themeSelected, shuffleResults) {
     miseAJourEtatCarousel();
 
     carouselItems.forEach(f => {
-        if(f.dataset.pos === '-2' || f.dataset.pos === '2') {
+        if (f.dataset.pos === '-2' || f.dataset.pos === '2') {
             f.classList.add('recreate-deck-animation-1');
         }
 
-        if(f.dataset.pos === '-1' || f.dataset.pos === '1') {
+        if (f.dataset.pos === '-1' || f.dataset.pos === '1') {
             f.classList.add('recreate-deck-animation-2');
         }
 
-        if(f.dataset.pos === '0') {
+        if (f.dataset.pos === '0') {
             f.classList.add('recreate-deck-animation-3');
         }
     });
+}
+
+function updateFolder() {
+    const nombreProfilsFavText = document.querySelector('footer#folder #nombre-profil');
+    const idsProfilsEnregistres = getProfilsFav();
+    let nombreProfilFav = idsProfilsEnregistres.length;
+
+    nombreProfilsFavText.innerHTML = nombreProfilFav > 0 ? nombreProfilFav.toString() : "";
+}
+
+/*  ---------------------------------------------------------------------------------------
+    ------------------ AJOUT NOUVELLE FICHE SUITE MODIFICATION CARROUSEL ------------------
+    ---------------------------------------------------------------------------------------
+ */
 
 
+/**
+ * Ajout d'une nouvelle fiche suite à un Swipe bas (enregistrement profil dans les fav)
+ * @param idFicheSuppr {string} id de la fiche supprimée du carrousel (fiche enregistrée dans les fav)
+ */
+function ajouterNouvelleFicheSwipeBas(idFicheSuppr) {
+    // Recherche dans la liste de résultats (profilsTrouves) la position du profil supprimé juste avant
+    const indexProfilSuppr = profilsTrouves.findIndex(pr => pr.Id === idFicheSuppr);
+    // Suppresion du profil dans la liste des prochains résultats
+    profilsTrouves.splice(indexProfilSuppr, 1);
+
+    const indexNouveauProfil = (indexProfilSuppr + 2) % profilsTrouves.length;
+
+    // Ajout du nouveau la fiche du nouveau profil
+    const newProfil = profilsTrouves[indexNouveauProfil];
+    carouselList.append(createFiche(newProfil, '2'));
+
+    miseAJourEtatCarousel();
 }
 
 /**
- *
+ * Ajout d'une fiche unique au carrousel, suite à un mouvement gauche ou droite
+ * @param posNewActive {string} true si le click provocant l'appel de cette fonction a été effectué sur la partie droite du swiper, false sinon
+ */
+function ajouterNouvelleFiche(posNewActive) {
+
+    /*  - Si click à droite, la fiche à supprimer est celle à l'extreme gauche,
+        qui passe alors à l'extrème droite suite à la rotation, donc la position 2
+        - Même logique à l'inverse pour le click à gauche
+       */
+    let posFicheASuppr = parseInt(posNewActive) * 2;
+    const ficheASuppr = document.querySelector(`.carousel-item[data-pos="${posFicheASuppr}"]`);
+    const idFicheASuppr = ficheASuppr.dataset.id;
+
+    // Suppression de la fiche à supprimer dans le carrousel
+    ficheASuppr.remove();
+
+    // Recherche dans la liste de résultats (profilsTrouves) la position du profil supprimé juste avant
+    const indexProfilSuppr = profilsTrouves.findIndex(pr => pr.Id === idFicheASuppr);
+    // L'index du nouveau profil à ajouter est celui supprimé + ou - 5 (nombre de fiches dans le carrousel) suivant le mouvement, de manière cyclique
+    const indexNouveauProfil = posNewActive === '1' ? (indexProfilSuppr + 5) % profilsTrouves.length : (indexProfilSuppr - 5 + profilsTrouves.length) % profilsTrouves.length;
+
+
+    // Ajout du nouveau la fiche du nouveau profil
+    const newProfil = profilsTrouves[indexNouveauProfil];
+    carouselList.append(createFiche(newProfil, posFicheASuppr));
+
+    miseAJourEtatCarousel();
+}
+
+/*  ----------------------------------------------
+    ------------------ LISTENER ------------------
+    ----------------------------------------------
+ */
+
+/**
+ * Au cochage d'un thème/catégorie
  * @param evnt {Event}
  * @returns {Promise<void>}
  */
@@ -232,83 +377,7 @@ async function onCheck(evnt) {
     }
 
     await chercheEtAjouteProfilsCarousel(themeSelected, true);
-
 }
-
-/*
- * Ajout d'une fiche unique au carrousel, suite à un mouvement de swipe vers le bas
- */
-function ajouterNouvelleFicheSwipeBas(idFicheSuppr) {
-
-    console.log("profilsTrouves :", profilsTrouves);
-
-    // Recherche dans la liste de résultats (profilsTrouves) la position du profil supprimé juste avant
-    const indexProfilSuppr = profilsTrouves.findIndex(pr => pr.Id === idFicheSuppr);
-    profilsTrouves.splice(indexProfilSuppr, 1);
-
-    console.log("indexProfilSuppr :", indexProfilSuppr);
-
-    const indexNouveauProfil = (indexProfilSuppr + 3) % profilsTrouves.length;
-
-    console.log("indexNouveauProfil :", indexNouveauProfil);
-
-    // Ajout du nouveau la fiche du nouveau profil
-    const newProfil = profilsTrouves[indexNouveauProfil];
-    carouselList.append(createFiche(newProfil, '2'));
-
-    miseAJourEtatCarousel();
-}
-
-/**
- * Ajout d'une fiche unique au carrousel, suite à un mouvement gauche ou droite
- * @param clicADroite {boolean} true si le click provocant l'appel de cette fonction a été effectué sur la partie droite du swiper, false sinon
- */
-function ajouterNouvelleFiche(clicADroite) {
-
-    /*  - Si click à droite, la fiche à supprimer est celle à l'extreme gauche,
-        qui passe alors à l'extrème droite suite à la rotation, donc la position 2
-        - Même logique à l'inverse pour le click à gauche
-       */
-    let posFicheASuppr = clicADroite ? 2 : -2;
-    const ficheASuppr = document.querySelector(`.carousel-item[data-pos="${posFicheASuppr}"]`);
-    const idFicheASuppr = ficheASuppr.dataset.id;
-
-    // Suppression de la fiche à supprimer dans le carrousel
-    carouselList.removeChild(ficheASuppr);
-
-    // Recherche dans la liste de résultats (profilsTrouves) la position du profil supprimé juste avant
-    const indexProfilSuppr = profilsTrouves.findIndex(pr => pr.Id === idFicheASuppr);
-    // L'index du nouveau profil à ajouter est celui supprimé + ou - 5 (nombre de fiche dans le carrousel) suivant le mouvement, de manière cyclique
-    const indexNouveauProfil = clicADroite ? (indexProfilSuppr + 5) % profilsTrouves.length : (indexProfilSuppr - 5 + profilsTrouves.length) % profilsTrouves.length;
-
-    // Ajout du nouveau la fiche du nouveau profil
-    const newProfil = profilsTrouves[indexNouveauProfil];
-    carouselList.append(createFiche(newProfil, posFicheASuppr));
-
-    miseAJourEtatCarousel();
-}
-
-
-/**
- * Met à jour les nodes relatifs au carousel, utilisés pour le calcul du mouvement de rotation
- */
-function miseAJourEtatCarousel() {
-    carouselList = document.querySelector('.carousel-list');
-    carouselItems = document.querySelectorAll('.carousel-item');
-    elems = Array.from(carouselItems);
-    // mes ajouts
-    let cur = elems.find(elem => elem.getAttribute("data-pos") === '0');
-    let suiv = elems.find(elem => elem.getAttribute("data-pos") === '1');
-    let prec= elems.find(elem => elem.getAttribute("data-pos") === '-1');
-    console.log(elems);
-    updateFolder();
-    swipe(cur,suiv,prec);
-
-}
-
-// -----------------------------------------------------
-// ------ FONCTION RELATIVES AU CAROUSEL / SWIPER ------
-// -----------------------------------------------------
 
 swiperSection.addEventListener('click', function (event) {
     let newActive;
@@ -333,35 +402,36 @@ swiperSection.addEventListener('click', function (event) {
         const xClick = event.clientX;
         const clicADroite = xClick > (wWidth / 2);
 
-
         if (clicADroite) {
             newActive = carouselList.querySelector('.carousel-item[data-pos="1"]');
         } else {
             newActive = carouselList.querySelector('.carousel-item[data-pos="-1"]');
         }
 
-        update(newActive);
+        const newActivePos = newActive.dataset.pos;
 
-        ajouterNouvelleFiche(clicADroite);
+        // Mise à jour des positions suivant la nouvelle active
+        updatePos(newActivePos, true);
+
+        // Ajout
+        ajouterNouvelleFiche(newActivePos);
     }
 });
 
 // -----------------------------------------------------
 
-// AU CHARGEMENT DE LA PAGE
+// AU CHARGEMENT DE LA PAGE, RECUPERATION DES VALEUR POUR REMPLIR LES DIFFERENTES COMPOSANTES DE LA PAGE
 document.addEventListener("DOMContentLoaded", async function () {
 
     const themesCheckboxes = document.querySelectorAll('#theme-selector ul li');
-    const profilsEnregistresFolder = document.querySelector('footer#folder');
-    const nombreProfilsEnregistres = profilsEnregistresFolder.querySelector('#nombre-profil');
-    const nombreProfilsEnregistresText = profilsEnregistresFolder.querySelector('#nombre-profil p');
 
-    // Listener de click pour chaque filtre-theme
+    // ------------ THEMES ------------
 
     // Récupération des thèmes déjà choisis dans la page précédente
     let themeSelected = window.localStorage.getItem('themes');
     themeSelected = themeSelected ? themeSelected.split(',') : [];
 
+    // Listener de click pour chaque filtre-theme
     themesCheckboxes.forEach(tc =>
         tc.addEventListener('click', onCheck)
     );
@@ -375,143 +445,111 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
     );
 
-    // Vers page profils enregistre
-    profilsEnregistresFolder.addEventListener('click', () => window.location.href = "./profils-enregistres.html");
+    // ------------ SWIPER ------------
 
     // Remplissage du carousel/swiper avec les données de l'API, suivant les themes choisis
     await chercheEtAjouteProfilsCarousel(themeSelected, true);
 
 
-
-
+    // ------------ FOLDER ------------
+    updateFolder();
 });
-function updateFolder() {
-    const profilsEnregistresFolder = document.querySelector('footer#folder');
-    const nombreProfilsEnregistres = profilsEnregistresFolder.querySelector('#nombre-profil');
-   // const nombreProfilsEnregistresText = profilsEnregistresFolder.querySelector('#nombre-profil p');
-    const idsProfilsEnregistres = window.localStorage.getItem("profilsFavoris");
-    let nombreProfilFavoris = 0;
 
-    if (idsProfilsEnregistres !== null){
-        nombreProfilFavoris = idsProfilsEnregistres.split(",").length;
-    }
-
-    if (nombreProfilFavoris > 0) {
-        nombreProfilsEnregistres.classList.remove('display-none');
-        //nombreProfilsEnregistres.classList.add('flex-row');
-        nombreProfilsEnregistres.innerHTML = nombreProfilFavoris.toString();
-    } else {
-        nombreProfilsEnregistres.classList.add('display-none');
-        //nombreProfilsEnregistres.classList.remove('flex-row');
-    }
-}
-function swipe(current, next, prev) {
+function updateDownSwipeListener(current) {
     const topcard = current;
-    const nextcard = next;
-    const previouscard = prev;
 
-    if (carouselItems.length > 0) {
-        const hammer = new Hammer(topcard)
-        hammer.add(new Hammer.Tap())
-        hammer.add(new Hammer.Pan({
-            position: Hammer.position_ALL,
-            threshold: 0
-        }))
+    const hammer = new Hammer(topcard)
+    hammer.add(new Hammer.Tap())
+    hammer.add(new Hammer.Pan({
+        position: Hammer.position_ALL,
+        threshold: 0
+    }))
 
-        hammer.on('pan', (e) => {
-            onPan(e)
-        })
+    hammer.on('pan', (e) => {
+        onPan(e)
+    })
 
-        function onPan(e) {
-            const board = document.querySelector('#swiper');
+    function onPan(e) {
+        const swiper = document.querySelector('#swiper');
 
-            // remove transition properties
-            topcard.style.transition = null
-            //if (nextcard) nextcard.style.transition = null
+        // remove transition properties
+        topcard.style.transition = null
+        //if (nextcard) nextcard.style.transition = null
 
-            // get top card coordinates in pixels
-            let style = window.getComputedStyle(topcard)
-            let mx = style.transform.match(/^matrix\((.+)\)$/)
-            let startPosX = mx ? parseFloat(mx[1].split(', ')[4]) : 0
-            let startPosY = mx ? parseFloat(mx[1].split(', ')[5]) : 0
+        // get top card coordinates in pixels
+        let style = window.getComputedStyle(topcard)
+        let mx = style.transform.match(/^matrix\((.+)\)$/)
+        let startPosX = mx ? parseFloat(mx[1].split(', ')[4]) : 0
+        let startPosY = mx ? parseFloat(mx[1].split(', ')[5]) : 0
 
-            // get top card bounds
-            let bounds = topcard.getBoundingClientRect()
+        // get top card bounds
+        let bounds = topcard.getBoundingClientRect()
 
-            // get finger position on top card, top (1) or bottom (-1)
-            let isDraggingFrom = (e.center.y - bounds.top) > topcard.clientHeight / 2 ? -1 : 1
+        // get finger position on top card, top (1) or bottom (-1)
+        let isDraggingFrom = (e.center.y - bounds.top) > topcard.clientHeight / 2 ? -1 : 1
 
 
-            // get new coordinates
-            let posX = e.deltaX + startPosX
-            let posY = e.deltaY + startPosY
+        // get new coordinates
+        let posX = e.deltaX + startPosX
+        let posY = e.deltaY + startPosY
 
-            // get ratio between swiped pixels and the axes
-            let propX = e.deltaX / board.clientWidth;
-            let propY = e.deltaY / board.clientHeight;
+        // get ratio between swiped pixels and the axes
+        let propX = e.deltaX / swiper.clientWidth;
+        let propY = e.deltaY / swiper.clientHeight;
 
-            // get swipe direction, left (-1) or right (1)
-            let dirX = e.deltaX < 0 ? -1 : 1
+        // get swipe direction, left (-1) or right (1)
+        let dirX = e.deltaX < 0 ? -1 : 1
 
-            // get degrees of rotation, between 0 and +/- 45
-            let deg = isDraggingFrom * dirX * Math.abs(propX) * 45
+        // get degrees of rotation, between 0 and +/- 45
+        let deg = isDraggingFrom * dirX * Math.abs(propX) * 45
 
-            // get scale ratio, between .95 and 1
-            let scale = (95 + (5 * Math.abs(propX))) / 100
+        // get scale ratio, between .95 and 1
+        let scale = (95 + (5 * Math.abs(propX))) / 100
 
 
-            if (e.isFinal) {
-                let successful = false
+        if (e.isFinal) {
+            let successful = false
 
-                // check threshold and movement direction
-                if (e.direction == Hammer.DIRECTION_RIGHT) {
+            // check threshold and movement direction
+            if (e.direction === Hammer.DIRECTION_RIGHT) {
 
-                    /*update(previouscard);
-                    console.log("preced");*/
+                /*update(previouscard);
+                console.log("preced");*/
 
-                } else if (e.direction == Hammer.DIRECTION_LEFT) {
+            } else if (e.direction === Hammer.DIRECTION_LEFT) {
 
-                    /*  update(nextcard);
-                      console.log("suiv");*/
+                /*  update(nextcard);
+                  console.log("suiv");*/
 
-                } else if (propY < 30 && e.direction == Hammer.DIRECTION_DOWN) {
+            } else if (propY < 30 && e.direction === Hammer.DIRECTION_DOWN) {
 
-                    successful = true
-                    // get top border position
-                    posY = +(board.clientHeight + topcard.clientHeight)
+                successful = true
+                // get top border position
+                posY = +(swiper.clientHeight + topcard.clientHeight)
 
-                }
+            }
 
-                if (successful) {
-                    // animation de la carte qui va vers le bas
-                    topcard.style.transform = 'translateX(' + posX + 'px) translateY(' + posY + 'px) rotate(' + deg + 'deg)'
+            if (successful) {
+                // animation de la carte qui va vers le bas
+                topcard.style.transform = 'translateX(' + posX + 'px) translateY(' + posY + 'px) rotate(' + deg + 'deg)'
 
-                    // quand la transition est finie, on stock l'id de la carte et on passe a la suivante
-                    setTimeout(() => {
-                        // enleve la carte swipe
-                        nextcard.setAttribute("data-pos", "0");
-                        let avantDerniere = elems.find(elem => elem.getAttribute("data-pos") === '2');
-                        avantDerniere.setAttribute("data-pos", "1");
-                        previouscard.setAttribute("data-pos", "-1");
-                        const idFicheSuppr = topcard.getAttribute('data-id');
+                // quand la transition est finie, on stock l'id de la carte et on passe a la suivante
+                setTimeout(() => {
+                    // Décalage des positions
+                    updatePos('1');
 
-                        ajouterNouvelleFicheSwipeBas(idFicheSuppr);
+                    const idFicheFav = topcard.getAttribute('data-id');
+                    ajouterNouvelleFicheSwipeBas(idFicheFav);
 
-                        // stock la carte et on affiche la prochaine
-                        let recuperationProfils = window.localStorage.getItem("profilsFavoris");
-                        if (recuperationProfils !== null) {
-                            if (!recuperationProfils.split(",").includes(topcard.getAttribute("data-id"))){
-                                recuperationProfils = recuperationProfils + "," + topcard.getAttribute("data-id");
+                    // stock la carte et on affiche la prochain
+                    pushProfilFav(idFicheFav);
 
-                                window.localStorage.setItem("profilsFavoris", recuperationProfils);
-                            }
-                        } else {
-                            window.localStorage.setItem("profilsFavoris",topcard.getAttribute("data-id") );
-                        }
-                        topcard.remove();
-                        miseAJourEtatCarousel();
-                    }, 200)
-                }
+                    // enleve la carte swipe
+                    topcard.remove();
+                    miseAJourEtatCarousel();
+                }, 200);
+
+                updateFolder();
             }
         }
     }
@@ -519,26 +557,25 @@ function swipe(current, next, prev) {
 
 
 
-function update(newActive) {
-    const newActivePos = newActive.dataset.pos;
+function updatePos(newActivePos, swipeHorinzontal) {
     const first = elems.find((elem) => elem.dataset.pos === '-2');
     const prev = elems.find((elem) => elem.dataset.pos === '-1');
     const current = elems.find((elem) => elem.dataset.pos === '0');
     const next = elems.find((elem) => elem.dataset.pos === '1');
     const last = elems.find((elem) => elem.dataset.pos === '2');
 
-    current.classList.remove('carousel__item_active');
-
-    [current, prev, next, first, last].forEach(item => {
-        let itemPos = item.dataset.pos;
-
-        item.dataset.pos = getNewPos(itemPos, newActivePos)
-    });
-
-
+    if(swipeHorinzontal) {
+        [current, prev, next, first, last].forEach(item => {
+            let itemPos = item.dataset.pos;
+            item.dataset.pos = getNewPos(itemPos, newActivePos)
+        });
+    } else {
+        next.setAttribute("data-pos", "0");
+        last.setAttribute("data-pos", "1");
+    }
 
 }
-const getNewPos = function (current, active) {
+function getNewPos(current, active) {
     const diff = current - active;
     if (Math.abs(diff) > 2) {
         return -current

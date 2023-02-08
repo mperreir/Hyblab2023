@@ -13,21 +13,41 @@ body {
     width: 75%;
 }
 
-
-#liste-profils {
-
+#retour {
+    margin-right: 10%;
 
 }
 
-.information-fiche {
+#petit-rond {
+    width: 4vh;
+    height: 4vh;
+    background: #006982;
+    border-radius: 15px;
+    margin-left: 20%;
+    color: #F8F8F8;
+}
+#info {
+    text-align: center;
+    justify-content: center;
+    alignment: center;
+}
 
+#liste-profils {
+
+    scroll-behavior: smooth;
+}
+
+.information-fiche {
+    margin-left: 5%;
     height: 60%;
     width: 80%;
 }
 .fiche-minia {
+    margin-left: 5%;
+    margin-top: 5%;
     user-select: none;
     width: 90%;
-    height: 100%;
+    height: 20vh;
     border-radius: 15px;
     box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.5);
     background: var(--gris-clair);
@@ -36,6 +56,7 @@ body {
 
 .photo-case img {
     width: 100%;
+    height: 20vh;
     object-fit: cover;
     border-radius: 15px 0 0 15px;
 
@@ -44,7 +65,9 @@ body {
 
 
 .photo-case {
-    width: 40%;
+    margin-top: 3%;
+
+    width: 30%;
 }
 section {
 
