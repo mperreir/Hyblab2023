@@ -467,6 +467,128 @@ main>section {
     min-height: 237px;
 }
 
+
+.slidecontainer {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#slider-val {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 80vw;
+    justify-content: space-between;
+}
+
+.slider {
+    width: 80vw;
+}
+
+input[type=range] {
+    height: 24px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+    background-color: #121212;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 1px 1px 1px #C2C2C2;
+    background: #FFFFFF;
+    border-radius: 16px;
+    border: 1px solid #FFFFFF;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #171717;
+    border: 0px solid #000000;
+    height: 17px;
+    width: 17px;
+    border-radius: 50px;
+    background: #FFFFFF;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -4px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #FFFFFF;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 1px 1px 1px #C2C2C2;
+    background: #FFFFFF;
+    border-radius: 16px;
+    border: 1px solid #FFFFFF;
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #171717;
+    border: 0px solid #000000;
+    height: 17px;
+    width: 17px;
+    border-radius: 50px;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 32px;
+    box-shadow: 1px 1px 1px #C2C2C2;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 32px;
+    box-shadow: 1px 1px 1px #C2C2C2;
+}
+
+input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 1px 1px 1px #171717;
+    border: 0px solid #000000;
+    height: 17px;
+    width: 17px;
+    border-radius: 50px;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #FFFFFF;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: #FFFFFF;
+}
+
+
+
 /* ---------- Positionning of logos on the last slide -------------------- */
 /* here we have a contraint on the height of the logos (not the width)     */
 /* so we cannot use % and use em (which are proportinal to the size of the */
