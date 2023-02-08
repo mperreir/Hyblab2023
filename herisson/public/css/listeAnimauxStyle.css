@@ -85,7 +85,7 @@ footer.main{
     position: sticky;
     bottom: 0;
     background-color: #0B6E5F;
-    margin-bottom: 0;
+    margin-bottom: -1vh;
     border-radius: 8vw 8vw 0 0;
     width: 100vw;
 }

@@ -54,7 +54,7 @@ async function createAnimalCategory(commune, animalCategory) {
         main.style.minHeight = `${buttonContainer.offsetHeight + footer.offsetHeight}px`;
     }
     else{
-        main.style.minHeight = '72.1vh';
+        main.style.minHeight = '74.4vh';
     }
 
     const tipsButton = document.getElementById("fleche");
