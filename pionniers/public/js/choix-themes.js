@@ -57,8 +57,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     });
 
-
-
     themeSelected = localStorage.getItem('themes').split(',');
 
     themes.forEach(tc => {
