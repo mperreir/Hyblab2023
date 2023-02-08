@@ -202,11 +202,11 @@ SLIDE ACCUEIL
 
 
 
-#logo-verdure {
+#logo-gtv {
 
     text-align: center;
-    width: 70%;
-    left: 50%;
+    width: 32%;
+    left: 60%;
     top: 5%;
     margin-left: -25%;
     margin-top: calc(-7.5% * 9 / 16); /* margins are relative to the element width... :-( */
@@ -767,7 +767,7 @@ slide entree texte
     font-size: 30%;
     position: absolute;
     top: 15%;
-    width: 100%;
+    width: 60%;
     text-align: center;
     
 
@@ -801,7 +801,7 @@ GREENTA
 
 .greenTa {
     text-align: center;
-    width: 50%;
+    width: 29%;
     left: 32%;
     top: 6%;
     margin-left: -25%;
