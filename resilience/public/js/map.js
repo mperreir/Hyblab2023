@@ -113,7 +113,7 @@ function manger() {
 
 function toilette() {
     window.localStorage.setItem('pipi', "true");
-    window.location = "./dialogue.html?id=16";
+    window.location = "./dialogue.html?id=17";
 }
 
 load();
