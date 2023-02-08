@@ -12,25 +12,14 @@ const initEndSlide = function () {
     // (Re)set initial scale of logo
     titre.setAttribute('style', 'transform : scale(1);');
 
-    // Animate hyblab logo and make shrink on click
-    anime({
-        targets: '#result',
-        scale: 1.2,
-        easing: 'easeOutBounce',
-        loop: true,
-        direction:"alternate",
-    });
-    
-    const elements = document.querySelectorAll('.conclusion p');
-    elements.forEach(element => {
+    const element = document.querySelector("#result");
     const textArray = element.innerHTML.split('');
     element.innerHTML = '';
     textArray.forEach((letter, i) => {
-    setTimeout(() => {
-        element.innerHTML += letter;
-        }, 15 * i);
-    });
-});
+        setTimeout(() => {
+            element.innerHTML += letter;
+        }, 75*i)
+    })
 
     setTimeout(function(){
         $("#endButtons").fadeIn();
