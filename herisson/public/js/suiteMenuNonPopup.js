@@ -5,7 +5,7 @@ window.onload = function() {
     divIconeHeader.id = "iconeHeader";
 
     const lienLogo = document.createElement("a");
-    lienLogo.href = "main.html";
+    lienLogo.href = "index.html";
     lienLogo.style.textDecoration = "none";
 
     const imgLogo = document.createElement("img");
@@ -21,7 +21,7 @@ window.onload = function() {
     lienLogo.appendChild(imgLogo);
 
     const lienCroix = document.createElement("a");
-    lienCroix.href = "main.html";
+    lienCroix.href = "index.html";
     lienCroix.style.textDecoration = "none";
 
     const imgMenuBurger = document.createElement("img");
