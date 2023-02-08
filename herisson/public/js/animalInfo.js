@@ -2,7 +2,7 @@ async function animalInfo(animal) {
     /*function to get the datas of a given animal */
     async function getData(taxon) {
         return await
-            fetch(`https://hyblab.polytech.univ-nantes.fr/herisson/herisson/api/animal/${taxon}`)
+            fetch(`https://hyblab.polytech.univ-nantes.fr/herisson/api/animal/${taxon}`)
                 .then(response => response.json())
                 .then(data => {
                         return data.filteredData[taxon];
