@@ -68,6 +68,6 @@ const initSlideAnimationHaut = function(){
   setTimeout(()=> {
     swiper.enable()
     swiper.slideTo(9,1)
- },5000)
+ },4000)
 
 };

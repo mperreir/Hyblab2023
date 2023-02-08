@@ -32,7 +32,7 @@ const createAnswers = function (choices) {
 // The function called when a button is pressed to answer a question
 // It will swap the question with the answer text and show all the points of the answer
 const answered = function (chosen) {
-    console.log(chosen)
+
     document.getElementById('answer'+current_question_number).style.display = 'none';
     document.getElementById('question-title-text'+current_question_number).style.display = 'none';
 
@@ -68,7 +68,7 @@ const answered = function (chosen) {
     longAnswer.style.display = 'none';
 
     selectedZone[currentZoneNumber] = chosen.image;
-    console.log(selectedZone);
+
 
     if ((chosen.nextQuestion !== 3 && chosen.nextQuestion !== 5 && chosen.nextQuestion !== 6)|| chosen.prompt === "Planter des arbres directement sur le parking" ) {
         currentZoneNumber += 1; // change zone iff not in the parking with the destroying solution and in the place
