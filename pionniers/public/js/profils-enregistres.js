@@ -1,3 +1,5 @@
+const nombreProfilFavText = document.querySelector("#nombre-profil");
+
 function createFicheMinia(profil) {
     // Récupération des attributs de l'objet profil (par méthode destructuring)
     const { Id, Age, City, Company, Name, Status, Topic, URLImage } = profil;
@@ -50,19 +52,23 @@ function onSupprProfile(event) {
     const idProfil = target.dataset.id;
     removeProfilFav(idProfil);
     target.remove();
+    updateNombreProfil(getProfilsFav());
 }
 
-document.addEventListener("DOMContentLoaded", async function () {
-
-    const nombreProfilFavText = document.querySelector("#nombre-profil");
-    const listeProfils = document.querySelector('#liste-profils');
-    const idsProfilsFav = getProfilsFav();
-
+function updateNombreProfil(idsProfilsFav) {
     if(idsProfilsFav.length > 0) {
         nombreProfilFavText.innerHTML = "Voir " + idsProfilsFav.length + " favoris";
     } else {
         nombreProfilFavText.innerHTML = "Favoris vide";
     }
+}
+
+document.addEventListener("DOMContentLoaded", async function () {
+
+    const listeProfils = document.querySelector('#liste-profils');
+    const idsProfilsFav = getProfilsFav();
+
+    updateNombreProfil(idsProfilsFav);
 
     let profilFav = [];
 
