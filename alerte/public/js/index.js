@@ -252,6 +252,18 @@ function initRepsDep() {
             changeBackground('#121212')
         }
     })
+
+    let next15_1 = document.getElementById("next15_1")
+    next15_1.addEventListener("click", () => {
+        display("s16")
+        changeBackground('aliceblue')
+    })
+
+    let next15_2 = document.getElementById("next15_2")
+    next15_2.addEventListener("click", () => {
+        display("s16")
+        changeBackground('aliceblue')
+    })
 }
 
 function display(id) {
