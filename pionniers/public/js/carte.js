@@ -572,6 +572,13 @@ document.addEventListener("DOMContentLoaded", function () {
         threshold: 0
     }));
     hammer.on('pan', onPan);
+
+    const folder = document.querySelector('#folder');
+
+    folder.addEventListener('click', () => {
+        window.location.href = './profils-enregistres.html';
+        window.localStorage.setItem('pagePrecedente', "carte");
+    });
 });
 
 /*

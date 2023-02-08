@@ -67,6 +67,11 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     const listeProfils = document.querySelector('#liste-profils');
     const idsProfilsFav = getProfilsFav();
+    const retourBtn = document.querySelector('#retour');
+
+    retourBtn.addEventListener('click', () => {
+        window.location.href = window.localStorage.getItem('pagePrecedente') + ".html";
+    });
 
     updateNombreProfil(idsProfilsFav);
 
@@ -86,7 +91,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     croixSuppr.forEach(croixSuppr => {
         croixSuppr.addEventListener('click', onSupprProfile);
-    })
+    });
 
 });
 
