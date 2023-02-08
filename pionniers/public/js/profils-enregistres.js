@@ -35,7 +35,7 @@ function createFicheMinia(profil) {
                                     </div>
                                 </section>
                             </div>
-                            <div class="lire-profil bouton-rond flex-row justify-content-center align-items-center">
+                            <div class="lire-profil bouton flex-row justify-content-center align-items-center">
                                 <p>Lire le PROfil</p>
                             </div>
                          </li>`
