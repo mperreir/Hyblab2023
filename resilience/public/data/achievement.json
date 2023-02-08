@@ -88,6 +88,7 @@
         },
         {
           "type": "link",
+          "text": "ici",
           "link": "https://www.google.com/",
           "class": []
         }
@@ -95,7 +96,7 @@
     },
     {
       "ID": "3",
-      "name": "Des synergies au sien des territoires et entre territoires",
+      "name": "Des synergies au sien des territoires et entre territoires.",
       "data": [
         {
           "type": "text",
