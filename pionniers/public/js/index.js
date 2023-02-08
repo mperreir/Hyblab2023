@@ -73,6 +73,9 @@ function getProfilsFav() {
 }
 
 function pushProfilFav(id) {
+  if (getProfilsFav().includes(id)) {
+    return;
+  }
   const profFav = getProfilsFav();
   profFav.push(id);
   window.localStorage.setItem("profilsFavoris", profFav.toString());
