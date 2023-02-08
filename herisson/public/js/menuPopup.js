@@ -87,7 +87,19 @@ window.onload = function() {
     header.appendChild(divMenu);
 
     imgMenuBurger.addEventListener("click", function () {
+
+        // Page commune et conseils
+        var swiperPrev = document.querySelector('.swiper-button-prev');
+        var swiperNext = document.querySelector('.swiper-button-next');
+        var pagination = document.querySelector('.swiper-pagination');
+
         if (divMenu.style.display === "block") {
+
+            // Page commune et conseils
+            swiperPrev.style.display = 'block';
+            swiperNext.style.display = 'block';
+            pagination.style.display = 'block';
+
             divMenu.style.left = "100%";
             setTimeout(function () {
                 divMenu.style.display = "none";
@@ -106,6 +118,12 @@ window.onload = function() {
                 }
             });
         } else {
+
+            // Page commune et conseils
+            swiperPrev.style.display = 'none';
+            swiperNext.style.display = 'none';
+            pagination.style.display = 'none';
+
             divMenu.style.display = "block";
             setTimeout(function () {
                 divMenu.style.left = "0";

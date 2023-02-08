@@ -52,13 +52,11 @@ body {
 }
 
 #Odonates {
-    /*background-image: url("../img/odonates.jpg");*/
-    background-color: #FBC5EB;
+    background-image: url("../img/decor_odonate.png");
 }
 
 #Chiroptères {
-    /*background-image: url("../img/chiropteres.jpg");*/
-    background-color: #FBC5EB;
+    background-image: url("../img/decor_chiroptere.png");
 }
 
 #Mammifères {
