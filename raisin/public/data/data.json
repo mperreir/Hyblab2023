@@ -3,6 +3,7 @@
             "nom": "Saumur-Champigny",
             "desc": "Le Saumur-Champigny est un vin rouge du <b>Val de Loire</b>. C’est un vin protégé par une <b>AOP</b> et fait à partir de <b>cabernet franc</b>, <b>cabernet sauvignon</b> et <b>pineau d’aunis</b>.<br><br>Choisir ce vin, c’est rejoindre <b>130 producteurs</b> dans une région proche de Saumur possédant un microclimat particulièrement <b>chaud en été</b>.<br><br>Les raisins sont fermentés à des températures contrôlées.<br>Les vins de Saumur - Champigny sont généralement considérés comme des vins de <b>qualité supérieure</b>.",
             "img": "img/bouteilles/bouteille-rouge.png",
+            "imgfin" : "img/bouteilles/bouteille3.png",
             "color": "#841811",
             "txtcolor": "white"
         },
@@ -10,6 +11,7 @@
             "nom": "Coteaux du layon",
             "desc": "Le Coteaux du Layon est un vin blanc fait avec du <b>Chenin</b> autour d’ un affluent de Loire: le Layon.<br><br>La vinification se fait en <b>5 ans</b> dans une pièce à <b>8°C</b>.<br><br>Les raisins sont généralement récoltés à maturité avancée, ce qui <b>donne au vin sa douceur</b> et sa <b>concentration en sucre</b>. Le vin peut être <b>doux</b> ou <b>moelleux</b>, selon le degré de sucre résiduel.",
             "img": "img/bouteilles/bouteille-blanc.png",
+            "imgfin" : "img/bouteilles/bouteille1.png",
             "color": "#FFD78C",
             "txtcolor": "black"
         },
@@ -17,13 +19,14 @@
             "nom": "Cabarnet d'Anjou",
             "desc": "Le Cabarnet d’Anjou est l’unique vin d’AOP rosé tendre de France ! Ce vin est fait à base de Cabernet franc et cabernet sauvignon.<br><br>Le Cabarnet d’ Anjou se produit sur tout la zone sud de la Loire allant d’ Ancenis à Saumur.<br><br>Les raisins sont fermentés à des températures contrôlées, puis le vin est élevé en barriques de chêne ou en cuves en acier inoxydable pour développer ses arômes et ses saveurs.<br>Il peut avoir des arômes de fruits rouges, de réglisse et de violettes, ainsi que des notes de bois de chêne.",
             "img": "img/bouteilles/bouteille-rose.png",
+            "imgfin" : "img/bouteilles/bouteille2.png",
             "color": "#EF7E73",
             "txtcolor": "black"
         }
     ],
     "questions": {
         "general": [{
-                "contexte": "Bonsoir, les infos météos pour vous !<br><br>Pour demain, samedi 15 avril, il neigera par intermittence et le risque de gel est important.<br><br>Plus particulièrement sur la région d’Anjou, <br>gare à vous.",
+                "contexte": "Bonsoir, les infos météo pour vous !<br><br>Pour demain, samedi 15 avril, il neigera par intermittence et le risque de gel est important.<br><br>Plus particulièrement sur la région d’Anjou, <br>gare à vous.",
                 "enonce": "Bizarre, les vignes commencent à geler… <br>Pourtant, il n’est que le 15 avril… Il faut agir vite<br>pour sauver les vignes ! Que comptes-tu faire ?",
                 "img": "img/characters/missmeteo.png",
                 "reponse": [
@@ -38,12 +41,12 @@
                 ],
                 "consequence": [
                     0.05,
-                    0.3,
-                    0.2
+                    0.2,
+                    0.3
                 ]
             },
             {
-                "contexte": "Bonsoir,<br><br>L’élément clef ce JT, ce soir, sera le début de l’été<br>avec de nombreux épisodes caniculaires prévus.<br><br>Ce qui sera un problème pour le monde de l’agriculture...",
+                "contexte": "Bonsoir,<br><br>L’élément-clef ce JT, ce soir, sera le début de l’été<br>avec de nombreux épisodes caniculaires prévus.<br><br>Ce qui sera un problème pour le monde de l’agriculture...",
                 "enonce": "L’été arrive ! La température risque d’augmenter drastiquement. <br>On parle même d’épisodes caniculaires… <br>Que vais-je faire le moment venu ?",
                 "img": "img/characters/jt.png",
                 "reponse": [
@@ -113,7 +116,7 @@
                 ],
                 "explication": [
                     "<b>Hélas</b>, il le faut… Tu as eu <b>un bon réflexe</b> en <b>sacrifiant les plantes malades</b>. Même si tu perds une partie de ta récolte, le reste de la plantation devrait <b>s’en sortir indemne</b> !",
-                    "<b>Pourquoi pas</b> ! Tu peux en effet <b>procéder à un curetage</b>. Pour résumer, tu <b>élimines</b> la partie <b>contaminée du bois</b> en le découpant. Néanmoins, il faut faire <b>attention</b> ! Si tu ne t’y prends <b>pas délicatement</b>, tu risques de couper <br>le <b>flux de sève</b> et donc <b>de tuer ta plante</b>… <br>Par contre, si tu réussis, ton pied de vigne <b>à 99% <br>de chances de guérir</b> !",
+                    "<b>Pourquoi pas</b> ! Tu peux en effet <b>procéder à un curetage</b>. Pour résumer, tu <b>élimines</b> la partie <b>contaminée du bois</b> en le découpant. Néanmoins, il faut faire <b>attention</b> ! Si tu ne t’y prends <b>pas délicatement</b>, tu risques de couper le <b>flux de sève</b> et donc <b>de tuer ta plante</b>… <br>Par contre, si tu réussis, ton pied de vigne <b>a 99% de chances de guérir</b> !",
                     "<b>Aïe</b> ! Il faut <b>absolument</b> faire quelque chose, sans quoi la maladie va <b>s’étendre</b>. Ensuite, les champignons vont <b>durablement s’installer</b> dans le bois jusqu’à ce que la vigne <b>soit dégradée</b>…"
                 ],
                 "consequence": [
@@ -174,8 +177,8 @@
                 ],
                 "explication": [
                     "Bonne idée ! <b>Regreffer</b> les pieds malades permet de les restaurer et de limiter les effets de <b>l’eutypiose</b> !<br> Tu peux par exemple utiliser la technique du <b>regreffage en fente</b>, qui doit être utilisée quand la sève en circulation n’est pas trop active. Soit au printemps <b>après le débourrement</b> (période durant laquelle les bourgeons se développent).",
-                    "<b>Pourquoi pas</b> ! Un groupe international de chercheurs a annoncé dans <b>Science Daily</b> - un média scientifique reconnu internationalement - avoir trouvée une <b>possible solution</b> pour <b>lutter contre l’eutypiose</b> : les antioxydants. Ces derniers, ajoutés aux produits alimentaires, <b>interrompent notamment la réduction de fer et arrêtent la production de peroxyde d'hydrogène</b>.",
-                    "<b>C'est dommage</b> ! Si tu as fait un <b>bon choix</b> en remplaçant les cépages infectés, <b>tes parcelles vont perdre en hétérogénéité</b> - par avec <b>encépage déséquilibré</b> par l'introduction de plantes plus jeunes ou <b>d'un cépage plus résistant</b>… la qualité <br>de ton vin va donc <b>en pâtir</b>."
+                    "<b>Pourquoi pas</b> ! Un groupe international de chercheurs a annoncé dans <b>Science Daily</b>, un média scientifique reconnu internationalement, avoir trouvée une <b>possible solution</b> pour <b>lutter contre l’eutypiose</b> : les antioxydants. Ces derniers, ajoutés aux produits alimentaires, <b>interrompent notamment la réduction de fer et arrêtent la production de peroxyde d'hydrogène</b>.",
+                    "<b>C'est dommage</b> ! Si tu as fait un <b>bon choix</b> en remplaçant les cépages infectés, <b>tes parcelles vont perdre en hétérogénéité</b>, par <b>encépage déséquilibré</b> avec l'introduction de plantes plus jeunes ou <b>d'un cépage plus résistant</b>… la qualité <br>de ton vin va donc <b>en pâtir</b>."
                 ],
                 "consequence": [
                     0.2,

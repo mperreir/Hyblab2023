@@ -2,6 +2,8 @@ let cepage;
 let data;
 let music;
 let nbquestion=0;
+let wineQuantity=90;
+let bouteillefin;
 
 async function fetchData(file) {
     const res = await fetch(file);
@@ -25,15 +27,30 @@ function reset() {
     setPage("#page-title");
     $(".header, #home-button").hide();
     $(".header").attr("src", `img/progressbar/checkpoint-0.png`);
+    nbquestion = 0;
+    wineQuantity = 90;
+}
+
+//Définir la question
+function setQuestion(num, text) {
+    $(".header").attr("src", `img/progressbar/checkpoint-${num}.png`);
+    $("#question-text").html(text.replace("\n", "<br>"));
+}
+
+//Ajouter un choix de réponse pour la question
+function setChoice(num, text) {
+    $(`#choice-${num}`).text(text);
+}
+
+//Supprimer touts les choix de réponse
+function removeChoices() {
+    $(".choice").remove();
 }
 
 function afficheEvenement(numQuestion) {
-    console.log(numQuestion);
-    $(".header").attr("src", `img/progressbar/checkpoint-${numQuestion+1}.png`);
     $("#txt-evenement>p").html(data.questions.general[numQuestion].contexte);
     $("#img-evenement").attr("src", data.questions.general[nbquestion].img)
 }
-
 
 function afficheQuestion(numQuestion) {
     $("#question-text>p").html(data.questions.general[numQuestion].enonce);
@@ -44,6 +61,11 @@ function afficheQuestion(numQuestion) {
 
 function selectExplication(numQuestion, numReponse) {
     $("#txt-score>p").html(data.questions.general[numQuestion].explication[numReponse]);
+}
+
+function changementVin(numQuestion, numReponse) {
+    wineQuantity = wineQuantity * (1-data.questions.general[numQuestion].consequence[numReponse]);
+    $(".vin").css("height", wineQuantity + "%");
 }
 
 //Définir le numéro du cépage choisis (0, 1 ou 2)
@@ -60,15 +82,9 @@ function displayCepage() {
     $("#explaination-cepage>p").html(data.cepages[cepage].desc);
     $("#explaination-cepage>p").css("color", data.cepages[cepage].txtcolor);
     $("#txt-score>p").css("color", data.cepages[cepage].txtcolor);
-    $("#txt-evenement>p").css("color", data.cepages[cepage].txtcolor);
     $(".vin").css("background-color", data.cepages[cepage].color);
     $("#txt-score").css("background-color", data.cepages[cepage].color);
-    $("#txt-evenement").css("background-color", data.cepages[cepage].color);
-}
-
-function changementVin(quantity, color) {
-    $(".vin").css("height", quantity + "%");
-    $(".vin").css("background-color", color);
+    $("#bouteille-resume").attr("src", data.cepages[cepage].imgfin)
 }
 
 async function loadApp() {
@@ -117,8 +133,6 @@ $("#home-button").click(() => {
     reset();
 });
 
-
-
 $("#button-evenement").click(() => {
     afficheQuestion(nbquestion);
     setPage("#page-question", "fade"); 
@@ -126,23 +140,43 @@ $("#button-evenement").click(() => {
 
 $("#choice-1").click(() => {
     selectExplication(nbquestion, 0);
-    setPage("#page-score", "fade");
+    setPage("#page-score");
+    setTimeout(() => {
+        (changementVin(nbquestion, 0));
+    }, 2000)
 });
 
 $("#choice-2").click(() => {
     selectExplication(nbquestion, 1);
     setPage("#page-score", "fade");
+    setTimeout(() => {
+        (changementVin(nbquestion, 1));
+    }, 2000)
 });
 
 $("#choice-3").click(() => {
     selectExplication(nbquestion, 2);
     setPage("#page-score", "fade");
+    setTimeout(() => {
+        (changementVin(nbquestion, 2));
+    }, 2000)
+    
 });
 
 $("#button-score").click(() => {
     nbquestion+=1;
-    afficheEvenement(nbquestion);
-    setPage("#page-evenement", "fade");
+    if (nbquestion == 5){
+        setPage("#page-resume", "fade");
+    }
+    else {
+        afficheEvenement(nbquestion);
+        setPage("#page-evenement", "fade");
+    }
+    
+});
+
+$("#button-resume").click(() => {
+    setPage("#page-sources", "fade");
 });
 
 $("#button-test").click(() => {
@@ -204,6 +238,10 @@ $("#left-button-cepage").click(() => {
 
 $("#right-button-sources").click(() => {
     setPage("#page-sources2");
+});
+
+$("#right-button-sources2").click(() => {
+    setPage("#page-credits");
 });
 
 //Chargement de l'application

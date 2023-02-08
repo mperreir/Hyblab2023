@@ -579,19 +579,25 @@ img.button-next {
 }
 
 .choice {
-    top: 0;
     width: 40%;
+    height: 4em;
     padding: 1%;
     margin: 2%;
     border-radius: 8px;
-    display: inline-block;
     position: relative;
-    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
     text-align: center;
+    cursor: pointer;
 }
 
-.choice>p{
-    height: 200%;
+.choice>p {
+    position: absolute;
+    left:0;
+    right: 0;
+    margin: auto;
+    top:50%;
+    transform: translateY(-50%);
 }
 
 .container-vin-score{
@@ -643,6 +649,15 @@ img.button-next {
     margin: 0px;
     padding: 0px;
 }
+
+#bouteille-resume {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
 
 #img-evenement {
     position: absolute;
@@ -710,7 +725,6 @@ img.button-next {
     position:absolute;
     margin-left: auto;
     margin-right: auto;
-    left: 40%;
     bottom: 10%;
     cursor : pointer;
 }
