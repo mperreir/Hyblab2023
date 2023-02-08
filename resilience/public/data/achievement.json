@@ -87,8 +87,8 @@
           "class": []
         },
         {
-          "type": "lien",
-          "lien": "https://www.google.com/",
+          "type": "link",
+          "link": "https://www.google.com/",
           "class": []
         }
       ]
