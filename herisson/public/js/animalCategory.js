@@ -7,7 +7,6 @@ async function animalCategory() {
     async function getData(dbPath) {
         const response = await fetch(dbPath);
         const data1 = await response.json();
-        console.log(data1);
         return data1[commune][animaldata];
     }
 

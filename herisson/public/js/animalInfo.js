@@ -1,17 +1,17 @@
-const db = "data/additionalDB.json";
-const animal = "Belette d'Europe";
-
-async function animalInfoJS() {
+async function animalInfo(animal) {
     /*function to get the datas of a given animal */
-    async function getData(dbPath) {
-        const response = await fetch(dbPath);
-        const data1 = await response.json();
-        return data1[animal];
+    async function getData(taxon) {
+        return await
+            fetch(`http://127.0.0.1:8080/herisson/api/animal/${taxon}`)
+                .then(response => response.json())
+                .then(data => {
+                        return data.filteredData[taxon];
+                    }
+                );
     }
 
     /*call it*/
-    const dataTest = await getData(db);
-    console.log(dataTest);
+    const dataTest = await getData(animal);
 
     const animalName = document.getElementById("animal-name");
     const desc = document.getElementById("desc");
@@ -30,7 +30,19 @@ async function animalInfoJS() {
     animalName.textContent = animal.toUpperCase();
     desc.textContent = "Les " + dataTest["listCities"][0]["categorie"].toLowerCase();
     menace.textContent = dataTest["listCities"][0]["enjeu_conservation"].toUpperCase();
-    map.textContent = "Carte";
+
+    // add an image as a background of the map button
+    map.style.backgroundImage = "url('./img/map.png')";
+    map.style.backgroundSize = "cover";
+    map.textContent = "Voir la carte";
+    map.classList.add("btn", "btn-primary", "btn-lg", "btn-block");
+    map.onclick = function () {
+        // save the animal name in the local storage
+        localStorage.setItem("animal", animal);
+        window.location.href = "map.html";
+    };
+
+
     tips.textContent += dataTest["listCities"][0]["categorie"].toLowerCase() + " ?";
     img.src = "img/animals/" + dataTest["id"] + ".jpg";
     imgDiv.style.minHeight = '41vh';
@@ -41,5 +53,3 @@ async function animalInfoJS() {
     copyright.textContent = dataTest["copyright"];
 
 }
-
-animalInfoJS();
