@@ -23,11 +23,13 @@ async function animalInfo(animal) {
     const copyright = document.getElementById("copyright");
     const tipsButton = document.getElementById("fleche2");
 
-    if(animal.length > 22){
+    if(animalName.length > 22){
         animalName.style.fontSize = '4vh';
-    } else if(animal.length > 27){
+    }
+    else if(animalName.length > 27){
         animalName.style.fontSize = '3.5vh';
     }
+
     animalName.textContent = animal.toUpperCase();
     desc.textContent = "Les " + dataTest["listCities"][0]["categorie"].toLowerCase();
     if (dataTest["listCities"][0]["enjeu_conservation"] == null){

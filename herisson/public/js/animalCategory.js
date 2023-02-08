@@ -1,18 +1,20 @@
-const animalCategory = "Oiseaux";
-const commune = "Bordeaux";
 const db = "data/db.json";
 const dbAdd = "data/additionalDB.json";
 
-async function animalCategoryJS() {
+async function createAnimalCategory(commune, animalCategory) {
     /*function to create a dictionary of the wanted animals*/
-    async function getAllAnimals(dbPath) {
-        const response = await fetch(dbPath);
-        const data1 = await response.json();
-        return data1[commune][animalCategory];
+    async function getAllAnimals() {
+        return await
+            fetch(`http://127.0.0.1:8080/herisson/api/commune/${commune}`)
+                .then(response => response.json())
+                .then(data => {
+                        return data.filteredData[commune][animalCategory];
+                    }
+                );
     }
 
     /*call it*/
-    const animalsData = await getAllAnimals(db);
+    const animalsData = await getAllAnimals();
 
     /*  main page */
     const footercontainer = document.getElementById("footerText")
@@ -55,18 +57,28 @@ async function animalCategoryJS() {
         main.style.minHeight = '71.7vh';
     }
 
+    const tipsButton = document.getElementById("fleche");
+    tipsButton.classList.add("btn", "btn-primary", "btn-lg", "btn-block");
+    tipsButton.onclick = function () {
+        window.location.href = "commentAider.html"
+    }
+
 
     /* pop-up */
 
     async function getInfoPage(animal, commune) {
-        async function getAnimalData(dbPath) {
-            const response = await fetch(dbPath);
-            const data1 = await response.json();
-            return data1[animal];
+        async function getAnimalData() {
+            return await
+                fetch(`http://127.0.0.1:8080/herisson/api/animal/${animal}`)
+                    .then(response => response.json())
+                    .then(data => {
+                            return data.filteredData[animal];
+                        }
+                    );
         }
 
         /*call it*/
-        const animalData = await getAnimalData(dbAdd);
+        const animalData = await getAnimalData();
 
         const animalName = document.getElementById("animal-name");
         const desc = document.getElementById("desc");
@@ -77,11 +89,13 @@ async function animalCategoryJS() {
         const imgDiv = document.getElementById("picture-div")
         const img = document.getElementById("animal-picture");
         const copyright = document.getElementById("copyright");
+        const tipsButton2 = document.getElementById("fleche2");
+
 
         if (animal.length > 22) {
-            animalName.style.fontSize = '4vh';
-        } else if (animal.length > 27) {
             animalName.style.fontSize = '3.5vh';
+        } else if (animal.length > 27) {
+            animalName.style.fontSize = '3vh';
         }
         animalName.textContent = animal.toUpperCase();
         desc.textContent = "Les " + animalData["listCities"][0]["categorie"].toLowerCase() + " de " + commune;
@@ -90,7 +104,15 @@ async function animalCategoryJS() {
         } else {
             menace.textContent = animalData["listCities"][0]["enjeu_conservation"].toUpperCase();
         }
-        map.textContent = "Carte";
+        map.textContent = "Voir la carte";
+        map.style.backgroundImage = "url('./img/map.png')";
+        map.style.backgroundSize = "cover";
+        map.classList.add("btn", "btn-primary", "btn-lg", "btn-block");
+        map.onclick = function () {
+            localStorage.setItem("animal", animal);
+            window.location.href = "map.html"
+        }
+
         tips.textContent = "Découvrez comment vous pouvez aider les " + animalData["listCities"][0]["categorie"].toLowerCase() + " ?";
         vus.textContent = animalData["listCities"][0]["nb_obs"];
         img.src = "img/animals/" + animalData["id"] + ".jpg";
@@ -100,6 +122,11 @@ async function animalCategoryJS() {
         imgDiv.style.width = "auto";
         imgDiv.style.zIndex = "200";
         copyright.textContent = animalData["copyright"];
+
+        tipsButton2.classList.add("btn", "btn-primary", "btn-lg", "btn-block");
+        tipsButton2.onclick = function () {
+            window.location.href = "commentAider.html"
+        }
     }
 
 
@@ -130,5 +157,3 @@ async function animalCategoryJS() {
     await selectAnimal();
     await quitPopUp();
 }
-
-animalCategoryJS();

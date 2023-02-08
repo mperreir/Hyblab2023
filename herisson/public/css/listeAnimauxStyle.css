@@ -7,10 +7,22 @@ body{
 }
 
 
+
+
 /*//HEADER//*/
 header.main{
     position: relative;
     z-index: 5;
+}
+.main #logo{
+    width: 50%;
+    max-width: 40%;
+    height: auto;
+}
+#burger{
+    position: absolute;
+    right: 8%;
+    top: 35%;
 }
 
 /*//MAIN//*/
@@ -18,10 +30,9 @@ header.main{
 #titles {
     min-height: 10vh;
     position: sticky;
-    top: 1%;
-    margin-top: 9%;
+    top: 3%;
     text-align: center;
-    z-index: 4;
+    z-index: 5;
 }
 
 #titles h1{
@@ -49,7 +60,7 @@ header.main{
     position: sticky;
     top: 0;
     background-image: linear-gradient(to top, rgba(0,0,0,0), #FFF8F1, #FFF8F1, #FFF8F1, #FFF8F1);
-    z-index: 3;
+    z-index: 4;
 }
 #animals-buttons {
     position: absolute;

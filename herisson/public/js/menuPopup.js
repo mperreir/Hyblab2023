@@ -1,10 +1,14 @@
+
+
+/////HEADER
+
 const header = document.getElementById("headerMenu");
 
 const divIconeHeader = document.createElement("div");
 divIconeHeader.id = "iconeHeader";
 
 const lienLogo = document.createElement("a");
-lienLogo.href = "main.html";
+lienLogo.href = "index.html";
 lienLogo.style.textDecoration = "none";
 
 const imgLogo = document.createElement("img");
@@ -87,7 +91,24 @@ divMenu.appendChild(pFinMenu);
 header.appendChild(divMenu);
 
 imgMenuBurger.addEventListener("click", function () {
+    // Page commune et conseils
+    try {
+        var swiperPrev = document.querySelector('.swiper-button-prev');
+        var swiperNext = document.querySelector('.swiper-button-next');
+        var pagination = document.querySelector('.swiper-pagination');
+    } catch (error) {
+        console.log(error);
+    }
+
     if (divMenu.style.display === "block") {
+        // Page commune et conseils
+        try {
+            swiperPrev.style.display = 'block';
+            swiperNext.style.display = 'block';
+            pagination.style.display = 'block';
+        } catch (error) {
+            console.log(error);
+        }
         divMenu.style.left = "100%";
         setTimeout(function () {
             divMenu.style.display = "none";
@@ -106,6 +127,14 @@ imgMenuBurger.addEventListener("click", function () {
             }
         });
     } else {
+        // Page commune et conseils
+        try {
+            swiperPrev.style.display = 'none';
+            swiperNext.style.display = 'none';
+            pagination.style.display = 'none';
+        } catch (error) {
+            console.log(error);
+        }
         divMenu.style.display = "block";
         setTimeout(function () {
             divMenu.style.left = "0";
@@ -124,4 +153,5 @@ imgMenuBurger.addEventListener("click", function () {
             }
         });
     }
-})
+});
+

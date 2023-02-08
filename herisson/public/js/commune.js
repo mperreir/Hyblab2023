@@ -40,6 +40,13 @@ async function createCommunePage(commune) {
 
         bouton.appendChild(boutonText)
 
+        // on click, on va sur la page de la catégorie
+        bouton.onclick = function () {
+            localStorage.setItem("category", categorie)
+            console.log(categorie)
+            window.location.href = "listeAnimaux.html"
+        }
+
         let groupe = document.createElement("a")
         groupe.className = "groupe"
         groupe.innerText = "Choisissez votre groupe"
