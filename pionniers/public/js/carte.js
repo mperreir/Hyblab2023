@@ -153,8 +153,32 @@ function updateSelectedMarkersPosition() {
  */
 async function addMarkers() {
     // Add a marker for each profile
-    geographicalProfiles.forEach(p => {
-        p.marker = L.marker([p.Lat, p.Long], {icon: createIcon(p)}).addTo(map);
+    geographicalProfiles.forEach(gp => {
+        gp.marker = L.marker([gp.Lat, gp.Long], {icon: createIcon(gp)}).addTo(map);
+        gp.marker.addEventListener('click', () => {
+            displayMiniature(gp.Id);
+        });
+    });
+}
+
+
+/*
+  ----------------------------------------------------------------------------------------------------------------------
+  | Miniatures management                                                                                              |
+  ----------------------------------------------------------------------------------------------------------------------
+ */
+
+async function getMiniature(Id) {
+    // Fetch the data from the API
+    const response = await fetch("/pionniers/api/miniature/" + Id);
+    // Parse the response as JSON and return it
+    return await response.json();
+}
+
+
+function displayMiniature(Id){
+    getMiniature(Id).then(r => {
+        console.log(r);
     });
 }
 
