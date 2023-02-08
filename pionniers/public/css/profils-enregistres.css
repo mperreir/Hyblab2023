@@ -111,12 +111,15 @@ ul#liste-profils li {
     color: var(--bleu-fonce);
     border-radius: 500px;
     padding: 3%;
+    margin-top: 1%;
     border: none;
     background: var(--blanc-fond);
-    font-size: 0.5em;
+    font-size: 0.7em;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: 0.2s;
 }
+
+
 
 .bouton:hover {
     cursor: pointer;
