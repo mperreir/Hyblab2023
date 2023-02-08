@@ -23,7 +23,8 @@ const initSlide4 = async function(){
                 //initSlide6();
             }
             else{
-                swiper.slideNext()
+                swiper.slideNext();
+                console.log(quiz);
                 //initSlide5();
             }
         });
@@ -34,19 +35,20 @@ const initSlide4 = async function(){
 function changePente(){
     let pente = $("#pente input[name=pente]:checked").val();
         switch (pente) {
-            case "Plat":
+            case "1":
                 $("#pente #image3 p").html("Plat");
                 $("#pente .img-pente").attr("src", "img/PenteBasse.png");
                 break;
-            case "Standard":
+            case "3":
                 $("#pente #image3 p").html("Standard");
                 $("#pente .img-pente").attr("src", "img/PenteHaut.png");
             break;
-            case "Pentu":
+            case "2":
                 $("#pente #image3 p").html("Pentu");
                 $("#pente .img-pente").attr("src", "img/PenteMoyen.png");
                 break;
             default:
+                console.log(pente);
                 break;
         }
 }

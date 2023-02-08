@@ -5,24 +5,30 @@ const initSlide5 = function(){
     if(!executed5){
         executed5 = true;
         $("#orientation header button").click(function(){
-            changeBoussole();
+            
         });
         $("#orientation footer button").click(function(){
             swiper.slideNext();
+        })
+        $("#orientation .boussole").click(function(){
+            changeEnsoleillement();
+        })
+        $("#orientation #tropdechoix").click(function(){
+            changeEnsoleillement();
         })
     }
     
 }
 
-function changeBoussole(){
-    switch($("#orientation img.boussole").attr("alt")){
-        case 0:
-            $("#orientation img.boussole").attr("alt", 1);
-            //$("#orientation img.boussole").atr("src", "bousole2");
-            break;
-    }
-}
-
+ function changeEnsoleillement(){
+    let alt = (parseInt($(".boussole img").attr("alt")) + 1) %8;
+    // changement de la boussole
+    $(".boussole img").attr("alt", alt);
+    $(".boussole img").attr("src", `img/boussole/${alt}.jpg`);
+    // changement de l'image au dessus
+    $("#tropdechoix").attr("src", `img/ensoleillement/${alt}-${quiz["pente"]}-commune.jpg`);
+    
+ }
 /*
 let ensoleillement = $(???).val();   // CAMPAGNE - TOIT PLAT
 switch (ensoleillement) {
