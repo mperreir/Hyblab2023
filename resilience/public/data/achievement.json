@@ -62,7 +62,6 @@
         },
         {
           "type": "video",
-          "text": "ici",
           "link": "https://youtu.be/dQw4w9WgXcQ",
           "class": []
         }
@@ -89,6 +88,7 @@
         },
         {
           "type": "link",
+          "text": "ici",
           "link": "https://www.google.com/",
           "class": []
         }
