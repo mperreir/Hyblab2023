@@ -375,9 +375,9 @@ INDICATEUR
 /*THERMOMETRE*/
 .containerthermo {
     position: absolute;
-    width: 4.2vh;
+    width: 5.2vh;
 
-    height: 6vh;
+    height: 7vh;
     right: 1.9vh;
     top: 2vh;
     background-color: rgba(255, 255, 255, 0);
@@ -419,8 +419,8 @@ INDICATEUR
 
 .containermoney {
     position: absolute;
-    width: 4.5vh;
-    height: 4.5vh;
+    width: 5.5vh;
+    height: 5.5vh;
     right: 1.7vh;
     top: 9vh;
     background-color: rgba(255, 255, 255, 0);
@@ -462,8 +462,8 @@ INDICATEUR
 
 .containerhappy {
     position: absolute;
-    width: 4.5vh;
-    height: 4.5vh;
+    width: 5.5vh;
+    height: 5.5vh;
     right: 1.7vh;
     top: 14vh;
     background-color: rgba(255, 255, 255, 0);
