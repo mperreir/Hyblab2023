@@ -12,7 +12,7 @@ function createFicheMinia(profil) {
                                     <p>${Id}</p>
                                 </div>
                                 <div class="croix-suppr">
-                                    <img alt="X" src="../img/croix-suppr.svg">
+                                    <img alt="X" src="../img/croix.svg">
                                 </div>
                             </div>
                             <div class="fiche-minia flex-row align-items-center justify-content-space-between">
