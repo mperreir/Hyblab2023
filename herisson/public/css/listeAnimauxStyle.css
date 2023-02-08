@@ -3,11 +3,9 @@ body{
     flex-direction: column;
     position: relative;
     background-color: #FFF8F1;
+    height: 100vh;
     margin: 0;
 }
-
-
-
 
 /*//HEADER//*/
 header.main{
@@ -30,9 +28,10 @@ header.main{
 #titles {
     min-height: 10vh;
     position: sticky;
-    top: 3%;
+    top: 1%;
+    margin-top: 9%;
     text-align: center;
-    z-index: 5;
+    z-index: 4;
 }
 
 #titles h1{
@@ -60,7 +59,7 @@ header.main{
     position: sticky;
     top: 0;
     background-image: linear-gradient(to top, rgba(0,0,0,0), #FFF8F1, #FFF8F1, #FFF8F1, #FFF8F1);
-    z-index: 4;
+    z-index: 3;
 }
 #animals-buttons {
     position: absolute;
@@ -74,7 +73,7 @@ header.main{
     font-family: 'Prompt', sans-serif;
     font-size: 3vh;
     color: #0B6E5F;
-    border-radius: 10vw;
+    border-radius: 10vh;
     border: solid 2px #0B6E5F;
     background-color: #FBC5EB;
 }
@@ -86,7 +85,7 @@ footer.main{
     position: sticky;
     bottom: 0;
     background-color: #0B6E5F;
-    margin-bottom: -1vh;
+    margin-bottom: 0;
     border-radius: 8vw 8vw 0 0;
     width: 100vw;
 }
