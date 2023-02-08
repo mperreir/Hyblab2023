@@ -9,57 +9,49 @@
     {
       "ID": "1",
       "name": "La résilience alimentaire, qu’est-ce que c’est ?",
-      "shortDescription": "<p>test1</p><iframe width=\"100%\" height=\"50%\" src=\"https://www.youtube.com/embed/dQw4w9WgXcQ\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>",
-      "longDescription": "",
+      "data": "<p>test1</p><iframe width=\"100%\" height=\"50%\" src=\"https://www.youtube.com/embed/dQw4w9WgXcQ\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>",
       "links": []
     },
     {
       "ID": "2",
       "name": "Des synergies au sien des territoires et entre territoires",
-      "shortDescription": "<p>test2</p><a>dzfjhzref</a><p>edfdzfeg</p>",
-      "longDescription": "",
+      "data": "<p>test2</p><a>dzfjhzref</a><p>edfdzfeg</p>",
       "links": []
     },
     {
       "ID": "3",
       "name": "Un système agro-écologique, durable et résilient",
-      "shortDescription": "test3",
-      "longDescription": "",
+      "data": "test3",
       "links": []
     },
     {
       "ID": "4",
       "name": "Une revalorisation du métier d’agriculteur",
-      "shortDescription": "test4",
-      "longDescription": "",
+      "data": "test4",
       "links": []
     },
     {
       "ID": "5",
       "name": "Une relocalisation de la production alimentaire",
-      "shortDescription": "test5",
-      "longDescription": "",
+      "data": "test5",
       "links": []
     },
     {
       "ID": "6",
       "name": "Une alimentation saine, nutritive et accessible",
-      "shortDescription": "test6",
-      "longDescription": "",
+      "data": "test6",
       "links": []
     },
     {
       "ID": "7",
       "name": "Une sécurité sociale de l’alimentation",
-      "shortDescription": "test7",
-      "longDescription": "",
+      "data": "test7",
       "links": []
     },
     {
       "ID": "8",
       "name": "Des sols fertiles, grâce au recyclage des biodéchets et excrétas humains",
-      "shortDescription": "test8",
-      "longDescription": "",
+      "data": "test8",
       "links": []
     }
   ]

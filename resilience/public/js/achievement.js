@@ -34,25 +34,25 @@ async function achievement() {
         htmlName.classList.add('name');
         htmlName.textContent = achiev.name;
 
-        let htmlDesc = document.createElement('p');
-        htmlDesc.classList.add('shortDescription');
-        htmlDesc.classList.add(`shortDescription-${achiev.ID}`);
-        htmlDesc.innerHTML = achiev.shortDescription;
+        let htmlData = document.createElement('p');
+        htmlData.classList.add('data');
+        htmlData.classList.add(`data-${achiev.ID}`);
+        htmlData.innerHTML = achiev.data;
 
         let isOpen = false;
 
         htmlName.addEventListener('click', function () {
             if (window.localStorage.getItem("achievement".concat(htmlAchiev.id)) == "true") {
                 if (window.localStorage.getItem("achievement".concat(htmlAchiev.id))) {
-                    let currentDescription = document.querySelector('.shortDescription');
-                    if (currentDescription) {
-                        currentDescription.remove();
+                    let currentData = document.querySelector('.data');
+                    if (currentData) {
+                        currentData.remove();
                     }
                     if (isOpen) {
-                        htmlDesc.remove();
+                        htmlData.remove();
                         isOpen = false;
                     } else {
-                        htmlAchiev.appendChild(htmlDesc);
+                        htmlAchiev.appendChild(htmlData);
                         isOpen = true;
                     }
                 }
