@@ -13,7 +13,19 @@ const initSlide2 = async function(){
         }         
     });
     $("#adresse input").change(function(){
-      getPossibleAdresse();
+      let pa =getPossibleAdresse();
+        $("div.result").html("");
+        pa.forEach(elt => {
+          $("div.result").append(`<option>${elt}</option>`)
+        });
+        
+        $("div.result").show();
+        $("div.result option").click(function(){
+          console.log("option");
+          quiz["adresse"] = $(this).html();
+          $('#adresse input').val($(this).html());
+          $("div.result").hide();
+        });
     })
     $('#adresse input').on('input', function() { // au changement de caractere
       if($("#adresse input").val().charAt($("#adresse input").val().length - 1) == " "){
