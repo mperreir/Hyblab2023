@@ -1,0 +1,45 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+html {
+    height: 100vh;
+}
+body {
+    height: 100vh;
+}
+
+#container > * {
+    width: 75%;
+}
+
+#retour {
+    margin-right: 10%;
+
+}
+
+#petit-rond {
+    width: 4vh;
+    height: 4vh;
+    background: #F8F8F8;
+    border-radius: 15px;
+    margin-left: 20%;
+    color:  #006982;
+}
+#info {
+    text-align: center;
+    justify-content: center;
+    alignment: center;
+}
+
+#logo-appli {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
