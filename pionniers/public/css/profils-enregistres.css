@@ -21,10 +21,10 @@ body {
 #petit-rond {
     width: 4vh;
     height: 4vh;
-    background: #006982;
+    background: #F8F8F8;
     border-radius: 15px;
     margin-left: 20%;
-    color: #F8F8F8;
+    color:  #006982;
 }
 #info {
     text-align: center;
@@ -85,5 +85,6 @@ section {
 }
 
 .liste-profils {
+
     width: 90%;
 }

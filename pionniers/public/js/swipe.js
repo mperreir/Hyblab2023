@@ -294,9 +294,9 @@ function updateFolder() {
     nombreProfilsFavText.innerHTML = nombreProfilFav > 0 ? nombreProfilFav.toString() : "";
 }
 
-/*  ---------------------------------------------------------------------------------------
-    ------------------ AJOUT NOUVELLE FICHE SUITE MODIFICATION CARROUSEL ------------------
-    ---------------------------------------------------------------------------------------
+/*  -------------------------------------------------
+    ------------------ ÉVÉNEMENTS  ------------------
+    -------------------------------------------------
  */
 
 
@@ -347,6 +347,80 @@ function ajouterNouvelleFiche(posNewActive) {
     carouselList.append(createFiche(newProfil, posFicheASuppr));
 
     miseAJourEtatCarousel();
+}
+
+function premiereVisite() {
+    const popupTuto = document.querySelector("#tuto");
+    popupTuto.classList.add('flex-column');
+    popupTuto.classList.remove('display-none');
+    const popupTutoASwipe = popupTuto.querySelector('#tuto-explication');
+    const flecheGif = popupTuto.querySelector('img');
+
+    const hammer = new Hammer(popupTutoASwipe)
+    hammer.add(new Hammer.Pan({
+        position: Hammer.position_ALL,
+        threshold: 0
+    }));
+
+    hammer.on('pan', e => onPan(e));
+
+    function onPan(e) {
+
+        // remove transition properties
+        popupTutoASwipe.style.transition = null
+
+        // get top card coordinates in pixels
+        let style = window.getComputedStyle(popupTutoASwipe);
+        let mx = style.transform.match(/^matrix\((.+)\)$/);
+        let startPosX = mx ? parseFloat(mx[1].split(', ')[4]) : 0;
+        let startPosY = mx ? parseFloat(mx[1].split(', ')[5]) : 0;
+
+        let bounds = popupTutoASwipe.getBoundingClientRect();
+
+        // get finger position on top card, top (1) or bottom (-1)
+        let isDraggingFrom = (e.center.y - bounds.top) > popupTutoASwipe.clientHeight / 2 ? -1 : 1
+
+        // get new coordinates
+        let posX = e.deltaX + startPosX
+        let posY = e.deltaY + startPosY
+
+        // get ratio between swiped pixels and the axes
+        let propX = e.deltaX / popupTuto.clientWidth;
+        let propY = e.deltaY / popupTuto.clientHeight;
+
+        // get swipe direction, left (-1) or right (1)
+        let dirX = e.deltaX < 0 ? -1 : 1;
+
+        // get degrees of rotation, between 0 and +/- 45
+        let deg = isDraggingFrom * dirX * Math.abs(propX) * 45
+
+        if (e.isFinal) {
+            let successful = false
+            // check threshold and movement direction
+
+            if (propY < 30 && e.direction === Hammer.DIRECTION_DOWN) {
+                successful = true
+                // get top border position
+                posY = +(popupTuto.clientHeight + popupTutoASwipe.clientHeight)
+            }
+
+            if (successful) {
+                popupTutoASwipe.style.transform = 'translateX(' + posX + 'px) translateY(' + (posY - 300) + 'px) rotate(' + deg + 'deg)';
+                const folderBody = document.querySelector("footer#folder #folder-front-body");
+                folderBody.classList.add("open-folder-animation");
+                setTimeout(() => {
+
+                    popupTuto.classList.remove('flex-column');
+                    popupTuto.classList.add('display-none');
+                    popupTutoASwipe.remove();
+                    flecheGif.remove();
+                }, 200);
+                setTimeout(() => {
+                    folderBody.classList.remove("open-folder-animation");
+                }, 1000);
+            }
+        }
+    }
 }
 
 /*  ----------------------------------------------
@@ -450,6 +524,9 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Remplissage du carousel/swiper avec les données de l'API, suivant les themes choisis
     await chercheEtAjouteProfilsCarousel(themeSelected, true);
 
+    if(getProfilsFav().length === 0) {
+        premiereVisite();
+    }
 
     // ------------ FOLDER ------------
     updateFolder();
@@ -459,7 +536,7 @@ function updateDownSwipeListener(current) {
     const topcard = current;
 
     const hammer = new Hammer(topcard)
-    hammer.add(new Hammer.Tap())
+    hammer.add(new Hammer.Tap({ event: 'singletap' }))
     hammer.add(new Hammer.Pan({
         position: Hammer.position_ALL,
         threshold: 0
@@ -467,14 +544,19 @@ function updateDownSwipeListener(current) {
 
     hammer.on('pan', (e) => {
         onPan(e)
-    })
+    });
+
+    hammer.on('tap', (e) => {console.log("tap");});
+
+    function onTap(e) {
+
+    }
 
     function onPan(e) {
         const swiper = document.querySelector('#swiper');
 
         // remove transition properties
         topcard.style.transition = null
-        //if (nextcard) nextcard.style.transition = null
 
         // get top card coordinates in pixels
         let style = window.getComputedStyle(topcard)
@@ -510,16 +592,12 @@ function updateDownSwipeListener(current) {
         if (e.isFinal) {
             let successful = false
 
+
+
             // check threshold and movement direction
             if (e.direction === Hammer.DIRECTION_RIGHT) {
 
-                /*update(previouscard);
-                console.log("preced");*/
-
             } else if (e.direction === Hammer.DIRECTION_LEFT) {
-
-                /*  update(nextcard);
-                  console.log("suiv");*/
 
             } else if (propY < 30 && e.direction === Hammer.DIRECTION_DOWN) {
 
