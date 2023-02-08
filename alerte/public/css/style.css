@@ -131,6 +131,11 @@ header img,
     background-image: url('../img/utils/btn/btn-next.svg');
 }
 
+#next10 {
+    background-image: url('../img/utils/btn/btn-next.svg');
+    margin-top: 25px;
+}
+
 #next11_1 {
     background-image: url('../img/utils/btn/btn-next.svg');
 }

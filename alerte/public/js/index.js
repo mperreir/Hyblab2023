@@ -8,7 +8,7 @@ function changeBackground(color) {
 
 let next0 = document.getElementById("next0")
 next0.addEventListener("click", () => {
-  display("s1")
+  display("s13_1")
   changeBackground('#121212')
 })
 
@@ -94,6 +94,14 @@ next7.addEventListener("click", () => {
     changeBackground('#121212')
 })
 
+let btns8 = document.getElementsByClassName("btn8")
+for (let btn8 of btns8) {
+    btn8.addEventListener('click', () => {
+        display("s9_1")
+        changeBackground('#121212')
+    })
+}
+
 let next9_1 = document.getElementById("next9_1")
 next9_1.addEventListener("click", () => {
     display("s10")
@@ -106,6 +114,12 @@ next9_2.addEventListener("click", () => {
     changeBackground('#121212')
 })
 
+let next10 = document.getElementById("next10")
+next10.addEventListener("click", () => {
+    display("s11_1")
+    changeBackground('#121212')
+})
+
 let next11_1 = document.getElementById("next11_1")
 next11_1.addEventListener("click", () => {
     display("s12")
@@ -115,6 +129,26 @@ next11_1.addEventListener("click", () => {
 let next11_2 = document.getElementById("next11_2")
 next11_2.addEventListener("click", () => {
     display("s12")
+    changeBackground('#121212')
+})
+
+let btns12 = document.getElementsByClassName("btn12")
+for (let btn12 of btns12) {
+    btn12.addEventListener('click', () => {
+        display("s13_1")
+        changeBackground('#121212')
+    })
+}
+
+let next13_1 = document.getElementById("next13_1")
+next13_1.addEventListener("click", () => {
+    display("s14")
+    changeBackground('#121212')
+})
+
+let next13_2 = document.getElementById("next13_2")
+next13_2.addEventListener("click", () => {
+    display("s14")
     changeBackground('#121212')
 })
 
