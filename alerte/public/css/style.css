@@ -106,50 +106,25 @@ header img,
     margin-top: 25px;
 }
 
-#next4_1 {
+#next4_1, #next6, #next9_1, #next11_1, #next13_1 {
     background-image: url('../img/utils/btn/btn-next.svg');
 }
 
-#next4_2 {
+#next4_2, #next9_2, #next11_2, #next13_2 {
     background-image: url('../img/utils/btn/btn-next-inv.svg');
 }
 
-#next6 {
-    background-image: url('../img/utils/btn/btn-next.svg');
-}
-
-#next7 {
+#next7, #next10, #next14 {
     background-image: url('../img/utils/btn/btn-next.svg');
     margin-top: 25px;
 }
 
-#next9_1 {
-    background-image: url('../img/utils/btn/btn-next.svg');
+#next15_1 {
+    background-image: url('../img/utils/btn/btn-results.svg');
 }
 
-#next9_2 {
-    background-image: url('../img/utils/btn/btn-next.svg');
-}
-
-#next10 {
-    background-image: url('../img/utils/btn/btn-next.svg');
-    margin-top: 25px;
-}
-
-#next11_1 {
-    background-image: url('../img/utils/btn/btn-next.svg');
-}
-
-#next11_2 {
-    background-image: url('../img/utils/btn/btn-next.svg');
-}
-
-#next13_1 {
-    background-image: url('../img/utils/btn/btn-next.svg');
-}
-
-#next13_2 {
-    background-image: url('../img/utils/btn/btn-next.svg');
+#next15_2 {
+    background-image: url('../img/utils/btn/btn-results-inv.svg');
 }
 
 .next-btn {

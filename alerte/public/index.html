@@ -260,7 +260,7 @@
             <section id="s8" class="slides" style="display: none">
                 <header>
                     <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 32%"></div>
+                        <div id="myBar" style="width: 40%"></div>
                     </div>
                     <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh" alt="little-logo-meuh"/>
                 </header>
@@ -279,25 +279,25 @@
                 </div>
                 <section id="content_quizz">
                     <div id="btnquizz">
-                        <div data-valid="false" class="btn8">
+                        <div data-value="PORCS" class="btn8">
                             <img src="img/illustrations/dessins/pig-8.svg">
                             <p>
                                 Porcins
                             </p>
                         </div>
-                        <div data-valid="false" class="btn8">
+                        <div data-value="BOVINS" class="btn8">
                             <img src="img/illustrations/dessins/cow-8.svg">
                             <p>
                                 Bovins
                             </p>
                         </div>
-                        <div data-valid="false" class="btn8">
+                        <div data-value="VOLAILLES" class="btn8">
                             <img src="img/illustrations/dessins/chicken-8.svg">
                             <p>
                                 Volailles
                             </p>
                         </div>
-                        <div data-valid="true" class="btn8">
+                        <div data-value="MOUTONS" class="btn8">
                             <img src="img/illustrations/dessins/sheep-8.svg">
                             <p>
                                 Moutons
@@ -315,7 +315,7 @@
                              alt="little-logo-meuh"/>
                     </div>
                     <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 40%"></div>
+                        <div id="myBar" style="width: 48%"></div>
                     </div>
                 </header>
                 <img src="img/illustrations/dessins/cow-wrong.svg" id="vache_4_1" alt="Illustration"/>
@@ -324,10 +324,8 @@
                         <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
                         <div class="content">
                             <h2>Dommage !</h2>
-                            <p>
-                                Dans votre département, ce sont les porcs qui sont les plus nombreux parmi les animaux
-                                d’élevage. On en dénombre pas moins de [Entrer un chiffre] dans les [Entrer un chiffre]
-                                fermes-usines de ce département.
+                            <p class="text9">
+                                Erreur
                             </p>
                             <button id="next9_1" class="next-btn" style="height: 50px; width: 100%"></button>
                             <!-- Passer à la question suivante-->
@@ -336,14 +334,14 @@
                 </section>
             </section>
 
-            <section id="s9_2" class="slides" style="display: none">
+            <section id="s9_2" class="slides slidesWhite" style="display: none">
                 <header>
                     <div>
                         <img src="img/illustrations/logos/logo-small-inv.svg" class="little-logo-meuh"
                              alt="little-logo-meuh"/>
                     </div>
                     <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 40%"></div>
+                        <div id="myBar" style="width: 48%"></div>
                     </div>
                 </header>
                 <img src="img/illustrations/dessins/cow-right.svg" id="content_main_img" alt="vache dans un pré"/>
@@ -352,10 +350,8 @@
                         <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle"/>
                         <div class="content">
                             <h2>Bravo !</h2>
-                            <p>
-                                Dans votre département, ce sont les porcs qui sont les plus nombreux parmi les animaux
-                                d’élevage. On en dénombre pas moins de [Entrer un chiffre] dans les [Entrer un chiffre]
-                                fermes-usines de ce département.
+                            <p class="text9">
+                                Erreur
                             </p>
                             <button id="next9_2" class="next-btn" style="height: 50px; width: 100%"></button>
                             <!-- Passer à la question suivante-->
@@ -367,7 +363,7 @@
             <section id="s10" class="slides" style="display: none">
                 <header>
                     <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 20%"></div>
+                        <div id="myBar" style="width: 56%"></div>
                     </div>
                     <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh" alt="little-logo-meuh"/>
                 </header>
@@ -400,7 +396,7 @@
                              alt="little-logo-meuh"/>
                     </div>
                     <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 55%"></div>
+                        <div id="myBar" style="width: 64%"></div>
                     </div>
                 </header>
                 <img src="img/illustrations/dessins/cow-wrong.svg" id="vache_4_1" alt="Illustration"/>
@@ -422,14 +418,14 @@
                 </section>
             </section>
 
-            <section id="s11_2" class="slidesWhite" style="display: none">
+            <section id="s11_2" class="slides slidesWhite" style="display: none">
                 <header>
                     <div>
                         <img src="img/illustrations/logos/logo-small-inv.svg" class="little-logo-meuh"
                              alt="little-logo-meuh"/>
                     </div>
                     <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 55%"></div>
+                        <div id="myBar" style="width: 64%"></div>
                     </div>
                 </header>
                 <img src="img/illustrations/dessins/cow-right.svg" id="content_main_img" alt="vache dans un pré"/>
@@ -473,10 +469,10 @@
                 </div>
                 <section id="content_quizz">
                     <div id="btnquizz">
-                        <button class="btn12">Entre 0 et 10</button>
-                        <button class="btn12">Entre 11 et 50</button>
-                        <button class="btn12">Entre 51 et 100</button>
-                        <button class="btn12">Plus de 100</button>
+                        <button data-value="0" class="btn12">Entre 0 et 10</button>
+                        <button data-value="1" class="btn12">Entre 11 et 50</button>
+                        <button data-value="2" class="btn12">Entre 51 et 100</button>
+                        <button data-value="3" class="btn12">Plus de 100</button>
                     </div>
                 </section>
             </section>
@@ -488,7 +484,7 @@
                              alt="little-logo-meuh"/>
                     </div>
                     <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 75%"></div>
+                        <div id="myBar" style="width: 80%"></div>
                     </div>
                 </header>
                 <img src="img/illustrations/dessins/cow-wrong.svg" id="vache_4_1" alt="Illustration"/>
@@ -497,7 +493,7 @@
                         <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
                         <div class="content">
                             <h2>Dommage !</h2>
-                            <p>
+                            <p class="text13">
                                 L’ammoniac est un gaz qui se dégage massivement des déjections d’animaux ainsi que des
                                 engrais. Sa présence dans l’air provoque la formation de particules fines, responsables
                                 de maladies cardio-vasculaires et respiratoires. Dans votre département, il y a [Entrer
@@ -515,14 +511,14 @@
                 </section>
             </section>
 
-            <section id="s13_2" class="slidesWhite" style="display: none">
+            <section id="s13_2" class="slides slidesWhite" style="display: none">
                 <header>
                     <div>
                         <img src="img/illustrations/logos/logo-small-inv.svg" class="little-logo-meuh"
                              alt="little-logo-meuh"/>
                     </div>
                     <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 75%"></div>
+                        <div id="myBar" style="width: 80%"></div>
                     </div>
                 </header>
                 <img src="img/illustrations/dessins/cow-right.svg" id="content_main_img" alt="vache dans un pré"/>
@@ -531,12 +527,15 @@
                         <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle"/>
                         <div class="content">
                             <h2>Bravo !</h2>
-                            <p>
-                                Dans la ferme-usine de [Entrer un nom et une localité] on dénombre pas moins de 10.000
-                                porcs.
-                                Est-ce qu’on la classe à hauteur des autres fermes-usines ? A l’échelle de la France,
-                                c’est la
-                                3ème plus grosse concentration de porcs en une seule installation.
+                            <p class="text13">
+                                L’ammoniac est un gaz qui se dégage massivement des déjections d’animaux ainsi que des
+                                engrais. Sa présence dans l’air provoque la formation de particules fines, responsables
+                                de maladies cardio-vasculaires et respiratoires. Dans votre département, il y a [Entrer
+                                un chiffre] fermes-usines qui ont émis plus de 10 tonnes d’ammoniac en 2021. Mais
+                                attention, seuls les élevages les plus importants de porcs et de volailles doivent
+                                déclarer ces rejets. Les élevages de bovins n’ont pas d’obligation à le faire par
+                                exemple, ni les exploitations qui en rejetteraient moins de 10 tonnes. Et il ne faut pas
+                                non plus oublier les autres industries polluantes.
                             </p>
                             <button id="next13_2" class="next-btn" style="height: 50px; width: 100%"></button>
                             <!-- Passer à la question suivante-->
@@ -546,15 +545,91 @@
             </section>
 
             <section id="s14" class="slides" style="display: none">
-
+                <header>
+                    <div id="myProgress" class="fixed-top">
+                        <div id="myBar" style="width: 88%"></div>
+                    </div>
+                    <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh" alt="little-logo-meuh"/>
+                </header>
+                <img src="img/illustrations/dessins/14.svg" alt="Illustration"/>
+                <div>
+                    <div class="little-bubble">
+                        <img src="img/illustrations/dessins/heads/head-open.svg">
+                        <img src="img/utils/bubbles/bubble-small-side.svg">
+                        <div class="content2">
+                            <p>
+                                Combien de mises en demeure ont été prononcées à l’encontre des fermes-usines de votre
+                                département ?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slidercontainer">
+                    <div id="slider-val">
+                        <p>0</p>
+                        <span id="demo14"></span>
+                    </div>
+                    <input type="range" min="0" max="40" value="0" class="slider" id="myRange14">
+                </div>
+                <button id="next14" class="next-btn" style="height: 50px; width: 100%"></button>
             </section>
 
             <section id="s15_1" class="slides" style="display: none">
-
+                <header>
+                    <div>
+                        <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh"
+                             alt="little-logo-meuh"/>
+                    </div>
+                    <div id="myProgress" class="fixed-top">
+                        <div id="myBar" style="width: 96%"></div>
+                    </div>
+                </header>
+                <img src="img/illustrations/dessins/cow-wrong.svg" id="vache_4_1" alt="Illustration"/>
+                <section id="content_quizz">
+                    <div class="bubble">
+                        <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
+                        <div class="content">
+                            <h2>Dommage !</h2>
+                            <p class="text15">
+                                Mais bonne nouvelle, les fermes-usines de votre département sont visiblement aux normes.
+                                L’évolution de ce chiffre peut être surveillée grâce à la base de données Géorisques du
+                                ministère de la Transition écologique et de la cohésion des territoires. Disclose vous
+                                explique comment faire dans son Guide du lanceur d’enquêtes.
+                            </p>
+                            <button id="next15_1" class="next-btn" style="height: 50px; width: 100%"></button>
+                            <!-- Passer à la question suivante-->
+                        </div>
+                    </div>
+                </section>
             </section>
 
-            <section id="s15_2" class="slides" style="display: none">
-
+            <section id="s15_2" class="slides slidesWhite" style="display: none">
+                <header>
+                    <div>
+                        <img src="img/illustrations/logos/logo-small-inv.svg" class="little-logo-meuh"
+                             alt="little-logo-meuh"/>
+                    </div>
+                    <div id="myProgress" class="fixed-top">
+                        <div id="myBar" style="width: 96%"></div>
+                    </div>
+                </header>
+                <img src="img/illustrations/dessins/cow-right.svg" id="content_main_img" alt="vache dans un pré"/>
+                <section id="content_quizz">
+                    <div class="bubble bubbleWhite">
+                        <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle"/>
+                        <div class="content">
+                            <h2>Bravo !</h2>
+                            <p class="text15">
+                                Bonne nouvelle, les fermes-usines de votre département sont visiblement aux normes.
+                                L’évolution de ce chiffre peut être surveillée grâce à la base de données Géorisques du
+                                ministère de la Transition écologique et de la cohésion des territoires. Disclose vous
+                                explique comment faire dans son Guide du lanceur d’enquêtes.
+                            </p>
+                            <button id="next15_2" class="next-btn" style="height: 50px; width: 100%"></button>
+                            <!-- Passer à la question suivante-->
+                        </div>
+                    </div>
+                </section>
             </section>
 
             <section id="s16" class="slides" style="display: none">
@@ -565,7 +640,7 @@
 
             </section>
 
-            <section id="s17_2" class="slides" style="display: none">
+            <section id="s17_2" class="slides slidesWhite" style="display: none">
 
             </section>
 
