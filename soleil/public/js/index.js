@@ -35,6 +35,12 @@ swiper.on("slideChange", function () {
     case 7:
       initSlide8();
       break;
+    case 8:
+      initSlide9();
+      break;
+    case 9:
+      initSlideInfo1();
+      break;
   }
 });
 

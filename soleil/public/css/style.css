@@ -694,7 +694,7 @@ body{
 display: flex;
 justify-content: flex-start;
 }
-/* Stylez et fixez le bouton sur la page */
+/* Stylez et fixez le bouton sur la page 
 .open-button {
 background-color: white;
 position: absolute;
@@ -703,7 +703,7 @@ border: none;
 animation: glowing 2000ms infinite;
 height: 22px;
 }
-
+*/
 /* Positionnez la forme Popup */
 .login-popup {
 position: relative;
@@ -756,4 +756,40 @@ opacity: 1;
 #Saut {
     padding-top : 2vw;
     font-size: 3vw;
+}
+
+/* Style Checkbox */
+
+
+/* Specify the background color to be shown when checkbox is active */
+#bulle-question input:active ~ #facul1 {
+  background-color: white;
+}
+/* Specify the background color to be shown when checkbox is checked */
+#bulle-question input:checked ~ #facul1 {
+  background-color: orange;
+}
+/* Checkmark to be shown in checkbox */
+/* It is not be shown when not checked */
+.w3docs:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Display checkmark when checked */
+#bulle-question input:checked ~ .w3docs:after {
+  display: block;
+}
+/* Styling the checkmark using webkit */
+/* Rotated the rectangle by 45 degree and showing only two border to make it look like a tickmark */
+.main .w3docs:after {
+  left: 8px;
+  bottom: 5px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }

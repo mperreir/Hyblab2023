@@ -1,10 +1,15 @@
-"use strict";
+"use strict";   // Pente
 var executed4 = false;
 
 const initSlide4 = async function(){
     if(!executed4){
         executed4 = true;
         changePente();
+
+        $(".open-button").click(function(){
+            SlideTo(9)
+
+        })
 
         $("#pente input[name=pente]").click(function(){
             changePente();
