@@ -745,7 +745,7 @@ Derniere slide
 
 #dropdownShareOptions img {
     height: auto;
-    width: 120px;
+    width: 10vh;
 }
 
 #dropdownShareButton, #replayButton{
@@ -776,7 +776,7 @@ slide entree texte
 #presentation1 {
     width: 75%;
     height: auto;
-    font-size: 18%;
+    font-size: 25%;
     color: black;
     position: absolute;
     top: 5%;
@@ -784,13 +784,13 @@ slide entree texte
 }
 
 #presentation2 {
-    width: 75%;
     color: black;
     height: auto;
-    font-size: 18%;
+    font-size: 30%;
+    font-weight: bold;
     position: absolute;
-    bottom: 15%;
-    left: 5%;
+    bottom: 22%;
+    text-align: center;
 }
 
 
