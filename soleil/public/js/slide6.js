@@ -20,15 +20,15 @@ function changeOmbre(){
         switch (ombre) {
             case "Jamais":
                 $("#ombre #image3 p").html("Jamais");
-                $("#ombre .img-ombre").attr("src", "img/PenteBasse.png");
+                $("#ombre .img-ombre").attr("src", "img/Ombre/toit-flat-ombre-01.jpg");
                 break;
             case "Pas trop":
                 $("#ombre #image3 p").html("Pas trop");
-                $("#ombre .img-ombre").attr("src", "img/PenteHaut.png");
+                $("#ombre .img-ombre").attr("src", "img/Ombre/toit-flat-ombre-02.jpg");
             break;
             case "Toujours":
                 $("#ombre #image3 p").html("Toujours");
-                $("#ombre .img-ombre").attr("src", "img/PenteMoyen.png");
+                $("#ombre .img-ombre").attr("src", "img/Ombre/toit-flat-ombre-03.jpg");
                 break;
             default:
                 break;
