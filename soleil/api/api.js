@@ -10,14 +10,16 @@ const data = require('./data/densite.json');
 app.use(express.json());
 
 // Retrieves multiple matches for the address and sends it
-app.get('/searchAddresses', async function (req, res) {
+app.get('/searchAddresses/:address', async function (req, res) {
     const apiCall = await NominatimJS.search({
-        q: req.body['searchText']
+        q: req.params.address
     });
+
+    console.log(apiCall);
 
     const results = [];
 
-    apiCall.slice(0, req.body['resultsCount']).forEach(apiElement => {
+    apiCall.slice(0, 4).forEach(apiElement => {
         let address = {
             'street_number': 0,
             'street': "",
@@ -50,19 +52,16 @@ app.get('/searchAddresses', async function (req, res) {
             'address_text': address.street_number + " " + address.street + ", " + address.zip_code + " " + address.town.toUpperCase()
         });
     });
+    console.log(results);
 
-    res.json(await getAddressesFromText(results));
+    res.json(results);
 });
 
-// Retrieves all data regarding the input
-app.get('/addressInfo', async function (req, res) {
-    // Uses our parser to turn the text input into a valid address
-    let address = req.body;
+// Retrieves the density of the town the person lives in
+app.get('/density/:town', async function (req, res) {
+    let density = data.find(e => e["Libellé commune"] === req.params.town)["Degré de Densité"];
 
-    // Retrieves the density of the town the person lives in
-    let density = data.find(e => e["Libellé commune"] === address.full_address.town)["Degré de Densité"];
-
-    res.json({location, 'density': density});
+    res.json({'town': req.params.town, 'density': density});
 });
 
 // TODO finir cette fonction
