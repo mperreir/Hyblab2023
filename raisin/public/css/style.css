@@ -71,6 +71,15 @@ body {
 
 /* général */
 
+#sound-toggle {
+    position: absolute;
+    width: 10%;
+    height: auto;
+    top: 2%;
+    left: 2%;
+    cursor: pointer;
+}
+
 .header {
     z-index: 1;
     position: absolute;
@@ -88,6 +97,7 @@ body {
     left: 0;
     width: 30%;
     height: 5%;
+    cursor: pointer;
 }
 
 .bubble {
@@ -652,21 +662,51 @@ img.button-next {
     padding: 0px;
 }
 
+#img-evenement {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 10%;
+}
+
+#txt-evenement {
+    position: absolute;
+    left:0px;
+    right:0px;
+    height: 35%;
+    padding:0px;
+    margin:auto;
+    bottom:8%;    
+}
+
 #txt-score {
     position: absolute;
     left:0px;
     right:0px;
-    height: 42%;
+    height: 38%;
     padding:0px;
     margin:auto;
     bottom:0px;    
+}
+
+#txt-evenement>p{
+    margin:5%;
 }
 
 #txt-score>p{
     margin:5%;
 }
 
-.button-score { 
+#button-evenement { 
+    position: absolute;
+    width:10%;
+    height: auto;
+    right:5%;
+    bottom:13%;
+    cursor : pointer;
+}
+
+#button-score { 
     position: absolute;
     width:10%;
     height: auto;
@@ -692,7 +732,7 @@ img.button-next {
     cursor : pointer;
 }
 
-/*Page de sources*/
+/*Page de sources et sources 2*/
 
 #presenter {
     position: absolute;
@@ -739,11 +779,26 @@ img.button-next {
     border-top-left-radius: 0;
 }
 
-#right-button-sources{
+.right-button-source{
     position: absolute;
     width: 8%;
     height: auto;
     right: 2.5%;
     bottom: 12%;
     cursor: pointer;
+}
+
+#bubble-text {
+    width:60%;
+    margin-left:20%;
+    margin-top:2%;
+    color:white;
+}
+
+.lien{
+    color:white;
+}
+
+#liens {
+    margin-left: 10%;
 }

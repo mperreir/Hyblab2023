@@ -32,14 +32,17 @@
     <div class="bubble footer">
       <p>L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
     </div>
+
     <!-- Page de titre -->
     <div class="page" id="page-title">
+      <img id="sound-toggle" src="img/icons/sound-off.png">
       <div class="bubble button" id="button-play">
         <p>FABRIQUER LE VIN</p>
       </div>
       <img id="image-logo" src="img/logo.png">
       <img id="image-dominique" class="anim" src="img/characters/dominique.png">
     </div>
+
     <!-- Page de Présentation de Dominique -->
     <div class="page" id="page-presentation-Domi">
       <div id="img-presentation-Domi">
@@ -56,10 +59,23 @@
           À travers différents périples, vous devrez faire les bons choix pour que Dominique fasse le meilleur vin possible.
         </p>
         <div class="button-next">
-          <img class="button-next" src="img/icons/right-button.png" alt="boutton suivant">
+          <img class="button-next" src="img/icons/right-button.png" alt="bouton suivant">
         </div>
       </div>
     </div>
+    <!-- Page contexte -->
+    <div class="page" id="page-contexte">
+      <img id="image-contexte">
+      <div class="message" id="message-contexte">
+        <div class="tete-contexte"><img id="tete-contexte" src="" alt=""></div>
+        <p>
+        </p>
+        <div class="button-next">
+          <img class="button-next" src="img/icons/right-button.png" alt="bouton suivant">
+        </div>
+      </div>
+    </div>
+
     <!-- Page de choix du cépage -->
     <div class="page" id="page-cepage">
       <div id="cepage-container">
@@ -108,6 +124,7 @@
         <img id="image-vigne" src="img/deco/vigne.png">
       </div>
     </div>
+
     <!-- Page d'explication du cépage -->
     <div class="page" id="page-explaination-cepage">
       <img class="left-button" id="left-button-cepage" src="img/icons/left-button.png">
@@ -120,37 +137,36 @@
       <img id="vigne-gauche" src="img/deco/vigne-gauche.png">
       <img id="vigne-droite" src="img/deco/vigne-droite.png">
     </div>
+
+    <!-- Entrée dans la boucle de jeu -->
+
+    <!-- Page evenement -->
+    <div class="page" id="page-evenement">
+      <img src="img/characters/missmeteo.png" id="img-evenement">
+      <div class="bubble" id="txt-evenement">
+        <p></p>
+      </div>
+      <img src="img/icons/right-button.png" id="button-evenement">
+    </div>
+
     <!-- Page de question -->
     <div class="page" id="page-question">
       <div id="question-container">
         <img id="question-character" class="anim" src="img/characters/dominique-question.png">
         <div class="bubble" id="question">
           <img class="bulle" src="img/characters/bulle-dominique.png">
-          <div id="question-text"></div>
+          <div id="question-text"><p></p></div>
         </div>
         <div id="choices">
-          <div class="bubble choice" id="choice-1"></div>
-          <div class="bubble choice" id="choice-2"></div><br>
-          <div class="bubble choice" id="choice-3"></div>
+          <div class="bubble choice" id="choice-1"><p></p></div>
+          <div class="bubble choice" id="choice-2"><p></p></div><br>
+          <div class="bubble choice" id="choice-3"><p></p></div>
         </div>
       </div>
     </div>
-    <!-- Page contexte -->
-    <div class="page" id="page-contexte">
-      <img id="image-contexte">
-      <div class="message" id="message-contexte">
-        <div class="tete-contexte"><img id="tete-contexte" src="" alt=""></div>
-        <p>
-        </p>
-        <div class="button-next">
-          <img class="button-next" src="img/icons/right-button.png" alt="boutton suivant">
-        </div>
-      </div>
-    </div>
-
+    
     <!-- Page de score -->
     <div class="page" id="page-score">
-      <input type="button" class="bubble" id="button-test1" value="test">
       <div class="container-vin-score">
         <div class="vin"></div>
         <img src="img/bouteilles/bouteille.png" id="bouteille" alt="Une bouteille">
@@ -160,7 +176,7 @@
       <div class="bubble" id="txt-score">
         <p></p>
       </div>
-      <img src="img/icons/right-button.png" class="button-score">
+      <img src="img/icons/right-button.png" id="button-score">
     </div>
 
     <!-- Page de conclusion/résumé -->
@@ -171,22 +187,49 @@
         <img src="img/bouteilles/bouteille1.png" id="bouteille" alt="Une bouteille">
       </div>
       <img id="vigne-droite" src="img/deco/vigne-droite.png">
-      <div class="txt-score">
-        
-      </div>
       <input type="button" class="bubble" id="button-resultat" value="Voir résultat">
       <input type="button" class="bubble" id="button-resume" value="SUITE">
     </div>
-    
-    <!-- Page des sources-->
+
+    <!-- Sortie de la boucle de jeu -->
+
+    <!-- Page des sources 1-->
     <div class="page" id="page-sources">
       <img id="presenter" src="img/characters/presenter.png">
       <div class="bubble" id="bureau"></div>
       <div class="bubble" id="bulle-sources">
-        <p></p>
+        <div id="bubble-text">
+          <p>Pour finir et rendre l’antenne, voici toutes les sources qui nous ont permis de réaliser ce JT: </p>
+          <ul id="liens">
+            <li><a class="lien" href="http://www.comite21.org/docs/comite21-grandouest/giecpaysdelaloire/rapportgiecpaysdelaloire.pdf">Rapport GIEC des Pays de la Loire (juin 2022)</a></li>
+            <li><a class="lien" href="https://jardinage.lemonde.fr">Le Monde - rubrique jardinage</a></li>
+            <li><a class="lien" href="https://www.nationalgeographic.fr/environnement/episodes-de-grele-comment-sen-proteger">“Épisodes de grêle : comment s'en protéger ?” (National Geographic)</a></li>
+            <li><a class="lien" href="https://atlasagroclimatique.techniloire.com">Atlas agroclimatique (TechniLoire)</a></li>
+            <li><a class="lien" href="https://www.vignevin-occitanie.com">Institut français de la vigne et du vin Occitanie</a></li>
+          </ul>
+        </div>
       </div>
       <img id="bulle-presenter" src="img/characters/bulle-presenter.png">
-      <img class="right-button" id="right-button-sources" src="img/icons/right-button.png">
+      <img class="right-button-source" id="right-button-sources" src="img/icons/right-button.png">
+    </div>
+
+    <!-- Page des sources 2-->
+    <div class="page" id="page-sources2">
+      <img id="presenter" src="img/characters/presenter.png">
+      <div class="bubble" id="bureau"></div>
+      <div class="bubble" id="bulle-sources">
+        <div id="bubble-text">
+          <ul id="liens">
+            <li><a class="lien" href="https://www.plan-deperissement-vigne.fr/outils/fiches-techniques/regreffage-des-ceps-atteints-desca">Plan national dépérissement du vignoble</a></li>
+            <li><a class="lien" href="https://www.natura-sciences.com/comprendre/gel-tardif-rechauffement-climatique.html">Gel tardif : un risque de plus en plus probable à cause du réchauffement climatique</a><p>(Natura Sciences)</p></li>
+            <li><a class="lien" href="https://www.worldweatherattribution.org/wp-content/uploads/GrowingPeriodFrost2021.pdf">Étude : Le changement climatique causé par l'homme a augmenté la probabilité de gel de la période de croissance précoce en France</a></li>
+            <li><a class="lien" href="https://www.lunion.fr/id399936/article/2022-08-21/une-partie-de-la-vigne-francaise-est-menacee">“Une partie de la vigne française est menacée” (L’Union)</a></li>
+          </ul>
+          <p>Merci et à très bientôt !</p>
+        </div>
+      </div>
+      <img id="bulle-presenter" src="img/characters/bulle-presenter.png">
+      <img class="right-button-source" id="right-button-sources2" src="img/icons/right-button.png">
     </div>
 
     <!-- Page des crédits-->

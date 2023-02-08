@@ -25,16 +25,21 @@
         "general": [{
                 "contexte": "Bonsoir, les infos météos pour vous !<br><br>Pour demain, samedi 15 avril, il neigera par intermittence et le risque de gel est important.<br><br>Plus particulièrement sur la région d’Anjou, <br>gare à vous.",
                 "enonce": "Bizarre, les vignes commencent à geler… <br>Pourtant, il n’est que le 15 avril… Il faut agir vite<br>pour sauver les vignes ! Que comptes-tu faire ?",
-                "img": "img/characters/miss-meteo.png",
+                "img": "img/characters/missmeteo.png",
                 "reponse": [
                     "Asperger les vignes d’eau",
                     "Installer des feux de vignes",
                     "Ne rien faire"
                 ],
                 "explication": [
-                    "Attention ! Si cette idée peut marcher en temps général, utiliser une grande quantité d’eau va être compliqué. Avec les stocks disponibles<br>qui diminuent, d’autres secteurs jugés plus importants comme la culture de céréales seront prioritaires.",
-                    "Bonne initiative ! Cela va permettre de sauver une partie de tes vignes en les protégeant efficacement contre le gel.<br> En tout cas pour le moment.<br> Car, si cette solution marche à court-terme, il vaut mieux penser à des plans sur la durée comme adapter son terroir ou favoriser un lieu avec des sols généralement plus froids - ce qui repousse l’éclosion.",
-                    "Aïe ! Laisser les vignes combattre le gel sans intervenir revient à sacrifier une part énorme de ta plantation. C’est un choix très risqué et les pertes peuvent être considérables…"
+                    "<b>Attention</b> ! Si cette idée peut marcher en temps général, <b>utiliser une grande quantité d’eau va être compliqué<b>. Avec les stocks disponibles<br>qui diminuent, d’autres secteurs jugés plus importants comme la culture de céréales seront prioritaires.",
+                    "<b>Bonne initiative !</b> Cela va permettre de sauver une partie de tes vignes en les protégeant efficacement contre le gel.<br> En tout cas pour le moment.<br> Car, si cette solution marche à <b>court-terme</b>, il vaut mieux penser à des plans sur la durée comme <b>adapter son terroir</b> ou <b>favoriser un lieu</b> avec des sols généralement plus froids - ce qui repousse l’éclosion.",
+                    "Aïe ! Laisser les vignes combattre le gel sans intervenir revient à <b>sacrifier une part énorme</b> de ta plantation. C’est un choix <b>très risqué</b> et les <b>pertes peuvent être considérables</b>…"
+                ],
+                "consequence": [
+                    0.9,
+                    1,
+                    0.8
                 ]
             },
             {
@@ -47,9 +52,14 @@
                     "Arroser quotidiennement les vignes."
                 ],
                 "explication": [
-                    "Bon réflexe ! Il est recommandé de stopper<br>les traitements qui utilisent des produits phytosanitaires lors des périodes de forte chaleur. En continuant, le feuillage traité risque en effet de brûler sous l’effet de la température. Maintenant, Il faut espérer que les vignes tiennent le coup durant des journées où la chaleur dépassera les 35°C…",
-                    "Attention ! Écimer (soit couper les feuilles situées à l'extrémité supérieure de la plante) revient à supprimer une barrière de protection naturelle entre les rayons du soleil et les grappes.<br>Cela représente un choix hautement risqué !",
-                    "Un choix judicieux ! Pour le moment… Si arroser quotidiennement les plantes est vivement recommandé, les stocks d’eau disponible risquent d’être au centre des convoitises, tant pour d’autres secteurs agricoles que pour les particuliers<br>ou les municipalités…"
+                    "<b>Bon réflexe</b> ! Il est recommandé de <b>stopper<br>les traitements</b> qui utilisent <b>des produits phytosanitaires</b> lors des périodes de <b>forte chaleur</b>. En continuant, le feuillage traité <b>risque en effet de brûler</b> sous l’effet de la température. Maintenant, Il faut espérer que <b>les vignes tiennent</b> le coup durant des journées où <b>la chaleur dépassera les 35°C</b>…",
+                    "<b>Attention</b> ! Écimer (soit couper les feuilles situées à l'extrémité supérieure de la plante) revient à <b>supprimer une barrière</b> de protection naturelle entre les rayons du soleil et les grappes.<br>Cela représente <b>un choix hautement risqué</b> !",
+                    "<b>Un choix judicieux ! Pour le moment…</b> Si arroser quotidiennement <b>les plantes</b> est <b>vivement recommandé</b>, les stocks d’eau disponible <b>risquent d’être au centre des convoitises</b>, tant pour d’autres secteurs agricoles que pour <b>les particuliers</b><br>ou <b>les municipalités…</b>"
+                ],
+                "consequence": [
+                    0,
+                    0,
+                    0
                 ]
             },
             {
@@ -62,9 +72,14 @@
                     "Lancer des ballons chargés de sels."
                 ],
                 "explication": [
-                    "Allez ! L’utilisation d’un filet paragrêle est encore aujourd’hui une méthode hautement efficace pour protéger sa récolte lors d’un épisode de grêle. Par contre, cet équipement reste extrêmement cher à l’achat.",
-                    "Tu es sûr ? Si ces deux dispositifs ont longtemps été utilisés, leur efficacité a été remise en cause.<br>La législation dédiée aux explosifs - qui a évoluée suite aux attentats de Paris en 2015 - complique l’utilisation de fusées, tandis que les météorologues doutent de la réelle efficacité des canons à grêle (qui pour rappel trouent les nuages et transforment la grêle en eau).",
-                    "Testons ! Déjà utilisés dans plusieurs vignobles français, comme dans la région Auvergne-Rhônes-Alpes, les ballons chargés de sels (et gonflés à l’hélium) sont tirés au cœur de la cellule orageuse. Ainsi le contenant pousse le nuage<br>à précipiter la pluie avant que l’eau ne se solidifie. Pour plus de précision, ils sont généralement utilisés avec un radar qui trace les nuages en direct."
+                    "<b>Allez</b> ! L’utilisation <b>d’un filet paragrêle</b> est encore aujourd’hui <b>une méthode hautement efficace</b> pour protéger sa récolte lors d’un épisode de grêle. Par contre, cet équipement <b>reste extrêmement cher à l’achat.</b>",
+                    "<b>Tu es sûr ?</b> Si ces deux dispositifs ont longtemps été utilisés, <b>leur efficacité a été remise en cause</b>.<br>La législation dédiée aux explosifs - qui a évoluée suite aux attentats de Paris en 2015 - <b>complique l’utilisation de fusées</b>, tandis que les météorologues <b>doutent de la réelle efficacité des canons à grêle</b> (qui pour rappel trouent les nuages et transforment la grêle en eau).",
+                    "<b>Testons !</b> Déjà utilisés dans plusieurs vignobles français, comme dans la région Auvergne-Rhônes-Alpes, <b>les ballons chargés de sels</b> (et gonflés à l’hélium) sont tirés <b>au cœur de la cellule orageuse</b>. Ainsi le contenant pousse le nuage<br>à précipiter la pluie avant que <b>l’eau ne se solidifie</b>. Pour plus de précision, ils sont généralement utilisés avec <b>un radar qui trace les nuages</b> en direct."
+                ],
+                "consequence": [
+                    0,
+                    0,
+                    0
                 ]
             },
             {
@@ -77,9 +92,14 @@
                     "Suivre le fonctionnement des vendanges précédentes."
                 ],
                 "explication": [
-                    "Bonne résolution ! Lorsque les températures sont toujours estivales, la vinification du raisin peut se compliquer. Vendanger la nuit permet<br>donc d’éviter les trop fortes chaleurs.",
-                    "Aïe ! Irriguer les vignes est interdit entre le 15 août et la récolte comme le stipule le Décret n° 2017-1327 (8 septembre 2017), sauf cas grave de stress hydrique pour la récolte. De plus, à l’instar de pour la lutte contre le gel, les stocks disponibles d’eau - qui s’amoindrissent à cause du réchauffement climatique - seront alloués à des secteurs plus vitaux.",
-                    "Bonne chance ! Avec les périodes de vendanges qui arrivent de plus en plus tôt à cause du réchauffement climatique, ne pas évoluer est un choix très dangereux… Entre les fortes chaleurs et la possible indisponibilité de la main-d’œuvre habituelle - notamment les étudiants -, il est indispensable de réfléchir à une nouvelle manière de fonctionner."
+                    "<b>Bonne résolution</b> ! Lorsque les températures sont <b>toujours estivales</b>, la vinification du raisin peut se compliquer. Vendanger <b>la nuit</b> permet<br>donc <b>d’éviter les trop fortes chaleurs</b>.",
+                    "<b>Aïe</b> ! Irriguer les vignes est <b>interdit</b> entre <b>le 15 août</b> et la récolte comme le stipule le Décret n° 2017-1327 (8 septembre 2017), sauf cas grave de stress hydrique pour la récolte. De plus, à l’instar de pour la lutte contre le gel, les stocks disponibles d’eau - <b>qui s’amoindrissent à cause du réchauffement climatique</b> - seront <b>alloués</b> à des <b>secteurs plus vitaux</b>.",
+                    "<b>Bonne chance</b> ! Avec les périodes de vendanges qui arrivent <b>de plus en plus tôt</b> à cause du réchauffement climatique, ne pas évoluer est <b>un choix très dangereux</b>… Entre les fortes chaleurs et la possible <b>indisponibilité</b> de la main-d’œuvre habituelle - notamment les étudiants -, il est indispensable de réfléchir à une <b>nouvelle manière de fonctionner</b>."
+                ],
+                "consequence": [
+                    0,
+                    0,
+                    0
                 ]
             },
             {
@@ -92,9 +112,14 @@
                     "Ne rien faire"
                 ],
                 "explication": [
-                    "Hélas, il le faut… Tu as eu un bon réflexe en sacrifiant les plantes malades. Même si tu perds une partie de ta récolte, le reste de la plantation devrait s’en sortir indemne !",
-                    "Pourquoi pas ! Tu peux en effet procéder à un curetage. Pour résumer, tu élimines la partie contaminée du bois en le découpant. Néanmoins, il faut faire attention ! Si tu ne t’y prends pas délicatement, tu risques de couper <br>le flux de sève et donc de tuer ta plante… <br>Par contre, si tu réussis, ton pied de vigne à 99% <br>de chances de guérir !",
-                    "Aïe ! Il faut absolument faire quelque chose, sans quoi la maladie va s’étendre. Ensuite, les champignons vont durablement s’installer dans le bois jusqu’à ce que la vigne soit dégradée…"
+                    "<b>Hélas</b>, il le faut… Tu as eu <b>un bon réflexe</b> en <b>sacrifiant les plantes malades</b>. Même si tu perds une partie de ta récolte, le reste de la plantation devrait <b>s’en sortir indemne</b> !",
+                    "<b>Pourquoi pas</b> ! Tu peux en effet <b>procéder à un curetage</b>. Pour résumer, tu <b>élimines</b> la partie <b>contaminée du bois</b> en le découpant. Néanmoins, il faut faire <b>attention</b> ! Si tu ne t’y prends <b>pas délicatement</b>, tu risques de couper <br>le <b>flux de sève</b> et donc <b>de tuer ta plante</b>… <br>Par contre, si tu réussis, ton pied de vigne <b>à 99% <br>de chances de guérir</b> !",
+                    "<b>Aïe</b> ! Il faut <b>absolument</b> faire quelque chose, sans quoi la maladie va <b>s’étendre</b>. Ensuite, les champignons vont <b>durablement s’installer</b> dans le bois jusqu’à ce que la vigne <b>soit dégradée</b>…"
+                ],
+                "consequence": [
+                    0,
+                    0,
+                    0
                 ]
             }
         ],
@@ -108,9 +133,14 @@
                     "Ne rien faire"
                 ],
                 "explication": [
-                    "Excellent choix ! Dès que les premiers signes<br>sont visibles, il est conseillé de couper les parties infectées. Cela stoppera la propagation du champignon et protégera le reste des vignes. En plus, le surplus peut être utilisé comme compost (à condition que celui-ci atteigne<br>les 60-70°C afin de détruire les spores) !",
-                    "Attention ! Si la bouillie bordelaise est efficace<br>pour éliminer le mildiou, elle peut être hautement toxique pour la faune… Le cuivre contenu dans le produit pollue les sols et empoisonne les espèces environnantes !",
-                    "Aïe ! Ne rien faire revient à sacrifier une partie<br>de ces vignes… Il faut espérer que les dégâts ne soient pas trop importants. Point positif : ne pas utiliser de produits permet de garder une certification bio !"
+                    "<b>Excellent choix</b> ! Dès que les premiers <b>signes<br>sont visibles</b>, il est conseillé de <b>couper les parties infectées</b>. Cela stoppera la propagation du champignon et <b>protégera le reste des vignes</b>. En plus, le surplus peut être <b>utilisé comme compost</b> (à condition que celui-ci <b>atteigne<br>les 60-70°C</b> afin de détruire les spores) !",
+                    "Attention ! Si la bouillie bordelaise est efficace<br>pour éliminer le mildiou, elle peut être <b>hautement toxique</b> pour la faune… Le cuivre contenu dans le produit <b>pollue</b> les sols et <b>empoisonne</b> les espèces environnantes !",
+                    "Aïe ! Ne rien faire revient à <b>sacrifier</b> une partie<br>de ces vignes… Il faut espérer que les <b>dégâts</b> ne soient <b>pas trop importants</b>. Point positif : ne pas utiliser de produits permet de garder une certification bio !"
+                ],
+                "consequence": [
+                    0,
+                    0,
+                    0
                 ]
             },
             {
@@ -122,9 +152,14 @@
                     "Ne rien faire."
                 ],
                 "explication": [
-                    "Bon réflexe ! Cela peut paraître difficile, mais si la plante est trop touchée, il vaut mieux se résigner à la retirer… Il faut ensuite la jeter à la poubelle pour que la propagation s’arrête à temps.",
-                    "Attention ! Comme pour d’autres champignons comme le mildiou, la bouillie bordelaise est efficace. Seulement, elle peut être hautement toxique pour la faune… Le cuivre contenu dans le produit pollue les sols et empoisonne les espèces environnantes ! C’est donc un choix à double tranchant…",
-                    "C’est risqué ! Ne rien faire peut mettre en péril une grande partie de la récolte… Néanmoins, les conditions météorologiques chaudes et sèches de ces dernières semaines, conjuguées au botrytid, peut permettre l’évaporation de l’eau contenue dans le raisin. Le fruit se concentre donc en acidité et en sucre : on appelle ce phénomène la pourriture noble !"
+                    "<b>Bon réflexe</b> ! Cela peut paraître <b>difficile</b>, mais si la plante <b>est trop touchée</b>, il vaut mieux se résigner à la retirer… Il faut ensuite <b>la jeter à la poubelle</b> pour que la propagation s’arrête à temps.",
+                    "<b>Attention</b> ! Comme pour d’autres champignons comme le <b>mildiou</b>, la bouillie bordelaise est efficace. Seulement, elle peut être <b>hautement toxique</b> pour la faune… Le cuivre contenu dans <b>le produit pollue</b> les sols et <b>empoisonne</b> les espèces environnantes ! C’est donc un choix à <b>double tranchant</b>…",
+                    "<b>C’est risqué</b> ! Ne rien faire peut mettre <b>en péril</b> une grande partie <b>de la récolte</b>… Néanmoins, les conditions météorologiques chaudes et sèches de ces dernières semaines, conjuguées <b>au botrytis</b>, peut <b>permettre l’évaporation de l’eau</b> contenue dans le raisin. Le fruit se concentre donc <b>en acidité et en sucre</b> : on appelle ce phénomène <b>la pourriture noble</b> !"
+                ],
+                "consequence": [
+                    0,
+                    0,
+                    0
                 ]
             },
             {
@@ -137,9 +172,14 @@
                     "Remplacer les ceps morts"
                 ],
                 "explication": [
-                    "Bonne idée ! Regreffer les pieds malades permet de les restaurer et de limiter les effets de l’autypiose !<br> Tu peux par exemple utiliser la technique du regreffage en fente, qui doit être utilisée quand la sève en circulation n’est pas trop active. Soit au printemps après le débourrement (période durant laquelle les bourgeons se développent).",
-                    "Pourquoi pas ! Un groupe international de chercheurs a annoncé dans Science Daily - un média scientifique reconnu internationalement - avoir trouvée une possible solution pour lutter contre l’eutypiose : les antioxydants. Ces derniers, ajoutés aux produits alimentaires, interrompent notamment la réduction de fer et arrêtent la production de peroxyde d'hydrogène.",
-                    "C'est dommage ! Si tu as fait un bon choix en remplaçant les cépages infectés, tes parcelles vont perdre en hétérogénéité - par avec encépage déséquilibré par l'introduction de plantes plus jeunes ou d'un cépage plus résistant… la qualité <br>de ton vin va donc en pâtir."
+                    "Bonne idée ! <b>Regreffer</b> les pieds malades permet de les restaurer et de limiter les effets de <b>l’eutypiose</b> !<br> Tu peux par exemple utiliser la technique du <b>regreffage en fente</b>, qui doit être utilisée quand la sève en circulation n’est pas trop active. Soit au printemps <b>après le débourrement</b> (période durant laquelle les bourgeons se développent).",
+                    "<b>Pourquoi pas</b> ! Un groupe international de chercheurs a annoncé dans <b>Science Daily</b> - un média scientifique reconnu internationalement - avoir trouvée une <b>possible solution</b> pour <b>lutter contre l’eutypiose</b> : les antioxydants. Ces derniers, ajoutés aux produits alimentaires, <b>interrompent notamment la réduction de fer et arrêtent la production de peroxyde d'hydrogène</b>.",
+                    "<b>C'est dommage</b> ! Si tu as fait un <b>bon choix</b> en remplaçant les cépages infectés, <b>tes parcelles vont perdre en hétérogénéité</b> - par avec <b>encépage déséquilibré</b> par l'introduction de plantes plus jeunes ou <b>d'un cépage plus résistant</b>… la qualité <br>de ton vin va donc <b>en pâtir</b>."
+                ],
+                "consequence": [
+                    0,
+                    0,
+                    0
                 ]
             }
         ]

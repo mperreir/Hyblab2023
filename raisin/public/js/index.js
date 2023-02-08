@@ -1,5 +1,7 @@
 let cepage;
 let data;
+let music;
+let nbquestion=0;
 
 async function fetchData(file) {
     const res = await fetch(file);
@@ -40,6 +42,23 @@ function removeChoices() {
 }
 
 
+function afficheEvenement(numQuestion) {
+    $("#txt-evenement>p").html(data.questions.general[numQuestion].contexte);
+    $("#img-evenement").attr("src", data.questions.general[nbquestion].img)
+}
+
+
+function afficheQuestion(numQuestion) {
+    $("#question-text>p").html(data.questions.general[numQuestion].enonce);
+    $("#choice-1>p").html(data.questions.general[numQuestion].reponse[0]);
+    $("#choice-2>p").html(data.questions.general[numQuestion].reponse[1]);
+    $("#choice-3>p").html(data.questions.general[numQuestion].reponse[2]);
+}
+
+function selectExplication(numQuestion, numReponse) {
+    $("#txt-score>p").html(data.questions.general[numQuestion].explication[numReponse]);
+}
+
 //Définir le numéro du cépage choisis (0, 1 ou 2)
 function setCepage(id) {
     if (id >= 0 && id <= 2) {
@@ -54,8 +73,10 @@ function displayCepage() {
     $("#explaination-cepage>p").html(data.cepages[cepage].desc);
     $("#explaination-cepage>p").css("color", data.cepages[cepage].txtcolor);
     $("#txt-score>p").css("color", data.cepages[cepage].txtcolor);
+    $("#txt-evenement>p").css("color", data.cepages[cepage].txtcolor);
     $(".vin").css("background-color", data.cepages[cepage].color);
     $("#txt-score").css("background-color", data.cepages[cepage].color);
+    $("#txt-evenement").css("background-color", data.cepages[cepage].color);
 }
 
 function changementVin(quantity, color) {
@@ -63,33 +84,15 @@ function changementVin(quantity, color) {
     $(".vin").css("background-color", color);
 }
 
-function selectExplication(numQuestion, numReponse) {
-    $("#txt-score>p").html(data.questions.general[numQuestion].explication[numReponse]);
-}
-
-$("#button-test1").click(() => {
-    selectExplication(0, 1)
-});
-
 async function loadApp() {
     //Cela permet d'attendre que le fichier json soit importé avant de faire quoi que ce soit
 
-    $(".header").hide();
+    $(".header, #home-button").hide();
     setPage();
     data = await fetchData("data/data.json");
 
     //Page par défaut;
     setPage("#page-title","fade");
-
-    let sound = new Howl({
-        src: ["music/background-music.mp3"],
-        html5: true,
-        format: ['mp3'],
-        autoplay: true,
-        loop: true,
-        volume: 0.5
-    });
-    sound.play();
 
     anime({
         targets: '.anim',
@@ -102,12 +105,57 @@ async function loadApp() {
     });
 }
 
+$("#sound-toggle").click(() => {
+    if(!music) {
+        music = new Howl({
+            src: ["music/background-music.mp3"],
+            html5: true,
+            format: ['mp3'],
+            //autoplay: true,
+            loop: true,
+            volume: 0.5
+        });
+    }
+    if(!music.playing()){
+        music.play();
+        $("#sound-toggle").attr("src","img/icons/sound-on.png");
+    }
+    else {
+        music.pause();
+        $("#sound-toggle").attr("src","img/icons/sound-off.png");
+    }
+});
+
 $("#home-button").click(() => {
     reset();
 });
 
-$(".button-score").click(() => {
-    setPage("#page-resume", "fade");
+
+
+$("#button-evenement").click(() => {
+    afficheQuestion(nbquestion);
+    setPage("#page-question", "fade"); 
+});
+
+$("#choice-1").click(() => {
+    selectExplication(nbquestion, 0);
+    setPage("#page-score", "fade");
+});
+
+$("#choice-2").click(() => {
+    selectExplication(nbquestion, 1);
+    setPage("#page-score", "fade");
+});
+
+$("#choice-3").click(() => {
+    selectExplication(nbquestion, 2);
+    setPage("#page-score", "fade");
+});
+
+$("#button-score").click(() => {
+    nbquestion+=1;
+    afficheEvenement(nbquestion);
+    setPage("#page-evenement", "fade");
 });
 
 $("#button-test").click(() => {
@@ -117,7 +165,7 @@ $("#button-test").click(() => {
 //Event de clique sur le bouton de jeu
 $("#button-play").click(() => {
     setPage("#page-presentation-Domi", "fade");
-    $(".header").fadeIn();
+    $(".header, #home-button").fadeIn();
 });
 
 $("img.button-next").click(() => {
@@ -133,7 +181,7 @@ $("#info-1").click(() => {
 $("#info-2").click(() => {
     setCepage(1);
     displayCepage();
-    setPage("#page-explaination-cepage", "fade");
+    setPage("#page-explaination-cepage", "fade");   
 });
 
 $("#info-3").click(() => {
@@ -145,23 +193,30 @@ $("#info-3").click(() => {
 $("#cepage-1-bouton").click(() => {
     setCepage(0);
     displayCepage();
-    setPage("#page-contexte", "fade");
+    afficheEvenement(0);
+    setPage("#page-evenement", "fade");
 });
 
 $("#cepage-2-bouton").click(() => {
     setCepage(1);
     displayCepage();
-    setPage("#page-contexte", "fade");
+    afficheEvenement(0);
+    setPage("#page-evenement", "fade");
 });
 
 $("#cepage-3-bouton").click(() => {
     setCepage(2);
     displayCepage();
-    setPage("#page-contexte", "fade");
+    afficheEvenement(0);
+    setPage("#page-evenement", "fade");
 });
 
 $("#left-button-cepage").click(() => {
     setPage("#page-cepage");
+});
+
+$("#right-button-sources").click(() => {
+    setPage("#page-sources2");
 });
 
 //Chargement de l'application
