@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     let profilFav = [];
 
     for (const id of idsProfilsFav) {
-        const profil = await fetch('/pionniers/api/profile/' + id).then(r => r.json());
+        const profil = await fetch('/pionniers/api/miniature/' + id).then(r => r.json());
         profilFav.push(profil);
     }
 
