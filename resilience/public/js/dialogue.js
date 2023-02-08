@@ -40,7 +40,7 @@ function runConversation() {
         console.log(paused);
         if (!paused) {
             console.log("click");
-            paused = true;            
+            paused = true;
             message = messages.shift() || null;
 
             // If we run out of messages, stop listening to clicks
@@ -65,10 +65,10 @@ function runConversation() {
             };
         };
         let dialogue = document.getElementById("dialogue")
-        htmlDialogue.scrollTo(0,dialogue.scrollHeight)
+        htmlDialogue.scrollTo(0, dialogue.scrollHeight)
     });
 };
-              
+
 function choose(message, all) {
     let htmlSubMessageList = []; // Keep track of all the answers we create
     // Create each answer
@@ -90,8 +90,8 @@ function choose(message, all) {
             });
 
             displayMessage(subMessage);
-            
-            
+
+
 
 
             if (all) {
@@ -111,7 +111,7 @@ function choose(message, all) {
                 subMessageLine = subMessageLine.splice(1) || [];
                 messages = [...subMessageLine, ...messages];
             };
-            
+
             if (message == []) message = null;
         });
 
@@ -127,8 +127,8 @@ function displayMessage(message, json) {
     const leftName = names[0];
     if (leftName === message.name) {
         htmlMessage.classList.add('left');
-        htmlMessage.style.backgroundColor= conversation.background_color;
-        htmlMessage.style.color= conversation.text_color;
+        htmlMessage.style.backgroundColor = conversation.background_color;
+        htmlMessage.style.color = conversation.text_color;
 
     }
     else {
@@ -143,7 +143,7 @@ function displayMessage(message, json) {
 
 document.getElementById('right-arrow').addEventListener('click', function () {
     if (window.localStorage.getItem("compt").length == 3) {
-        window.localStorage.setItem("popup","true")
+        window.localStorage.setItem("popup", "true")
     }
     window.location = "./map.html"
 
