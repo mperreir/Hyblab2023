@@ -59,6 +59,11 @@
           "type": "text",
           "text": "- On peut également citer d’autres perturbations possibles, d’ordre politique, économique, sanitaire…",
           "class": ["indent"]
+        },
+        {
+          "type": "video",
+          "link": "https://youtu.be/dQw4w9WgXcQ",
+          "class": []
         }
       ]
     },
