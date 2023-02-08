@@ -8,51 +8,148 @@
   "achievements": [
     {
       "ID": "1",
-      "name": "La résilience alimentaire, qu’est-ce que c’est ?",
-      "data": "<p>test1</p><iframe width=\"100%\" height=\"50%\" src=\"https://www.youtube.com/embed/dQw4w9WgXcQ\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>",
-      "links": []
+      "name": "En quoi le système alimentaire de 2023 est-il défaillant ",
+      "data": [
+        {
+          "type": "text",
+          "text": "D’un côté, le système agricole actuel montre des failles :",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "- Il contribue de manière importante aux émissions de gaz à effet de serre (20% des GES en France, dont 90% sont liés à l’élevage).",
+          "class": ["indent"]
+        },
+        {
+          "type": "text",
+          "text": "- Il est le premier consommateur d’eau en France (45% de l’eau douce prélevée).",
+          "class": ["indent"]
+        },
+        {
+          "type": "text",
+          "text": "- Alors que la population agricole est vieillissante et que le nombre d’exploitations diminue chaque année, les exploitants agricoles constituent la catégorie professionnelle dont le niveau de vie est parmi les plus faibles (en notant cependant qu’il existe de grandes disparités entre exploitations).",
+          "class": ["indent"]
+        },
+        {
+          "type": "text",
+          "text": "- Enfin, alors qu’1/4 des français se restreignent sur la quantité de ce qu’ils mangent pour des raisons financières, l’alimentation inadaptée constitue le premier facteur de risque de mauvaise santé, et l’une des premières causes de mortalité en France.",
+          "class": ["indent"]
+        },
+        {
+          "type": "text",
+          "text": "De l’autre, le système agricole actuel est vulnérable et peu résilient :",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "- Il est dépendant des énergies fossiles à bien des niveaux : outils de production, transport des matières premières vers les usines de transformation, répartition des denrées sur le territoire…",
+          "class": ["indent"]
+        },
+        {
+          "type": "text",
+          "text": "- Il est soumis au dérèglement climatique et ses conséquences : sécheresse et tension sur l’usage de l’eau, évolution du climat et des écosystèmes locaux, multiplication des événements climatiques extrêmes (canicule, inondation…)",
+          "class": ["indent"]
+        },
+        {
+          "type": "text",
+          "text": "- Et il doit également faire avec l’effondrement de la biodiversité et la baisse de la fertilité des sols (dégradation et artificialisation des sols par l’activité humaine), pourtant essentiels aux cultures.",
+          "class": ["indent"]
+        },
+        {
+          "type": "text",
+          "text": "- On peut également citer d’autres perturbations possibles, d’ordre politique, économique, sanitaire…",
+          "class": ["indent"]
+        }
+      ]
     },
     {
       "ID": "2",
       "name": "Des synergies au sien des territoires et entre territoires",
-      "data": "<p>test2</p><a>dzfjhzref</a><p>edfdzfeg</p>",
-      "links": []
+      "data": [
+        {
+          "type": "text",
+          "text": "test",
+          "class": []
+        },
+        {
+          "type": "video",
+          "link": "https://www.youtube.com/watch?v=o6ygRNXivHw",
+          "class": []
+        },
+        {
+          "type": "image",
+          "link": "testimg.png",
+          "class": []
+        },
+        {
+          "type": "lien",
+          "lien": "https://www.google.com/",
+          "class": []
+        }
+      ]
     },
     {
       "ID": "3",
-      "name": "Un système agro-écologique, durable et résilient",
-      "data": "test3",
-      "links": []
+      "name": "Des synergies au sien des territoires et entre territoires",
+      "data": [
+        {
+          "type": "text",
+          "text": "test",
+          "class": []
+        },
+        {
+          "type": "video",
+          "link": "https://www.youtube.com/watch?v=o6ygRNXivHw",
+          "class": []
+        },
+        {
+          "type": "image",
+          "link": "testimg.png",
+          "class": []
+        }
+      ]
     },
     {
       "ID": "4",
-      "name": "Une revalorisation du métier d’agriculteur",
-      "data": "test4",
-      "links": []
+      "name": "Des synergies au sien des territoires et entre territoires",
+      "data": [
+        {
+          "type": "text",
+          "text": "test",
+          "class": []
+        },
+        {
+          "type": "video",
+          "link": "https://www.youtube.com/watch?v=o6ygRNXivHw",
+          "class": []
+        },
+        {
+          "type": "image",
+          "link": "testimg.png",
+          "class": []
+        }
+      ]
     },
     {
       "ID": "5",
-      "name": "Une relocalisation de la production alimentaire",
-      "data": "test5",
-      "links": []
-    },
-    {
-      "ID": "6",
-      "name": "Une alimentation saine, nutritive et accessible",
-      "data": "test6",
-      "links": []
-    },
-    {
-      "ID": "7",
-      "name": "Une sécurité sociale de l’alimentation",
-      "data": "test7",
-      "links": []
-    },
-    {
-      "ID": "8",
-      "name": "Des sols fertiles, grâce au recyclage des biodéchets et excrétas humains",
-      "data": "test8",
-      "links": []
+      "name": "Des synergies au sien des territoires et entre territoires",
+      "data": [
+        {
+          "type": "text",
+          "text": "test",
+          "class": []
+        },
+        {
+          "type": "video",
+          "link": "https://www.youtube.com/watch?v=o6ygRNXivHw",
+          "class": []
+        },
+        {
+          "type": "image",
+          "link": "testimg.png",
+          "class": []
+        }
+      ]
     }
   ]
 }
