@@ -725,8 +725,7 @@ Derniere slide
 .button {
     display: flex;
     justify-content: center;
-    /* align-items: center;  */
-    margin-top: 5vh;
+    margin-top: 7vh;
 }
 
 .dropdownShareButton, button {
@@ -745,7 +744,7 @@ Derniere slide
 
 #dropdownShareOptions img {
     height: auto;
-    width: 10vh;
+    width: 13vh;
 }
 
 #dropdownShareButton, #replayButton{
@@ -754,10 +753,12 @@ Derniere slide
     border: none;
     font-size: 2vh;
     right: 0;
-    width: 10vh;
+    width: 15vh;
     height: 7vh;
     box-shadow: -2px 2px #306947;
     padding: 1vh;
+    margin-right: 2vh;
+    margin-left: 2vh;
 }
 
 /**************************
