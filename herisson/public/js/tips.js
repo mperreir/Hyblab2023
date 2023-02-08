@@ -1,10 +1,15 @@
 async function createPageConseil(name) {
-    async function getData(dbPath) {
-        const response = await fetch(dbPath)
-        return await response.json()
+    async function getDataTips(nom) {
+        return await
+            fetch(`http://127.0.0.1:8080/herisson/api/tips/${nom}`)
+                .then(response => response.json())
+                .then(data => {
+                        return data.filteredData;
+                    }
+                );
     }
 
-    const donnees = await getData("data/tipsDB.json")
+    const donnees = await getDataTips(name)
 
     const dictionnaire = donnees[name]
 
