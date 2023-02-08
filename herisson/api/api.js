@@ -42,6 +42,7 @@ app.get('/animal/:name', function ( req, res ) {
     res.json({filteredData});
 });
 
+
 app.get('/commune/autocomplete/:name', function ( req, res ) {
     if (!dbCommune) {
         dbCommune = JSON.parse(fs.readFileSync('herisson/public/data/db.json').toString());
