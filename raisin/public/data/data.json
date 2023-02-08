@@ -26,8 +26,8 @@
     ],
     "questions": {
         "general": [{
-                "contexte": "Bonsoir, les infos météo pour vous !<br><br>Pour demain, samedi 15 avril, il neigera par intermittence et le risque de gel est important.<br><br>Plus particulièrement sur la région d’Anjou, <br>gare à vous.",
-                "enonce": "Bizarre, les vignes commencent à geler… <br>Pourtant, il n’est que le 15 avril… Il faut agir vite<br>pour sauver les vignes ! Que comptes-tu faire ?",
+                "contexte": "Bonsoir, les infos météo pour vous !<br><br>Pour demain, samedi 15 avril, il neigera par intermittence et le risque de gel est important.<br><br>Plus particulièrement sur la région d’Anjou, gare à vous.",
+                "enonce": "Bizarre, les vignes commencent à geler… <br>Pourtant, ce n'est que le 15 avril… Il faut agir vite<br>pour sauver les vignes ! Que comptes-tu faire ?",
                 "img": "img/characters/missmeteo.png",
                 "imgBulle": "img/characters/bulle-météo.png",
                 "reponse": [
@@ -36,7 +36,7 @@
                     "Ne rien faire"
                 ],
                 "explication": [
-                    "<b>Attention</b> ! Si cette idée peut marcher en temps général, <b>utiliser une grande quantité d’eau va être compliqué<b>. Avec les stocks disponibles<br>qui diminuent, d’autres secteurs jugés plus importants comme la culture de céréales seront prioritaires.",
+                    "<b>Attention</b> ! Si cette idée peut marcher en temps général, <b>utiliser une grande quantité d’eau va être compliqué<b>. Avec les stocks disponibles qui diminuent, d’autres secteurs jugés plus importants comme la culture de céréales seront prioritaires.",
                     "<b>Bonne initiative !</b> Cela va permettre de sauver une partie de tes vignes en les protégeant efficacement contre le gel.<br> En tout cas pour le moment.<br> Car, si cette solution marche à <b>court-terme</b>, il vaut mieux penser à des plans sur la durée comme <b>adapter son terroir</b> ou <b>favoriser un lieu</b> avec des sols généralement plus froids - ce qui repousse l’éclosion.",
                     "Aïe ! Laisser les vignes combattre le gel sans intervenir revient à <b>sacrifier une part énorme</b> de ta plantation. C’est un choix <b>très risqué</b> et les <b>pertes peuvent être considérables</b>…"
                 ],
@@ -68,8 +68,8 @@
                 ]
             },
             {
-                "contexte": "Bonjour,<br><br>Je suis la représentante d’un bureau d’étude, et suite<br>à différents relevés nous avons remarqué qu’il pourrait<br>il y avoir des périodes de grêle.",
-                "enonce": "Selon les estimations, les conditions météorologiques des prochaines semaines seront favorables<br>à l’apparition d’épisodes de grêle… Il faut absolument que tu t’y prépares, sinon les conséquences<br>seront catastrophiques ! Que choisis-tu ?",
+                "contexte": "Bonjour,<br><br>Je suis la représentante d’un bureau d’étude, et suite à différents relevés nous avons remarqué qu’il pourrait il y avoir des périodes de grêle.",
+                "enonce": "Selon les estimations, les conditions météorologiques des prochaines semaines seront favorables à l’apparition d’épisodes de grêle… <br><br>Il faut absolument que tu t’y prépares, sinon les conséquences seront catastrophiques ! Que choisis-tu ?",
                 "img": "img/characters/etude.png",
                 "imgBulle" : "bulle-scientific.png",
                 "reponse": [
@@ -78,7 +78,7 @@
                     "Lancer des ballons chargés de sels."
                 ],
                 "explication": [
-                    "<b>Allez</b> ! L’utilisation <b>d’un filet paragrêle</b> est encore aujourd’hui <b>une méthode hautement efficace</b> pour protéger sa récolte lors d’un épisode de grêle. Par contre, cet équipement <b>reste extrêmement cher à l’achat.</b>",
+                    "<b>Allez</b> ! L’utilisation <b>d’un filet paragrêle</b> est encore aujourd’hui <b>une méthode hautement efficace</b> pour protéger sa récolte lors d’un épisode de grêle.<br><br> Par contre, cet équipement <b>reste extrêmement cher à l’achat.</b>",
                     "<b>Tu es sûr ?</b> Si ces deux dispositifs ont longtemps été utilisés, <b>leur efficacité a été remise en cause</b>.<br>La législation dédiée aux explosifs - qui a évoluée suite aux attentats de Paris en 2015 - <b>complique l’utilisation de fusées</b>, tandis que les météorologues <b>doutent de la réelle efficacité des canons à grêle</b> (qui pour rappel trouent les nuages et transforment la grêle en eau).",
                     "<b>Testons !</b> Déjà utilisés dans plusieurs vignobles français, comme dans la région Auvergne-Rhônes-Alpes, <b>les ballons chargés de sels</b> (et gonflés à l’hélium) sont tirés <b>au cœur de la cellule orageuse</b>. Ainsi le contenant pousse le nuage<br>à précipiter la pluie avant que <b>l’eau ne se solidifie</b>. Pour plus de précision, ils sont généralement utilisés avec <b>un radar qui trace les nuages</b> en direct."
                 ],
@@ -89,7 +89,7 @@
                 ]
             },
             {
-                "contexte": "Les raisins semblent mûrs, il va falloir commencer à penser<br>aux vendeanges...",
+                "contexte": "Les raisins semblent mûrs, il va falloir commencer à penser aux vendeanges...",
                 "enonce": "Nous approchons de la mi-août. C’est déjà le moment de préparer la période des vendanges ! Dire qu’il y a encore quelques années, elles avaient lieu fin septembre… Enfin bref… Il ne faut surtout pas négliger les épisodes de fortes chaleurs qui peuvent encore arriver. Comment veux-tu t’organiser ?",
                 "img": "img/characters/vigne.png",
                 "imgBulle" : "img/characters/bulle-dominique.png",
@@ -99,7 +99,7 @@
                     "Suivre le fonctionnement des vendanges précédentes."
                 ],
                 "explication": [
-                    "<b>Bonne résolution</b> ! Lorsque les températures sont <b>toujours estivales</b>, la vinification du raisin peut se compliquer. Vendanger <b>la nuit</b> permet<br>donc <b>d’éviter les trop fortes chaleurs</b>.",
+                    "<b>Bonne résolution</b> ! Lorsque les températures sont <b>toujours estivales</b>, la vinification du raisin peut se compliquer. Vendanger <b>la nuit</b> permet donc <b>d’éviter les trop fortes chaleurs</b>.",
                     "<b>Aïe</b> ! Irriguer les vignes est <b>interdit</b> entre <b>le 15 août</b> et la récolte comme le stipule le Décret n° 2017-1327 (8 septembre 2017), sauf cas grave de stress hydrique pour la récolte. De plus, à l’instar de pour la lutte contre le gel, les stocks disponibles d’eau - <b>qui s’amoindrissent à cause du réchauffement climatique</b> - seront <b>alloués</b> à des <b>secteurs plus vitaux</b>.",
                     "<b>Bonne chance</b> ! Avec les périodes de vendanges qui arrivent <b>de plus en plus tôt</b> à cause du réchauffement climatique, ne pas évoluer est <b>un choix très dangereux</b>… Entre les fortes chaleurs et la possible <b>indisponibilité</b> de la main-d’œuvre habituelle - notamment les étudiants -, il est indispensable de réfléchir à une <b>nouvelle manière de fonctionner</b>."
                 ],
@@ -174,7 +174,7 @@
                 ]
             },
             {
-                "contexte": "Oh non ! Des tâches blanchâtres sont apparues <br>sur les feuilles ! <br>Les vignes sont sûrement infectées par l’eutypiose… La plantation risque de nécroser, les feuilles de se dessécher, puis les fruits<br>vont pourrir !<br><br>Que comptes-tu faire ?",
+                "contexte": "Oh non ! Des tâches blanchâtres sont apparues sur les feuilles ! <br>Les vignes sont sûrement infectées par l’eutypiose… La plantation risque de nécroser, les feuilles de se dessécher, puis les fruits vont pourrir !<br><br>Que comptes-tu faire ?",
                 "enonce": "Mince ! Des nécroses sont apparues sur les vignes et les grappes commencent à être milerandées (un défaut de maturation)… Les symptômes ressemblent à ceux de l’eutypiose, un champignon très nocif pour le cabernet-sauvignon ! Son apparition a été favorisée par le printemps orageux et pluvieux que l'on a subit… Comment veux-tu y remédier ?",
                 "img": "img/characters/vigne-2.png",
                 "imgBulle" : "img/characters/bulle-dominique.png",

@@ -234,7 +234,7 @@ $("#button-score").click(() => {
     else if (nbquestion == 3){
         $(".header").attr("src", `img/progressbar/checkpoint-`+(nbquestion+1)+`.png`);
         $("#txt-evenement>p").html(data.questions.cepage[cepage].contexte);
-        $("#img-evenement").attr("src", data.questions.cepage[cepage].img)
+        $("#img-evenement").attr("src", data.questions.cepage[cepage].img);
         setPage("#page-evenement", "fade");
     }
     else if (nbquestion > 3){
