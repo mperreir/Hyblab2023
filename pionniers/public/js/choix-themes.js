@@ -6,8 +6,9 @@ function ajouteTheme(theme) {
 }
 
 function supprimeTheme(theme) {
-    themeSelected.splice(themeSelected.indexOf(theme), 1);
-    window.localStorage.setItem('themes', themeSelected.toString());
+        themeSelected.splice(themeSelected.indexOf(theme), 1);
+        window.localStorage.setItem('themes', themeSelected.toString());
+
 }
 
 /**
@@ -29,13 +30,21 @@ function onCheck(event) {
         themeBtn.classList.remove("unchecked");
 
     } else {
-        supprimeTheme(themeName);
-        themeBtn.classList.add("unchecked");
+
+        if (themeSelected.length === 1) {
+            document.getElementById('modal').style.display = 'block';
+            document.getElementById('modal-close').addEventListener('click', function (e) {
+                document.getElementById('modal').style.display = 'none'
+            })
+
+        } else {
+            supprimeTheme(themeName);
+            themeBtn.classList.add("unchecked");
+        }
+
     }
 
 }
-
-
 document.addEventListener("DOMContentLoaded", function() {
     const themes = document.querySelectorAll('#liste-theme ul li');
 
