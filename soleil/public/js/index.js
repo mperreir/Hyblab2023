@@ -5,7 +5,7 @@
 const swiper = new Swiper("#mySwiper", {
   direction: "vertical",
   observer: true,
-  //mousewheel: true,
+  mousewheel: true,
 });
 
 swiper.on("slideChange", function () {
