@@ -72,6 +72,9 @@ function createFiche(profil, dataPos) {
                                     <img src="../img/pictogrammes_themes/${tranlatedSimpleTopic}.svg" alt="${tranlatedSimpleTopic}">
                                     <p class="${fontClass} gras">${capitalizeFirstLetter(Topic)}</p>
                                 </section>
+                                <section class="bouton-voir-profil ">
+                                <button class="bouton-rond"> Lire le PROfil</button> 
+                                </section>
                             </section>
                         </li>`;
     const ficheProfil = createElementFromHTML(htmlString);
@@ -144,26 +147,6 @@ function ajouteTheme(theme) {
 
 function supprimeTheme(theme) {
     themeSelected.splice(themeSelected.indexOf(theme), 1);
-}
-
-/**
- * Donne la liste des Ids des profils favoris, liste vide si pas de profils  fav
- * @returns {string[]|*[]}
- */
-function getProfilsFav() {
-    const profFav = window.localStorage.getItem("profilsFavoris");
-    if(profFav) {
-        return profFav.split(',');
-    } else {
-        return [];
-    }
-}
-
-
-function pushProfilFav(id) {
-    const profFav = getProfilsFav();
-    profFav.push(id);
-    window.localStorage.setItem("profilsFavoris", profFav.toString());
 }
 
 /**
@@ -559,17 +542,16 @@ function updateDownSwipeListener(current) {
         topcard.style.transition = null
 
         // get top card coordinates in pixels
-        let style = window.getComputedStyle(topcard)
-        let mx = style.transform.match(/^matrix\((.+)\)$/)
-        let startPosX = mx ? parseFloat(mx[1].split(', ')[4]) : 0
-        let startPosY = mx ? parseFloat(mx[1].split(', ')[5]) : 0
+        let style = window.getComputedStyle(topcard);
+        let mx = style.transform.match(/^matrix\((.+)\)$/);
+        let startPosX = mx ? parseFloat(mx[1].split(', ')[4]) : 0;
+        let startPosY = mx ? parseFloat(mx[1].split(', ')[5]) : 0;
 
         // get top card bounds
         let bounds = topcard.getBoundingClientRect()
 
         // get finger position on top card, top (1) or bottom (-1)
         let isDraggingFrom = (e.center.y - bounds.top) > topcard.clientHeight / 2 ? -1 : 1
-
 
         // get new coordinates
         let posX = e.deltaX + startPosX
@@ -591,8 +573,6 @@ function updateDownSwipeListener(current) {
 
         if (e.isFinal) {
             let successful = false
-
-
 
             // check threshold and movement direction
             if (e.direction === Hammer.DIRECTION_RIGHT) {
@@ -625,9 +605,8 @@ function updateDownSwipeListener(current) {
                     // enleve la carte swipe
                     topcard.remove();
                     miseAJourEtatCarousel();
+                    updateFolder();
                 }, 200);
-
-                updateFolder();
             }
         }
     }
