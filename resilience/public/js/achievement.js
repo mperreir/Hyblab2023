@@ -55,8 +55,13 @@ async function achievement() {
                     htmlE = document.createElement('img');
                     htmlE.scr = 'data/' + e.link;
                     break;
+                case 'link':
+                    htmlE = document.createElement('a');
+                    htmlE.textContent = e.text;
+                    htmlE.href = e.link;
+                    break;
                 default:
-                    console.log("Unknown type");
+                    console.log("Unknown type : "+ e.type);
             }
             
             e.class.forEach(c => {
