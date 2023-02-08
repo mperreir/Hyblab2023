@@ -661,7 +661,7 @@ img.button-next {
     position: absolute;
     width: 100%;
     height: auto;
-    top: 10%;
+    top: 0;
 }
 
 #txt-evenement {

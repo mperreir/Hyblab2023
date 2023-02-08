@@ -169,7 +169,7 @@
             {
                 "contexte": "Oh non ! Des tâches blanchâtres sont apparues <br>sur les feuilles ! <br>Les vignes sont sûrement infectées par l’eutypiose… La plantation risque de nécroser, les feuilles de se dessécher, puis les fruits<br>vont pourrir !<br><br>Que comptes-tu faire ?",
                 "enonce": "Mince ! Des nécroses sont apparues sur les vignes et les grappes commencent à être milerandées (un défaut de maturation)… Les symptômes ressemblent à ceux de l’eutypiose, un champignon très nocif pour le cabernet-sauvignon ! Son apparition a été favorisée par le printemps orageux et pluvieux que l'on a subit… Comment veux-tu y remédier ?",
-                "img": "img/characters/vigne-eutypiose.png",
+                "img": "img/characters/vigne-2.png",
                 "reponse": [
                     "Regreffer les pieds malades",
                     "Utiliser des antioxydants",
