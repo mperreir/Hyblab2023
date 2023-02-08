@@ -69,6 +69,10 @@ object{
     margin-bottom: 1em;
 }
 
+#logo-application{
+    width: 35%;
+}
+
 #barchart-global{
     height: 70%;
 }
