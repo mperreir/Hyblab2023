@@ -23,14 +23,14 @@ await questions();
 
 };
 
-var logo2 = document.querySelector('#logoQ1');
-/*******
-   * GREEN Ta rue
-   */
+// var logo2 = document.querySelector('#logoQ1');
+// /*******
+//    * GREEN Ta rue
+//    */
 
-  // (Re)set initial scale of logo
-  logo2.setAttribute('style', 'transform : translateY(-50vh);');
-  logo2.setAttribute('style', 'transform : scale(1);');
+//   // (Re)set initial scale of logo
+//   logo2.setAttribute('style', 'transform : translateY(-50vh);');
+//   logo2.setAttribute('style', 'transform : scale(1);');
   
 
 
