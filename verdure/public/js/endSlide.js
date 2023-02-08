@@ -28,7 +28,7 @@ const initEndSlide = function () {
     textArray.forEach((letter, i) => {
     setTimeout(() => {
         element.innerHTML += letter;
-        }, 40 * i);
+        }, 15 * i);
     });
 });
 
@@ -36,7 +36,7 @@ const initEndSlide = function () {
         $("#endButtons").fadeIn();
         b.style.display = "flex";
         document.getElementById("dropdownShareButton").style.display = "block";
-    }, 5000);
+    }, 3000);
 
 
 
@@ -60,6 +60,7 @@ async function loadTextindic(Happy,Money,Thermo){
     if( 70 < Happy){pHappy.innerHTML = "Félicitations ! Votre population est très heureuse.";}
     else if( 50 < Happy){pHappy.innerHTML = "Vous avez su faire les bons choix pour garder une population satisfaite.";}
     else{pHappy.innerHTML = "Attention ! Vos choix ont beaucoup impacté votre population. Il ne faut pas que cela s'aggrave dans le futur.";}
+
 }
 
 const toggleDropdownShareMenu = function () {

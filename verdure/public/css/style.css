@@ -71,8 +71,11 @@ body {
 
 /* Last slide image is centered */
 #img-fini {
+
     width: 47%;
     left: 61%;
+
+
     top: 30vh;
     position: absolute;
     margin-left: -35%;
@@ -199,11 +202,11 @@ SLIDE ACCUEIL
 
 
 
-#logo-verdure {
+#logo-gtv {
 
     text-align: center;
-    width: 70%;
-    left: 50%;
+    width: 32%;
+    left: 60%;
     top: 5%;
     margin-left: -25%;
     margin-top: calc(-7.5% * 9 / 16); /* margins are relative to the element width... :-( */
@@ -296,14 +299,14 @@ SLIDE ANIMATION SORTIE+ZOOM
 
 .img_haut {
     position: absolute;
-    top: 33%;
+    top: 32.9%;
     text-align: center;
     left: 32%;
 }
 
 .img_gauche {
     position: absolute;
-    top: 41.5%;
+    top: 41.65%;
     text-align: center;
     left: 7.5%;
 }
@@ -330,9 +333,9 @@ SLIDE ANIMATION SORTIE+ZOOM
 }
 
 /*************************
-ANIMATION ENTREE 
+ANIMATION ENTREE
 *************************/
-/* 
+/*
 .img_gauche_Entree, .img_bas_Entree, .img_droit_Entree, .img_haut_Entree {
     width: 40%;
     height: auto;
@@ -546,9 +549,8 @@ INDICATEUR
     grid-column: span 2;
 }
 
-#answer1:last-child:nth-child(2n-1), #answer2:last-child:nth-child(2n-1), #answer3:last-child:nth-child(2n-1), #answer4:last-child:nth-child(2n-1), #answer5:last-child:nth-child(2n-1), #answer6:last-child:nth-child(2n-1), #answer7:last-child:nth-child(2n-1) {
-    grid-column-end: 3;
-    background-color: #282828;
+#answer7 div:last-child {
+    grid-column-end: 4;
 }
 
 /**************
@@ -622,6 +624,10 @@ INDICATEUR
     padding: 1vh;
 }
 
+li{
+    margin-bottom: 1vh;
+}
+
 #title1, #title2, #title3, #title4, #title5, #title6, #title7 {
     height: 100%;
     display: flex;
@@ -686,10 +692,8 @@ Derniere slide
 }
 
 .conclusion > p {
-    font-size: small;
     width: 75%;
     font-size: 2vh;
-    text-align: center;
     margin-left: 7vh
 
 }
@@ -722,7 +726,7 @@ Derniere slide
     display: flex;
     justify-content: center;
     /* align-items: center;  */
-    margin-top: 5%;
+    margin-top: 5vh;
 }
 
 .dropdownShareButton, button {
@@ -741,18 +745,38 @@ Derniere slide
 
 #dropdownShareOptions img {
     height: auto;
-    width: 120px;
+    width: 10vh;
+}
+
+#dropdownShareButton, #replayButton{
+    color: #282828;
+    background-color: white;
+    border: none;
+    font-size: 2vh;
+    right: 0;
+    width: 10vh;
+    height: 7vh;
+    box-shadow: -2px 2px #306947;
+    padding: 1vh;
 }
 
 /**************************
 slide entree texte
 **************************/
+.recap{
+    font-size: 30%;
+    position: absolute;
+    top: 15%;
+    width: 60%;
+    text-align: center;
+    
 
+}
 
 #presentation1 {
     width: 75%;
     height: auto;
-    font-size: 18%;
+    font-size: 25%;
     color: black;
     position: absolute;
     top: 5%;
@@ -760,24 +784,24 @@ slide entree texte
 }
 
 #presentation2 {
-    width: 75%;
     color: black;
     height: auto;
-    font-size: 18%;
+    font-size: 30%;
+    font-weight: bold;
     position: absolute;
-    bottom: 15%;
-    left: 5%;
+    bottom: 22%;
+    text-align: center;
 }
 
 
 /**********************
-GREENTA 
+GREENTA
 *********************/
 
 
 .greenTa {
     text-align: center;
-    width: 50%;
+    width: 29%;
     left: 32%;
     top: 6%;
     margin-left: -25%;
@@ -790,6 +814,7 @@ GREENTA
 
 #photo-table {
     margin: 40vh auto auto;;
+
     font-size: 15%;
 }
 
