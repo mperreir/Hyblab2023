@@ -15,7 +15,7 @@ imgLogo.style.position = "absolute";
 imgLogo.style.top = "0";
 imgLogo.style.left = "0px";
 imgLogo.style.zIndex = "2";
-imgLogo.style.width = "450px";
+imgLogo.style.width = "40vw";
 
 lienLogo.appendChild(imgLogo);
 
@@ -24,9 +24,10 @@ imgMenuBurger.src = "img/menu.png";
 imgMenuBurger.alt = "menu";
 imgMenuBurger.id = "popUpNav";
 imgMenuBurger.style.position = "absolute";
-imgMenuBurger.style.top = "50px";
-imgMenuBurger.style.right = "50px";
+imgMenuBurger.style.top = "2.5vh";
+imgMenuBurger.style.right = "5vw";
 imgMenuBurger.style.zIndex = "2";
+imgMenuBurger.style.width = "2";
 
 divIconeHeader.appendChild(lienLogo);
 divIconeHeader.appendChild(imgMenuBurger);

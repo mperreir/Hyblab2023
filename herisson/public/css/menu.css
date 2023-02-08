@@ -2,8 +2,8 @@
 {
     color: #FBC5EB;
     font-weight: 700;
-    margin-bottom: 2.5em;
-    margin-top: 3em;
+    margin-bottom: 2.5vh;
+    margin-top: 3vh;
 }
 
 .sousTitresMenu
@@ -35,11 +35,6 @@
     background-color: #FFF8F1;
     height: 100%;
     z-index: 1;
-}
-
-aside
-{
-    height: 100%;
 }
 
 .texteFinMenu
