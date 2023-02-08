@@ -2,8 +2,9 @@
 {
     color: #FBC5EB;
     font-weight: 700;
-    margin-bottom: 2.5vh;
-    margin-top: 3vh;
+    margin-bottom: 12vh;
+    margin-top: 12vh;
+    font-size: 3.5vh;
 }
 
 .sousTitresMenu
@@ -11,24 +12,20 @@
 
     color: #0B6E5F;
     font-weight: 500;
-    margin-bottom: 0.5em;
-}
-
-.sousTitresMenu:nth-child(4)
-{
-    margin-bottom: 5em;
+    margin-bottom: 2vh;
 }
 
 .ligneSeparation
 {
     width: 70%;
-    border: 0.075em solid #FBC5EB;
+    margin-top: 18vh;
+    border: 0.1vh solid #FBC5EB;
 }
 
 #texteMenu
 {
     text-align: center;
-    font-size: 2.75em;
+    font-size: 2.75vh;
     font-family: 'Prompt', sans-serif;
     /*margin-top: 5em;*/
     position: absolute;
@@ -42,16 +39,16 @@
     width: 60%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2em;
+    margin-top: 7vh;
     color: #0B6E5F;
     font-weight: 400;
     text-align: center;
-    font-size: 0.85em;
+    font-size: 2.5vh;
 }
 
 header
 {
-    height: 0.01em;
+    height: 0.1vh;
 }
 
 #texteMenu {

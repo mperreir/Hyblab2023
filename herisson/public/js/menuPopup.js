@@ -27,7 +27,7 @@ imgMenuBurger.style.position = "absolute";
 imgMenuBurger.style.top = "2.5vh";
 imgMenuBurger.style.right = "5vw";
 imgMenuBurger.style.zIndex = "2";
-imgMenuBurger.style.width = "2";
+imgMenuBurger.style.width = "5vw";
 
 divIconeHeader.appendChild(lienLogo);
 divIconeHeader.appendChild(imgMenuBurger);
