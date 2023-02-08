@@ -408,6 +408,7 @@ INDICATEUR
     background-color: rgba(255, 255, 255, 0);
     margin: 0px;
     padding: 0px;
+    z-index: 2;
 }
 
 .containerthermofinal {
@@ -419,6 +420,8 @@ INDICATEUR
     background-color: rgba(255, 255, 255, 0);
     margin: 0px;
     padding: 0px;
+    z-index: 2;
+    
 }
 
 .thermo {
@@ -451,6 +454,7 @@ INDICATEUR
     background-color: rgba(255, 255, 255, 0);
     margin: 0px;
     padding: 0px;
+    z-index: 2;
 }
 
 .containermoneyfinal {
@@ -461,6 +465,7 @@ INDICATEUR
     margin: 0px;
     padding: 0px;
     left: 3vh;
+    z-index: 2;
 }
 
 .money {
@@ -494,6 +499,7 @@ INDICATEUR
     background-color: rgba(255, 255, 255, 0);
     margin: 0px;
     padding: 0px;
+    z-index: 2;
 }
 
 .containerhappyfinal {
@@ -504,6 +510,7 @@ INDICATEUR
     margin: 0px;
     padding: 0px;
     left: 3vh;
+    z-index: 2;
 }
 
 .happy {
@@ -793,6 +800,7 @@ slide entree texte
     width: 76%;
     text-align: center;
     left: 14%;
+    z-index: 2;
 
 }
 
