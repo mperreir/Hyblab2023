@@ -3,6 +3,9 @@
 const fs = require("fs");
 const app = require( 'express' )();
 const path = require('path');
+const {flatten} = require("express/lib/utils");
+
+let database;
 
 // Sample endpoint that sends the partner's name
 app.get('/topic', function ( req, res ) {
@@ -14,7 +17,9 @@ app.get('/topic', function ( req, res ) {
     res.json({'topic':topic});
 } );
 app.get('/animal/autocomplete/:name', function ( req, res ) {
-    const database = JSON.parse(fs.readFileSync('herisson/public/data/additionalDB.json').toString());
+    if (!database) {
+        database = JSON.parse(fs.readFileSync('herisson/public/data/additionalDB.json').toString());
+    }
     const filteredNames = Object.keys(database)
         .filter(key => key.toLowerCase().startsWith(req.params.name.toLowerCase()));
     console.log(filteredNames);
@@ -34,11 +39,22 @@ app.get('/animal/:name', function ( req, res ) {
 });
 
 app.get('/commune/autocomplete/:name', function ( req, res ) {
-    const database = JSON.parse(fs.readFileSync('herisson/public/data/db.json').toString());
+    //Time the request
+    if (!database) {
+        database = JSON.parse(fs.readFileSync('herisson/public/data/db.json').toString());
+    }
+    let count = 0;
     const filteredNames = Object.keys(database)
-        .filter(key => key.toLowerCase().startsWith(req.params.name.toLowerCase()));
-
+        .filter(key => {
+            if (count < 10 && key.toLowerCase().startsWith(req.params.name.toLowerCase())) {
+                count++;
+                return true;
+            }else{
+                return false;
+            }
+        });
     res.json({filteredNames});
+
 });
 
 app.get('/commune/:name', function ( req, res ) {

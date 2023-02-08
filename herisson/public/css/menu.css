@@ -33,8 +33,7 @@
     /*margin-top: 5em;*/
     position: absolute;
     background-color: #FFF8F1;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
     z-index: 1;
 }
 
@@ -57,12 +56,7 @@ aside
 
 header
 {
-    position: fixed;
-    height: 130px;
-    display: flex;
-    width: 101%;
-    background-color: #FBC5EB;
-    z-index: 5;
+    height: 1px;
 }
 
 #texteMenu {

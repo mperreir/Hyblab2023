@@ -3,32 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="./css/styleNbChoc.css">
+    <link rel="stylesheet" href="css/styleNbChoc.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;700&display=swap" rel="stylesheet">
-<!--    <script src="https://hammerjs.github.io/dist/hammer.js"></script>-->
-<!--    <script src="scriptNbChoc.js"></script>-->
 
+    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="js/menuPopup.js"></script>
 
 </head>
-<header>
-    <h1>Hyblab 2023</h1>
-</header>
 <body>
-    <div class="round-background">
-        <p id="nbChoc"> 40 </p>
-        <p id="texteExplication"></p>
-        <p id="texteDanger"> Dont <span id="nbDanger">20 en danger</span>, voici comment vous pouvez les protéger ! </p>
-        <a href="commune.html"> <img src="./img/fleche_verte.png" alt="fleche vers le bas" id="fleche"> </a>
-    </div>
+    <header id="headerMenu" class="main"> </header>
+    <main>
+        <div class="round-background" id="testets">
+            <p id="nbChoc"> 40 </p>
+            <p id="texteExplication">espèces sauvages observées près de <strong id="villeChoisie"></strong> !</p>
+            <p id="texteDanger"> Dont <span id="nbDanger">20 en danger</span>, voici comment vous pouvez les protéger ! </p>
+            <a href="main.html"> <img src="img/fleche_verte.png" alt="fleche vers le bas" id="fleche"> </a>
+        </div>
+    </main>
     <script>
         const search = new URLSearchParams(window.location.search).get('searchCommune');
-        const h1 = document.getElementById("texteExplication");
-        // put the search in bold
-        h1.innerHTML = "espèces sauvages observées près de "+ search + " !";
+        const ville = document.getElementById("villeChoisie");
+        ville.innerHTML = search ;
+    </script>
+    <script>
+        const main = document.getElementsByTagName("main");
+        const hammer = new Hammer(main[0]);
+        hammer.on("panup", (event) => {
+            event.preventDefault();
+            document.body.style.opacity = "0";
+            setTimeout(() => {
+                window.location.href = "main.html";
+            }, 0);
+        })
     </script>
 </body>
 </html>

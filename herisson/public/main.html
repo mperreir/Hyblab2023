@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/styleMain.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <script src="js/scriptMain.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="js/menuPopup.js"></script>
+
+</head>
+<body>
+    <header id="headerMenu" class="main"> </header>
+    <div class="texte-intro">
+        <p>
+            Des animaux près de chez vous sont en danger, apprenez à les connaître pour mieux les protéger.
+        </p>
+    </div>
+    <div class="texte-Elie">
+        <p>
+            Bonjour ! Moi c’est Elie,
+            <br/>découvrez avec moi les animaux de votre commune !
+        </p>
+        <img src="img/ligne_home_elie.png">
+    </div>
+    <div class="mascotte">
+        <img src="img/mascotte-home.png" alt="Elie" id="elie">
+    </div>
+    <div class="barres-recherche">
+<!--         <p id="text">Indiquez la commune ou le code postal</p>-->
+        <form class="search" id="searchCommune" action="commune.html" method="get" name="RechercheCommune">
+            <input id="rechercheCommune" class="searchBar" type="text" name="searchCommune" placeholder="Nom de votre commune">
+            <button class="bouton-recherche"> </button>
+        </form>
+        <div id="autocompletionCom"></div>
+
+        <form class="search" id="searchAnimal" action="animal.html" method="get" name="RechercheAnimal">
+                <input id="rechercheAnimal" class="searchBar" type="text" name="searchAnimal" placeholder="Nom de l'animal">
+            <button class="bouton-recherche"> </button>
+        </form>
+        <div id="autocompletionAni"></div>
+
+
+        <!--         <div style="display: flex; align-items: center;">-->
+<!--             <label style="margin-right: auto;" for="switch">Code Postal</label>-->
+<!--             <label id="switch">-->
+<!--                 <input type="checkbox">-->
+<!--                 <span class="slider round"></span>-->
+<!--             </label>-->
+<!--             <label style="margin-left: auto;" for="switch">Animal</label>-->
+<!--         </div>-->
+    </div>
+
+
+
+</body>
+</html>
