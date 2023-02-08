@@ -259,9 +259,8 @@ body{
     }
 }
 
-#map {
-    /*margin-top: 10px;
-    height: 350px;*/
+#legend {
+    margin-bottom: 1em;
 }
 
 #video-container {

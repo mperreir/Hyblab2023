@@ -6,7 +6,7 @@ const initSlide1 = async function(){
   const data = await response.json();
 
   function mise_en_forme(data) {
-    const logo = document.querySelector('#logo-environment');
+    const logo = document.querySelector('#logo-application');
     document.querySelector('#titre').innerHTML = data.titre.toUpperCase();
     document.querySelector('#text1').innerHTML = data.texte1;
     document.querySelector('#text2').innerHTML = data.texte2;
