@@ -20,6 +20,14 @@ header#theme-selector {
     border-radius: 20px;
 }
 
+header#theme-selector div#topic-related ul#theme-list li{
+    width: 15%;
+}
+header#theme-selector div#topic-related ul#theme-list li img{
+    width: 100%;
+    height: 100%;
+}
+
 footer#folder {
     z-index: 1;
     bottom: 0;

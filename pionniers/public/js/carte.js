@@ -7,8 +7,9 @@
 // TODO : interaction sur les points pour afficher la miniature
 //
 // TODO : interaction de la miniature avec le swipe dans le dossier
+//
+// TODO : interdire la suppression des topics selectionnés s'il n'en reste plus qu'un
 
-// MEILLEUR MOYEN DE GERER LES MOTS CLES METTRE UN PARAMETRE POUR LES MARKERS SUR KEYWORD BOOLEEN et le mettre dans le IF
 /*
   ----------------------------------------------------------------------------------------------------------------------
   | Global variables                                                                                                   |
@@ -348,8 +349,6 @@ function onKeywordManage() {
             // Retrieve the keywords list and reset it
             const keywordsList = document.querySelector('#available-keywords-list');
             keywordsList.innerHTML = '';
-            // Keep only the first 15 keywords
-            keywords = keywords.slice(0, 15);
             // Set the keyword list as visible
             keywordsList.classList.remove('display-none');
 
