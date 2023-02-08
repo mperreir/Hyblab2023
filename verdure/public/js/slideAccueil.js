@@ -3,14 +3,14 @@
 // async init function (because of the awaits on fetches)
 const initSlideAccueil = async function(){
   // Get logo element
-  const logo = document.querySelector('#logo-verdure');
+  const logo = document.querySelector('#logo-gtv');
 
   // (Re)set initial scale of logo
   logo.setAttribute('style', 'transform : translateY(-50vh);');
   
   // Animate hyblab logo and make shrink on click
   anime({
-    targets: '#logo-verdure',
+    targets: '#logo-gtv',
     translateY: 0,
     easing: 'easeOutBounce'
   });
