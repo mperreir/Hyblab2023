@@ -34,3 +34,43 @@ function changeOmbre(){
                 break;
         }
 }
+
+/*
+let ombre = $("#ombre input[name=ombre]:checked").val();
+        switch (ombre) {
+            case "Jamais":
+                $("#ombre #image3 p").html("Jamais");
+                $("#ombre .img-ombre").attr("src", "img/Ombre/toit-mid-ombre-01.jpg");
+                break;
+            case "Pas trop":
+                $("#ombre #image3 p").html("Pas trop");
+                $("#ombre .img-ombre").attr("src", "img/Ombre/toit-mid-ombre-02.jpg");
+            break;
+            case "Toujours":
+                $("#ombre #image3 p").html("Toujours");
+                $("#ombre .img-ombre").attr("src", "img/Ombre/toit-mid-ombre-03.jpg");
+                break;
+            default:
+                break;
+        }
+
+
+        let ombre = $("#ombre input[name=ombre]:checked").val();
+        switch (ombre) {
+            case "Jamais":
+                $("#ombre #image3 p").html("Jamais");
+                $("#ombre .img-ombre").attr("src", "img/Ombre/toit-hi-ombre-01.jpg");
+                break;
+            case "Pas trop":
+                $("#ombre #image3 p").html("Pas trop");
+                $("#ombre .img-ombre").attr("src", "img/Ombre/toit-hi-ombre-02.jpg");
+            break;
+            case "Toujours":
+                $("#ombre #image3 p").html("Toujours");
+                $("#ombre .img-ombre").attr("src", "img/Ombre/toit-hi-ombre-03.jpg");
+                break;
+            default:
+                break;
+        }
+
+*/
