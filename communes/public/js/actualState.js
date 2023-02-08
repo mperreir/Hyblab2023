@@ -29,7 +29,7 @@ function typewriter() {
         sContents += aText[iRow++] + '<br />';
     }
     if(aText[iIndex] != null) {
-        destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "|";
+        destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos);
 
         if (iTextPos++ === iArrLength) {
             iTextPos = 0;

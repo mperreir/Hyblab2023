@@ -5,6 +5,9 @@ let options = {
         let text = $('#carousel-text');
         text.html($(slide).attr('name').toUpperCase());
         text.css('color', $(slide).attr('color'));
+        document.querySelectorAll('.navigate').forEach(item => {
+            item.style.color = $(slide).attr('color');
+        })
 
     },
     numVisible: 3,
@@ -43,6 +46,7 @@ fetch('../data/data.json')
                 div.setAttribute("color", item.main_color);
                 div.setAttribute("background-color", item.background_color);
 
+
                 // add img to div
                 div.appendChild(obj);
 
@@ -51,6 +55,16 @@ fetch('../data/data.json')
 
             }
         });
+        if(document.querySelector('.carousel').children.length === 0) {
+            document.querySelectorAll('.notEmpty').forEach((element) => {
+                element.style.display = "none";
+            });
+            document.querySelectorAll('.carouselResult').forEach((element) => {
+                element.style.marginLeft="0%";
+                element.style.marginRight="0%";
+                element.style.position="absolute";
+            });
+        }
         instances = M.Carousel.init(document.querySelectorAll('.carousel'), options);
     });
 
@@ -68,4 +82,8 @@ function openEnv(){
     let idEnv=document.querySelector(".active").id
     sessionStorage.setItem("visit",idEnv)
     location.href = "home.html"
+}
+
+function bilan(){
+    location.href = "conclusion.html"
 }

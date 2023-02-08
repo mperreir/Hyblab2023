@@ -74,15 +74,15 @@
             <section id="fourth-slide" class="swiper-slide">
                 <header>
                 </header>
-                <main>
-                    <div class="carousel" id="carousel"></div>
+                <div class="carousel notEmpty" id="carousel"></div>
 
-                    <div id="legend-carousel">
-                        <input type="button" value="<" id="prev">
-                        <p id="carousel-text"></p>
-                        <input type="button" value=">" id="next">
-                    </div>
-                </main>
+                <div id="legend-carousel">
+                    <input type="button" value="<" id="prev" class="navigate notEmpty">
+                    <p id="carousel-text"></p>
+                    <input type="button" value=">" id="next" class="navigate notEmpty">
+                    <input type="button" value ="Valider" class="carouselResult notEmpty" onclick="openEnv()">
+                    <input type="button" value="Voir mon Bilan" class="carouselResult" onclick="bilan()">
+                </div>
             </section>
         </main>
         <div class="swiper-pagination"></div>

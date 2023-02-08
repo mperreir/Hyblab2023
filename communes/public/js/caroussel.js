@@ -38,13 +38,15 @@ fetch('../data/data.json')
             div.id = item.name.replaceAll(' ', '-').toLowerCase();
 
             // create an img element
-            const obj = document.createElement('object');
+            const obj = document.createElement('img');
             // add src
-            obj.data = '../' + item.file_name;
+            //obj.data = '../' + item.file_name;
             // add type
-            obj.type = 'image/svg+xml';
+            //obj.type = 'image/svg+xml';
+            obj.src='../' + item.file_name;
 
-            change_svg_color(obj, item.main_color)
+
+            //change_svg_color(obj, item.main_color)
 
             div.setAttribute("name", item.name);
             div.setAttribute("color", item.main_color);

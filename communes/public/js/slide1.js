@@ -26,6 +26,10 @@ const initSlide1 = async function(){
     document.querySelectorAll('.swiper-pagination-bullet-active').forEach((bullet) => {bullet.style.backgroundColor = data.main_color;});
     document.querySelectorAll('.swiper-wrapper section').forEach((section) => {section.style.backgroundColor = data.background_color;});
     document.querySelectorAll('.swiper-slide main').forEach((main) => {main.style.backgroundColor = data.main_color;});
+    document.querySelectorAll('.carouselResult').forEach((button) => {button.style.backgroundColor = data.main_color;});
+    document.querySelectorAll('.carouselResult').forEach((button) => {button.style.color = "#ffffff";});
+
+
 
     const objectElement = document.querySelector('#logo-environment');
     objectElement.data = "../"+data.file_name;
@@ -49,4 +53,5 @@ const initSlide1 = async function(){
   mise_en_forme(data_filter);
   initSlide2(data_filter);
   initSlide3(data_filter, []);
+
 };

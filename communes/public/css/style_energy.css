@@ -19,15 +19,31 @@ body{
     margin-top: 5%;
 }
 
-.carousel-items{
-    width: 30%;
+#carousel-text{
+    text-align: center;
+    font-size: 30px;
 }
 
 #legend-carousel{
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 5%;
     align-items: center;
     justify-content: center;
+    height: 50%;
+}
+#legend-carousel p{
+    max-width: 40%;
+}
+.carouselResult{
+    border-radius: 40px 40px 40px 40px;
+    font-size: 30px;
+    padding: 15px;
+}
+.navigate{
+    background : transparent;
+    border: transparent;
+    padding-bottom: 20px;
 }
 
 #legend-carousel > * {
@@ -65,9 +81,6 @@ p{
     font-size: 1.2em;
 }
 
-#carousel-text{
-    font-size: 2em;
-}
 /* -------------- Loader --------------*/
 #loader{
     z-index: 2;
