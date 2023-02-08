@@ -49,7 +49,7 @@ function removeChoices() {
 
 function afficheEvenement(numQuestion) {
     $("#txt-evenement>p").html(data.questions.general[numQuestion].contexte);
-    $("#img-evenement").attr("src", data.questions.general[nbquestion].img)
+    $("#img-evenement").attr("src", data.questions.general[numQuestion].img)
 }
 
 function afficheQuestion(numQuestion) {
@@ -85,6 +85,7 @@ function displayCepage() {
     $(".vin").css("background-color", data.cepages[cepage].color);
     $("#txt-score").css("background-color", data.cepages[cepage].color);
     $("#bouteille-resume").attr("src", data.cepages[cepage].imgfin)
+    $(".vin").css("height", "90%");
 }
 
 async function loadApp() {
@@ -134,45 +135,118 @@ $("#home-button").click(() => {
 });
 
 $("#button-evenement").click(() => {
-    afficheQuestion(nbquestion);
+    if (nbquestion == 3){
+        $("#question-text>p").html(data.questions.cepage[cepage].enonce);
+        $("#choice-1>p").html(data.questions.cepage[cepage].reponse[0]);
+        $("#choice-2>p").html(data.questions.cepage[cepage].reponse[1]);
+        $("#choice-3>p").html(data.questions.cepage[cepage].reponse[2]);
+    }
+    else if (nbquestion > 3){
+        afficheQuestion(nbquestion-1);
+    }
+    else{
+        afficheQuestion(nbquestion);
+    }
     setPage("#page-question", "fade"); 
 });
 
 $("#choice-1").click(() => {
-    selectExplication(nbquestion, 0);
-    setPage("#page-score", "fade");
-    setTimeout(() => {
-        (changementVin(nbquestion, 0));
-    }, 2000)
+    if (nbquestion == 3){
+        $("#txt-score>p").html(data.questions.cepage[cepage].explication[0]);
+        setPage("#page-score", "fade");
+        setTimeout(() => {
+            wineQuantity = wineQuantity * (1-data.questions.cepage[cepage].consequence[0]);
+            $(".vin").css("height", wineQuantity + "%");
+        }, 2000)
+    }
+    else if (nbquestion > 3){
+        selectExplication(nbquestion-1, 0);
+        setPage("#page-score", "fade");
+        setTimeout(() => {
+            (changementVin(nbquestion-1, 0));
+        }, 2000)
+    }
+    else{
+        selectExplication(nbquestion, 0);
+        setPage("#page-score", "fade");
+        setTimeout(() => {
+            (changementVin(nbquestion, 0));
+        }, 2000)
+    }
 });
 
 $("#choice-2").click(() => {
-    selectExplication(nbquestion, 1);
-    setPage("#page-score", "fade");
-    setTimeout(() => {
-        (changementVin(nbquestion, 1));
-    }, 2000)
+    if (nbquestion == 3){
+        $("#txt-score>p").html(data.questions.cepage[cepage].explication[1]);
+        setPage("#page-score", "fade");
+        setTimeout(() => {
+            wineQuantity = wineQuantity * (1-data.questions.cepage[cepage].consequence[1]);
+            $(".vin").css("height", wineQuantity + "%");
+        }, 2000)
+    }
+    else if (nbquestion > 3){
+        selectExplication(nbquestion-1, 1);
+        setPage("#page-score", "fade");
+        setTimeout(() => {
+            (changementVin(nbquestion-1, 1));
+        }, 2000)
+    }
+    else{
+        selectExplication(nbquestion, 1);
+        setPage("#page-score", "fade");
+        setTimeout(() => {
+            (changementVin(nbquestion, 1));
+        }, 2000)
+    }
 });
 
 $("#choice-3").click(() => {
-    selectExplication(nbquestion, 2);
-    setPage("#page-score", "fade");
-    setTimeout(() => {
-        (changementVin(nbquestion, 2));
-    }, 2000)
-    
+    if (nbquestion == 3){
+        $("#txt-score>p").html(data.questions.cepage[cepage].explication[2]);
+        setPage("#page-score", "fade");
+        setTimeout(() => {
+            wineQuantity = wineQuantity * (1-data.questions.cepage[cepage].consequence[2]);
+            $(".vin").css("height", wineQuantity + "%");
+        }, 2000)
+    }
+    else if (nbquestion > 3){
+        selectExplication(nbquestion-1, 2);
+        setPage("#page-score", "fade");
+        setTimeout(() => {
+            (changementVin(nbquestion-1, 2));
+        }, 2000)
+    }
+    else{
+        selectExplication(nbquestion, 2);
+        setPage("#page-score", "fade");
+        setTimeout(() => {
+            (changementVin(nbquestion, 2));
+        }, 2000)
+    }
 });
 
 $("#button-score").click(() => {
     nbquestion+=1;
-    if (nbquestion == 5){
+    console.log(nbquestion);
+    if (nbquestion == 6){
         setPage("#page-resume", "fade");
     }
+    else if (nbquestion == 3){
+        $(".header").attr("src", `img/progressbar/checkpoint-`+(nbquestion+1)+`.png`);
+        $("#txt-evenement>p").html(data.questions.cepage[cepage].contexte);
+        $("#img-evenement").attr("src", data.questions.cepage[cepage].img)
+        setPage("#page-evenement", "fade");
+    }
+    else if (nbquestion > 3){
+        $(".header").attr("src", `img/progressbar/checkpoint-`+(nbquestion+1)+`.png`);
+        afficheEvenement(nbquestion - 1);
+        setPage("#page-evenement", "fade");
+    }
     else {
+        $(".header").attr("src", `img/progressbar/checkpoint-`+(nbquestion+1)+`.png`);
         afficheEvenement(nbquestion);
         setPage("#page-evenement", "fade");
     }
-    
 });
 
 $("#button-resume").click(() => {
@@ -181,6 +255,14 @@ $("#button-resume").click(() => {
     nbquestion = 0;
     wineQuantity = 90;
     setPage("#page-sources", "fade");
+});
+
+$("#button-restart").click(() => {
+    $(".header, #home-button").hide();
+    $(".header").attr("src", `img/progressbar/checkpoint-0.png`);
+    nbquestion = 0;
+    wineQuantity = 90;
+    setPage("#page-cepage", "fade");
 });
 
 $("#button-test").click(() => {
@@ -219,6 +301,7 @@ $("#cepage-1-bouton").click(() => {
     setCepage(0);
     displayCepage();
     afficheEvenement(0);
+    $(".header").attr("src", `img/progressbar/checkpoint-`+(nbquestion+1)+`.png`);
     setPage("#page-evenement", "fade");
 });
 
@@ -226,6 +309,7 @@ $("#cepage-2-bouton").click(() => {
     setCepage(1);
     displayCepage();
     afficheEvenement(0);
+    $(".header").attr("src", `img/progressbar/checkpoint-`+(nbquestion+1)+`.png`);
     setPage("#page-evenement", "fade");
 });
 
@@ -233,6 +317,7 @@ $("#cepage-3-bouton").click(() => {
     setCepage(2);
     displayCepage();
     afficheEvenement(0);
+    $(".header").attr("src", `img/progressbar/checkpoint-`+(nbquestion+1)+`.png`);
     setPage("#page-evenement", "fade");
 });
 

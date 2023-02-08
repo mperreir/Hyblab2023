@@ -286,7 +286,7 @@ body {
 }
 
 #message-presentation-bas .button-next{
-    bottom: 30%;
+    bottom: 15%;
 }
 
 #image-winemaker {
@@ -567,8 +567,8 @@ img.button-next {
     left: 0;
     right: 0;
     margin: auto;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 4%;
+    padding-bottom: 2%;
 }
 
 #choices {
@@ -578,7 +578,8 @@ img.button-next {
 
 .choice {
     width: 40%;
-    height: 4em;
+    height: 3em;
+    line-height: 110%;
     padding: 1%;
     margin: 2%;
     border-radius: 8px;
@@ -720,8 +721,17 @@ img.button-next {
 }
 
 #button-resume {
+    color: white;
     position:absolute;
-    left : 50%;
+    right : 5%;
+    bottom: 10%;
+    cursor : pointer;
+}
+
+#button-restart {
+    color: white;
+    position:absolute;
+    left : 5%;
     bottom: 10%;
     cursor : pointer;
 }
@@ -733,14 +743,13 @@ img.button-next {
     width:100%;
     height: auto;
     left: 0%;
-    top: 20.87%;
-    bottom: 49.29%;
+    bottom: 55%;
 }
 
 #bulle-presenter{
     position: absolute;
     left:7.5%;
-    top:63.5%;
+    bottom: 36%;
     width:10%;
     height:auto;
 }
@@ -749,8 +758,7 @@ img.button-next {
     position:absolute;
     background-color: #FFD78C;
     color: black;
-    width: 100%;
-    bottom: 20%;
+    bottom: 35%;
     left: 0;
     right: 0;
     margin: auto;
@@ -763,13 +771,12 @@ img.button-next {
     position:absolute;
     background-color: #AF0702;
     color: black;
-    width: 100%;
-    top:67.5%;
+    bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
     padding: 0;
-    height: 22.5%;
+    height: 40%;
     border-top-left-radius: 0;
 }
 

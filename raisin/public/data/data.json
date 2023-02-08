@@ -29,6 +29,7 @@
                 "contexte": "Bonsoir, les infos météo pour vous !<br><br>Pour demain, samedi 15 avril, il neigera par intermittence et le risque de gel est important.<br><br>Plus particulièrement sur la région d’Anjou, <br>gare à vous.",
                 "enonce": "Bizarre, les vignes commencent à geler… <br>Pourtant, il n’est que le 15 avril… Il faut agir vite<br>pour sauver les vignes ! Que comptes-tu faire ?",
                 "img": "img/characters/missmeteo.png",
+                "imgBulle": "img/characters/bulle-météo.png",
                 "reponse": [
                     "Asperger les vignes d’eau",
                     "Installer des feux de vignes",
@@ -49,6 +50,7 @@
                 "contexte": "Bonsoir,<br><br>L’élément-clef ce JT, ce soir, sera le début de l’été<br>avec de nombreux épisodes caniculaires prévus.<br><br>Ce qui sera un problème pour le monde de l’agriculture...",
                 "enonce": "L’été arrive ! La température risque d’augmenter drastiquement. <br>On parle même d’épisodes caniculaires… <br>Que vais-je faire le moment venu ?",
                 "img": "img/characters/jt.png",
+                "imgBulle": "img/characters/bulle-presenter.png",
                 "reponse": [
                     "Arrêter les traitements en cours.",
                     "Écimer les feuilles pour dégager les grappes.",
@@ -69,6 +71,7 @@
                 "contexte": "Bonjour,<br><br>Je suis la représentante d’un bureau d’étude, et suite<br>à différents relevés nous avons remarqué qu’il pourrait<br>il y avoir des périodes de grêle.",
                 "enonce": "Selon les estimations, les conditions météorologiques des prochaines semaines seront favorables<br>à l’apparition d’épisodes de grêle… Il faut absolument que tu t’y prépares, sinon les conséquences<br>seront catastrophiques ! Que choisis-tu ?",
                 "img": "img/characters/etude.png",
+                "imgBulle" : "bulle-scientific.png",
                 "reponse": [
                     "Installer des filets paragrêle.",
                     "Utiliser des fusées ou canons anti-grêles.",
@@ -86,9 +89,10 @@
                 ]
             },
             {
-                "contexte": "Les raisins semblent mûrs, va falloir commencer à penser<br>aux vendeanges...",
+                "contexte": "Les raisins semblent mûrs, il va falloir commencer à penser<br>aux vendeanges...",
                 "enonce": "Nous approchons de la mi-août. C’est déjà le moment de préparer la période des vendanges ! Dire qu’il y a encore quelques années, elles avaient lieu fin septembre… Enfin bref… Il ne faut surtout pas négliger les épisodes de fortes chaleurs qui peuvent encore arriver. Comment veux-tu t’organiser ?",
                 "img": "img/characters/vigne.png",
+                "imgBulle" : "img/characters/bulle-dominique.png",
                 "reponse": [
                     "Commencer à vendanger la nuit.",
                     "Irriguer les vignes.",
@@ -109,6 +113,7 @@
                 "contexte": "Mince, le pied de la vigne semble dépérir, comme s'il était nécrosé…",
                 "enonce": "Ça n’augure rien de bon ! Au vu des symptômes, cela veut peut-être dire que les vignes sont contaminées par l’esca. Si c’est le cas, il faut agir immédiatement avant que cela prenne des ampleurs inimaginables ! Comment vais-je procéder ?",
                 "img": "img/characters/vigne-2.png",
+                "imgBulle" : "img/characters/bulle-dominique.png",
                 "reponse": [
                     "Arracher les plantes malades",
                     "Procéder à une opération « chirurgicale »",
@@ -130,6 +135,7 @@
                 "contexte": "Oh non ! Des tâches blanchâtres sont apparues sur les feuilles ! <br>Les vignes sont sûrement infectées par le mildiou… La plantation risque de nécroser, les feuilles de se dessécher, puis les fruits<br>vont pourrir !<br><br>Que comptes-tu faire ?",
                 "enonce": "Des tâches blanchâtres sont apparues <br>sur les feuilles ! Les vignes sont sûrement infectées par le mildiou… La plantation risque de nécroser,<br>les feuilles de se dessécher, puis les fruits<br>vont pourrir ! Que comptes-tu faire ?",
                 "img": "img/characters/vigne-mildiou.png",
+                "imgBulle" : "img/characters/bulle-dominique.png",
                 "reponse": [
                     "Couper les parties infectées",
                     "Pulvériser de la bouillie bordelaise",
@@ -147,9 +153,10 @@
                 ]
             },
             {
-                "contexte": "",
-                "enonce": "Mince ! Des tâches brunes sont apparues sur l’intégralité de la vigne, du fruit à la tige en passant par les feuilles… Nous sommes en septembre donc c’est sûrement l’apparition du botrytid, surnommée la pourriture grise ! Le champignon se propage très rapidement, il faut donc agir rapidement ! Que veux-tu faire ?",
+                "contexte": "Mince ! Des tâches brunes sont apparues sur l’intégralité de la vigne, du fruit à la tige en passant par les feuilles… Nous sommes en septembre donc c’est sûrement l’apparition du botrytid, surnommée la pourriture grise !",
+                "enonce": "Le champignon se propage très rapidement, il faut donc agir rapidement ! Que veux-tu faire ?",
                 "img": "img/characters/vigne-taches-brunes.png",
+                "imgBulle" : "img/characters/bulle-dominique.png",
                 "reponse": [
                     "Arracher et jeter les plantes contaminées.",
                     "Avoir recours à la bouillie bordelaise.",
@@ -170,6 +177,7 @@
                 "contexte": "Oh non ! Des tâches blanchâtres sont apparues <br>sur les feuilles ! <br>Les vignes sont sûrement infectées par l’eutypiose… La plantation risque de nécroser, les feuilles de se dessécher, puis les fruits<br>vont pourrir !<br><br>Que comptes-tu faire ?",
                 "enonce": "Mince ! Des nécroses sont apparues sur les vignes et les grappes commencent à être milerandées (un défaut de maturation)… Les symptômes ressemblent à ceux de l’eutypiose, un champignon très nocif pour le cabernet-sauvignon ! Son apparition a été favorisée par le printemps orageux et pluvieux que l'on a subit… Comment veux-tu y remédier ?",
                 "img": "img/characters/vigne-2.png",
+                "imgBulle" : "img/characters/bulle-dominique.png",
                 "reponse": [
                     "Regreffer les pieds malades",
                     "Utiliser des antioxydants",
