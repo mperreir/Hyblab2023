@@ -250,7 +250,7 @@ body{
     max-width: 100%;
 }
 
-#trophe{
+#book{
     /*filter: drop-shadow(1px 1px 5px rgb(0 0 0 / 0.8));*/
     max-width: 100%;
 }
@@ -266,6 +266,7 @@ body{
 #logo{
     /*filter: drop-shadow(1px 1px 5px rgb(0 0 0 / 0.8));*/
     width: 100%;
+    cursor: default; 
 }
 
 #map{
@@ -288,24 +289,36 @@ body{
     margin-right: 0.6em;*/
     margin-left: 7%;
     margin-right: 7%;
-    margin-top: -5%;; /*-5px -0.3em*/
+    margin-top: -7%;; /*-5px -0.3em*/
 }
 
 #heure{
-    font-size: 3vh;
+    height: 42px;
+    max-height: 100%;
+    font-size: 2.6vh;
+    font-weight: bold;
     color: white;
     /*text-shadow: 1px 1px 1px #000;*/
     background: none;
-    border: none;
+    border: 1px white solid;
+    border-radius: 25px;
+    padding: 0.3em;
 }
 
 #steps{
-    font-size: 3vh;
+    height: 42px;
+    max-height: 100%;
+    font-size: 2.6vh;
+    font-weight: bold;
     color: white;
     /*text-shadow: 1px 1px 1px #000;*/
     background: none;
-    border: none;
+    border: 1px white solid;
+    border-radius: 25px;
+    padding: 0.3em;
 }
+
+
 
 /* The Modal (background) */
 .modal {

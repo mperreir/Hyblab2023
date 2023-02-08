@@ -49,7 +49,7 @@ function load() {
     }
     window.localStorage.setItem('started', 1);
     document.getElementById("heure").value = window.localStorage.getItem('heure');
-    document.getElementById("steps").value = " " + window.localStorage.getItem('steps') + "/8 ";
+    document.getElementById("steps").value = window.localStorage.getItem('steps') + "/8 ";
     if (window.localStorage.getItem('pipi') == "true" && window.localStorage.getItem('manger') == "true") {
         window.localStorage.setItem("popup", "false");
     }else{
