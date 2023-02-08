@@ -1,25 +1,67 @@
-"use strict";
+async function createCommunePage(commune) {
+    const wrapper = document.getElementsByClassName("swiper-wrapper")[0]
 
-import Swiper from 'swiper';
+    async function getDataCommune(nom) {
+        return await
+            fetch(`http://127.0.0.1:8080/herisson/api/commune/${nom}`)
+                .then(response => response.json())
+                .then(data => {
+                        return data.filteredData;
+                    }
+                );
+    }
 
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'vertical',
-    loop: true,
+    const dataCommune = await getDataCommune(commune)
 
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-    },
+    for (let categorie in dataCommune[Object.keys(dataCommune)[0]]) {
+        // Pour chaque catégorie d'animaux dans le dictionnaire de la ville
+        // Categorie est la clé du dictionnaire dataCommune
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+        let slide = document.createElement("div")
+        slide.className = "swiper-slide"
+        slide.id = categorie
 
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-});
+        // ----- TITRE COMMUNE -----
+        let nomCommune = document.createElement("h1")
+        if (categorie === "Oiseaux" || categorie === "Chiroptères") {
+            nomCommune.className = "commune green"
+        } else {
+            nomCommune.className = "commune white"
+        }
+        nomCommune.innerText = Object.keys(dataCommune)[0].toUpperCase()
+
+        // ----- BOUTON -----
+        let bouton = document.createElement("button")
+        bouton.className = "button"
+
+        let boutonText = document.createElement("span")
+        boutonText.className = "decouvrir"
+        boutonText.innerText = "Découvrir les " + categorie
+
+        bouton.appendChild(boutonText)
+
+        let groupe = document.createElement("a")
+        groupe.className = "groupe"
+        groupe.innerText = "Choisissez votre groupe"
+
+        slide.appendChild(nomCommune)
+        slide.appendChild(bouton)
+        slide.appendChild(groupe)
+
+        wrapper.appendChild(slide)
+    }
+
+    // Slider horizontal
+    var horizontalSlider = new Swiper('.horizontal-slider', {
+        loop: true,
+        nested: true,
+        navigation: {
+            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+}

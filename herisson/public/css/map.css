@@ -1,0 +1,37 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+html, body, #map {
+    height: 100%;
+    width: 100vw;
+}
+
+.info {
+    padding: 18px 24px;
+    font: 42px/48px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 45px rgba(0,0,0,0.2);
+    border-radius: 15px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+.legend {
+    line-height: 54px;
+    color: #555;
+}
+.legend i {
+    width: 54px;
+    height: 54px;
+    float: left;
+    margin-right: 24px;
+    opacity: 0.7;
+}
+
+.leaflet-control-zoom {
+    display: none;
+}
