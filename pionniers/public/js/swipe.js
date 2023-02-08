@@ -147,26 +147,6 @@ function supprimeTheme(theme) {
 }
 
 /**
- * Donne la liste des Ids des profils favoris, liste vide si pas de profils  fav
- * @returns {string[]|*[]}
- */
-function getProfilsFav() {
-    const profFav = window.localStorage.getItem("profilsFavoris");
-    if(profFav) {
-        return profFav.split(',');
-    } else {
-        return [];
-    }
-}
-
-
-function pushProfilFav(id) {
-    const profFav = getProfilsFav();
-    profFav.push(id);
-    window.localStorage.setItem("profilsFavoris", profFav.toString());
-}
-
-/**
  * Supprime tous les objets avec un attribut ayant une valeur incluse dans un array fournis
  * @param fieldName {string} nom de l'attribut/champ à traiter
  * @param objectArray {Array} array d'objet, comportant au moins un champ de nom fieldName

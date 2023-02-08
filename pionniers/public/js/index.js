@@ -24,3 +24,62 @@ function removeAllChild(node) {
 function capitalizeFirstLetter(word) {
   return word.charAt(0).toUpperCase() + word.slice(1);
 }
+
+function getFontClass(topic) {
+  switch (topic) {
+    case 'alimentation' :
+      return 'orange-font';
+    case 'economie_circulaire' :
+      return 'caca-doie-font';
+    case 'energie' :
+      return 'vert-font';
+    case 'industrie' :
+      return 'turquoise-font';
+    case 'mobilite' :
+      return 'cyan-font';
+    case 'numerique' :
+      return 'bleu-clair-font';
+  }
+}
+
+function getBackgroundClass(topic) {
+  switch (topic) {
+    case 'alimentation' :
+      return 'orange-bg';
+    case 'economie_circulaire' :
+      return 'caca-doie-bg';
+    case 'energie' :
+      return 'vert-bg';
+    case 'industrie' :
+      return 'turquoise-bg';
+    case 'mobilite' :
+      return 'cyan-bg';
+    case 'numerique' :
+      return 'bleu-clair-bg';
+  }
+}
+
+/**
+ * Donne la liste des Ids des profils favoris, liste vide si pas de profils  fav
+ * @returns {string[]|*[]}
+ */
+function getProfilsFav() {
+  const profFav = window.localStorage.getItem("profilsFavoris");
+  if(profFav) {
+    return profFav.split(',');
+  } else {
+    return [];
+  }
+}
+
+function pushProfilFav(id) {
+  const profFav = getProfilsFav();
+  profFav.push(id);
+  window.localStorage.setItem("profilsFavoris", profFav.toString());
+}
+
+function removeProfilFav(id) {
+  const profFav = getProfilsFav();
+  profFav.splice(profFav.indexOf(id), 1);
+  window.localStorage.setItem("profilsFavoris", profFav.toString());
+}
