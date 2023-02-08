@@ -7,7 +7,7 @@ const initSlide4 = async function(){
         changePente();
 
         $(".open-button").click(function(){
-            SlideTo(9)
+            swiper.slideTo(9, 0);
 
         })
 

@@ -11,6 +11,7 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/slide0.js" defer></script>
   <script src="js/slide1.js" defer></script>
   <script src="js/slide2.js" defer></script>
   <script src="js/slide3.js" defer></script>
@@ -33,6 +34,9 @@
   <div id="mySwiper" class="swiper">
     <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
     <main class = "swiper-wrapper">
+      <section id="premiere_page" onclick={swiper.slideNext()} class="swiper-slide">
+
+      </section>
 
       <!-- section d'accueil -->
       <section id="accueil" class="swiper-slide">
@@ -40,7 +44,7 @@
         </header>
         <div class="video" width="100%" margin="auto">
           
-          <video width="95%" src="animation/soli-01.mp4" autoplay muted cache="false">
+          <video width="95%" src="animation/soli-01.mp4" muted cache="false">
           </video>
             
         </div>

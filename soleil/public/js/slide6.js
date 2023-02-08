@@ -9,7 +9,10 @@ const initSlide6 = async function(){
             changeOmbre();
         })
         $("#ombre footer").click(function(){
-            swiper.slideNext();
+            if($("#ombre input[name=ombre]:checked").length ==1) {
+                swiper.slideNext();
+                quiz["ombre"] = $("#ombre input[name=ombre]:checked").val();
+            }
         })
     }
 }

@@ -12,33 +12,36 @@ swiper.on("slideChange", function () {
   console.log(swiper.activeIndex);
   switch( swiper.activeIndex ) {
     case 0:
-      initSlide1();
+      initSlide0();
       break;
     case 1:
-      initSlide2();
+      initSlide1();
       break;
     case 2:
-      initSlide3();
+      initSlide2();
       break;
     case 3:
-      initSlide4();
+      initSlide3();
       break;
     case 4:
-      initSlide5();
+      initSlide4();
       break;
     case 5:
-      initSlide6();
+      initSlide5();
       break;
     case 6:
-      initSlide7();
+      initSlide6();
       break;
     case 7:
-      initSlide8();
+      initSlide7();
       break;
     case 8:
-      initSlide9();
+      initSlide8();
       break;
     case 9:
+      initSlide9();
+      break;
+    case 10:
       initSlideInfo1();
       break;
   }
@@ -57,7 +60,7 @@ setTimeout(() => {
     easing: 'easeOutQuad',
   });
   // Init first slide
-  initSlide1();
+  initSlide0();
 }, 1000);
 
 $(".retour").click(function(){
