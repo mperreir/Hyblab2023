@@ -140,7 +140,7 @@ $("#button-evenement").click(() => {
 
 $("#choice-1").click(() => {
     selectExplication(nbquestion, 0);
-    setPage("#page-score");
+    setPage("#page-score", "fade");
     setTimeout(() => {
         (changementVin(nbquestion, 0));
     }, 2000)
@@ -176,6 +176,10 @@ $("#button-score").click(() => {
 });
 
 $("#button-resume").click(() => {
+    $(".header, #home-button").hide();
+    $(".header").attr("src", `img/progressbar/checkpoint-0.png`);
+    nbquestion = 0;
+    wineQuantity = 90;
     setPage("#page-sources", "fade");
 });
 

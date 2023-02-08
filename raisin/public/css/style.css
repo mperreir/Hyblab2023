@@ -321,16 +321,14 @@ body {
 
 /* Page crédits */
 
-#page-credits h3,
-dl {
+#page-credits h3, dl {
     font-size: 28%;
     color: black;
-    font-family: 'Itim';
 }
 
 #page-credits h3 {
     text-align: center;
-    margin-top: 5%;
+    margin-top: 12%;
 }
 
 #page-credits dd {
@@ -465,7 +463,7 @@ img.button-next {
     padding-left: 0;
     padding-right: 0;
     text-align: center;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 #vigne-container {
@@ -723,8 +721,7 @@ img.button-next {
 
 #button-resume {
     position:absolute;
-    margin-left: auto;
-    margin-right: auto;
+    left : 50%;
     bottom: 10%;
     cursor : pointer;
 }
@@ -798,4 +795,12 @@ img.button-next {
 
 #liens {
     margin-left: 10%;
+}
+
+#f3_icon {
+    position:absolute;
+    top:10%;
+    right:5%;
+    width:10%;
+    height:auto;
 }
