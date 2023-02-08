@@ -178,7 +178,9 @@ async function getMiniature(Id) {
 
 function displayMiniature(Id){
     getMiniature(Id).then(p => {
-        console.log(p);
+        // Display the overlay
+        const overlay = document.querySelector("main div#overlay");
+        overlay.classList.remove("display-none");
         // Display the miniature related part
         const miniature_related = document.querySelector("main div#miniature-related");
         miniature_related.classList.remove("display-none");
@@ -227,6 +229,13 @@ function displayMiniature(Id){
                 return;
             }
             keywordSection.append(createKeywordItem(k));
+        });
+        // Retrieve the close button
+        const closeButton = document.querySelector("main div#miniature-related img#fermeture-miniature");
+        // Add the event listener to close the miniature and undisplay the miniature related part and the overlay
+        closeButton.addEventListener('click', () => {
+            miniature_related.classList.add("display-none");
+            overlay.classList.add("display-none");
         });
     });
 }

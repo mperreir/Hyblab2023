@@ -51,7 +51,7 @@ main div#map .leaflet-map-pane .leaflet-tile-pane {
 
 main div#miniature-related {
     position: absolute;
-    z-index: 3;
+    z-index: 4;
     top: 20%;
     left: 15%;
     width: 70%;
@@ -60,7 +60,7 @@ main div#miniature-related {
 
 main div#miniature-related img#fermeture-miniature {
     position: absolute;
-    z-index: 3;
+    z-index: 4;
     top: 0;
     right: 15%;
     width: 10%;
@@ -119,13 +119,24 @@ main div#miniature-related div#miniature-content section.topic p {
 
 main div#miniature-related button.bouton-rond {
     position: absolute;
-    z-index: 3;
+    z-index: 4;
     bottom: 0;
     right: 15%;
 }
 
+main div#overlay {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gris-moyen);
+    opacity: 0.75;
+}
+
 footer#folder {
-    z-index: 1;
+    z-index: 3;
     bottom: 0;
     width: 75%;
 }
