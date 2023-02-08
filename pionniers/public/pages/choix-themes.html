@@ -22,6 +22,7 @@
     <link rel="icon" type="image/png" href="../img/icon.png"/>
 </head>
 <body>
+
 <div id="container" class="flex-column align-items-center justify-content-space-between rainbow-background rbg-bottom">
     <header class="flex-column align-items-center justify-content-center" id="logo-appli">
         <a href="choix-themes.html">
@@ -30,8 +31,14 @@
             </div>
         </a>
     </header>
-
-
+    <div class="modal" id="modal">
+        <div class="modal-back">
+        <div class="modal-container">
+             <img id="modal-close"   id="fermeture-miniature" src="../img/croix.svg" alt="fermeture">
+            <p> vous devez sélectionner &nbsp  <b> au moins </b> &nbsp  1 domaine </p> <br/>
+        </div>
+        </div>
+    </div>
     <section id="theme-selector-long" class="flex-column justify-content-space-between align-items-center">
         <div id="label-selector" class="flex-row justify-content-center align-items-center">
             <p class="gras">Je recherche un <img src="../img/pro-logo.svg" alt="PRO"> :</p>
