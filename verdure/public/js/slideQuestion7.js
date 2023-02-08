@@ -9,15 +9,6 @@ const initSlideQuestion7 = async function(currentQuestion){
   let question = document.querySelector('.question-footer'+currentQuestion)
   let city = document.querySelector('#city'+currentQuestion)
 
-  var logo2 = document.querySelector('#logoQ7');
-  /*******
-     * GREEN Ta place
-     */
-  
-    // (Re)set initial scale of logo
-    logo2.setAttribute('style', 'transform : translateY(-50vh);');
-    logo2.setAttribute('style', 'transform : scale(1);');
-    
   setTimeout(()=> {
    question.style.opacity = 100;
    city.style.top = "23%";
