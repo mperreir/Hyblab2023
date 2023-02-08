@@ -299,14 +299,14 @@ SLIDE ANIMATION SORTIE+ZOOM
 
 .img_haut {
     position: absolute;
-    top: 33%;
+    top: 32.9%;
     text-align: center;
     left: 32%;
 }
 
 .img_gauche {
     position: absolute;
-    top: 41.5%;
+    top: 41.65%;
     text-align: center;
     left: 7.5%;
 }
@@ -763,7 +763,15 @@ Derniere slide
 /**************************
 slide entree texte
 **************************/
+.recap{
+    font-size: 30%;
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+    
 
+}
 
 #presentation1 {
     width: 75%;
