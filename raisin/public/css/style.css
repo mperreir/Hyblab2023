@@ -601,9 +601,9 @@ img.button-next {
 
 .container-vin-score{
     position:absolute;  
-    width: 16%;
-    height: 38%;
-    left: 42%;
+    width: 22%;
+    height: 36%;
+    left: 39%;
     top: 12%;
     background-color:#FBF6C3;
     margin: 0px;
@@ -688,6 +688,18 @@ img.button-next {
 
 #txt-evenement>p{
     margin:5%;
+}
+
+#bulle-event{
+    position: relative;
+    width: 60px;
+    left: 10%;
+    top: -10%;
+}
+
+#img-bulle-event{
+    position: relative;
+    width: 100%;
 }
 
 #txt-score>p{

@@ -47,7 +47,7 @@
                 ]
             },
             {
-                "contexte": "Bonsoir,<br><br>L’élément-clef ce JT, ce soir, sera le début de l’été<br>avec de nombreux épisodes caniculaires prévus.<br><br>Ce qui sera un problème pour le monde de l’agriculture...",
+                "contexte": "Bonsoir,<br><br>L’élément-clef ce JT, ce soir, sera le début de l’été avec de nombreux épisodes caniculaires prévus.<br><br>Ce qui sera un problème pour le monde de l’agriculture...",
                 "enonce": "L’été arrive ! La température risque d’augmenter drastiquement. <br>On parle même d’épisodes caniculaires… <br>Que vais-je faire le moment venu ?",
                 "img": "img/characters/jt.png",
                 "imgBulle": "img/characters/bulle-presenter.png",
@@ -59,7 +59,7 @@
                 "explication": [
                     "<b>Bon réflexe</b> ! Il est recommandé de <b>stopper<br>les traitements</b> qui utilisent <b>des produits phytosanitaires</b> lors des périodes de <b>forte chaleur</b>. En continuant, le feuillage traité <b>risque en effet de brûler</b> sous l’effet de la température. Maintenant, Il faut espérer que <b>les vignes tiennent</b> le coup durant des journées où <b>la chaleur dépassera les 35°C</b>…",
                     "<b>Attention</b> ! Écimer (soit couper les feuilles situées à l'extrémité supérieure de la plante) revient à <b>supprimer une barrière</b> de protection naturelle entre les rayons du soleil et les grappes.<br>Cela représente <b>un choix hautement risqué</b> !",
-                    "<b>Un choix judicieux ! Pour le moment…</b> Si arroser quotidiennement <b>les plantes</b> est <b>vivement recommandé</b>, les stocks d’eau disponible <b>risquent d’être au centre des convoitises</b>, tant pour d’autres secteurs agricoles que pour <b>les particuliers</b><br>ou <b>les municipalités…</b>"
+                    "<b>Un choix judicieux ! Pour le moment…</b> Si arroser quotidiennement <b>les plantes</b> est <b>vivement recommandé</b>, les stocks d’eau disponible <b>risquent d’être au centre des convoitises</b>, tant pour d’autres secteurs agricoles que pour <b>les particuliers</b> ou <b>les municipalités…</b>"
                 ],
                 "consequence": [
                     0.05,
@@ -71,7 +71,7 @@
                 "contexte": "Bonjour,<br><br>Je suis la représentante d’un bureau d’étude, et suite à différents relevés nous avons remarqué qu’il pourrait il y avoir des périodes de grêle.",
                 "enonce": "Selon les estimations, les conditions météorologiques des prochaines semaines seront favorables à l’apparition d’épisodes de grêle… <br><br>Il faut absolument que tu t’y prépares, sinon les conséquences seront catastrophiques ! Que choisis-tu ?",
                 "img": "img/characters/etude.png",
-                "imgBulle" : "bulle-scientific.png",
+                "imgBulle" : "img/characters/bulle-scientific.png",
                 "reponse": [
                     "Installer des filets paragrêle.",
                     "Utiliser des fusées ou canons anti-grêles.",
@@ -80,7 +80,7 @@
                 "explication": [
                     "<b>Allez</b> ! L’utilisation <b>d’un filet paragrêle</b> est encore aujourd’hui <b>une méthode hautement efficace</b> pour protéger sa récolte lors d’un épisode de grêle.<br><br> Par contre, cet équipement <b>reste extrêmement cher à l’achat.</b>",
                     "<b>Tu es sûr ?</b> Si ces deux dispositifs ont longtemps été utilisés, <b>leur efficacité a été remise en cause</b>.<br>La législation dédiée aux explosifs - qui a évoluée suite aux attentats de Paris en 2015 - <b>complique l’utilisation de fusées</b>, tandis que les météorologues <b>doutent de la réelle efficacité des canons à grêle</b> (qui pour rappel trouent les nuages et transforment la grêle en eau).",
-                    "<b>Testons !</b> Déjà utilisés dans plusieurs vignobles français, comme dans la région Auvergne-Rhônes-Alpes, <b>les ballons chargés de sels</b> (et gonflés à l’hélium) sont tirés <b>au cœur de la cellule orageuse</b>. Ainsi le contenant pousse le nuage<br>à précipiter la pluie avant que <b>l’eau ne se solidifie</b>. Pour plus de précision, ils sont généralement utilisés avec <b>un radar qui trace les nuages</b> en direct."
+                    "<b>Testons !</b> Déjà utilisés dans plusieurs vignobles français, comme dans la région Auvergne-Rhônes-Alpes, <b>les ballons chargés de sels</b> (et gonflés à l’hélium) sont tirés <b>au cœur de la cellule orageuse</b>. <br><br>Ainsi le contenant pousse le nuage à précipiter la pluie avant que <b>l’eau ne se solidifie</b>. Pour plus de précision, ils sont généralement utilisés avec <b>un radar qui trace les nuages</b> en direct."
                 ],
                 "consequence": [
                     0.2,
@@ -90,7 +90,7 @@
             },
             {
                 "contexte": "Les raisins semblent mûrs, il va falloir commencer à penser aux vendeanges...",
-                "enonce": "Nous approchons de la mi-août. C’est déjà le moment de préparer la période des vendanges ! Dire qu’il y a encore quelques années, elles avaient lieu fin septembre… Enfin bref… Il ne faut surtout pas négliger les épisodes de fortes chaleurs qui peuvent encore arriver. Comment veux-tu t’organiser ?",
+                "enonce": "Nous approchons de la mi-août. C’est déjà le moment de préparer la période des vendanges ! Dire qu’il y a encore quelques années, elles avaient lieu fin septembre… Enfin bref… Il ne faut surtout pas négliger les épisodes de fortes chaleurs qui peuvent encore arriver. <br><br>Comment veux-tu t’organiser ?",
                 "img": "img/characters/vigne.png",
                 "imgBulle" : "img/characters/bulle-dominique.png",
                 "reponse": [
@@ -100,8 +100,8 @@
                 ],
                 "explication": [
                     "<b>Bonne résolution</b> ! Lorsque les températures sont <b>toujours estivales</b>, la vinification du raisin peut se compliquer. Vendanger <b>la nuit</b> permet donc <b>d’éviter les trop fortes chaleurs</b>.",
-                    "<b>Aïe</b> ! Irriguer les vignes est <b>interdit</b> entre <b>le 15 août</b> et la récolte comme le stipule le Décret n° 2017-1327 (8 septembre 2017), sauf cas grave de stress hydrique pour la récolte. De plus, à l’instar de pour la lutte contre le gel, les stocks disponibles d’eau - <b>qui s’amoindrissent à cause du réchauffement climatique</b> - seront <b>alloués</b> à des <b>secteurs plus vitaux</b>.",
-                    "<b>Bonne chance</b> ! Avec les périodes de vendanges qui arrivent <b>de plus en plus tôt</b> à cause du réchauffement climatique, ne pas évoluer est <b>un choix très dangereux</b>… Entre les fortes chaleurs et la possible <b>indisponibilité</b> de la main-d’œuvre habituelle - notamment les étudiants -, il est indispensable de réfléchir à une <b>nouvelle manière de fonctionner</b>."
+                    "<b>Aïe</b> ! Irriguer les vignes est <b>interdit</b> entre <b>le 15 août</b> et la récolte comme le stipule le Décret n° 2017-1327 (8 septembre 2017), sauf cas grave de stress hydrique pour la récolte. De plus, à l’instar que pour la lutte contre le gel les stocks disponibles d’eau <b>qui s’amoindrissent à cause du réchauffement climatique</b> seront <b>alloués</b> à des <b>secteurs plus vitaux</b>.",
+                    "<b>Bonne chance</b> ! Avec les périodes de vendanges qui arrivent <b>de plus en plus tôt</b> à cause du réchauffement climatique, ne pas évoluer est <b>un choix très dangereux</b>… <br><br>Entre les fortes chaleurs et la possible <b>indisponibilité</b> de la main-d’œuvre habituelle, notamment les étudiants, il est indispensable de réfléchir à une <b>nouvelle manière de fonctionner</b>."
                 ],
                 "consequence": [
                     0.2,
@@ -132,8 +132,8 @@
             }
         ],
         "cepage": [{
-                "contexte": "Oh non ! Des tâches blanchâtres sont apparues sur les feuilles ! <br>Les vignes sont sûrement infectées par le mildiou… La plantation risque de nécroser, les feuilles de se dessécher, puis les fruits<br>vont pourrir !<br><br>Que comptes-tu faire ?",
-                "enonce": "Des tâches blanchâtres sont apparues <br>sur les feuilles ! Les vignes sont sûrement infectées par le mildiou… La plantation risque de nécroser,<br>les feuilles de se dessécher, puis les fruits<br>vont pourrir ! Que comptes-tu faire ?",
+                "contexte": "Oh non ! Des tâches blanchâtres sont apparues sur les feuilles ! <br>Les vignes sont sûrement infectées par le mildiou…<br><br> La plantation risque de nécroser, les feuilles de se dessécher, puis les fruits vont pourrir !<br><br>Que comptes-tu faire ?",
+                "enonce": "Des tâches blanchâtres sont apparues  sur les feuilles ! Les vignes sont sûrement infectées par le mildiou…<br><br> La plantation risque de nécroser, les feuilles de se dessécher, puis les fruits vont pourrir !<br><br> Que comptes-tu faire ?",
                 "img": "img/characters/vigne-mildiou.png",
                 "imgBulle" : "img/characters/bulle-dominique.png",
                 "reponse": [
@@ -144,7 +144,7 @@
                 "explication": [
                     "<b>Excellent choix</b> ! Dès que les premiers <b>signes<br>sont visibles</b>, il est conseillé de <b>couper les parties infectées</b>. Cela stoppera la propagation du champignon et <b>protégera le reste des vignes</b>. En plus, le surplus peut être <b>utilisé comme compost</b> (à condition que celui-ci <b>atteigne<br>les 60-70°C</b> afin de détruire les spores) !",
                     "Attention ! Si la bouillie bordelaise est efficace<br>pour éliminer le mildiou, elle peut être <b>hautement toxique</b> pour la faune… Le cuivre contenu dans le produit <b>pollue</b> les sols et <b>empoisonne</b> les espèces environnantes !",
-                    "Aïe ! Ne rien faire revient à <b>sacrifier</b> une partie<br>de ces vignes… Il faut espérer que les <b>dégâts</b> ne soient <b>pas trop importants</b>. Point positif : ne pas utiliser de produits permet de garder une certification bio !"
+                    "Aïe ! Ne rien faire revient à <b>sacrifier</b> une partie de ces vignes…<br> Il faut espérer que les <b>dégâts</b> ne soient <b>pas trop importants</b>. Point positif : ne pas utiliser de produits permet de garder une certification bio !"
                 ],
                 "consequence": [
                     0.1,
@@ -174,8 +174,8 @@
                 ]
             },
             {
-                "contexte": "Oh non ! Des tâches blanchâtres sont apparues sur les feuilles ! <br>Les vignes sont sûrement infectées par l’eutypiose… La plantation risque de nécroser, les feuilles de se dessécher, puis les fruits vont pourrir !<br><br>Que comptes-tu faire ?",
-                "enonce": "Mince ! Des nécroses sont apparues sur les vignes et les grappes commencent à être milerandées (un défaut de maturation)… Les symptômes ressemblent à ceux de l’eutypiose, un champignon très nocif pour le cabernet-sauvignon ! Son apparition a été favorisée par le printemps orageux et pluvieux que l'on a subit… Comment veux-tu y remédier ?",
+                "contexte": "Oh non ! Des tâches blanchâtres sont apparues sur les feuilles ! <br>Les vignes sont sûrement infectées par l’eutypiose… <br><br>La plantation risque de nécroser, les feuilles de se dessécher, puis les fruits vont pourrir !<br><br>Que comptes-tu faire ?",
+                "enonce": "Mince ! Des nécroses sont apparues sur les vignes et les grappes commencent à être milerandées (un défaut de maturation)… Les symptômes ressemblent à ceux de l’eutypiose, un champignon très nocif pour le cabernet-sauvignon ! Son apparition a été favorisée par le printemps orageux et pluvieux que l'on a subit… <br><br>Comment veux-tu y remédier ?",
                 "img": "img/characters/vigne-2.png",
                 "imgBulle" : "img/characters/bulle-dominique.png",
                 "reponse": [

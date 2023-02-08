@@ -49,7 +49,8 @@ function removeChoices() {
 
 function afficheEvenement(numQuestion) {
     $("#txt-evenement>p").html(data.questions.general[numQuestion].contexte);
-    $("#img-evenement").attr("src", data.questions.general[numQuestion].img)
+    $("#img-evenement").attr("src", data.questions.general[numQuestion].img);
+    $("#img-bulle-event").attr("src", data.questions.general[numQuestion].imgBulle);
 }
 
 function afficheQuestion(numQuestion) {
@@ -234,7 +235,8 @@ $("#button-score").click(() => {
     else if (nbquestion == 3){
         $(".header").attr("src", `img/progressbar/checkpoint-`+(nbquestion+1)+`.png`);
         $("#txt-evenement>p").html(data.questions.cepage[cepage].contexte);
-        $("#img-evenement").attr("src", data.questions.cepage[cepage].img);
+        $("#img-evenement").attr("src", data.questions.cepage[cepage].img)
+        $("#img-bulle-event").attr("src", data.questions.cepage[cepage].imgBulle)
         setPage("#page-evenement", "fade");
     }
     else if (nbquestion > 3){
@@ -258,7 +260,6 @@ $("#button-resume").click(() => {
 });
 
 $("#button-restart").click(() => {
-    $(".header, #home-button").hide();
     $(".header").attr("src", `img/progressbar/checkpoint-0.png`);
     nbquestion = 0;
     wineQuantity = 90;
