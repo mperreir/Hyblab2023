@@ -16,11 +16,11 @@ dict_achiev.set("_16", []);
 
 regions.forEach(element => {
     element.addEventListener('click', () => {
-        dict_achiev.get(element.id).forEach(e => {
-            window.localStorage.setItem('achievement'.concat(e), "true");
-        });
         compt = window.localStorage.getItem("compt");
-        if (element.id != "_16" || compt.length > 7) {
+        if ((element.id != "_16" || compt.length > 7) && window.localStorage.getItem("popup") == "false") {
+            dict_achiev.get(element.id).forEach(e => {
+                window.localStorage.setItem('achievement'.concat(e), "true");
+            });
             if (window.localStorage.getItem(element.id) == "false") {
                 window.localStorage.setItem('compt', compt + 1);
                 time = " ".concat(heures[compt.length + 1], " ");
@@ -50,6 +50,21 @@ function load() {
     window.localStorage.setItem('started', 1);
     document.getElementById("heure").value = window.localStorage.getItem('heure');
     document.getElementById("steps").value = " " + window.localStorage.getItem('steps') + "/8 ";
+    if (window.localStorage.getItem('pipi') == "true" && window.localStorage.getItem('manger') == "true") {
+        window.localStorage.setItem("popup", "false");
+    }else{
+        if (window.localStorage.getItem('pipi') == "true") {
+            let bouton = document.getElementById("pipi");
+            bouton.setAttribute("class","bouton-repas-disabled");
+            bouton.disabled = true;
+
+        }
+        if (window.localStorage.getItem('manger') == "true") {
+            let bouton = document.getElementById("manger");
+            bouton.setAttribute("class","bouton-repas-disabled");
+            bouton.disabled = true;
+        } 
+    }
     if (window.localStorage.getItem("popup") == "true") {
         document.getElementById("popup").style.visibility = "visible";
     }
@@ -92,8 +107,13 @@ function manger() {
     compt = window.localStorage.getItem("compt");
     window.localStorage.setItem('compt', compt + 1);
     window.localStorage.setItem('heure', " 14:00 ");
-    window.localStorage.setItem("popup", "false");
-window.location = "./dialogue.html?id=15";
+    window.localStorage.setItem('manger', "true");
+    window.location = "./dialogue.html?id=15";
+}
+
+function toilette() {
+    window.localStorage.setItem('pipi', "true");
+    window.location = "./dialogue.html?id=16";
 }
 
 load();

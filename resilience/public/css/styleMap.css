@@ -342,15 +342,9 @@ body{
     z-index:1;
     position: absolute !important;
     background-size: 80%, 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: white;
-    top: 40%;
-    bottom: 40%;
-    left: 5%;
-    right: 5%;
-    border-radius: 40px;
+    margin: 75% 10% 0 10%;
+    border-radius: 3vh;
     border-color: black;
     border-width: thick;
     cursor: pointer;
@@ -358,10 +352,42 @@ body{
 }
 
 .popup .popuptext {
-    font-size: 5vw;
-    color: black;
+    font-size: 2vh;
+    font-weight: bold;
+    color: #79B77B;
     font-family: 'Montserrat';
     text-align: center;
-    padding-left: 30px;
-    padding-right: 30px
+}
+
+.popup-bouton {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 2.5% 0 2.5%
+}
+
+.text {
+    margin: 10% 5% 5% 5%;
+}
+
+.bouton-repas {
+    width: 40%;
+    border: solid;
+    border-width: 1.5px;
+    border-color: black;
+    background-color: white;
+    border-radius: 40px;
+    margin: 0 2.5% 10% 2.5%;
+}
+
+.bouton-repas-disabled {
+    width: 40%;
+    background-color: #79B77B;
+    border-radius: 40px;
+    margin: 0 2.5% 10% 2.5%;
+}
+
+.text-bouton {
+    margin: 5% 5% 5% 5%;
+    font-size: 2vh;
 }
