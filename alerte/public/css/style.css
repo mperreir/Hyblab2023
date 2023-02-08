@@ -1,46 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
 /* ------- Important ! Please at least keep the last part of this CSS ----------- */
 /* ------- that adapts content width and height so that aspect ratio  ----------- */
 /* ------- is kept between 9/16 a,d 3/4 (portait orientation)         ----------- */
 
 /* Normalize margin and padding to ease elements positioning */
-*{
-    padding:0;
-    margin:0;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background-color: black;
+body {
+    background-color: #121212;
     color: white;
-    overflow: hidden;   /* to avoid slider bugs on some browsers */
+    overflow: hidden;
+    /* to avoid slider bugs on some browsers */
     font-family: sans-serif;
 }
 
 /* -------------- Loader --------------*/
-#loader{
+#loader {
     z-index: 2;
-    position:absolute;
-}
-
-#loader-img{
-    top:40%;
-    left:40%;
     position: absolute;
 }
 
-#loader-text{
+#loader-img {
+    top: 40%;
+    left: 40%;
+    position: absolute;
+}
+
+#loader-text {
     text-align: center;
     font-size: 25%;
     position: absolute;
-    top:60%;
+    top: 60%;
     width: 100%
 }
+
 /* -------------- End of Loader --------------*/
 
-/* Swiper slider. Need to fill the container */
-#mySwiper{
+/* */
+
+
+main section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8%;
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    text-align: justify;
+    font-family: arial, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.little-bubble-text {
+    padding-top: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 15%;
+
+}
+
+footer {
     width: 100%;
-    height:100%;
+}
+
+
+#s0 {
+    padding: 50px;
+}
+
+header img,
+#content_main {
+    width: 100%;
+    height: 100%;
+}
+
+#next0 {
+    background-image: url('../img/utils/btn/btn-main.svg');
+}
+
+#next1 {
+    background-image: url('../img/utils/btn/btn-start.svg');
+    margin-top: 25px;
+}
+
+#next4_1, #next6, #next9_1, #next11_1, #next13_1 {
+    background-image: url('../img/utils/btn/btn-next.svg');
+}
+
+#next4_2, #next9_2, #next11_2, #next13_2 {
+    background-image: url('../img/utils/btn/btn-next-inv.svg');
+}
+
+#next7, #next10, #next14 {
+    background-image: url('../img/utils/btn/btn-next.svg');
+    margin-top: 25px;
+}
+
+#next15_1 {
+    background-image: url('../img/utils/btn/btn-results.svg');
+}
+
+#next15_2 {
+    background-image: url('../img/utils/btn/btn-results-inv.svg');
+}
+
+.next-btn {
+    background-position: center center;
+    background-size: cover;
+    height: 50px;
+    width: 100%;
+    border-radius: 25px;
+}
+
+.answer-btn {
+    min-width: 50px;
+    min-height: 50px;
+    margin: 2%;
+    font-size: 0.2em;
+    justify-content: center;
+}
+
+.answer-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.answer {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+}
+
+
+#networks {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#twitter {
+    margin-left: 12px;
+    margin-right: 10px;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
     position: absolute;
+}
+
+/* the slides and the loader should fill the whole 9:16 zone */
+.acceuil section,
+#loader {
+    background-color: #121212;
+    width: 100%;
+    height: 100%;
+}
+
+/* Most of the elements in this demo are absolute positionned with percentages */
+.acceuil section header {
+    width: 100%;
+    font-size: 30%;
+    z-index: 2;
+}
+
+/*
+#logo-hyblab {
+    text-align: center;
+    width: 50%;
+    left: 50%;
+    top: 50%;
+    margin-left: -25%;
+    margin-top: calc(-7.5% * 9 / 16);
+    // margins are relative to the element width... :-( 
+    position: absolute;
+    font-size: 50%;
+    z-index: 2;
+    cursor: pointer;
+}
+*/
+
+.little-logo-meuh {
+    position: fixed;
+    left: 0;
+    top: 20px;
+    height: 30px;
+}
+
+#petit_logo {
+    width: 20%;
+    position: relative;
+    left: 20%;
+}
+
+#side-by-side {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Last slide image is centered */
+#img-fini {
+    width: 70%;
+    left: 50%;
+    top: 40%;
+    position: absolute;
+    margin-left: -35%;
+    margin-top: calc(-25% * 9 / 16);
+    /* margins are relative to the element width... :-( */
+}
+
+main>section {
+    background-color: #121212;
+    background-size: 100% 100%;
+}
+
+.slidesWhite {
+    background-color: aliceblue;
+}
+
+/* Footer of last slide is at the bottom and content is centered */
+.acceuil section footer {
+    box-sizing: border-box;
+    /* So that padding is not added to width (and width: 100% works) */
+    width: 100%;
+    /* could also use  width: calc(100% - 2em) if not using box-sizing */
+    font-size: 20%;
+    text-align: center;
+}
+
+#myProgress {
+    width: 100%;
+    background-color: transparent;
+    margin-top: 0%;
+}
+
+#myBar {
+    height: 15px;
+    background-color: red;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.bubble {
+    position: relative;
+    text-align: justify;
+    color: white;
+    font-size: 0.18em;
+    font-family: "Inter";
+    height: 100%
+}
+
+.content_intro {
+    height: 100%;
+}
+
+.little-bubble {
+    position: relative;
+    text-align: justify;
+    color: white;
+    font-size: 0.16em;
+    font-family: "Inter";
+    height: 100%
+}
+
+.bubble img {
+    height: 100%;
+    max-width: 100%;
+}
+
+.bubbleWhite {
+    color: black;
+    border-color: aliceblue;
+}
+
+#labelDep {
+    color: gray;
+    font-size: small;
+}
+
+#btnquizz {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 150%;
+    grid-gap: 25px;
+    align-items: center;
+    justify-items: center;
+}
+
+#btnquizz button {
+    line-height: 50px;
+    border-radius: 15px;
+}
+
+.btn3 {
+    width: 100%;
+}
+
+.btn8 {
+    background-color: aliceblue;
+    width: 100%;
+    color: black;
+    border-radius: 15px;
+}
+
+.btn8 img {
+    width: 100%;
+}
+
+.btn8 p {
+    text-align: center;
+    font-size: 0.2em;
+}
+
+.btn12 {
+    width: 100%;
+}
+
+#dep {
+    color: aliceblue;
+    text-align: center;
+    width: 50px;
+    line-height: 50px;
+    background-color: black;
+    border: solid 3px aliceblue;
+    border-radius: 15px;
 }
 
 /* white navigation bullets */
@@ -48,62 +369,204 @@ body{
     background-color: white !important;
 }
 
-/* the slides and the loader should fill the whole 9:16 zone */
-.swiper-wrapper section, #loader{
-    background-color: dodgerblue;
-    width: 100%;
-    height: 100%;
+.swiper-pagination-bullet {
+    background: rgb(255, 255, 255) !important;
 }
 
-/* Most of the elements in this demo are absolute positionned with percentages */
-#first-slide header, #second-slide header{
-    text-align: center;
-    width: 100%;
-    top: 10%;
+.swiper-container {
+    overflow: hidden;
+}
+
+.swiper-slide {
+    overflow: hidden;
+}
+
+.swiper-slide {
+    padding: 20px;
+}
+
+.swiper-container,
+.content {
     position: absolute;
-    font-size: 30%;
-    z-index: 2;
-}
-
-#logo-hyblab{
-    text-align: center;
-    width: 50%;
+    top: 52%;
     left: 50%;
-    top: 50%;
-    margin-left:-25%;
-    margin-top:calc(-7.5% * 9 / 16 ); /* margins are relative to the element width... :-( */
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    width: 100%;
+    height: 90%;
+    overflow-y: scroll;
+}
+
+.scroll-little-bubble {
+    /* peut-être changer pour swiper */
     position: absolute;
-    font-size: 50%;
-    z-index: 2;
+    top: 13%;
+    left: 11%;
+    display: block;
+    width: 85%;
+    height: 56%;
+    overflow-y: scroll;
+}
+
+.content2 {
+    position: absolute;
+    top: 55%;
+    left: 64%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    width: 65%;
+    height: 90%;
+    text-align: justify;
+    font-family: arial, sans-serif;
+}
+
+.content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.draw {
+    border: solid 1px #fff;
+    border-radius: 20%;
+}
+
+.cow-head-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#canvas {
+    border: solid white 2px;
+    border-radius: 27px;
+    min-width: 275px;
+    min-height: 237px;
+}
+
+
+.slidecontainer {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#slider-val {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 80vw;
+    justify-content: space-between;
+}
+
+.slider {
+    width: 80vw;
+}
+
+input[type=range] {
+    height: 24px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+    background-color: #121212;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 1px 1px 1px #C2C2C2;
+    background: #FFFFFF;
+    border-radius: 16px;
+    border: 1px solid #FFFFFF;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #171717;
+    border: 0px solid #000000;
+    height: 17px;
+    width: 17px;
+    border-radius: 50px;
+    background: #FFFFFF;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -4px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #FFFFFF;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 1px 1px 1px #C2C2C2;
+    background: #FFFFFF;
+    border-radius: 16px;
+    border: 1px solid #FFFFFF;
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #171717;
+    border: 0px solid #000000;
+    height: 17px;
+    width: 17px;
+    border-radius: 50px;
+    background: #FFFFFF;
     cursor: pointer;
 }
 
-/* Last slide image is centered */
-#img-fini{
-    width: 70%;
-    left: 50%;
-    top: 40%;
-    position: absolute;
-    margin-left:-35%;
-    margin-top:calc(-25% * 9 / 16 ); /* margins are relative to the element width... :-( */
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
 }
 
-main > section{
-    background-image: url('../img/background.svg');
-    background-size: 100% 100%;
+input[type=range]::-ms-fill-lower {
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 32px;
+    box-shadow: 1px 1px 1px #C2C2C2;
 }
 
-/* Footer of last slide is at the bottom and content is centered */
-#first-slide footer{
-    bottom: 5%;
-    position: absolute;
-    box-sizing: border-box; /* So that padding is not added to width (and width: 100% works) */
-    width: 100%; /* could also use  width: calc(100% - 2em) if not using box-sizing */
-    font-size: 20%;
-    text-align: center;
-    padding: 1em;
-    background-color: rgba(0, 0, 0, 0.5);
+input[type=range]::-ms-fill-upper {
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 32px;
+    box-shadow: 1px 1px 1px #C2C2C2;
 }
+
+input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 1px 1px 1px #171717;
+    border: 0px solid #000000;
+    height: 17px;
+    width: 17px;
+    border-radius: 50px;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #FFFFFF;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: #FFFFFF;
+}
+
 
 
 /* ---------- Positionning of logos on the last slide -------------------- */
@@ -112,96 +575,106 @@ main > section{
 /* slide because of body's font size rule at the end of this CSS           */
 #bandeau {
     padding-top: 3%;
-    width:100%;
+    width: 100%;
     position: absolute;
     bottom: 0;
     background-color: white;
     font-size: 20%;
-  }
+}
 
-  #bandeau li{
+#bandeau li {
     list-style-type: none;
     display: inline-block;
     vertical-align: middle;
     margin: 0 0.5em;
-  }
+}
 
-  #bandeau img{
+#bandeau img {
     height: 2.5em;
-  }
+}
 
-  #bandeau #hyblab{
+#bandeau #hyblab {
     margin: 1em auto;
     height: 3em;
     display: block;
-  }
+}
 
-  #bandeau #cc, #bandeau #opensource
-  {
+#bandeau #cc,
+#bandeau #opensource {
     height: 1em;
-  }
+}
 
-  #bandeau .stacked{
-    display:block;
-  }
+#bandeau .stacked {
+    display: block;
+}
 
-  #bandeau ul{
+#bandeau ul {
     text-align: center;
     padding: 0 0;
     margin-bottom: 0.5em;
-  }
+}
 
-  #bandeau .institutionnel
-  {
+#bandeau .institutionnel {
     height: 2em;
-  }
+}
 
 /* ---------- Important media queries for easy responsive content :-) ----------------- */
 /* Whatever the devie used, the content will be displayed full width and height if      */
 /* the aspect ratio is between 3/4 and 9/16. If not it is locked to either 3/4 or 3/16  */
 
 /* When the aspect ratio is smaller that 3/4, display a 3/4 content */
-#container{
-    position: fixed; /* To set the size of the container to 100% of the visible viewport height AND for absolute positionning of child elements*/ 
-    height: 100%;   /* even on mobile devices with url or navigation bars */
-    margin-left: calc((100vw - 100 * 3vh / 4) / 2); /* Add black bands on left and right */
-    width: calc(100 * 3vh / 4); /* Force 3/4 aspect ratio */
+
+#container {
+    position: fixed;
+    /* To set the size of the container to 100% of the visible viewport height AND for absolute positionning of child elements*/
+    height: 100%;
+    /* even on mobile devices with url or navigation bars */
+    margin-left: calc((100vw - 100 * 3vh / 4) / 2);
+    /* Add black bands on left and right */
+    width: calc(100 * 3vh / 4);
+    /* Force 3/4 aspect ratio */
 }
 
 /* We set a default font size here. It will be the base for all other font sizes */
 /* Here the font size is proportional to content width */
-body{
+body {
     font-size: calc(15vh * 3 / 4);
 }
 
 /* Fill the whole viewport when its aspect ratio is between 9/16 and 3/4 */
 @media screen and (max-aspect-ratio: 3/4) {
-    #container{
-        margin-left: 0; /* reset margin-left */
-        width: 100vw; /* content is full width (and full height because of the default rule for container height */
+    #container {
+        margin-left: 0;
+        /* reset margin-left */
+        width: 100vw;
+        /* content is full width (and full height because of the default rule for container height */
     }
 
     /* We set a default font size here. It will be the base for all other font sizes */
     /* Here the font size is proportional to content width */
-    body{
+    body {
         font-size: 15vw;
     }
 }
 
-/* The content is displayed at 9/16 If the aspect ratio is higher that 9/16  */ 
+/* The content is displayed at 9/16 If the aspect ratio is higher that 9/16  */
 @media screen and (max-aspect-ratio: 9/16) {
-    #container{
-        margin-left: 0; /* reset left margin */
-        width: 100vw;   /* content is full width */
-        margin-top: calc(-50 * 16vw / 9); /* move the content half the height to the top */
-        top:50%; /* then center it ! */
-        height: calc(100 * 16vw / 9); /* adjust height so that aspect ratio is 9/16 */
+    #container {
+        margin-left: 0;
+        /* reset left margin */
+        width: 100vw;
+        /* content is full width */
+        margin-top: calc(-50 * 16vw / 9);
+        /* move the content half the height to the top */
+        top: 50%;
+        /* then center it ! */
+        height: calc(100 * 16vw / 9);
+        /* adjust height so that aspect ratio is 9/16 */
     }
 
     /* We set a default font size here. It will be the base for all other font sizes */
     /* Here the font size is proportional to content width */
-    body{
+    body {
         font-size: 15vw;
     }
 }
-
