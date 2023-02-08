@@ -24,16 +24,20 @@ window.onload = function() {
     lienCroix.href = "index.html";
     lienCroix.style.textDecoration = "none";
 
-    const imgMenuBurger = document.createElement("img");
-    imgMenuBurger.src = "img/croix.png";
-    imgMenuBurger.alt = "croix";
-    imgMenuBurger.id = "popUpNav";
-    imgMenuBurger.style.position = "absolute";
-    imgMenuBurger.style.top = "50px";
-    imgMenuBurger.style.right = "50px";
-    imgMenuBurger.style.zIndex = "2";
+    const imgCroix = document.createElement("img");
+    imgCroix.src = "img/croix.png";
+    imgCroix.alt = "croix";
+    imgCroix.id = "popUpNav";
+    imgCroix.style.position = "absolute";
+    imgCroix.style.top = "50px";
+    imgCroix.style.right = "50px";
+    imgCroix.style.zIndex = "2";
+
+    imgCroix.addEventListener("click", function() {
+        window.history.back();
+    });
 
     divIconeHeader.appendChild(lienLogo);
-    divIconeHeader.appendChild(imgMenuBurger);
+    divIconeHeader.appendChild(imgCroix);
     header.appendChild(divIconeHeader);
 }
