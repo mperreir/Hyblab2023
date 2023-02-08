@@ -1,14 +1,14 @@
 {
     "cepages": [{
             "nom": "Saumur-Champigny",
-            "desc": "Le Saumur-Champigny est un vin rouge du Val de Loire. C’est un vin protégé par une AOP et fait à partir de cabernet franc, cabernet sauvignon et pineau d’aunis.<br><br>Choisir ce vin, c’est rejoindre 130 producteurs dans une région proche de Saumur possédant un microclimat particulièrement chaud en été.<br><br>Les raisins sont fermentés à des températures contrôlées.<br>Les vins de Saumur - Champigny sont généralement considérés comme des vins de qualité supérieure.",
+            "desc": "Le Saumur-Champigny est un vin rouge du <b>Val de Loire</b>. C’est un vin protégé par une <b>AOP</b> et fait à partir de <b>cabernet franc</b>, <b>cabernet sauvignon</b> et <b>pineau d’aunis</b>.<br><br>Choisir ce vin, c’est rejoindre <b>130 producteurs</b> dans une région proche de Saumur possédant un microclimat particulièrement <b>chaud en été</b>.<br><br>Les raisins sont fermentés à des températures contrôlées.<br>Les vins de Saumur - Champigny sont généralement considérés comme des vins de <b>qualité supérieure</b>.",
             "img": "img/bouteilles/bouteille-rouge.png",
             "color": "#841811",
             "txtcolor": "white"
         },
         {
             "nom": "Coteaux du layon",
-            "desc": "Le Coteaux du Layon est un vin blanc fait avec du <b>Chenin<b> autour d’ un affluent de Loire: le Layon.<br><br>La vinification se fait en <b>5 ans</b> dans une pièce à <b>8° C</b>.<br><br>Les raisins sont généralement récoltés à maturité avancée, ce qui <b>donne au vin sa douceur</b> et sa <b>concentration en sucre</b>. Le vin peut être <b>doux </b> ou <b>moelleux</b>, selon le degré de sucre résiduel.",
+            "desc": "Le Coteaux du Layon est un vin blanc fait avec du <b>Chenin</b> autour d’ un affluent de Loire: le Layon.<br><br>La vinification se fait en <b>5 ans</b> dans une pièce à <b>8°C</b>.<br><br>Les raisins sont généralement récoltés à maturité avancée, ce qui <b>donne au vin sa douceur</b> et sa <b>concentration en sucre</b>. Le vin peut être <b>doux</b> ou <b>moelleux</b>, selon le degré de sucre résiduel.",
             "img": "img/bouteilles/bouteille-blanc.png",
             "color": "#FFD78C",
             "txtcolor": "black"
@@ -37,9 +37,9 @@
                     "Aïe ! Laisser les vignes combattre le gel sans intervenir revient à <b>sacrifier une part énorme</b> de ta plantation. C’est un choix <b>très risqué</b> et les <b>pertes peuvent être considérables</b>…"
                 ],
                 "consequence": [
-                    0.9,
-                    1,
-                    0.8
+                    0.05,
+                    0.3,
+                    0.2
                 ]
             },
             {
@@ -57,9 +57,9 @@
                     "<b>Un choix judicieux ! Pour le moment…</b> Si arroser quotidiennement <b>les plantes</b> est <b>vivement recommandé</b>, les stocks d’eau disponible <b>risquent d’être au centre des convoitises</b>, tant pour d’autres secteurs agricoles que pour <b>les particuliers</b><br>ou <b>les municipalités…</b>"
                 ],
                 "consequence": [
-                    0,
-                    0,
-                    0
+                    0.05,
+                    0.3,
+                    0.1
                 ]
             },
             {
@@ -77,13 +77,13 @@
                     "<b>Testons !</b> Déjà utilisés dans plusieurs vignobles français, comme dans la région Auvergne-Rhônes-Alpes, <b>les ballons chargés de sels</b> (et gonflés à l’hélium) sont tirés <b>au cœur de la cellule orageuse</b>. Ainsi le contenant pousse le nuage<br>à précipiter la pluie avant que <b>l’eau ne se solidifie</b>. Pour plus de précision, ils sont généralement utilisés avec <b>un radar qui trace les nuages</b> en direct."
                 ],
                 "consequence": [
-                    0,
-                    0,
-                    0
+                    0.2,
+                    0.3,
+                    0.2
                 ]
             },
             {
-                "context": "Les raisins semblent mûrs, va falloir commencer à penser<br>aux vendeanges...",
+                "contexte": "Les raisins semblent mûrs, va falloir commencer à penser<br>aux vendeanges...",
                 "enonce": "Nous approchons de la mi-août. C’est déjà le moment de préparer la période des vendanges ! Dire qu’il y a encore quelques années, elles avaient lieu fin septembre… Enfin bref… Il ne faut surtout pas négliger les épisodes de fortes chaleurs qui peuvent encore arriver. Comment veux-tu t’organiser ?",
                 "img": "img/characters/vigne.png",
                 "reponse": [
@@ -97,13 +97,13 @@
                     "<b>Bonne chance</b> ! Avec les périodes de vendanges qui arrivent <b>de plus en plus tôt</b> à cause du réchauffement climatique, ne pas évoluer est <b>un choix très dangereux</b>… Entre les fortes chaleurs et la possible <b>indisponibilité</b> de la main-d’œuvre habituelle - notamment les étudiants -, il est indispensable de réfléchir à une <b>nouvelle manière de fonctionner</b>."
                 ],
                 "consequence": [
-                    0,
-                    0,
-                    0
+                    0.2,
+                    0.3,
+                    0.3
                 ]
             },
             {
-                "context": "Mince, le pied de la vigne semble dépérir, comme s'il était nécrosé…",
+                "contexte": "Mince, le pied de la vigne semble dépérir, comme s'il était nécrosé…",
                 "enonce": "Ça n’augure rien de bon ! Au vu des symptômes, cela veut peut-être dire que les vignes sont contaminées par l’esca. Si c’est le cas, il faut agir immédiatement avant que cela prenne des ampleurs inimaginables ! Comment vais-je procéder ?",
                 "img": "img/characters/vigne-2.png",
                 "reponse": [
@@ -117,9 +117,9 @@
                     "<b>Aïe</b> ! Il faut <b>absolument</b> faire quelque chose, sans quoi la maladie va <b>s’étendre</b>. Ensuite, les champignons vont <b>durablement s’installer</b> dans le bois jusqu’à ce que la vigne <b>soit dégradée</b>…"
                 ],
                 "consequence": [
-                    0,
-                    0,
-                    0
+                    0.2,
+                    0.1,
+                    0.3
                 ]
             }
         ],
@@ -138,12 +138,13 @@
                     "Aïe ! Ne rien faire revient à <b>sacrifier</b> une partie<br>de ces vignes… Il faut espérer que les <b>dégâts</b> ne soient <b>pas trop importants</b>. Point positif : ne pas utiliser de produits permet de garder une certification bio !"
                 ],
                 "consequence": [
-                    0,
-                    0,
-                    0
+                    0.1,
+                    0.2,
+                    0.3
                 ]
             },
             {
+                "contexte": "",
                 "enonce": "Mince ! Des tâches brunes sont apparues sur l’intégralité de la vigne, du fruit à la tige en passant par les feuilles… Nous sommes en septembre donc c’est sûrement l’apparition du botrytid, surnommée la pourriture grise ! Le champignon se propage très rapidement, il faut donc agir rapidement ! Que veux-tu faire ?",
                 "img": "img/characters/vigne-taches-brunes.png",
                 "reponse": [
@@ -157,9 +158,9 @@
                     "<b>C’est risqué</b> ! Ne rien faire peut mettre <b>en péril</b> une grande partie <b>de la récolte</b>… Néanmoins, les conditions météorologiques chaudes et sèches de ces dernières semaines, conjuguées <b>au botrytis</b>, peut <b>permettre l’évaporation de l’eau</b> contenue dans le raisin. Le fruit se concentre donc <b>en acidité et en sucre</b> : on appelle ce phénomène <b>la pourriture noble</b> !"
                 ],
                 "consequence": [
-                    0,
-                    0,
-                    0
+                    0.2,
+                    0.1,
+                    0.1
                 ]
             },
             {
@@ -177,9 +178,9 @@
                     "<b>C'est dommage</b> ! Si tu as fait un <b>bon choix</b> en remplaçant les cépages infectés, <b>tes parcelles vont perdre en hétérogénéité</b> - par avec <b>encépage déséquilibré</b> par l'introduction de plantes plus jeunes ou <b>d'un cépage plus résistant</b>… la qualité <br>de ton vin va donc <b>en pâtir</b>."
                 ],
                 "consequence": [
-                    0,
-                    0,
-                    0
+                    0.2,
+                    0.1,
+                    0.3
                 ]
             }
         ]

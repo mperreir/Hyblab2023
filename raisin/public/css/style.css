@@ -137,11 +137,12 @@ body {
     height: auto;
     position: absolute;
     display: block;
-    top: -25%;
+    top: -15%;
     left: -5%;
 }
 
 .left-button {
+    z-index: 1;
     position: absolute;
     width: 10%;
     height: auto;
@@ -363,7 +364,6 @@ dl {
     margin: 0 auto;
 }
 
-/* page contexte */
 .message {
     position: absolute;
     bottom: 10%;
@@ -379,28 +379,6 @@ dl {
     box-sizing: border-box;
     width: 100.1%;
     height: 30%;
-}
-
-.message#message-contexte p {
-    position: relative;
-    top: 15%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 80%;
-}
-
-.message .tete-contexte {
-    width: 50px;
-    position: relative;
-    top: -16%;
-    left: 5%;
-    color: red;
-}
-
-.message .tete-contexte img {
-    width: 100%;
-    height: auto;
 }
 
 div .button-next {
@@ -516,7 +494,7 @@ img.button-next {
 
 .bouteille-container {
     position: absolute;
-    top: 15%;
+    top: 10%;
     left: 0;
     right: 0;
     margin: auto;
@@ -537,7 +515,7 @@ img.button-next {
     right: 0;
     margin: auto;
     padding: 0;
-    height: 40%;
+    height: 45%;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
@@ -559,18 +537,18 @@ img.button-next {
 
 #vigne-gauche {
     left: 0;
-    top: 30%;
+    top: 25%;
 }
 
 #vigne-droite {
     right: 0;
-    top: 15%;
+    top: 10%;
 }
 
 /* page de question */
 
 #question-container {
-    margin-top: 20%;
+    margin-top: 15%;
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -610,6 +588,10 @@ img.button-next {
     position: relative;
     cursor: pointer;
     text-align: center;
+}
+
+.choice>p{
+    height: 200%;
 }
 
 .container-vin-score{
@@ -670,6 +652,7 @@ img.button-next {
 }
 
 #txt-evenement {
+    background-color: #AF0702;
     position: absolute;
     left:0px;
     right:0px;

@@ -23,26 +23,13 @@ function setPage(pageId = "", anim = undefined) {
 
 function reset() {
     setPage("#page-title");
+    $(".header, #home-button").hide();
+    $(".header").attr("src", `img/progressbar/checkpoint-0.png`);
 }
-
-//Définir la question
-function setQuestion(num, text) {
-    $(".header").attr("src", `img/progressbar/checkpoint-${num}.png`);
-    $("#question-text").html(text.replace("\n", "<br>"));
-}
-
-//Ajouter un choix de réponse pour la question
-function setChoice(num, text) {
-    $(`#choice-${num}`).text(text);
-}
-
-//Supprimer touts les choix de réponse
-function removeChoices() {
-    $(".choice").remove();
-}
-
 
 function afficheEvenement(numQuestion) {
+    console.log(numQuestion);
+    $(".header").attr("src", `img/progressbar/checkpoint-${numQuestion+1}.png`);
     $("#txt-evenement>p").html(data.questions.general[numQuestion].contexte);
     $("#img-evenement").attr("src", data.questions.general[nbquestion].img)
 }
