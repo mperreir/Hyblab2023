@@ -3,7 +3,9 @@ body{
     flex-direction: column;
     position: relative;
     background-color: #FFF8F1;
+    margin: 0;
 }
+
 
 
 
@@ -55,7 +57,6 @@ header.main{
     height: 20vh;
     width: 100vw;
     margin-top: -42%;
-    margin-left: -8px;
     position: sticky;
     top: 0;
     background-image: linear-gradient(to top, rgba(0,0,0,0), #FFF8F1, #FFF8F1, #FFF8F1, #FFF8F1);
@@ -85,7 +86,6 @@ footer.main{
     position: sticky;
     bottom: 0;
     background-color: #0B6E5F;
-    margin-left: -8px;
     margin-bottom: -1vh;
     border-radius: 8vw 8vw 0 0;
     width: 100vw;
@@ -113,10 +113,17 @@ footer.main{
     display: none;
 }
 #animal-picture{
-    min-width: 100vw;
-    height: auto;
-    margin-left: -8px;
-    margin-top: -8px;
+    z-index: -5;
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    /*if no picture*/
+    font-size: 2vh;
+    text-align: center;
+    color: #0B6E5F;
+    font-family: 'Prompt', sans-serif;
 }
 #copyright{
     z-index: 100;
@@ -137,26 +144,17 @@ footer.main{
 
 
 main.pop-up{
-    min-height: 66.4vh;
-    width: 100vw;
-    margin-left: -8px;
-    margin-top: -13%;
+    margin-top: -15%;
     background-color: #FBC5EB;
+    border-radius: 10vw 10vw 0 0;
+    height: 68.2vh;
 }
 
-#popupRec{
-    position: absolute;
-    width: 100vw;
-    height: 10vh;
-    margin-top: -1%;
-    background-color: #FBC5EB;
-    border-radius: 8vw 8vw 0 0;
-}
 #animal-name{
     position: absolute;
     font-family: 'Prompt', sans-serif;
     color: #FFF8F1;
-    left: 3%;
+    left: 5%;
     margin-top: 1%;
     font-size: 4.5vh;
 }
@@ -164,9 +162,10 @@ main.pop-up{
     position: absolute;
     font-family: 'Prompt', sans-serif;
     font-size: 2vh;
+    font-weight: lighter;
     color: #0B6E5F;
-    left: 2%;
-    margin-top: 10%;
+    left: 4%;
+    margin-top: 11.5%;
 }
 #menace{
     position: absolute;
@@ -189,7 +188,7 @@ main.pop-up{
     font-size: 3vh;
     font-weight: bold;
     text-align: center;
-    margin-top: -13%;
+    margin-top: -16%;
     margin-bottom: 5%;
 }
 
@@ -209,11 +208,12 @@ main.pop-up{
     max-width: 75%;
     text-align: center;
     transform: translate(16%, 0);
-    margin-top: -17%;
-    margin-bottom: 7%;
+    line-height: 3vh;
+    margin-top: -24%;
+    margin-bottom: 10%;
 }
 #vus #nb{
-    font-size: 3vh;
+    font-size: 3.5vh;
     font-weight: bold;
     text-align: center;
     margin-top: 5%;
@@ -223,25 +223,30 @@ main.pop-up{
     position: absolute;
     background-color: #FFF8F1;
     width: 94%;
-    height: 100px;
+    height: auto;
     right: 3%;
-    margin-top: 50%;
+    margin-top: 48%;
     border-radius: 10vw;
-}
-#map h5{
-    text-align: center;
     font-size: 3vh;
     font-family: 'Prompt', sans-serif;
     color: #0B6E5F;
-    margin-top: 1%;
+    text-align: center;
+    line-height: 10vh;
+}
+#map h5{
+    text-align: center;
+    font-size: 2.5vh;
+    font-weight: lighter;
+    font-family: 'Prompt', sans-serif;
+    color: #0B6E5F;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
 }
 
 footer.pop-up{
     position: absolute;
     width: 100vw;
     bottom: 0;
-    margin-top: 0;
-    margin-left: -8px;
 }
 #mascotte{
     position: absolute;
@@ -252,12 +257,13 @@ footer.pop-up{
 }
 #tips{
     position: absolute;
-    left: 20vw;
-    bottom: 15vh;
+    left: 19vw;
+    bottom: 14.5vh;
 }
 #tips h5{
     font-family: "Covered By Your Grace", cursive;
-    font-size: 4vh;
+    font-size: 3vh;
+    font-weight: lighter;
     color: #0B6E5F;
 }
 #tips #line-le-saviez-vous{
@@ -265,23 +271,26 @@ footer.pop-up{
     top: 70%;
     width: 105%;
     left: -4%;
+    margin-top: -7%;
 }
 
 #tips-text{
     position: absolute;
     font-family: 'Prompt', sans-serif;
-    font-size: 2.5vh;
+    line-height: 3.5vh;
+    font-size: 2vh;
+    font-weight: lighter;
     color: #0B6E5F;
-    width: 55%;
+    width: 60%;
     text-align: center;
-    bottom: 6vh;
-    left: 40%;
+    bottom: 8vh;
+    left: 35%;
     transform: translate(-50%, 0);
 }
 #fleche2{
     position: absolute;
-    left: 40%;
-    bottom: 5vh;
+    left: 35%;
+    bottom: 8.3vh;
     transform: translate(-50%, 0);
 
 }

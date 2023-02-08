@@ -6,6 +6,9 @@ body{
     margin: 0;
 }
 
+#pop-up{
+    display: none;
+}
 #animal-picture{
     z-index: -5;
     position: absolute;
@@ -19,7 +22,6 @@ body{
     color: #0B6E5F;
     font-family: 'Prompt', sans-serif;
 }
-
 #copyright{
     z-index: 100;
     position: absolute;
@@ -31,12 +33,12 @@ body{
     font-size: 1.2vh;
     color: #FFF8F1;
 }
-
 #quit{
     position: absolute;
     right: 2%;
     top: 1%;
 }
+
 
 main{
     margin-top: -15%;
@@ -54,7 +56,6 @@ main{
     font-size: 4.5vh;
 
 }
-
 #desc{
     position: absolute;
     font-family: 'Prompt', sans-serif;
@@ -64,7 +65,6 @@ main{
     left: 4%;
     margin-top: 11.5%;
 }
-
 #menace{
     position: absolute;
     background-color: #FFF8F1;
@@ -75,7 +75,6 @@ main{
     margin-top: 20%;
     border-radius: 10vw;
 }
-
 #menace #menace-txt{
     font-size: 2.8vh;
     font-weight: lighter;
@@ -85,7 +84,6 @@ main{
     margin-bottom: 10%;
     transform: translate(16%, 0);
 }
-
 #menace #menace-level{
     font-size: 2.8vh;
     font-weight: bold;
@@ -108,7 +106,6 @@ main{
     text-align: center;
     line-height: 10vh;
 }
-
 #map h5{
     text-align: center;
     font-size: 2.5vh;
@@ -124,7 +121,6 @@ footer{
     width: 100vw;
     bottom: 0;
 }
-
 #mascotte{
     position: absolute;
     right: 2%;
@@ -132,20 +128,17 @@ footer{
     width: 33%;
     height: auto;
 }
-
 #tips{
     position: absolute;
     left: 19vw;
     bottom: 14.5vh;
 }
-
 #tips h5{
     font-family: "Covered By Your Grace", cursive;
     font-size: 3vh;
     font-weight: lighter;
     color: #0B6E5F;
 }
-
 #tips #line-le-saviez-vous{
     position: absolute;
     top: 70%;
@@ -167,7 +160,6 @@ footer{
     left: 35%;
     transform: translate(-50%, 0);
 }
-
 #fleche2{
     position: absolute;
     left: 35%;
