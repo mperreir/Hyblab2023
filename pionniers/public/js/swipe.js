@@ -5,7 +5,7 @@ let carouselList = document.querySelector('.carousel-list');
 let carouselItems = document.querySelectorAll('.carousel-item');
 let elems = Array.from(carouselItems);
 const swiperSection = document.querySelector('#swiper');
-
+const folderProfilEnr = document.querySelector('#folder');
 
 /*  --------------------------------------------------------
     ------------------ CREATION DOM FICHE ------------------
@@ -474,6 +474,11 @@ swiperSection.addEventListener('click', function (event) {
         ajouterNouvelleFiche(newActivePos);
     }
 });
+
+folderProfilEnr.addEventListener('click', () => {
+    window.location.href = './profils-enregistres.html';
+    window.localStorage.setItem('pagePrecedente', "swipe");
+})
 
 // -----------------------------------------------------
 

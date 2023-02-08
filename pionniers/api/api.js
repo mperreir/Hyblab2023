@@ -175,7 +175,6 @@ app.get('/profile/:id', function ( req, res ) {
                 "ExactAddress": row[1].toString().trim(),
                 "Name": row[4].toString().trim(),
                 "Company": row[5].toString().trim(),
-                "City": row[6].toString().trim(),
                 "Age": row[7].toString().trim(),
                 "Status": row[8].toString().trim(),
                 "ContentBio": row[10].toString().trim(),

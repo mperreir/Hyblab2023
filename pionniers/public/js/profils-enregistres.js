@@ -1,3 +1,5 @@
+const nombreProfilFavText = document.querySelector("#nombre-profil");
+
 function createFicheMinia(profil) {
     // Récupération des attributs de l'objet profil (par méthode destructuring)
     const { Id, Age, City, Company, Name, Status, Topic, URLImage } = profil;
@@ -36,7 +38,7 @@ function createFicheMinia(profil) {
                             <div class="lire-profil bouton-rond flex-row justify-content-center align-items-center">
                                 <p>Lire le PROfil</p>
                             </div>
-                         </li>          `
+                         </li>`
     ;
     return createElementFromHTML(htmlString);
 }
@@ -50,24 +52,33 @@ function onSupprProfile(event) {
     const idProfil = target.dataset.id;
     removeProfilFav(idProfil);
     target.remove();
+    updateNombreProfil(getProfilsFav());
 }
 
-document.addEventListener("DOMContentLoaded", async function () {
-
-    const nombreProfilFavText = document.querySelector("#nombre-profil");
-    const listeProfils = document.querySelector('#liste-profils');
-    const idsProfilsFav = getProfilsFav();
-
+function updateNombreProfil(idsProfilsFav) {
     if(idsProfilsFav.length > 0) {
         nombreProfilFavText.innerHTML = "Voir " + idsProfilsFav.length + " favoris";
     } else {
         nombreProfilFavText.innerHTML = "Favoris vide";
     }
+}
+
+document.addEventListener("DOMContentLoaded", async function () {
+
+    const listeProfils = document.querySelector('#liste-profils');
+    const idsProfilsFav = getProfilsFav();
+    const retourBtn = document.querySelector('#retour');
+
+    retourBtn.addEventListener('click', () => {
+        window.location.href = window.localStorage.getItem('pagePrecedente') + ".html";
+    });
+
+    updateNombreProfil(idsProfilsFav);
 
     let profilFav = [];
 
     for (const id of idsProfilsFav) {
-        const profil = await fetch('/pionniers/api/profile/' + id).then(r => r.json());
+        const profil = await fetch('/pionniers/api/miniature/' + id).then(r => r.json());
         profilFav.push(profil);
     }
 
@@ -80,7 +91,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     croixSuppr.forEach(croixSuppr => {
         croixSuppr.addEventListener('click', onSupprProfile);
-    })
+    });
 
 });
 
