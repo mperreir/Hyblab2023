@@ -72,6 +72,9 @@ function createFiche(profil, dataPos) {
                                     <img src="../img/pictogrammes_themes/${tranlatedSimpleTopic}.svg" alt="${tranlatedSimpleTopic}">
                                     <p class="${fontClass} gras">${capitalizeFirstLetter(Topic)}</p>
                                 </section>
+                                <section class="bouton-voir-profil ">
+                                <button class="bouton-rond"> Lire le PROfil</button> 
+                                </section>
                             </section>
                         </li>`;
     const ficheProfil = createElementFromHTML(htmlString);

@@ -45,18 +45,6 @@
 
 }
 
-/*
-.modal-container a {
-    text-decoration: none;
-    margin-left: 95%;
-
-
-}*/
-.modal-container a:visited {
-    text-decoration: none;
-    color: black;
-
-}
 
 #theme-selector-long {
     height: 50%;

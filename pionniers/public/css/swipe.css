@@ -74,6 +74,16 @@ body {
     width: 80%;
 }
 
+.bouton-voir-profil{
+    width: 50%;
+    margin-left: 55%;
+    margin-bottom: -7%;
+}
+
+.bouton-voir-profil button{
+    padding: 6%;
+}
+
 .entreprise-info, .keywords, .topic {
     font-size: 0.8em; /* Combiné au 0.5em du p dans general.css */
 }
