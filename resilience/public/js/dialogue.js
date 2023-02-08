@@ -6,7 +6,7 @@ let htmlDialogue = document.querySelector('#dialogue');
 let htmlDialogueHead = document.querySelector('#head');
 let htmlDialogueMessages = document.querySelector('#messages');
 var messages = [];
-var names = [];
+var people = {};
 var paused = false;
 var conversation = {};
 
@@ -14,18 +14,32 @@ async function initConversation() {
     response = await fetch(`data/conversation${conversationId}.json`);
     conversation = await response.json();
 
+    // Saves colors in people dict
+    conversation.people.forEach(p => {
+        people[p.name] = {
+            "background_color": p.background_color,
+            "border_color": p.border_color,
+            "text_color": p.text_color,
+            "side": p.side
+        };
+
+        // Add names to the header of the conversation
+        let htmlName = document.createElement('p');
+        htmlName.classList.add('name');
+        htmlName.textContent = p.name;
+        htmlName.style.color = p.text_color;
+        htmlName.style.backgroundColor = p.background_color;
+        htmlName.style.borderColor = p.border_color;
+        htmlDialogueHead.appendChild(htmlName);
+    });
+
     let title = document.getElementById("titre");
     let htmlTitle = document.createElement('h1');
     htmlTitle.textContent = conversation.place;
-    title.appendChild(htmlTitle);
+    htmlTitle.style.backgroundColor = conversation.people[1].background_color;
+    htmlTitle.style.color = conversation.people[1].text_color;
 
-    names = conversation.names;
-    await names.forEach(name => {
-        let htmlName = document.createElement('p');
-        htmlName.classList.add('name');
-        htmlName.textContent = name
-        htmlDialogueHead.appendChild(htmlName);
-    });
+    title.appendChild(htmlTitle);
 
     messages = conversation.messages;
 
@@ -37,10 +51,8 @@ async function initConversation() {
 function runConversation() {
     let message;
     let onClick = htmlDialogue.addEventListener('click', function () {
-        console.log(paused);
         if (!paused) {
-            console.log("click");
-            paused = true;            
+            paused = true;
             message = messages.shift() || null;
 
             // If we run out of messages, stop listening to clicks
@@ -65,10 +77,10 @@ function runConversation() {
             };
         };
         let dialogue = document.getElementById("dialogue")
-        htmlDialogue.scrollTo(0,dialogue.scrollHeight)
+        htmlDialogue.scrollTo(0, dialogue.scrollHeight)
     });
 };
-              
+
 function choose(message, all) {
     let htmlSubMessageList = []; // Keep track of all the answers we create
     // Create each answer
@@ -90,9 +102,6 @@ function choose(message, all) {
             });
 
             displayMessage(subMessage);
-            
-            
-
 
             if (all) {
                 if (message.messages.size == 1) {
@@ -111,7 +120,7 @@ function choose(message, all) {
                 subMessageLine = subMessageLine.splice(1) || [];
                 messages = [...subMessageLine, ...messages];
             };
-            
+
             if (message == []) message = null;
         });
 
@@ -120,20 +129,17 @@ function choose(message, all) {
 };
 
 
-function displayMessage(message, json) {
+function displayMessage(message) {
     let htmlMessage = document.createElement('p');
     htmlMessage.classList.add('message');
 
-    const leftName = names[0];
-    if (leftName === message.name) {
-        htmlMessage.classList.add('left');
-        htmlMessage.style.backgroundColor= conversation.background_color;
-        htmlMessage.style.color= conversation.text_color;
+    const p = people[message.name];
 
-    }
-    else {
-        htmlMessage.classList.add('right');
-    }
+    htmlMessage.classList.add(p.side);
+    htmlMessage.style.backgroundColor = p.background_color;
+    htmlMessage.style.color = p.text_color;
+    htmlMessage.style.borderColor = p.border_color;
+
 
     htmlMessage.textContent = message.text;
     htmlDialogueMessages.appendChild(htmlMessage);
@@ -143,7 +149,7 @@ function displayMessage(message, json) {
 
 document.getElementById('right-arrow').addEventListener('click', function () {
     if (window.localStorage.getItem("compt").length == 3) {
-        window.localStorage.setItem("popup","true")
+        window.localStorage.setItem("popup", "true")
     }
     window.location = "./map.html"
 

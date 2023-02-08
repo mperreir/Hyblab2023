@@ -84,7 +84,7 @@
 }
 
 
-.shortDescription {
+.data {
     /*display: flex;*/
     font-size: 1rem;
     color: black;
@@ -106,43 +106,43 @@
 
 }
 
-.shortDescription-1,
+.data-1,
 .achievement-1 {
     background-color: #CFCCF9;
 
 }
 
-.shortDescription-2,
+.data-2,
 .achievement-2 {
     background-color: #A4A4FC;
 }
 
-.shortDescription-3,
+.data-3,
 .achievement-3 {
     background-color: #9088FF;
 }
 
-.shortDescription-4,
+.data-4,
 .achievement-4 {
     background-color: #FFC8A2;
 }
 
-.shortDescription-5,
+.data-5,
 .achievement-5 {
     background-color: #FFB84E;
 }
 
-.shortDescription-6,
+.data-6,
 .achievement-6 {
     background-color: #F89E62;
 }
 
-.shortDescription-7,
+.data-7,
 .achievement-7 {
     background-color: #FD9E98;
 }
 
-.shortDescription-8,
+.data-8,
 .achievement-8 {
     background-color: #FF73BA;
 }

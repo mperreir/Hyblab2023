@@ -319,24 +319,50 @@ body{
 }
 
 
+/*
+.modal {
+    position: absolute !important;
+    background-color: white;
+    margin: 30% 15% 10% 15%;
+    border-radius: 3vh;
+    border-color: black;
+    border-width: thick;
+    cursor: pointer;
+}
+
+.modal .modal-content {
+    color: black;
+    font-family: 'Montserrat';
+    text-align: center;
+}
+*/
+
 
 /* The Modal (background) */
+#myModal{
+    top: 20%;
+}
+
 .modal {
-    margin-left: calc((100vw - 100 * 3vh / 4) / 2);
-    width: calc(100 * 3vh / 4);
+    margin-left: calc((100vw - 90 * 3vh / 4) / 2);
+    width: calc(90 * 3vh / 4);
     display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    position: absolute; /* Stay in place */
     z-index: 1; /* Sit on top */
     top: 0;
-    height: 100%; /* Full height */
+    height: 60%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
     cursor:pointer;
+    border-radius: 3vh;
+    background-size: 80%, 80%;
+    background-color: white;
 }
 
 /* Modal Content/Box */
 .modal-content {
+    color: black;
+    font-family: 'Montserrat';
+    font-size: 22%;
     position: absolute;
     top: 50%;
     width:80%;    
@@ -344,10 +370,6 @@ body{
     transform: translateY(-50%) translateX(-50%);
     text-align:center;
     cursor:pointer;
-}
-
-.modal-content p {
-    font-size: 0.5em;
 }
   
 

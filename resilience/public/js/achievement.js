@@ -4,7 +4,7 @@ async function achievement() {
     let result = document.querySelector('#achievements');
 
     for (let i = 0; i < achievements.achievements.length; i++) {
-        
+
         let achiev = achievements.achievements[i];
         let htmlAchiev = document.createElement('div');
         if (window.localStorage.getItem("achievement".concat(i + 1)) == "true") {
@@ -34,25 +34,57 @@ async function achievement() {
         htmlName.classList.add('name');
         htmlName.textContent = achiev.name;
 
-        let htmlDesc = document.createElement('p');
-        htmlDesc.classList.add('shortDescription');
-        htmlDesc.classList.add(`shortDescription-${achiev.ID}`);
-        htmlDesc.innerHTML = achiev.shortDescription;
+        let htmlData = document.createElement('div');
+        htmlData.classList.add('data');
+        htmlData.classList.add(`data-${achiev.ID}`);
+
+        // Parse Achievement data
+        achiev.data.forEach(e => {
+            let htmlE = document.createElement('p');
+            switch (e.type) {
+                case 'text':
+                    htmlE = document.createElement('p');
+                    htmlE.textContent = e.text;
+                    break;
+                case 'video':
+                    htmlE = document.createElement('iframe');
+                    htmlE.setAttribute("src", e.link);
+                    //htmlE = createElement('<iframe width="560" height="315" src="' + e.link + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>')
+                    break;
+                case 'image':
+                    htmlE = document.createElement('img');
+                    htmlE.scr = 'data/' + e.link;
+                    break;
+                case 'link':
+                    htmlE = document.createElement('a');
+                    htmlE.textContent = e.text;
+                    htmlE.href = e.link;
+                    break;
+                default:
+                    console.log("Unknown type : "+ e.type);
+            }
+            
+            e.class.forEach(c => {
+                htmlE.classList.add(c);
+            });
+
+            htmlData.appendChild(htmlE);
+        });
 
         let isOpen = false;
 
         htmlName.addEventListener('click', function () {
             if (window.localStorage.getItem("achievement".concat(htmlAchiev.id)) == "true") {
                 if (window.localStorage.getItem("achievement".concat(htmlAchiev.id))) {
-                    let currentDescription = document.querySelector('.shortDescription');
-                    if (currentDescription) {
-                        currentDescription.remove();
+                    let currentData = document.querySelector('.data');
+                    if (currentData) {
+                        currentData.remove();
                     }
                     if (isOpen) {
-                        htmlDesc.remove();
+                        htmlData.remove();
                         isOpen = false;
                     } else {
-                        htmlAchiev.appendChild(htmlDesc);
+                        htmlAchiev.appendChild(htmlData);
                         isOpen = true;
                     }
                 }
@@ -60,7 +92,7 @@ async function achievement() {
         });
 
         let htmlAchievVisible = document.createElement('div');
-        htmlAchievVisible.setAttribute('id','visible');
+        htmlAchievVisible.setAttribute('id', 'visible');
         htmlAchievVisible.appendChild(htmlID);
         htmlAchievVisible.appendChild(htmlName);
         htmlAchiev.appendChild(htmlAchievVisible);

@@ -1,0 +1,91 @@
+{
+    "place": "AGR",
+    "people": [
+        {
+            "name": "Voyageur",
+            "background_color": "white",
+            "border_color": "black",
+            "text_color": "black",
+            "side": "rigth"
+        },
+        {
+            "name": "Guillaume",
+            "background_color": "#79B77B",
+            "border_color": "white",
+            "text_color": "white",
+            "side": "left"
+        },
+        {
+            "name": "Louise",
+            "background_color": "pink",
+            "border_color": "white",
+            "text_color": "white",
+            "side": "left"
+        }
+    ],
+    "messages": [
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Bonjour Guillaume !"
+        },
+        {
+            "type": "message",
+            "name": "Guillaume",
+            "text": "Bonjour Tristan !"
+        },
+        {
+            "type": "message",
+            "name": "Louise",
+            "text": "Bonjour les garçons !"
+        },
+        {
+            "type": "one",
+            "messages": [
+                [
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Bien !"
+                    }
+                ],
+                [
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Pas bien !"
+                    }
+                ]
+            ]
+        },
+        {
+            "type": "all",
+            "messages": [
+                [
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "D'où viens-tu ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Guillaume",
+                        "text": "La chapelle sur Erdre."
+                    }
+                ],
+                [
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Que fais-tu ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Guillaume",
+                        "text": "Je fait du Hyblab."
+                    }
+                ]
+            ]
+        }
+    ]
+}
