@@ -1,83 +1,101 @@
-function createFicheMinia(profil, dataPos) {
+const nombreProfilFavText = document.querySelector("#nombre-profil");
+
+function createFicheMinia(profil) {
     // Récupération des attributs de l'objet profil (par méthode destructuring)
-    const { Id, Age, City, Company, MiniBio, Name, Status, Topic, URLImage } = profil;
+    const { Id, Age, City, Company, Name, Status, Topic, URLImage } = profil;
     // Simplification du thème (pas d'accents et d'espace)
     const tranlatedSimpleTopic = translateThemeToSimpleChar(Topic);
     // Récupération de la classe relative à la couleur de la police du theme
     const fontClass = getFontClass(tranlatedSimpleTopic);
-    const htmlString = `<li class="fiche-minia flex-row align-items-center justify-content-space-between" data-pos="${dataPos}" data-id="${Id}">
+    const bgClass = getBackgroundClass(tranlatedSimpleTopic)
+    const htmlString = `<li data-id="${Id}" class="flex-column align-items-flex-end">
+                            <div class="overflow-buttons-top flex-row justify-content-flex-end">
+                                <div class="indicateur-id ${bgClass} flex-row align-items-center justify-content-center">
+                                    <p>${Id}</p>
+                                </div>
+                                <div class="croix-suppr">
+                                    <img alt="X" src="../img/croix.svg">
+                                </div>
+                            </div>
+                            <div class="fiche-minia flex-row align-items-center justify-content-space-between">
                                 <section class="photo-case">
                                     <img draggable="false" alt="photo-profil" src="${URLImage}">
                                 </section>
-                                <section class="information-fiche flex-column justify-content-space-evenly">
-                                    <section class="carte-identite flex-column align-items-center-flex-start ${fontClass}">
-                                        <p class="gras">${Name}</p>
-                                        <p class="gras">${Age}</p>
-                                    </section>
-                                    <section class="entreprise-info">
-                                        <p class="gras">${Status}</p>
-                                        <p class="gras">${Company}</p>
-                                        <p>${City}</p>
-                                        <p>${MiniBio}</p>
-                                    </section>
+                                <section class="information-fiche flex-row align-items-center">
+                                    <div class="flex-column">
+                                        <section class="carte-identite flex-column align-items-center-flex-start ${fontClass}">
+                                            <p class="gras">${Name}</p>
+                                            <p class="gras">${Age}</p>
+                                        </section>
+                                        <section class="entreprise-info">
+                                            <p class="gras">${Status}</p>
+                                            <p class="gras">${Company}</p>
+                                            <p>${City}</p>
+                                        </section>
+                                    </div>
                                 </section>
-                            </div> 
-                         </li>          `
+                            </div>
+                            <div class="lire-profil bouton-rond flex-row justify-content-center align-items-center">
+                                <p>Lire le PROfil</p>
+                            </div>
+                         </li>`
     ;
     return createElementFromHTML(htmlString);
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    // TODO : À récupérer depuis la sélection faite dans le swipe
-    const profilsTest = [   {  Name: "Michel Dubois",
-        Company: "Axitek",
-        Age: "10",
-        Status: "Président",
-        City: "Nantes",
-        MiniBio: "Une entreprise bien spéciale",
-        Topic: "alimentation",
-        URLImage: "https://media.licdn.com/dms/image/C5603AQEknKFZXX9tRg/profile-displayphoto-shrink_800_800/0/1517475397492?e=1680739200&v=beta&t=I4ONcua83gAQuyEqPc6tfPxjQ-kkGN_R7NbVuBc0OiA"},
-        {  Name: "Patrice Ficom",
-            Age: "10",
-            Status: "Président",
-            Company: "Protifloup",
-            City: "Marseille",
-            MiniBio: "Production de floup",
-            Topic: "alimentation",
-            URLImage: "https://media.licdn.com/dms/image/C4E03AQG3FBjwWyrt-A/profile-displayphoto-shrink_800_800/0/1660056537761?e=1680739200&v=beta&t=BUeVBE-15OJLowSRehWL2Tyv189StPslur_8-oylpW0"},
-        {  Name: "Patrice Ficom",
-            Age: "10",
-            Status: "Président",
-            Company: "Protifloup",
-            City: "Marseille",
-            MiniBio: "Production de floup",
-            Topic: "alimentation",
-            URLImage: "https://media.licdn.com/dms/image/C4E03AQG3FBjwWyrt-A/profile-displayphoto-shrink_800_800/0/1660056537761?e=1680739200&v=beta&t=BUeVBE-15OJLowSRehWL2Tyv189StPslur_8-oylpW0"},
-        {  Name: "Patrice Ficom",
-            Age: "10",
-            Status: "Président",
-            Company: "Protifloup",
-            City: "Marseille",
-            MiniBio: "Production de floup",
-            Topic: "alimentation",
-            URLImage: "https://media.licdn.com/dms/image/C4E03AQG3FBjwWyrt-A/profile-displayphoto-shrink_800_800/0/1660056537761?e=1680739200&v=beta&t=BUeVBE-15OJLowSRehWL2Tyv189StPslur_8-oylpW0"},
-        {  Name: "Omar Ranfou",
-            Age: "10",
-            Company: "Virt'ai",
-            City: "Paris",
-            MiniBio: "Très très intéressant",
-            Status: "Président",
-            Topic: "industrie",
-            URLImage: "https://media.licdn.com/dms/image/D4E35AQFsBrWlMhuvDw/profile-framedphoto-shrink_800_800/0/1672674431307?e=1675782000&v=beta&t=JPYSrjRxq0e9iup7K2H-dM_vJJTk7N8hOPkR8sJkMEQ"}];
+function onSupprProfile(event) {
+    let target = event.target;
+    while(target.tagName !== 'LI') {
+        target = target.parentNode;
+    }
+
+    const idProfil = target.dataset.id;
+    removeProfilFav(idProfil);
+    target.remove();
+    updateNombreProfil(getProfilsFav());
+}
+
+function updateNombreProfil(idsProfilsFav) {
+    if(idsProfilsFav.length > 0) {
+        nombreProfilFavText.innerHTML = "Voir " + idsProfilsFav.length + " favoris";
+    } else {
+        nombreProfilFavText.innerHTML = "Favoris vide";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", async function () {
 
     const listeProfils = document.querySelector('#liste-profils');
+    const idsProfilsFav = getProfilsFav();
+    const retourBtn = document.querySelector('#retour');
 
-    profilsTest.forEach((profil) => {
+    retourBtn.addEventListener('click', () => {
+        window.location.href = window.localStorage.getItem('pagePrecedente') + ".html";
+    });
+
+    updateNombreProfil(idsProfilsFav);
+
+    let profilFav = [];
+
+    for (const id of idsProfilsFav) {
+        const profil = await fetch('/pionniers/api/miniature/' + id).then(r => r.json());
+        profilFav.push(profil);
+    }
+
+    profilFav.forEach((profil) => {
         const ficheMinia = createFicheMinia(profil);
-        console.log(ficheMinia)
         listeProfils.append(ficheMinia);
     });
+
+    const croixSuppr = document.querySelectorAll('.croix-suppr');
+
+    croixSuppr.forEach(croixSuppr => {
+        croixSuppr.addEventListener('click', onSupprProfile);
+    });
+
 });
+
+
 
 /**
  * Simplifie l'écriture litérale d'un thème (supprime les accents et espace)
@@ -90,28 +108,6 @@ function translateThemeToSimpleChar(topic) {
     return topic;
 }
 
-/**
- * Donne la bonne classe de police d'écriture suivant le thème donné
- * @param topic {string} thème
- * @returns {string} classe correspondant au thème
- */
-function getFontClass(topic) {
-    switch (topic) {
-        case 'alimentation' :
-            return 'orange-font';
-        case 'economie_circulaire' :
-            return 'caca-doie-font';
-        case 'energie' :
-            return 'vert-font';
-        case 'industrie' :
-            return 'turquoise-font';
-        case 'mobilite' :
-            return 'cyan-font';
-        case 'numerique' :
-            return 'bleu-clair-font';
-
-    }
-}
 
 
 

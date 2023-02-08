@@ -14,20 +14,27 @@ body {
 }
 
 #swiper {
-    height: 50%;
+    height: 55%;
     width: 100%;
+}
+
+#petit-rond {
+    width: 4vh;
+    height: 4vh;
+    font-size: 2em;
+    margin-left: 20%;
 }
 
 .carousel-list {
     user-select: none;
-    width: 60%;
+    width: 64%;
     height: 100%;
     perspective: 300px;
 }
 .carousel-item {
     width: 100%;
     height: 100%;
-    border-radius: 15px;
+    border-radius: 1em;
     box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.5);
     position: absolute;
     transition: all 0.3s ease-in;
@@ -41,19 +48,19 @@ body {
 }
 
 .carousel-item[data-pos="-1"] {
-    transform: translateX(-10%) scale(0.9);
+    transform: translateX(-12.5%) scale(0.9);
     z-index: 4;
 }
 .carousel-item[data-pos="1"] {
-    transform: translateX(10%) scale(0.9);
+    transform: translateX(12.5%) scale(0.9);
     z-index: 4;
 }
 .carousel-item[data-pos="-2"] {
-    transform: translateX(-20%) scale(0.8);
+    transform: translateX(-25%) scale(0.8);
     z-index: 3;
 }
 .carousel-item[data-pos="2"] {
-    transform: translateX(20%) scale(0.8);
+    transform: translateX(25%) scale(0.8);
     z-index: 3;
 }
 
@@ -66,12 +73,22 @@ body {
     width: 100%;
     object-fit: cover;
     height: 100%;
-    border-radius: 15px 15px 0 0;
+    border-radius: 1em 1em 0 0;
 }
 
 .information-fiche {
     height: 60%;
     width: 80%;
+}
+
+.bouton-voir-profil{
+    width: 50%;
+    margin-left: 55%;
+    margin-bottom: -7%;
+}
+
+.bouton-voir-profil button{
+    padding: 6%;
 }
 
 .entreprise-info, .keywords, .topic {
@@ -106,6 +123,43 @@ body {
 
 .topic p {
     margin-left: 5px;
+}
+
+#tuto {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00698280; /* Black w/ opacity */
+    transition: 0.2s;
+}
+
+#tuto #tuto-content {
+    width: 60%;
+    height: 50%;
+    margin-bottom: 5%;
+}
+
+#tuto #tuto-content #tuto-explication {
+    background-color: var(--gris-clair);
+    width: 100%;
+    height: 60%;
+    border-radius: 30px;
+}
+
+#tuto #tuto-content #tuto-explication p {
+    text-align: center;
+    width: 80%;
+}
+
+#tuto #tuto-content img{
+    height: 40%;
+}
+
+#label-selector img{
+    height: 1em;
 }
 
 .recreate-deck-animation-1 {

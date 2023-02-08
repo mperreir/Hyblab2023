@@ -2,13 +2,14 @@
 
 // TODO: WHEN SELECTION ON THE PREVIOUS PAGE IS DONE, DISPLAY THE MAP WITH THE SELECTED TOPICS
 //
-// TODO : ne proposer que des mots clés correspondant aux topics selectionnés
-//
-// TODO : interaction sur les points pour afficher la miniature
-//
 // TODO : interaction de la miniature avec le swipe dans le dossier
+//
+// TODO : si l'utilisateur accède direct à la carte, cocher tous les topics par défaut
+//
+// TODO : bien cancel la déselection des topics quand il ne reste plus qu'un topic
+//
+// TODO : supprimer l'overlay après avoir mis dans le dossier et reinitialiser la position de la miniature
 
-// MEILLEUR MOYEN DE GERER LES MOTS CLES METTRE UN PARAMETRE POUR LES MARKERS SUR KEYWORD BOOLEEN et le mettre dans le IF
 /*
   ----------------------------------------------------------------------------------------------------------------------
   | Global variables                                                                                                   |
@@ -152,9 +153,102 @@ function updateSelectedMarkersPosition() {
  */
 async function addMarkers() {
     // Add a marker for each profile
-    geographicalProfiles.forEach(p => {
-        p.marker = L.marker([p.Lat, p.Long], {icon: createIcon(p)}).addTo(map);
+    geographicalProfiles.forEach(gp => {
+        gp.marker = L.marker([gp.Lat, gp.Long], {icon: createIcon(gp)}).addTo(map);
+        gp.marker.addEventListener('click', () => {
+            displayMiniature(gp.Id);
+        });
     });
+}
+
+
+/*
+  ----------------------------------------------------------------------------------------------------------------------
+  | Miniatures management                                                                                              |
+  ----------------------------------------------------------------------------------------------------------------------
+ */
+
+async function getMiniature(Id) {
+    // Fetch the data from the API
+    const response = await fetch("/pionniers/api/miniature/" + Id);
+    // Parse the response as JSON and return it
+    return await response.json();
+}
+
+
+function displayMiniature(Id){
+    getMiniature(Id).then(p => {
+        // Display the overlay
+        const overlay = document.querySelector("main div#overlay");
+        overlay.classList.remove("display-none");
+        // Display the miniature related part
+        const miniature_related = document.querySelector("main div#miniature-related");
+        miniature_related.classList.remove("display-none");
+        // Retrieve the miniature content
+        const miniature_content = document.querySelector("main div#miniature-related div#miniature-content");
+        // Retrieve the font class of the miniature content
+        const font_class = getFontClass(translate(p.Topic));
+        // Create the associated HTML elements
+        // Update the miniature content inner HTML
+        miniature_content.innerHTML = `
+                    <section class="photo-case">
+                        <img draggable="false" alt="photo-profil" src="${p.URLImage}">
+                    </section>
+                    <section class="information-fiche flex-column justify-content-space-evenly">
+                        <section class="carte-identite flex-column align-items-center-flex-start ${font_class}">
+                            <p class="gras">${p.Name}</p>
+                            <p class="gras">${p.Age}</p>
+                        </section>
+                        <section class="entreprise-info">
+                            <p class="gras">${p.Status}</p>
+                            <p class="gras">${p.Company}</p>
+                            <p>${p.City}</p>
+                            <p>${p.MiniBio}</p>
+                        </section>
+                        <section class="keywords flex-row">
+                            <div class="keyword-item flex-row align-items-center">
+                                <p>#biodéchets</p>
+                            </div>
+                            <div class="keyword-item flex-row align-items-center">
+                                <p>#hydrogène</p>
+                            </div>
+                            <!-- Section qui va se remplir dans la suite de la fonction -->
+                        </section>
+                        <section class="topic flex-row align-items-center">
+                            <img src="../img/pictogrammes_themes/${translate(p.Topic)}.svg" alt="${p.Topic}">
+                            <p class="${font_class} gras">${capitalizeFirstLetter(p.Topic)}</p>
+                        </section>
+                    </section>
+        `;
+        // Retrieve the keywords section
+        const keywordSection = miniature_content.querySelector("section.keywords");
+        // Add the keywords (if any non empty keyword is present)
+        p.Keywords.split(';').forEach(k => {
+            if(k.trim() === '') {
+                return;
+            }
+            keywordSection.append(createKeywordItem(k));
+        });
+        // Retrieve the close button
+        const closeButton = document.querySelector("main div#miniature-related img#fermeture-miniature");
+        // Add the event listener to close the miniature and undisplay the miniature related part and the overlay
+        closeButton.addEventListener('click', () => {
+            miniature_related.classList.add("display-none");
+            overlay.classList.add("display-none");
+        });
+    });
+}
+
+/**
+ * Creates a HTML keyword element from a string
+ * @param Keyword {string} the keyword
+ * @returns {ChildNode} Node HTML
+ */
+function createKeywordItem(Keyword) {
+    const htmlString = `<div class="keyword-item flex-row align-items-center">
+                            <p>#${Keyword}</p>
+                        </div>`;
+    return createElementFromHTML(htmlString);
 }
 
 
@@ -192,6 +286,15 @@ function onTopicCheck(event) {
         topicImg.classList.remove("unchecked");
         selectedTopics.push(topicString);
     } else {
+        // If the selected topics array has length 1, do not remove the topic
+        if (selectedTopics.length === 1) {
+            // Display the overlay
+            const overlay = document.querySelector("main div#overlay");
+            overlay.classList.remove("display-none");
+            // Display the popup
+            const popup = document.querySelector("main div#popup");
+            popup.classList.remove("display-none");
+        }
         topicImg.classList.add("unchecked");
         // Splice the array to remove the item (only if the item is found)
         const indexToRemove = selectedTopics.indexOf(topicString);
@@ -348,8 +451,6 @@ function onKeywordManage() {
             // Retrieve the keywords list and reset it
             const keywordsList = document.querySelector('#available-keywords-list');
             keywordsList.innerHTML = '';
-            // Keep only the first 15 keywords
-            keywords = keywords.slice(0, 15);
             // Set the keyword list as visible
             keywordsList.classList.remove('display-none');
 
@@ -388,7 +489,7 @@ function onKeywordManage() {
 
 /*
   ----------------------------------------------------------------------------------------------------------------------
-  | Topic translation                                                                                                  |
+  | Utility functions                                                                                                  |
   ----------------------------------------------------------------------------------------------------------------------
  */
 /**
@@ -402,6 +503,27 @@ function translate(topic) {
     return topic;
 }
 
+/**
+ * Get the font class corresponding to the topic
+ * @param topic {string} The topic to get the font class
+ * @returns {string} The font class
+ */
+function getFontClass(topic) {
+    switch (topic) {
+        case 'alimentation' :
+            return 'orange-font';
+        case 'economie_circulaire' :
+            return 'caca-doie-font';
+        case 'energie' :
+            return 'vert-font';
+        case 'industrie' :
+            return 'turquoise-font';
+        case 'mobilite' :
+            return 'cyan-font';
+        case 'numerique' :
+            return 'bleu-clair-font';
+    }
+}
 
 /*
   ----------------------------------------------------------------------------------------------------------------------
@@ -434,4 +556,86 @@ document.addEventListener("DOMContentLoaded", function () {
     // Keywords management
     const keywordManageButton = document.querySelector('section.keywords #keyword-manage');
     keywordManageButton.addEventListener('click', onKeywordManage);
+    // Associate the close button to the close function for the popup
+    const closeButton = document.querySelector('main div#popup img#fermeture-popup');
+    closeButton.addEventListener('click', () => {
+        // Undisplay the overlay
+        document.querySelector('main div#overlay').classList.add('display-none');
+        // Undisplay the popup
+        document.querySelector('main div#popup').classList.add('display-none');
+    });
+    // Manage the swipe action on the miniature
+    const miniature = document.querySelector('main div#miniature-related');
+    const hammer = new Hammer(miniature);
+    hammer.add(new Hammer.Pan({
+        position: Hammer.position_ALL,
+        threshold: 0
+    }));
+    hammer.on('pan', onPan);
+
+    const folder = document.querySelector('#folder');
+
+    folder.addEventListener('click', () => {
+        window.location.href = './profils-enregistres.html';
+        window.localStorage.setItem('pagePrecedente', "carte");
+    });
 });
+
+/*
+  ----------------------------------------------------------------------------------------------------------------------
+  | Swipe action management                                                                                            |
+  ----------------------------------------------------------------------------------------------------------------------
+ */
+function onPan(e) {
+    const miniature = document.querySelector('main div#miniature-related');
+    // Remove transition properties
+    miniature.style.transition = null;
+    // Get miniature coordinates
+    let style = window.getComputedStyle(miniature);
+    let mx = style.transform.match(/^matrix\((.+)\)$/);
+    let startPosX = mx ? parseFloat(mx[1].split(', ')[4]) : 0;
+    let startPosY = mx ? parseFloat(mx[1].split(', ')[5]) : 0;
+    // Get top card bounds
+    let bounds = miniature.getBoundingClientRect();
+    // Get finger position on top card, top (1) or bottom (-1)
+    let isDraggingFrom = (e.center.y - bounds.top) > miniature.clientHeight / 2 ? -1 : 1;
+    // Get new coordinates
+    let posX = e.deltaX + startPosX;
+    let posY = e.deltaY + startPosY;
+    // Get ratio between swiped pixels and the axes
+    let propX = e.deltaX / miniature.clientWidth;
+    let propY = e.deltaY / miniature.clientHeight;
+    // Get swipe direction, left (-1) or right (1)
+    let dirX = e.deltaX < 0 ? -1 : 1;
+    // Get degrees of rotation, between 0 and +/- 45
+    let deg = isDraggingFrom * dirX * Math.abs(propX) * 45;
+    // Get scale ratio, between .95 and 1
+    let scale = (95 + (5 * Math.abs(propX))) / 100;
+
+    let successful = false;
+    // Check if the card is dragged down
+    if (propY < 30 && e.direction === Hammer.DIRECTION_DOWN) {
+        successful = true;
+        // Get top border position
+        posY = +(miniature.clientHeight + miniature.clientHeight);
+    }
+
+    if (e.isFinal && successful) {
+        let start = null;
+        let duration = 1000; // 1 second
+
+        function animation(timestamp) {
+            if (!start) start = timestamp;
+            let progress = timestamp - start;
+            let translateY = posY * (progress / duration);
+            miniature.style.transform = `translateX(${posX}px) translateY(${translateY}px) rotate(${deg}deg)`;
+            if (progress < duration) {
+                requestAnimationFrame(animation);
+            } else {
+                console.log('transition finished');
+            }
+        }
+
+        requestAnimationFrame(animation);
+    }
+}

@@ -4,6 +4,7 @@ html, body {
     padding: 0;
 }
 
+
 header#theme-selector, footer#folder {
     position: absolute;
 }
@@ -20,22 +21,168 @@ header#theme-selector {
     border-radius: 20px;
 }
 
-footer#folder {
-    z-index: 1;
-    bottom: 0;
-    width: 75%;
+header#theme-selector div#topic-related ul#theme-list li{
+    width: 15%;
+}
+header#theme-selector div#topic-related ul#theme-list li img{
+    width: 100%;
+    height: 100%;
 }
 
-main#map {
+
+main {
     position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main div#map {
     z-index: 0;
     width: 100%;
     height: 100%;
 }
 
+main div#map .leaflet-map-pane .leaflet-tile-pane {
+    filter: brightness(92.5%);
+}
+
+main div#miniature-related {
+    position: absolute;
+    z-index: 4;
+    top: 20%;
+    left: 15%;
+    width: 70%;
+    height: 60%;
+}
+
+main div#miniature-related img#fermeture-miniature {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    right: 15%;
+    width: 10%;
+    height: 10%;
+}
+
+main div#miniature-related div#miniature-content {
+    position: relative;
+    top: 5%;
+    bottom: 5%;
+    width: 100%;
+    height: 90%;
+    background-color: var(--gris-clair);
+    border-radius: 50px;
+}
+
+main div#miniature-related div#miniature-content section.photo-case {
+    height: 40%;
+    width: 100%;
+}
+
+main div#miniature-related div#miniature-content section.photo-case img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 50px 50px 0 0;
+}
+
+main div#miniature-related div#miniature-content section.information-fiche {
+    height: 60%;
+    width: 80%;
+}
+
+main div#miniature-related div#miniature-content section.entreprise-info,
+main div#miniature-related div#miniature-content section.keywords,
+main div#miniature-related div#miniature-content section.topic {
+    font-size: 0.8em; /* Combiné au 0.5em du p dans general.css */
+}
+
+main div#miniature-related div#miniature-content section.topic {
+    border-radius: 500px;
+    background-color: var(--blanc-fond);
+    padding: 2% 7% 2% 2%;
+    width: min-content;
+    white-space: nowrap;
+    max-height: 10%;
+}
+
+main div#miniature-related div#miniature-content section.topic img {
+    height: 100%;
+}
+
+main div#miniature-related div#miniature-content section.topic p {
+    margin-left: 5px;
+}
+
+main div#miniature-related button.bouton-rond {
+    position: absolute;
+    z-index: 4;
+    bottom: 0;
+    right: 15%;
+}
+
+main div#overlay {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gris-moyen);
+    opacity: 0.75;
+}
+
+main div#popup {
+    position: absolute;
+    z-index: 4;
+    top: 40%;
+    left: 30%;
+    width: 40%;
+    height: 20%;
+}
+
+main div#popup img#fermeture-popup {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    right: 15%;
+    width: 20%;
+    height: 20%;
+}
+
+main div#popup div#popup-content {
+    position: relative;
+    top: 10%;
+    bottom: 10%;
+    width: 100%;
+    height: 80%;
+    background-color: var(--gris-clair);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+footer#folder {
+    z-index: 3;
+    bottom: 0;
+    width: 75%;
+}
+
+.display-none {
+    display: none;
+}
+
 .keywords {
     flex-wrap: wrap;
 }
+
 
 .keywords #keyword-manage {
     font-weight: bold;
@@ -53,12 +200,4 @@ main#map {
 .keyword-item.k-selected {
     background-color: var(--bleu-fonce);
     color: white;
-}
-
-.display-none {
-    display: none;
-}
-
-.leaflet-map-pane .leaflet-tile-pane {
-    filter: brightness(92.5%);
 }
