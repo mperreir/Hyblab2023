@@ -127,6 +127,10 @@ header img,
     background-image: url('../img/utils/btn/btn-results-inv.svg');
 }
 
+#next16 {
+    background-image: url('../img/utils/btn/btn-guide.svg');
+}
+
 .next-btn {
     background-position: center center;
     background-size: cover;

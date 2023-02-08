@@ -237,7 +237,7 @@ function initRepsDep() {
     if (res6['nb_mise_en_demeure'] != 0) {
         let texts15 = document.getElementsByClassName("text15")
         for (let text of texts15) {
-            text.textContent = res6['nb_mise_en_demeure'] + " mises en demeure ont été prononcées à l’encontre des fermes-usines de " + dep + ". L’évolution de ce chiffre peut être surveillée grâce à la base de données Géorisques du ministère de la Transition écologique et de la cohésion des territoires. Disclose vous explique comment faire dans son Guide du lanceur d’enquêtes."
+            text.textContent = res6['nb_mise_en_demeure'] + " mises en demeure ont été prononcées à l’encontre des fermes-usines du " + dep + ". L’évolution de ce chiffre peut être surveillée grâce à la base de données Géorisques du ministère de la Transition écologique et de la cohésion des territoires. Disclose vous explique comment faire dans son Guide du lanceur d’enquêtes."
         }
     }
 
@@ -251,6 +251,18 @@ function initRepsDep() {
             display("s15_1")
             changeBackground('#121212')
         }
+    })
+
+    let next15_1 = document.getElementById("next15_1")
+    next15_1.addEventListener("click", () => {
+        display("s16")
+        changeBackground('aliceblue')
+    })
+
+    let next15_2 = document.getElementById("next15_2")
+    next15_2.addEventListener("click", () => {
+        display("s16")
+        changeBackground('aliceblue')
     })
 }
 
