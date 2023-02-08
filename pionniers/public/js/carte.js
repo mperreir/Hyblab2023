@@ -177,9 +177,70 @@ async function getMiniature(Id) {
 
 
 function displayMiniature(Id){
-    getMiniature(Id).then(r => {
-        console.log(r);
+    getMiniature(Id).then(p => {
+        console.log(p);
+        // Display the miniature related part
+        const miniature_related = document.querySelector("main div#miniature-related");
+        miniature_related.classList.remove("display-none");
+        // Retrieve the miniature content
+        const miniature_content = document.querySelector("main div#miniature-related div#miniature-content");
+        // Retrieve the font class of the miniature content
+        const font_class = getFontClass(translate(p.Topic));
+        // Create the associated HTML elements
+        const htmlString = `
+                    <section class="photo-case">
+                        <img draggable="false" alt="photo-profil" src="${p.URLImage}">
+                    </section>
+                    <section class="information-fiche flex-column justify-content-space-evenly">
+                        <section class="carte-identite flex-column align-items-center-flex-start ${font_class}">
+                            <p class="gras">${p.Name}</p>
+                            <p class="gras">${p.Age}</p>
+                        </section>
+                        <section class="entreprise-info">
+                            <p class="gras">${p.Status}</p>
+                            <p class="gras">${p.Company}</p>
+                            <p>${p.City}</p>
+                            <p>${p.MiniBio}</p>
+                        </section>
+                        <section class="keywords flex-row">
+                            <div class="keyword-item flex-row align-items-center">
+                                <p>#biodéchets</p>
+                            </div>
+                            <div class="keyword-item flex-row align-items-center">
+                                <p>#hydrogène</p>
+                            </div>
+                            <!-- Section qui va se remplir dans la suite de la fonction -->
+                        </section>
+                        <section class="topic flex-row align-items-center">
+                            <img src="../img/pictogrammes_themes/${translate(p.Topic)}.svg" alt="${p.Topic}">
+                            <p class="${font_class} gras">${capitalizeFirstLetter(p.Topic)}</p>
+                        </section>
+                    </section>
+        `;
+        // Update the miniature content inner HTML
+        miniature_content.innerHTML = htmlString;
+        // Retrieve the keywords section
+        const keywordSection = miniature_content.querySelector("section.keywords");
+        // Add the keywords (if any non empty keyword is present)
+        p.Keywords.split(';').forEach(k => {
+            if(k.trim() === '') {
+                return;
+            }
+            keywordSection.append(createKeywordItem(k));
+        });
     });
+}
+
+/**
+ * Creates a HTML keyword element from a string
+ * @param Keyword {string} the keyword
+ * @returns {ChildNode} Node HTML
+ */
+function createKeywordItem(Keyword) {
+    const htmlString = `<div class="keyword-item flex-row align-items-center">
+                            <p>#${Keyword}</p>
+                        </div>`;
+    return createElementFromHTML(htmlString);
 }
 
 
@@ -411,7 +472,7 @@ function onKeywordManage() {
 
 /*
   ----------------------------------------------------------------------------------------------------------------------
-  | Topic translation                                                                                                  |
+  | Utility functions                                                                                                  |
   ----------------------------------------------------------------------------------------------------------------------
  */
 /**
@@ -425,6 +486,27 @@ function translate(topic) {
     return topic;
 }
 
+/**
+ * Get the font class corresponding to the topic
+ * @param topic {string} The topic to get the font class
+ * @returns {string} The font class
+ */
+function getFontClass(topic) {
+    switch (topic) {
+        case 'alimentation' :
+            return 'orange-font';
+        case 'economie_circulaire' :
+            return 'caca-doie-font';
+        case 'energie' :
+            return 'vert-font';
+        case 'industrie' :
+            return 'turquoise-font';
+        case 'mobilite' :
+            return 'cyan-font';
+        case 'numerique' :
+            return 'bleu-clair-font';
+    }
+}
 
 /*
   ----------------------------------------------------------------------------------------------------------------------

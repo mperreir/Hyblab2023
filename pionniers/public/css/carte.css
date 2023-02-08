@@ -62,7 +62,7 @@ main div#miniature-related img#fermeture-miniature {
     position: absolute;
     z-index: 3;
     top: 0;
-    right: 20%;
+    right: 15%;
     width: 10%;
     height: 10%;
 }
@@ -89,11 +89,39 @@ main div#miniature-related div#miniature-content section.photo-case img {
     border-radius: 50px 50px 0 0;
 }
 
+main div#miniature-related div#miniature-content section.information-fiche {
+    height: 60%;
+    width: 80%;
+}
+
+main div#miniature-related div#miniature-content section.entreprise-info,
+main div#miniature-related div#miniature-content section.keywords,
+main div#miniature-related div#miniature-content section.topic {
+    font-size: 0.8em; /* Combiné au 0.5em du p dans general.css */
+}
+
+main div#miniature-related div#miniature-content section.topic {
+    border-radius: 500px;
+    background-color: var(--blanc-fond);
+    padding: 2% 7% 2% 2%;
+    width: min-content;
+    white-space: nowrap;
+    max-height: 10%;
+}
+
+main div#miniature-related div#miniature-content section.topic img {
+    height: 100%;
+}
+
+main div#miniature-related div#miniature-content section.topic p {
+    margin-left: 5px;
+}
+
 main div#miniature-related button.bouton-rond {
     position: absolute;
     z-index: 3;
     bottom: 0;
-    right: 20%;
+    right: 15%;
 }
 
 footer#folder {
