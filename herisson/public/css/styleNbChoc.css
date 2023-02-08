@@ -3,6 +3,7 @@ body
     background-color: #FBC5EB;
     font-family: 'Prompt', sans-serif;
     color : #0B6E5F;
+    margin: 0;
 }
 
 #nbChoc
@@ -24,7 +25,7 @@ div
 
 #texteExplication
 {
-    font-size: 60px;
+    font-size: 55px;
     margin-left : 1em;
     margin-right : 1em;
 }
@@ -32,7 +33,7 @@ div
 #texteDanger
 {
     font-size: 45px;
-    margin: 3em 5em 5em;
+    margin: 2.5em 5em 5em;
 }
 
 #nbDanger

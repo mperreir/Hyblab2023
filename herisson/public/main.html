@@ -10,29 +10,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <script src="js/scriptMain.js" defer></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
     <link rel="stylesheet" href="css/menu.css">
     <script src="js/menuPopup.js"></script>
 
 </head>
-<header>
-    <div id="iconeHeader">
-        <img src="img/logo_faunare.png" alt="logo" id="logo" style="position: absolute; top: 0; z-index: 2" width="450px">
-        <img src="img/menu.png" alt="menu" id="popUpNav" width="51" style="position: absolute; right: 50px; top: 55px; z-index: 2">
-    </div>
-    <div id="texteMenu">
-        <h1 class="menuTitre"> MENU </h1>
-        <h2 class="sousTitresMenu"> <a href="sources.html"> SOURCES SCIENTIFIQUES </a> </h2>
-        <h2 class="sousTitresMenu"> CONTACT </h2>
-        <h2 class="sousTitresMenu"> CRÉDITS </h2>
-        <hr class="ligneSeparation"/>
-        <p class="texteFinMenu">
-            Nous œuvrons tous ensemble pour préserver les animaux !
-        </p>
-    </div>
-</header>
 <body>
-
+    <header id="headerMenu" class="main"> </header>
     <div class="texte-intro">
         <p>
             Des animaux près de chez vous sont en danger, apprenez à les connaître pour mieux les protéger.
@@ -50,17 +36,20 @@
     </div>
     <div class="barres-recherche">
 <!--         <p id="text">Indiquez la commune ou le code postal</p>-->
-        <form class="search" id="searchCommune" action="nbChoc.html" method="get" name="RechercheCommune">
-            <input class="searchBar" type="text" name="searchCommune" placeholder="Nom de votre commune">
+        <form class="search" id="searchCommune" action="commune.html" method="get" name="RechercheCommune">
+            <input id="rechercheCommune" class="searchBar" type="text" name="searchCommune" placeholder="Nom de votre commune">
             <button class="bouton-recherche"> </button>
         </form>
+        <div id="autocompletionCom"></div>
 
-        <form class="search" action="animal.html" method="get" name="RechercheAnimal">
-                <input id="textbox_id" class="searchBar" type="text" name="searchAnimal" placeholder="Nom de l'animal">
+        <form class="search" id="searchAnimal" action="animal.html" method="get" name="RechercheAnimal">
+                <input id="rechercheAnimal" class="searchBar" type="text" name="searchAnimal" placeholder="Nom de l'animal">
             <button class="bouton-recherche"> </button>
         </form>
+        <div id="autocompletionAni"></div>
 
-<!--         <div style="display: flex; align-items: center;">-->
+
+        <!--         <div style="display: flex; align-items: center;">-->
 <!--             <label style="margin-right: auto;" for="switch">Code Postal</label>-->
 <!--             <label id="switch">-->
 <!--                 <input type="checkbox">-->

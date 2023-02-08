@@ -60,7 +60,7 @@ header
 }
 
 #texteMenu {
-    transition: 1.5s;
-    visibility: hidden;
-    opacity: 0;
+    transition: 1s;
+    display: none;
+    left: 100%;
 }
