@@ -502,6 +502,12 @@ folderProfilEnr.addEventListener('click', () => {
 // AU CHARGEMENT DE LA PAGE, RECUPERATION DES VALEUR POUR REMPLIR LES DIFFERENTES COMPOSANTES DE LA PAGE
 document.addEventListener("DOMContentLoaded", async function () {
 
+    const apropos = document.querySelector('#petit-rond');
+    apropos.addEventListener('click', () => {
+        window.localStorage.setItem('pagePrecedente', "swipe");
+        window.location.href = './apropos.html';
+    });
+
     const themesCheckboxes = document.querySelectorAll('#theme-selector ul li');
 
     // ------------ THEMES ------------
