@@ -195,9 +195,9 @@ SLIDE ACCUEIL
 
 #backgroundFirstSlide{
     opacity: 35%;
-    margin-top: 42%;
+    margin-top: 70%;
     margin-left: 11%;
-    width: 169%;
+    width: 145%;
 }
 
 
@@ -219,10 +219,10 @@ SLIDE ACCUEIL
 #presentation-jeu {
     font-size: 25%;
     position: absolute;
-    top: 25%;
-    width: 50%;
-    left: 10%;
-
+    top: 22%;
+    width: 86%;
+    left: 6%;
+    text-align: justify;
 
 }
 
