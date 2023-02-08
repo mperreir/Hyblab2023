@@ -15,6 +15,8 @@
     <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
   <script src="../js/change_svg_color.js" defer></script>
   <script src="../js/slide1.js" defer></script>
   <script src="../js/slide2.js" defer></script>
@@ -74,10 +76,12 @@
                 </header>
                 <main>
                     <div class="carousel" id="carousel"></div>
-                    <input type="button" value="<" id="prev">
-                    <input type="button" value=">" id="next">
-                    <p id="carousel-text"></p>
 
+                    <div id="legend-carousel">
+                        <input type="button" value="<" id="prev">
+                        <p id="carousel-text"></p>
+                        <input type="button" value=">" id="next">
+                    </div>
                 </main>
             </section>
         </main>

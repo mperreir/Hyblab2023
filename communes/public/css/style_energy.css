@@ -15,21 +15,34 @@ body{
     font-family: "Poppins", sans-serif;
 }
 .carousel{
-    align-content: center;
-    position: relative;
     height: 200px;
+    margin-top: 5%;
 }
+
 .carousel-items{
     width: 30%;
 }
-#carousel-text{
-    text-align: center;
-    margin-top: 40%;
 
+#legend-carousel{
+    display: flex;
+    margin-bottom: 5%;
+    align-items: center;
+    justify-content: center;
 }
+
+#legend-carousel > * {
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+}
+
+#next, #prev{
+    width: 10%;
+}
+
 h1{
-    font-size:100%;
-    margin:0;
+    font-size: 2em;
+    margin-top: 5%;
     font-weight: 600;
     color: #e81313;
 }
@@ -37,8 +50,24 @@ h1{
 h2{
     font-weight: 400;
     font-size: 1.6em;
+    margin-top: 1em;
 }
 
+#third-slide object {
+    width: fit-content;
+}
+
+#logo-environment{
+    width: 45%;
+}
+
+p{
+    font-size: 1.2em;
+}
+
+#carousel-text{
+    font-size: 2em;
+}
 /* -------------- Loader --------------*/
 #loader{
     z-index: 2;
@@ -106,12 +135,12 @@ h2{
     box-sizing: border-box; /* So that padding is not added to width (and width: 100% works) */
     /*width: 100%; /* could also use  width: calc(100% - 2em) if not using box-sizing */
     border-radius: 20px;
-    width: 96%;
+    width: 90%;
     font-size: 20%;
     text-align: center;
     padding: 1em 1em;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-bottom: 15%;
     background-color: #6e0c0c;
     box-shadow: -0.5em 0.5em 0 0 #000000;
@@ -218,8 +247,8 @@ body{
 }
 
 #map {
-    margin-top: 10px;
-    height: 350px;
+    /*margin-top: 10px;
+    height: 350px;*/
 }
 
 #video-container {
