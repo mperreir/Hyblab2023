@@ -708,7 +708,7 @@ Derniere slide
 
 #result {
     position: relative;
-    top: 10%;
+    top: 19%;
     font-size: xx-large;
     justify-content: center;
     text-align: center;
@@ -718,7 +718,7 @@ Derniere slide
 
 #containerEnd {
     position: absolute;
-    top: 20%;
+    top: 29%;
 }
 
 
@@ -766,10 +766,10 @@ slide entree texte
 .recap{
     font-size: 30%;
     position: absolute;
-    top: 15%;
-    width: 60%;
+    top: 22%;
+    width: 76%;
     text-align: center;
-    
+    left: 14%;
 
 }
 
@@ -831,4 +831,10 @@ GREENTA
 
 #photo-table th {
     width: 50vh;
+}
+
+
+.nuage{
+    position: absolute;
+    height: 30%;    
 }
