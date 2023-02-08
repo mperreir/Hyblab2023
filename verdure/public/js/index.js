@@ -4,6 +4,8 @@ let IndicThermo = 85;
 let IndicMoney = 80;
 let IndicHappy = 50;
 
+let alreadyload = 0;
+
 let next_Question = 1
 
 
@@ -16,7 +18,7 @@ let swiper = new Swiper("#mySwiper", {
 });
 
 swiper.on("slideChange", function () {
-  console.log(swiper.activeIndex);
+
   switch( swiper.activeIndex ) {
    
     case 0:
@@ -109,8 +111,12 @@ swiper.on("slideChange", function () {
       else(swiper.slideTo(15,1))
     break;
 
-    case 15: 
-      initEndSlide();
+    case 15:
+      if(alreadyload===0){
+        alreadyload++;
+        initEndSlide();
+      }
+      else(swiper.allowSlidePrev=false)
     break;
 
     default:

@@ -44,25 +44,22 @@ const initEndSlide = function () {
 
 async function loadTextindic(Happy,Money,Thermo){
 
-    console.log(Thermo);
-    console.log(Money);
-    console.log(Happy);
 
     let pThermo = document.getElementById("final-thermo");
     let pMoney = document.getElementById('final-money');
     let pHappy = document.getElementById('final-happy');
 
-    if( 70 < Thermo){pThermo.innerHTML = "Malheuresement la température de votre ville n'a pas baissé!";}
-    else if( 50 < Thermo){pThermo.innerHTML = "C'est encourageant, la température de votre ville a légérement baissé! Continuez dans cette voix";}
-    else{pThermo.innerHTML = "Bravo, la température à fortement chuté dans votre ville ! Vous êtes engagé pour sauver le climat";}
+    if( 70 < Thermo){pThermo.innerHTML = "Malheuresement la température de votre ville n'a pas baissé !";}
+    else if( 50 < Thermo){pThermo.innerHTML = "C'est encourageant, la température de votre ville a légèrement baissé ! Continuez dans cette voix.";}
+    else{pThermo.innerHTML = "Bravo, la température a fortement chuté dans votre ville ! Vous êtes engagé pour sauver le climat";}
 
-    if( 70 < Money){pMoney.innerHTML = "Il vous reste beaucoup d'argent. Peut-être auriez vous pu dépenser un peu plus pou réaliser des choix impactants";}
-    else if( 50 < Money){pMoney.innerHTML = "Vous avez su dépenser de façon à garder des dépenses équilibrées. Félications !";}
+    if( 70 < Money){pMoney.innerHTML = "Il vous reste beaucoup d'argent. Peut-être auriez-vous pu dépenser un peu plus pour réaliser des choix impactants";}
+    else if( 50 < Money){pMoney.innerHTML = "Vous avez su dépenser de façon à garder des dépenses équilibrées. Félicitations !";}
     else{pMoney.innerHTML = "Attention ! Vous avez beaucoup dépensé. Mais finalement n'est ce pas une étape obligatoire dans cette lutte ?";}
 
-    if( 70 < Happy){pHappy.innerHTML = "Félicitation! Votre population est très heureuse.";}
-    else if( 50 < Happy){pHappy.innerHTML = "Vous avez su faire les bons choix pour garder une population satisfaite";}
-    else{pHappy.innerHTML = "Attention ! Vos choix ont beaucoup inpacté votre population. Il ne faut pas que cela s'aggrave dans le futur";}
+    if( 70 < Happy){pHappy.innerHTML = "Félicitations ! Votre population est très heureuse.";}
+    else if( 50 < Happy){pHappy.innerHTML = "Vous avez su faire les bons choix pour garder une population satisfaite.";}
+    else{pHappy.innerHTML = "Attention ! Vos choix ont beaucoup impacté votre population. Il ne faut pas que cela s'aggrave dans le futur.";}
 }
 
 const toggleDropdownShareMenu = function () {

@@ -11,7 +11,7 @@ const initSlideQuestion4 = async function(currentQuestion){
   let city = document.querySelector('#city'+currentQuestion)
 
   var logo2 = document.querySelector('#logoQ4');
-  /*******
+      /*******
      * GREEN Ta place
      */
   
@@ -32,7 +32,7 @@ const initSlideQuestion4 = async function(currentQuestion){
   setTimeout(()=> {
    question.style.opacity = 100;
    city.style.top = "23%";
-},1000
+},500
  )
 
 // questions
