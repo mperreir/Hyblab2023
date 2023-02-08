@@ -22,7 +22,7 @@
 .ligneSeparation
 {
     width: 70%;
-    border: 3px solid #FBC5EB;
+    border: 0.075em solid #FBC5EB;
 }
 
 #texteMenu
@@ -56,7 +56,7 @@ aside
 
 header
 {
-    height: 1px;
+    height: 0.01em;
 }
 
 #texteMenu {

@@ -2,6 +2,7 @@ body
 {
     background-color: #FBC5EB;
     margin: 0;
+    position: relative;
     overflow: hidden;
 }
 
@@ -9,7 +10,8 @@ body
 {
     text-align: center;
     margin: 5em 3em 3em;
-    font-size: 40px;
+    /*margin: 10vh 9vw 9vw;*/
+    font-size: 2.5em;
     color: #FFF8F1;
     font-weight: 400;
     font-family: 'Prompt', sans-serif;
@@ -18,8 +20,8 @@ body
 .texte-Elie
 {
     text-align: right;
-    width: 600px;
-    font-size: 55px;
+    width: 11em;
+    font-size: 3.5em;
     color: #0B6E5F;
     font-family: 'Covered By Your Grace', cursive;
 }
@@ -35,8 +37,8 @@ body
 }
 
 .mascotte {
-    top: 400px;
-    right: -250px;
+    top: 25em;
+    right: -15em;
     position: absolute;
     z-index: -1;
 }
@@ -57,7 +59,7 @@ body
     margin-left: auto;
     margin-right: auto;
     height: 8em;
-    padding-top: 10px;
+    padding-top: 0.75em;
     padding-bottom: 0;
 }
 
@@ -70,17 +72,27 @@ body
 {
     width: 80%;
     border: none;
-    padding-top: 20px;
+    padding-top: 0.3em;
     box-sizing: border-box;
     background: none;
 }
 
-.searchBar::placeholder, input[type="text"]
+.searchBar::placeholder
 {
     font-weight: 500;
     font-family: 'Prompt', sans-serif;
     color : #0B6E5F;
-    font-size: 50px;
+    margin-left: -1em;
+    opacity: 1;
+}
+
+input[type="text"]
+{
+    font-weight: 500;
+    font-family: 'Prompt', sans-serif;
+    color : #0B6E5F;
+    font-size: 3.5em;
+    margin-left: -1em;
     opacity: 1;
 }
 
@@ -89,7 +101,6 @@ body
     font-weight: 500;
     font-family: 'Prompt', sans-serif;
     color : #0B6E5F;
-    font-size: 50px;
     opacity: 0.6;
     -webkit-transition: opacity 0.2s linear;
 }
@@ -101,17 +112,16 @@ body
     background-color: transparent;
     border: none;
     cursor: pointer;
-    width: 50px;
-    height: 70px;
+    width: 6em;
     position: absolute;
-    padding-top: 115px;
+    padding-top: 9em;
 }
 
 .autoItemAni, .autoItemCom
 {
     background-color: transparent;
     border: none;
-    height: 70px;
+    height: 1.75em;
     font-size: 3em;
     width: 100%;
     font-family: 'Prompt', sans-serif;
@@ -124,7 +134,7 @@ body
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 75px;
-    margin-top: -75px;
-    height: 300px;
+    padding-top: 5em;
+    margin-top: -5em;
+    height: 20em;
 }
