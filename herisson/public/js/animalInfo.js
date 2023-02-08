@@ -21,6 +21,7 @@ async function animalInfo(animal) {
     const imgDiv = document.getElementById("picture-div")
     const img = document.getElementById("animal-picture");
     const copyright = document.getElementById("copyright");
+    const tipsButton = document.getElementById("fleche2");
 
     if(animal.length > 22){
         animalName.style.fontSize = '4vh';
@@ -29,7 +30,11 @@ async function animalInfo(animal) {
     }
     animalName.textContent = animal.toUpperCase();
     desc.textContent = "Les " + dataTest["listCities"][0]["categorie"].toLowerCase();
-    menace.textContent = dataTest["listCities"][0]["enjeu_conservation"].toUpperCase();
+    if (dataTest["listCities"][0]["enjeu_conservation"] == null){
+        menace.textContent = "INCONNU"
+    } else {
+        menace.textContent = dataTest["listCities"][0]["enjeu_conservation"].toUpperCase();
+    }
 
     // add an image as a background of the map button
     map.style.backgroundImage = "url('./img/map.png')";
@@ -51,5 +56,11 @@ async function animalInfo(animal) {
     imgDiv.style.width = "auto";
     imgDiv.style.zIndex = "200";
     copyright.textContent = dataTest["copyright"];
+
+    tipsButton.classList.add("btn", "btn-primary", "btn-lg", "btn-block");
+    tipsButton.onclick = function () {
+        localStorage.setItem("category", dataTest["listCities"][0]["categorie"])
+        window.location.href = "commentAider.html"
+    }
 
 }

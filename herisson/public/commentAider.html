@@ -14,25 +14,14 @@
     <!-- HEADER -->
     <link rel="stylesheet" href="css/menu.css">
     <script src="js/menuPopup.js"></script>
+    <script src="js/tips.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
 </head>
 <body>
 <header id="headerMenu" class="main"> </header>
 
 <div class="swiper-container horizontal-slider">
-    <div class="swiper-wrapper">
-        <!--div class="swiper-slide" id="mammiferes">
-            <p class="categorie" >AIDEZ LES MAMMIFERES</p>
-            <p class="conseil">Ceci est le titre du conseil</p>
-            <p class="description">Ceci est une description. Elle indique comment aider les mammifères. Merci de respecter ces conseils à la lettre.</p>
-            <a class="action">Choisissez votre action</a>
-        </div>
-        <div class="swiper-slide" id="test">
-            <p class="categorie" >AIDEZ LES OISEAUX</p>
-            <p class="description">Ceci est une description. Elle indique comment aider les mammifères. Merci de respecter ces conseils à la lettre.</p>
-            <a class="action">Choisissez votre action</a>
-        </div-->
-    </div>
+    <div class="swiper-wrapper"></div>
     <!-- Arrows -->
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
@@ -46,79 +35,7 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 <script>
-    async function createPageConseil() {
-
-        async function getData(dbPath) {
-            const response = await fetch(dbPath)
-            return await response.json()
-        }
-
-        const donnees = await getData("data/tipsDB.json")
-
-        const name = 'Chiroptères'
-
-        const dictionnaire = donnees[name]
-
-        console.log(dictionnaire)
-
-        const wrapper = document.getElementsByClassName("swiper-wrapper")[0]
-
-        for (let conseil in dictionnaire) {
-
-            // On créé l'objet HMTL pour le slide
-            let slide = document.createElement("div")
-            // Changer l'id
-            slide.id = name
-            // Changer la classe
-            slide.className = "swiper-slide"
-
-            let titreCategorie = document.createElement("p")
-            titreCategorie.className = "categorie"
-            titreCategorie.innerText = "AIDEZ LES " + name.toUpperCase()
-
-            let titreConseil = document.createElement("p")
-            titreConseil.className = "conseil"
-
-            let description = document.createElement("p")
-            description.className = "description"
-
-            let action = document.createElement("p")
-            action.className = "action"
-            action.innerText = "Choisissez votre action"
-
-            // Pour chaque clé conseil
-            let desc = dictionnaire[conseil]
-
-            titreConseil.innerText = conseil
-            description.innerText = desc
-
-            slide.appendChild(titreCategorie)
-            slide.appendChild(titreConseil)
-            slide.appendChild(description)
-            slide.appendChild(action)
-
-            wrapper.appendChild(slide)
-        }
-
-        // Slider horizontal
-        var horizontalSlider = new Swiper('.horizontal-slider', {
-            loop: true,
-            nested: true,
-            navigation: {
-                prevEl: '.swiper-button-prev',
-                nextEl: '.swiper-button-next',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
-
-    }
-
-    createPageConseil();
-
-
-
+    const category = localStorage.getItem("category");
+    createPageConseil(category);
 </script>
 </html>

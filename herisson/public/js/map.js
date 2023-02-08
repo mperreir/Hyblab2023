@@ -8,19 +8,16 @@ const createMap = async function (taxon) {
     }).addTo(map);
 
     async function getAnimalData(taxon) {
-        const dataAnimal = await
-        fetch(`http://127.0.0.1:8080/herisson/api/animal/${taxon}`)
-            .then(response => response.json())
-            .then(data => {
-                return data.filteredData[taxon];
-            }
-            );
-        return dataAnimal;
+        return await
+            fetch(`http://127.0.0.1:8080/herisson/api/animal/${taxon}`)
+                .then(response => response.json())
+                .then(data => {
+                        return data.filteredData[taxon];
+                    }
+                );
     }
 
     const animalData = await getAnimalData(taxon);
-    console.log(animalData);
-    let geojson;
 
     function getColor(d) {
         return d > 500 ? '#661852' :

@@ -14,6 +14,7 @@
     <!-- HEADER -->
     <link rel="stylesheet" href="css/menu.css">
     <script src="js/menuPopup.js"></script>
+    <script src="js/commune.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
 </head>
 
@@ -35,67 +36,7 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 <script>
-
-    const wrapper = document.getElementsByClassName("swiper-wrapper")[0]
-
-    // Exemple avec commune nommée 'Laluque'
-    dataCommune = {"Laluque":{"Amphibiens":{"774683":{"cd_ref":774683,"lb_nom":"Hyla molleri","lb_auteur":"Bedriaga, 1889","nom_vern":"Rainette ibérique (La)","enjeu_conservation":"Majeur","presence_regionale":"Présence certaine","nb_obs":2}},"Chiroptères":{"60295":{"cd_ref":60295,"lb_nom":"Rhinolophus ferrumequinum","lb_auteur":"(Schreber, 1774)","nom_vern":"Grand rhinolophe","enjeu_conservation":"Fort","presence_regionale":"Présence certaine","nb_obs":141},"60457":{"cd_ref":60457,"lb_nom":"Nyctalus lasiopterus","lb_auteur":"(Schreber, 1780)","nom_vern":"Grande Noctule","enjeu_conservation":"Majeur","presence_regionale":"Présence certaine","nb_obs":657},"60468":{"cd_ref":60468,"lb_nom":"Nyctalus noctula","lb_auteur":"(Schreber, 1774)","nom_vern":"Noctule commune","enjeu_conservation":"Fort","presence_regionale":"Présence certaine","nb_obs":336}}}}
-
-    console.log(Object.keys(dataCommune)[0])
-
-    for (let categorie in dataCommune[Object.keys(dataCommune)[0]]) {
-        // Pour chaque catégorie d'animaux dans le dictionnaire de la ville
-        // Categorie est la clé du dictionnaire dataCommune
-
-        let slide = document.createElement("div")
-        slide.className = "swiper-slide"
-        slide.id = categorie
-
-        // ----- TITRE COMMUNE -----
-        let nomCommune = document.createElement("h1")
-        if (categorie === "Oiseaux" || categorie === "Chiroptères") {
-            nomCommune.className = "commune green"
-        }
-        else {
-            nomCommune.className = "commune white"
-        }
-        nomCommune.innerText = Object.keys(dataCommune)[0].toUpperCase()
-
-        // ----- BOUTON -----
-        let bouton = document.createElement("button")
-        bouton.className = "button"
-
-        let boutonText = document.createElement("span")
-        boutonText.className = "decouvrir"
-        boutonText.innerText = "Découvrir les " + categorie
-
-        bouton.appendChild(boutonText)
-
-        let groupe = document.createElement("a")
-        groupe.className = "groupe"
-        groupe.innerText = "Choisissez votre groupe"
-
-        slide.appendChild(nomCommune)
-        slide.appendChild(bouton)
-        slide.appendChild(groupe)
-
-        wrapper.appendChild(slide)
-    }
-
-    // Slider horizontal
-    var horizontalSlider = new Swiper('.horizontal-slider', {
-        loop: true,
-        nested: true,
-        navigation: {
-            prevEl: '.swiper-button-prev',
-            nextEl: '.swiper-button-next',
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-    });
-
+    createCommunePage("Bordeaux");
 </script>
 </body>
 </html>
