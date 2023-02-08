@@ -2,13 +2,11 @@
 
 // TODO: WHEN SELECTION ON THE PREVIOUS PAGE IS DONE, DISPLAY THE MAP WITH THE SELECTED TOPICS
 //
-// TODO : ne proposer que des mots clés correspondant aux topics selectionnés
-//
-// TODO : interaction sur les points pour afficher la miniature
-//
 // TODO : interaction de la miniature avec le swipe dans le dossier
 //
 // TODO : interdire la suppression des topics selectionnés s'il n'en reste plus qu'un
+//
+// TODO : si l'utilisateur accède direct à la carte, cocher tous les topics par défaut
 
 /*
   ----------------------------------------------------------------------------------------------------------------------
@@ -189,7 +187,8 @@ function displayMiniature(Id){
         // Retrieve the font class of the miniature content
         const font_class = getFontClass(translate(p.Topic));
         // Create the associated HTML elements
-        const htmlString = `
+        // Update the miniature content inner HTML
+        miniature_content.innerHTML = `
                     <section class="photo-case">
                         <img draggable="false" alt="photo-profil" src="${p.URLImage}">
                     </section>
@@ -219,8 +218,6 @@ function displayMiniature(Id){
                         </section>
                     </section>
         `;
-        // Update the miniature content inner HTML
-        miniature_content.innerHTML = htmlString;
         // Retrieve the keywords section
         const keywordSection = miniature_content.querySelector("section.keywords");
         // Add the keywords (if any non empty keyword is present)
@@ -287,6 +284,15 @@ function onTopicCheck(event) {
         topicImg.classList.remove("unchecked");
         selectedTopics.push(topicString);
     } else {
+        // If the selected topics array has length 1, do not remove the topic
+        if (selectedTopics.length === 1) {
+            // Display the overlay
+            const overlay = document.querySelector("main div#overlay");
+            overlay.classList.remove("display-none");
+            // Display the popup
+            const popup = document.querySelector("main div#popup");
+            popup.classList.remove("display-none");
+        }
         topicImg.classList.add("unchecked");
         // Splice the array to remove the item (only if the item is found)
         const indexToRemove = selectedTopics.indexOf(topicString);
@@ -548,4 +554,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Keywords management
     const keywordManageButton = document.querySelector('section.keywords #keyword-manage');
     keywordManageButton.addEventListener('click', onKeywordManage);
+    // Associate the close button to the close function for the popup
+    const closeButton = document.querySelector('main div#popup img#fermeture-popup');
+    closeButton.addEventListener('click', () => {
+        // Undisplay the overlay
+        document.querySelector('main div#overlay').classList.add('display-none');
+        // Undisplay the popup
+        document.querySelector('main div#popup').classList.add('display-none');
+    });
 });

@@ -135,6 +135,40 @@ main div#overlay {
     opacity: 0.75;
 }
 
+main div#popup {
+    position: absolute;
+    z-index: 4;
+    top: 40%;
+    left: 30%;
+    width: 40%;
+    height: 20%;
+}
+
+main div#popup img#fermeture-popup {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    right: 15%;
+    width: 20%;
+    height: 20%;
+}
+
+main div#popup div#popup-content {
+    position: relative;
+    top: 10%;
+    bottom: 10%;
+    width: 100%;
+    height: 80%;
+    background-color: var(--gris-clair);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
 footer#folder {
     z-index: 3;
     bottom: 0;
