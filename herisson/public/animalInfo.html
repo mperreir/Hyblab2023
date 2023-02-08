@@ -19,7 +19,8 @@
 </header>
 <main>
   <script>
-    animalInfo("Noctule commune")
+    const animal = localStorage.getItem("animal");
+    animalInfo(animal);
   </script>
   <h1 id="animal-name"></h1>
   <h5 id="desc">Les </h5>

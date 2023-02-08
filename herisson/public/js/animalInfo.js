@@ -2,7 +2,7 @@ async function animalInfo(animal) {
     /*function to get the datas of a given animal */
     async function getData(taxon) {
         return await
-            fetch(`https://hyblab.polytech.univ-nantes.fr/herisson/api/animal/${taxon}`)
+            fetch(`http://127.0.0.1:8080/herisson/api/animal/${taxon}`)
                 .then(response => response.json())
                 .then(data => {
                         return data.filteredData[taxon];
@@ -23,11 +23,13 @@ async function animalInfo(animal) {
     const copyright = document.getElementById("copyright");
     const tipsButton = document.getElementById("fleche2");
 
-    if(animal.length > 22){
+    if(animalName.length > 22){
         animalName.style.fontSize = '4vh';
-    } else if(animal.length > 27){
+    }
+    else if(animalName.length > 27){
         animalName.style.fontSize = '3.5vh';
     }
+
     animalName.textContent = animal.toUpperCase();
     desc.textContent = "Les " + dataTest["listCities"][0]["categorie"].toLowerCase();
     if (dataTest["listCities"][0]["enjeu_conservation"] == null){
