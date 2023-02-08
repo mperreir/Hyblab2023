@@ -143,10 +143,27 @@ function getFontClass(topic) {
 
 function ajouteTheme(theme) {
     themeSelected.push(theme);
+    let ancienStorage = window.localStorage.getItem("themes");
+    let nvxStorage = ancienStorage+","+theme;
+    window.localStorage.setItem("themes", nvxStorage);
 }
 
 function supprimeTheme(theme) {
     themeSelected.splice(themeSelected.indexOf(theme), 1);
+    let ancienStorage = window.localStorage.getItem("themes");
+    let StorageFiltre = ancienStorage.split(",");
+    let nvxStorage;
+    StorageFiltre.forEach( (t) =>{
+        if(t !== theme){
+            console.log(theme);
+            if (nvxStorage === undefined){
+                nvxStorage = t;
+            }else {
+                nvxStorage = nvxStorage + "," + t;
+            }
+        }
+    })
+    window.localStorage.setItem("themes", nvxStorage);
 }
 
 /**

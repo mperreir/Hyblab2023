@@ -1,13 +1,13 @@
 'use strict';
 
-const app = require( 'express' )();
+const app = require('express')();
 const sheet_scrapper = require('./sheet_scrapper');
 
 
 /**
  * @api {get} Get all used keywords
  */
-app.get('/map/keywords/:feed/:circular_economy/:energy/:industry/:mobility/:digital', function ( req, res ) {
+app.get('/map/keywords/:feed/:circular_economy/:energy/:industry/:mobility/:digital', function (req, res) {
     sheet_scrapper.readJSONFromServerFile().then(data => {
         // Filter data to only keep convenient fields
         data.values = data.values.map(row => {
@@ -59,7 +59,7 @@ app.get('/map/keywords/:feed/:circular_economy/:energy/:industry/:mobility/:digi
 /**
  * @api {get} Get all geographical information of entrepreneurs matching the requested topics
  */
-app.get('/map/topics/:feed/:circular_economy/:energy/:industry/:mobility/:digital', function ( req, res ) {
+app.get('/map/topics/:feed/:circular_economy/:energy/:industry/:mobility/:digital', function (req, res) {
     sheet_scrapper.readJSONFromServerFile().then(data => {
         // Filter data to only keep convenient fields
         data.values = data.values.map(row => {
@@ -91,7 +91,7 @@ app.get('/map/topics/:feed/:circular_economy/:energy/:industry/:mobility/:digita
 /**
  * @api {get} Get the miniature of a specific entrepreneur by its id
  */
-app.get('/miniature/:id', function ( req, res ) {
+app.get('/miniature/:id', function (req, res) {
     sheet_scrapper.readJSONFromServerFile().then(data => {
         // Filter data to only keep convenient fields
         data.values = data.values.map(row => {
@@ -118,8 +118,7 @@ app.get('/miniature/:id', function ( req, res ) {
         if (data.values.length === 0) {
             data.values = {};
             res.json(data.values);
-        }
-        else {
+        } else {
             res.json(data.values[0]);
         }
     });
@@ -129,7 +128,7 @@ app.get('/miniature/:id', function ( req, res ) {
 /**
  * @api {get} Get all miniatures of entrepreneurs matching the requested topics
  */
-app.get('/miniature/topics/:feed/:circular_economy/:energy/:industry/:mobility/:digital', function ( req, res ) {
+app.get('/miniature/topics/:feed/:circular_economy/:energy/:industry/:mobility/:digital', function (req, res) {
     sheet_scrapper.readJSONFromServerFile().then(data => {
         // Filter data to only keep convenient fields
         data.values = data.values.map(row => {
@@ -166,13 +165,14 @@ app.get('/miniature/topics/:feed/:circular_economy/:energy/:industry/:mobility/:
 /**
  * @api {get} Get the profile of a specific entrepreneur by its id
  */
-app.get('/profile/:id', function ( req, res ) {
+app.get('/profile/:id', function (req, res) {
     sheet_scrapper.readJSONFromServerFile().then(data => {
         // Filter data to only keep convenient fields
         data.values = data.values.map(row => {
             return {
                 "Id": row[0].toString().trim(),
                 "ExactAddress": row[1].toString().trim(),
+                "City": row[6].toString().trim(),
                 "Name": row[4].toString().trim(),
                 "Company": row[5].toString().trim(),
                 "Age": row[7].toString().trim(),
@@ -196,8 +196,7 @@ app.get('/profile/:id', function ( req, res ) {
         if (data.values.length === 0) {
             data.values = {};
             res.json(data.values);
-        }
-        else {
+        } else {
             res.json(data.values[0]);
         }
     });
