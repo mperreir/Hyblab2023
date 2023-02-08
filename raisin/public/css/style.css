@@ -735,16 +735,16 @@ img.button-next {
 #button-resume {
     color: white;
     position:absolute;
-    right : 5%;
-    bottom: 10%;
+    bottom: 20%;
+    right: 5%;
     cursor : pointer;
 }
 
 #button-restart {
     color: white;
     position:absolute;
-    left : 5%;
     bottom: 10%;
+    right: 5%;
     cursor : pointer;
 }
 
