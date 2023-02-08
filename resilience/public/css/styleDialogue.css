@@ -20,9 +20,11 @@ h1 {
 
     border-top: 1px solid #000000;
 }
+
 #messages {
     margin-bottom: 5rem;
 }
+
 #head {
     display: flex;
     justify-content: space-between;
@@ -30,14 +32,18 @@ h1 {
 
 
 .name {
-    padding: 1.5em 1.5em;
-    font-size: 1.25rem;
+    padding: 0.5em 0.75em;
+    font-size: 1rem;
     color: black;
     font-weight: bold;
-    margin-right: 0.5em;
+    margin: 2%;
+    border-radius: 1.5rem;
+
+    border: 1px solid #000000;
+    background-color: White;
 }
 
-#messages > * {
+#messages>* {
     display: flex;
     justify-content: space-between;
 
@@ -47,13 +53,18 @@ h1 {
 
 .message {
     max-width: 30em;
-    
+
     padding: 0.5em 0.75em;
     font-size: 0.2em;
     bottom: 1rem;
     width: 75%;
     margin-bottom: 0.5rem;
+
+    border: 1px solid #000000;
+    background-color: White;
+    color: black;
 }
+
 .choice {
     max-width: 30em;
     padding: 0.5em 0.75em;
@@ -67,7 +78,8 @@ h1 {
     margin-right: 8%;
 }
 
-.choice:hover, .choice:focus{
+.choice:hover,
+.choice:focus {
     background-color: red;
 }
 
@@ -78,11 +90,6 @@ h1 {
 }
 
 .right {
-
-    border: 1px solid #000000;
     float: right;
-    background-color: White;
-    color: black;
     margin-right: 8%;
 }
-
