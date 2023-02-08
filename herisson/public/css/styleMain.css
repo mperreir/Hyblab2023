@@ -27,8 +27,8 @@ body
 
 #elie
 {
+    width: 93vw;
     height: 100vh;
-    /*width: 92.5vw;*/
 }
 
 .texte-Elie p
@@ -38,10 +38,10 @@ body
 
 .mascotte {
     /*bottom: -400px;*/
-    right: -22vw;
+    /*right: -250vw;*/
     bottom: -25vh;
-    /*right: -22vw;*/
-    position: absolute;
+    right: -22vw;
+    position: fixed;
     z-index: -1;
 }
 
@@ -54,7 +54,7 @@ body
 #ligneDialogue
 {
     width: 55vw;
-    /*height: 2vh;*/
+    height: 2vh;
 }
 
 .search
@@ -119,8 +119,8 @@ input[type="text"]
     background-color: transparent;
     border: none;
     cursor: pointer;
-    width: 6em;
-    height: 6em;
+    width: 10vw;
+    height: 8vh;
     position: absolute;
     padding-top: 7vh;
 }
