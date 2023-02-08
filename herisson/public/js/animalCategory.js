@@ -13,7 +13,6 @@ async function animalCategoryJS() {
 
     /*call it*/
     const animalsData = await getAllAnimals(db);
-    console.log(animalsData);
 
     /*  main page */
     const footercontainer = document.getElementById("footerText")
@@ -59,7 +58,7 @@ async function animalCategoryJS() {
 
     /* pop-up */
 
-    async function getInfoPage(animal) {
+    async function getInfoPage(animal, commune) {
         async function getAnimalData(dbPath) {
             const response = await fetch(dbPath);
             const data1 = await response.json();
@@ -68,7 +67,6 @@ async function animalCategoryJS() {
 
         /*call it*/
         const animalData = await getAnimalData(dbAdd);
-        console.log(animalData);
 
         const animalName = document.getElementById("animal-name");
         const desc = document.getElementById("desc");
@@ -86,7 +84,7 @@ async function animalCategoryJS() {
             animalName.style.fontSize = '3.5vh';
         }
         animalName.textContent = animal.toUpperCase();
-        desc.textContent = "Les " + animalData["listCities"][0]["categorie"].toLowerCase();
+        desc.textContent = "Les " + animalData["listCities"][0]["categorie"].toLowerCase() + " de " + commune;
         if (animalData["listCities"][0]["enjeu_conservation"] == null){
             menace.textContent = "INCONNU"
         } else {
@@ -124,8 +122,7 @@ async function animalCategoryJS() {
             buttons.item(i).addEventListener("click", function(){
                 mainDiv.style.display = "none";
                 popDiv.style.display = "block";
-
-                getInfoPage(buttons.item(i).id);
+                getInfoPage(buttons.item(i).id, commune);
             });
         }
     }
