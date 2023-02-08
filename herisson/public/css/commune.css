@@ -3,6 +3,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: #FBC5EB;
 }
 
 .swiper-wrapper {
@@ -33,34 +34,40 @@ body {
     color : #0B6E5F;
 }
 
-
-#oiseaux-nicheurs {
-    background-image: url("../img/decors-mascotte-oiseauxnicheurs.png");
+.swiper-slide {
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-#rhopalocères {
+#Oiseaux {
+    background-image: url("../img/decors-mascotte-oiseaux.png");
+}
+
+#Rhopalocères {
     background-image: url("../img/decors_rhopaloceres.png");
 }
 
-#odonates {
-    /*background-image: url("../img/odonates.jpg");*/
-    background-color: #FBC5EB;
+#Odonates {
+    background-image: url("../img/decor_odonate.png");
 }
 
-#chiroptères {
-    /*background-image: url("../img/chiropteres.jpg");*/
-    background-color: #FBC5EB;
+#Chiroptères {
+    background-image: url("../img/decor_chiroptere.png");
 }
 
-#mammiferes {
+#Mammifères {
     background-image: url("../img/decors-mammiferes.png");
 }
 
-#reptiles {
+#Reptiles {
     background-image: url("../img/decors-mascotte-reptiles.png");
 }
 
-#amphibiens {
+#Amphibiens {
     background-image: url("../img/decors-mascotte-amphibiens.png");
 }
 
@@ -73,7 +80,7 @@ body {
 
 .swiper-slide .commune {
     position: absolute;
-    margin-top: -100%;
+    margin-top: -120%;
     font-size: 4vh;
 }
 
@@ -115,7 +122,7 @@ body {
 
 .button:hover {
     background-color: #0B6E5F;
-    color: white;
+    color: #FFF8F1;
 }
 
 .groupe {
@@ -137,7 +144,7 @@ body {
 }
 
 .swiper-pagination-bullet-active {
-    background: none;
+    background: #0B6E5F;
     border: 7px solid #0B6E5F;
 }
 
