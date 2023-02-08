@@ -1,12 +1,15 @@
 "use strict";
 
+
 // Init of the (touch friendly) Swiper slider
 const swiper = new Swiper("#mySwiper", {
   direction: "vertical",
-  mousewheel: true,
+  observer: true,
+  //mousewheel: true,
 });
 
 swiper.on("slideChange", function () {
+  console.log(swiper.activeIndex);
   switch( swiper.activeIndex ) {
     case 0:
       initSlide1();
@@ -16,12 +19,28 @@ swiper.on("slideChange", function () {
       break;
     case 2:
       initSlide3();
+      break;
     case 3:
       initSlide4();
+      break;
     case 4:
       initSlide5();
+      break;
     case 5:
       initSlide6();
+      break;
+    case 6:
+      initSlide7();
+      break;
+    case 7:
+      initSlide8();
+      break;
+    case 8:
+      initSlide9();
+      break;
+    case 9:
+      initSlideInfo1();
+      break;
   }
 });
 
@@ -40,3 +59,7 @@ setTimeout(() => {
   // Init first slide
   initSlide1();
 }, 1000);
+
+$(".retour").click(function(){
+  swiper.slidePrev();
+})

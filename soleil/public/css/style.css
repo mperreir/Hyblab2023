@@ -24,10 +24,16 @@ body{
 
 #image{
     width : 85%;
-    height : 150px;
+    /*height : 150px;*/
     margin :auto
 }
 
+#imageLog{
+    margin :auto;
+    width: 100%;
+    float: left;
+    height: 150px;
+}
 
 #image2{
     width : 85%;
@@ -49,13 +55,14 @@ body{
     padding-left: 20px;
     text-align: center;
     width: 70%;
-    bottom: 20%;
     position: relative;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 4vw;
+    bottom: 15px;
+
+
 }
 
 #SoliExTex {
@@ -180,7 +187,7 @@ header{
 
 .commentaire-soli2 {
     max-width: 90%;
-    right: 7%;
+    bottom: 7%;
 }
 
 .commentaire-soli2 p {
@@ -213,6 +220,13 @@ header{
     width: 100%;
     float: left;
     height: 150px;
+}
+
+#lignelongue{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+
 }
 
 #bulle-question {
@@ -262,8 +276,38 @@ header{
     background-color: blue;
     position :absolute;
     right : 3px;
+    top: 10%;
 
 }
+
+/* -------------- Slide Mission --------------*/
+
+#flex-miss{
+    display :flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Contour{
+    border: 0.75px solid #000000;
+    border-radius: 8px;
+    height: auto;
+    width: 50%;
+    text-align: center;
+    padding-top : 10%;
+
+}
+
+#LdM{
+    display: inline-block;
+    margin-right: 10%;
+}
+
+#numero {
+    display: inline-block;
+}
+
 
 /* -------------- Loader --------------*/
 #loader{
@@ -321,6 +365,14 @@ header{
 
 
 /*mes ajouts*/
+.choix-logement img{
+    display: inline-block;
+    margin-right: 5%;
+}
+.choix-logement{
+    margin-top: 10%;
+}
+
 .img-pente{
     width: 80%;
 }
@@ -420,8 +472,24 @@ div.conteneur{
     font-size: small;
     position: absolute;
     right : 10%;
+    animation: glowing 8000ms infinite;
+      
 }
 
+@keyframes glowing {
+    0% {
+    background-color: white;
+    box-shadow: 0 0 5px white;
+    }
+    50% {
+    background-color: #f7fd61;
+    box-shadow: 0 0 20px #f7fd61;
+    }
+    100% {
+    background-color: white;
+    box-shadow: 0 0 5px white;
+    }
+}
 
 /* Last slide image is centered */
 #img-fini{
@@ -626,14 +694,16 @@ body{
 display: flex;
 justify-content: flex-start;
 }
-/* Stylez et fixez le bouton sur la page */
+/* Stylez et fixez le bouton sur la page 
 .open-button {
 background-color: white;
 position: absolute;
 right: 5%;
 border: none;
+animation: glowing 2000ms infinite;
+height: 22px;
 }
-
+*/
 /* Positionnez la forme Popup */
 .login-popup {
 position: relative;
@@ -686,4 +756,40 @@ opacity: 1;
 #Saut {
     padding-top : 2vw;
     font-size: 3vw;
+}
+
+/* Style Checkbox */
+
+
+/* Specify the background color to be shown when checkbox is active */
+#bulle-question input:active ~ #facul1 {
+  background-color: white;
+}
+/* Specify the background color to be shown when checkbox is checked */
+#bulle-question input:checked ~ #facul1 {
+  background-color: orange;
+}
+/* Checkmark to be shown in checkbox */
+/* It is not be shown when not checked */
+.w3docs:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Display checkmark when checked */
+#bulle-question input:checked ~ .w3docs:after {
+  display: block;
+}
+/* Styling the checkmark using webkit */
+/* Rotated the rectangle by 45 degree and showing only two border to make it look like a tickmark */
+.main .w3docs:after {
+  left: 8px;
+  bottom: 5px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }

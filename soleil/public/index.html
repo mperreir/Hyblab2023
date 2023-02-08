@@ -17,6 +17,9 @@
   <script src="js/slide4.js" defer></script>
   <script src="js/slide5.js" defer></script>
   <script src="js/slide6.js" defer></script>
+  <script src="js/slide7.js" defer></script>
+  <script src="js/slide8.js" defer></script>
+  <script src="js/slide9.js" defer></script>
   <script src="js/index.js" defer></script>
 </head>
 <body>
@@ -76,85 +79,26 @@
       <section id="logement" class="swiper-slide"> <!-- Page du type de logement -->
         <header>
           <button class="retour">←</button>
-          <p class="titre">
-            Vous habitez dans :
-          </p>
         </header>
-        <div id="ligne">
-          
-          <section id="ligne">
-            <div id="colonne2">
-              <section id="Choix2">
-                <label for="contactChoice1">Maison</label>
-              </section>
-              <section id="Choix2">
-                <label for="contactChoice1">
-                  <img src="img/Maison.png"/>
-                </label>
-              </section>
-              <section id="Choix2">
-                <input type="radio" id="contactChoice1"
-                           name="logement" value="logement">
-              </section>
-            </div>
-            <div id="colonne2">
-              <section id="Choix2">
-                <label for="contactChoice2">Immeuble</label>
-              </section>
-              <section id="Choix2">
-                <label for="contactChoice2">
-                  <img src="img/Immeuble.png"/>
-                </label>
-              </section>
-              <section id="Choix2">
-                <input type="radio" id="contactChoice2"
-                name="logement" value="logement">
-              </section>
-            </div>
-          </section>
-          <section id="ligne">
-            <p class="titre">Vous êtes : </p>
-            <div id="colonne2">
-              <section id="Choix2">
-                <label for="contactChoice3">Propiétaire</label>
-              </section>
-              <section id="Choix2">
-                <label for="contactChoice3">
-                  <img src="img/Propri.png"/>
-                </label>
-              </section>
-              <section id="Choix2">
-                <input type="radio" id="contactChoice3"
-                         name="propiétaire" value="propiétaire">
-              </section>
-            </div>
-            <div id="colonne2">
-              <section id="Choix2">
-                <label for="contactChoice4">Locataire</label>
-              </section>
-              <section id="Choix2">
-                <label for="contactChoice4">
-                  <img src="img/Locataire.png"/>
-                </label>
-              </section>
-              <section id="Choix2">
-                <input type="radio" id="contactChoice4"
-                         name="propiétaire" value="propiétaire" placeholder="Renseignez votre adresse">
-              </section>
-            </div>
-          </section>
-          <section id="image">
-            <div class="commentaire-soli2">
-              <img src="img/soliMontgolfiere.png">
-            <p id="SoliExTex2">Pas besoin d’être propriétaire ou d’avoir une maison pour agir en faveur de l’énergie photovoltaïque !</p>
-            </div>
-            
-          </section>
+        <div class="choix-logement">
+          <p class="titre">Vous habitez dans :</p>
+          <img src="img/Choix habitation/Non selection/maison-non-selection.jpg" class="non-selection" title="maison">
+          <img src="img/Choix habitation/Non selection/immeuble-non-selection.jpg" class="non-selection" title="immeuble">
         </div>
+        <div class="choix-logement">
+          <p class="titre">Vous êtes : </p>
+          <img src="img/Choix habitation/Non selection/proprietaire-non-selection.jpg" class="non-selection" title="proprietaire">
+          <img src="img/Choix habitation/Non selection/locataire-non-selection.jpg" class="non-selection" title="locataire">
+        </div>   
+        <section id="imageLog">
+          <div class="commentaire-soli">
+            <img src="img/soliMontgolfiere.png">
+          <p id="SoliExTex2">Pas besoin d’être propriétaire ou d’avoir une maison pour agir en faveur de l’énergie photovoltaïque !</p>
+          </div>
+        </section>
         <div id="jauge">
           <img id="Soli1" src="img/montgolfiereAvancee.png"/>
         </div>
-
         <footer>
           <button>Valider</button>
         </footer>
@@ -166,64 +110,36 @@
           <div class="form-popup" id="popupForm">
             <form action="/action_page.php" class="form-container">
               <button type="button" class="btn cancel" onclick="closeForm()">X</button>
-              <p id="Saut"> Mais pourquoi parler de l’inclinaison du toit ? C’est essentiel pour la performance de votre module photovoltaïque. 
-              </p>
-              <p id="Saut">
-                Si votre toit est incliné, vos panneaux le seront aussi. Idéalement, ils doivent être 
-                perpendiculaires au rayon du soleil. Un petit peu de physique pour mieux comprendre 
-                (rien de bien méchant). Pour maximiser l’énergie produite sur l’année, il faut que les 
-                panneaux soient inclinés en fonction de l’ordre de latitude du point où vous vous trouvez. 
-                Vous ne comprenez pas ? Pas de panique, voici un exemple. En France, la latitude varie entre 40 et 45 degrés. 
-                Inclinez-donc vos panneaux selon cet ordre pour maximiser l’énergie produite sur l’année. Et si votre toit est plat ? Rien à faire dans ce cas !
-              </p>
             </form>
           </div>
-          <button class="retour">retour</button>
-          <button class="open-button" onclick="openForm()"><img src="img/Info.png"></button>
+          <button class="retour">←</button>
+          <button class="open-button"><img src="img/Info2.png"></button>
           <!--<div class="open-btn">   <button id="info">I</button>
             <button class="open-button" onclick="openForm()"><strong>Info</strong></button>
           </div>-->
-          <div class="login-popup">
-          </div>
            <!-- Bouton Information (à copier sur les autres slide) -->
           <p class="titre">
             Comment est la pente de votre toit ?
           </p>
         </header>
         <section>
-          <div id="ligne">
+          <div >
             <section id="image3">
-              <img src="img/ChoixMaison.png">
+              <img class="img-pente" src="img/PenteHaut.png">
+              <p>Standard</p>
             </section>
-            <section>
               <form>
-                <div id="colonne3">
-                  <input type="radio" id="contactChoice1"
-                         name="pente" value="Plat">
-                  <label for="contactChoice1">Plat</label>
-                  <img id="choix-log" src="hyblab_2023.jpg"/>
-                  <p>Toit plat</p>
-                </div>    
-                <div id="colonne3">
-                  <input type="radio" id="contactChoice2"
+                  <input type="radio" id="contactChoice"
                          name="pente" value="Standard">
-                  <label for="contactChoice2">Standard</label>
-                  <img id="choix-log" src="hyblab_2023.jpg"/>
-                  <p>Toit plat</p>
-                </div>
-                <div id="colonne3">
-                  <input type="radio" id="contactChoice3"
+                  <input type="radio" id="contactChoice"
+                         name="pente" value="Plat">
+                  <input type="radio" id="contactChoice"
                          name="pente" value="Pentu">
-                  <label for="contactChoice3">Pentu</label>
-                  <img id="choix-log" src="hyblab_2023.jpg"/>
-                  <p>Toit plat</p>
-                </div>
               </form>
-            </section>
-          <section class="commentaire-soli">
+          <div class="commentaire-soli">
             <img src="img/soliMontgolfiere.png">
             <p id="SoliExTex">Mais pourquoi parler de l’inclinaison du toit ? C’est essentiel pour la performance de votre module photovoltaïque. </p>
-          </section>
+          </div>
           </div>
           
           <div id="jauge">
@@ -239,7 +155,7 @@
 
       <section id="orientation" class="swiper-slide">
         <header>
-          <button class="retour">retour</button>
+          <button class="retour">←</button>
 
           <h1 class="titre">Comment votre toit est-il orienté</h1>
         </header>
@@ -262,36 +178,25 @@
       </section>
       <section id="ombre" class="swiper-slide">
         <header>
-          <button class="retour">retour</button>
+          <button class="retour">←</button>
           <p class="titre">
             Il y a t’il de l’ombre sur votre toit ?
           </p>
         </header>
         <section>
-          <div class="contenu-page">
-            <img id="image" src="hyblab_2023.jpg">
-            <div id="choix-ombre">
+          <div id="image3">
+            <img id="image" class="img-ombre" src="img/Ombre/toit-flat-ombre-01.jpg"> <!-- A changer suivant le type de toit-->
+            <p></p>
+          </div>
               <form >
-                <div id="colonne3">
                   <input type="radio" id="contactChoice1"
-                         name="contact" value="Jamais">
-                  <label class="choix-texte" for="contactChoice1">Jamais</label>
-                  <img id="choix-log" src="hyblab_2023.jpg"/>
-                </div>
-                <div id="colonne3">
+                         name="ombre" value="Jamais">
                   <input type="radio" id="contactChoice2"
-                         name="contact" value="Pas trop">
-                  <label class="choix-texte" for="contactChoice2">Pas trop</label>
-                  <img id="choix-log" src="hyblab_2023.jpg"/>
-                </div>
-                <div id="colonne3">
+                         name="ombre" value="Pas trop">
                   <input type="radio" id="contactChoice3"
-                         name="contact" value="Toujours">
-                  <label class="choix-texte" for="contactChoice3">Toujours</label>
-                  <img id="choix-log" src="hyblab_2023.jpg"/>
-                </div>
+                         name="ombre" value="Toujours">
               </form>
-              <section class="commentaire-soli">
+              <div class="commentaire-soli">
                 <img src="img/soliMontgolfiere.png">
                 <p id="SoliExTex">   “ il faut aussi que
                   les modules soient inclinés vers
@@ -299,9 +204,7 @@
                   dans l’hémisphère nord, alors,
                   vous avez tout intérêt à orienter
                   vos panneaux vers le sud.”</p>
-              </section>
-            </div>
-          </div>
+                </div>
           <div id="jauge">
             <img id="Soli4" src="img/montgolfiereAvancee.png"/>
           </div>
@@ -311,8 +214,8 @@
 
       <section id="facultatif" class="swiper-slide">
         <header>
-          <button class="retour">retour</button>
-          <p class="titre">Autres questions</p>
+          <button class="retour">←</button>
+          <p class="titre">Parlons de vous</p>
         </header>
         <div id = "ligne">
           <img id="img-ques" src="img/SoliQuestion.png">
@@ -321,7 +224,9 @@
               <section id="bulle-question">
                 <input type="checkbox" id="facul1"
                        name="contact" value="Jamais">
-                <label class="choix-texte2" for="facul1">Je participe à la vie de ma co propriété</label>
+                <span class="w3docs"></span>    
+                <label class="choix-texte2" for="facul1">
+                  Je participe à la vie de ma co propriété</label>
               </section>
               <section id="bulle-question">
                 <input type="checkbox" id="facul2"
@@ -352,7 +257,7 @@
 
       <section id="resultat" class="swiper-slide">
         <header>
-          <button class="retour">retour</button>
+          <button class="retour">←</button>
         </header>
       </section>
 
@@ -367,8 +272,26 @@
 
       <section id="analyse" class="swiper-slide">
         <header>
-          <button class="retour">retour</button>
+          <button class="retour">←</button>
         </header>
+      </section>
+
+      <section id="info1" class="swiper-slide">
+        <header>
+          <button class="retour">←</button>
+        </header>
+        <section>
+          <p id="Saut"> Mais pourquoi parler de l’inclinaison du toit ? C’est essentiel pour la performance de votre module photovoltaïque. 
+          </p>
+          <p id="Saut">
+            Si votre toit est incliné, vos panneaux le seront aussi. Idéalement, ils doivent être 
+            perpendiculaires au rayon du soleil. Un petit peu de physique pour mieux comprendre 
+            (rien de bien méchant). Pour maximiser l’énergie produite sur l’année, il faut que les 
+            panneaux soient inclinés en fonction de l’ordre de latitude du point où vous vous trouvez. 
+            Vous ne comprenez pas ? Pas de panique, voici un exemple. En France, la latitude varie entre 40 et 45 degrés. 
+            Inclinez-donc vos panneaux selon cet ordre pour maximiser l’énergie produite sur l’année. Et si votre toit est plat ? Rien à faire dans ce cas !
+          </p>
+        </section>
       </section>
 
     </main>
