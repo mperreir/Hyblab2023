@@ -4,12 +4,13 @@
 //
 // TODO : interaction de la miniature avec le swipe dans le dossier
 //
+// TODO : les profils favoris sont affichés en evidence sur la carte
+//
 // TODO : si l'utilisateur accède direct à la carte, cocher tous les topics par défaut
 //
-// TODO : bien cancel la déselection des topics quand il ne reste plus qu'un topic
+// TODO : implementer retour arriere
 //
-// TODO : supprimer l'overlay après avoir mis dans le dossier et reinitialiser la position de la miniature
-
+// TODO : ajouter le header
 /*
   ----------------------------------------------------------------------------------------------------------------------
   | Global variables                                                                                                   |
@@ -220,6 +221,7 @@ function displayMiniature(Id){
                         </section>
                     </section>
         `;
+        miniature_related.setAttribute("identifier", p.Id);
         // Retrieve the keywords section
         const keywordSection = miniature_content.querySelector("section.keywords");
         // Add the keywords (if any non empty keyword is present)
@@ -294,6 +296,7 @@ function onTopicCheck(event) {
             // Display the popup
             const popup = document.querySelector("main div#popup");
             popup.classList.remove("display-none");
+            return;
         }
         topicImg.classList.add("unchecked");
         // Splice the array to remove the item (only if the item is found)
@@ -453,9 +456,8 @@ function onKeywordManage() {
             keywordsList.innerHTML = '';
             // Set the keyword list as visible
             keywordsList.classList.remove('display-none');
-
             // Filter the keywords to keep only the ones that are not already used
-            keywords = keywords.filter(k => !usedKeywords.includes(k));
+            keywords = keywords.filter(k => !usedKeywords.includes('#' + k));
             // For each keyword, create the available keyword element as HTML
             keywords.forEach(k => {
                 // Create the keyword element
@@ -632,10 +634,19 @@ function onPan(e) {
             if (progress < duration) {
                 requestAnimationFrame(animation);
             } else {
-                console.log('transition finished');
+                // Undisplay the overlay
+                const overlay = document.querySelector("main div#overlay");
+                overlay.classList.add("display-none");
+                // Undisplay the miniature
+                miniature.classList.add("display-none");
+                miniature.style.transform = null;
+                // Update the map
+                updateMap();
+                // Add the Id of the related profile to the local storage
+                const Id = miniature.getAttribute('identifier');
+                pushProfilFav(Id);
             }
         }
-
         requestAnimationFrame(animation);
     }
 }
