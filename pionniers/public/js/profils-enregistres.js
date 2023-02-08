@@ -68,6 +68,11 @@ document.addEventListener("DOMContentLoaded", async function () {
     const listeProfils = document.querySelector('#liste-profils');
     const idsProfilsFav = getProfilsFav();
     const retourBtn = document.querySelector('#retour');
+    const apropos = document.querySelector('#petit-rond');
+
+    apropos.addEventListener('click', () => {
+        window.location.href = './apropos.html';
+    });
 
     retourBtn.addEventListener('click', () => {
         window.location.href = window.localStorage.getItem('pagePrecedente') + ".html";
