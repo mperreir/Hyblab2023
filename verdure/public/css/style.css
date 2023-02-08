@@ -217,9 +217,9 @@ SLIDE ACCUEIL
 
 #backgroundFirstSlide{
     opacity: 35%;
-    margin-top: 42%;
+    margin-top: 70%;
     margin-left: 11%;
-    width: 169%;
+    width: 145%;
 }
 
 
@@ -241,10 +241,10 @@ SLIDE ACCUEIL
 #presentation-jeu {
     font-size: 25%;
     position: absolute;
-    top: 25%;
-    width: 50%;
-    left: 10%;
-
+    top: 22%;
+    width: 86%;
+    left: 6%;
+    text-align: justify;
 
 }
 
@@ -747,8 +747,7 @@ Derniere slide
 .button {
     display: flex;
     justify-content: center;
-    /* align-items: center;  */
-    margin-top: 5vh;
+    margin-top: 7vh;
 }
 
 .dropdownShareButton, button {
@@ -767,7 +766,7 @@ Derniere slide
 
 #dropdownShareOptions img {
     height: auto;
-    width: 10vh;
+    width: 13vh;
 }
 
 #dropdownShareButton, #replayButton{
@@ -776,10 +775,12 @@ Derniere slide
     border: none;
     font-size: 2vh;
     right: 0;
-    width: 10vh;
+    width: 15vh;
     height: 7vh;
     box-shadow: -2px 2px #306947;
     padding: 1vh;
+    margin-right: 2vh;
+    margin-left: 2vh;
 }
 
 /**************************
