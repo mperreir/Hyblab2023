@@ -87,6 +87,28 @@ main > section {
     background-size: 100% 100%;
 }
 
+#logoSlideBas,#logoSlideHaut,#logoSlideDroit{
+    opacity: 0;
+}
+
+#logoQ2, #logoQ3{
+    width: 68%;
+    left: 11%;
+    top: 3%;
+}
+
+#logoQ4, #logoQ5, #logoQ6{
+    width: 36%;
+    left: 31%;
+    top: 0%;
+}
+
+#logoQ7{
+    width: 42%;
+    left: 27%;
+    top: 0%;
+}
+
 
 /* ---------- Positionning of logos on the last slide -------------------- */
 /* here we have a contraint on the height of the logos (not the width)     */
@@ -205,8 +227,8 @@ SLIDE ACCUEIL
 #logo-gtv {
 
     text-align: center;
-    width: 32%;
-    left: 60%;
+    width: 40%;
+    left: 52%;
     top: 5%;
     margin-left: -25%;
     margin-top: calc(-7.5% * 9 / 16); /* margins are relative to the element width... :-( */
@@ -811,6 +833,12 @@ GREENTA
     font-size: 50%;
     z-index: 2;
     cursor: pointer;
+}
+
+#logoQ1{
+    width: 48%;
+    left: 30%;
+    top: 1%;
 }
 
 #photo-table {
