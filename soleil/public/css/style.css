@@ -179,7 +179,7 @@ header{
 }
 
 .commentaire-soli {
-    max-width: 95%;
+    max-width: 90%;
     left: 5%;
     right: 7%;
     position:static;
@@ -369,8 +369,18 @@ header{
     display: inline-block;
     margin-right: 5%;
 }
+
+.choix-logement2 img{
+    display: inline-block;
+    margin-right: 5%;
+}
+
 .choix-logement{
-    margin-top: 10%;
+    margin-top: 15%;
+}
+
+.choix-logement2{
+    margin-top: 5%;
 }
 
 .img-pente{
@@ -474,6 +484,35 @@ div.conteneur{
     right : 10%;
     animation: glowing 8000ms infinite;
       
+}
+
+#infoTxt{
+    border: black 1px solid;
+    text-align: center;
+    padding: 5%;
+    width: 75%;
+    margin: auto;
+    border-radius: 8px;
+    position : absolute;
+    left: 10%;
+    height: 90%;
+}
+
+#Saut {
+    padding-top : 7vw;
+    font-size: 4.5vw;
+}
+
+#bulleInfo{
+    position:absolute;
+    left:100%;
+    top:5%;
+}
+
+#SoliInfo{
+    position: absolute;
+    left: 5%;
+    bottom: 3%;
 }
 
 @keyframes glowing {
@@ -753,10 +792,6 @@ background-color: #fff;
 opacity: 1;
 }
 
-#Saut {
-    padding-top : 2vw;
-    font-size: 3vw;
-}
 
 /* Style Checkbox */
 
