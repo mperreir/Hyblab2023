@@ -16,7 +16,8 @@ const initSlide4 = async function(){
         })
     
         $("#pente footer button").click(function(){
-            quiz["pente"] = $("#logement input[type=radio][name=pente]:checked").val();
+            console.log($("#pente input[type=radio][name=pente]:checked"));
+            quiz["pente"] = $("#pente input[type=radio][name=pente]:checked").val();
             if (quiz["pente"] == "Plat"){
                 swiper.slideNext();
                 swiper.slideNext();

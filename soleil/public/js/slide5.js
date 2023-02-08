@@ -26,7 +26,7 @@ const initSlide5 = function(){
     $(".boussole img").attr("alt", alt);
     $(".boussole img").attr("src", `img/boussole/${alt}.jpg`);
     // changement de l'image au dessus
-    $("#tropdechoix").attr("src", `img/ensoleillement/${alt}-${quiz["pente"]}-commune.jpg`);
+    $("#tropdechoix").attr("src", `img/ensoleillement/${alt + 1}-${quiz["pente"]}-commune.jpg`);
     
  }
 /*
