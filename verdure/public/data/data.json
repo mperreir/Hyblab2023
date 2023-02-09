@@ -4,7 +4,7 @@
     "choices": [{
       "prompt": "Planter des arbres",
       "positive": "<p class=\"positive-titles\">POSITIF</p> <ul><li>Réduction de la température.</li></ul>",
-      "negative": "<p class=\"negative-titles\">NEGATIF</p> <ul><li> Ronge de l'espace public.</li></ul>",
+      "negative": "<p class=\"negative-titles\">NEGATIF</p> <ul><li> Rogne un peu de l'espace public.</li></ul>",
       "explanation": "Planter des arbres en ville est une solution pour lutter contre les îlots de chaleur. Les arbres apportent de l’ombre et compensent avec les milieux urbains à base de béton, d’asphalte ou de goudron. L’arbre bloque la lumière du soleil, fait de l’ombre et transpire par ses feuilles, ce qui crée de l’humidité et permet d’assurer une climatisation naturelle.</br>Une étude menée par l’Ademe (Agence de l'environnement et de la maîtrise de l'énergie) en juin 2022 démontre qu’un arbre mature peut évaporer jusqu’à 450 litres d’eau par jour. C’est l’équivalent de cinq climatiseurs qui tourneraient pendant 20h : utile pour rafraîchir une rue !</br>Planter quelques arbres, c’est sympa, mais les effets seront visibles d’ici quelques années. Bon choix cependant !",
       "temperature": -1,
       "happiness": 1,
@@ -13,10 +13,10 @@
       "image": "boulevard1"
     },
       {
-        "prompt": "Planter beaucoup d’arbres mais ronger sur une voie de circulation",
+        "prompt": "Planter beaucoup d’arbres mais rogner sur une voie de circulation",
         "positive": "<p class=\"positive-titles\">POSITIF</p> <ul><li> Réduction rapide de la température.</li> <li>Apporte de l'ombre.</li></ul>",
-        "negative": "<p class=\"negative-titles\">NEGATIF</p> <ul><li>Met du temps à avoir un effet significatif.</li> <li>Mécontentement de la population.</li> <li>Une partie des arbres meurt avec le temps.</li></ul>",
-        "explanation": "Planter des arbres en ville est une solution pour lutter contre les îlots de chaleur. Mais les racines entrent en conflit avec ce qu’il y a dans le sous-sol : les câbles de fibre optique, les canalisations, parfois les parkings ou les métros… Il faut donc prendre cela en compte et étudier les sols, ce qui est coûteux.</br>En plus, \"un arbre planté dans un sol tassé, pavé, sans place suffisante pour ses racines pousse deux fois moins vite\", explique à BFMTV.com Marjorie Musy, directrice de recherche au Centre d'études et d'expertise sur les risques, l'environnement, la mobilité et l'aménagement.</br>Prendre de la place sur la route, c’est une solution. Mais gare au mécontentement des adeptes des véhicules à moteur !",
+        "negative": "<p class=\"negative-titles\">NEGATIF</p> <ul><li>Met du temps à avoir un effet significatif.</li> <li>Mécontentement des automobilistes.</li> <li>Une partie des arbres meurt avec le temps.</li></ul>",
+        "explanation": "Planter des arbres en ville est une solution pour lutter contre les îlots de chaleur. Mais les racines entrent en conflit avec ce qu’il y a dans le sous-sol : les câbles de fibre optique, les canalisations, parfois les parkings ou les métros… Il faut donc prendre cela en compte et étudier les sols, ce qui est coûteux.</br>En plus, \"un arbre planté dans un sol tassé, pavé, sans place suffisante pour ses racines pousse deux fois moins vite\", explique Marjorie Musy, directrice de recherche au Centre d'études et d'expertise sur les risques, l'environnement, la mobilité et l'aménagement.</br>Prendre de la place sur la route, c’est une solution. Mais gare au mécontentement des adeptes des véhicules à moteur !",
         "temperature": -2,
         "happiness": -1,
         "money": -2,
@@ -104,7 +104,7 @@
     "choices": [{
       "prompt": "De l'herbe",
       "positive": "<p class=\"positive-titles\">POSITIF</p> <ul><li>L'herbe permet de diminuer la température<li> Une bonne alternative aux arbres</li></ul>",
-      "negative": "<p class=\"negative-titles\">NEGATIF</p> <ul><li>Les gens marchent dessus</li></ul>",
+      "negative": "<p class=\"negative-titles\">NEGATIF</p> <ul><li>Nécessite un entretien régulier</li></ul>",
       "explanation": "Ramener la nature en ville : c’est une solution pour diminuer la température dans les centres urbains. Planter de l’herbe peut-être une solution. Simple constat : en cas de forte chaleur, une surface bitumée sera 15°C plus chaude qu’une étendue de gazon. Il y a donc un véritable avantage à semer de l’herbe. D’autant plus qu’un tel tapis vert sera apprécié par la population pour les soirées d’été, les sorties des enfants ou la promenade des animaux de compagnie.</br>À noter que cette utilisation par les habitants peut avoir des conséquences sur l’efficacité du gazon. On parle de ligne de désir. C’est le phénomène par lequel les humains dessinent eux-mêmes leurs passages, en contournant les aménagements bien en place. Conséquence : cela abîme le gazon et diminue son efficacité.</br>Déjà, vous avez retenu que, pour planter des arbres, il faut prendre en compte le sous-sol. Avec le gazon, cette problématique est moindre.",
       "temperature": -1,
       "happiness": 1,
@@ -129,7 +129,7 @@
     "choices": [{
       "prompt": "De l'herbe",
       "positive": "<p class=\"positive-titles\">POSITIF</p> <ul><li>L'herbe permet de diminuer la température</li> <li>Une bonne alternative aux arbres</li></ul>",
-      "negative": "<p class=\"negative-titles\">NEGATIF</p> <ul><li>Les gens marchent dessus</li></ul>",
+      "negative": "<p class=\"negative-titles\">NEGATIF</p> <ul><li>Nécessite un entretien régulier</li></ul>",
       "explanation": "Ramener la nature en ville : c’est une solution pour diminuer la température dans les centres urbains. Planter de l’herbe peut-être une solution. Simple constat : en cas de forte chaleur, une surface bitumée sera 15°C plus chaude qu’une étendue de gazon. Il y a donc un véritable avantage à semer de l’herbe. D’autant plus qu’un tel tapis vert sera apprécié par la population pour les soirées d’été, les sorties des enfants ou la promenade des animaux de compagnie.</br>À noter que cette utilisation par les habitants peut avoir des conséquences sur l’efficacité du gazon. On parle de ligne de désir. C’est le phénomène par lequel les humains dessinent eux-mêmes leurs passages, en contournant les aménagements bien en place. Conséquence : cela abîme le gazon et diminue son efficacité.</br>Déjà, vous avez retenu que, pour planter des arbres, il faut prendre en compte le sous-sol. Avec le gazon, cette problématique est moindre.",
       "temperature": -1,
       "happiness": 1,
