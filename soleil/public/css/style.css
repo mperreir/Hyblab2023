@@ -476,6 +476,10 @@ button.retour{
     border: transparent;
 }
 
+.img-fleche {
+    width: 55%;
+}
+
 p.intitulé {
     padding-top: 2%;
     font-size: 5vw;
