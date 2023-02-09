@@ -1,3 +1,5 @@
+const animalCategory = "Oiseaux";
+const commune = "Bordeaux";
 const db = "data/db.json";
 const dbAdd = "data/additionalDB.json";
 
@@ -50,11 +52,11 @@ async function createAnimalCategory(commune, animalCategory) {
     }
 
     /* manage the main height */
-    if(buttonContainer.offsetHeight > 1760) {
+    if(buttonContainer.childElementCount > 6) {
         main.style.minHeight = `${buttonContainer.offsetHeight + footer.offsetHeight}px`;
     }
     else{
-        main.style.minHeight = '71.7vh';
+        main.style.minHeight = '74.9vh';
     }
 
     const tipsButton = document.getElementById("fleche");
@@ -62,7 +64,6 @@ async function createAnimalCategory(commune, animalCategory) {
     tipsButton.onclick = function () {
         window.location.href = "commentAider.html"
     }
-
 
     /* pop-up */
 
@@ -93,10 +94,11 @@ async function createAnimalCategory(commune, animalCategory) {
 
 
         if (animal.length > 22) {
-            animalName.style.fontSize = '3.5vh';
+            animalName.style.fontSize = '6.7vw';
         } else if (animal.length > 27) {
-            animalName.style.fontSize = '3vh';
+            animalName.style.fontSize = '6.3vw';
         }
+
         animalName.textContent = animal.toUpperCase();
         desc.textContent = "Les " + animalData["listCities"][0]["categorie"].toLowerCase() + " de " + commune;
         if (animalData["listCities"][0]["enjeu_conservation"] == null){
@@ -154,6 +156,25 @@ async function createAnimalCategory(commune, animalCategory) {
         }
     }
 
+    /* header pop-up */
+    async function burgerPopUp(){
+        const main = document.getElementById("list-animals-main");
+        const foot = document.getElementById("list-animals-footer");
+        const button = document.getElementById("popUpNav");
+        button.addEventListener("click", function() {
+            if(main.style.display !== "none"){
+                main.style.display = "none";
+                foot.style.display = "none";
+            } else {
+                main.style.display = "block";
+                foot.style.display = "block";
+            }
+        })
+    }
+
     await selectAnimal();
     await quitPopUp();
+    await burgerPopUp();
 }
+
+animalCategoryJS();

@@ -19,7 +19,9 @@ imgLogo.style.position = "absolute";
 imgLogo.style.top = "2vh";
 imgLogo.style.left = "5vw";
 imgLogo.style.zIndex = "2";
+imgLogo.style.width = "auto";
 imgLogo.style.height = "3vh";
+
 
 lienLogo.appendChild(imgLogo);
 
@@ -31,7 +33,9 @@ imgMenuBurger.style.position = "absolute";
 imgMenuBurger.style.top = "2vh";
 imgMenuBurger.style.right = "5vw";
 imgMenuBurger.style.zIndex = "2";
+// imgMenuBurger.style.width = "5vw";
 imgMenuBurger.style.height = "2.75vh";
+
 divIconeHeader.appendChild(lienLogo);
 divIconeHeader.appendChild(imgMenuBurger);
 header.appendChild(divIconeHeader);
