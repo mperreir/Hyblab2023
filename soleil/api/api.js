@@ -4,20 +4,25 @@ const express = require('express');
 const { NominatimJS } = require('nominatim-js');
 const app = express();
 const wget = require('node-wget');
+const CsvReadableStream = require('csv-reader');
+const fs = require('fs');
 
 const data = require('./data/densite.json');
+const { setTimeout } = require('timers/promises');
 
 app.use(express.json());
 
 // Retrieves multiple matches for the address and sends it
-app.get('/searchAddresses', async function (req, res) {
+app.get('/searchAddresses/:address', async function (req, res) {
     const apiCall = await NominatimJS.search({
-        q: req.body['searchText']
+        q: req.params.address
     });
+
+    console.log(apiCall);
 
     const results = [];
 
-    apiCall.slice(0, req.body['resultsCount']).forEach(apiElement => {
+    apiCall.slice(0, 4).forEach(apiElement => {
         let address = {
             'street_number': 0,
             'street': "",
@@ -27,8 +32,9 @@ app.get('/searchAddresses', async function (req, res) {
 
         const addressInfo = apiElement.display_name.split(', ');
 
-        // Security to avoid problems later on
-        if (addressInfo.pop() !== "France") return "Service not available outside of France";
+        // Securities to avoid problems later on
+        if (addressInfo.length < 5) return;
+        if (addressInfo.pop() !== "France") return;
 
         // We need to check if the returned address starts with a number, or is just the name of the street
         address = addressInfo[0].match(/^\d/) ? {
@@ -50,30 +56,30 @@ app.get('/searchAddresses', async function (req, res) {
             'address_text': address.street_number + " " + address.street + ", " + address.zip_code + " " + address.town.toUpperCase()
         });
     });
+    console.log(results);
 
-    res.json(await getAddressesFromText(results));
+    res.json(results);
 });
 
-// Retrieves all data regarding the input
-app.get('/addressInfo', async function (req, res) {
-    // Uses our parser to turn the text input into a valid address
-    let address = req.body;
+// Retrieves the density of the town the person lives in
+app.get('/density/:town', async function (req, res) {
+    let density = data.find(e => e["Libellé commune"] === req.params.town)["Degré de Densité"];
 
-    // Retrieves the density of the town the person lives in
-    let density = data.find(e => e["Libellé commune"] === address.full_address.town)["Degré de Densité"];
-
-    res.json({location, 'density': density});
+    res.json({'town': req.params.town, 'density': density});
 });
 
-// TODO finir cette fonction
-function getRadiationData(latitude, longitude, altitude, date_begin, date_end, time_ref, summatization) {
-    const username = "supy.game@gmail.com";
-    const url = `https://www.soda-is.com/service/wps?Service=WPS&Request=Execute&Identifier=get_cams_radiation&version=1.0.0&DataInputs=latitude=${latitude};longitude=${longitude};altitude=${altitude};date_begin=${date_begin};date_end=${date_end};time_ref=${time_ref};summarization=${summatization};username=${username}&RawDataOutput=irradiation`;
+app.get('/radiation/:latitude/:longitude', async function (req, res) {
+    res.send()
+});
+
+function getRadiationData(latitude, longitude) {
+    const username = "supy.game%2540gmail.com";
+    const url = `https://www.soda-is.com/service/wps?Service=WPS&Request=Execute&Identifier=get_cams_radiation&version=1.0.0&DataInputs=latitude=${latitude};longitude=${longitude};altitude=-999;date_begin=2022-01-01;date_end=2022-12-31;time_ref=TST;summarization=PT15M;username=${username}&RawDataOutput=irradiation`;
 
     wget({
         url:  url,
         dest: './data/temp/',
-        timeout: 2000
+        timeout: 200000
     },
     function (error, response, body) {
         if (error) {
@@ -87,7 +93,33 @@ function getRadiationData(latitude, longitude, altitude, date_begin, date_end, t
         }
     });
 }
-//getRadiationData(44.083, 5.059, -999, "2017-01-01", "2017-01-05", "UT", "PT15M");
+
+// getRadiationData(44.083, 5.059);
+function readRadiationData(orientation, inclinationAngle, latitude, callback) {
+    let inputStream = fs.createReadStream('./data/temp/wps', 'utf-8');
+    let totalEnergy = 0;
+
+    inputStream
+        .pipe(new CsvReadableStream({ delimiter: ';', parseNumbers: true }))
+        .on('data', function (row) {
+            if (!(row[0][0] == '#')) {
+                const date = new Date(row[0].split('/')[0]);
+                const day = Math.floor((date - new Date(date.getFullYear(), 0, 1)) / 1000 / 60 / 60 / 24) + 1;
+                const time = Math.floor((date - new Date(date.getFullYear(), date.getMonth(), date.getDate())) / 1000 / 60 / 15) + 1;
+                totalEnergy += computeEnergy(time, day, row[6], row[8], row[9], orientation, inclinationAngle, latitude)
+            }
+        })
+        .on('end', function () {
+            callback(null, totalEnergy);
+        });
+}
+/*readRadiationData('S', 0.523599, 44.083, (err, totalEnergy) => {
+    if (err) {
+      console.error(err);
+    } else {
+      console.log("total : " + totalEnergy);
+    }
+});*/
 
 /**
  * Compute irradiation of the roof at a time given
@@ -99,49 +131,49 @@ function getRadiationData(latitude, longitude, altitude, date_begin, date_end, t
  * @param {string} orientation could be N, W, E, S, NW, NE, SW, SE
  * @param {float} inclinationAngle the angle of inclination of the roof (in rad)
  * @param {float} latitude the latitude of the roof
- * @returns {float} total irradiation on the roof
+ * @returns {float} total energy AC at this moment
  */
-function computeIrradiation(time, day, ghi, dhi, bni, orientation, inclinationAngle, latitude) {
-    // solarAzimutAngle based on latitude, longitude, time, day
-    const sunDeclination = Math.asin(0.398 * Math.sin(0.985 * day - 80));
-    const hourAngle = 86 < day < 300 ? 180 * (((time - 0.5) / 4 - 2) / 12 - 1) : 180 * (((time - 0.5) / 4 - 1) / 12 - 1);
-    const sunElevationAngle = Math.asin(Math.sin(latitude) * Math.sin(sunDeclination) + Math.cos(latitude) * Math.cos(sunDeclination) * Math.cos(hourAngle));
-    const solarAzimutAngle = Math.asin((Math.cos(sunDeclination) * Math.sin(hourAngle)) / Math.cos(sunElevationAngle));
+function computeEnergy(time, day, ghi, dhi, bni, orientation, inclinationAngle, latitude) {
+    // solarAzimuthAngle based on latitude, longitude, time, day
+    const sunDeclination = Math.asin(0.398 * Math.sin((0.985 * day - 80) * Math.PI / 180));
+    const hourAngle = Math.PI * (((time - 0.5) / 4) / 12 - 1);
+    const sunElevationAngle = Math.asin(Math.sin(latitude * Math.PI / 180) * Math.sin(sunDeclination) + Math.cos(latitude * Math.PI / 180) * Math.cos(sunDeclination) * Math.cos(hourAngle));
+    const solarAzimuthAngle = Math.asin((Math.cos(sunDeclination) * Math.sin(hourAngle)) / Math.cos(sunElevationAngle));
 
-    // azimutAngle computed with the orientation (in rad)
-    let azimutAngle = -1;
+    // azimuthAngle computed with the orientation (in rad)
+    let azimuthAngle = -1;
 
     switch (orientation) {
         case 'N':
-            azimutAngle = 0;
+            azimuthAngle = 0;
             break;
 
         case 'W':
-            azimutAngle = 3 * Math.PI / 2;
+            azimuthAngle = 3 * Math.PI / 2;
             break;
 
         case 'E':
-            azimutAngle = Math.PI / 2;
+            azimuthAngle = Math.PI / 2;
             break;
 
         case 'S':
-            azimutAngle = Math.PI;
+            azimuthAngle = Math.PI;
             break;
 
         case 'NW':
-            azimutAngle = 7 * Math.PI / 4;
+            azimuthAngle = 7 * Math.PI / 4;
             break;
 
         case 'NE':
-            azimutAngle = Math.PI / 4;
+            azimuthAngle = Math.PI / 4;
             break;
 
         case 'SW':
-            azimutAngle = 5 * Math.PI / 4;
+            azimuthAngle = 5 * Math.PI / 4;
             break;
 
         case 'SE':
-            azimutAngle = 3 * Math.PI / 4;
+            azimuthAngle = 3 * Math.PI / 4;
             break;
     }
 
@@ -152,13 +184,14 @@ function computeIrradiation(time, day, ghi, dhi, bni, orientation, inclinationAn
     const rti = 0.2 * (1 - Math.cos(inclinationAngle)) * ghi / 2; // taking 20% for the albedo
 
     // cosine of the angle of incidence of the direct radiation on the roof
-    const incidenceAngleCosine = Math.cos(inclinationAngle) * Math.sin(sunElevationAngle) + Math.sin(inclinationAngle) * Math.cos(sunElevationAngle) * Math.cos(azimutAngle - solarAzimutAngle);
+    const incidenceAngleCosine = Math.cos(inclinationAngle) * Math.sin(sunElevationAngle) + Math.sin(inclinationAngle) * Math.cos(sunElevationAngle) * Math.cos(azimuthAngle - solarAzimuthAngle);
 
     // BTI -> Beam Tilted Irradiation
     const bti = incidenceAngleCosine <= 0 ? 0 : incidenceAngleCosine * bni;
 
-    // Total irradiation : sum of dti, rti, bti
-    return (dti + rti + bti);
+    // Total irradiation : sum of dti, rti, bti -> energy returned with this calculus
+    console.log("test" + (dti + rti + bti));
+    return Math.min(160, 0.2 * 0.85 * (dti + rti + bti));
 }
 
 // Export our API
