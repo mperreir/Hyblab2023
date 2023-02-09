@@ -9,6 +9,7 @@ let data3
 let data4
 let data5
 let data6
+let back_to_main_page = true
 let dataDep
 
 function readTextFile(file, callback) {
@@ -41,7 +42,7 @@ function changeBackground(color) {
 
 let next0 = document.getElementById("next0")
 next0.addEventListener("click", () => {
-    display("s7")
+    display("s1")
     changeBackground('#121212')
 })
 
@@ -328,6 +329,31 @@ function initRepsDep() {
         changeBackground('aliceblue')
     })
 }
+
+let next16 = document.getElementById("next16")
+    next16.addEventListener("click", () => {
+        window.open('https://disclose.ngo/fr/article/disclose-partage-ses-methodes-et-outils-pour-enqueter', '_blank');
+    })
+
+let about_s0 = document.getElementById("about-s0")
+about_s0.addEventListener("click", () => {
+    display("s17")
+})
+
+let about_s16 = document.getElementById("about-s16")
+about_s16.addEventListener("click", () => {
+    back_to_main_page = false
+    display("s17")
+})
+
+let back = document.getElementById("back")
+back.addEventListener("click", () => {
+    if (back_to_main_page) {
+        display("s0")
+    } else {
+        display("s16")
+    }
+})
 
 function display(id) {
     let slides = document.getElementsByClassName("slides")

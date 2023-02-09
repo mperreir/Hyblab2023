@@ -109,7 +109,7 @@ button {
     margin-top: 10px;
 }
 
-#next4_1, #next6, #next9_1, #next11_1, #next13_1 {
+#next4_1, #next6, #next9_1, #next11_1, #next13_1, #back {
     background-image: url('../img/utils/btn/btn-next.svg');
 }
 
@@ -134,7 +134,7 @@ button {
     background-image: url('../img/utils/btn/btn-guide.svg');
 }
 
-.next-btn {
+.next-btn, .back-btn {
     background-position: center center;
     background-size: cover;
     height: 50px;
@@ -274,7 +274,7 @@ main>section {
 
 #myBar {
     height: 15px;
-    background-color: red;
+    background-color: #c11718;
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
 }
@@ -334,6 +334,15 @@ main>section {
     line-height: 50px;
     border-radius: 15px;
     color: black;
+}
+
+.sponsors{
+    text-align: center;
+    display: inline-table;
+}
+
+.sponsors img{
+    padding: 2px;
 }
 
 .btn3 {
@@ -422,6 +431,19 @@ main>section {
     padding: 5px;
     width: 70%;
     font-family: arial, sans-serif;
+}
+
+.content-medium-bubble {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 18px;
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+    font-family: arial, sans-serif;
+    font-size: small;
 }
 
 .content {
@@ -571,6 +593,16 @@ input[type=range]:focus::-ms-fill-upper {
     background: #FFFFFF;
 }
 
+/*Gestion de la taille du texte page 17*/
+#little-bubble-s17-1, #little-bubble-s17-2, #little-bubble-s17-3{
+    font-size: 12px;
+    top: 78%;
+}
+
+#little-bubble-s17-4{
+    font-size: 12px;
+    top: 70%;
+}
 
 
 /* ---------- Positionning of logos on the last slide -------------------- */
