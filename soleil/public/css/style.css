@@ -102,7 +102,7 @@ body{
     width : 40px;
     height: 60px;
     position : absolute;
-    bottom : 20%;
+    bottom : 25%;
     right : 5%;
     animation-name: flo;
     animation-duration: 5s;
@@ -115,7 +115,7 @@ body{
     width : 40px;
     height: 60px;
     position : absolute;
-    bottom : 35%;
+    bottom : 45%;
     right : 5%;
     animation-name: flo;
     animation-duration: 5s;
@@ -128,7 +128,7 @@ body{
     width : 40px;
     height: 60px;
     position : absolute;
-    bottom : 50%;
+    bottom : 65%;
     right : 5%;
     animation-name: flo;
     animation-duration: 5s;
@@ -141,7 +141,7 @@ body{
     width : 40px;
     height: 60px;
     position : absolute;
-    bottom : 65%;
+    bottom : 85%;
     right : 5%;
     animation-name: flo;
     animation-duration: 5s;

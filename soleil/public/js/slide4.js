@@ -36,15 +36,15 @@ const initSlide4 = async function(){
 function changePente(){
     let pente = $("#pente input[name=pente]:checked").val();
         switch (pente) {
-            case "1":
+            case "2":
                 $("#pente #image3 p").html("Standard");
                 $("#pente .img-pente").attr("src", "img/Ombre/toit-mid-ombre-01.jpg");
                 break;
-            case "3":
+            case "1":
                 $("#pente #image3 p").html("Plat");
                 $("#pente .img-pente").attr("src", "img/Ombre/toit-flat-ombre-01.jpg");
             break;
-            case "2":
+            case "3":
                 $("#pente #image3 p").html("Pentu");
                 $("#pente .img-pente").attr("src", "img/Ombre/toit-hi-ombre-01.jpg");
                 break;
