@@ -70,16 +70,14 @@ body {
 
 
 /* Last slide image is centered */
-#img-fini {
-
-    width: 47%;
-    left: 61%;
-
-
-    top: 30vh;
+#div-img-fin{
+    margin: 0 5vh;
+    top: 13vh;
     position: absolute;
-    margin-left: -35%;
-    margin-top: calc(-25% * 9 / 16); /* margins are relative to the element width... :-( */
+}
+
+#img-fini {
+    width: 100%;
 }
 
 main > section {
@@ -399,7 +397,7 @@ SLIDE ANIMATION SORTIE+ZOOM
     width: 5.5vh;
     height: 5.5vh;
     right: 1.7vh;
-    top: 9vh;
+    top: 9.5vh;
     background-color: rgba(255, 255, 255, 0);
     margin: 0px;
     padding: 0px;
@@ -444,7 +442,7 @@ SLIDE ANIMATION SORTIE+ZOOM
     width: 5.5vh;
     height: 5.5vh;
     right: 1.7vh;
-    top: 14vh;
+    top: 15vh;
     background-color: rgba(255, 255, 255, 0);
     margin: 0px;
     padding: 0px;
@@ -703,7 +701,7 @@ li{
     Slide Entree texte
 **************************/
 .recap{
-    font-size: 32%;
+    font-size: 30%;
     position: absolute;
     bottom: 22%;
     width: 76%;
@@ -716,10 +714,10 @@ li{
 #presentation1 {
     width: 75%;
     height: auto;
-    font-size: 25%;
+    font-size: 28%;
     color: black;
     position: absolute;
-    top: 5%;
+    top: 6%;
     left: 5%;
 }
 
