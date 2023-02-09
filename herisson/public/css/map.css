@@ -38,3 +38,10 @@ html, body, #map {
 .leaflet-control-zoom {
     display: none;
 }
+
+.leaflet-right .leaflet-control {
+    margin-right: 2vw;
+}
+.leaflet-bottom .leaflet-control {
+    margin-bottom: 2vh;
+}

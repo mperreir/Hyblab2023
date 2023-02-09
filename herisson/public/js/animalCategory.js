@@ -22,7 +22,7 @@ async function createAnimalCategory(commune, animalCategory) {
     const main = document.querySelector("main.main");
     const footer = document.querySelector("footer.main")
 
-    h1container.textContent = animalCategory.split(" ").shift() + "observésé";
+    h1container.textContent = animalCategory.split(" ").shift() + " observés";
     citycontainer.textContent = commune;
     footercontainer.textContent = "Comment aider ces " + animalCategory.toLowerCase() + " ?";
     footercontainer.style.color = "#FBC5EB";
