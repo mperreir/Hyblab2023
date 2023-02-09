@@ -22,7 +22,7 @@ function createFicheprofile(profile) {
     // Récupération de la classe relative à la couleur de la police du theme
     const fontClass = getFontClass(tranlatedSimpleTopic);
     // Création src pour l'iframe Ausha podcast avec  l'id podcast du profile
-    const Podcast = "https://player.ausha.co/index.html?podcastId=" + PodcastId + "&display=horizontal&playlist=false&color=%23006982&v=3&playerId=ausha-WTg9";
+    const Podcast = "https://player.ausha.co/index.html?podcastId=" + PodcastId + "&display=horizontal&playlist=false&color=%23006982&v=3&playerId=ausha-HePz";
     // Création de la fiche profile
     const htmlString = `<div id="profile" class="fiche-profile flex-column align-items-center justify-content-space-between" data-id="${Id}">
                             <section id="resume" class="flex-row align-items-center">
@@ -45,11 +45,11 @@ function createFicheprofile(profile) {
                                 <section id="bio" class="align-items-center">
                                     <p>${ContentBio}</p>
                                 </section>
-                                <iframe id="podcast" name="Ausha Podcast Player" loading="lazy" id="ausha-WTg9" height="220px" style="border: none; width:100%; height:220px; padding: 0;" src="${Podcast}"></iframe><script src="https://player.ausha.co/ausha-player.js"></script>
+                                <iframe name="Ausha Podcast Player" frameborder="0" loading="lazy" id="ausha-HePz" height="220" style="border: none; width:100%; height:220px" src="${Podcast}"></iframe><script src="https://player.ausha.co/ausha-player.js"></script>                            
                             </section>
                             <section id="links" class="flex-row align-items-center justify-content-space-between">
                                 <button onclick="window.open('${Article}','_blank')" class="bouton-rond">Lire l\'article</button>
-                                <button onclick="window.open('${URLLinkedin}','_blank')" class="bouton-rond">Le profile Linkedin</button>
+                                <button onclick="window.open('${URLLinkedin}','_blank')" class="bouton-rond">Le profil Linkedin</button>
                             </section>
                         </div>`
     ;
@@ -113,10 +113,11 @@ function getFontClass(topic) {
     }
 }
 
-min = Math.ceil(1);
-max = Math.floor(84);
-//random number between 1 and 84 for the id of the profile test
-getprofile(Math.floor(Math.random() * (max - min + 1) + min)).then(r => {
+/**
+ * Récupération id du profile dans le local storage
+ */
+const Id = window.localStorage.getItem("idProfil");
+getprofile(Id).then(r => {
     createFicheprofile(r);
     console.log(r);
 });
