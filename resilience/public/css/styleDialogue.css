@@ -6,12 +6,16 @@ h1 {
     background-color: #79B77B;
 }
 
-#fond img{
+#fond{
     z-index: -1;
     width: 100%;
     position: absolute;
-    top: 15%;
+    top: 0%;
     left: 0%;
+}
+
+#fond img{
+    width: 100%;
 }
 
 /*
