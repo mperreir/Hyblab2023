@@ -24,6 +24,7 @@ html, body, #map {
     font-size: 4vw;
     line-height: 4vw;
     color: #555;
+    margin-bottom: 4vh;
     padding: 1vh 1vw;
 }
 .legend i {
