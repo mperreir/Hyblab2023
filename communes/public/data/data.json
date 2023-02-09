@@ -6,7 +6,7 @@
       "file_name": "img/ville2.svg",
       "main_color": "#A04952",
       "background_color": "#FFEDEF",
-      "intro": "Lorem ipsum dolor sit amet at imperdiet nulla sit est volutpat. Luptatum duis amet sed et dolor et aliquyam sea tempor kasd vel nonumy justo clita ea. Sadipscing praesent sit elitr duis sed sed lorem. At amet sit labore illum nonumy lorem gubergren amet. Dolor amet dolore sed et accusam consetetur eos euismod labore feugiat nihil stet magna velit invidunt molestie. Eos et accusam odio sed volutpat lorem accusam labore vero invidunt et lorem duis vulputate. Sit eos duis sea clita magna. Dolor amet et sed diam et ea nonumy ut et et molestie. Clita nibh et elit erat clita tempor invidunt tempor. Magna ut gubergren et dolore dolores ut no sit labore diam et et.",
+      "intro": "La ville peut sembler peu compatible avec la production d’énergie renouvelable. La densité immobilière et démographique et le manque de zone ouverte exploitable rend difficile l’implantation de ce type de dispositifs. Pourtant, les sous-sols de zone urbaine peuvent produire de l’énergie grâce à la géothermie. Cette technique consiste à exploiter la chaleur de la croûte terrestre. <br>À Vertville, nous avons installé une centrale géothermique dans une zone peu résidentielle, proche des autres industries locales. Celle-ci creuse à 3 500 mètres de profondeur pour fournir du chauffage à une grande partie des habitations de la ville. Certains parcs de grands immeubles utilisent des doublets géothermiques, qui creusent moins profondément et produisent moins d’énergie thermique. Cela suffit pour un faible nombre d’habitations.",
       "exemple": {
         "ville": "Paris",
         "video": "https://civam.fr/wp-content/uploads/sites/4/2014/10/big_buck_bunny.mp4",
@@ -23,7 +23,7 @@
       "file_name": "img/mer2.svg",
       "main_color": "#5A76B4",
       "background_color": "#EDF3FF",
-      "intro": "Lorem ipsum dolor sit amet at imperdiet nulla sit est volutpat. Luptatum duis amet sed et dolor et aliquyam sea tempor kasd vel nonumy justo clita ea. Sadipscing praesent sit elitr duis sed sed lorem. At amet sit labore illum nonumy lorem gubergren amet. Dolor amet dolore sed et accusam consetetur eos euismod labore feugiat nihil stet magna velit invidunt molestie. Eos et accusam odio sed volutpat lorem accusam labore vero invidunt et lorem duis vulputate. Sit eos duis sea clita magna. Dolor amet et sed diam et ea nonumy ut et et molestie. Clita nibh et elit erat clita tempor invidunt tempor. Magna ut gubergren et dolore dolores ut no sit labore diam et et.",
+      "intro": "La mer et l’océan constituent un terrain peu favorable au développement d’énergie renouvelable. Installer des infrastructures est coûteux et nécessite de prendre en compte une multitude de paramètres comme la biodiversité sous-marine, la dégradation des fonds ou encore la pêche qui s’y pratique.<br>À Vertville, nous avons opter pour l’éolien. Le vent y est plus fort et plus constant que sur terre, ce qui permet de doubler voire tripler la production d’électricité d’éoliennes terrestres. De plus, sa position, loin des habitations, dérange moins la population locale. Cela permet une meilleure acceptabilité du dispositif, souvent rejeté par les riverains.",
       "exemple": {
         "ville": "Strasbourg",
         "video": "https://civam.fr/wp-content/uploads/sites/4/2014/10/big_buck_bunny.mp4",
@@ -39,21 +39,51 @@
       "id": "la-friche",
       "file_name": "img/friche2.svg",
       "main_color": "#FFAC7F",
-      "background_color": "#FFF5EF"
+      "background_color": "#FFF5EF",
+      "intro": "Anciens champs, zones industrielles désaffectées, les friches ne manquent pas. Souvent laissées à l’abandon, elles constituent un terrain idéal pour le développement d’énergies renouvelables. Leur grande surface et l’absence d’arbre ou d’infrastructures trop importante permetttent d’y installer toute sorte de dispositifs. <br>À Vertville, une ancienne carrière de plusieurs hectares bénéficie d’une importante exposition au soleil. Nous avons choisi de disposer des panneaux photovoltaïques sur tout le terrain. Un choix pertinent puisque l’énergie solaire est entièrement renouvelable. Elle permet à la fois de produire de l’électricité mais également de la chaleur.",
+      "exemple": {
+        "ville": "Strasbourg",
+        "video": "https://civam.fr/wp-content/uploads/sites/4/2014/10/big_buck_bunny.mp4",
+        "description": "Lorem ipsum dolor sit amet voluptua labore duo ipsum at labore labore lorem. Sadipscing dolor eos amet. Ipsum lobortis diam exerci rebum takimata."
+      },
+      "carte": {
+        "name": "La géothermie en France",
+        "api": "https://api-adresse.data.gouv.fr/search/?q={search}"
+      }
     },
     {
       "name": "La rivière",
       "id": "la-rivière",
       "file_name": "img/riviere2.svg",
       "main_color": "#73CAD6",
-      "background_color": "#F2FDFF"
+      "background_color": "#F2FDFF",
+      "intro": "Les cours d’eau constituent une source d’énergie décarbonée et durable s’ils sont correctement exploités. <br>À Vertville, nous profitons de nos terrains en aval de montagne pour y installer une centrale hydraulique et un barrage. Ce dernier retient l’eau mais laisse s’échapper un flux très puissant qui permet d’actionner une turbine pour produire de l’électricité. Nous avons combiné ce dispositif avec des retenues d’eau. Cette technique consiste à stocker de grandes quantités d’eau pour l’utiliser si la demande devient plus importante.",
+      "exemple": {
+        "ville": "Strasbourg",
+        "video": "https://civam.fr/wp-content/uploads/sites/4/2014/10/big_buck_bunny.mp4",
+        "description": "Lorem ipsum dolor sit amet voluptua labore duo ipsum at labore labore lorem. Sadipscing dolor eos amet. Ipsum lobortis diam exerci rebum takimata."
+      },
+      "carte": {
+        "name": "La géothermie en France",
+        "api": "https://api-adresse.data.gouv.fr/search/?q={search}"
+      }
     },
     {
       "name": "La campagne et la forêt",
       "id": "la-campagne-et-la-forêt",
       "file_name": "img/campagne2.svg",
       "main_color": "#59A78D",
-      "background_color": "#F2FFFB"
+      "background_color": "#F2FFFB",
+      "intro": "Les forêts et les champs sont riches en ressources organiques, aussi appelées biomasse. Le bois des arbres peut être brûlé pour produire de la chaleur et de l’énergie. Les biodéchets, c’est-à-dire les déchets issus de l’agriculture, de la consommation des ménages ou de l’entretien de terrains végétaux, peuvent passer par le processus de méthanisation. Ce dernier consiste à faire fermenter la biomasse pour créer du gaz.<br>À Vertville, nous sommes muni d’une installation à méthanisation, qui permet la fermentation des biodéchets et d’une chaufferie, pour brûler le bois. Ces dispositifs sont reliés à tous les foyers situés en périphérie de l’intercommunalité pour assurer leur chauffage tout au long de l’année. ",
+      "exemple": {
+        "ville": "Strasbourg",
+        "video": "https://civam.fr/wp-content/uploads/sites/4/2014/10/big_buck_bunny.mp4",
+        "description": "Lorem ipsum dolor sit amet voluptua labore duo ipsum at labore labore lorem. Sadipscing dolor eos amet. Ipsum lobortis diam exerci rebum takimata."
+      },
+      "carte": {
+        "name": "La géothermie en France",
+        "api": "https://api-adresse.data.gouv.fr/search/?q={search}"
+      }
     }
   ],
   "intro": [

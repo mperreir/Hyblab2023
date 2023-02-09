@@ -133,7 +133,7 @@ p{
 #first-slide header, #second-slide header{
     text-align: center;
     width: 100%;
-    top: 10%;
+    top: 3%;
     position: absolute;
     font-size: 30%;
     z-index: 2;
