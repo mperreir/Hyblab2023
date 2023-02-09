@@ -24,11 +24,12 @@ const initSlide1 = async function(){
     titre.innerHTML = data.name.toUpperCase();
     titre.style.color = data.main_color;
     document.querySelectorAll('.swiper-pagination-bullet').forEach((bullet) => {bullet.style.backgroundColor = data.main_color;});
-    document.querySelectorAll('.swiper-wrapper section').forEach((section) => {section.style.backgroundColor = data.background_color;});
     document.querySelectorAll('.swiper-slide main').forEach((main) => {main.style.backgroundColor = data.main_color;});
     document.querySelectorAll('.carouselResult').forEach((button) => {button.style.backgroundColor = data.main_color;});
     document.querySelectorAll('.carouselResult').forEach((button) => {button.style.color = "#ffffff";});
-
+    document.querySelectorAll('#container').forEach((section) => {section.style.backgroundColor = data.background_color;});
+    const headScore = document.querySelector('.headerThree');
+    headScore.style.backgroundColor = data.main_color
 
     document.querySelectorAll('h3').forEach((h3) => {
       h3.style.color = data.main_color;
@@ -75,13 +76,13 @@ const initSlide1 = async function(){
   //const urlParams = new URLSearchParams(window.location.search);
   //const name = urlParams.get('name');
   console.log(sessionStorage.getItem("visit"));
-  let map_response = await fetch('../api/energy/'+sessionStorage.getItem("visit"));
-  const data_map = await map_response.json();
+//  let map_response = await fetch('../api/energy/'+sessionStorage.getItem("visit"));
+  //const data_map = await map_response.json();
 
 
   const data_filter = data.main.filter(function(item){return item.id === sessionStorage.getItem("visit");})[0]
   mise_en_forme(data_filter);
   initSlide2(data_filter);
-  initSlide3(data_filter, data_map);
+  initSlide3(data_filter, []);
 
 };

@@ -38,13 +38,21 @@
           <p id="loader-text">Veuillez patienter...</p>
       </section>
       <div id="mySwiper" class="swiper">
+          <header>
+              <div class="headerOne">
+                  <object class="logo" type="image/svg+xml"></object>
+              </div>
+              <div class="headerThree">
+                  <p> Score : </p>
+              </div>
+          </header>
         <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
         <main class = "swiper-wrapper">
             <section id="first-slide" class="swiper-slide">
-                <header>
+                <div class="topEnv">
                     <object id="logo-environment" data="../img/friche.svg" width="35%" type="image/svg+xml"></object>
                     <h1 id="titre"></h1>
-                </header>
+                </div>
                 <!-- le footer sera rempli à partir de données lues dans un fichier Json-->
                 <main>
                   <p id="introduction"></p>
@@ -52,9 +60,9 @@
             </section>
 
             <section id="first-bis-slide" class="swiper-slide">
-                <header id="header-slide-15" class="header">
+                <div id="topEnv-slide-15" class="topEnv">
                     <h3></h3>
-                </header>
+                </div>
                 <main>
                     <h2 id="autre-env"></h2>
                     <div id="svg-container">
@@ -64,9 +72,9 @@
 
 
             <section id="second-slide" class="swiper-slide">
-                <header id="header-slide-2" class="header">
+                <div id="topEnv-slide-2" class="topEnv">
                     <h3>La ville</h3>
-                </header>
+                </div>
             <main>
                 <h2 id="exemple-title">This was...</h2>
                 <!-- video -->
@@ -81,9 +89,9 @@
             </section>
 
             <section id="third-slide" class="swiper-slide">
-                <header id="header-slide-3" class="header">
+                <div id="topEnv-slide-3" class="topEnv">
                     <h3>La ville</h3>
-                </header>
+                </div>
                 <main>
                     <h2 id="map-title">This was...</h2>
                     <div id="map"></div>
@@ -91,8 +99,8 @@
                 </main>
             </section>
             <section id="fourth-slide" class="swiper-slide">
-                <header>
-                </header>
+                <div>
+                </div>
                 <div class="carousel notEmpty" id="carousel"></div>
 
                 <div id="legend-carousel">
