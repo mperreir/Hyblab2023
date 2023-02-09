@@ -20,7 +20,7 @@ body
 .texte-Elie
 {
     text-align: right;
-    width: 40vw;
+    width: 30vw;
     font-size: 2.75vh;
     color: #0B6E5F;
     font-family: 'Covered By Your Grace', cursive;
@@ -32,7 +32,7 @@ body
 #elie
 {
     /*width: 93vw;*/
-    height: 75vh;
+    height: 55vh;
 }
 
 .texte-Elie p
