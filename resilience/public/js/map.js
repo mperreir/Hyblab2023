@@ -17,7 +17,7 @@ dict_achiev.set("_16", []);
 regions.forEach(element => {
     element.addEventListener('click', () => {
         compt = window.localStorage.getItem("compt");
-        if ((element.id != "_16" || compt.length > 7) && window.localStorage.getItem("popup") == "false") {
+        if ((element.id != "_16" || compt.length > 7) && (element.id != "_14" || window.localStorage.getItem("pipi") == "true") && window.localStorage.getItem("popup") == "false") {
             dict_achiev.get(element.id).forEach(e => {
                 window.localStorage.setItem('achievement'.concat(e), "true");
             });
@@ -113,7 +113,8 @@ function manger() {
 
 function toilette() {
     window.localStorage.setItem('pipi', "true");
-    window.location = "./dialogue.html?id=17";
+    window.localStorage.setItem("_14","true");
+    window.location = "./dialogue.html?id=14";
 }
 
 load();
