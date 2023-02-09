@@ -40,9 +40,9 @@ const initSlideAnimationBas = function(){
   //Animation zoom sur zone restante
   anime({
     targets: "#animationSlideBas .img_bas",
-    scale: 3,
-    translateY : -15,
-    translateX :0,
+    scale: 2.5,
+    translateY : -24.55,
+    translateX :-3.45,
     delay : 1300,
     easing: 'easeInOutSine',
     direction: 'normal',

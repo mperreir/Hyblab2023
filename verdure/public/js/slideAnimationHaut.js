@@ -42,8 +42,10 @@ const initSlideAnimationHaut = function(){
 
   anime({
     targets: "#animationSlideHaut .img_haut",
-    scale: 3,
+    scale: 2.5,
     delay : 1300,
+    translateY: 11.5,
+    translateX: -3,
     easing: 'easeInOutSine',
     direction: 'normal',
     duration :2000,
