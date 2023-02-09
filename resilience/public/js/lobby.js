@@ -65,6 +65,7 @@ function init_storage() {
   window.localStorage.setItem('compt', "");
   window.localStorage.setItem('heure', " 8:00 ");
   window.localStorage.setItem("popup", "false");
+  window.localStorage.setItem("first-acquis", "false");
   window.localStorage.setItem('started', 0);
   window.localStorage.setItem('steps', 0);
   window.localStorage.setItem('manger', "false");

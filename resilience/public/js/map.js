@@ -3,6 +3,7 @@ const mairie = document.getElementById("_16");
 const heure = document.getElementById("heure").value;
 const heures = ['8:00', '9:30', '11:00', '12:30', '14:00', '15:30', '17:00', '18:30', '20:00', '21:00'];
 var modal = document.getElementById("myModal");
+var modal_acquis = document.getElementById("notif-acquis");
 var dict_achiev = new Map();
 dict_achiev.set("_8", [1, 2, 3, 4, 5, 6, 7, 8]);
 dict_achiev.set("_9", [6, 7, 8]);
@@ -17,7 +18,7 @@ dict_achiev.set("_16", []);
 regions.forEach(element => {
     element.addEventListener('click', () => {
         compt = window.localStorage.getItem("compt");
-        if ((element.id != "_16" || compt.length > 7) && window.localStorage.getItem("popup") == "false") {
+        if ((element.id != "_16" || compt.length > 7) && (element.id != "_14" || window.localStorage.getItem("pipi") == "true") && window.localStorage.getItem("popup") == "false") {
             dict_achiev.get(element.id).forEach(e => {
                 window.localStorage.setItem('achievement'.concat(e), "true");
             });
@@ -68,6 +69,10 @@ function load() {
     if (window.localStorage.getItem("popup") == "true") {
         document.getElementById("popup").style.visibility = "visible";
     }
+    if (window.localStorage.getItem("first-acquis") == "true") {
+        modal_acquis.style.display = "block";
+    }
+    window.localStorage.setItem("first-acquis", "false");
     regions.forEach(element => {
         if (window.localStorage.getItem(element.id) == "true") {
             element.setAttribute('filter', "url(#saturation1)");
@@ -84,6 +89,7 @@ function init() {
     window.localStorage.setItem('compt', "");
     window.localStorage.setItem('heure', " 8:00 ");
     window.localStorage.setItem("popup", "false");
+    window.localStorage.setItem("first-acquis", "false");
     window.localStorage.setItem("steps", 0);
     window.localStorage.setItem('_8', "false");
     window.localStorage.setItem('_9', "false");
@@ -113,10 +119,17 @@ function manger() {
 
 function toilette() {
     window.localStorage.setItem('pipi', "true");
-    window.location = "./dialogue.html?id=17";
+    window.localStorage.setItem("_14","true");
+    window.location = "./dialogue.html?id=14";
 }
 
 load();
+
+
+// When the user clicks on <span> (x), close the modal
+modal_acquis.onclick = function() {
+    modal_acquis.style.display = "none";
+}
 
 // When the user clicks on <span> (x), close the modal
 modal.onclick = function() {
@@ -127,5 +140,8 @@ modal.onclick = function() {
 window.onclick = function(event) {
 if (event.target == modal) {
     modal.style.display = "none";
+}
+if (event.target == modal_acquis) {
+    modal_acquis.style.display = "none";
 }
 }

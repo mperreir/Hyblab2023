@@ -152,7 +152,11 @@ document.getElementById('right-arrow').addEventListener('click', function () {
     if (window.localStorage.getItem("compt").length == 3) {
         window.localStorage.setItem("popup", "true");
     }
+    if (window.localStorage.getItem("compt").length == 1) {
+        window.localStorage.setItem("first-acquis", "true");
+    }
     window.location = "./map.html";
+
 });
 
 /*
