@@ -30,7 +30,6 @@ window.onload = function() {
     imgMenuBurger.style.top = "2vh";
     imgMenuBurger.style.right = "5vw";
     imgMenuBurger.style.zIndex = "2";
-// imgMenuBurger.style.width = "5vw";
     imgMenuBurger.style.height = "2.75vh";
 
     const lienCroix = document.createElement("a");
@@ -42,9 +41,10 @@ window.onload = function() {
     imgCroix.alt = "croix";
     imgCroix.id = "popUpNav";
     imgCroix.style.position = "absolute";
-    imgCroix.style.top = "50px";
-    imgCroix.style.right = "50px";
+    imgCroix.style.top = "2vh";
+    imgCroix.style.right = "5vw";
     imgCroix.style.zIndex = "2";
+    imgCroix.style.height = "2.75vh";
 
     imgCroix.addEventListener("click", function() {
         window.history.back();

@@ -17,7 +17,7 @@ document.querySelector("#rechercheCommune").addEventListener("keyup", async func
         }
 
         if (dataCommune === undefined) {
-            dataCommune = await fetch(`http://127.0.0.1:8080/herisson/api/commune/autocomplete/${searchTerm}`)
+            dataCommune = await fetch(`https://hyblab.polytech.univ-nantes.fr/herisson/api/commune/autocomplete/${searchTerm}`)
             dataCommune = await dataCommune.json();
         }
 
@@ -56,7 +56,7 @@ document.querySelector("#rechercheAnimal").addEventListener("keyup", function (e
         return;
     }
     // Make a GET request to the API endpoint
-    fetch(`http://127.0.0.1:8080/herisson/api/animal/autocomplete/${searchTerm}`)
+    fetch(`https://hyblab.polytech.univ-nantes.fr/herisson/api/animal/autocomplete/${searchTerm}`)
         .then(response => response.json())
         .then(data => {
             console.log(data);

@@ -9,7 +9,7 @@ const createMap = async function (taxon) {
 
     async function getAnimalData(taxon) {
         return await
-            fetch(`http://127.0.0.1:8080/herisson/api/animal/${taxon}`)
+            fetch(`https://hyblab.polytech.univ-nantes.fr/herisson/api/animal/${taxon}`)
                 .then(response => response.json())
                 .then(data => {
                         return data.filteredData[taxon];

@@ -3,7 +3,7 @@ async function createCommunePage(commune) {
 
     async function getDataCommune(nom) {
         return await
-            fetch(`http://127.0.0.1:8080/herisson/api/commune/${nom}`)
+            fetch(`https://hyblab.polytech.univ-nantes.fr/herisson/api/commune/${nom}`)
                 .then(response => response.json())
                 .then(data => {
                         return data.filteredData;

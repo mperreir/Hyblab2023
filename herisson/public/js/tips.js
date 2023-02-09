@@ -1,7 +1,7 @@
 async function createPageConseil(name) {
     async function getDataTips(nom) {
         return await
-            fetch(`http://127.0.0.1:8080/herisson/api/tips/${nom}`)
+            fetch(`https://hyblab.polytech.univ-nantes.fr/herisson/api/tips/${nom}`)
                 .then(response => response.json())
                 .then(data => {
                         return data.filteredData;
