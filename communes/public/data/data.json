@@ -15,6 +15,17 @@
       "carte": {
         "name": "La géothermie en France",
         "api": "https://api-adresse.data.gouv.fr/search/?q={search}"
+      },
+      "autre_env": {
+        "titre": "LA BIOMASSE EST Compatible avec la friche ET LA FORÊT ET LES CHAMPS",
+        "liste": [
+          {
+            "file_name": "../img/friche.svg"
+          },
+          {
+            "file_name": "../img/friche.svg"
+          }
+        ]
       }
     },
     {
