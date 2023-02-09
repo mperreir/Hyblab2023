@@ -470,6 +470,41 @@ video{
     position: relative;
 }
 
+#article1{
+    overflow-y: scroll;
+    scroll-behavior: auto;
+}
+
+#article2 {
+    overflow-y: scroll;
+    scroll-behavior: auto;
+  }
+
+  #article3 {
+    overflow-y: scroll;
+    scroll-behavior: auto;
+  }
+
+  #article4 {
+    overflow-y: scroll;
+    scroll-behavior: auto;
+  }
+
+  #article5 {
+    overflow-y: scroll;
+    scroll-behavior: auto;
+  }
+
+  #article6 {
+    overflow-y: scroll;
+    scroll-behavior: auto;
+  }
+
+  #article7 {
+    overflow-y: scroll;
+    scroll-behavior: auto;
+  }
+
 #adresse input{
     box-sizing: border-box;
     display: flex;
