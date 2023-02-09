@@ -56,7 +56,7 @@ h2Sources.innerHTML = "SOURCES SCIENTIFIQUES";
 lienSources.appendChild(h2Sources);
 
 const lienContact = document.createElement("a");
-lienContact.href = "contact.html";
+lienContact.href = "contacts.html";
 lienContact.style.textDecoration = "none";
 
 const h2Contact = document.createElement("h2");
