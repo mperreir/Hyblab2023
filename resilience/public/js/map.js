@@ -114,6 +114,7 @@ function manger() {
     window.localStorage.setItem("_13", "true");
     steps = " ".concat(compt.length + 1);
     window.localStorage.setItem('steps', steps);
+    dict_achiev.set("_13", [5]);
     window.location = "./dialogue.html?id=13";
 }
 
@@ -124,6 +125,7 @@ function toilette() {
     window.localStorage.setItem("_14", "true");
     steps = " ".concat(compt.length + 1);
     window.localStorage.setItem('steps', steps);
+    dict_achiev.set("_14", [8]);
     window.location = "./dialogue.html?id=14";
 }
 
