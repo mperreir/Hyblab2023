@@ -46,11 +46,10 @@ body {
     font-size: 2.7vh;
     color: #0B6E5F;
     font-weight: bold;
-    margin-top: 10vh;
+    margin-top: 5vh;
 }
 
 .description {
-    position: absolute;
     font-size: 2.7vh;
     color: #0B6E5F;
     margin-left: 4vh;
@@ -83,6 +82,7 @@ body {
     color: #FFF8F1;
     margin-top: 15vh;
     font-weight: bold;
+    margin-bottom: 0;
 }
 
 .swiper-pagination-bullet {
