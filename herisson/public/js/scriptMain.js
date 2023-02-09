@@ -5,9 +5,11 @@ let dataCommune = undefined;
 document.querySelector("#rechercheCommune").addEventListener("keyup", async function (event) {
     const searchTermCom = event.target.value;
 
+    let nbElemCom = 3;
+
     if (!searchTermCom) {
         document.querySelector("#autocompletionCom").innerHTML = '';
-        document.querySelector("#autocompletionCom").style.display = `none`;
+        document.querySelector("#autocompletionCom").style.display = `${nbElemCom * 5}vh`;
         document.querySelector("#searchAnimal").style.display = `block`;
         return;
     }
@@ -25,7 +27,7 @@ document.querySelector("#rechercheCommune").addEventListener("keyup", async func
     // if (nbElemCom > 3) {
     //     nbElemCom = 3;
     // }
-    let nbElemCom = 3;
+
 
     if (nbElemCom === 0) {
         document.querySelector("#autocompletionCom").innerHTML = '';

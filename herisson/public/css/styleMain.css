@@ -104,7 +104,7 @@ input[type="text"]
     font-weight: 500;
     font-family: 'Prompt', sans-serif;
     color : #0B6E5F;
-    font-size: 3vh;
+    font-size: 5vw;
     margin-left: -5vw;
     opacity: 1;
 }
@@ -120,14 +120,14 @@ input[type="text"]
 
 .bouton-recherche {
     background-image: url("../img/loupe.png");
-    background-size: 5vw;
+    background-size: 6vw;
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    width: 5vw;
-    height: 5vw;
+    width: 6vw;
+    height: 6vw;
     position: absolute;
     padding-top: 7vh;
 }
