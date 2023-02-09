@@ -105,17 +105,15 @@ input[type=button] {
     border-radius: 4em;
     margin-top: 6%;
 }
-.button {
-    border-radius: 40px 40px 40px 40px;
-    padding: 8px;
-    margin-top: 15px;
-}
 
-#voirEnv{
-    position: absolute;
-    right: 5%;
-    margin-top: 5%;
-}
 header p{
     font-size: 25px;
+}
+#voirEnv {
+    position: absolute;
+    padding: 15px 0 0;
+    bottom: 48%;
+    margin-top: 5%;
+    right: 5%;
+    width: 50%;
 }
