@@ -3,7 +3,10 @@
     overflow: scroll;
     height: 90%;
   }
-
+#premiere_page #ligne p {
+    width: 90%;
+    margin: auto;
+}
 
 p{
     font-size: 14px;
