@@ -149,10 +149,9 @@ function displayMessage(message) {
 
 document.getElementById('right-arrow').addEventListener('click', function () {
     if (window.localStorage.getItem("compt").length == 3) {
-        window.localStorage.setItem("popup", "true")
+        window.localStorage.setItem("popup", "true");
     }
-    window.location = "./map.html"
-
+    window.location = "./map.html";
 });
 
 /*

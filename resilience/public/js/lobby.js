@@ -67,6 +67,8 @@ function init_storage() {
   window.localStorage.setItem("popup", "false");
   window.localStorage.setItem('started', 0);
   window.localStorage.setItem('steps', 0);
+  window.localStorage.setItem('manger', "false");
+  window.localStorage.setItem('pipi', "false");
   window.localStorage.setItem('_8', "false");
   window.localStorage.setItem('_9', "false");
   window.localStorage.setItem('_10', "false");
