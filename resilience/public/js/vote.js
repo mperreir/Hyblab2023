@@ -2,6 +2,10 @@
 const colors = [('red', 1), ('orange', 2), ('yellow', 3), ('green', 4), ('blue', 5)];
 
 async function vote() {
+    // Get the description of the vote
+    let description = await fetch('/resilience/data/vote.json');
+    description = await description.json();
+
     // Get the vote from the database
     let response = await fetch('/resilience/api/vote', {
         method: 'GET',
@@ -16,7 +20,7 @@ async function vote() {
     await data.forEach(async solution => {
         let htmlSolution = document.createElement('div');
         htmlSolution.classList.add('solution');
-        htmlSolution.textContent = solution.id;
+        htmlSolution.textContent = description[solution.id];
 
         let htmlVote = document.createElement('div');
         htmlVote.classList.add('vote');
@@ -53,7 +57,7 @@ async function vote() {
     let htmlSubmit = document.createElement('div');
     htmlSubmit.classList.add('submit');
     htmlSubmit.textContent = 'Submit';
-    htmlSubmit.addEventListener('click', async function () {
+    let submit = htmlSubmit.addEventListener('click', async function () {
         if (Object.keys(notes).length == data.length) {
             // Reformat the notes into req
             let req = Object.entries(notes).map(e => {
@@ -66,10 +70,14 @@ async function vote() {
             await fetch('/resilience/api/vote', {
                 method: 'POST',
                 body: JSON.stringify(req),
+            }).catch(err => {
+                console.log(err);
             });
         } else {
             console.log('You must vote for all solutions');
         }
+
+        htmlSubmit.removeEventListener('click', submit);
     });
 
     htmlVotes.appendChild(htmlSubmit);

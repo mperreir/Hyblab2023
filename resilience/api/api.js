@@ -20,10 +20,16 @@ app.get('/vote', async function (req, res) {
 });
 
 app.post('/vote', async function (req, res) {
-    console.log(req.body);
-    req.body.forEach(async vote => {
-        await db.Vote.addVote(vote.id, vote.note);
-    });
+    console.log(await req.body);
+    try{
+        const data = await req.body;
+        data.forEach(async vote => {
+            await db.Vote.addVote(vote.id, vote.note);
+        });
+    }
+    catch (err) {
+        console.log(err);
+    }
 });
 
 // Export our API
