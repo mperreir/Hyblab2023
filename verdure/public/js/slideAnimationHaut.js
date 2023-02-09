@@ -6,27 +6,18 @@ const initSlideAnimationHaut = function(){
   UpdateSrcImage('#animationSlideHaut');
   const haut = document.querySelector('.img_haut');
   let route = document.getElementById('route2');
-    route.style.opacity = 0;
-    
-
-    // (Re)set initial position of img
-  haut.setAttribute('style', 'transform :scale(1);');
-
+  route.style.opacity = 0;
   
-  /*******
-   * GREEN Ta place
-   */
-
+  // (Re)set initial position of img
+  haut.setAttribute('style', 'transform :scale(1);');
   var logo2 = document.querySelector('#logoSlideHaut');
 
   // (Re)set initial scale of logo
   logo2.setAttribute('style', 'transform : translateY(-50vh);');
   logo2.setAttribute('style', 'transform : scale(1);');
   
+//Animations sortie des zones 
 
-  // Animate it
-
-/*****Easing elastic */
   anime({
     targets : " #animationSlideHaut .img_droit",
     translateX: 2700,
@@ -46,16 +37,9 @@ const initSlideAnimationHaut = function(){
     delay : 1200
   });
 
-  anime({
-    targets : "#animationSlideHaut .route",
-    scale:0,
-    delay : 100,
-    easing: 'easeInOutSine',
-    direction: 'normal',
-    duration :2000,
-  })
 
-  //animation finale
+  //Animation zoom sur zone restante
+
   anime({
     targets: "#animationSlideHaut .img_haut",
     scale: 3,

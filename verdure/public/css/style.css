@@ -209,11 +209,8 @@ body {
 }
 
 /************************************
-SLIDE ACCUEIL
+            SLIDE ACCUEIL
 ************************************/
-
-
-
 
 #backgroundFirstSlide{
     opacity: 35%;
@@ -222,14 +219,12 @@ SLIDE ACCUEIL
     width: 145%;
 }
 
-
-
 #logo-gtv {
 
     text-align: center;
     width: 40%;
     left: 52%;
-    top: 5%;
+    top: 1%;
     margin-left: -25%;
     margin-top: calc(-7.5% * 9 / 16); /* margins are relative to the element width... :-( */
     position: absolute;
@@ -241,15 +236,14 @@ SLIDE ACCUEIL
 #presentation-jeu {
     font-size: 25%;
     position: absolute;
-    top: 22%;
+    top: 20%;
     width: 86%;
     left: 6%;
     text-align: justify;
-
 }
 
 /*************************
-SLIDE QUESTION
+    SLIDE QUESTION
 *************************/
 
 .indic {
@@ -274,12 +268,10 @@ SLIDE QUESTION
     color: #282828;
 }
 
-
 .question-slide {
     background-position-y: 0;
     transition: background-position-y 1s;
 }
-
 
 #city1, #city2, #city3, #city4, #city5, #city6, #city7 {
     position: absolute;
@@ -300,17 +292,15 @@ SLIDE QUESTION
 }
 
 
-/*****************
+/***************************
 SLIDE ANIMATION SORTIE+ZOOM
-******************/
+*****************************/
 
 .img_gauche, .img_bas, .img_droit, .img_haut {
     width: 40%;
     height: auto;
     text-align: center;
-
 }
-
 
 .img_bas {
     position: absolute;
@@ -354,48 +344,8 @@ SLIDE ANIMATION SORTIE+ZOOM
     transition: opacity 1s;
 }
 
-/*************************
-ANIMATION ENTREE
-*************************/
-/*
-.img_gauche_Entree, .img_bas_Entree, .img_droit_Entree, .img_haut_Entree {
-    width: 40%;
-    height: auto;
-    text-align: center;
-
-}
-
-
-.img_bas_Entree {
-    position: absolute;
-    top: 49.5%;
-    text-align: center;
-    left: 32.1%;
-}
-
-.img_haut_Entree {
-    position: absolute;
-    top: 33.5%;
-    text-align: center;
-    left: 32%;
-}
-
-.img_gauche_Entree {
-    position: absolute;
-    top: 41.2%;
-    text-align: center;
-    left: 7.5%;
-}
-
-.img_droit_Entree {
-    position: absolute;
-    top: 41.3%;
-    text-align: center;
-    right: 3%;
-}
-
 /********************************
-INDICATEUR
+            INDICATEUR
 *******************************/
 /*THERMOMETRE*/
 .containerthermo {
@@ -420,8 +370,7 @@ INDICATEUR
     background-color: rgba(255, 255, 255, 0);
     margin: 0px;
     padding: 0px;
-    z-index: 2;
-    
+    z-index: 2;    
 }
 
 .thermo {
@@ -521,7 +470,6 @@ INDICATEUR
     left: 0.1vh;
     bottom: 2%;
     transition: height 3s, background-color 3s;
-
 }
 
 #happyindic {
@@ -664,43 +612,8 @@ li{
     margin: 2vh;
 }
 
-/****************
-Nuage
-***************/
-figure {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0 0 0 0;
-    position: absolute;
-    left: 0;
-    top: 0px;
-    /* overflow: hidden; */
-    background: url(http://res.cloudinary.com/duqzvuawc/image/upload/c_scale,h_424/v1508813537/clouds_tile_efhbuh.jpg);
-    animation: clouds_animation 75s linear infinite;
-}
-
-@keyframes clouds_animation {
-
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: -2122px 0;
-    }
-}
-
-/*********/
-/* #ville > img {
-    width: 40%;
-    height: auto;
-    text-align: center;
-
-} */
-
-
 /**********************
-Derniere slide
+    Slide Résultats
 **********************/
 
 /* Dropdown Content (Hidden by Default) */
@@ -717,14 +630,12 @@ Derniere slide
     width: 15%;
     height: auto;
     margin-right: 2%;
-
 }
 
 .conclusion > p {
     width: 75%;
     font-size: 2vh;
     margin-left: 7vh
-
 }
 
 .conclusion {
@@ -742,14 +653,12 @@ Derniere slide
     justify-content: center;
     text-align: center;
     color: black;
-
 }
 
 #containerEnd {
     position: absolute;
     top: 29%;
 }
-
 
 .button {
     display: flex;
@@ -791,17 +700,16 @@ Derniere slide
 }
 
 /**************************
-slide entree texte
+    Slide Entree texte
 **************************/
 .recap{
-    font-size: 30%;
+    font-size: 32%;
     position: absolute;
-    top: 22%;
+    top: 24%;
     width: 76%;
     text-align: center;
     left: 14%;
     z-index: 2;
-
 }
 
 #presentation1 {
@@ -826,9 +734,8 @@ slide entree texte
 
 
 /**********************
-GREENTA
+        Logo Gif
 *********************/
-
 
 .greenTa {
     text-align: center;
@@ -849,9 +756,17 @@ GREENTA
     top: 3%;
 }
 
+.nuage{
+    position: absolute;
+    height: 30%;    
+}
+
+/*******************
+Présentation équipe
+*******************/
+
 #photo-table {
     margin: 40vh auto auto;;
-
     font-size: 15%;
 }
 
@@ -868,10 +783,4 @@ GREENTA
 
 #photo-table th {
     width: 50vh;
-}
-
-
-.nuage{
-    position: absolute;
-    height: 30%;    
 }

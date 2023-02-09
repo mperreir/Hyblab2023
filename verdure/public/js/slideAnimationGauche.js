@@ -7,24 +7,16 @@ const initSlideAnimationGauche = function(){
     let route = document.getElementById('#route');
     route.style.opacity = 0;
 
-    // (Re)set initial position of img
-    droit.setAttribute('style', 'transform :scale(1);');
-  
-  // Animate it
-
-
-  /*******
-   * GREEN TON friche
-   */
-
+  // (Re)set initial position of img
+  droit.setAttribute('style', 'transform :scale(1);');
   var logo2 = document.querySelector('#logoSlideGauche');
 
   // (Re)set initial scale of logo
   logo2.setAttribute('style', 'transform : translateY(-50vh);');
   logo2.setAttribute('style', 'transform : scale(1);');
   
+//Animations sortie des zones 
 
-/*****Easing elastic */
   anime({
     targets : "#animationSlideGauche .img_haut",
     translateY: -2700,
@@ -44,9 +36,8 @@ const initSlideAnimationGauche = function(){
     delay : 1200
   });
 
+  //Animation zoom sur zone restante
 
-
-  //animation finale
   anime({
     targets: "#animationSlideGauche .img_gauche",
     scale: 3,
@@ -56,7 +47,6 @@ const initSlideAnimationGauche = function(){
     direction: 'normal',
     duration :2000,
   })
-
 
   setTimeout(()=> {
     swiper.enable()

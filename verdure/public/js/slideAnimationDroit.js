@@ -6,25 +6,19 @@ const initSlideAnimationDroit = function(){
   UpdateSrcImage('#animationSlideDroit');
   const droit = document.querySelector('#animationSlideDroit .img_droit');
   let route = document.getElementById('route3');
-    route.style.opacity = 0;
+  route.style.opacity = 0;
 
     // (Re)set initial position of img
   droit.setAttribute('style', 'transform :scale(1);');
 
-  // Animate it
-  /********************LOGO */
   var logo2 = document.querySelector('#logoSlideDroit');
-/*******
-   * GREEN TON parking
-   */
 
   // (Re)set initial scale of logo
   logo2.setAttribute('style', 'transform : translateY(-50vh);');
   logo2.setAttribute('style', 'transform : scale(1);');
   
+//Animations sortie des zones 
 
-
-/*****Easing elastic */
   anime({
     targets : "#animationSlideDroit .img_haut",
     translateY: -2700,
@@ -44,7 +38,7 @@ const initSlideAnimationDroit = function(){
     delay : 1200
   });
 
-  //animation finale
+  //Animation zoom sur zone restante
   anime({
     targets: "#animationSlideDroit .img_droit",
     scale: 3,
@@ -54,16 +48,6 @@ const initSlideAnimationDroit = function(){
     direction: 'normal',
     duration :2000,
   })
-
-  anime({
-    targets : "#animationSlideDroit .route",
-    scale:0,
-    delay : 100,
-    easing: 'easeInOutSine',
-    direction: 'normal',
-    duration :2000,
-  })
-
 
   setTimeout(()=> {
     swiper.enable()

@@ -14,10 +14,8 @@ const initSlideAnimationEntree = function(){
   haut.setAttribute('style', 'transform :translateY(-300%);');
   bas.setAttribute('style', 'transform :translateY(400%);');
 
+//Animations Entrée des zones 
 
-  // Animate it
-
-/*****Easing elastic */
   anime({
     targets : "#animationSlideEntree .img_haut",
     translateY: 0,
@@ -32,6 +30,7 @@ const initSlideAnimationEntree = function(){
     duration :1200,
     easing : "linear"
   });
+
   anime({
     targets : "#animationSlideEntree .img_droit",
     translateX: 0,
@@ -40,7 +39,7 @@ const initSlideAnimationEntree = function(){
     easing : "linear"
   });
 
-  //animation finale
+ 
   anime({
     targets: "#animationSlideEntree .img_bas",
     translateY : 0,
@@ -49,13 +48,14 @@ const initSlideAnimationEntree = function(){
     easing : "linear"
   })
 
-  anime({
-    targets: "#animationSlideEntree ",
-    delay : 1400,
-    direction: 'normal',
-    duration :2000,
-  })
+  // anime({
+  //   targets: "#animationSlideEntree ",
+  //   delay : 1400,
+  //   direction: 'normal',
+  //   duration :2000,
+  // })
 
+  //Animation de la main de scroll
   anime({
     targets :'#scrollEntree1',
     translateY: 10,
@@ -64,7 +64,6 @@ const initSlideAnimationEntree = function(){
     loop : true
   })
 };
-
 
 
 "use strict";
@@ -83,10 +82,7 @@ const initSlideAnimationEntree2 = function(){
   haut.setAttribute('style', 'transform :translateY(-300%);');
   bas.setAttribute('style', 'transform :translateY(400%);');
 
-
-  // Animate it
-
-/*****Easing elastic */
+//Animations entrée des zones 
   anime({
     targets : "#animationSlideEntree2 .img_haut",
     translateY: 0,
@@ -117,13 +113,7 @@ const initSlideAnimationEntree2 = function(){
     easing : "linear"
   })
 
-  anime({
-    targets: "#animationSlideEntree2 ",
-    delay : 1400,
-    direction: 'normal',
-    duration :2000,
-  })
-
+  //Animation de la main de scroll
   anime({
     targets :'#scrollEntree2',
     translateY: 10,
