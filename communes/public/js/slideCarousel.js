@@ -79,9 +79,14 @@ document.getElementById('prev').addEventListener('click', function() {
 });
 
 function openEnv(){
+    let monscore = sessionStorage.getItem("Score");
+    monscore=monscore.substring(0,monscore.length-1);
+    let result = parseInt(monscore)+((100-parseInt(monscore))/document.querySelectorAll(".carousel-item").length);
+    sessionStorage.setItem("Score",result.toString()+"%");
     let idEnv=document.querySelector(".active").id
     sessionStorage.setItem("visit",idEnv)
     location.href = "home.html"
+
 }
 
 function bilan(){
