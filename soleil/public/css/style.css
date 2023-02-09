@@ -1,4 +1,9 @@
 /* ------- Important ! Please at least keep the last part of this CSS ----------- */
+.article {
+    height: 200px;
+    overflow: scroll;
+  }
+
 
 p{
     font-size: 14px;
@@ -66,7 +71,7 @@ body{
 
 #SoliExTex2 {
     padding-left: 20px;
-    text-align: center;
+    text-align: justify;
     width: 70%;
     position: relative;
     font-family: 'Inter';
@@ -79,7 +84,7 @@ body{
 }
 
 #SoliExTex {
-    text-align: center;
+    text-align: justify;
     width: 70%;
     bottom: 20%;
     position: relative;
@@ -201,11 +206,14 @@ header{
     left: 5%;
     right: 7%;
     position:static;
+    text-align: justify;
 }
 
 .commentaire-soli2 {
     max-width: 90%;
     bottom: 7%;
+    text-align: justify;
+
 }
 
 .commentaire-soli2 p {
@@ -323,8 +331,7 @@ header{
     height: auto;
     width: 50%;
     text-align: center;
-    margin-top : 10px;
-    margin:auto;
+    padding-top : 10%;
 
 }
 
@@ -522,14 +529,15 @@ div.conteneur{
 
 #infoTxt{
     border: black 1px solid;
-    text-align: center;
+    text-align: justify;
     padding: 5%;
     width: 75%;
     margin: auto;
     border-radius: 8px;
     position : absolute;
     left: 10%;
-    height: 90%;
+    height: auto;
+    padding-bottom: 10%;
 }
 
 #SecBouInf{
@@ -577,8 +585,7 @@ div.conteneur{
 
 #SoliInfo{
     position: absolute;
-    left: 5%;
-    bottom: 3%;
+    left: -30px;
 }
 
 @keyframes glowing {

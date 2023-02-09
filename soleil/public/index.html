@@ -43,11 +43,11 @@
           <p>OBJECTIF SOLEIL</p>
         </section>
         <section id="ligne">
-          <p id="Saut">Le défi citoyen pour développer l’énergie solaire autour de chez vous</p>
+          <p id="Saut">Prenez de la hauteur pour développer l’énergie solaire autour de chez vous</p>
           <p id="presentation">
             Selon l'Agence internationale de l'énergie, 
             la planète devra installer chaque année d'ici à 2030 quatre fois plus de capacités solaires qu'elle ne le fait aujourd'hui. 
-            Le but : atteindre la neutralité carbone et limiter le réchauffement climatique à 1,5°C. Passez à l'action !
+            Le but : atteindre la neutralité carbone et limiter le réchauffement climatique à 1,5°C. <br>Passez à l'action !
           </p>
         </section>
       </section>
@@ -103,19 +103,19 @@
           </button>
         </header>
         <div class="choix-logement">
-          <p class="titre">Vous habitez dans :</p>
+          <p class="titre">Vous habitez dans une/un</p>
           <img src="img/Choix habitation/Non selection/maison-non-selection.jpg" class="non-selection" title="maison">
           <img src="img/Choix habitation/Non selection/immeuble-non-selection.jpg" class="non-selection" title="immeuble">
         </div>
         <div class="choix-logement">
-          <p class="titre">Vous êtes : </p>
+          <p class="titre">Vous êtes </p>
           <img src="img/Choix habitation/Non selection/proprietaire-non-selection.jpg" class="non-selection" title="proprietaire">
           <img src="img/Choix habitation/Non selection/locataire-non-selection.jpg" class="non-selection" title="locataire">
         </div>   
         <section id="imageLog">
           <div class="commentaire-soli">
             <img src="img/soliMontgolfiere.png">
-          <p id="SoliExTex2">Pas besoin d’être propriétaire ou d’avoir une maison pour agir en faveur de l’énergie photovoltaïque !</p>
+          <p id="SoliExTex2">“ Pas besoin d’être propriétaire ou d’avoir une maison pour agir en faveur de l’énergie photovoltaïque ! ”</p>
           </div>
         </section>
         <div id="jauge">
@@ -165,7 +165,7 @@
               </form>
           <div class="commentaire-soli">
             <img src="img/soliMontgolfiere.png">
-            <p id="SoliExTex">Mais pourquoi parler de l’inclinaison du toit ? <br> C’est essentiel pour la performance de votre module photovoltaïque. </p>
+            <p id="SoliExTex">“ Mais pourquoi parler de l’inclinaison du toit ? C’est essentiel pour la performance de votre module photovoltaïque. ”</p>
           </div>
           </div>
           
@@ -185,7 +185,7 @@
             <img class="img-fleche" src="img/FlecheRetour.png">
           </button>
           <button class="open-button"><img src="img/Info2.png"></button>
-          <h1 class="titre">Et l’orientation dans toute cette histoire ?
+          <h1 class="titre">Et l’orientation dans tout ça ?
           </h1>
         </header>
         <div id="ligne">
@@ -193,7 +193,7 @@
             <img id="tropdechoix" src="img/ensoleillement/1-1-commune.jpg">
           </section>
           <div id="image3" class="boussole"><img class="illustration" src="img/boussole/0.jpg" alt="0">
-          <p id="indication">Appuier sur la boussole 
+          <p id="indication">Appuyer sur la boussole 
             pour choisir votre orientation</p></div>
         </div>
         <div id="jauge">
@@ -214,7 +214,7 @@
             <img class="img-fleche" src="img/FlecheRetour.png">
           </button>
           <p class="titre">
-            Il y a t’il de l’ombre sur votre toit ?
+Y a-t-il de l'ombre sur votre toit ?
           </p>
         </header>
         <section>
@@ -232,12 +232,7 @@
               </form>
               <div class="commentaire-soli">
                 <img src="img/soliMontgolfiere.png">
-                <p id="SoliExTex">   “ il faut aussi que
-                  les modules soient inclinés vers
-                  l’équateur. La France est située
-                  dans l’hémisphère nord, alors,
-                  vous avez tout intérêt à orienter
-                  vos panneaux vers le sud.”</p>
+                <p id="SoliExTex">“ Encore un petit effort, vous allez bientôt découvrir votre potentiel solaire ” </p>
                 </div>
           <div id="jauge">
             <img id="Soli4" src="img/montgolfiereAvancee.png"/>
@@ -251,7 +246,7 @@
           <button class="retour">
             <img class="img-fleche" src="img/FlecheRetour.png">
           </button>
-          <p class="titre">Parlons de vous</p>
+          <p class="titre">Complétez votre profil</p>
         </header>
         <div id = "ligne">
           <img id="img-ques" src="img/SoliQuestion.png">
@@ -262,7 +257,7 @@
                        name="contact" value="Jamais">
                 <span class="w3docs"></span>    
                 <label class="choix-texte2" for="facul1">
-                  Je participe à la vie de ma co propriété</label>
+                  Je participe à la vie de ma copropriété</label>
               </section>
               <section id="bulle-question">
                 <input type="checkbox" id="facul2"
@@ -299,7 +294,7 @@
         </header>
         <footer>
           <button>Analyse des Résultats</button>
-          <button>Je veux savoir comment agir</button>
+          <button onclick={swiper.slideNext()}>Je veux savoir comment agir</button>
         </footer>
       </section>
 
@@ -323,12 +318,6 @@
 
       <section id="info1" class="swiper-slide">
         <header>
-<<<<<<< HEAD
-=======
-          <button class="retour" onclick={swiper.slideTo(4,0);swiper.slideNext()}>
-            <img class="img-fleche" src="img/FlecheRetour.png">
-          </button>
->>>>>>> 3b7b82aed4947dae190bdb255a7cd07ec26a5965
         </header>
         <section id="infoTxt">
           <img id="bulleInfo" onclick={swiper.slideTo(3,0)} src="img/info/info-ouvert2.png">
@@ -341,8 +330,8 @@
             Inclinez-donc vos panneaux selon cet ordre pour maximiser l’énergie produite sur l’année.<br> Et si votre toit est plat ? <br>
             Rien à faire dans ce cas !
           </p>
+          <img id="SoliInfo" src="img/illu/illu-info.svg">
         </section>
-        <img id="SoliInfo" src="img/illu/illu-info.svg">
       </section>
 
       <section id="info2" class="swiper-slide">
@@ -358,8 +347,8 @@
             La France est située dans l’hémisphère nord, alors, vous avez tout intérêt à orienter vos panneaux vers le sud. <br>
             En revanche, les Argentins doivent plutôt incliner leurs modules vers le nord.
           </p>
+          <img id="SoliInfo" src="img/illu/illu-info.svg">
         </section>
-        <img id="SoliInfo" src="img/illu/illu-info.svg">
       </section>
 
       <section id="info3" class="swiper-slide">
@@ -374,6 +363,92 @@
           <p id="Saut">
             “Le watt crête est la puissance maximale d’un système de production électrique.”
           </p>
+          <img id="SoliInfo" src="img/illu/illu-info.svg">
+        </section>
+      </section>
+
+
+      <section id="article1" class="swiper-slide">
+        <header>
+        </header>
+        <section id="infoTxt">
+          <img id="bulleInfo" onclick={swiper.slideTo(5,0);swiper.slideNext()} src="img/info/info-ouvert2.png">
+          <p id="Saut" class="article"> Votre mission. Bonne nouvelle : il y a du potentiel sur votre toit ! Vous en aurez le détail dans l’analyse des résultats de votre test LIEN VERS LA PAGE ANALYSE DES RÉSULTATS. Vous pouvez donc produire et consommer une électricité respectueuse de l’environnement.
+
+            L’intérêt. Il varie en fonction de la place disponible sur votre toit et de la façon dont votre foyer consomme l’électricité. Trois choix s’offrent à vous. Revendre l'électricité produite dans son intégralité à EDF OA (obligation d’achat) pour en tirer des revenus. Utiliser l’électricité produite pour faire de l’autoconsommation, c’est-à-dire utiliser l’intégralité des kWh que vous produisez. Une bonne option si votre logement consomme de l’énergie au moment où les panneaux vont en emmagasiner, c’est-à-dire en journée. A savoir que cette autoconsommation est quasiment tout le temps partielle, et vous permet d’injecter le surplus produit non utilisé chez vous sur le réseau, contre rémunération par EDF OA. Une décision qui vous rend éligible à la prime à l'autoconsommation mise en place par EDF. Pour faire un choix éclairé, un expert vous détaille tout ici LIEN VERS LE PAPIER NM.
+            
+            Comment s’y prendre.  Un service public de la rénovation de l’habitat a été créé en janvier 2022 : France Rénov’. Si vous vous êtes décidés à franchir le cap du photovoltaïque et de l’autoconsommation, contactez gratuitement l’un de ses conseillers ici ou au 0 808 800 700. L’occasion de poser toutes vos questions sur les modalités d’installation et les aides auxquelles prétendre. Envie d’y voir plus clair dès à présent dans la forêt des aides disponibles ? On vous explique tout ici LIEN VERS LE PAPIER NM. 
+
+          </p>
+        </section>
+        <img id="SoliInfo" src="img/illu/illu-info.svg">
+      </section>
+
+      <section id="article2" class="swiper-slide">
+        <header>
+        </header>
+        <section id="infoTxt">
+          <img id="bulleInfo" onclick={swiper.slideTo(5,0);swiper.slideNext()} src="img/info/info-ouvert2.png">
+          <p id="Saut" class="article"> 
+            Votre mission. “La copropriété est une très bonne échelle pour produire de l'électricité en ville”, dixit Philippe Blanc, directeur de recherche au sein de l’école de MINES Paris-PSL et expert du solaire. Si vous installez une centrale photovoltaïque sur l’emprise de votre copropriété, vous pouvez vendre l'électricité qui n'est pas consommée par les copropriétaires dans un rayon d'1 km à la ronde, voire 10 km en zone rurale.
+
+L'intérêt. Pour les copropriétaires, il est double : engager sa copro dans une démarche environnementale tout en faisant des économies. "L’électricité produite par la copropriété coûte alors essentiellement  le montant de l'investissement initial de l'équipement amorti sur 20-30 ans. Aujourd'hui, le prix de cette électricité est de l'ordre de celui du marché de l'électricité, voire un peu moins cher, mais il n'augmentera pas. Donc dans 5 ans ça sera moins cher et dans 20 ans, beaucoup moins cher que le prix du marché." 
+
+Comment s’y prendre. Présentez l’idée en Assemblée générale de copropriété ou soufflez-la au syndic qui la gère. Pour convaincre, présentez des exemples qui fonctionnent, comme celui de cette copropriété de 61 logements des Alpes-Maritimes qui s’est lancée dès 2013 avec un résultat édifiant : ses 50 m² de capteurs solaires couvrent 68% des besoins annuels des parties communes en évitant de générer plusieurs tonnes de CO2. L’Agence de l’environnement et de la maîtrise de l’énergie y consacre une fiche mode d’emploi pour inspirer d’autres copropriétés. Les directions régionales de l’Ademe peuvent accompagner ces projets, “en termes de conseils, d’expertise et, sous condition, de soutiens financiers”. Pour contacter l’Ademe près de chez vous, c’est ici !  
+
+          </p>
+        </section>
+        <img id="SoliInfo" src="img/illu/illu-info.svg">
+      </section>
+
+      <section id="article3" class="swiper-slide">
+        <header>
+        </header>
+        <section id="infoTxt">
+          <img id="bulleInfo" onclick={swiper.slideTo(5,0);swiper.slideNext()} src="img/info/info-ouvert2.png">
+          <p id="Saut" class="article"> 
+            Votre mission. À cœur vaillant rien n’est impossible. Voilà votre mantra pour jouer à plein votre rôle de citoyen(ne) et tenter de convaincre votre maire d’installer des panneaux photovoltaïques sur des espaces municipaux : toits de bâtiments publics, ombrières de parking, friches urbaines… 
+
+Pour cela que la force… et la loi soient avec vous : depuis celle n°2005-781 du 13 juillet 2005, “les communes, sur leur territoire, (...) peuvent aménager, exploiter, faire aménager et faire exploiter toute nouvelle installation utilisant des énergies renouvelables, lorsque ces nouvelles installations se traduisent par une économie d’énergie ou une réduction des pollutions atmosphériques tout en leur permettant de bénéficier à leur demande de l’obligation d’achat de l’électricité produite”.  
+ 
+L’intérêt. Il peut être économique mais aussi écologique si celle-ci fait les bons choix et a un potentiel d’ensoleillement suffisant pour amortir l’impact environnemental des panneaux dont la fabrication et le recyclage ne sont pas sans conséquence pour la planète. Afin d’évaluer l’intérêt de votre mission citoyenne, testez le potentiel de bâtiments ou d’espaces publics en entrant leurs adresses dans Objectif Soleil.
+
+Comment s’y prendre. Pour présenter un projet à votre commune, demandez un rendez-vous à votre maire par courrier, c’est votre droit. Si vous n’êtes pas inspiré pour l’écrire, les lettres types fleurissent sur le web. Une fois dans son bureau, dégainez les bons arguments ! Comme ceux dont regorgent le guide Photovoltaïque et collectivités territoriales de l’Agence de l’environnement et de la maîtrise de l’énergie téléchargeable gratuitement. Ou encore des exemples concrets et réussis d’implantation de panneaux photovoltaïques en milieu urbain à lire ici !
+ </p>
+        </section>
+        <img id="SoliInfo" src="img/illu/illu-info.svg">
+      </section>
+
+      <section id="article4" class="swiper-slide">
+        <header>
+        </header>
+        <section id="infoTxt">
+          <img id="bulleInfo" onclick={swiper.slideTo(5,0);swiper.slideNext()} src="img/info/info-ouvert2.png">
+          <p id="Saut" class="article"> 
+            Votre mission. Vous achetez votre panier de fruits et légumes dans une Amap ou en vente à la ferme ; vous discutez avec des agriculteurs de votre coin au marché ? Et si vous causiez agri-voltaïsme ? Derrière cette appellation, contraction des mots “agriculture” et “photovoltaïsme", une idée simple : ombrager des cultures à l’aide de panneaux solaires, dont on peut tirer profit par ailleurs. Pour cela, différentes techniques existent en fonction de l’exploitation agricole : faire pousser des légumes ou des fruits sous des serres photovoltaïques ou des ombrières mobiles, des protections photovoltaïques aquacoles, etc. 
+
+L’intérêt. "Au niveau des cultures, c’est mieux, surtout pour la sécheresse. On a 1 °C de moins sous les vignes abritées et on attend une semaine de plus pour vendanger", explique Gautier Hugues, viticulteur varois qui expérimente cette solution innovante. Pas négligeable quand on sait que les épisodes de sécheresse sont appelés à s’amplifier à cause du dérèglement climatique. 
+
+Comment on s’y prend. Pour y voir plus clair, l’Agence de l’Environnement et de la maîtrise de l’énergie a conçu 10 fiches techniques en accès gratuit à disposition des agriculteurs qui souhaiteraient se lancer. Pourquoi ne pas souffler cette info à l’agriculteur de votre coin ? 
+</p>
+        </section>
+        <img id="SoliInfo" src="img/illu/illu-info.svg">
+      </section>
+
+      <section id="article5" class="swiper-slide">
+        <header>
+        </header>
+        <section id="infoTxt">
+          <img id="bulleInfo" onclick={swiper.slideTo(5,0);swiper.slideNext()} src="img/info/info-ouvert2.png">
+          <p id="Saut" class="article"> 
+            Votre mission. Investir dans un projet citoyen coopératif est une option qui a du sens. Comment ? En apportant une contribution financière (même modeste), sous forme d’épargne citoyenne, comme des part(s) prise(s) dans une société coopérative d’intérêt collective. A l’instar du Pôle Energ’éthique des Préalpes d’Azur (PEP2A), fondé en 2017 dans les Alpes-Maritimes.
+
+L’intérêt. "Une part de la coopérative coûte 100€. Ce n’est pas une cotisation mais un placement pérenne pour soutenir la transition énergétique. Une manière de devenir producteur d’énergie renouvelable par procuration", explique Alain Messin, vice-président de PEP2A. Concrètement, la coop utilise ces financements citoyens pour installer des projets d’équipements photovoltaïques en toiture là où c’est pertinent sur le territoire. Les souscripteurs sont aussi associés aux discussions et aux prises de décisions avec le même poids dans les assemblées générales quel que soit le nombre et le montant de leur souscription. 
+
+Comment s’y prendre. Le site du mouvement Energie partagée fédère dans une carte interactive tous les projets citoyens d’énergie renouvelable, en grande partie consacrés au solaire photovoltaïque. Faites votre choix ! 
+
+Il est aussi possible de soutenir l’énergie solaire en souscrivant à un fournisseur d'électricité verte. Mais attention, si 70% des offres d’électricité en France actuellement se disent vertes, “toutes ne garantissent pas en réalité que l’électricité achetée provienne d’énergies renouvelables”, précise l’Agence de l’environnement et de la maîtrise de l'énergie. Pour s’y retrouver et faire le bon choix, l’Ademe a lancé le Label Vertvolt qui garantit la provenance de l’électricité. Pour vérifier si une offre est bien labellisée, c’est ici que ça se passe.  
+ </p>
         </section>
         <img id="SoliInfo" src="img/illu/illu-info.svg">
       </section>
