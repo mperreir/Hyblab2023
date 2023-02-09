@@ -111,7 +111,7 @@ function applyChange(div,new_height){
     else {$(div).css("background-color", "#3dfc03");}
   }
   else{
-    $(div).css("height", 100+"%"); 
+    $(div).css("height", 90+"%"); 
     if(div == ".thermo"){$(div).css("background-color", "#fc0303");}
     else { $(div).css("background-color", "#0ffc03");}
   }
