@@ -220,12 +220,6 @@ function displayMiniature(Id){
                             <p>${p.MiniBio}</p>
                         </section>
                         <section class="keywords flex-row">
-                            <div class="keyword-item flex-row align-items-center">
-                                <p>#biodéchets</p>
-                            </div>
-                            <div class="keyword-item flex-row align-items-center">
-                                <p>#hydrogène</p>
-                            </div>
                             <!-- Section qui va se remplir dans la suite de la fonction -->
                         </section>
                         <section class="topic flex-row align-items-center">
