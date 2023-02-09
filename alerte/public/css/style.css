@@ -122,6 +122,16 @@ button {
     margin-top: 25px;
 }
 
+#next13_1{
+    background-image: url('../img/utils/btn/btn-next.svg');
+    margin-top: 10px;
+}
+
+#next13_2 {
+    background-image: url('../img/utils/btn/btn-next-inv.svg');
+    margin-top: 10px;
+}
+
 #next15_1 {
     background-image: url('../img/utils/btn/btn-results.svg');
 }
