@@ -51,12 +51,12 @@ app.get('/energy/:name', function ( req, res ) {
     } else if (energy === "la-mer") {
         requete = 'SELECT D.Code_departement AS Departement, COUNT(*) AS Nombre, SUM(E.Puissance) AS Production FROM EOLIEN E RIGHT OUTER JOIN DEPARTEMENT D ON E.Code_departement = D.Code_departement GROUP BY D.Code_departement';
     } else if (energy === "la-campagne-et-la-foret") {
-        requete = 'SELECT B.code_insee_departement AS Departement, B.Production FROM BIOMETHANE B RIGHT OUTER JOIN DEPARTEMENT D ON B.code_insee_departement = D.Code_departement GROUP BY D.Code_departement';
+        requete = 'SELECT B.code_insee_departement AS Departement, B.Production as Production FROM BIOMETHANE B RIGHT OUTER JOIN DEPARTEMENT D ON B.code_insee_departement = D.Code_departement GROUP BY D.Code_departement';
     } else if (energy === "la-friche") {
         // requete = 'SELECT D.Code_departement, COUNT(*), SUM(S.Puissance) FROM DEPARTEMENT D LEFT OUTER JOIN SOLAIRE S ON D.Code_departement = S.Code_departement WHERE S.Date_de_la_donnee LIKE "2021%" GROUP BY D.Code_departement';
         requete = 'SELECT D.Code_departement AS Departement, COUNT(*) AS Nombre, SUM(S.Puissance) AS Production FROM SOLAIRE S RIGHT OUTER JOIN DEPARTEMENT D ON S.Code_departement = D.Code_departement GROUP BY D.Code_departement'
     } else if (energy === "la-riviere") {
-        requete = 'SELECT H.Code_Departement AS Departement, COUNT(*) AS Nombre, SUM(H.Puissance) AS Puissance FROM HYDRAULIQUE H RIGHT OUTER JOIN DEPARTEMENT D ON H.Code_Departement = D.Code_departement GROUP BY D.Code_departement';
+        requete = 'SELECT H.Code_Departement AS Departement, COUNT(*) AS Nombre, SUM(H.Puissance) AS Production FROM HYDRAULIQUE H RIGHT OUTER JOIN DEPARTEMENT D ON H.Code_Departement = D.Code_departement GROUP BY D.Code_departement';
     }
 
     db.all(requete, [], (err, rows) => {
