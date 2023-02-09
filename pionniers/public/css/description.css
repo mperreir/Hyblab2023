@@ -3,6 +3,14 @@
     width: 75%;
 }
 
+header a, header a div {
+    height : 2vh;
+}
+
+header a div img {
+    height: 100%;
+}
+
 #presentation {
     font-size: 1.4em;
     text-align: center;

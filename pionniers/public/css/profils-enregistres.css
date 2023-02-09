@@ -13,10 +13,24 @@ body {
     width: 85%;
 }
 
-#petit-rond {
-    width: 4vh;
-    height: 4vh;
-    font-size: 2em;
+header a, header a div {
+    height : 2vh;
+}
+
+header a div img {
+    height: 100%;
+}
+
+header .bouton-rond {
+    height: 2vh;
+    font-size: 1.5em;
+}
+
+header #petit-rond {
+    width: 2vh;
+    height: 2vh;
+    font-size: 1.5em;
+    padding: 3%;
 }
 
 #info {
