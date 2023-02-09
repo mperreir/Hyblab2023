@@ -41,8 +41,9 @@ const initSlideAnimationDroit = function(){
   //Animation zoom sur zone restante
   anime({
     targets: "#animationSlideDroit .img_droit",
-    scale: 3,
-    translateX : -30,
+    scale: 2.5,
+    translateX : -40,
+    translateY: -12,
     delay : 1300,
     easing: 'easeInOutSine',
     direction: 'normal',

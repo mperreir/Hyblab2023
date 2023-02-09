@@ -87,21 +87,21 @@ const initSlideAnimationEntree2 = function(){
     targets : "#animationSlideEntree2 .img_haut",
     translateY: 0,
     delay : 200,
-    duration :1200,
+    duration :1000,
     easing : "linear"
   });
   anime({
     targets : "#animationSlideEntree2 .img_gauche",
     translateX: 0,
     delay : 700,
-    duration :1200,
+    duration :1000,
     easing : "linear"
   });
   anime({
     targets : "#animationSlideEntree2 .img_droit",
     translateX: 0,
     delay : 1200,
-    duration :1200,
+    duration :1000,
     easing : "linear"
   });
 
@@ -109,7 +109,7 @@ const initSlideAnimationEntree2 = function(){
     targets: "#animationSlideEntree2 .img_bas",
     translateY : 0,
     delay : 1300,
-    duration :1200,
+    duration :1000,
     easing : "linear"
   })
 
