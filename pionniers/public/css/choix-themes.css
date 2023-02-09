@@ -2,6 +2,14 @@
     width: 75%;
 }
 
+header a, header a div {
+    height : 2vh;
+}
+
+header a div img {
+    height: 100%;
+}
+
 div#overlay {
     position: absolute;
     z-index: 3;
