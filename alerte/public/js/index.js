@@ -221,13 +221,13 @@ function initRepsDep() {
     let qt = res4['quantite_mean']
     let str
     if (res4["type"] == "VOLAILLES") {
-        str = "Dans votre département, ce sont les volailles qui sont les plus nombreuses parmi les animaux d’élevage. On en dénombre pas moins de " + qt + " dans les [Entrer un chiffre] fermes-usines de ce département."
+        str = "Dans votre département, ce sont les volailles qui sont les plus nombreuses parmi les animaux d’élevage. On en dénombre pas moins de " + qt + " dans les 56 fermes-usines de ce département."
     } else if (res4["type"] == "PORCS") {
-        str = "Dans votre département, ce sont les porcs qui sont les plus nombreux parmi les animaux d’élevage. On en dénombre pas moins de " + qt + " dans les [Entrer un chiffre] fermes-usines de ce département."
+        str = "Dans votre département, ce sont les porcs qui sont les plus nombreux parmi les animaux d’élevage. On en dénombre pas moins de " + qt + " dans les 56 fermes-usines de ce département."
     } else if (res4["type"] == "BOVINS") {
-        str = "Dans votre département, ce sont les bovins qui sont les plus nombreux parmi les animaux d’élevage. On en dénombre pas moins de " + qt + " dans les [Entrer un chiffre] fermes-usines de ce département"
+        str = "Dans votre département, ce sont les bovins qui sont les plus nombreux parmi les animaux d’élevage. On en dénombre pas moins de " + qt + " dans les 56 fermes-usines de ce département"
     } else {
-        str = "Dans votre département, ce sont les moutons qui sont les plus nombreux parmi les animaux d’élevage. On en dénombre pas moins de " + qt + " dans les [Entrer un chiffre] fermes-usines de ce département"
+        str = "Dans votre département, ce sont les moutons qui sont les plus nombreux parmi les animaux d’élevage. On en dénombre pas moins de " + qt + " dans les 56 fermes-usines de ce département"
     }
     for (let text of texts9) {
         text.textContent = str
