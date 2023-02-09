@@ -220,7 +220,7 @@ const create_legend = function(container, data, main_color){
         .attr("y", 19)
         .text(min + " TWh")
         .style("font-size", "0.7em")
-        .style("fill", "black")
+        .style("fill", "white")
         .style("font-family", "Poppins");
 
     legend.append("text")
@@ -229,7 +229,7 @@ const create_legend = function(container, data, main_color){
         .attr("y", 19)
         .text(max + " TWh")
         .style("font-size", "0.7em")
-        .style("fill", "black")
+        .style("fill", "white")
         .style("font-family", "Poppins");
 
 }
