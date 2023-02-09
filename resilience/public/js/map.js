@@ -5,13 +5,13 @@ const heures = ['8:00', '9:30', '11:00', '12:30', '14:00', '15:30', '17:00', '18
 var modal = document.getElementById("myModal");
 var modal_acquis = document.getElementById("notif-acquis");
 var dict_achiev = new Map();
-dict_achiev.set("_8", [1, 2, 3, 4, 5, 6, 7, 8]);
-dict_achiev.set("_9", [6, 7, 8]);
-dict_achiev.set("_10", []);
-dict_achiev.set("_11", []);
-dict_achiev.set("_12", []);
-dict_achiev.set("_13", []);
-dict_achiev.set("_14", []);
+dict_achiev.set("_8", [2]);
+dict_achiev.set("_9", [4]);
+dict_achiev.set("_10", [3]);
+dict_achiev.set("_11", [6]);
+dict_achiev.set("_12", [7]);
+dict_achiev.set("_13", [5]);
+dict_achiev.set("_14", [8]);
 dict_achiev.set("_15", []);
 dict_achiev.set("_16", []);
 

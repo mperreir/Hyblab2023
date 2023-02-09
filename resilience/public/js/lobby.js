@@ -78,7 +78,7 @@ function init_storage() {
   window.localStorage.setItem('_13', "false");
   window.localStorage.setItem('_14', "false");
   window.localStorage.setItem('_16', "false");
-  window.localStorage.setItem('achievement1', "false");
+  window.localStorage.setItem('achievement1', "true");
   window.localStorage.setItem('achievement2', "false");
   window.localStorage.setItem('achievement3', "false");
   window.localStorage.setItem('achievement4', "false");
