@@ -36,7 +36,7 @@
             <img id="Logo3" src="./svg/logo_cc.svg">
             <img id="Logo4" src="./svg/logo_opensource.svg">
         </div>
-        <a href="/home/"><button type="button" id="btnBack" onclick=""></button></a>
+        <a href="home.html"><button type="button" id="btnBack" onclick=""></button></a>
     </div>
 </template>
 <style>

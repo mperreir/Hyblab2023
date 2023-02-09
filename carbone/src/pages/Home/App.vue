@@ -10,6 +10,12 @@ function show2(){
 function OpenWeb(web){
   window.open(web, '_blank')
 }
+function OnRed(id){
+  document.getElementById(id).style.backgroundColor="#FA6D6D";
+}
+function OnGreen(id){
+  document.getElementById(id).style.backgroundColor="#9BFF82";
+}
 function copy() {
       this.copyContent = "http://localhost:5173/";//也可以直接写上等于你想要复制的内容
       var input = document.createElement("input"); // 直接构建input
@@ -35,7 +41,7 @@ function copy() {
       votre <span style="color: #4D51F4;">impact carbone</span>
     </div>
     <div id="choisir">
-        <a href="/map/"><button type="button" id="btnchoi1"><img id="btnchoi2" src="./svg/choisis_festival_entier.svg"></button></a>
+        <a href="map.html"><button type="button" id="btnchoi1"><img id="btnchoi2" src="./svg/choisis_festival_entier.svg"></button></a>
     </div>
     <div id="down">
       <img id="bas" src="./svg/fleche_bas.svg"><br>
@@ -95,22 +101,64 @@ function copy() {
     
     <div id="Article">
       <div id="Article1">
-        <div id="picture1">?</div>
-        <div id="ArtiNum1">Article1</div>
+        <div id="picture1"></div>
+        <div id="ArtiNum1">Lorient en feu</div>
         <div id="descArti1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mattis auctor risus. Curabitur ut fermentum nisi. Sed interdum ultricies sodales. Nulla consectetur mi quis lacinia suscipit. Vestibulum eu placerat dui. Nunc viverra efficitur consectetur. Integer sed ipsum at felis maximus rutrum. Sed ornare eu ligula ac finibus. Nulla facilisi. </div>
       </div>
       <div id="Article2">
-        <div id="picture2">?</div>
-        <div id="ArtiNum2">Article2</div>
+        <div id="picture2"></div>
+        <div id="ArtiNum2">Record pour <br>Brest</div>
         <div id="descArti2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mattis auctor risus. Curabitur ut fermentum nisi. Sed interdum ultricies sodales. Nulla consectetur mi quis lacinia suscipit. Vestibulum eu placerat dui. Nunc viverra efficitur consectetur. Integer sed ipsum at felis maximus rutrum. Sed ornare eu ligula ac finibus. Nulla facilisi. Phasellus gravida efficitur sollicitudin. Morbi quis eleifend ante. </div>
       </div>
       <div id="Article1">
-        <div id="picture1">?</div>
-        <div id="ArtiNum1">Article3</div>
+        <div id="picture3"></div>
+        <div id="ArtiNum1">Jazz en folie</div>
         <div id="descArti1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mattis auctor risus. Curabitur ut fermentum nisi. Sed interdum ultricies sodales. Nulla consectetur mi quis lacinia suscipit. Vestibulum eu placerat dui. Nunc viverra efficitur consectetur. Integer sed ipsum at felis maximus rutrum. Sed ornare eu ligula ac finibus. Nulla facilisi. Phasellus gravida efficitur sollicitudin. Morbi quis eleifend ante. </div>
       </div>
     </div>
-      
+
+
+    <div id="ChoisQues1">
+      <div id="Ques">Quelle est la distance moyenne parcourue par les spectateurs pour se rendre sur un festival en Bretagne ?</div>
+      <button type="button" class="btnQues1" id="red1" @click="OnRed('red1')">50km</button>
+      <button type="button" class="btnQues2" id="green1" @click="OnGreen('green1')">104km</button>
+      <button type="button" class="btnQues3" id="red2" @click="OnRed('red2')">150km</button>
+    </div>
+    <div id="ChoisQues2">
+      <div id="Ques1">Quel est le pourcentage de festivaliers qui se rendent en voiture aux événements?</div>
+      <button type="button" class="btnQues1" id="red3" @click="OnRed('red3')">36%</button>
+      <button type="button" class="btnQues2" id="red4" @click="OnRed('red4')">10%</button>
+      <button type="button" class="btnQues3" id="green2" @click="OnGreen('green2')">74%</button>
+      <div id="Ques2">Parmi eux, combien sont-ils à faire moins de 5 km ?</div>
+      <button type="button" class="btnQues4" id="red5" @click="OnRed('red5')">17%</button>
+      <button type="button" class="btnQues5" id="green3" @click="OnGreen('green3')">31%</button>
+      <button type="button" class="btnQues6" id="red6" @click="OnRed('red6')">63%</button>
+      <div id="Ques3">Parmi eux, combien sont-ils seuls à bord?</div>
+      <button type="button" class="btnQues7" id="red7" @click="OnRed('red7')">28%</button>
+      <button type="button" class="btnQues8" id="red8" @click="OnRed('red8')">52%</button>
+      <button type="button" class="btnQues9" id="green4" @click="OnGreen('green4')">91%</button>
+    </div>
+    <div id="ChoisQues3">
+      <div id="Ques">Pour un festival comme les Vieilles Charrues:  Quelle est la part que pèse le transport des spectateurs dans son bilan carbone ?</div>
+      <button type="button" class="btnQues1" id="red9" @click="OnRed('red9')">2O%</button>
+      <button type="button" class="btnQues2" id="red10" @click="OnRed('red10')">35%</button>
+      <button type="button" class="btnQues3" id="green5" @click="OnGreen('green5')">50%</button>
+    </div>
+    <div id="ChoisQues4">
+      <div id="Ques">Combien de tonnes de CO2 pourraient être économisées si les festivaliers venaient par 3 en covoiturage ?</div>
+      <li>
+        <button type="button" class="btnQues1" id="red11" @click="OnRed('red11')">235 t</button>
+        <button type="button" class="btnQues2" id="green6" @click="OnGreen('green6')">717 t</button>
+        <button type="button" class="btnQues3" id="red12" @click="OnRed('red12')">922 t</button>
+      </li>
+    </div>
+    <div id="ChoisQues5">
+      <div id="Ques">Combien de tonnes de CO2 pourraient être économisées si 65% des festivaliers venaient en train ou transport en commun ? </div>
+      <button type="button" class="btnQues1" id="red13" @click="OnRed('red13')">340 t</button>
+      <button type="button" class="btnQues2" id="red14" @click="OnRed('red14')">896 t</button>
+      <button type="button" class="btnQues3" id="green7" @click="OnGreen('green7')">1290 t</button>
+    </div>
+
     <div id="InfoBackG">
       <div id="Info">
         <div id="Title">
@@ -265,7 +313,7 @@ function copy() {
 }
 #views{
   width: 80%;
-  height: 50vh;
+  height: 60vh;
   border: 0.05em;
   border-color: rgb(145, 141, 141);
   border-radius: 0.5em;
@@ -289,7 +337,7 @@ function copy() {
   position: absolute;
   top: 14vh;
   left: 0.1vw;
-  width: 1.5vw;
+  width: 2vw;
   background: none;
   border: 0;
   z-index: 2;
@@ -298,7 +346,7 @@ function copy() {
   position: absolute;
   top: 14vh;
   right: 0.1vw;
-  width: 1.5vw;
+  width: 2vw;
   background: none;
   border: 0;
   z-index: 2;
@@ -307,8 +355,8 @@ function copy() {
   position: absolute;
   top: 15vh;
   left: 2vw;
-  height: 27vh;
-  width: 27vh;
+  height: 25vh;
+  width: 25vh;
   border-radius: 0.2em;
   background-color: #e2e0e0;
 }
@@ -329,16 +377,16 @@ function copy() {
   left: 32vh;
   top: 21vh;
   font-style: italic;
-  font-size: 0.05em;
+  font-size: 0.17em;
 
   color: #000000;
 }
 #descrip{
   position: absolute;
-  width: 35%;
+  width: 32%;
   height: 50%;
   left: 32vh;
-  top: 23vh;
+  top: 23.5vh;
   font-style: normal;
   font-weight: 400;
   font-size: 0.17em;
@@ -355,18 +403,31 @@ function copy() {
 
 }
 #Article1{
+  
   margin-bottom: 5vh;
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   position: relative;
 }
 #picture1{
-  background-color: #b9b9b9;
-  height: 27vh;
-  width: 27vh;
+  background-image: url(./svg/A1.svg);
+  background-repeat: no-repeat;
+  background-size:contain;
+  height: 25vh;
+  width: 25vh;
   border-radius: 0.5em;
-  text-align: center;
-  font-size: 0.5em;
+  position: absolute;
+  top: 7vh;
+  left: 7vh;
+}
+
+#picture3{
+  background-image: url(./svg/A3.svg);
+  background-repeat: no-repeat;
+  background-size:contain;
+  height: 25vh;
+  width: 25vh;
+  border-radius: 0.5em;
   position: absolute;
   top: 7vh;
   left: 7vh;
@@ -388,7 +449,7 @@ function copy() {
 #descArti1{
   position: absolute;
   text-align: right;
-  width: 32%;
+  width: 30%;
   right: 8vh;
   top: 12vh;
   font-weight: 800;
@@ -399,16 +460,16 @@ function copy() {
 #Article2{
   margin-bottom: 5vh;
   width: 100%;
-  height: 50vh;
+  height: 70vh;
   position: relative;
 }
 #picture2{
-  background-color: #b9b9b9;
-  height: 27vh;
-  width: 27vh;
+  background-image: url(./svg/A2.svg);
+  background-repeat: no-repeat;
+  background-size:contain;
+  height: 25vh;
+  width: 25vh;
   border-radius: 0.5em;
-  text-align: center;
-  font-size: 0.5em;
   position: absolute;
   top: 7vh;
   right: 7vh;
@@ -430,9 +491,9 @@ function copy() {
 #descArti2{
   position: absolute;
   text-align: left;
-  width: 32%;
+  width: 30%;
   left: 8vh;
-  top: 12vh;
+  top: 16vh;
   font-weight: 800;
   font-size: 0.14em;
   color: #000000;
@@ -653,11 +714,281 @@ function copy() {
   top: 42vh;
   left: 85%;
 }
+#ChoisQues1{
+  position: relative;
+  left: 10%;
+  height: 15vh;
+  width: 80%;
+  background-color: #ffffff;
+  border: 0.5em;
+  border-radius: 3em;
+  border-style: ridge;
+  font-size: 0.15em;
+  font-style: italic;
+  text-align: left;
+}
+#ChoisQues2{
+  position: relative;
+  left: 10%;
+  height: 50vh;
+  width: 80%;
+  background-color: #ffffff;
+  border: 0.5em;
+  border-radius: 3em;
+  border-style: ridge;
+  font-size: 0.15em;
+  font-style: italic;
+  text-align: left;
+}
+#ChoisQues3{
+  position: relative;
+  left: 10%;
+  height: 15vh;
+  width: 80%;
+  background-color: #ffffff;
+  border: 0.5em;
+  border-radius: 3em;
+  border-style: ridge;
+  font-size: 0.15em;
+  font-style: italic;
+  text-align: left;
+}
+#ChoisQues4{
+  position: relative;
+  left: 10%;
+  height: 15vh;
+  width: 80%;
+  background-color: #ffffff;
+  border: 0.5em;
+  border-radius: 3em;
+  border-style: ridge;
+  font-size: 0.15em;
+  font-style: italic;
+  text-align: left;
+}
+#ChoisQues5{
+  position: relative;
+  left: 10%;
 
+  height: 15vh;
+  width: 80%;
+  background-color: #ffffff;
+  border: 0.5em;
+  border-radius: 3em;
+  border-style: ridge;
+  font-size: 0.15em;
+  font-style: italic;
+  text-align: left;
+}
+#Ques{
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  position: relative;
+  left: 10%;
+  top:1vh;
+  height: 70vh;
+  width: 80%;
+}
+#Ques1{
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  position: absolute;
+  left: 10%;
+  top:1vh;
+  height: 70vh;
+  width: 80%;
+}
+#Ques2{
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  position: absolute;
+  left: 10%;
+  top:15vh;
+  height: 70vh;
+  width: 80%;
+}
+#Ques3{
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  position: absolute;
+  left: 10%;
+  top:30vh;
+  height: 70vh;
+  width: 80%;
+}
+.btnQues1{
+  background-color: #ffffff;
+  position: absolute;
+  top: 9vh;
+  left: 10vh;
+  width: 7vh;
+  height: 4vh;
+  align-items: center;
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.15em;
+  text-align: center;
+  border-color: #d3d3d3;
+  border-radius: 2vh;
+  border-width: 1em;
+  color: #4D51F4;
+}
+.btnQues2{
+  background-color: #ffffff;
+  position: absolute;
+  top: 9vh;
+  left: 25vh;
+  width: 7vh;
+  height: 4vh;
+  
+  align-items: center;
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.15em;
+  text-align: center;
+  border-color: #d3d3d3;
+  border-radius: 2vh;
+  border-width: 1em;
+  color: #4D51F4;
+}
+.btnQues3{
+  background-color: #ffffff;
+  position: absolute;
+  top: 9vh;
+  left: 40vh;
+  width: 7vh;
+  height: 4vh;
+  
+  align-items: center;
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.15em;
+  text-align: center;
+  border-color: #d3d3d3;
+  border-radius: 2vh;
+  border-width: 1em;
+  color: #4D51F4;
+}
+.btnQues4{
+  background-color: #ffffff;
+  position: absolute;
+  top: 22vh;
+  left: 10vh;
+  width: 7vh;
+  height: 4vh;
+  align-items: center;
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.15em;
+  text-align: center;
+  border-color: #d3d3d3;
+  border-radius: 2vh;
+  border-width: 1em;
+  color: #4D51F4;
+}
+.btnQues5{
+  background-color: #ffffff;
+  position: absolute;
+  top: 22vh;
+  left: 25vh;
+  width: 7vh;
+  height: 4vh;
+  
+  align-items: center;
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.15em;
+  text-align: center;
+  border-color: #d3d3d3;
+  border-radius: 2vh;
+  border-width: 1em;
+  color: #4D51F4;
+}
+.btnQues6{
+  background-color: #ffffff;
+  position: absolute;
+  top: 22vh;
+  left: 40vh;
+  width: 7vh;
+  height: 4vh;
+  
+  align-items: center;
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.15em;
+  text-align: center;
+  border-color: #d3d3d3;
+  border-radius: 2vh;
+  border-width: 1em;
+  color: #4D51F4;
+}
+.btnQues7{
+  background-color: #ffffff;
+  position: absolute;
+  top: 37vh;
+  left: 10vh;
+  width: 7vh;
+  height: 4vh;
+  align-items: center;
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.15em;
+  text-align: center;
+  border-color: #d3d3d3;
+  border-radius: 2vh;
+  border-width: 1em;
+  color: #4D51F4;
+}
+.btnQues8{
+  background-color: #ffffff;
+  position: absolute;
+  top: 37vh;
+  left: 25vh;
+  width: 7vh;
+  height: 4vh;
+  
+  align-items: center;
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.15em;
+  text-align: center;
+  border-color: #d3d3d3;
+  border-radius: 2vh;
+  border-width: 1em;
+  color: #4D51F4;
+}
+.btnQues9{
+  background-color: #ffffff;
+  position: absolute;
+  top: 37vh;
+  left: 40vh;
+  width: 7vh;
+  height: 4vh;
+  
+  align-items: center;
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.15em;
+  text-align: center;
+  border-color: #d3d3d3;
+  border-radius: 2vh;
+  border-width: 1em;
+  color: #4D51F4;
+}
 
 #show2{
   display: none;
 }
+
 
 /* ---------- Important media queries for easy responsive content :-) ----------------- */
 /* Whatever the devie used, the content will be displayed full width and height if      */

@@ -20,7 +20,7 @@
     <!----------------------------------------------------> 
         
         <div id="back">
-            <a href="/home/">
+            <a href="Home.html">
               <svg width="147" height="90" viewBox="0 0 147 90" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="147" height="89" rx="29" fill="#9BFF82"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M61.7322 70.7678L39.2322 48.2678L39.2322 44.7322L61.7322 22.2322L65.2677 25.7678L47.0355 44L105 44L105 49L47.0355 49L65.2677 67.2322L61.7322 70.7678Z" fill="#4D51F4"/>
