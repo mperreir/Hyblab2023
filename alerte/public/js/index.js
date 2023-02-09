@@ -8,6 +8,7 @@ let data3
 let data4
 let data5
 let data6
+let back_to_main_page = true
 
 function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
@@ -265,6 +266,26 @@ function initRepsDep() {
         changeBackground('aliceblue')
     })
 }
+
+let about_s0 = document.getElementById("about-s0")
+about_s0.addEventListener("click", () => {
+    display("s17")
+})
+
+let about_s16 = document.getElementById("about-s16")
+about_s16.addEventListener("click", () => {
+    back_to_main_page = false
+    display("s17")
+})
+
+let back = document.getElementById("back")
+back.addEventListener("click", () => {
+    if (back_to_main_page) {
+        display("s0")
+    } else {
+        display("s16")
+    }      
+})
 
 function display(id) {
     let slides = document.getElementsByClassName("slides")
