@@ -161,8 +161,8 @@ div {
 }
 
 header{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 8%;
+    margin-bottom: 0;
     text-align: center;
     width: 100%;
     top: 10%;
@@ -422,7 +422,7 @@ video{
     border-radius: 8px;
     position: relative;
     margin: auto;
-    width: 12em;
+    width: 100%;
     text-align: center;
     font-size: 4vw;
 }
