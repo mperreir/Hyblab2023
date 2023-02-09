@@ -80,15 +80,15 @@ document.querySelector(".skip").addEventListener("click", function () {
 function submitPostal(){
     let codePostal = document.querySelector("#name").value;
 
-    fetch('../api/score/' + codePostal).then((response) => response.json())
-        .then(function(response) {
-            if (response.status === 500) {
-                alert("code postal non valide")
-            } else {
-                sessionStorage.setItem("Score",toString(response));
-                location.href="actualstate.html";
-                console.log(codePostal);
-            }
+    fetch('../api/score/' + codePostal)
+        .then((response) => response.json())
+        .then((data) => {
+            sessionStorage.setItem("Score",data.toString());
+            location.href="actualstate.html";
+            console.log(data);
+        })
+        .catch((error) => {
+            alert("Code postal non valide");
         }
     )
 
