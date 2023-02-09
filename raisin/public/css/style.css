@@ -102,7 +102,8 @@ body {
 
 .bubble {
     text-align: left;
-    font-size: 2.5vmin;
+    /*font-size: 2.5vmin;*/
+    font-size: 20%;
     line-height: 3vmin;
     background-color: #7a170e;
     position: absolute;
