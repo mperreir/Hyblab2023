@@ -62,7 +62,7 @@ aside
 header
 {
     position: fixed;
-    height: 130px;
+    height: 7vh;
     display: flex;
     width: 101%;
     background-color: #FBC5EB;

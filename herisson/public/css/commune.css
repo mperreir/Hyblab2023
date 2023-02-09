@@ -138,14 +138,13 @@ body {
     height: 1.2vh;
     display: inline-block;
     background: none;
-    border: 7px solid #0B6E5F;
+    border: 0.3em solid #0B6E5F;
     bottom: 12vh;
-    margin: 0 20px;
 }
 
 .swiper-pagination-bullet-active {
     background: #0B6E5F;
-    border: 7px solid #0B6E5F;
+    border: 0.3em solid #0B6E5F;
 }
 
 .swiper-button-next::after,
