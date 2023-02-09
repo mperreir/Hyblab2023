@@ -16,7 +16,7 @@ h1 {
     color: #FFF8F1;
     font-family: Prompt, sans-serif;
     text-align: center;
-    margin-top: 15vh;
+    margin-top: 10vh;
     font-size: 4vh;
     margin-bottom: 0;
 }
@@ -35,8 +35,9 @@ h1 {
 .mascotte {
     position: fixed;
     right: -5vw;
-    top: 26vh;
-    z-index: 1;
+    bottom: 35vh;
+    /*top: 26vh;*/
+    z-index: -1;
 }
 
 
@@ -55,13 +56,14 @@ h1 {
 
 #fleche {
     width: 10vw;
+    margin-top: 5vh;
 }
 
 
 #elie {
     right: 0;
-    width: 50vw;
-    height: 40vh;
+    /*width: 50vw;*/
+    height: 30vh;
 }
 
 .texte-secondaire {
@@ -73,10 +75,11 @@ h1 {
     color: #0B6E5F;
     font-family: Prompt, sans-serif;
     font-size: 2vh;
-    margin-right: 17vh;
-    margin-left: 17vh;
-    margin-top: 0;
-    margin-bottom: 1vh;
+    width: 50vw;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5vh;
+    /*margin: 0 17vh 1vh;*/
 }
 
 
@@ -90,10 +93,6 @@ h1 {
     border-top-left-radius: 15%;
     border-top-right-radius: 15%;
     z-index: 2;
-}
-
-.textes {
-    height: 50em;
 }
 
 .titre {
