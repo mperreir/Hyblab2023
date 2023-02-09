@@ -6,6 +6,21 @@ h1 {
     background-color: #79B77B;
 }
 
+#fond{
+    z-index: -1;
+    width: 100%;
+    position: absolute;
+    top: 15%;
+    left: 0%;
+}
+
+/*
+#personnage{
+    position: absolute;
+    width: 25%;
+    top: 20%;
+    left: 20%;
+}*/
 
 #dialogue {
     overflow-y: auto;
