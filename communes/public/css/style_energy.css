@@ -168,6 +168,10 @@ p{
     background-color: #6e0c0c;
     box-shadow: -0.5em 0.5em 0 0 #000000;
 }
+#mainMap{
+    width: 75%;
+    margin-left: 12%;
+}
 
 
 /* ---------- Positionning of logos on the last slide -------------------- */
