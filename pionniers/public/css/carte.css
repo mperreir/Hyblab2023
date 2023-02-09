@@ -20,10 +20,18 @@ header a {
     height: calc(5vh * 3/4);
 }
 
-header a div, header a div img {
+header a, header a div {
+    height : 2vh;
+}
+
+header a div img {
     height: 100%;
 }
 
+header .bouton-rond {
+    height: 2vh;
+    font-size: 1.5em;
+}
 
 header #petit-rond {
     width: 2vh;
