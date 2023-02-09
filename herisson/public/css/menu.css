@@ -12,14 +12,15 @@
 
     color: #0B6E5F;
     font-weight: 500;
-    margin-bottom: 5vh;
+    margin-bottom: 2vh;
+    padding-bottom: 3vh;
     font-size: 6vw;
 }
 
 .ligneSeparation
 {
     width: 70%;
-    margin-top: 15vh;
+    margin-top: 7vh;
     border: 0.1vh solid #FBC5EB;
 }
 
