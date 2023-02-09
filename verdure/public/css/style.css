@@ -399,7 +399,7 @@ SLIDE ANIMATION SORTIE+ZOOM
     width: 5.5vh;
     height: 5.5vh;
     right: 1.7vh;
-    top: 9vh;
+    top: 9.5vh;
     background-color: rgba(255, 255, 255, 0);
     margin: 0px;
     padding: 0px;
@@ -444,7 +444,7 @@ SLIDE ANIMATION SORTIE+ZOOM
     width: 5.5vh;
     height: 5.5vh;
     right: 1.7vh;
-    top: 14vh;
+    top: 15vh;
     background-color: rgba(255, 255, 255, 0);
     margin: 0px;
     padding: 0px;
@@ -703,13 +703,14 @@ li{
     Slide Entree texte
 **************************/
 .recap{
-    font-size: 32%;
+    font-size: 30%;
     position: absolute;
-    top: 24%;
+    top: 68%;
     width: 76%;
     text-align: center;
     left: 14%;
     z-index: 2;
+    font-weight: bold;
 }
 
 #presentation1 {
