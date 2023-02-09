@@ -76,7 +76,7 @@ const initSlide1 = async function(){
   //const urlParams = new URLSearchParams(window.location.search);
   //const name = urlParams.get('name');
   console.log(sessionStorage.getItem("visit"));
-  let map_response = await fetch('../api/energy/'+sessionStorage.getItem("visit"));
+  let map_response = await fetch('../api/energy/'+sessionStorage.getItem("visit").replace("è","e").replace("ê","e"));
   const data_map = await map_response.json();
 
 
