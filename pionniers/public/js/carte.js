@@ -1,8 +1,6 @@
 'use strict';
 
 
-// TODO : implementer redirection vers la page de profil
-
 /*
   ----------------------------------------------------------------------------------------------------------------------
   | Global variables                                                                                                   |
