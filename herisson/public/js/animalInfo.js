@@ -22,6 +22,7 @@ async function animalInfo(animal) {
     const img = document.getElementById("animal-picture");
     const copyright = document.getElementById("copyright");
     const tipsButton = document.getElementById("fleche2");
+    const quit = document.getElementById("quit");
 
     animalName.textContent = animal.toUpperCase();
     desc.textContent = "Les " + dataTest["listCities"][0]["categorie"].toLowerCase();
@@ -58,4 +59,10 @@ async function animalInfo(animal) {
         window.location.href = "commentAider.html"
     }
 
+    async function quitPage(){
+        quit.addEventListener("click", function(){
+            window.history.back();
+        })
+    }
+    await quitPage();
 }

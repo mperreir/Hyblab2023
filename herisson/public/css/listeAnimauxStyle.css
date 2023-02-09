@@ -114,6 +114,7 @@ footer.main{
 /*//// POP-UP ////*/
 #pop-up{
     display: none;
+    background-color: #FBC5EB;
 }
 #animal-picture{
     z-index: -5;
@@ -178,6 +179,7 @@ main.pop-up{
     font-family: 'Prompt', sans-serif;
     color: #0B6E5F;
     width: 44vw;
+    height: 14.7vh;
     left: 5vw;
     margin-top: 20%;
     border-radius: 10vw;
@@ -208,6 +210,7 @@ main.pop-up{
     font-family: 'Prompt', sans-serif;
     color: #0B6E5F;
     width: 44vw;
+    height: 14.8vh;
     right: 5vw;
     margin-top: 20%;
     border-radius: 10vw;
