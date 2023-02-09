@@ -32,8 +32,9 @@ app.get('/searchAddresses/:address', async function (req, res) {
 
         const addressInfo = apiElement.display_name.split(', ');
 
-        // Security to avoid problems later on
-        if (addressInfo.pop() !== "France") return "Service not available outside of France";
+        // Securities to avoid problems later on
+        if (addressInfo.length < 5) return;
+        if (addressInfo.pop() !== "France") return;
 
         // We need to check if the returned address starts with a number, or is just the name of the street
         address = addressInfo[0].match(/^\d/) ? {
@@ -120,7 +121,7 @@ readRadiationData('N', 0, 44.083, (err, totalEnergy) => {
     } else {
       console.log("total : " + totalEnergy);
     }
-});
+});*/
 
 /**
  * Compute irradiation of the roof at a time given
