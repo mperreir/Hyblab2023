@@ -48,6 +48,7 @@ document.querySelector("#rechercheCommune").addEventListener("keyup", async func
         autocompletionItems.forEach(item => {
             item.addEventListener("click", function () {
                 document.querySelector("#rechercheCommune").value = this.textContent;
+                localStorage.setItem("commune", this.textContent);
                 document.querySelector("#autocompletionCom").innerHTML = '';
                 document.querySelector("#searchCommune").submit();
                 document.querySelector("#rechercheCommune").value = '';
@@ -102,6 +103,7 @@ document.querySelector("#rechercheAnimal").addEventListener("keyup", async funct
         autocompletionItems.forEach(item => {
             item.addEventListener("click", function () {
                 document.querySelector("#rechercheAnimal").value = this.textContent;
+                localStorage.setItem("animal", this.textContent);
                 document.querySelector("#autocompletionAni").innerHTML = '';
                 document.querySelector("#searchAnimal").submit();
                 document.querySelector("#rechercheAnimal").value = '';
