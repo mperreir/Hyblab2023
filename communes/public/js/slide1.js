@@ -30,6 +30,11 @@ const initSlide1 = async function(){
     document.querySelectorAll('.carouselResult').forEach((button) => {button.style.color = "#ffffff";});
 
 
+    document.querySelectorAll('h3').forEach((h3) => {
+      h3.style.color = data.main_color;
+      h3.innerHTML = data.name.toUpperCase();
+    });
+
 
     const objectElement = document.querySelector('#logo-environment');
     objectElement.data = "../"+data.file_name;

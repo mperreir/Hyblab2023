@@ -274,3 +274,19 @@ body{
 .carousel-item {
     margin-left: 0.25em;
 }
+
+#header-slide-3 {
+    height: 28%;
+}
+
+#header-slide-2{
+    height: 34%;
+}
+
+
+.header{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
