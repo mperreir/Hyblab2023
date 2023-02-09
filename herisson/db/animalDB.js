@@ -51,6 +51,7 @@ function getCDRef(jsonData) {
 
 async function initAnimalDB() {
     console.log("initAnimalDB");
+
     const db = JSON.parse(fs.readFileSync('herisson/public/data/communeDB.json'));
     const cdRefs = getCDRef(db);
 
