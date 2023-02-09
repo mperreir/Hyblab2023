@@ -63,7 +63,11 @@ function createIcon(p) {
         });
     }
     // If the used keywords list is not empty and the profile doesn't contain at least one of the used keywords, return the inactive icon
-    if (usedKeywords.length > 0 && !usedKeywords.map(k => k.replace('#', '')).some(keyword => p.Keywords.includes(keyword))) {
+    const usedKeywordsToLowerCase = usedKeywords.map(k => k.toLowerCase());
+    if (usedKeywordsToLowerCase.length > 0 && !usedKeywordsToLowerCase.map(k => k.replace('#', '')).some(keyword => {
+        const pKeywordsToLowerCase = p.Keywords.split(';').map(k => k.trim().toLowerCase());
+        return pKeywordsToLowerCase.includes(keyword.toLowerCase());
+    })) {
         return L.icon({
             iconUrl: iconUrlPrefix + 'inactif.svg',
             iconSize: globalIconSize,
@@ -474,7 +478,8 @@ function onKeywordManage() {
             // Set the keyword list as visible
             keywordsList.classList.remove('display-none');
             // Filter the keywords to keep only the ones that are not already used
-            keywords = keywords.filter(k => !usedKeywords.includes('#' + k));
+            const usedKeywordsToLowerCase = usedKeywords.map(k => k.toLowerCase());
+            keywords = keywords.filter(k => !usedKeywordsToLowerCase.includes('#' + k.toLowerCase()));
             // For each keyword, create the available keyword element as HTML
             keywords.forEach(k => {
                 // Create the keyword element
@@ -483,7 +488,7 @@ function onKeywordManage() {
                 keywordDiv.classList.add('flex-row');
                 keywordDiv.classList.add('align-items-center');
                 keywordDiv.classList.add('cursor-pointer');
-                keywordDiv.innerHTML = `<p>#${k}</p>`;
+                keywordDiv.innerHTML = `<p>#${k.toLowerCase()}</p>`;
                 // Add the keyword element as a child of the keywords list
                 keywordsList.appendChild(keywordDiv);
                 // Add the event listener to the keyword element
