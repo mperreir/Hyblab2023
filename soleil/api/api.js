@@ -113,13 +113,13 @@ function readRadiationData(orientation, inclinationAngle, latitude, callback) {
             callback(null, totalEnergy);
         });
 }
-readRadiationData('S', 0.523599, 44.083, (err, totalEnergy) => {
+/*readRadiationData('S', 0.523599, 44.083, (err, totalEnergy) => {
     if (err) {
       console.error(err);
     } else {
       console.log("total : " + totalEnergy);
     }
-});
+});*/
 
 /**
  * Compute irradiation of the roof at a time given
