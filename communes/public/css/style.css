@@ -42,12 +42,18 @@ p{
 #loader{
     z-index: 2;
     position:absolute;
+    width: 100%;
+    text-align: center;
+    background-color: #35A88A;
 }
 
 #loader-img{
-    top:40%;
-    left:40%;
+    top:50%;
+    left:50%;
     position: absolute;
+    transform: translate(-50%,-50%);
+    max-height: 100%;
+    max-width: 100%;
 }
 
 #loader-text{
