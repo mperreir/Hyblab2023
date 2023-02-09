@@ -1,7 +1,6 @@
 'use strict';
 
-// TODO : implementer retour arriere
-//
+
 // TODO : implementer redirection vers la page de profil
 
 /*
@@ -253,6 +252,14 @@ function displayMiniature(Id){
         closeButton.addEventListener('click', () => {
             miniature_related.classList.add("display-none");
             overlay.classList.add("display-none");
+        });
+        // Retrieve the button to see the full profile
+        const seeFullProfileButton = document.querySelector("main div#miniature-related button#seeFillProfile");
+        // Add the current profile Id to the local storage
+        window.localStorage.setItem('idProfil', Id);
+        // Add the event listener to redirect to the full profile page
+        seeFullProfileButton.addEventListener('click', () => {
+            window.location.href = "profils.html";
         });
     });
 }
