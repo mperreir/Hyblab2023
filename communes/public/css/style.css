@@ -259,4 +259,9 @@ body{
     text-align: center;
 }
 
-
+#logo-intercom{
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
