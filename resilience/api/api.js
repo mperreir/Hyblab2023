@@ -1,6 +1,6 @@
 'use strict';
 
-const app = require( 'express' )();
+const app = require('express')();
 const path = require('path');
 
 const db = require('../db.js')(path.join(__dirname, '../db.db'))
@@ -20,17 +20,19 @@ app.get('/vote', async function (req, res) {
 });
 
 app.post('/vote', async function (req, res) {
-    console.log(await req.body);
-    try{
-        const data = await req.body;
-        data.forEach(async vote => {
+    try {
+        const data = req.data;
+        console.log(req.data, data);
+        await Promise.all(data.map(async (vote) => {
             await db.Vote.addVote(vote.id, vote.note);
-        });
-    }
-    catch (err) {
-        console.log(err);
+        }));
+        res.status(200).send('Votes enregistrés avec succès');
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Une erreur s\'est produite lors de l\'enregistrement des votes');
     }
 });
+
 
 // Export our API
 module.exports = app;
