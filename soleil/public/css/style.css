@@ -546,8 +546,7 @@ div.conteneur{
     right: 5%;
     border: none;
     animation: glowing 2000ms infinite;
-    height: 22px;
-    left: 82,5%;
+    height: 2%;
     top: 5%;
     
 }
@@ -711,7 +710,7 @@ body{
 }
 
 /* Fill the whole viewport when its aspect ratio is between 9/16 and 3/4 */
-@media screen and (max-aspect-ratio: 3/4) {
+@media screen and (min-aspect-ratio: 3/4) {
     #container{
         margin-left: 0; /* reset margin-left */
         width: 100vw; /* content is full width (and full height because of the default rule for container height */
@@ -733,6 +732,15 @@ body{
     }
     .main-location-page {
         padding-top: 0;
+    }
+
+    /*Page pente*/
+    .img-pente {
+        width: 75%;
+    }
+
+    .open-button {
+        top: 13%;
     }
 }
 
