@@ -68,8 +68,15 @@ app.get('/density/:town', async function (req, res) {
     res.json({'town': req.params.town, 'density': density});
 });
 
-app.get('/radiation/:latitude/:longitude', async function (req, res) {
-    res.send()
+app.get('/energy/:latitude/:longitude/:orientation/:inclination', async function (req, res) {
+    getRadiationData(req.params.latitude, req.params.longitude);
+    readRadiationData(req.params.orientation, req.params.inclination, req.params.latitude, (err, totalEnergy) => {
+        if (err) {
+          console.error(err);
+        } else {
+          console.log("total : " + totalEnergy);
+        }
+    });
 });
 
 function getRadiationData(latitude, longitude) {
@@ -94,8 +101,6 @@ function getRadiationData(latitude, longitude) {
     });
 }
 
-// getRadiationData(44.083, 5.059);
-
 function readRadiationData(orientation, inclinationAngle, latitude, callback) {
     let inputStream = fs.createReadStream('./data/temp/wps', 'utf-8');
     let totalEnergy = 0;
@@ -114,14 +119,6 @@ function readRadiationData(orientation, inclinationAngle, latitude, callback) {
             callback(null, totalEnergy);
         });
 }
-
-readRadiationData('N', 0, 44.083, (err, totalEnergy) => {
-    if (err) {
-      console.error(err);
-    } else {
-      console.log("total : " + totalEnergy);
-    }
-});
 
 /**
  * Compute irradiation of the roof at a time given
