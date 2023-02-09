@@ -593,17 +593,6 @@ input[type=range]:focus::-ms-fill-upper {
     background: #FFFFFF;
 }
 
-/*Gestion de la taille du texte page 17*/
-#little-bubble-s17-1, #little-bubble-s17-2, #little-bubble-s17-3{
-    font-size: 12px;
-    top: 78%;
-}
-
-#little-bubble-s17-4{
-    font-size: 12px;
-    top: 70%;
-}
-
 
 /* ---------- Positionning of logos on the last slide -------------------- */
 /* here we have a contraint on the height of the logos (not the width)     */

@@ -338,20 +338,24 @@ let next16 = document.getElementById("next16")
 let about_s0 = document.getElementById("about-s0")
 about_s0.addEventListener("click", () => {
     display("s17")
+    changeBackground('#121212')
 })
 
 let about_s16 = document.getElementById("about-s16")
 about_s16.addEventListener("click", () => {
     back_to_main_page = false
     display("s17")
+    changeBackground('#121212')
 })
 
 let back = document.getElementById("back")
 back.addEventListener("click", () => {
     if (back_to_main_page) {
         display("s0")
+        changeBackground('#121212')
     } else {
         display("s16")
+        changeBackground('aliceblue')
     }
 })
 
