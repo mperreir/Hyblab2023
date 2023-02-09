@@ -20,7 +20,9 @@ app.get('/vote', async function (req, res) {
 });
 
 app.post('/vote', async function (req, res) {
-    await db.Vote.addVote(req.id);
+    req.votes.forEach(async (id, vote) => {
+        await db.Vote.addVote(req.id, req.note);
+    });
 });
 
 // Export our API
