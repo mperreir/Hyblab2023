@@ -43,6 +43,18 @@ body {
     background-size: cover;
 }
 
+@supports ( -webkit-touch-callout : none) {
+    #Oiseaux #Rhopalocères #Odonates #Chiroptères #Mammifères #Reptiles #Amphibiens {
+        background-attachment:scroll
+    }
+}
+
+@supports not ( -webkit-touch-callout : none) {
+    #Oiseaux #Rhopalocères #Odonates #Chiroptères #Mammifères #Reptiles #Amphibiens {
+        background-attachment: fixed;
+    }
+}
+
 #Oiseaux {
     background-image: url("../img/decors-mascotte-oiseaux.png");
 }
@@ -107,6 +119,8 @@ body {
     width: 80%;
     height: 7%
 }
+
+
 
 .button {
     background-color: #FFF8F1;
