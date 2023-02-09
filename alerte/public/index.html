@@ -12,6 +12,8 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.17/paper-full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="js/chart.js" defer></script>
     <script src="js/slide10.js" defer></script>
     <script src="js/index.js" defer></script>
 </head>
@@ -212,8 +214,9 @@
                         <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <img src="img/illustrations/dessins/graph-6.svg">
+                                <div id="repS6" class="swiper-slide">
+                                    <h2>Dommage !</h2>
+                                    <canvas id="myChart"></canvas>
                                 </div>
                                 <div class="swiper-slide">
                                     Entre 1970 et 2020, le nombre d’exploitations agricoles a été divisé par quatre. Et

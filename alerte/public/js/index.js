@@ -103,6 +103,8 @@ let path;
 let isDrawing = false;
 
 view.onMouseDown = (event) => {
+    if (isDrawing) return;
+    event.preventDefault();
     isDrawing = true;
     path = new Path();
     path.strokeColor = "white";
@@ -114,13 +116,16 @@ view.onMouseDown = (event) => {
 view.onMouseDrag = (event) => {
     if (!isDrawing) return;
     path.add(event.point);
+    if (!isDrawing) return;
+    path.add(event.point);
 };
 
-view.onMouseUp = () => {
+view.onMouseUp = (event) => {
+    if (!isDrawing) return;
+    event.preventDefault();
     isDrawing = false;
     display("s6")
 };
-
 
 let next6 = document.getElementById("next6")
 next6.addEventListener("click", () => {
