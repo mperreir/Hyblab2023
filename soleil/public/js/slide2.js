@@ -13,7 +13,7 @@ async function initSlide2() {
       }
     });
     $("#adresse input").change(async function () {
-      let pa = await getPossibleAddresses();
+      let pa = await getPossibleAddresses($("#adresse input").val());
       console.log(pa);
 
       $("div.result").html("");
