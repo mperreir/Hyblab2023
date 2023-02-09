@@ -2,76 +2,861 @@
 
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-  <title>Hyblab 2023</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="js/slide1.js" defer></script>
-  <script src="js/slide2.js" defer></script>
-  <script src="js/index.js" defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>GreenTaVille</title>
+    <link rel="icon" type="image/png" size="160x160" href="./img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/slideAccueil.js" defer></script>
+    <script src="js/slideQuestion1.js" defer></script>
+    <script src="js/slideQuestion2.js" defer></script>
+    <script src="js/slideQuestion3.js" defer></script>
+    <script src="js/slideQuestion4.js" defer></script>
+    <script src="js/slideQuestion5.js" defer></script>
+    <script src="js/slideQuestion6.js" defer></script>
+    <script src="js/slideQuestion7.js" defer></script>
+    <script src="js/slideFin.js" defer></script>
+    <script src="js/index.js" defer></script>
+    <script src="js/slideAnimationHaut.js"></script>
+    <script src="js/slideAnimationDroit.js"></script>
+    <script src="js/slideAnimationBas.js"></script>
+    <script src="js/slideAnimationEntree.js"></script>
+    <script src="js/displayQuestion.js"></script>
+    <script src="js/answerResponse.js"></script>
+    <script src="js/displayResponse.js"></script>
+    <script src="js/endSlide.js"></script>
+    <script src="js/slideAnimationEntreeTexte.js"></script>
+    <script src="js/slideVideo.js"></script>
+   
+
 </head>
 <body>
-    <!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
-    <div id="container">
-      <!-- Le loader-->
-      <section id="loader">
-        <div id="loader-img" class="ld ld-ring ld-cycle"></div>
-        <p id="loader-text">Veuillez patienter...</p>
-      </section>
-      <div id="mySwiper" class="swiper">
+<!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
+<div id="container">
+    <!-- Le loader-->
+    <section id="loader">
+
+    </section>
+    <div id="mySwiper" class="swiper">
         <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
-        <main class = "swiper-wrapper">
-            <section id="first-slide" class="swiper-slide">
-                <header>
-                    <h1 id="titre">Welcome to</h1>
-                </header>
-                
-                <img src="img/logo_hyblab.png" id="logo-hyblab" alt="logo hyblab"></img>
+        <main class="swiper-wrapper">
 
 
-                <!-- le footer sera rempli à partir de données lues dans un fichier Json-->
-                <footer>
-                  <p></p>
-                </footer>
+
+            <!-- ************************************
+                ****ANIMATION SLIDE Video
+            **************************************-->
+
+            <section id="slidevideo" class="swiper-slide">
+                <div class="bloc">
+                    <!--<video width="100%" height="100%" autoplay muted><source src="./img/video_intro.mp4" type=video/mp4></video>-->
+                    <img width="100%" height="100%" alt="vidéo de présentation" src="img/video_intro.gif">
+                </div>
             </section>
-            <section id="second-slide" class="swiper-slide">
+
+            <!-- ************************************
+                ****ANIMATION SLIDE Accueil
+            **************************************-->
+
+            <section id="slideAccueil" class="swiper-slide">
+
+                <img id="backgroundFirstSlide" src="img/VilleEntiere.png">
+                <img src="img/logo.gif" id="logo-gtv" alt="logo verdure"></img>
+                <div id="fond"></div>
+
+                <div>
+                    <p id="presentation-jeu">
+                        Il fait bon de vivre à GreenVille cependant il fait trop chaud !
+                        Il est de votre devoir d'améliorer la ville grâce à la revégétalisation.
+                        Pour cela, vous devez prendre des décisions afin de faire diminuer la température tout en satisfaisant 
+                        votre trésorerie et vos citoyens.<br>
+                        Attention, toute action a ses conséquences et votre misison n'est pas des plus simples.<br>
+                        Vous allez parcourir les 4 zones principales de GreenVille où vous aurez des choix à faire. À vous de choisir les meilleurs
+                        pour assurer sa prospérité et de faire renaître la nature.
+                    </p>
+                </div>
+
+                <footer class="footer">
+                   <img src ="img/swippe.png" alt="scroll" class = "indic" id="scrollAccueil" >
+                   <p>Scroll pour commencer</p>
+                </footer>
+
+            </section>
+
+            <!-- ***************
+                ****BOULEVARD***Q1
+                ****************--> 
+            <section class="question-slide swiper-slide"  id ="1">
+
+                <img src="img/nuage.gif" alt="nuage" class="nuage">
+                <img src="img/logo_tonbvd.gif" class="greenTa" alt="Green Ton Boulevard" id="logoQ1"></img>
+
+                <div class="containerthermo">
+                    <div class="thermo"></div>
+                    <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
+                </div>
+      
+                <div class="containermoney">
+                    <div class="money"></div>
+                    <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
+                </div>
+      
+                <div class="containerhappy">
+                    <div class="happy"></div>
+                    <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
+                </div>
+
+                <img id= "city1" src="img/boulevard.png" alt="boulevard">
+                <img id= "boulevard1" src="img/boulevard1.png" alt="boulevard">
+                <img id= "boulevard2" src="img/boulevard2.png" alt="boulevard">
+
+                <div class="question-footer1">
+                    <div id ="question-title1">
+                        <p id="question-title-text1">Question</p>
+                    </div>
+                    <div id="question-answer1">
+                
+                        <div id="answer1">
+                        </div>
+                        
+                        <div id="short-answer1"> 
+                            <div id = "title1">
+                            <p id = "answer-title1"></p>
+                            <input type="button" id="show-button1" value="voir plus">
+                            </div> 
+                            <div id="button-answer1"></div>
+                            <div id = "consequences1">
+                            <p id = "positiv1"></p>
+                            <p id = "negativ1"></p>
+                            </div>
+                            <p id="long-answer1"></p>
+                        </div>
+                        
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ************************************
+                ****ANIMATION SLIDE ENTREE TEXTE
+            **************************************-->
+
+            <section id="animationSlideEntreeTexte" class="swiper-slide animation-slide">
+                <img src="img/nuage.gif" alt="nuage" class="nuage">
+
+                <div class="containerthermo">
+                    <div class="thermo"></div>
+                    <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
+                </div>
+      
+                <div class="containermoney">
+                    <div class="money"></div>
+                    <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
+                </div>
+      
+                <div class="containerhappy">
+                    <div class="happy"></div>
+                    <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
+                </div>
+                <p id="presentation1">Bien joué, vous avez fait votre premier changement dans la ville !</br></br>Sur la droite, vous pouvez voir l'impact de vos décisions sur la température, le budget et le bonheur des habitants.</p>
+                <div id="quatre-zones">
+
+                    <img src="img/route.png" alt="" class="route" id="route">
+                    <img src="./img/boulevard1.png" alt="" id="" class="img_haut">
+                    <img src="./img/boulevard2.png" alt="" id="" class="img_droit">
+                    <img src="./img/parking1.png" alt="" id="" class="img_gauche">
+                    <img src="./img/parking2.png" alt="" id="" class="img_bas">
+
+                </div>
+
+                <p id="presentation2">Prêt à relever le défi ? Alors glissez pour découvrir les trois autres zones!</p>
+                <footer class="footer">
+                    <img src ="img/swippe.png" alt="scroll" class = "indic" id="scrollEntreeTexte">
+                    <p>Scroll pour continuer</p>
+
+                 </footer>
+            </section>
+
+
+
+            <!-- 
+            **********************
+            ANIMATION SLIDE BAS
+            ********************* -->
+            <section id="animationSlideBas" class="swiper-slide animation-slide">
+
+                <div class="containerthermo">
+                    <div class="thermo"></div>
+                    <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
+                </div>
+      
+                <div class="containermoney">
+                    <div class="money"></div>
+                    <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
+                </div>
+      
+                <div class="containerhappy">
+                    <div class="happy"></div>
+                    <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
+                </div>
+
+
+                    <img src="img/nuage.gif" alt="nuage" class="nuage">
+                    <img src="img/logo_tonparking2.gif" class="greenTa" alt="Green ton Parking" id="logoSlideBas"></img>
+
+
+                    <img src="img/route.png" alt="" class="route" id="route1">
+                    <img src="./img/b&w_place.png" alt="" id="" class="img_haut">
+                    <img src="./img/b&w_friche.png" alt="" id="" class="img_droit">
+                    <img src="./img/b&w_boulevard.png" alt="" id="" class="img_gauche">
+                    <img src="./img/b&w_parking.png" alt="" id="" class="img_bas">
+            </section>
+
+            <!-- ***************
+                ****PARKING***Q2
+                ****************--> 
+                <section class="question-slide swiper-slide"  id ="2">
+
+                    <img src="img/nuage.gif" alt="nuage" class="nuage">
+                    <img src="img/logo_tonparking.gif" class="greenTa" alt="Green ton Parking" id="logoQ2"></img>
+
+    
+                    <div class="containerthermo">
+                        <div class="thermo"></div>
+                        <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
+                    </div>
+          
+                    <div class="containermoney">
+                        <div class="money"></div>
+                        <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
+                    </div>
+          
+                    <div class="containerhappy">
+                        <div class="happy"></div>
+                        <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
+                    </div>
+    
+                    <img id= "city2" src="img/parking.png" alt="boulevard">
+                    <img id= "parking1" src="img/parking1.png" alt="boulevard">
+                    <img id= "parking2" src="img/parking2.png" alt="boulevard">
+    
+                    <div class="question-footer2">
+                        <div id="question-title2">
+                            <p id="question-title-text2">Question</p>
+                        </div>
+                        <div id="question-answer2">
+                    
+                            <div id="answer2">
+                            </div>
+                            
+                            <div id="short-answer2"> 
+                                <div id = "title2">
+                                <p id = "answer-title2"></p>
+                                <input type="button" id="show-button2" value="voir plus">
+                                </div> 
+                                <div id="button-answer2"></div>
+                                <div id = "consequences2">
+                                <p id = "positiv2"></p>
+                                <p id = "negativ2"></p>
+                                </div>
+                                <p id="long-answer2"></p>
+                            </div>
+                            
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+               <!--***************
+                ****PARKING***Q3
+                ****************--> 
+
+                <section class="question-slide swiper-slide"  id ="3">
+
+                    <img src="img/nuage.gif" alt="nuage" class="nuage">          
+                    <img src="img/logo_tonparking1.gif" class="greenTa" alt="Green ton Parking" id="logoQ3"></img>
+
+
+                    <div class="containerthermo">
+                        <div class="thermo"></div>
+                        <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
+                    </div>
+          
+                    <div class="containermoney">
+                        <div class="money"></div>
+                        <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
+                    </div>
+          
+                    <div class="containerhappy">
+                        <div class="happy"></div>
+                        <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
+                    </div>
+    
+                    <img id= "city3" src="img/parking2.png" alt="boulevard">
+                    <img id= "parking3" src="img/parking3.png" alt="boulevard">
+                    <img id= "parking4" src="img/parking4.png" alt="boulevard">
+    
+    
+                    <div class="question-footer3">
+                        <div id="question-title3">
+                            <p id="question-title-text3">Question</p>
+                        </div>
+                        <div id="question-answer3">
+                    
+                            <div id="answer3">
+                            </div>
+                            
+                            <div id="short-answer3"> 
+                                <div id = "title3">
+                                <p id = "answer-title3"></p>
+                                <input type="button" id="show-button3" value="voir plus">
+                                </div> 
+                                <div id="button-answer3"></div>
+                                <div id = "consequences3">
+                                <p id = "positiv3"></p>
+                                <p id = "negativ3"></p>
+                                </div>
+                                <p id="long-answer3"></p>
+                            </div>
+                            
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- **********
+                Animation slide ENTREE
+                ******************** -->
+
+                <section id="animationSlideEntree" class="swiper-slide animation-slide">
+
+                    <div class="containerthermo">
+                        <div class="thermo"></div>
+                        <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
+                    </div>
+          
+                    <div class="containermoney">
+                        <div class="money"></div>
+                        <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
+                    </div>
+          
+                    <div class="containerhappy">
+                        <div class="happy"></div>
+                        <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
+                    </div>
+
+                    <p class="recap">Vous avez complété deux zones, les deux autres vous attendent ! </p>
+
+
+                    <img src="img/nuage.gif" alt="nuage" class="nuage">
+                    <img src="img/route.png" alt="" class="route" id="route">
+                    <img src="./img/boulevard1.png" alt="" id="" class="img_haut">
+                    <img src="./img/boulevard2.png" alt="" id="" class="img_droit">
+                    <img src="./img/parking1.png" alt="" id="" class="img_gauche">
+                    <img src="./img/parking2.png" alt="" id="" class="img_bas">
+
+                <footer class="footer">
+                    <img src ="img/swippe.png" alt="scroll" class = "indic" id="scrollEntree1">
+                    <p>Scroll pour continuer</p>
+                 </footer>
+    
+                </section>
+
+
+                
+
+                <!-- **********************
+                ****ANIMATION SLIDE haut
+            ************************-->
+
+            <section id="animationSlideHaut" class="swiper-slide animation-slide">
+                <div class="containerthermo">
+                    <div class="thermo"></div>
+                    <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
+                </div>
+      
+                <div class="containermoney">
+                    <div class="money"></div>
+                    <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
+                </div>
+      
+                <div class="containerhappy">
+                    <div class="happy"></div>
+                    <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
+                </div>
+
+                <img src="img/nuage.gif" alt="nuage" class="nuage">
+                <img src="img/logo_gtv1.gif" class="greenTa" alt="logo verdure" id="logoSlideHaut"></img>
+                <img src="img/route.png" alt="" class="route" id="route2">
+                <img src="./img/b&w_place.png" alt="" id="" class="img_haut">
+                <img src="./img/b&w_friche.png" alt="" id="" class="img_droit">
+                <img src="./img/b&w_boulevard.png" alt="" id="" class="img_gauche">
+                <img src="./img/b&w_parking.png" alt="" id="" class="img_bas">
+
+            </section>
+
+
+                <!--***************
+                ****PLACE***Q4
+                ****************--> 
+            <section class="question-slide swiper-slide"  id ="4">
+
+                <img src="img/nuage.gif" alt="nuage" class="nuage">
+                <img src="img/logo_taplace.gif" class="greenTa" alt="Green ta place" id="logoQ4"></img>
+
+                <div class="containerthermo">
+                    <div class="thermo"></div>
+                    <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
+                </div>
+        
+                <div class="containermoney">
+                    <div class="money"></div>
+                    <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
+                </div>
+        
+                <div class="containerhappy">
+                    <div class="happy"></div>
+                    <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
+                </div>
+
+                <img id="city4" src="img/place.png" alt="boulevard">
+                <img id="place1" src="img/place1.png" alt="boulevard">
+                <img id="place" src="img/place.png" alt="boulevard">
+
+
+                <div class="question-footer4">
+                    <div id="question-title4">
+                        <p id="question-title-text4">Question</p>
+                    </div>
+                    <div id="question-answer4">
+                
+                        <div id="answer4">
+                        </div>
+                        
+                        <div id="short-answer4"> 
+                            <div id = "title4">
+                            <p id = "answer-title4"></p>
+                            <input type="button" id="show-button4" value="voir plus">
+                            </div> 
+                            <div id="button-answer4"></div>
+                            <div id = "consequences4">
+                            <p id = "positiv4"></p>
+                            <p id = "negativ4"></p>
+                            </div>
+                            <p id="long-answer4"></p>
+                        </div>
+                        
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
+
+             <!--***************
+                ****PLACE***Q5 CAS DE LA RIVIERE
+               ****************--> 
+            <section class="question-slide swiper-slide"  id ="5">
+
+                <img src="img/nuage.gif" alt="nuage" class="nuage">
+                <img src="img/logo_taplace1.gif" class="greenTa" alt="Green ta place" id="logoQ5"></img>
+
+
+                    <div class="containerthermo">
+                        <div class="thermo"></div>
+                        <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
+                    </div>
+            
+                    <div class="containermoney">
+                        <div class="money"></div>
+                        <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
+                    </div>
+            
+                    <div class="containerhappy">
+                        <div class="happy"></div>
+                        <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
+                    </div>
+    
+                    <img id="city5" src="img/place1.png" alt="boulevard">
+                    <img id="place4" src="img/place4.png" alt="boulevard">
+                    <img id="place5" src="img/place5.png" alt="boulevard">
+    
+    
+                    <div class="question-footer5">
+                        <div id="question-title5">
+                            <p id="question-title-text5">Question</p>
+                        </div>
+                        <div id="question-answer5">
+                    
+                            <div id="answer5">
+                            </div>
+                            
+                            <div id="short-answer5"> 
+                                <div id = "title5">
+                                <p id = "answer-title5"></p>
+                                <input type="button" id="show-button5" value="voir plus">
+                                </div> 
+                                <div id="button-answer5"></div>
+                                <div id = "consequences5">
+                                <p id = "positiv5"></p>
+                                <p id = "negativ5"></p>
+                                </div>
+                                <p id="long-answer5"></p>
+                            </div>
+                            
+                            </p>
+                        </div>
+                    </div>
+            </section>
+
+
+                <!--***************
+                ****PLACE***Q6 CAS SANS LA RIVIERE
+               ****************--> 
+            <section class="question-slide swiper-slide"  id ="6">
+
+                <img src="img/nuage.gif" alt="nuage" class="nuage">
+                <img src="img/logo_taplace2.gif" class="greenTa" alt="Green ta place" id="logoQ6"></img>
+
+
+                <div class="containerthermo">
+                    <div class="thermo"></div>
+                    <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
+                </div>
+        
+                <div class="containermoney">
+                    <div class="money"></div>
+                    <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
+                </div>
+        
+                <div class="containerhappy">
+                    <div class="happy"></div>
+                    <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
+                </div>
+
+                <img id="city6" src="img/place.png" alt="boulevard">
+                <img id="place2" src="img/place2.png" alt="boulevard">
+                <img id="place3" src="img/place3.png" alt="boulevard">
+
+
+                <div class="question-footer6">
+                    <div id="question-title6">
+                        <p id="question-title-text6">Question</p>
+                    </div>
+                    <div id="question-answer6">
+                
+                        <div id="answer6">
+                        </div>
+                        
+                        <div id="short-answer6"> 
+                            <div id = "title6">
+                            <p id = "answer-title6"></p>
+                            <input type="button" id="show-button6" value="voir plus">
+                            </div> 
+                            <div id="button-answer6"></div>
+                            <div id = "consequences6">
+                            <p id = "positiv6"></p>
+                            <p id = "negativ6"></p>
+                            </div>
+                            <p id="long-answer6"></p>
+                        </div>
+                        
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+                <!-- **********
+                Animation slide ENTREE 2
+                ******************** -->
+
+                <section id="animationSlideEntree2" class="swiper-slide animation-slide">
+
+                    <div class="containerthermo">
+                        <div class="thermo"></div>
+                        <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
+                    </div>
+          
+                    <div class="containermoney">
+                        <div class="money"></div>
+                        <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
+                    </div>
+          
+                    <div class="containerhappy">
+                        <div class="happy"></div>
+                        <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
+                    </div>
+
+                    <p class="recap">Trois zones déjà terminées, la dernière vous attend ! </p>
+
+                    <img src="img/nuage.gif" alt="nuage" class="nuage">
+                    <img src="img/route.png" alt="" class="route" id="route">
+                    <img src="./img/boulevard1.png" alt="" id="" class="img_haut">
+                    <img src="./img/boulevard2.png" alt="" id="" class="img_droit">
+                    <img src="./img/parking1.png" alt="" id="" class="img_gauche">
+                    <img src="./img/parking2.png" alt="" id="" class="img_bas">
+
+                <footer class="footer">
+                    <img src ="img/swippe.png" alt="scroll" class = "indic" id="scrollEntree2">
+                    <p>Scroll pour continuer</p>
+                </footer>
+    
+            </section>
+
+             <!-- **********************
+            ****ANIMATION SLIDE droit***
+            ************************-->
+
+            <section id="animationSlideDroit" class="swiper-slide animation-slide">
+                <div class="containerthermo">
+                    <div class="thermo"></div>
+                    <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
+                </div>
+      
+                <div class="containermoney">
+                    <div class="money"></div>
+                    <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
+                </div>
+      
+                <div class="containerhappy">
+                    <div class="happy"></div>
+                    <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
+                </div>
+
+                <img src="img/nuage.gif" alt="nuage" class="nuage">
+                <img src="img/logo_gtv1.gif" class="greenTa" alt="logo verdure" id="logoSlideDroit"></img>
+                <img src="img/route.png" alt="" class="route" id="route3">
+                <img src="./img/b&w_place.png" alt="" id="" class="img_haut">
+                <img src="./img/b&w_friche.png" alt="" id="" class="img_droit">
+                <img src="./img/b&w_boulevard.png" alt="" id="" class="img_gauche">
+                <img src="./img/b&w_parking.png" alt="" id="" class="img_bas">
+
+            </section>
+
+
+
+                <!--************
+                ****FRICHE***Q7 
+               ****************--> 
+            <section class="question-slide swiper-slide"  id ="7">
+
+                <img src="img/logo_tafriche.gif" class="greenTa" alt="logo verdure" id="logoQ7"></img>
+
+                <div class="containerthermo">
+                    <div class="thermo"></div>
+                    <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
+                </div>
+        
+                <div class="containermoney">
+                    <div class="money"></div>
+                    <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
+                </div>
+        
+                <div class="containerhappy">
+                    <div class="happy"></div>
+                    <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
+                </div>
+
+                <img src="img/nuage.gif" alt="nuage" class="nuage">
+                <img id="city7" src="img/friche.png" alt="friche">
+                <img id="friche1" src="img/friche1.png" alt="friche potager">
+                <img id="friche2" src="img/friche2.png" alt="friche bureau">
+                <img id="friche3" src="img/friche3.png" alt="friche foret">
+
+                <div class="question-footer7">
+                    <div id="question-title7">
+                        <p id="question-title-text7">Question</p>
+                    </div>
+                    <div id="question-answer7">
+                
+                        <div id="answer7">
+                        </div>
+                        
+                        <div id="short-answer7"> 
+                            <div id = "title7">
+                            <p id = "answer-title7"></p>
+                            <input type="button" id="show-button7" value="voir plus">
+                            </div> 
+                            <div id="button-answer7"></div>
+                            <div id = "consequences7">
+                            <p id = "positiv7"></p>
+                            <p id = "negativ7"></p>
+                            </div>
+                            <p id="long-answer7"></p>
+                        </div>
+                        
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ****************
+            SLIDE DE FIN 
+            ************** -->
+            <section id="endSlide" class="swiper-slide">
+                
+                <img src="img/nuage.gif" alt="nuage" class="nuage">
+                <h1 id="result">Voici vos résultats</h1>
+                <div id="containerEnd">
+
+                    
+                    <div id="temp" class="conclusion">
+                        <div class="containerthermofinal">
+                            <div class="thermo" id ="thermofinal"></div>
+                            <img src = "img/thermo@300.png" id="thermoindic" alt="indicateur de température">
+                        </div>
+                
+                        <p id="final-thermo"></p>
+                    </div>
+
+                    <div id="argent" class="conclusion" >
+
+                        <div class="containermoneyfinal">
+                            <div class="money" id ="moneyfinal"></div>
+                            <img src = "img/money@300.png" id="moneyindic" alt="indicateur de dépense">
+                        </div>
+
+                        <p id="final-money"></p>
+                    </div>
+
+                    <div id="satisfaction" class="conclusion" >
+                        <div class="containerhappyfinal">
+                            <div class="happy" id ="happyfinal"></div>
+                            <img src = "img/happy@300.png" id="happyindic" alt="indicateur de satisfaction">
+                        </div>
+                        <p id="final-happy"></p>
+                    </div>
+
+                    <div class="button" id="endButtons">
+                        <div class="dropdownShare">
+                            <button onclick="toggleDropdownShareMenu()" id="dropdownShareButton" class="dropdownShareButton">Partager</button>
+                            <div id="dropdownShareOptions" class="dropdownShareOptions">
+
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=http://hyblab.polytech.univ-nantes.fr/verdure" target="_blank">
+                                    <img src="img/facebook-logo.png" alt="facebookLogo">
+                                </a>
+                                <a href="https://twitter.com/intent/tweet?url=Je viens de réussir à Green Ma Ville! Relevez-vous aussi le défi sur http://hyblab.polytech.univ-nantes.fr/verdure" target="_blank">
+                                    <img src="img/twitter-logo.png" alt="twitterLogo">
+                                </a>
+                                <a href="https://wa.me/?text=Je viens de réussir à Green Ma Ville! Relevez-vous aussi le défi sur http://hyblab.polytech.univ-nantes.fr/verdure" target="_blank">
+                                    <img src="img/whatsapp-logo.png" alt="whatsAppLogo">
+                                </a>
+                            </div>
+                        </div>
+                        <button onclick="goBackToBeginning()" id="replayButton">Rejouer</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="end-slide" class="swiper-slide">
                 <header>
-                  <h1>This was...</h1>
+                    <h1>Crédits</h1>
                 </header>
-                <img id="img-fini" src="hyblab_2023.jpg">
+                <div id="div-img-fin">
+                    <img id="img-fini" src="hyblab_2023.jpg" alt="hyblab 2023">
+                </div>
+                <table id="photo-table">
+                    <tr>
+                        <th>
+                            <a href="https://www.linkedin.com/in/mael-prevost" target="_blank">
+                                <img src="img/Photos de nous/photo-mael.png" alt="photo Mael" class="profile-photo">
+                                <p>Maël PREVOST</p>
+                            </a>
+                        </th>
+                        <th>
+                            <a href="https://www.linkedin.com/in/alexis-ines-gon%C3%A7alves/" target="_blank">
+                                <img src="img/Photos de nous/photo-alexis.png" alt="photo Alexis" class="profile-photo">
+                                <p>Alexis INES</p>
+                            </a>
+                        </th>
+                        <th>
+                            <a href="https://www.linkedin.com/in/emma-perrichot-24201622b/" target="_blank">
+                                <img src="img/Photos de nous/photo-emma.png" alt="photo Emma" class="profile-photo">
+                                <p>Emma PERRICHOT</p>
+                            </a>
+                        </th>
+                        <th>
+                            <a href="https://www.behance.net/enzoliaigre" target="_blank">
+                                <img src="img/Photos de nous/photo-enzo.png" alt="photo Enzo" class="profile-photo">
+                                <p>Enzo LIAIGRE</p>
+                            </a>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <a href="https://www.linkedin.com/in/guilhem-lomelet/" target="_blank">
+                                <img src="img/Photos de nous/photo-guilhem.png" alt="photo Guilhem" class="profile-photo">
+                                <p>Guilhem LOMELET</p>
+                            </a>
+                        </th>
+                        <th>
+                            <a href="https://www.linkedin.com/in/killianblain/" target="_blank">
+                                <img src="img/Photos de nous/photo-killian.png" alt="photo Killian" class="profile-photo">
+                                <p>Killian BLAIN</p>
+                            </a>
+                        </th>
+                        <th>
+                            <a href="https://www.linkedin.com/in/rafael-till%C3%A9-b9971b231/" target="_blank">
+                                <img src="img/Photos de nous/photo-rafael.png" alt="photo Rafael" class="profile-photo">
+                                <p>Rafael TILLE</p>
+                            </a>
+                        </th>
+                        <th>
+                            <a href="https://altaezio.itch.io/" target="_blank">
+                                <img src="img/Photos de nous/photo-victor.png" alt="photo Victor" class="profile-photo">
+                                <p>Victor ROBERT--JAUNET</p>
+                            </a>
+                        </th>
+                    </tr>
+                </table>
                 <footer id="bandeau">
-                        <!-- Logo Hyblab -->
-                          <a href="http://www.hyblab.fr/"><img id="hyblab" src="logo_hyblab.png" alt="Hyblab DataSport"></a>
-                      
-                          <!-- Les organisateurs -->
-                          <ul>
-                            <li><a href="http://www.ouestmedialab.fr/"><img src="logo_oml.png" alt="Ouest Médialab"></a></li>
-                            <li><a href="http://www.agrnantes.fr"><img src="ecoles/logo_agr.png" alt="AGR école de l'image"></a></li>
-                            <li><a href="https://epjt.fr/"><img src="ecoles/logo_epjt.svg" alt="Ecole publique de journalisme de Tours"></a></li>
-                            <li><a href="http://www.polytech.univ-nantes.fr/"><img src="ecoles/logo_polytech.png" alt="Polytech Nantes"></a></li>
-                          <!-- Les autres logos -->
-                          <ul>
+                    <!-- Logo Hyblab -->
+                    <a href="http://www.hyblab.fr/"><img id="hyblab" src="logo_hyblab.png" alt="Hyblab DataSport"></a>
+
+                    <!-- Les organisateurs -->
+                    <ul>
+                        <li><a href="http://www.ouestmedialab.fr/" target="_blank"><img src="logo_oml.png" alt="Ouest Médialab"></a>
+                        </li>
+                        <li><a href="http://www.agrnantes.fr" target="_blank"><img src="ecoles/logo_agr.png" alt="AGR école de l'image"></a>
+                        </li>
+                        <li><a href="https://epjt.fr/" target="_blank"><img src="ecoles/logo_epjt.svg"
+                                                            alt="Ecole publique de journalisme de Tours"></a></li>
+                        <li><a href="http://www.polytech.univ-nantes.fr/" target="_blank"><img src="ecoles/logo_polytech.png"
+                                                                               alt="Polytech Nantes"></a></li>
+                        <!-- Les autres logos -->
+                        <ul>
                             <!-- Logos CC et opensource -->
                             <li>
-                            <ul>
-                              <li class="stacked"><img id="cc" src="logo_cc.png" alt="Creative commons"></li>
-                              <li class="stacked"><img id="opensource" src="logo_opensource.png" alt="Open source"></li>
-                            </ul>
+                                <ul>
+                                    <li class="stacked"><img id="cc" src="logo_cc.png" alt="Creative commons"></li>
+                                    <li class="stacked"><img id="opensource" src="logo_opensource.png"
+                                                             alt="Open source"></li>
+                                </ul>
                             </li>
                             <!-- Logo de votre porteur de projet -->
-                            <li><a href="https://leplan.studio/"><img src="./img/LOGO_LEPLAN3.png" alt="Logo de mon porteur de projet"></a></li>
+                            <li><a href="https://leplan.studio/" target="_blank"><img src="./img/LOGO_LEPLAN3.png"
+                                                                      alt="Logo de mon porteur de projet"></a></li>
                             <!-- Partenaires institutionnels -->
-                            <li><a href="http://www.nantesmetropole.fr/"><img class="institutionnel" src="institutionnels/logo_nantesmetropole.png" alt="Nantes Métropole"></a></li>
-                          </ul>
+                            <li><a href="http://www.nantesmetropole.fr/" target="_blank"><img class="institutionnel"
+                                                                              src="institutionnels/logo_nantesmetropole.png"
+                                                                              alt="Nantes Métropole"></a></li>
+                        </ul>
                 </footer>
             </section>
         </main>
+
+
         <div class="swiper-pagination"></div>
     </div>
-  </div>
+</div>
 </body>
 </html>
