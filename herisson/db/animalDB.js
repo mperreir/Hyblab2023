@@ -15,7 +15,7 @@ async function getTaxon(id, db) {
         copyright = mediaData.copyright;
         const downloadLink = mediaData._links.file.href;
         // download the image
-        await downloadImage(downloadLink, `../public/img/animals/${id}.jpg`);
+        await downloadImage(downloadLink, `herisson/public/img/animals/${id}.jpg`);
         media = id + '.jpg';
     } catch (e) {
         console.log(await getNames(id));
@@ -51,7 +51,7 @@ function getCDRef(jsonData) {
 
 async function initAnimalDB() {
     console.log("initAnimalDB");
-    const db = JSON.parse(fs.readFileSync('../public/data/communeDB.json'));
+    const db = JSON.parse(fs.readFileSync('herisson/public/data/communeDB.json'));
     const cdRefs = getCDRef(db);
 
     let allTaxon = {};
@@ -73,7 +73,7 @@ async function initAnimalDB() {
 
     }
 
-    fs.writeFileSync("../public/data/animalDB.json", JSON.stringify(allTaxon));
+    fs.writeFileSync("herisson/public/data/animalDB.json", JSON.stringify(allTaxon));
 }
 
 async function getNames(taxon) {
@@ -112,14 +112,5 @@ async function getINSEE(taxon, db) {
     }
     return cityData;
 }
-
-initAnimalDB()
-    .then(() => {
-        console.log("La base de données animale a été créée avec succès.");
-    })
-    .catch((error) => {
-        console.error("Erreur lors de la création de la base de données animale :", error);
-    });
-
 
 module.exports = initAnimalDB;
