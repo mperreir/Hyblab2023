@@ -1,48 +1,48 @@
 #container > * {
     width: 75%;
 }
-/* mes ajouts*/
-.modal {
-    display: none;
-}
 
-.modal-back {
+div#overlay {
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-
+    width: 100%;
+    height: 100%;
+    background-color: var(--gris-moyen);
+    opacity: 0.75;
 }
-.modal-container {
-    position: fixed;
+
+div#popup {
+    position: absolute;
+    z-index: 4;
+    top: 40%;
+    left: 30%;
+    width: 40%;
+    height: 20%;
+}
+
+div#popup img#fermeture-popup {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    right: 15%;
+    width: 20%;
+    height: 20%;
+}
+
+div#popup div#popup-content {
+    position: relative;
+    top: 10%;
+    bottom: 10%;
+    width: 100%;
+    height: 80%;
+    background-color: var(--gris-clair);
+    border-radius: 25px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    height: 150px;
-    top: 60%;
-    left: 50%;
-    padding: 25px;
-    border-radius: 50px;
-    background: rgba(255,255,255,1) ;
-    transform: translate(-50%, -50%)
-}
-
-.modal-container p {
-    margin-top: 15%;
-    color: #006A82;
-    font-family: 'Poppins', sans-serif
-
-}
-.modal-container img  {
-    width: 8%;
-    margin-top: -10%;
-    color: #006A82;
-    margin-left: 80%;
-    font-family: 'Poppins', sans-serif
-
-
+    justify-content: center;
+    text-align: center;
 }
 
 
@@ -105,4 +105,8 @@
 footer {
     width: 75%;
     height: 15%;
+}
+
+.display-none {
+    display: none;
 }

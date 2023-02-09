@@ -32,11 +32,18 @@ function onCheck(event) {
     } else {
 
         if (themeSelected.length === 1) {
-            document.getElementById('modal').style.display = 'block';
-            document.getElementById('modal-close').addEventListener('click', function (e) {
-                document.getElementById('modal').style.display = 'none';
-            })
-
+            // Display the overlay
+            const overlay = document.querySelector("div#overlay");
+            overlay.classList.remove("display-none");
+            // Display the popup
+            const popup = document.querySelector("div#popup");
+            popup.classList.remove("display-none");
+            document.querySelector('div#popup img#fermeture-popup').addEventListener('click', function (e) {
+                // Undisplay the overlay
+                document.querySelector('div#overlay').classList.add('display-none');
+                // Undisplay the popup
+                document.querySelector('div#popup').classList.add('display-none');
+            });
         } else {
             supprimeTheme(themeName);
             themeBtn.classList.add("unchecked");
