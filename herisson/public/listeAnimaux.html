@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="js/animalCategory.js"></script> -->
+    <script src="js/animalCategory.js"></script>
 <!--    <script src="js/animalInfo.js"></script>-->
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
     <link rel="stylesheet" href="css/menu.css">
@@ -65,7 +65,7 @@
                 </script>
             </div>
             <img src="./img/fleche_beige.png" id="fleche" alt="arrow button">
-            <script src="js/animalCategory.js">
+            <script>
                 const category = localStorage.getItem("category");
                 const commune = localStorage.getItem("commune");
                 createAnimalCategory(commune, category);
