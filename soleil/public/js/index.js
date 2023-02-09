@@ -6,6 +6,8 @@ const swiper = new Swiper("#mySwiper", {
   direction: "vertical",
   //observer: true,
   mousewheel: false,
+  preventInteractionOnTransition: true,
+  allowTouchMove: false,
 });
 
 swiper.on("slideChange", function () {
