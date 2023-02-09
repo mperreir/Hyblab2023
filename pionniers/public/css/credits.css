@@ -1,83 +1,114 @@
 html, body {
-    padding: 0;
-    margin: 0;
-}
-html {
-    height: 100vh;
-}
-body {
-    height: 100vh;
-}
-
-#container > * {
-    width: 75%;
-}
-
-#retour {
-    margin-right: 10%;
-
-}
-
-#petit-rond {
-    width: 4vh;
-    height: 4vh;
-    background: #F8F8F8;
-    border-radius: 15px;
-    margin-left: 20%;
-    color:  #006982;
-}
-#info {
-    text-align: center;
-    justify-content: center;
-    alignment: center;
-}
-
-#logo-appli {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#remerciment {
-    background: var(--gris-clair);
-    border-radius: 25px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    height: 70%;
-    width: 80%;
-    margin-bottom: 15%;
-    margin-top: 10%;
-
-
-}
-
-#texte-merci {
     height: 100%;
-
-    font-size: 1em;
-    line-height: 1.3;
-    margin-right: 10%;
-    margin-left: 10%;
-}
-#personnes {
-
+    margin: 0;
+    padding: 0;
 }
 
-#design {
-    margin-top: 10%;
-    margin-right: 25%;
-    margin-bottom: 10%;
+
+header {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#programmation {
-    margin-top: 10%;
-    margin-bottom: 10%;
+header a {
+    height: calc(5vh * 3/4);
 }
-#merci {
+
+header a div, header a div img {
+    height: 100%;
+}
+
+
+header #petit-rond {
+    width: 2vh;
+    height: 2vh;
+    font-size: 2em;
+}
+
+main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+main p{
+    font-size: 0.5em;
+}
+
+main div#credits-content {
+    position: absolute;
+    border-radius: 25px;
+    z-index: 2;
+    top: 15%;
+    left: 10%;
+    width: 80%;
+    height: 70%;
+    background-color: var(--gris-clair);
+}
+
+main div#credits-content section#members {
+    width: 80%;
+    height: 25%;
+}
+
+main div#credits-content section#members div#members-wd, main div#credits-content section#members div#members-dev {
+    width: 45%;
+    height: 100%;
+}
+
+main div#credits-content section#members div#members-wd div#members-w, main div#credits-content section#members div#members-wd div#members-d {
+    width: 100%;
+    height: 40%;
+}
+
+main div#credits-content section#helpers {
+    width: 80%;
+    height: 25%;
     text-align: center;
+}
+
+
+
+main div#credits-content section#images {
+    width: 80%;
+    height: 40%;
+
+}
+
+main div#credits-content section#images div#images-t{
+    width: 100%;
+    height: 20%;
+    text-align: center;
+}
+
+main div#credits-content section#images div#images-i{
+    width: 100%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+main div#credits-content section#images div#images-i img{
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-image: url('../img/rainbow_background_bottom.svg');
 }

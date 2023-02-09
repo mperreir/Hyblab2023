@@ -19,13 +19,12 @@ body {
 }
 
 #petit-rond {
-    width: 4vh;
-    height: 4vh;
-    background: #F8F8F8;
-    border-radius: 15px;
+    width: 2vh;
+    height: 2vh;
+    font-size: 2em;
     margin-left: 20%;
-    color:  #006982;
 }
+
 #info {
     text-align: center;
     justify-content: center;
