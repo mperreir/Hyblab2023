@@ -65,9 +65,9 @@ app.get('/density/:town', async function (req, res) {
 });
 
 // TODO finir cette fonction
-function getRadiationData(latitude, longitude, altitude, date_begin, date_end, time_ref, summatization) {
+function getRadiationData(latitude, longitude) {
     const username = "supy.game@gmail.com";
-    const url = `https://www.soda-is.com/service/wps?Service=WPS&Request=Execute&Identifier=get_cams_radiation&version=1.0.0&DataInputs=latitude=${latitude};longitude=${longitude};altitude=${altitude};date_begin=${date_begin};date_end=${date_end};time_ref=${time_ref};summarization=${summatization};username=${username}&RawDataOutput=irradiation`;
+    const url = `https://www.soda-is.com/service/wps?Service=WPS&Request=Execute&Identifier=get_cams_radiation&version=1.0.0&DataInputs=latitude=${latitude};longitude=${longitude};altitude=-999;date_begin=2022-01-01;date_end=2022-12-31;time_ref=UT;summarization=P01D;username=${username}&RawDataOutput=irradiation`;
 
     wget({
         url:  url,
