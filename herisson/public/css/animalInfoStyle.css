@@ -34,9 +34,11 @@ body{
     color: #FFF8F1;
 }
 #quit{
+    max-width: 7vw;
+    height: auto;
     position: absolute;
-    right: 2%;
-    top: 1%;
+    right: 4vw;
+    top: 2.5vh;
 }
 
 
