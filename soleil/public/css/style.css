@@ -35,6 +35,10 @@ body{
     margin :auto
 }
 
+#contactChoice{
+    margin: 8px;
+}
+
 #contactChoice1 {
     margin: 8px;
 }
