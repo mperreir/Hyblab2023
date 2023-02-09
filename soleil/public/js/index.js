@@ -44,6 +44,12 @@ swiper.on("slideChange", function () {
     case 10:
       initSlideInfo1();
       break;
+    case 11:
+      initSlideInfo2();
+      break;
+    case 12:
+      initSlideInfo3();
+      break;
   }
 });
 

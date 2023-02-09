@@ -6,7 +6,7 @@ const initSlide4 = async function(){
         executed4 = true;
         changePente();
 
-        $(".open-button").click(function(){
+        $("#pente .open-button").click(function(){
             swiper.slideTo(11, 0);
 
         })

@@ -5,6 +5,10 @@ const initSlide6 = async function(){
     if(!executed6){
         changeOmbre();
         executed6 = true;
+        $("#ombre .open-button").click(function(){
+            swiper.slideTo(13, 0);
+
+        })
         $("#ombre input[name=ombre]").click(function(){
             changeOmbre();
         })
