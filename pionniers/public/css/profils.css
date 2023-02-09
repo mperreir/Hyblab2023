@@ -11,13 +11,12 @@ body {
     height: 100vh;
 }
 
-header {
-    position: sticky;
-    top: 0;
-}
-
 #container > * {
     width: 75%;
+}
+
+.hidden {
+    display: none;
 }
 
 #retour {
@@ -40,11 +39,17 @@ header {
     transition: 0.2s;
 }
 
+/*
+----------------------------------------------
+-------------- Profile container --------------
+----------------------------------------------
+*/
 
-#profils {
+#profile {
     background-color: var(--gris-clair);
     border-radius: 15px;
-
+    min-height: 75%;
+    margin: 1.5em auto;
 }
 
 .photo-case {
@@ -59,13 +64,51 @@ header {
     border-radius: 15px 0 0 15px;
 }
 
-#identity {
-    padding: 0 0.5em 0 0.5em;
-}
-
 #resume {
     align-self: start;
-    height: fit-content;
     width: 100%;
     height: 25%;
+    font-size: 0.95em;
+}
+
+#identity {
+    padding: 0.5em;
+}
+
+.entreprise-info {
+    margin-top: 0.47em;
+}
+
+/*
+----------------------------------------------
+------------- Scrollable section -------------
+----------------------------------------------
+*/
+.scrollable {
+
+    overflow: scroll;
+    height: 65%;
+    width: 85%;
+    margin: 0.5em;
+}
+
+#bio {
+    padding-bottom: 0.5em;
+    text-align: left;
+}
+
+#podcast {
+    width: 85%;
+    height: 220px;
+}
+
+/*
+----------------------------------------------
+------------------ Links --------------------
+----------------------------------------------
+*/
+#links {
+    width: 85%;
+    height: 10%;
+    padding: 0.8em 5%;
 }
