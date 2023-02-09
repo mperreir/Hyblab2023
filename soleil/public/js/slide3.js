@@ -6,7 +6,7 @@ const initSlide3 = async function(){
     if(!executed3){
         executed3 = true;
         $("#logement footer button").click(function(){
-            if ($(".choix-logement img[class=selection]").length) { // vérifier que l'input radio est tjrs coché ?
+            if ($(".choix-logement img[class=selection]").length == 2) { // vérifier que l'input radio est tjrs coché ?
                 quiz["logement"] = $(".choix-logement img[class=selection]").eq(0).attr("title");
                 quiz["propriétaire"] = $(".choix-logement img[class=selection]").eq(1).attr("title");
                 swiper.slideNext();
