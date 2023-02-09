@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+/*document.addEventListener("DOMContentLoaded", function() {
 
     const retour = document.querySelector('#retour');
 
@@ -6,4 +6,4 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = window.localStorage.getItem('pagePrecedente') + ".html";
     });
 
-});
+});*/
