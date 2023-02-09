@@ -16,12 +16,13 @@ body{
 }
 .carousel{
     height: 200px;
-    margin-top: 5%;
+    margin-top: 8%;
 }
 
 #carousel-text{
     text-align: center;
     font-size: 30px;
+    margin-top: -0.8em;
 }
 
 #legend-carousel{
@@ -39,6 +40,7 @@ body{
     border-radius: 40px 40px 40px 40px;
     font-size: 30px;
     padding: 15px;
+    border: none;
 }
 .navigate{
     background : transparent;
@@ -54,6 +56,7 @@ body{
 
 #next, #prev{
     width: 10%;
+    font-family: 'Poppins', sans-serif;
 }
 
 h1{
@@ -266,4 +269,8 @@ body{
 #video-container {
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.carousel-item {
+    margin-left: 0.25em;
 }

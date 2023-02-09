@@ -23,7 +23,7 @@ const initSlide1 = async function(){
     const titre = document.querySelector('#titre');
     titre.innerHTML = data.name.toUpperCase();
     titre.style.color = data.main_color;
-    document.querySelectorAll('.swiper-pagination-bullet-active').forEach((bullet) => {bullet.style.backgroundColor = data.main_color;});
+    document.querySelectorAll('.swiper-pagination-bullet').forEach((bullet) => {bullet.style.backgroundColor = data.main_color;});
     document.querySelectorAll('.swiper-wrapper section').forEach((section) => {section.style.backgroundColor = data.background_color;});
     document.querySelectorAll('.swiper-slide main').forEach((main) => {main.style.backgroundColor = data.main_color;});
     document.querySelectorAll('.carouselResult').forEach((button) => {button.style.backgroundColor = data.main_color;});
