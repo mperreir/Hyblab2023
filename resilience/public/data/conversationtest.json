@@ -1,37 +1,29 @@
 {
     "place": "AGR",
-    "names": [
-        "Guillaume",
-        "Voyageur"
+    "people": [
+        {
+            "name": "Guillaume",
+            "background_color": "#79B77B",
+            "border_color": "white",
+            "text_color": "white",
+            "side": "left"
+        },
+        {
+            "name": "Louise",
+            "background_color": "pink",
+            "border_color": "white",
+            "text_color": "white",
+            "side": "left"
+        },
+        {
+            "name": "Voyageur",
+            "background_color": "white",
+            "border_color": "black",
+            "text_color": "black",
+            "side": "right"
+        }
     ],
-    "background_color": "#79B77B",
-    "text_color": "white",
     "messages": [
-        {
-            "type": "message",
-            "name": "Voyageur",
-            "text": "Bonjour Guillaume !"
-        },
-        {
-            "type": "message",
-            "name": "Voyageur",
-            "text": "Bonjour Guillaume !"
-        },
-        {
-            "type": "message",
-            "name": "Voyageur",
-            "text": "Bonjour Guillaume !"
-        },
-        {
-            "type": "message",
-            "name": "Voyageur",
-            "text": "Bonjour Guillaume !"
-        },
-        {
-            "type": "message",
-            "name": "Voyageur",
-            "text": "Bonjour Guillaume !"
-        },
         {
             "type": "message",
             "name": "Voyageur",
@@ -44,8 +36,8 @@
         },
         {
             "type": "message",
-            "name": "Guillaume",
-            "text": "Comment vas-tu ?"
+            "name": "Louise",
+            "text": "Bonjour les garçons !"
         },
         {
             "type": "one",
@@ -94,6 +86,11 @@
                     }
                 ]
             ]
+        },        
+        {
+            "type": "message",
+            "name": "Louise",
+            "text": "Au revoir les garçons !"
         }
     ]
 }
