@@ -117,7 +117,42 @@ object{
     width: 100%;
     height: 100%;
 }
+.textElu{
+    margin-top: 10%;
+    font-size: 12pt;
+    display: inline-block;
+    background-color: #d7d1d1;
+    border-radius: 10px;
+    padding: 1em 1em;
+    width: 50%;
+    margin-left: 25%;
+}
 
+.textElu2{
+    margin-top: 20%;
+    font-size: 12pt;
+    display: inline-block;
+    background-color: #d7d1d1;
+    border-radius: 10px;
+    padding: 1em 1em;
+    width: 50%;
+    margin-left: 25%;
+}
+
+
+
+#elu-conclusion{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+
+}
+#elu-conclusion2{
+    position: absolute;
+    top: 70%;
+    left: 15%;
+
+}
 /* Most of the elements in this demo are absolute positionned with percentages */
 #first-slide header, #second-slide header{
     text-align: center;
@@ -302,4 +337,9 @@ body{
 #video-container {
     margin-top: 10px;
     margin-bottom: 10px;
+}
+#credit{
+    position: absolute;
+    top : 60%;
+    left:18%
 }

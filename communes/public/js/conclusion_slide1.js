@@ -69,7 +69,7 @@ const initSlide1 = async function(){
       credit[i].style.backgroundColor = data.color.main[0];
     }
 
-    const credit_text = document.querySelector('#fourth-slide main');
+    const credit_text = document.querySelector('#credit');
     for (let i = 0; i < data.credits.membres.length; i++) {
       const p = document.createElement('p');
       let member = data.credits.membres[i];
