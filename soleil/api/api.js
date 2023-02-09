@@ -121,7 +121,7 @@ readRadiationData('N', 0, 44.083, (err, totalEnergy) => {
     } else {
       console.log("total : " + totalEnergy);
     }
-});*/
+});
 
 /**
  * Compute irradiation of the roof at a time given
