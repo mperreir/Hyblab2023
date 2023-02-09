@@ -306,6 +306,18 @@ header{
     margin-top: 10%;
 }
 
+#ContourMiss{
+    border: 0.75px solid #000000;
+    border-radius: 8px;
+    height: 80%;
+    width: auto;
+    text-align: center;
+    padding: 3%;
+    margin-top: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 #jauge{
     display: inline-block;
     margin-top: 20px;
