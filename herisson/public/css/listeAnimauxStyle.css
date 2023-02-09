@@ -115,6 +115,7 @@ footer.main{
 #pop-up{
     display: none;
     background-color: #FBC5EB;
+    z-index: -6;
 }
 #animal-picture{
     z-index: -5;
