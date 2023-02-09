@@ -57,19 +57,22 @@ async function vote() {
     let htmlSubmit = document.createElement('div');
     htmlSubmit.classList.add('submit');
     htmlSubmit.textContent = 'Submit';
-    let submit = htmlSubmit.addEventListener('click', async function () {
+    let submit = async function () {
         if (Object.keys(notes).length == data.length) {
             // Reformat the notes into req
             let req = Object.entries(notes).map(e => {
                 return {
-                    'id': e[0],
-                    'note': e[1],
+                    id: e[0],
+                    note: e[1],
                 }
             });
             console.log(req);
             await fetch('/resilience/api/vote', {
                 method: 'POST',
-                body: JSON.stringify(req),
+                data: JSON.stringify(req),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
             }).catch(err => {
                 console.log(err);
             });
@@ -78,8 +81,9 @@ async function vote() {
         }
 
         htmlSubmit.removeEventListener('click', submit);
-    });
+    };
 
+    htmlSubmit.addEventListener('click', submit);
     htmlVotes.appendChild(htmlSubmit);
 
 };
