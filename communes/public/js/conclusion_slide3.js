@@ -8,7 +8,13 @@ const initSlide3 = function(data){
   const bar_width = bar_chart.clientWidth;
   const bar_height = bar_chart.clientHeight;
 
-  create_bar_chart2(data.barchart_global.data, bar_chart, bar_width, bar_height, data.color.background[0]);
+  //create_bar_chart2(data.barchart_global.data, bar_chart, bar_width, bar_height, data.color.background[0]);
+
+  d3.xml("../img/barchart2.svg").then(function(xml) {
+    var importedNode = document.importNode(xml.documentElement, true);
+    d3.select(importedNode).attr("width", "100%").attr("height", "100%");
+    d3.select("#bar-chart2").node().appendChild(importedNode);
+  });
 
   const button = document.querySelector('button');
 
@@ -71,7 +77,8 @@ const create_bar_chart2 = function(data, selector, width, height, rectangle_colo
       .enter()
       .append("g")
       .attr("class", "legend")
-      .attr("transform", (d, i) => `translate(${(i % 3) * 145}, ${Math.floor(i / 3) * 30})`);
+      .style("font-size", "10px")
+      .attr("transform", (d, i) => `translate(${(i % 3) * 95}, ${Math.floor(i / 3) * 30})`);
 
   legend
       .append("rect")
