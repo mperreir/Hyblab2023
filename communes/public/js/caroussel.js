@@ -31,7 +31,7 @@ fetch('../data/data.json')
         // for each element
         const titre = document.querySelector('#titre');
         titre.innerHTML = titre.innerHTML.toUpperCase();
-        titre.style.color = data.conclusion.color.main[0];
+        titre.style.color = "#000000"; //data.conclusion.color.main[0];
 
 
 
