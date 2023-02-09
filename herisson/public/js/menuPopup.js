@@ -100,13 +100,6 @@ imgMenuBurger.addEventListener("click", function () {
         console.log(error);
     }
 
-    try {
-        var main = document.getElementById("list-animals-main");
-        var foot = document.getElementById("list-animals-footer");
-    } catch {
-        console.log(error);
-    }
-
     if (divMenu.style.display === "block") {
         // Page commune et conseils
         try {
@@ -114,13 +107,6 @@ imgMenuBurger.addEventListener("click", function () {
             swiperNext.style.display = 'block';
             pagination.style.display = 'block';
         } catch (error) {
-            console.log(error);
-        }
-
-        try {
-            main.style.display = 'block';
-            foot.style.display = 'block';
-        } catch {
             console.log(error);
         }
         divMenu.style.left = "100%";
@@ -149,14 +135,6 @@ imgMenuBurger.addEventListener("click", function () {
         } catch (error) {
             console.log(error);
         }
-
-        try {
-            main.style.display = 'block';
-            foot.style.display = 'block';
-        } catch {
-            console.log(error);
-        }
-
         divMenu.style.display = "block";
         setTimeout(function () {
             divMenu.style.left = "0";
