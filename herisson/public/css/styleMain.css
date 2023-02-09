@@ -137,7 +137,7 @@ input[type="text"]
     background-color: transparent;
     border: none;
     height: 5vh;
-    font-size: 3vh;
+    font-size: 5vw;
     margin-left: 7vw;
     font-family: 'Prompt', sans-serif;
     color: #0B6E5F;
@@ -150,7 +150,7 @@ input[type="text"]
     border-radius: 0 0 50px 50px;
     width: 90vw;
     padding-top: 5vh;
-    margin-top: 14vh;
+    margin-top: 9vh;
     z-index: 3;
     left: 0;
     right: 0;
@@ -164,8 +164,8 @@ input[type="text"]
     background-color: #FFF8F1;
     border-radius: 0 0 50px 50px;
     width: 90vw;
-    padding-top: 5vh;
-    margin-top: 26vh;
+    padding-top: 4vh;
+    margin-top: 21vh;
     z-index: 1;
     left: 0;
     right: 0;
@@ -180,7 +180,7 @@ input[type="text"]
     z-index: 4;
     right: 0;
     left: 0;
-    margin-top: 10vh;
+    margin-top: 6vh;
 }
 
 #searchAnimal
@@ -189,5 +189,5 @@ input[type="text"]
     z-index: 2;
     right: 0;
     left: 0;
-    margin-top: 21vh;
+    margin-top: 17vh;
 }
