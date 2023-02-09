@@ -118,7 +118,7 @@ $("#sound-toggle").click(() => {
             format: ['mp3'],
             //autoplay: true,
             loop: true,
-            volume: 0.5
+            volume: 0.2
         });
     }
     if(!music.playing()){
