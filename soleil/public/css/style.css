@@ -1,7 +1,7 @@
 /* ------- Important ! Please at least keep the last part of this CSS ----------- */
 .article {
-    height: 200px;
     overflow: scroll;
+    height: 90%;
   }
 
 
@@ -31,6 +31,18 @@ body{
     width : 85%;
     /*height : 150px;*/
     margin :auto
+}
+
+#contactChoice1 {
+    margin: 8px;
+}
+
+#contactChoice2 {
+    margin: 8px;
+}
+
+#contactChoice3 {
+    margin: 8px;
 }
 
 #imageLog{
@@ -277,7 +289,7 @@ header{
 }
 
 .choix-texte2{
-    font-size: 2vw;  /* 2vw */
+    font-size: 3.5vw;  /* 2vw */
     line-height: 20px;
     box-sizing: border-box;
     padding : 1vw;
@@ -292,6 +304,18 @@ header{
 #choix-ombre {
     position: static;
     margin-top: 10%;
+}
+
+#ContourMiss{
+    border: 0.75px solid #000000;
+    border-radius: 8px;
+    height: 80%;
+    width: auto;
+    text-align: center;
+    padding: 3%;
+    margin-top: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 #jauge{
@@ -329,7 +353,7 @@ header{
     border: 0.75px solid #000000;
     border-radius: 8px;
     height: auto;
-    width: 50%;
+    width: 80%;
     text-align: center;
     padding-top : 10%;
 
@@ -395,6 +419,7 @@ header{
     text-align: center;
     margin: auto;
     width: 70%;
+    padding-top: 10%;
 }
 
 /* Most of the elements in this demo are absolute positionned with percentages */

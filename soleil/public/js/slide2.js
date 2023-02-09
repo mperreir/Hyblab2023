@@ -13,25 +13,30 @@ async function initSlide2() {
       }
     });
     $("#adresse input").change(async function () {
-      let pa = await getPossibleAddresses();
-      console.log(pa);
+      let pa = await getPossibleAddresses($("#adresse input").val());
+        console.log(pa);
 
-      $("div.result").html("");
-      pa.forEach(elt => {
-        $("div.result").append(`<option>${elt}</option>`)
-      });
+        $("div.result").html("");
+        pa.forEach(elt => {
+          $("div.result").append(`<option>${elt['address_text']}</option>`)
+        });
 
-      $("div.result").show();
-      $("div.result option").click(function () {
-        console.log("option");
-        quiz["adresse"] = $(this).html();
-        $('#adresse input').val($(this).html());
-        $("div.result").hide();
-      });
+        $("div.result").show();
+        $("div.result option").click(async function () {
+          console.log("option");
+          quiz["adresse"] = pa.find(elt => elt["adress_text"] == $(this).html());
+          let response = await fetch('api/density/' + quiz["adresse"]["full_adress"]["town"]);
+          const density = await response.json();
+          quiz["density"] = density["density"];
+          // ajouter l'image correspondante
+          $("#adresse video").attr("src", `animation/geo-0${quiz["density"].mp4}`);
+          console.log($(this).html());
+          $('#adresse input').val($(this).html());
+          $("div.result").hide();
+        })
+        
     })
     $('#adresse input').on('input', async function () { // au changement de caractere
-      if ($("#adresse input").val().charAt($("#adresse input").val().length - 1) == " ") {
-        
         let pa = await getPossibleAddresses($("#adresse input").val());
         console.log(pa);
 
@@ -52,7 +57,6 @@ async function initSlide2() {
           $('#adresse input').val($(this).html());
           $("div.result").hide();
         })
-      }
     });
 
 
