@@ -9,7 +9,7 @@ const swiper = new Swiper("#mySwiper", {
 });
 
 swiper.on("slideChange", function () {
-  console.log(swiper.activeIndex);
+  console.log(swiper.activeIndex); 
   switch( swiper.activeIndex ) {
     case 0:
       initSlide0();
