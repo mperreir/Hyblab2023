@@ -27,7 +27,7 @@
     "questions": {
         "general": [{
                 "contexte": "Bonsoir, les infos météo pour vous !<br><br>Pour demain, samedi 15 avril, il neigera par intermittence et le risque de gel est important.<br><br>Plus particulièrement sur la région d’Anjou, gare à vous.",
-                "enonce": "Bizarre, les vignes commencent à geler… <br>Pourtant, ce n'est que le 15 avril… Il faut agir vite<br>pour sauver les vignes ! Que comptes-tu faire ?",
+                "enonce": "Bizarre, les vignes commencent à geler… <br>Pourtant, ce n'est que le 15 avril… Il faut agir vite pour sauver les vignes ! <br>Que comptes-tu faire ?",
                 "img": "img/characters/missmeteo.png",
                 "imgBulle": "img/characters/bulle-météo.png",
                 "reponse": [
@@ -37,7 +37,7 @@
                 ],
                 "explication": [
                     "<b>Attention</b> ! Si cette idée peut marcher en temps général, <b>utiliser une grande quantité d’eau va être compliqué<b>. Avec les stocks disponibles qui diminuent, d’autres secteurs jugés plus importants comme la culture de céréales seront prioritaires.",
-                    "<b>Bonne initiative !</b> Cela va permettre de sauver une partie de tes vignes en les protégeant efficacement contre le gel.<br> En tout cas pour le moment.<br> Car, si cette solution marche à <b>court-terme</b>, il vaut mieux penser à des plans sur la durée comme <b>adapter son terroir</b> ou <b>favoriser un lieu</b> avec des sols généralement plus froids - ce qui repousse l’éclosion.",
+                    "<b>Bonne initiative !</b> Cela va permettre de sauver une partie de tes vignes en les protégeant efficacement contre le gel. En tout cas pour le moment. Car, si cette solution marche à <b>court-terme</b>, il vaut mieux penser à des plans sur la durée comme <b>adapter son terroir</b> ou <b>favoriser un lieu</b> avec des sols généralement plus froids - ce qui repousse l’éclosion.",
                     "Aïe ! Laisser les vignes combattre le gel sans intervenir revient à <b>sacrifier une part énorme</b> de ta plantation. C’est un choix <b>très risqué</b> et les <b>pertes peuvent être considérables</b>…"
                 ],
                 "consequence": [
@@ -69,7 +69,7 @@
             },
             {
                 "contexte": "Bonjour,<br><br>Je suis la représentante d’un bureau d’étude, et suite à différents relevés nous avons remarqué qu’il pourrait il y avoir des périodes de grêle.",
-                "enonce": "Selon les estimations, les conditions météorologiques des prochaines semaines seront favorables à l’apparition d’épisodes de grêle… <br><br>Il faut absolument que tu t’y prépares, sinon les conséquences seront catastrophiques ! Que choisis-tu ?",
+                "enonce": "Selon les estimations, les conditions météorologiques des prochaines semaines seront favorables à l’apparition d’épisodes de grêle… <br><br>Il faut absolument que tu t’y prépares, sinon les conséquences seront catastrophiques ! <br>Que choisis-tu ?",
                 "img": "img/characters/etude.png",
                 "imgBulle" : "img/characters/bulle-scientific.png",
                 "reponse": [
@@ -90,7 +90,7 @@
             },
             {
                 "contexte": "Les raisins semblent mûrs, il va falloir commencer à penser aux vendeanges...",
-                "enonce": "Nous approchons de la mi-août. C’est déjà le moment de préparer la période des vendanges ! Dire qu’il y a encore quelques années, elles avaient lieu fin septembre… Enfin bref… Il ne faut surtout pas négliger les épisodes de fortes chaleurs qui peuvent encore arriver. <br><br>Comment veux-tu t’organiser ?",
+                "enonce": "Nous approchons de la mi-août. C’est déjà le moment de préparer la période des vendanges ! Dire qu’il y a encore quelques années, elles avaient lieu fin septembre… Enfin bref… Il ne faut surtout pas négliger les épisodes de fortes chaleurs qui peuvent encore arriver. <br>Comment veux-tu t’organiser ?",
                 "img": "img/characters/vigne.png",
                 "imgBulle" : "img/characters/bulle-dominique.png",
                 "reponse": [
@@ -175,7 +175,7 @@
             },
             {
                 "contexte": "Oh non ! Des tâches blanchâtres sont apparues sur les feuilles ! <br>Les vignes sont sûrement infectées par l’eutypiose… <br><br>La plantation risque de nécroser, les feuilles de se dessécher, puis les fruits vont pourrir !<br><br>Que comptes-tu faire ?",
-                "enonce": "Mince ! Des nécroses sont apparues sur les vignes et les grappes commencent à être milerandées (un défaut de maturation)… Les symptômes ressemblent à ceux de l’eutypiose, un champignon très nocif pour le cabernet-sauvignon ! Son apparition a été favorisée par le printemps orageux et pluvieux que l'on a subit… <br><br>Comment veux-tu y remédier ?",
+                "enonce": "Mince ! Des nécroses sont apparues sur les vignes et les grappes commencent à être milerandées (un défaut de maturation)… <br>Les symptômes ressemblent à ceux de l’eutypiose, un champignon très nocif pour le cabernet-sauvignon ! Son apparition a été favorisée par le printemps orageux et pluvieux que l'on a subit… <br>Comment veux-tu y remédier ?",
                 "img": "img/characters/vigne-2.png",
                 "imgBulle" : "img/characters/bulle-dominique.png",
                 "reponse": [
@@ -186,7 +186,7 @@
                 "explication": [
                     "Bonne idée ! <b>Regreffer</b> les pieds malades permet de les restaurer et de limiter les effets de <b>l’eutypiose</b> !<br> Tu peux par exemple utiliser la technique du <b>regreffage en fente</b>, qui doit être utilisée quand la sève en circulation n’est pas trop active. Soit au printemps <b>après le débourrement</b> (période durant laquelle les bourgeons se développent).",
                     "<b>Pourquoi pas</b> ! Un groupe international de chercheurs a annoncé dans <b>Science Daily</b>, un média scientifique reconnu internationalement, avoir trouvée une <b>possible solution</b> pour <b>lutter contre l’eutypiose</b> : les antioxydants. Ces derniers, ajoutés aux produits alimentaires, <b>interrompent notamment la réduction de fer et arrêtent la production de peroxyde d'hydrogène</b>.",
-                    "<b>C'est dommage</b> ! Si tu as fait un <b>bon choix</b> en remplaçant les cépages infectés, <b>tes parcelles vont perdre en hétérogénéité</b>, par <b>encépage déséquilibré</b> avec l'introduction de plantes plus jeunes ou <b>d'un cépage plus résistant</b>… la qualité <br>de ton vin va donc <b>en pâtir</b>."
+                    "<b>C'est dommage</b> ! Si tu as fait un <b>bon choix</b> en remplaçant les cépages infectés, <b>tes parcelles vont perdre en hétérogénéité</b>, par <b>encépage déséquilibré</b> avec l'introduction de plantes plus jeunes ou <b>d'un cépage plus résistant</b>… la qualité de ton vin va donc <b>en pâtir</b>."
                 ],
                 "consequence": [
                     0.2,
