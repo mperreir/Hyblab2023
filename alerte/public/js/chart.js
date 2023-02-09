@@ -32,8 +32,8 @@ var chart = new Chart(ctx, {
                 },
                 ticks: {
                     fontSize: 15,
-                    min: 1587600,
-                    max: 390000,
+                    min: 390000,
+                    max: 1587600,
                     stepSize: 50000,
                     callback: function (value, index, values) {
                         if (value === 1587600 || value === 390000) {
