@@ -23,9 +23,7 @@ async function createNbChocPage(commune) {
     }
 
     const dataCommune = await getDataCommune(commune)
-    const nbSpecies = countSpecies(dataCommune)
-
-    nbChoc.innerText = nbSpecies
+    nbChoc.innerText = countSpecies(dataCommune)
 
     function getMenacedSpecis(data) {
         let nbMenaced = 0
