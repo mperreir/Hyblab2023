@@ -8,7 +8,7 @@ const initSlide9 = async function(){
         $("#lettre_mission").html("");
         let num = 1;
         mission.forEach(elt=>{
-            $("#lettre_mission").append(`<div id="Contour" title="${elt.index}"><p>${elt.title}</p></div>`);
+            $("#lettre_mission").append(`<div id="ContourMiss" title="${elt.index}"><p>${elt.title}</p></div>`);
             num +=1;
         });
         $("#lettre_mission div").click(function(){
