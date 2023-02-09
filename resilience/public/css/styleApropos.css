@@ -42,8 +42,8 @@ img{
     margin: 1rem 0;
     padding: 3% 20% 3% 20%;
     color: white;
-    border-bottom-right-radius: 2em;
-    border-top-right-radius: 2em;
+    border-bottom-right-radius:0;
+    border-top-right-radius:0;
     display: flex;
     justify-content: center;
     align-items: center;

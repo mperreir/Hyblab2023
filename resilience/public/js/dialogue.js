@@ -11,8 +11,8 @@ var paused = false;
 var conversation = {};
 var dict_bkg = new Map();
 dict_bkg.set("8", "back_1.svg");
-dict_bkg.set("9", "back_2.svg");
-dict_bkg.set("10", "back_3.svg");
+dict_bkg.set("9", "back_3.svg");
+dict_bkg.set("10", "back_2.svg");
 dict_bkg.set("11", "back_4.svg");
 dict_bkg.set("12", "back_5.svg");
 dict_bkg.set("13", "back_6.svg");
@@ -169,6 +169,9 @@ document.getElementById('right-arrow').addEventListener('click', function () {
     }
     if (window.localStorage.getItem("compt").length == 1) {
         window.localStorage.setItem("first-acquis", "true");
+    }
+    if (window.localStorage.getItem("compt").length == 8) {
+        window.localStorage.setItem("is_end", "true");
     }
     window.location = "./map.html";
 
