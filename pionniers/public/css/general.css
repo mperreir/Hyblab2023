@@ -194,7 +194,7 @@ header#logo-appli a div img {
     font-family: 'Poppins', sans-serif;
     color: var(--bleu-fonce);
     border-radius: 500px;
-    padding: 3%;
+    padding: 3% 6%;
     border: none;
     background: var(--blanc-fond);
     font-size: 0.7em;
