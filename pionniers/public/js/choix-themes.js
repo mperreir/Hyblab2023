@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
             ajouteTheme(nomtheme);
             t.addEventListener('click', onCheck);
         });
-    }else {
+    } else {
         themeSelected = localStorage.getItem('themes').split(',');
 
         themes.forEach((t) => {

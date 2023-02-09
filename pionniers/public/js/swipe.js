@@ -144,18 +144,24 @@ function getFontClass(topic) {
 function ajouteTheme(theme) {
     themeSelected.push(theme);
     let ancienStorage = window.localStorage.getItem("themes");
-    let nvxStorage = ancienStorage+","+theme;
+    let nvxStorage;
+
+    if(ancienStorage) {
+        nvxStorage = ancienStorage + "," + theme;
+    } else {
+        nvxStorage = theme;
+    }
+
     window.localStorage.setItem("themes", nvxStorage);
 }
 
 function supprimeTheme(theme) {
     themeSelected.splice(themeSelected.indexOf(theme), 1);
     let ancienStorage = window.localStorage.getItem("themes");
-    let StorageFiltre = ancienStorage.split(",");
+    let storageFiltre = ancienStorage.split(",");
     let nvxStorage;
-    StorageFiltre.forEach( (t) =>{
+    storageFiltre.forEach( (t) =>{
         if(t !== theme){
-            console.log(theme);
             if (nvxStorage === undefined){
                 nvxStorage = t;
             }else {
@@ -442,15 +448,29 @@ async function onCheck(evnt) {
     let themeString = themeLi.querySelector('img');
     themeString = themeString.getAttribute('alt');
 
+    let themeSelected = window.localStorage.getItem('themes');
+    themeSelected = themeSelected.split(',');
+
+    console.log("themeSelected :", themeSelected);
+
     if (themeLi.classList.contains("unchecked")) {
         themeLi.classList.remove("unchecked");
         ajouteTheme(themeString);
+        await chercheEtAjouteProfilsCarousel(themeSelected, true);
     } else {
-        themeLi.classList.add("unchecked");
-        supprimeTheme(themeString);
+        if (themeSelected.length === 1) {
+            const modal =  document.querySelector('#modal');
+            const modalClose = document.querySelector('#modal-close');
+            modal.style.display = 'block';
+            modalClose.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+        } else {
+            themeLi.classList.add("unchecked");
+            supprimeTheme(themeString);
+            await chercheEtAjouteProfilsCarousel(themeSelected, true);
+        }
     }
-
-    await chercheEtAjouteProfilsCarousel(themeSelected, true);
 }
 
 swiperSection.addEventListener('click', function (event) {
@@ -516,11 +536,22 @@ document.addEventListener("DOMContentLoaded", async function () {
     let themeSelected = window.localStorage.getItem('themes');
     themeSelected = themeSelected ? themeSelected.split(',') : [];
 
+    if(themeSelected.length === 0) { // Cas ou aucun thème selection (normalement impossible dans une navigation normale)
+        themesCheckboxes.forEach(tc => {
+                const img = tc.querySelector('img');
+                const themeName = img.getAttribute('alt');
+                ajouteTheme(themeName);
+            }
+        );
+    }
+
     // Listener de click pour chaque filtre-theme
     themesCheckboxes.forEach(tc =>
         tc.addEventListener('click', onCheck)
     );
 
+    themeSelected = window.localStorage.getItem('themes');
+    console.log("window.localStorage.getItem('themes'); :", window.localStorage.getItem('themes'));
     themesCheckboxes.forEach(tc => {
             const img = tc.querySelector('img');
             const themeName = img.getAttribute('alt');
