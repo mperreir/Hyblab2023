@@ -102,3 +102,7 @@ function typewriter() {
     }
   }
 }
+function accueil(){
+  sessionStorage.clear()
+  location.href = "../index.html"
+}
