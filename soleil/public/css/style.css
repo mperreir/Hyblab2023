@@ -33,6 +33,18 @@ body{
     margin :auto
 }
 
+#contactChoice1 {
+    margin: 8px;
+}
+
+#contactChoice2 {
+    margin: 8px;
+}
+
+#contactChoice3 {
+    margin: 8px;
+}
+
 #imageLog{
     margin :auto;
     width: 100%;
