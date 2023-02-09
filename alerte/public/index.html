@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Hyblab 2023</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.17/paper-full.min.js"></script>
@@ -19,828 +19,889 @@
 </head>
 
 <body>
-<!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
-<div id="container">
-    <!-- Le loader-->
-    <section id="loader">
-        <div id="loader-img" class="ld ld-ring ld-cycle"></div>
-        <p id="loader-text">Veuillez patienter...</p>
-    </section>
-    <div id="app">
-        <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
-        <main class="accueil">
-            <section id="s0" class="slides">
-                <header>
-                    <h1 id="titre">Bienvenue sur</h1>
-                    <img src="img/illustrations/logos/logo-meuh.svg" id="logo_meuh" alt="l'usine à meuh"/>
-                </header>
-                <img src="img/illustrations/dessins/main.svg" id="content_main_img"
-                     alt="Contenu de la page principale"/>
-                <footer>
-                    <button id="next0" class="next-btn"></button> <!-- Boutton commencer -->
-                    <div id="networks">
-                        <div>
-                            <a href="https://www.facebook.com/disclose.ngo/" target="_blank"><img id="fb" src="./img/networks/fb.svg"/></a>
-                            <a href="https://twitter.com/disclose_ngo?lang=fr" target="_blank"><img id="twitter"
-                                                                                    src="./img/networks/twitter.svg"/></a>
-                            <a id="about-s0"><img id="about" src="./img/networks/about.svg"/></a>
-                        </div>
-                        <a href="https://www.disclose.ngo" target="_blank"><img id="disclose" src="./img/networks/disclose.svg"/></a>
-                    </div>
-                </footer>
-            </section>
-
-            <section id="s1" class="slides" style="display: none">
-                <header>
-                    <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh" alt="little-logo-meuh"/>
-                </header>
-                <img src="img/illustrations/dessins/cow-1.svg" id="content_main_img" alt="Illustration"/>
-                <section id="content_intro">
-                    <div class="bubble">
-                        <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
-                        <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    On y trouve des dizaines de milliers de poules, de vaches ou de cochons. En France,
-                                    9 départements sur 10 accueillent des fermes-usines : des exploitations agricoles
-                                    géantes qui font peser le risque de désastres écologiques sur tout le territoire.
-                                </div>
-                                <div class="swiper-slide">
-                                    « Ferme-usine » n’est pas un terme officiel. L’Etat les classe parmi les ICPE, les
-                                    Installations
-                                    classées pour la protection de l’environnement. C’est-à-dire qu’elles sont, au même
-                                    titre que
-                                    d’autres
-                                    industries, susceptibles de polluer l’environnement et de nuire à la santé des
-                                    riverains.
-                                </div>
-                                <div class="swiper-slide">
-                                    Les fermes-usines sont plus proches de chez vous que vous ne l’imaginez.
-                                    Découvrez-les grâce à notre
-                                    mini-jeu, connecté aux données du ministère de la Transition écologique. Et poussez
-                                    la porte de ces
-                                    usines à animaux souvent privés de lumière du jour.
-                                    <button id="next1" class="next-btn"></button>
-                                    <!-- Boutton commencer -->
-                                </div>
+    <!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
+    <div id="container">
+        <!-- Le loader-->
+        <section id="loader">
+            <div id="loader-img" class="ld ld-ring ld-cycle"></div>
+            <p id="loader-text">Veuillez patienter...</p>
+        </section>
+        <div id="app">
+            <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
+            <main class="accueil">
+                <section id="s0" class="slides">
+                    <header>
+                        <h1 id="titre">Bienvenue sur</h1>
+                        <img src="img/illustrations/logos/logo-meuh.svg" id="logo_meuh" alt="l'usine à meuh" />
+                    </header>
+                    <img src="img/illustrations/dessins/main.svg" id="content_main_img"
+                        alt="Contenu de la page principale" />
+                    <footer>
+                        <button id="next0" class="next-btn"></button> <!-- Boutton commencer -->
+                        <div id="networks">
+                            <div>
+                                <a href="https://www.facebook.com/disclose.ngo/" target="_blank"><img id="fb"
+                                        src="./img/networks/fb.svg" /></a>
+                                <a href="https://twitter.com/disclose_ngo?lang=fr" target="_blank"><img id="twitter"
+                                        src="./img/networks/twitter.svg" /></a>
+                                <a id="about-s0"><img id="about" src="./img/networks/about.svg" /></a>
                             </div>
-                            <!-- Add pagination -->
-                            <div class="swiper-pagination"></div>
+                            <a href="https://www.disclose.ngo" target="_blank"><img id="disclose"
+                                    src="./img/networks/disclose.svg" /></a>
                         </div>
-                    </div>
-                </section>
-            </section>
-
-            <section id="s3" class="slides" style="display: none">
-                <header>
-                    <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 0%"></div>
-                    </div>
-                    <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh" alt="little-logo-meuh"/>
-                </header>
-                <img src="img/illustrations/dessins/pigs-3.svg" alt="Courbe"/>
-                <div>
-                    <div class="little-bubble">
-                        <img src="img/illustrations/dessins/heads/head-open.svg">
-                        <img src="img/utils/bubbles/bubble-small-side.svg">
-                        <div class="content2">
-                            <p>
-                                La France comptait 68 millions d’habitants en 2023. Mais combien d’animaux d’élevage
-                                selon vous ?
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <section id="content_quizz">
-                    <div id="btnquizz">
-                        <button data-valid="false" class="btn3">100 millions</button>
-                        <button data-valid="false" class="btn3">150 millions</button>
-                        <button data-valid="false" class="btn3">200 millions</button>
-                        <button data-valid="true" class="btn3">250 millions</button>
-                    </div>
-                </section>
-            </section>
-
-            <section id="s4_1" class="slides" style="display: none">
-                <header>
-                    <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 8%"></div>
-                    </div>
-                    <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh"
-                         alt="little-logo-meuh"/>
-                </header>
-                <img src="img/illustrations/dessins/cow-wrong.svg" id="vache_4_1" alt="Illustration"/>
-                <section id="content_quizz">
-                    <div class="bubble" style="font-size: 14px">
-                        <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
-                        <div class="content">
-                            <h2>Dommage !</h2>
-                            <p>
-                                Rien que pour la volaille, en 2021, le ministère de l’Agriculture recensait plus de 200
-                                millions de poulets, coqs et autres poules pondeuses. Les animaux d’élevage sont de plus
-                                en plus concentrés dans une poignée de fermes géantes. Par exemple, dans le cas de la
-                                volaille comestible : la même année, un tiers des exploitations rassemblait les deux
-                                tiers de ces oiseaux.
-                            </p>
-                            <button id="next4_1" class="next-btn" style="height: 50px; width: 100%"></button>
-                            <!-- Passer à la question suivante-->
-                        </div>
-                    </div>
-                </section>
-            </section>
-
-            <section id="s4_2" class="slides slidesWhite" style="display: none">
-                <header>
-                    <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 8%"></div>
-                    </div>
-                    <img src="img/illustrations/logos/logo-small-inv.svg" class="little-logo-meuh"
-                         alt="little-logo-meuh"/>
-                </header>
-                <img src="img/illustrations/dessins/cow-right.svg" id="content_main_img" alt="vache dans un pré"/>
-                <section id="content_quizz">
-                    <div class="bubble bubbleWhite" style="font-size: 14px">
-                        <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle"/>
-                        <div class="content">
-                            <h2>Bravo !</h2>
-                            <p>
-                                Rien que pour la volaille, en 2021, le ministère de l’Agriculture recensait plus de 200
-                                millions de poulets, coqs et autres poules pondeuses. Les animaux d’élevage sont de plus
-                                en plus concentrés dans une poignée de fermes géantes. Par exemple, dans le cas de la
-                                volaille comestible : la même année, un tiers des exploitations rassemblait les deux
-                                tiers de ces oiseaux.
-                            </p>
-                            <button id="next4_2" class="next-btn" style="height: 50px; width: 100%"></button>
-                            <!-- Passer à la question suivante-->
-                        </div>
-                    </div>
-                </section>
-            </section>
-
-            <section id="s5" class="slides" style="display: none">
-                <header>
-                    <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 16%"></div>
-                    </div>
-                    <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh" alt="little-logo-meuh"/>
-                </header>
-                <img src="img/illustrations/dessins/graph-5.svg" alt="Courbe"/>
-                <div>
-                    <div class="little-bubble" style="font-size: 11px">
-                        <img src="img/illustrations/dessins/heads/head-open.svg">
-                        <img src="img/utils/bubbles/bubble-small-side.svg">
-                        <div class="content2">
-                            <p>
-                                D’ailleurs, quelle est l’évolution du nombre d’exploitations en France métropolitaine
-                                depuis 1970 ?
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <canvas id="canvas"></canvas>
-            </section>
-
-            <section id="s6" class="slides" style="display: none">
-                <header>
-                    <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 24%"></div>
-                    </div>
-                    <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh"
-                         alt="little-logo-meuh"/>
-                </header>
-                <img src="img/illustrations/dessins/cow-6.svg" id="vache_6" alt="Illustration"/>
-                <section id="content_quizz">
-                    <div class="bubble" style="font-size: 12px">
-                        <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
-                        <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                                <div id="repS6" class="swiper-slide">
-                                    <h2>Dommage !</h2>
-                                    <canvas id="myChart"></canvas>
-                                </div>
-                                <div class="swiper-slide">
-                                    Entre 1970 et 2020, le nombre d’exploitations agricoles a été divisé par quatre. Et
-                                    la tendance s’accélère : rien que sur les dix dernières années, c’est une ferme sur
-                                    cinq qui a disparu. Cette baisse est particulièrement importante si l’on se
-                                    concentre sur l’élevage, avec 30 % d’exploitations en moins depuis 2010. En
-                                    conséquence, le cheptel (nombre d’animaux) moyen par exploitations augmente : en
-                                    2021, un élevage bovin compte 118 animaux en moyenne, contre 94 en 2011
-                                    <!-- Passer à la question suivante-->
-                                    <button id="next6" class="next-btn" style="height: 50px; width: 100%"></button>
-                                </div>
-                            </div>
-                            <!-- Add pagination -->
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-                </section>
-            </section>
-
-            <section id="s7" class="slides" style="display: none">
-                <img src="img/illustrations/dessins/map-7.svg">
-                <div>
-                    <div class="little-bubble">
-                        <img src="img/illustrations/dessins/heads/head-open.svg">
-                        <img src="img/utils/bubbles/bubble-small-side.svg">
-                        <div class="content2">
-                            <p>
-                                Et maintenant, découvrons les fermes-usines du département de votre choix. Tapez son
-                                code dans la barre de recherche.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <label id="labelDep">Saisissez le numéro de votre département</label>
-                </div>
-                <div>
-                    <input id="dep" type="number" required autofocus>
-                </div>
-                <button id="next7" class="next-btn" style="height: 50px; width: 100%"></button>
-            </section>
-
-            <section id="s8" class="slides" style="display: none">
-                <header>
-                    <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 40%"></div>
-                    </div>
-                    <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh" alt="little-logo-meuh"/>
-                </header>
-                <img src="img/illustrations/dessins/field-8.svg" alt="Courbe"/>
-                <div>
-                    <div class="little-bubble">
-                        <img src="img/illustrations/dessins/heads/head-open.svg">
-                        <img src="img/utils/bubbles/bubble-small-side.svg">
-                        <div class="content2">
-                            <p>
-                                À votre avis, quel élevage est le plus présent parmi les fermes-usines de votre
-                                département ?
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <section id="content_quizz">
-                    <div id="btnquizz">
-                        <div data-value="PORCS" class="btn8">
-                            <img src="img/illustrations/dessins/pig-8.svg">
-                            <p>
-                                Porcins
-                            </p>
-                        </div>
-                        <div data-value="BOVINS" class="btn8">
-                            <img src="img/illustrations/dessins/cow-8.svg">
-                            <p>
-                                Bovins
-                            </p>
-                        </div>
-                        <div data-value="VOLAILLES" class="btn8">
-                            <img src="img/illustrations/dessins/chicken-8.svg">
-                            <p>
-                                Volailles
-                            </p>
-                        </div>
-                        <div data-value="MOUTONS" class="btn8">
-                            <img src="img/illustrations/dessins/sheep-8.svg">
-                            <p>
-                                Moutons
-                            </p>
-                        </div>
-                    </div>
+                    </footer>
                 </section>
 
-            </section>
-
-            <section id="s9_1" class="slides" style="display: none">
-                <header>
-                    <div>
+                <section id="s1" class="slides" style="display: none">
+                    <header>
                         <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh"
-                             alt="little-logo-meuh"/>
-                    </div>
-                    <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 48%"></div>
-                    </div>
-                </header>
-                <img src="img/illustrations/dessins/cow-wrong.svg" id="vache_4_1" alt="Illustration"/>
-                <section id="content_quizz">
-                    <div class="bubble" style="font-size: 17px">
-                        <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
-                        <div class="content">
-                            <h4 class="h4_wrong"></h4>
-                            <h2>Dommage !</h2>
-                            <p class="text9">
-                                Erreur
-                            </p>
-                            <button id="next9_1" class="next-btn" style="height: 50px; width: 100%"></button>
-                            <!-- Passer à la question suivante-->
-                        </div>
-                    </div>
-                </section>
-            </section>
-
-            <section id="s9_2" class="slides slidesWhite" style="display: none">
-                <header>
-                    <div>
-                        <img src="img/illustrations/logos/logo-small-inv.svg" class="little-logo-meuh"
-                             alt="little-logo-meuh"/>
-                    </div>
-                    <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 48%"></div>
-                    </div>
-                </header>
-                <img src="img/illustrations/dessins/cow-right.svg" id="content_main_img" alt="vache dans un pré"/>
-                <section id="content_quizz">
-                    <div class="bubble bubbleWhite" style="font-size: 17px">
-                        <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle"/>
-                        <div class="content">
-                            <h4 class="h4_right"></h4>
-                            <h2>Bravo !</h2>
-                            <p class="text9">
-                                Erreur
-                            </p>
-                            <button id="next9_2" class="next-btn" style="height: 50px; width: 100%"></button>
-                            <!-- Passer à la question suivante-->
-                        </div>
-                    </div>
-                </section>
-            </section>
-
-            <section id="s10" class="slides" style="display: none">
-                <header>
-                    <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 56%"></div>
-                    </div>
-                    <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh" alt="little-logo-meuh"/>
-                </header>
-                <img src="img/illustrations/dessins/pigs-10.svg" alt="Illustration"/>
-                <div>
-                    <div class="little-bubble">
-                        <img src="img/illustrations/dessins/heads/head-open.svg">
-                        <img src="img/utils/bubbles/bubble-small-side.svg">
-                        <div class="content2">
-                            <p>
-                                Combien d’animaux sont présents dans la plus grande ferme-usine de votre département ?
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="slidercontainer">
-                    <div id="slider-val">
-                        <p>0</p>
-                        <span id="demo"></span>
-                    </div>
-                    <input type="range" step="5000" min="0" max="100000" value="0" class="slider" id="myRange">
-                </div>
-                <button id="next10" class="next-btn" style="height: 50px; width: 100%"></button>
-            </section>
-
-            <section id="s11_1" class="slides" style="display: none">
-                <header>
-                    <div>
-                        <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh"
-                             alt="little-logo-meuh"/>
-                    </div>
-                    <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 64%"></div>
-                    </div>
-                </header>
-                <img src="img/illustrations/dessins/cow-wrong.svg" id="vache_4_1" alt="Illustration"/>
-                <section id="content_quizz">
-                    <div class="bubble">
-                        <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
-                        <div class="content">
-                            <h4 class="h4_wrong"></h4>
-                            <h2>Dommage !</h2>
-                            <p class="text11">
-                                Erreur
-                            </p>
-                            <button id="next11_1" class="next-btn" style="height: 50px; width: 100%"></button>
-                            <!-- Passer à la question suivante-->
-                        </div>
-                    </div>
-                </section>
-            </section>
-
-            <section id="s11_2" class="slides slidesWhite" style="display: none">
-                <header>
-                    <div>
-                        <img src="img/illustrations/logos/logo-small-inv.svg" class="little-logo-meuh"
-                             alt="little-logo-meuh"/>
-                    </div>
-                    <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 64%"></div>
-                    </div>
-                </header>
-                <img src="img/illustrations/dessins/cow-right.svg" id="content_main_img" alt="vache dans un pré"/>
-                <section id="content_quizz">
-                    <div class="bubble bubbleWhite">
-                        <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle"/>
-                        <div class="content">
-                            <h4 class="h4_right"></h4>
-                            <h2>Bravo !</h2>
-                            <p class="text11">
-                                Erreur
-                            </p>
-                            <button id="next11_2" class="next-btn" style="height: 50px; width: 100%"></button>
-                            <!-- Passer à la question suivante-->
-                        </div>
-                    </div>
-                </section>
-            </section>
-
-            <section id="s12" class="slides" style="display: none">
-                <header>
-                    <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 72%"></div>
-                    </div>
-                    <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh" alt="little-logo-meuh"/>
-                </header>
-                <img src="img/illustrations/dessins/12.svg" alt="Courbe"/>
-                <div>
-                    <div class="little-bubble">
-                        <img src="img/illustrations/dessins/heads/head-open.svg">
-                        <img src="img/utils/bubbles/bubble-small-side.svg">
-                        <div class="content2">
-                            <p>
-                                Dans votre département, combien de fermes-usines rejettent massivement de l’ammoniac
-                                dans l’air ?
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <section id="content_quizz">
-                    <div id="btnquizz">
-                        <button data-value="0" class="btn12">Entre 0 et 10</button>
-                        <button data-value="1" class="btn12">Entre 11 et 50</button>
-                        <button data-value="2" class="btn12">Entre 51 et 100</button>
-                        <button data-value="3" class="btn12">Plus de 100</button>
-                    </div>
-                </section>
-            </section>
-
-            <section id="s13_1" class="slides" style="display: none">
-                <header>
-                    <div>
-                        <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh"
-                             alt="little-logo-meuh"/>
-                    </div>
-                    <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 80%"></div>
-                    </div>
-                </header>
-                <img src="img/illustrations/dessins/cow-wrong.svg" id="vache_4_1" alt="Illustration"/>
-                <section id="content_quizz">
-                    <div class="bubble" style="font-size: 14px">
-                        <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
-                        <div class="content">
+                            alt="little-logo-meuh" />
+                    </header>
+                    <img src="img/illustrations/dessins/cow-1.svg" id="content_main_img" alt="Illustration" />
+                    <section id="content_intro">
+                        <div class="bubble">
+                            <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle" />
                             <div class="swiper-container">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <h4 class="h4_wrong"></h4>
-                                        <h2>Dommage !</h2>
-                                        <p class="text13">
-                                            L’ammoniac est un gaz qui se dégage massivement des déjections d’animaux ainsi que des
-                                            engrais. Sa présence dans l’air provoque la formation de particules fines, responsables
-                                            de maladies cardio-vasculaires et respiratoires. Dans votre département, il y a [Entrer
-                                            un chiffre] fermes-usines qui ont émis plus de 10 tonnes d’ammoniac en 2021.
-
-                                        </p>
+                                        On y trouve des dizaines de milliers de poules, de vaches ou de cochons. En
+                                        France,
+                                        9 départements sur 10 accueillent des fermes-usines : des exploitations
+                                        agricoles
+                                        géantes qui font peser le risque de désastres écologiques sur tout le
+                                        territoire.
                                     </div>
                                     <div class="swiper-slide">
-                                        <p class="text13">
-                                            Mais
-                                            attention, seuls les élevages les plus importants de porcs et de volailles doivent
-                                            déclarer ces rejets. Les élevages de bovins n’ont pas d’obligation à le faire par
-                                            exemple, ni les exploitations qui en rejetteraient moins de 10 tonnes. Et il ne faut pas
-                                            non plus oublier les autres industries polluantes.
-                                        </p>
-                                        <button id="next13_1" class="next-btn" style="height: 50px; width: 100%"></button>
+                                        « Ferme-usine » n’est pas un terme officiel. L’Etat les classe parmi les ICPE,
+                                        les
+                                        Installations
+                                        classées pour la protection de l’environnement. C’est-à-dire qu’elles sont, au
+                                        même
+                                        titre que
+                                        d’autres
+                                        industries, susceptibles de polluer l’environnement et de nuire à la santé des
+                                        riverains.
+                                    </div>
+                                    <div class="swiper-slide">
+                                        Les fermes-usines sont plus proches de chez vous que vous ne l’imaginez.
+                                        Découvrez-les grâce à notre
+                                        mini-jeu, connecté aux données du ministère de la Transition écologique. Et
+                                        poussez
+                                        la porte de ces
+                                        usines à animaux souvent privés de lumière du jour.
+                                        <button id="next1" class="next-btn"></button>
+                                        <!-- Boutton commencer -->
                                     </div>
                                 </div>
                                 <!-- Add pagination -->
                                 <div class="swiper-pagination"></div>
                             </div>
-                            <!-- Passer à la question suivante-->
+                        </div>
+                    </section>
+                </section>
+
+                <section id="s3" class="slides" style="display: none">
+                    <header>
+                        <div id="myProgress" class="fixed-top">
+                            <div id="myBar" style="width: 0%"></div>
+                        </div>
+                        <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh"
+                            alt="little-logo-meuh" />
+                    </header>
+                    <img src="img/illustrations/dessins/pigs-3.svg" alt="Courbe" />
+                    <div>
+                        <div class="little-bubble">
+                            <img src="img/illustrations/dessins/heads/head-open.svg">
+                            <img src="img/utils/bubbles/bubble-small-side.svg">
+                            <div class="content2">
+                                <p>
+                                    La France comptait 68 millions d’habitants en 2023. Mais combien d’animaux d’élevage
+                                    selon vous ?
+                                </p>
+                            </div>
                         </div>
                     </div>
+                    <section id="content_quizz">
+                        <div id="btnquizz">
+                            <button data-valid="false" class="btn3">100 millions</button>
+                            <button data-valid="false" class="btn3">150 millions</button>
+                            <button data-valid="false" class="btn3">200 millions</button>
+                            <button data-valid="true" class="btn3">250 millions</button>
+                        </div>
+                    </section>
                 </section>
-            </section>
 
-            <section id="s13_2" class="slides slidesWhite" style="display: none">
-                <header>
-                    <div>
+                <section id="s4_1" class="slides" style="display: none">
+                    <header>
+                        <div id="myProgress" class="fixed-top">
+                            <div id="myBar" style="width: 8%"></div>
+                        </div>
+                        <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh"
+                            alt="little-logo-meuh" />
+                    </header>
+                    <img src="img/illustrations/dessins/cow-wrong.svg" id="vache_4_1" alt="Illustration" />
+                    <section id="content_quizz">
+                        <div class="bubble" style="font-size: 14px">
+                            <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle" />
+                            <div class="content">
+                                <h2>Dommage !</h2>
+                                <p>
+                                    Rien que pour la volaille, en 2021, le ministère de l’Agriculture recensait plus de
+                                    200
+                                    millions de poulets, coqs et autres poules pondeuses. Les animaux d’élevage sont de
+                                    plus
+                                    en plus concentrés dans une poignée de fermes géantes. Par exemple, dans le cas de
+                                    la
+                                    volaille comestible : la même année, un tiers des exploitations rassemblait les deux
+                                    tiers de ces oiseaux.
+                                </p>
+                                <button id="next4_1" class="next-btn" style="height: 50px; width: 100%"></button>
+                                <!-- Passer à la question suivante-->
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <section id="s4_2" class="slides slidesWhite" style="display: none">
+                    <header>
+                        <div id="myProgress" class="fixed-top">
+                            <div id="myBar" style="width: 8%"></div>
+                        </div>
                         <img src="img/illustrations/logos/logo-small-inv.svg" class="little-logo-meuh"
-                             alt="little-logo-meuh"/>
+                            alt="little-logo-meuh" />
+                    </header>
+                    <img src="img/illustrations/dessins/cow-right.svg" id="content_main_img" alt="vache dans un pré" />
+                    <section id="content_quizz">
+                        <div class="bubble bubbleWhite" style="font-size: 14px">
+                            <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle" />
+                            <div class="content">
+                                <h2>Bravo !</h2>
+                                <p>
+                                    Rien que pour la volaille, en 2021, le ministère de l’Agriculture recensait plus de
+                                    200
+                                    millions de poulets, coqs et autres poules pondeuses. Les animaux d’élevage sont de
+                                    plus
+                                    en plus concentrés dans une poignée de fermes géantes. Par exemple, dans le cas de
+                                    la
+                                    volaille comestible : la même année, un tiers des exploitations rassemblait les deux
+                                    tiers de ces oiseaux.
+                                </p>
+                                <button id="next4_2" class="next-btn" style="height: 50px; width: 100%"></button>
+                                <!-- Passer à la question suivante-->
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <section id="s5" class="slides" style="display: none">
+                    <header>
+                        <div id="myProgress" class="fixed-top">
+                            <div id="myBar" style="width: 16%"></div>
+                        </div>
+                        <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh"
+                            alt="little-logo-meuh" />
+                    </header>
+                    <img src="img/illustrations/dessins/graph-5.svg" alt="Courbe" />
+                    <div>
+                        <div class="little-bubble" style="font-size: 11px">
+                            <img src="img/illustrations/dessins/heads/head-open.svg">
+                            <img src="img/utils/bubbles/bubble-small-side.svg">
+                            <div class="content2">
+                                <p>
+                                    D’ailleurs, quelle est l’évolution du nombre d’exploitations en France
+                                    métropolitaine
+                                    depuis 1970 ?
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 80%"></div>
-                    </div>
-                </header>
-                <img src="img/illustrations/dessins/cow-right.svg" id="content_main_img" alt="vache dans un pré"/>
-                <section id="content_quizz">
-                    <div class="bubble bubbleWhite" style="font-size: 14px">
-                        <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle"/>
-                        <div class="content">
+                    <canvas id="canvas"></canvas>
+                </section>
+
+                <section id="s6" class="slides" style="display: none">
+                    <header>
+                        <div id="myProgress" class="fixed-top">
+                            <div id="myBar" style="width: 24%"></div>
+                        </div>
+                        <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh"
+                            alt="little-logo-meuh" />
+                    </header>
+                    <img src="img/illustrations/dessins/cow-6.svg" id="vache_6" alt="Illustration" />
+                    <section id="content_quizz">
+                        <div class="bubble" style="font-size: 12px">
+                            <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle" />
                             <div class="swiper-container">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <h4 class="h4_right"></h4>
-                                        <h2>Bravo !</h2>
-                                        <p class="text13">
-                                            L’ammoniac est un gaz qui se dégage massivement des déjections d’animaux ainsi que des
-                                            engrais. Sa présence dans l’air provoque la formation de particules fines, responsables
-                                            de maladies cardio-vasculaires et respiratoires. Dans votre département, il y a [Entrer
-                                            un chiffre] fermes-usines qui ont émis plus de 10 tonnes d’ammoniac en 2021.
-
-                                        </p>
+                                    <div id="repS6" class="swiper-slide">
+                                        <h3>Le nombre d'exploitations agricoles en chute libre depuis 1970</h3>
+                                        <canvas id="myChart"></canvas>
                                     </div>
                                     <div class="swiper-slide">
-                                        <p class="text13">
-                                            Mais
-                                            attention, seuls les élevages les plus importants de porcs et de volailles doivent
-                                            déclarer ces rejets. Les élevages de bovins n’ont pas d’obligation à le faire par
-                                            exemple, ni les exploitations qui en rejetteraient moins de 10 tonnes. Et il ne faut pas
-                                            non plus oublier les autres industries polluantes.
-                                        </p>
-                                        <button id="next13_2" class="next-btn" style="height: 50px; width: 100%"></button>
+                                        Entre 1970 et 2020, le nombre d’exploitations agricoles a été divisé par quatre.
+                                        Et
+                                        la tendance s’accélère : rien que sur les dix dernières années, c’est une ferme
+                                        sur
+                                        cinq qui a disparu. Cette baisse est particulièrement importante si l’on se
+                                        concentre sur l’élevage, avec 30 % d’exploitations en moins depuis 2010. En
+                                        conséquence, le cheptel (nombre d’animaux) moyen par exploitations augmente : en
+                                        2021, un élevage bovin compte 118 animaux en moyenne, contre 94 en 2011
+                                        <!-- Passer à la question suivante-->
+                                        <button id="next6" class="next-btn" style="height: 50px; width: 100%"></button>
                                     </div>
                                 </div>
                                 <!-- Add pagination -->
                                 <div class="swiper-pagination"></div>
                             </div>
-                            <!-- Passer à la question suivante-->
                         </div>
-                    </div>
+                    </section>
                 </section>
-            </section>
 
-            <section id="s14" class="slides" style="display: none">
-                <header>
-                    <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 88%"></div>
-                    </div>
-                    <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh" alt="little-logo-meuh"/>
-                </header>
-                <img src="img/illustrations/dessins/14.svg" alt="Illustration"/>
-                <div>
-                    <div class="little-bubble">
-                        <img src="img/illustrations/dessins/heads/head-open.svg">
-                        <img src="img/utils/bubbles/bubble-small-side.svg">
-                        <div class="content2">
-                            <p>
-                                Combien de mises en demeure ont été prononcées à l’encontre des fermes-usines de votre
-                                département ?
-                            </p>
+                <section id="s7" class="slides" style="display: none">
+                    <img src="img/illustrations/dessins/map-7.svg">
+                    <div>
+                        <div class="little-bubble">
+                            <img src="img/illustrations/dessins/heads/head-open.svg">
+                            <img src="img/utils/bubbles/bubble-small-side.svg">
+                            <div class="content2">
+                                <p>
+                                    Et maintenant, découvrons les fermes-usines du département de votre choix. Tapez son
+                                    code dans la barre de recherche.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="slidercontainer">
-                    <div id="slider-val">
-                        <p>0</p>
-                        <span id="demo14"></span>
-                    </div>
-                    <input type="range" min="0" max="40" value="0" class="slider" id="myRange14">
-                </div>
-                <button id="next14" class="next-btn" style="height: 50px; width: 100%"></button>
-            </section>
-
-            <section id="s15_1" class="slides" style="display: none">
-                <header>
                     <div>
+                        <label id="labelDep">Saisissez le numéro de votre département</label>
+                    </div>
+                    <div>
+                        <input id="dep" type="number" required autofocus>
+                    </div>
+                    <button id="next7" class="next-btn" style="height: 50px; width: 100%"></button>
+                </section>
+
+                <section id="s8" class="slides" style="display: none">
+                    <header>
+                        <div id="myProgress" class="fixed-top">
+                            <div id="myBar" style="width: 40%"></div>
+                        </div>
                         <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh"
-                             alt="little-logo-meuh"/>
-                    </div>
-                    <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 96%"></div>
-                    </div>
-                </header>
-                <img src="img/illustrations/dessins/cow-wrong.svg" id="vache_4_1" alt="Illustration"/>
-                <section id="content_quizz">
-                    <div class="bubble">
-                        <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
-                        <div class="content">
-                            <h4 class="h4_wrong"></h4>
-                            <h2>Dommage !</h2>
-                            <p class="text15">
-                                Mais bonne nouvelle, les fermes-usines de votre département sont visiblement aux normes.
-                                L’évolution de ce chiffre peut être surveillée grâce à la base de données Géorisques du
-                                ministère de la Transition écologique et de la cohésion des territoires. Disclose vous
-                                explique comment faire dans son Guide du lanceur d’enquêtes.
-                            </p>
-                            <button id="next15_1" class="next-btn" style="height: 50px; width: 100%"></button>
-                            <!-- Passer à la question suivante-->
-                        </div>
-                    </div>
-                </section>
-            </section>
-
-            <section id="s15_2" class="slides slidesWhite" style="display: none">
-                <header>
+                            alt="little-logo-meuh" />
+                    </header>
+                    <img src="img/illustrations/dessins/field-8.svg" alt="Courbe" />
                     <div>
-                        <img src="img/illustrations/logos/logo-small-inv.svg" class="little-logo-meuh"
-                             alt="little-logo-meuh"/>
-                    </div>
-                    <div id="myProgress" class="fixed-top">
-                        <div id="myBar" style="width: 96%"></div>
-                    </div>
-                </header>
-                <img src="img/illustrations/dessins/cow-right.svg" id="content_main_img" alt="vache dans un pré"/>
-                <section id="content_quizz">
-                    <div class="bubble bubbleWhite">
-                        <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle"/>
-                        <div class="content">
-                            <h4 class="h4_right"></h4>
-                            <h2>Bravo !</h2>
-                            <p class="text15">
-                                Bonne nouvelle, les fermes-usines de votre département sont visiblement aux normes.
-                                L’évolution de ce chiffre peut être surveillée grâce à la base de données Géorisques du
-                                ministère de la Transition écologique et de la cohésion des territoires. Disclose vous
-                                explique comment faire dans son Guide du lanceur d’enquêtes.
-                            </p>
-                            <button id="next15_2" class="next-btn" style="height: 50px; width: 100%"></button>
-                            <!-- Passer à la question suivante-->
+                        <div class="little-bubble">
+                            <img src="img/illustrations/dessins/heads/head-open.svg">
+                            <img src="img/utils/bubbles/bubble-small-side.svg">
+                            <div class="content2">
+                                <p>
+                                    À votre avis, quel élevage est le plus présent parmi les fermes-usines de votre
+                                    département ?
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </section>
-            </section>
+                    <section id="content_quizz">
+                        <div id="btnquizz">
+                            <div data-value="PORCS" class="btn8">
+                                <img src="img/illustrations/dessins/pig-8.svg">
+                                <p>
+                                    Porcins
+                                </p>
+                            </div>
+                            <div data-value="BOVINS" class="btn8">
+                                <img src="img/illustrations/dessins/cow-8.svg">
+                                <p>
+                                    Bovins
+                                </p>
+                            </div>
+                            <div data-value="VOLAILLES" class="btn8">
+                                <img src="img/illustrations/dessins/chicken-8.svg">
+                                <p>
+                                    Volailles
+                                </p>
+                            </div>
+                            <div data-value="MOUTONS" class="btn8">
+                                <img src="img/illustrations/dessins/sheep-8.svg">
+                                <p>
+                                    Moutons
+                                </p>
+                            </div>
+                        </div>
+                    </section>
 
-            <section id="s16" class="slides slidesWhite" style="display: none">
-                <header>
+                </section>
+
+                <section id="s9_1" class="slides" style="display: none">
+                    <header>
+                        <div>
+                            <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh"
+                                alt="little-logo-meuh" />
+                        </div>
+                        <div id="myProgress" class="fixed-top">
+                            <div id="myBar" style="width: 48%"></div>
+                        </div>
+                    </header>
+                    <img src="img/illustrations/dessins/cow-wrong.svg" id="vache_4_1" alt="Illustration" />
+                    <section id="content_quizz">
+                        <div class="bubble" style="font-size: 17px">
+                            <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle" />
+                            <div class="content">
+                                <h4 class="h4_wrong"></h4>
+                                <h2>Dommage !</h2>
+                                <p class="text9">
+                                    Erreur
+                                </p>
+                                <button id="next9_1" class="next-btn" style="height: 50px; width: 100%"></button>
+                                <!-- Passer à la question suivante-->
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <section id="s9_2" class="slides slidesWhite" style="display: none">
+                    <header>
+                        <div>
+                            <img src="img/illustrations/logos/logo-small-inv.svg" class="little-logo-meuh"
+                                alt="little-logo-meuh" />
+                        </div>
+                        <div id="myProgress" class="fixed-top">
+                            <div id="myBar" style="width: 48%"></div>
+                        </div>
+                    </header>
+                    <img src="img/illustrations/dessins/cow-right.svg" id="content_main_img" alt="vache dans un pré" />
+                    <section id="content_quizz">
+                        <div class="bubble bubbleWhite" style="font-size: 17px">
+                            <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle" />
+                            <div class="content">
+                                <h4 class="h4_right"></h4>
+                                <h2>Bravo !</h2>
+                                <p class="text9">
+                                    Erreur
+                                </p>
+                                <button id="next9_2" class="next-btn" style="height: 50px; width: 100%"></button>
+                                <!-- Passer à la question suivante-->
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <section id="s10" class="slides" style="display: none">
+                    <header>
+                        <div id="myProgress" class="fixed-top">
+                            <div id="myBar" style="width: 56%"></div>
+                        </div>
+                        <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh"
+                            alt="little-logo-meuh" />
+                    </header>
+                    <img src="img/illustrations/dessins/pigs-10.svg" alt="Illustration" />
                     <div>
-                        <img src="img/illustrations/logos/logo-small-inv.svg" class="little-logo-meuh"
-                             alt="little-logo-meuh"/>
-                    </div>
-                </header>
-                <img src="img/illustrations/dessins/podium-16.svg" id="content_main_img" alt="vache dans un pré"/>
-                <section id="content_quizz">
-                    <div class="bubble bubbleWhite">
-                        <img src="img/utils/bubbles/bubble-results-inv.svg" id="bulle" alt="bulle"/>
-                        <div class="content">
-                            <h2>Bravo !</h2>
-                            <p class="text16">
-                                Excellent, vous savez déjà tout. Si vous voulez continuer de surveiller avec nous les
-                                fermes-usines, entre autres industries, près de chez vous, consultez le Guide du lanceur
-                                d’enquêtes, préparé tout spécialement par Disclose
-                            </p>
+                        <div class="little-bubble">
+                            <img src="img/illustrations/dessins/heads/head-open.svg">
+                            <img src="img/utils/bubbles/bubble-small-side.svg">
+                            <div class="content2">
+                                <p>
+                                    Combien d’animaux sont présents dans la plus grande ferme-usine de votre département
+                                    ?
+                                </p>
+                            </div>
                         </div>
+                    </div>
+                    <div class="slidercontainer">
+                        <div id="slider-val">
+                            <p>0</p>
+                            <span id="demo"></span>
+                        </div>
+                        <input type="range" step="5000" min="0" max="100000" value="0" class="slider" id="myRange">
+                    </div>
+                    <button id="next10" class="next-btn" style="height: 50px; width: 100%"></button>
+                </section>
+
+                <section id="s11_1" class="slides" style="display: none">
+                    <header>
+                        <div>
+                            <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh"
+                                alt="little-logo-meuh" />
+                        </div>
+                        <div id="myProgress" class="fixed-top">
+                            <div id="myBar" style="width: 64%"></div>
+                        </div>
+                    </header>
+                    <img src="img/illustrations/dessins/cow-wrong.svg" id="vache_4_1" alt="Illustration" />
+                    <section id="content_quizz">
+                        <div class="bubble">
+                            <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle" />
+                            <div class="content">
+                                <h4 class="h4_wrong"></h4>
+                                <h2>Dommage !</h2>
+                                <p class="text11">
+                                    Erreur
+                                </p>
+                                <button id="next11_1" class="next-btn" style="height: 50px; width: 100%"></button>
+                                <!-- Passer à la question suivante-->
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <section id="s11_2" class="slides slidesWhite" style="display: none">
+                    <header>
+                        <div>
+                            <img src="img/illustrations/logos/logo-small-inv.svg" class="little-logo-meuh"
+                                alt="little-logo-meuh" />
+                        </div>
+                        <div id="myProgress" class="fixed-top">
+                            <div id="myBar" style="width: 64%"></div>
+                        </div>
+                    </header>
+                    <img src="img/illustrations/dessins/cow-right.svg" id="content_main_img" alt="vache dans un pré" />
+                    <section id="content_quizz">
+                        <div class="bubble bubbleWhite">
+                            <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle" />
+                            <div class="content">
+                                <h4 class="h4_right"></h4>
+                                <h2>Bravo !</h2>
+                                <p class="text11">
+                                    Erreur
+                                </p>
+                                <button id="next11_2" class="next-btn" style="height: 50px; width: 100%"></button>
+                                <!-- Passer à la question suivante-->
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <section id="s12" class="slides" style="display: none">
+                    <header>
+                        <div id="myProgress" class="fixed-top">
+                            <div id="myBar" style="width: 72%"></div>
+                        </div>
+                        <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh"
+                            alt="little-logo-meuh" />
+                    </header>
+                    <img src="img/illustrations/dessins/12.svg" alt="Courbe" />
+                    <div>
+                        <div class="little-bubble">
+                            <img src="img/illustrations/dessins/heads/head-open.svg">
+                            <img src="img/utils/bubbles/bubble-small-side.svg">
+                            <div class="content2">
+                                <p>
+                                    Dans votre département, combien de fermes-usines rejettent massivement de l’ammoniac
+                                    dans l’air ?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <section id="content_quizz">
+                        <div id="btnquizz">
+                            <button data-value="0" class="btn12">Entre 0 et 10</button>
+                            <button data-value="1" class="btn12">Entre 11 et 50</button>
+                            <button data-value="2" class="btn12">Entre 51 et 100</button>
+                            <button data-value="3" class="btn12">Plus de 100</button>
+                        </div>
+                    </section>
+                </section>
+
+                <section id="s13_1" class="slides" style="display: none">
+                    <header>
+                        <div>
+                            <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh"
+                                alt="little-logo-meuh" />
+                        </div>
+                        <div id="myProgress" class="fixed-top">
+                            <div id="myBar" style="width: 80%"></div>
+                        </div>
+                    </header>
+                    <img src="img/illustrations/dessins/cow-wrong.svg" id="vache_4_1" alt="Illustration" />
+                    <section id="content_quizz">
+                        <div class="bubble" style="font-size: 14px">
+                            <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle" />
+                            <div class="content">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <h4 class="h4_wrong"></h4>
+                                            <h2>Dommage !</h2>
+                                            <p class="text13">
+                                                L’ammoniac est un gaz qui se dégage massivement des déjections d’animaux
+                                                ainsi que des
+                                                engrais. Sa présence dans l’air provoque la formation de particules
+                                                fines, responsables
+                                                de maladies cardio-vasculaires et respiratoires. Dans votre département,
+                                                il y a [Entrer
+                                                un chiffre] fermes-usines qui ont émis plus de 10 tonnes d’ammoniac en
+                                                2021.
+
+                                            </p>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <p class="text13">
+                                                Mais
+                                                attention, seuls les élevages les plus importants de porcs et de
+                                                volailles doivent
+                                                déclarer ces rejets. Les élevages de bovins n’ont pas d’obligation à le
+                                                faire par
+                                                exemple, ni les exploitations qui en rejetteraient moins de 10 tonnes.
+                                                Et il ne faut pas
+                                                non plus oublier les autres industries polluantes.
+                                            </p>
+                                            <button id="next13_1" class="next-btn"
+                                                style="height: 50px; width: 100%"></button>
+                                        </div>
+                                    </div>
+                                    <!-- Add pagination -->
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <!-- Passer à la question suivante-->
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <section id="s13_2" class="slides slidesWhite" style="display: none">
+                    <header>
+                        <div>
+                            <img src="img/illustrations/logos/logo-small-inv.svg" class="little-logo-meuh"
+                                alt="little-logo-meuh" />
+                        </div>
+                        <div id="myProgress" class="fixed-top">
+                            <div id="myBar" style="width: 80%"></div>
+                        </div>
+                    </header>
+                    <img src="img/illustrations/dessins/cow-right.svg" id="content_main_img" alt="vache dans un pré" />
+                    <section id="content_quizz">
+                        <div class="bubble bubbleWhite" style="font-size: 14px">
+                            <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle" />
+                            <div class="content">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <h4 class="h4_right"></h4>
+                                            <h2>Bravo !</h2>
+                                            <p class="text13">
+                                                L’ammoniac est un gaz qui se dégage massivement des déjections d’animaux
+                                                ainsi que des
+                                                engrais. Sa présence dans l’air provoque la formation de particules
+                                                fines, responsables
+                                                de maladies cardio-vasculaires et respiratoires. Dans votre département,
+                                                il y a [Entrer
+                                                un chiffre] fermes-usines qui ont émis plus de 10 tonnes d’ammoniac en
+                                                2021.
+
+                                            </p>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <p class="text13">
+                                                Mais
+                                                attention, seuls les élevages les plus importants de porcs et de
+                                                volailles doivent
+                                                déclarer ces rejets. Les élevages de bovins n’ont pas d’obligation à le
+                                                faire par
+                                                exemple, ni les exploitations qui en rejetteraient moins de 10 tonnes.
+                                                Et il ne faut pas
+                                                non plus oublier les autres industries polluantes.
+                                            </p>
+                                            <button id="next13_2" class="next-btn"
+                                                style="height: 50px; width: 100%"></button>
+                                        </div>
+                                    </div>
+                                    <!-- Add pagination -->
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <!-- Passer à la question suivante-->
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <section id="s14" class="slides" style="display: none">
+                    <header>
+                        <div id="myProgress" class="fixed-top">
+                            <div id="myBar" style="width: 88%"></div>
+                        </div>
+                        <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh"
+                            alt="little-logo-meuh" />
+                    </header>
+                    <img src="img/illustrations/dessins/14.svg" alt="Illustration" />
+                    <div>
+                        <div class="little-bubble">
+                            <img src="img/illustrations/dessins/heads/head-open.svg">
+                            <img src="img/utils/bubbles/bubble-small-side.svg">
+                            <div class="content2">
+                                <p>
+                                    Combien de mises en demeure ont été prononcées à l’encontre des fermes-usines de
+                                    votre
+                                    département ?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slidercontainer">
+                        <div id="slider-val">
+                            <p>0</p>
+                            <span id="demo14"></span>
+                        </div>
+                        <input type="range" min="0" max="40" value="0" class="slider" id="myRange14">
+                    </div>
+                    <button id="next14" class="next-btn" style="height: 50px; width: 100%"></button>
+                </section>
+
+                <section id="s15_1" class="slides" style="display: none">
+                    <header>
+                        <div>
+                            <img src="img/illustrations/logos/logo-small.svg" class="little-logo-meuh"
+                                alt="little-logo-meuh" />
+                        </div>
+                        <div id="myProgress" class="fixed-top">
+                            <div id="myBar" style="width: 96%"></div>
+                        </div>
+                    </header>
+                    <img src="img/illustrations/dessins/cow-wrong.svg" id="vache_4_1" alt="Illustration" />
+                    <section id="content_quizz">
+                        <div class="bubble">
+                            <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle" />
+                            <div class="content">
+                                <h4 class="h4_wrong"></h4>
+                                <h2>Dommage !</h2>
+                                <p class="text15">
+                                    Mais bonne nouvelle, les fermes-usines de votre département sont visiblement aux
+                                    normes.
+                                    L’évolution de ce chiffre peut être surveillée grâce à la base de données Géorisques
+                                    du
+                                    ministère de la Transition écologique et de la cohésion des territoires. Disclose
+                                    vous
+                                    explique comment faire dans son Guide du lanceur d’enquêtes.
+                                </p>
+                                <button id="next15_1" class="next-btn" style="height: 50px; width: 100%"></button>
+                                <!-- Passer à la question suivante-->
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <section id="s15_2" class="slides slidesWhite" style="display: none">
+                    <header>
+                        <div>
+                            <img src="img/illustrations/logos/logo-small-inv.svg" class="little-logo-meuh"
+                                alt="little-logo-meuh" />
+                        </div>
+                        <div id="myProgress" class="fixed-top">
+                            <div id="myBar" style="width: 96%"></div>
+                        </div>
+                    </header>
+                    <img src="img/illustrations/dessins/cow-right.svg" id="content_main_img" alt="vache dans un pré" />
+                    <section id="content_quizz">
+                        <div class="bubble bubbleWhite">
+                            <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle" />
+                            <div class="content">
+                                <h4 class="h4_right"></h4>
+                                <h2>Bravo !</h2>
+                                <p class="text15">
+                                    Bonne nouvelle, les fermes-usines de votre département sont visiblement aux normes.
+                                    L’évolution de ce chiffre peut être surveillée grâce à la base de données Géorisques
+                                    du
+                                    ministère de la Transition écologique et de la cohésion des territoires. Disclose
+                                    vous
+                                    explique comment faire dans son Guide du lanceur d’enquêtes.
+                                </p>
+                                <button id="next15_2" class="next-btn" style="height: 50px; width: 100%"></button>
+                                <!-- Passer à la question suivante-->
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <section id="s16" class="slides slidesWhite" style="display: none">
+                    <header>
+                        <div>
+                            <img src="img/illustrations/logos/logo-small-inv.svg" class="little-logo-meuh"
+                                alt="little-logo-meuh" />
+                        </div>
+                    </header>
+                    <img src="img/illustrations/dessins/podium-16.svg" id="content_main_img" alt="vache dans un pré" />
+                    <section id="content_quizz">
+                        <div class="bubble bubbleWhite">
+                            <img src="img/utils/bubbles/bubble-results-inv.svg" id="bulle" alt="bulle" />
+                            <div class="content">
+                                <h2>Bravo !</h2>
+                                <p class="text16">
+                                    Excellent, vous savez déjà tout. Si vous voulez continuer de surveiller avec nous
+                                    les
+                                    fermes-usines, entre autres industries, près de chez vous, consultez le Guide du
+                                    lanceur
+                                    d’enquêtes, préparé tout spécialement par Disclose
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <footer>
+                        <button id="next16" class="next-btn" style="height: 50px; width: 100%"></button>
+                        <div id="networks">
+                            <div>
+                                <a href="https://www.facebook.com/disclose.ngo/" target="_blank"><img id="fb"
+                                        src="./img/networks/fb-inv.svg" /></a>
+                                <a href="https://twitter.com/disclose_ngo?lang=fr" target="_blank"><img id="twitter"
+                                        src="./img/networks/twitter-inv.svg" /></a>
+                                <a id="about-s16"><img id="about" src="./img/networks/about-inv.svg" /></a>
+                            </div>
+                            <a href="https://www.disclose.ngo" target="_blank"><img id="disclose"
+                                    src="./img/networks/disclose-inv.svg" /></a>
+                        </div>
+                    </footer>
+                </section>
+
+                <section id="s17" class="slides" style="display: none">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <section style="height: 80%;">
+                                    <div>
+                                        <img src="img/illustrations/logos/logo-meuh.svg" id="logo_meuh"
+                                            alt="l'usine à meuh" />
+                                    </div>
+                                    <div>
+                                        <div class="little-bubble">
+                                            <img src="img/illustrations/dessins/heads/head-open.svg">
+                                            <img src="img/utils/bubbles/bubble-small-side.svg">
+                                            <div class="content2" id="little-bubble-s17-1">
+                                                <p>
+                                                    D'où proviennent les données ?
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="little-bubble">
+                                            <img src="img/utils/bubbles/medium-bubble.svg">
+                                            <div class="content-medium-bubble" id="medium-bubble-s17-1">
+                                                <p>
+                                                    Les données utilisées proviennent d’ONG (organisations non
+                                                    gouvernementales),
+                                                    d’articles de presse et de différents ministères. Une base de
+                                                    données en particulier
+                                                    a été utilisée : géorisques.gouv.fr. C’est le ministère de la
+                                                    Transition écologique et
+                                                    de la cohésion des territoires qui l’alimente.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="swiper-slide">
+                                <section style="height: 80%;">
+                                    <div>
+                                        <img src="img/illustrations/logos/logo-meuh.svg" id="logo_meuh"
+                                            alt="l'usine à meuh" />
+                                    </div>
+                                    <div>
+                                        <div class="little-bubble">
+                                            <img src="img/illustrations/dessins/heads/head-open.svg">
+                                            <img src="img/utils/bubbles/bubble-small-side.svg">
+                                            <div class="content2" id="little-bubble-s17-2">
+                                                <p>
+                                                    Qui est Disclose ?
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="little-bubble">
+                                            <img src="img/utils/bubbles/medium-bubble.svg">
+                                            <div class="content-medium-bubble" id="medium-bubble-s17-1">
+                                                <p>
+                                                    Disclose est un média d’investigation en accès libre et à but
+                                                    non-lucratif,
+                                                    créé par des journalistes indépendants et financé par le don. Sans
+                                                    actionnaire,
+                                                    sans publicité et en accès libre, Disclose enquête sur des sujets
+                                                    d’intérêt général
+                                                    depuis 2018.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="swiper-slide">
+                                <section style="height: 80%;">
+                                    <div>
+                                        <img src="img/illustrations/logos/logo-meuh.svg" id="logo_meuh"
+                                            alt="l'usine à meuh" />
+                                    </div>
+                                    <div>
+                                        <div class="little-bubble">
+                                            <img src="img/illustrations/dessins/heads/head-open.svg">
+                                            <img src="img/utils/bubbles/bubble-small-side.svg">
+                                            <div class="content2" id="little-bubble-s17-3">
+                                                <p>
+                                                    Qui a réalisé l'usine à meuh ?
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="little-bubble">
+                                            <img src="img/utils/bubbles/left-bubble.svg">
+                                            <div class="content-medium-bubble" id="medium-bubble-s17-1">
+                                                <p>
+                                                    Ce mini-jeu a été réalisé par une équipe de huit étudiants de trois
+                                                    écoles
+                                                    différentes (Polytech Nantes, AGR et l’EPJT), en collaboration avec
+                                                    Disclose.
+                                                    Il a été créé dans le cadre du Hyblab de février 2023.
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="swiper-slide">
+                                <section style="height: 100%;">
+                                    <div>
+                                        <img src="img/illustrations/logos/logo-meuh.svg" id="logo_meuh"
+                                            alt="l'usine à meuh" />
+                                    </div>
+                                    <div>
+                                        <div class="little-bubble">
+                                            <img src="img/illustrations/dessins/heads/head-open.svg">
+                                            <img src="img/utils/bubbles/bubble-small-side.svg">
+                                            <div class="content2" id="little-bubble-s17-4">
+                                                <p>
+                                                    Quels sont les écoles et les sponsors ?
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sponsors">
+                                        <img src="img/utils/logos/logo_hyblab.svg">
+                                        <img src="img/utils/logos/logo_opensource 1.svg">
+                                        <img src="img/utils/logos/logo_cc.svg">
+                                        <img src="img/utils/logos/logo-epjt.svg">
+                                        <img src="img/utils/logos/logo_agr.svg">
+                                        <img src="img/utils/logos/logo_polytech.svg">
+                                        <img src="img/utils/logos/logo_nantesuniversite.svg">
+                                        <img src="img/utils/logos/logo_oml.svg">
+                                        <img src="img/utils/logos/logo_pdl.svg">
+                                        <img src="img/utils/logos/logo_nantesmetropole.svg">
+                                        <img src="img/utils/logos/logo-discolse.svg">
+                                    </div>
+                                    <button id="back" class="back-btn" style="height: 50px; width: 100%"></button>
+                                </section>
+                            </div>
+                        </div>
+                        <!-- Add pagination -->
+                        <div class="swiper-pagination"></div>
                     </div>
                 </section>
-                <footer>
-                    <button id="next16" class="next-btn" style="height: 50px; width: 100%"></button>
-                    <div id="networks">
-                        <div>
-                            <a href="https://www.facebook.com/disclose.ngo/" target="_blank"><img id="fb"
-                                                                                  src="./img/networks/fb-inv.svg"/></a>
-                            <a href="https://twitter.com/disclose_ngo?lang=fr" target="_blank"><img id="twitter"
-                                                                                    src="./img/networks/twitter-inv.svg"/></a>
-                            <a id="about-s16"><img id="about" src="./img/networks/about-inv.svg"/></a>
-                        </div>
-                        <a href="https://www.disclose.ngo" target="_blank"><img id="disclose"
-                                                                src="./img/networks/disclose-inv.svg"/></a>
-                    </div>
-                </footer>
-            </section>
 
-            <section id="s17" class="slides" style="display: none">
-              <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <section style="height: 80%;">
-                        <div>
-                          <img src="img/illustrations/logos/logo-meuh.svg" id="logo_meuh" alt="l'usine à meuh"/>
-                        </div>
-                        <div>
-                          <div class="little-bubble">
-                              <img src="img/illustrations/dessins/heads/head-open.svg">
-                              <img src="img/utils/bubbles/bubble-small-side.svg">
-                              <div class="content2" id="little-bubble-s17-1">
-                                  <p>
-                                      D'où proviennent les données ?
-                                  </p>
-                              </div>
-                          </div>
-                        </div>
-                        <div>
-                          <div class="little-bubble">
-                              <img src="img/utils/bubbles/medium-bubble.svg">
-                              <div class="content-medium-bubble" id="medium-bubble-s17-1">
-                                  <p>
-                                    Les données utilisées proviennent d’ONG (organisations non gouvernementales), 
-                                    d’articles de presse et de différents ministères. Une base de données en particulier 
-                                    a été utilisée : géorisques.gouv.fr. C’est le ministère de la Transition écologique et 
-                                    de la cohésion des territoires qui l’alimente.
-                                  </p>
-                              </div>
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                    <div class="swiper-slide">
-                      <section style="height: 80%;">
-                        <div>
-                          <img src="img/illustrations/logos/logo-meuh.svg" id="logo_meuh" alt="l'usine à meuh"/>
-                        </div>
-                        <div>
-                          <div class="little-bubble">
-                              <img src="img/illustrations/dessins/heads/head-open.svg">
-                              <img src="img/utils/bubbles/bubble-small-side.svg">
-                              <div class="content2" id="little-bubble-s17-2">
-                                  <p>
-                                      Qui est Disclose ?
-                                  </p>
-                              </div>
-                          </div>
-                        </div>
-                        <div>
-                          <div class="little-bubble">
-                              <img src="img/utils/bubbles/medium-bubble.svg">
-                              <div class="content-medium-bubble" id="medium-bubble-s17-1">
-                                  <p>
-                                    Disclose est un média d’investigation en accès libre et à but non-lucratif, 
-                                    créé par des journalistes indépendants et financé par le don. Sans actionnaire, 
-                                    sans publicité et en accès libre, Disclose enquête sur des sujets d’intérêt général 
-                                    depuis 2018.
-                                  </p>
-                              </div>
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                    <div class="swiper-slide">
-                      <section style="height: 80%;">
-                        <div>
-                          <img src="img/illustrations/logos/logo-meuh.svg" id="logo_meuh" alt="l'usine à meuh"/>
-                        </div>
-                        <div>
-                          <div class="little-bubble">
-                              <img src="img/illustrations/dessins/heads/head-open.svg">
-                              <img src="img/utils/bubbles/bubble-small-side.svg">
-                              <div class="content2" id="little-bubble-s17-3">
-                                  <p>
-                                      Qui a réalisé l'usine à meuh ?
-                                  </p>
-                              </div>
-                          </div>
-                        </div>
-                        <div>
-                          <div class="little-bubble">
-                              <img src="img/utils/bubbles/left-bubble.svg">
-                              <div class="content-medium-bubble" id="medium-bubble-s17-1">
-                                  <p>
-                                    Ce mini-jeu a été réalisé par une équipe de huit étudiants de trois écoles 
-                                    différentes (Polytech Nantes, AGR et l’EPJT), en collaboration avec Disclose.
-                                    Il a été créé dans le cadre du Hyblab de février 2023.
-                                  </p>
+                <section id="s17_2" class="slides slidesWhite" style="display: none">
 
-                              </div>
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                    <div class="swiper-slide">
-                      <section style="height: 100%;">
-                        <div>
-                          <img src="img/illustrations/logos/logo-meuh.svg" id="logo_meuh" alt="l'usine à meuh"/>
-                        </div>
-                        <div>
-                          <div class="little-bubble">
-                              <img src="img/illustrations/dessins/heads/head-open.svg">
-                              <img src="img/utils/bubbles/bubble-small-side.svg">
-                              <div class="content2" id="little-bubble-s17-4">
-                                  <p>
-                                    Quels sont les écoles et les sponsors ?
-                                  </p>
-                              </div>
-                          </div>
-                        </div>
-                        <div class="sponsors">
-                          <img src="img/utils/logos/logo_hyblab.svg">
-                          <img src="img/utils/logos/logo_opensource 1.svg">
-                          <img src="img/utils/logos/logo_cc.svg">
-                          <img src="img/utils/logos/logo-epjt.svg">
-                          <img src="img/utils/logos/logo_agr.svg">
-                          <img src="img/utils/logos/logo_polytech.svg">
-                          <img src="img/utils/logos/logo_nantesuniversite.svg">
-                          <img src="img/utils/logos/logo_oml.svg">
-                          <img src="img/utils/logos/logo_pdl.svg">
-                          <img src="img/utils/logos/logo_nantesmetropole.svg">
-                          <img src="img/utils/logos/logo-discolse.svg">
-                        </div>
-                        <button id="back" class="back-btn" style="height: 50px; width: 100%"></button>
-                      </section>
-                    </div>
-                </div>
-                <!-- Add pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
-            </section>
+                </section>
 
-            <section id="s17_2" class="slides slidesWhite" style="display: none">
-
-            </section>
-
-        </main>
+            </main>
+        </div>
     </div>
-</div>
 </body>
 
 </html>
