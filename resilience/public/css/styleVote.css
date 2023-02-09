@@ -4,13 +4,30 @@
     display: flex;
     flex-direction: column;
 }
+
 header {
     display: flex;
-    justify-content: space-between;
     width: 100%;
+    height: 40%;
     align-items: center;
     margin-bottom: 1em;
     margin-top: 0.2em;
+    align-items: right;
+}
+
+#logo-ecotopie{
+    width: 40%;
+    position: absolute;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#voy-ecotopie{
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    position: absolute;
+    margin-top: 40%;
 }
 
 #felicitation{
@@ -45,17 +62,4 @@ header {
 .selected {
     height: 1.5rem;
     width: 1.5rem;
-}
-
-#logo-ecotopie{
-    width: 30%;
-    position: absolute;
-}
-
-#voy-ecotopie{
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 70%;
-    position: absolute;
-    margin-top: 40%;
 }
