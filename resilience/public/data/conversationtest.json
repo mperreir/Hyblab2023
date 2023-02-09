@@ -54,6 +54,11 @@
                         "type": "message",
                         "name": "Voyageur",
                         "text": "Pas bien !"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Je suis dépressif !"
                     }
                 ]
             ]
@@ -83,6 +88,11 @@
                         "type": "message",
                         "name": "Guillaume",
                         "text": "Je fait du Hyblab."
+                    },
+                    {
+                        "type": "message",
+                        "name": "Guillaume",
+                        "text": "J'ai envie d'imprimer mon code pour me taillader les veines avec !"
                     }
                 ]
             ]

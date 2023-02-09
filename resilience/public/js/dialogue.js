@@ -36,8 +36,8 @@ async function initConversation() {
     let title = document.getElementById("titre");
     let htmlTitle = document.createElement('h1');
     htmlTitle.textContent = conversation.place;
-    htmlTitle.style.backgroundColor = conversation.people[1].background_color;
-    htmlTitle.style.color = conversation.people[1].text_color;
+    htmlTitle.style.backgroundColor = conversation.people[0].background_color;
+    htmlTitle.style.color = conversation.people[0].text_color;
 
     title.appendChild(htmlTitle);
 
@@ -53,6 +53,7 @@ function runConversation() {
     let onClick = htmlDialogue.addEventListener('click', function () {
         if (!paused) {
             paused = true;
+            console.log(messages);
             message = messages.shift() || null;
 
             // If we run out of messages, stop listening to clicks
@@ -104,17 +105,17 @@ function choose(message, all) {
             displayMessage(subMessage);
 
             if (all) {
-                if (message.messages.size == 1) {
-                    message = message.messages;
+                console.log("message.messages", message.messages);
+                message = [{
+                    "type": "all",
+                    "messages": message.messages.filter(subLine => subLine[0].text != subMessage.text)
+                }];
+                if (message[0].messages.length == 0) {
+                    message = []
                 }
-                else {
-                    message = {
-                        "type": "all",
-                        "messages": message.messages.filter(subLine => subLine[0].text != subMessage.text)
-                    };
-                };
+
                 subMessageLine = subMessageLine.splice(1) || [];
-                messages = [...subMessageLine, message, ...messages];
+                messages = [...subMessageLine, ...message, ...messages];
             }
             else {
                 subMessageLine = subMessageLine.splice(1) || [];
