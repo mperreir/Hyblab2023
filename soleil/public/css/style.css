@@ -1,4 +1,9 @@
 /* ------- Important ! Please at least keep the last part of this CSS ----------- */
+.article {
+    overflow: scroll;
+    height: 90%;
+  }
+
 
 p{
     font-size: 14px;
@@ -28,6 +33,18 @@ body{
     margin :auto
 }
 
+#contactChoice1 {
+    margin: 8px;
+}
+
+#contactChoice2 {
+    margin: 8px;
+}
+
+#contactChoice3 {
+    margin: 8px;
+}
+
 #imageLog{
     margin :auto;
     width: 100%;
@@ -39,6 +56,19 @@ body{
     width : 85%;
     height : 25%;
     margin :auto
+}
+
+
+#image4{
+    width: 100%;
+    height: 40%;
+    padding-top: 30%;
+}
+
+#presentation{
+    width: 80%;
+    margin: auto;
+    padding-top: 15%;
 }
 
 #choix-log{
@@ -53,7 +83,7 @@ body{
 
 #SoliExTex2 {
     padding-left: 20px;
-    text-align: center;
+    text-align: justify;
     width: 70%;
     position: relative;
     font-family: 'Inter';
@@ -66,7 +96,7 @@ body{
 }
 
 #SoliExTex {
-    text-align: center;
+    text-align: justify;
     width: 70%;
     bottom: 20%;
     position: relative;
@@ -161,8 +191,8 @@ div {
 }
 
 header{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 8%;
+    margin-bottom: 0;
     text-align: center;
     width: 100%;
     top: 10%;
@@ -188,11 +218,14 @@ header{
     left: 5%;
     right: 7%;
     position:static;
+    text-align: justify;
 }
 
 .commentaire-soli2 {
     max-width: 90%;
     bottom: 7%;
+    text-align: justify;
+
 }
 
 .commentaire-soli2 p {
@@ -308,7 +341,7 @@ header{
     border: 0.75px solid #000000;
     border-radius: 8px;
     height: auto;
-    width: 50%;
+    width: 80%;
     text-align: center;
     padding-top : 10%;
 
@@ -383,6 +416,7 @@ header{
 .choix-logement img{
     display: inline-block;
     margin-right: 5%;
+    width: 25%;
 }
 
 .choix-logement2 img{
@@ -391,7 +425,7 @@ header{
 }
 
 .choix-logement{
-    margin-top: 15%;
+    margin-bottom: 10%;
 }
 
 .choix-logement2{
@@ -422,7 +456,7 @@ video{
     border-radius: 8px;
     position: relative;
     margin: auto;
-    width: 12em;
+    width: 100%;
     text-align: center;
     font-size: 4vw;
 }
@@ -465,7 +499,7 @@ div{
     position: relative;
 }
 
-button.retour{
+button.retour, button.info-bulle{
     left: 0%;
     margin: 2% ;
     width : 10%;
@@ -474,6 +508,10 @@ button.retour{
     position: absolute;
     background-color: transparent;
     border: transparent;
+}
+
+.img-fleche {
+    width: 55%;
 }
 
 p.intitulé {
@@ -503,11 +541,21 @@ div.conteneur{
 
 #infoTxt{
     border: black 1px solid;
-    text-align: center;
+    text-align: justify;
     padding: 5%;
     width: 75%;
     margin: auto;
     border-radius: 8px;
+    position : absolute;
+    left: 10%;
+    height: auto;
+    padding-bottom: 10%;
+}
+
+#SecBouInf{
+    padding: 5%;
+    width: 75%;
+    margin: auto;
     position : absolute;
     left: 10%;
     height: 90%;
@@ -521,15 +569,35 @@ div.conteneur{
 #bulleInfo{
     position:absolute;
     left:100%;
-    top:5%;
+    top:2%;
     background-color: white;
     animation: glowing 2000ms infinite;
 }
 
+.open-button {
+    background-color: white;
+    position: absolute;
+    right: 5%;
+    border: none;
+    animation: glowing 2000ms infinite;
+    height: 22px;
+    top: 6%;
+    
+}
+
+#indication{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+}
+
+
 #SoliInfo{
     position: absolute;
-    left: 5%;
-    bottom: 3%;
+    left: -30px;
 }
 
 @keyframes glowing {
@@ -545,6 +613,48 @@ div.conteneur{
     background-color: white;
     box-shadow: 0 0 5px white;
     }
+}
+
+
+.main-location-page{
+    position: unset;
+    padding-top: 10%;
+}
+
+.location-input{
+    height: 20%;
+    margin: auto;
+    padding: 5%;
+    float: none;
+    text-align: center;
+    font-size: medium;
+}
+
+.valider{
+    bottom: 20%;
+}
+
+.illustrationAdresse{
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    margin: auto;
+}
+
+
+.illustration{
+    max-width: 100%;
+    height: auto;
+}
+
+.div-adresse{
+    width: 100%;
+    padding: 0;
+    height: 300px;
+}
+
+.choix-logement {
+    margin-bottom: 3%;
 }
 
 /* Last slide image is centered */
@@ -647,6 +757,7 @@ body{
     #container{
         margin-left: 0; /* reset margin-left */
         width: 100vw; /* content is full width (and full height because of the default rule for container height */
+        padding-left: 0;
     }
 
     /* We set a default font size here. It will be the base for all other font sizes */
@@ -654,44 +765,19 @@ body{
     body{
         font-size: 15vw;
     }
+
+    /* Page adresse*/
+    header {
+        margin-bottom: 0;
+    }
+    video {
+        max-width: 85%;
+    }
+    .main-location-page {
+        padding-top: 0;
+    }
 }
 
-.main-location-page{
-    position: unset;
-    padding-top: 10%;
-}
-
-.location-input{
-    height: 20%;
-    margin: auto;
-    padding: 5%;
-    float: none;
-    text-align: center;
-    font-size: medium;
-}
-
-.valider{
-    bottom: 20%;
-}
-
-.illustrationAdresse{
-    max-width: 100%;
-    height: auto;
-    display: flex;
-    margin: auto;
-}
-
-
-.illustration{
-    max-width: 100%;
-    height: auto;
-}
-
-.div-adresse{
-    width: 100%;
-    padding: 0;
-    height: 300px;
-}
 
 /* The content is displayed at 9/16 If the aspect ratio is higher that 9/16  */
 @media screen and (max-aspect-ratio: 9/16) {
@@ -714,33 +800,13 @@ body{
         font-size: 15vw;
     }
 
-/* Détails page adresse */
+    /* Détails page adresse */
     #adresse input {
         margin-top: 10%;
     }
 }
 
-@media screen and (min-aspect-ratio: 3/4) {
-    #container {
-        padding-left: 0;
-        width: 100vw;
-    }
-/* Page adresse*/
-    header {
-        margin-bottom: 0;
-    }
-    video {
-        max-width: 85%;
-    }
-    .main-location-page {
-        padding-top: 0;
-    }
-
-}
-
-
 /* Bouton Info */
-
 *{
     box-sizing: border-box;
 }
@@ -751,14 +817,7 @@ display: flex;
 justify-content: flex-start;
 }
 /* Stylez et fixez le bouton sur la page */
-.open-button {
-background-color: white;
-position: absolute;
-right: 5%;
-border: none;
-animation: glowing 2000ms infinite;
-height: 22px;
-}
+
 
 
 /* Positionnez la forme Popup */

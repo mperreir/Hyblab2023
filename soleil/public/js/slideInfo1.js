@@ -1,5 +1,5 @@
 "use strict";
-var executed10 = false;
+var executedInfo1 = false;
 
 const initSlideInfo1 = async function(){
     if(!executedInfo1){
