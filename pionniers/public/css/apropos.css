@@ -51,19 +51,33 @@ body {
     width: 80%;
     margin-bottom: 15%;
     margin-top: 10%;
+}
+
+#texte-merci {
+    width: 80%;
+    height: 80%;
+
+    font-size: 1.3em;
+    line-height: 1.3;
+
     scroll-behavior: smooth;
     overflow: scroll;
     overflow-x: hidden;
 
+    margin-top: 5%;
 }
 
-#texte-merci {
-    height: 100%;
+#savoir-plus {
+    height: 20%;
+    width: 100%;
+}
 
-    font-size: 1.3em;
-    line-height: 1.3;
-    margin-right: 10%;
-    margin-left: 10%;
-    margin-top: 5%;
+#savoir-plus > button {
+    width: 50%;
+    height: 50%;
+}
+
+#savoir-plus > img {
+    height: 50%;
 }
 
