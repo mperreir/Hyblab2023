@@ -69,16 +69,31 @@ app.get('/density/:town', async function (req, res) {
 });
 
 app.get('/energy/:latitude/:longitude/:orientation/:inclination', async function (req, res) {
-    getRadiationData(req.params.latitude, req.params.longitude);
-    setTimeout(() => {
-        readRadiationData(req.params.orientation, req.params.inclination, req.params.latitude, (err, totalEnergy) => {
+    res.json({"total energy": 340016.31672820327});
+
+    /*
+    if (!fs.existsSync(`./soleil/api/data/temp/radiation-${req.params.latitude}-${req.params.longitude}.csv`)) {
+        getRadiationData(req.params.latitude, req.params.longitude);
+        setTimeout(() => {
+            readRadiationData(req.params.orientation, req.params.inclination, req.params.latitude, req.params.longitude, (err, totalEnergy) => {
+                if (err) {
+                    console.error(err);
+                } else {
+                    console.log("Done");
+                    res.json({"total energy": totalEnergy});
+                }
+            });
+        }, 0);
+    } else {
+        readRadiationData(req.params.orientation, req.params.inclination, req.params.latitude, req.params.longitude, (err, totalEnergy) => {
             if (err) {
-              console.error(err);
+                console.error(err);
             } else {
-              res.json({"total energy": totalEnergy});
+                console.log("Done");
+                res.json({"total energy": totalEnergy});
             }
         });
-    }, 200000);
+    }*/
 });
 
 function getRadiationData(latitude, longitude) {
@@ -87,8 +102,8 @@ function getRadiationData(latitude, longitude) {
 
     wget({
         url:  url,
-        dest: './data/temp/test',
-        timeout: 200000
+        dest: `./soleil/api/data/temp/radiation-${latitude}-${longitude}.csv`,
+        timeout: 12000
     },
     function (error, response, body) {
         if (error) {
@@ -103,8 +118,8 @@ function getRadiationData(latitude, longitude) {
     });
 }
 
-function readRadiationData(orientation, inclinationAngle, latitude, callback) {
-    let inputStream = fs.createReadStream('./data/temp/test', 'utf-8');
+function readRadiationData(orientation, inclinationAngle, latitude, longitude, callback) {
+    let inputStream = fs.createReadStream(`./soleil/api/data/temp/radiation-${latitude}-${longitude}.csv`, 'utf-8');
     let totalEnergy = 0;
 
     inputStream
