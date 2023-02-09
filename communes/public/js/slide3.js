@@ -179,8 +179,8 @@ const create_legend = function(container, data, main_color){
     const rgb = main_color.match(/\w\w/g).map((x) => {return parseInt(x, 16);});
     const color_value_corrected = '#'+Math.round(rgb[0] * 0.7).toString(16)+Math.round(rgb[1] * 0.7).toString(16)+Math.round(rgb[2] * 0.7).toString(16);
 
-    const max = Math.max(...data.map((item) => {return item.Production;}));
-    const min = Math.min(...data.map((item) => {return item.Production;}));
+    const max = Math.round(Math.max(...data.map((item) => {return item.Production;})));
+    const min = Math.round(Math.min(...data.map((item) => {return item.Production;})));
 
     var legend = d3.select(container).append("svg")
         .attr("viewBox", "0 0 200 20")
