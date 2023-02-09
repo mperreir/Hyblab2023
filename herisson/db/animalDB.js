@@ -1,8 +1,7 @@
 const fs = require('fs');
 const axios = require('axios');
-const db = JSON.parse(fs.readFileSync('../public/data/db.json'));
 
-async function getTaxon(id) {
+async function getTaxon(id, db) {
     const response = await axios.get(`https://taxref.mnhn.fr/api/taxa/${id}`);
     // inside the response, we want the media inside th _links object
     const linkMedia = response.data._links.media.href;
@@ -16,7 +15,7 @@ async function getTaxon(id) {
         copyright = mediaData.copyright;
         const downloadLink = mediaData._links.file.href;
         // download the image
-        await downloadImage(downloadLink, `../public/img/animals/${id}.jpg`);
+        await downloadImage(downloadLink, `herisson/public/img/animals/${id}.jpg`);
         media = id + '.jpg';
     } catch (e) {
         console.log(await getNames(id));
@@ -26,7 +25,7 @@ async function getTaxon(id) {
     const habitatData = (await axios.get(`https://taxref.mnhn.fr/api/habitats/${habitatNumber}`)).data;
     const habitat = { name: habitatData.name, description: habitatData.definition}
 
-    const listCities = await getINSEE(id);
+    const listCities = await getINSEE(id, db);
 
     // select only the fields we need
     const { scientificName, frenchVernacularName } = response.data;
@@ -49,9 +48,12 @@ function getCDRef(jsonData) {
     }
     return cdRefs;
 }
-const cdRefs = getCDRef(db);
 
-async function getAllTaxon() {
+async function initAnimalDB() {
+    console.log("initAnimalDB");
+    const db = JSON.parse(fs.readFileSync('herisson/public/data/communeDB.json'));
+    const cdRefs = getCDRef(db);
+
     let allTaxon = {};
     // for each cd_ref, get the frenchVernacularName if it exists and the scientificName if not
     for (let i = 0; i < cdRefs.length; i++) {
@@ -63,18 +65,14 @@ async function getAllTaxon() {
         }
         // check if the animalName as , in it
         if (animalName.includes(',')) {
-            // apply allTaxon[animalName] = await getTaxon(taxon); to each animalName
-            const animalNames = animalName.split(', ');
-            for (let j = 0; j < animalNames.length; j++) {
-                allTaxon[animalNames[j]] = await getTaxon(taxon);
-            }
+            // select only the first animalName
+            animalName = animalName[0];
         }
-        else {
-            allTaxon[animalName] = await getTaxon(taxon);
-        }
+        allTaxon[animalName] = await getTaxon(taxon, db);
+
     }
 
-    fs.writeFileSync("../public/data/additionalDB.json", JSON.stringify(allTaxon));
+    fs.writeFileSync("herisson/public/data/animalDB.json", JSON.stringify(allTaxon));
 }
 
 async function getNames(taxon) {
@@ -94,7 +92,8 @@ async function downloadImage(url, path) {
     response.data.pipe(fs.createWriteStream(path));
 }
 
-async function getINSEE(taxon) {
+async function getINSEE(taxon, db) {
+
 // get the list of cities where the taxon is present and the number of species present using the DB.json file
     const jsonData = db;
     const cityData = [];
@@ -112,5 +111,5 @@ async function getINSEE(taxon) {
     }
     return cityData;
 }
-getAllTaxon();
 
+module.exports = initAnimalDB;

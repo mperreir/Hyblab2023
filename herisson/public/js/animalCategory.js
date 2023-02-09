@@ -172,4 +172,4 @@ async function createAnimalCategory(commune, animalCategory) {
     await burgerPopUp();
 }
 
-animalCategoryJS();
+createAnimalCategory();

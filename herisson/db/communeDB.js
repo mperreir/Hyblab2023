@@ -22,7 +22,8 @@ async function getInseeName() {
 }
 
 // create a db.json file with all the data necessary for the app
-async function createDB() {
+async function initCommuneDB() {
+    console.log("initCommuneDB");
     let allData = {};
     const inseeCodes = await getInseeName();
     for (const key in inseeCodes) {
@@ -50,7 +51,7 @@ async function createDB() {
             }
         }
     }
-    fs.writeFileSync("../public/data/db.json", JSON.stringify(allData));
+    fs.writeFileSync("herisson/public/data/communeDB.json", JSON.stringify(allData));
 }
 
-createDB();
+module.exports = initCommuneDB;
