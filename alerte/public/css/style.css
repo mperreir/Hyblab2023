@@ -64,7 +64,6 @@ h3,
 h4,
 h5,
 p {
-    text-align: justify;
     font-family: arial, sans-serif;
 }
 
@@ -97,13 +96,17 @@ header img,
     height: 100%;
 }
 
+button {
+    border: 0;
+}
+
 #next0 {
     background-image: url('../img/utils/btn/btn-main.svg');
 }
 
 #next1 {
     background-image: url('../img/utils/btn/btn-start.svg');
-    margin-top: 25px;
+    margin-top: 10px;
 }
 
 #next4_1, #next6, #next9_1, #next11_1, #next13_1 {
@@ -285,9 +288,8 @@ main>section {
 
 .bubble {
     position: relative;
-    text-align: justify;
     color: white;
-    font-size: 0.18em;
+    font-size: 15px;
     font-family: "Inter";
     height: 100%
 }
@@ -298,9 +300,8 @@ main>section {
 
 .little-bubble {
     position: relative;
-    text-align: justify;
     color: white;
-    font-size: 0.16em;
+    font-size: 12px;
     font-family: "Inter";
     height: 100%
 }
@@ -332,6 +333,7 @@ main>section {
 #btnquizz button {
     line-height: 50px;
     border-radius: 15px;
+    color: black;
 }
 
 .btn3 {
@@ -414,13 +416,11 @@ main>section {
 
 .content2 {
     position: absolute;
-    top: 55%;
-    left: 64%;
+    top: 52%;
+    left: 65%;
     transform: translate(-50%, -50%);
     padding: 5px;
-    width: 65%;
-    height: 90%;
-    text-align: justify;
+    width: 70%;
     font-family: arial, sans-serif;
 }
 

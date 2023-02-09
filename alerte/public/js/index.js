@@ -1,5 +1,6 @@
 "use strict";
 let dep
+let depName
 let res3
 let res4
 let res5
@@ -8,6 +9,7 @@ let data3
 let data4
 let data5
 let data6
+let dataDep
 
 function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
@@ -23,10 +25,13 @@ function readTextFile(file, callback) {
 
 //usage:
 readTextFile("./data/4.json", function (text) {
-    data3 = JSON.parse(text);
+    data4 = JSON.parse(text);
 });
 readTextFile("./data/6.json", function (text) {
     data6 = JSON.parse(text);
+});
+readTextFile("./data/departements-region.json", function (text) {
+    dataDep = JSON.parse(text);
 });
 
 
@@ -36,7 +41,7 @@ function changeBackground(color) {
 
 let next0 = document.getElementById("next0")
 next0.addEventListener("click", () => {
-    display("s1")
+    display("s7")
     changeBackground('#121212')
 })
 
@@ -45,28 +50,35 @@ next1.addEventListener("click", () => {
     display("s3")
 })
 
+let answer = false
 let btns3 = document.getElementsByClassName('btn3')
 for (let btn of btns3) {
     if (btn.dataset.valid == "true") {
         btn.addEventListener('click', () => {
-            btn.style.backgroundColor = 'green'
-            setTimeout(() => {
-                display("s4_2")
-                changeBackground('aliceblue')
-            }, 2000)
+            if (!answer) {
+                answer = true
+                btn.style.backgroundColor = 'green'
+                setTimeout(() => {
+                    display("s4_2")
+                    changeBackground('aliceblue')
+                }, 2000)
+            }
         })
     } else {
         btn.addEventListener('click', () => {
-            btn.style.backgroundColor = 'red'
-            for (let btn_tmp of btns3) {
-                if (btn_tmp.dataset.valid == 'true') {
-                    btn_tmp.style.backgroundColor = 'lightgreen'
+            if (!answer) {
+                answer = true
+                btn.style.backgroundColor = 'red'
+                for (let btn_tmp of btns3) {
+                    if (btn_tmp.dataset.valid == 'true') {
+                        btn_tmp.style.backgroundColor = 'lightgreen'
+                    }
                 }
+                setTimeout(() => {
+                    display("s4_1")
+                    changeBackground('#121212')
+                }, 2000)
             }
-            setTimeout(() => {
-                display("s4_1")
-                changeBackground('#121212')
-            }, 2000)
         })
     }
 }
@@ -115,18 +127,31 @@ next6.addEventListener("click", () => {
     changeBackground('#121212')
 })
 
+let inputDep = document.getElementById('dep')
 let next7 = document.getElementById("next7")
-next7.addEventListener("click", () => {
-    dep = document.getElementById('dep').value
+next7.style.background = "dimgray"
+
+function next7click() {
+    dep = inputDep.value
     display("s8")
     changeBackground('#121212')
     initRepsDep()
+}
+
+inputDep.addEventListener('input', () => {
+    if (inputDep.value != ""){
+        next7.style.removeProperty('background')
+        next7.addEventListener("click", next7click)
+    } else {
+        next7.style.background = "dimgray"
+        next7.removeEventListener('click', next7click)
+    }
 })
 
 function initRepsDep() {
-    for (let key in data3) {
-        if (data3[key]["departement"] == dep && data3[key]["unite"] == "Animaux-Eq") {
-            res3 = data3[key]
+    for (let key in data4) {
+        if (data4[key]["departement"] == dep && data4[key]["unite"] == "Animaux-Eq") {
+            res4 = data4[key]
             break
         }
     }
@@ -137,41 +162,63 @@ function initRepsDep() {
             break
         }
     }
+    for (let key in dataDep) {
+        if (dataDep[key]["num_dep"] == dep) {
+            depName = dataDep[key]["dep_name"]
+            break
+        }
+    }
 
+    let h4wrongs = document.getElementsByClassName("h4_wrong")
+    let h4rights = document.getElementsByClassName("h4_right")
+    for (let h4 of h4wrongs) {
+        h4.textContent = depName + " (" + dep + ")"
+    }
+    for (let h4 of h4rights) {
+        h4.textContent = depName + " (" + dep + ")"
+    }
+
+    let answer = false
     let btns8 = document.getElementsByClassName("btn8")
     for (let btn8 of btns8) {
-        if (btn8.dataset.value == res3["type"]) {
+        if (btn8.dataset.value == res4["type"]) {
             btn8.addEventListener('click', () => {
-                btn8.style.backgroundColor = 'green'
-                setTimeout(() => {
-                    display("s9_2")
-                    changeBackground('aliceblue')
-                }, 2000)
+                if (!answer) {
+                    answer = true
+                    btn8.style.backgroundColor = 'green'
+                    setTimeout(() => {
+                        display("s9_2")
+                        changeBackground('aliceblue')
+                    }, 2000)
+                }
             })
         } else {
             btn8.addEventListener('click', () => {
-                btn8.style.backgroundColor = 'red'
-                for (let btn_tmp of btns8) {
-                    if (btn_tmp.dataset.value == res3["type"]) {
-                        btn_tmp.style.backgroundColor = 'lightgreen'
+                if (!answer) {
+                    answer = true
+                    btn8.style.backgroundColor = 'red'
+                    for (let btn_tmp of btns8) {
+                        if (btn_tmp.dataset.value == res4["type"]) {
+                            btn_tmp.style.backgroundColor = 'lightgreen'
+                        }
                     }
+                    setTimeout(() => {
+                        display("s9_1")
+                        changeBackground('#121212')
+                    }, 2000)
                 }
-                setTimeout(() => {
-                    display("s9_1")
-                    changeBackground('#121212')
-                }, 2000)
             })
         }
     }
 
     let texts9 = document.getElementsByClassName("text9")
-    let qt = res3['quantite_mean']
+    let qt = res4['quantite_mean']
     let str
-    if (res3["type"] == "VOLAILLES") {
+    if (res4["type"] == "VOLAILLES") {
         str = "Dans votre département, ce sont les volailles qui sont les plus nombreuses parmi les animaux d’élevage. On en dénombre pas moins de " + qt + " dans les [Entrer un chiffre] fermes-usines de ce département."
-    } else if (res3["type"] == "PORCS") {
+    } else if (res4["type"] == "PORCS") {
         str = "Dans votre département, ce sont les porcs qui sont les plus nombreux parmi les animaux d’élevage. On en dénombre pas moins de " + qt + " dans les [Entrer un chiffre] fermes-usines de ce département."
-    } else if (res3["type"] == "BOVINS") {
+    } else if (res4["type"] == "BOVINS") {
         str = "Dans votre département, ce sont les bovins qui sont les plus nombreux parmi les animaux d’élevage. On en dénombre pas moins de " + qt + " dans les [Entrer un chiffre] fermes-usines de ce département"
     } else {
         str = "Dans votre département, ce sont les moutons qui sont les plus nombreux parmi les animaux d’élevage. On en dénombre pas moins de " + qt + " dans les [Entrer un chiffre] fermes-usines de ce département"
@@ -192,10 +239,26 @@ function initRepsDep() {
         changeBackground('#121212')
     })
 
+    let texts11 = document.getElementsByClassName("text11")
+    let name = res4["name"]
+    let type = res4["type"].toLowerCase()
+    let rang = res4["france_unite_rank"]
+    for (let text of texts11) {
+        text.textContent = "Dans la ferme-usine de " + name + " on dénombre pas moins de " + qt + " " + type +". À l’échelle de la France, c’est la " + rang + "ème plus grosse concentration de " + type + " en une seule installation."
+    }
+
+    let myRange = document.getElementById("myRange")
+    let res = res4["quantite_mean"]
     let next10 = document.getElementById("next10")
     next10.addEventListener("click", () => {
-        display("s11_1")
-        changeBackground('#121212')
+        let v = myRange.value
+        if (v >= res - 5000 && v <= res + 5000){
+            display("s11_2")
+            changeBackground('aliceblue')
+        } else {
+            display("s11_1")
+            changeBackground('#121212')
+        }
     })
 
     let next11_1 = document.getElementById("next11_1")
@@ -237,7 +300,7 @@ function initRepsDep() {
     if (res6['nb_mise_en_demeure'] != 0) {
         let texts15 = document.getElementsByClassName("text15")
         for (let text of texts15) {
-            text.textContent = res6['nb_mise_en_demeure'] + " mises en demeure ont été prononcées à l’encontre des fermes-usines du " + dep + ". L’évolution de ce chiffre peut être surveillée grâce à la base de données Géorisques du ministère de la Transition écologique et de la cohésion des territoires. Disclose vous explique comment faire dans son Guide du lanceur d’enquêtes."
+            text.textContent = res6['nb_mise_en_demeure'] + " mises en demeure ont été prononcées à l’encontre des fermes-usines de " + depName + ". L’évolution de ce chiffre peut être surveillée grâce à la base de données Géorisques du ministère de la Transition écologique et de la cohésion des territoires. Disclose vous explique comment faire dans son Guide du lanceur d’enquêtes."
         }
     }
 
@@ -288,7 +351,7 @@ setTimeout(() => {
         easing: 'easeOutQuad',
     });
     // Init first slide
-}, 500);
+}, 200);
 
 var mySwiper = new Swiper('.swiper-container', {
     pagination: {

@@ -75,7 +75,7 @@
                                 <div class="swiper-slide">
                                     Les fermes-usines sont plus proches de chez vous que vous ne l’imaginez.
                                     Découvrez-les grâce à notre
-                                    mini-jeu, connecté aux données du ministère de la transition écologique. Et poussez
+                                    mini-jeu, connecté aux données du ministère de la Transition écologique. Et poussez
                                     la porte de ces
                                     usines à animaux souvent privés de lumière du jour.
                                     <button id="next1" class="next-btn"></button>
@@ -129,7 +129,7 @@
                 </header>
                 <img src="img/illustrations/dessins/cow-wrong.svg" id="vache_4_1" alt="Illustration"/>
                 <section id="content_quizz">
-                    <div class="bubble">
+                    <div class="bubble" style="font-size: 14px">
                         <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
                         <div class="content">
                             <h2>Dommage !</h2>
@@ -157,7 +157,7 @@
                 </header>
                 <img src="img/illustrations/dessins/cow-right.svg" id="content_main_img" alt="vache dans un pré"/>
                 <section id="content_quizz">
-                    <div class="bubble bubbleWhite">
+                    <div class="bubble bubbleWhite" style="font-size: 14px">
                         <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle"/>
                         <div class="content">
                             <h2>Bravo !</h2>
@@ -184,7 +184,7 @@
                 </header>
                 <img src="img/illustrations/dessins/graph-5.svg" alt="Courbe"/>
                 <div>
-                    <div class="little-bubble">
+                    <div class="little-bubble" style="font-size: 11px">
                         <img src="img/illustrations/dessins/heads/head-open.svg">
                         <img src="img/utils/bubbles/bubble-small-side.svg">
                         <div class="content2">
@@ -208,7 +208,7 @@
                 </header>
                 <img src="img/illustrations/dessins/cow-6.svg" id="vache_6" alt="Illustration"/>
                 <section id="content_quizz">
-                    <div class="bubble">
+                    <div class="bubble" style="font-size: 12px">
                         <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
@@ -248,10 +248,10 @@
                     </div>
                 </div>
                 <div>
-                    <label id="labelDep">Saisissez votre département</label>
+                    <label id="labelDep">Saisissez le numéro de votre département</label>
                 </div>
                 <div>
-                    <input id="dep" type="number" autofocus>
+                    <input id="dep" type="number" required autofocus>
                 </div>
                 <button id="next7" class="next-btn" style="height: 50px; width: 100%"></button>
             </section>
@@ -319,9 +319,10 @@
                 </header>
                 <img src="img/illustrations/dessins/cow-wrong.svg" id="vache_4_1" alt="Illustration"/>
                 <section id="content_quizz">
-                    <div class="bubble">
+                    <div class="bubble" style="font-size: 17px">
                         <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
                         <div class="content">
+                            <h4 class="h4_wrong"></h4>
                             <h2>Dommage !</h2>
                             <p class="text9">
                                 Erreur
@@ -345,9 +346,10 @@
                 </header>
                 <img src="img/illustrations/dessins/cow-right.svg" id="content_main_img" alt="vache dans un pré"/>
                 <section id="content_quizz">
-                    <div class="bubble bubbleWhite">
+                    <div class="bubble bubbleWhite" style="font-size: 17px">
                         <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle"/>
                         <div class="content">
+                            <h4 class="h4_right"></h4>
                             <h2>Bravo !</h2>
                             <p class="text9">
                                 Erreur
@@ -383,7 +385,7 @@
                         <p>0</p>
                         <span id="demo"></span>
                     </div>
-                    <input type="range" min="0" max="50000" value="0" class="slider" id="myRange">
+                    <input type="range" step="5000" min="0" max="100000" value="0" class="slider" id="myRange">
                 </div>
                 <button id="next10" class="next-btn" style="height: 50px; width: 100%"></button>
             </section>
@@ -403,12 +405,10 @@
                     <div class="bubble">
                         <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
                         <div class="content">
+                            <h4 class="h4_wrong"></h4>
                             <h2>Dommage !</h2>
-                            <p>
-                                Dans la ferme-usine de [Entrer un nom et une localité] on dénombre pas moins de [Entrer
-                                un chiffre] [Entrer une catégorie d’animaux]. À l’échelle de la France, c’est la [Entrer
-                                un rang] plus grosse concentration de [porcs / bovins / vaches laitières / volailles] en
-                                une seule installation.
+                            <p class="text11">
+                                Erreur
                             </p>
                             <button id="next11_1" class="next-btn" style="height: 50px; width: 100%"></button>
                             <!-- Passer à la question suivante-->
@@ -432,12 +432,10 @@
                     <div class="bubble bubbleWhite">
                         <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle"/>
                         <div class="content">
+                            <h4 class="h4_right"></h4>
                             <h2>Bravo !</h2>
-                            <p>
-                                Dans la ferme-usine de [Entrer un nom et une localité] on dénombre pas moins de [Entrer
-                                un chiffre] [Entrer une catégorie d’animaux]. À l’échelle de la France, c’est la [Entrer
-                                un rang] plus grosse concentration de [porcs / bovins / vaches laitières / volailles] en
-                                une seule installation.
+                            <p class="text11">
+                                Erreur
                             </p>
                             <button id="next11_2" class="next-btn" style="height: 50px; width: 100%"></button>
                             <!-- Passer à la question suivante-->
@@ -488,9 +486,10 @@
                 </header>
                 <img src="img/illustrations/dessins/cow-wrong.svg" id="vache_4_1" alt="Illustration"/>
                 <section id="content_quizz">
-                    <div class="bubble">
+                    <div class="bubble" style="font-size: 11px">
                         <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
                         <div class="content">
+                            <h4 class="h4_wrong"></h4>
                             <h2>Dommage !</h2>
                             <p class="text13">
                                 L’ammoniac est un gaz qui se dégage massivement des déjections d’animaux ainsi que des
@@ -522,9 +521,10 @@
                 </header>
                 <img src="img/illustrations/dessins/cow-right.svg" id="content_main_img" alt="vache dans un pré"/>
                 <section id="content_quizz">
-                    <div class="bubble bubbleWhite">
+                    <div class="bubble bubbleWhite" style="font-size: 11px">
                         <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle"/>
                         <div class="content">
+                            <h4 class="h4_right"></h4>
                             <h2>Bravo !</h2>
                             <p class="text13">
                                 L’ammoniac est un gaz qui se dégage massivement des déjections d’animaux ainsi que des
@@ -588,6 +588,7 @@
                     <div class="bubble">
                         <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
                         <div class="content">
+                            <h4 class="h4_wrong"></h4>
                             <h2>Dommage !</h2>
                             <p class="text15">
                                 Mais bonne nouvelle, les fermes-usines de votre département sont visiblement aux normes.
@@ -617,6 +618,7 @@
                     <div class="bubble bubbleWhite">
                         <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle"/>
                         <div class="content">
+                            <h4 class="h4_right"></h4>
                             <h2>Bravo !</h2>
                             <p class="text15">
                                 Bonne nouvelle, les fermes-usines de votre département sont visiblement aux normes.
@@ -653,7 +655,8 @@
                     </div>
                 </section>
                 <footer>
-                    <button id="next16" class="next-btn" style="height: 50px; width: 100%"></button>
+                    <a href="https://disclose.ngo/fr/article/disclose-partage-ses-methodes-et-outils-pour-enqueter"><img
+                            src="./img/utils/btn/btn-guide.svg" style="width: 100%"></a>
                     <div id="networks">
                         <div>
                             <a href="https://www.facebook.com/disclose.ngo/"><img id="fb"
