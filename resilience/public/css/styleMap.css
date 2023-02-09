@@ -296,7 +296,7 @@ body{
     height: 42px;
     max-height: 100%;
     font-size: 2.6vh;
-    font-weight: bold;
+    /*font-weight: bold;*/
     color: white;
     /*text-shadow: 1px 1px 1px #000;*/
     background: none;
@@ -309,7 +309,7 @@ body{
     height: 42px;
     max-height: 100%;
     font-size: 2.6vh;
-    font-weight: bold;
+    /*font-weight: bold;*/
     color: white;
     /*text-shadow: 1px 1px 1px #000;*/
     background: none;
