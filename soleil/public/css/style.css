@@ -88,6 +88,7 @@ body{
     animation-duration: 5s;
     animation-iteration-count: infinite;
     transform:scale(0.9);
+    right: -350%;
         
 
 }
@@ -102,12 +103,13 @@ body{
     width : 40px;
     height: 60px;
     position : absolute;
-    bottom : 20%;
+    bottom : 25%;
     right : 5%;
     animation-name: flo;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     transform:scale(0.9);
+    right: -350%;
 
 }
 
@@ -115,29 +117,17 @@ body{
     width : 40px;
     height: 60px;
     position : absolute;
-    bottom : 35%;
+    bottom : 45%;
     right : 5%;
     animation-name: flo;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     transform:scale(0.9);
+    right: -350%;
 
 }
 
 #Soli4{
-    width : 40px;
-    height: 60px;
-    position : absolute;
-    bottom : 50%;
-    right : 5%;
-    animation-name: flo;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    transform:scale(0.9);
-
-}
-
-#Soli5{
     width : 40px;
     height: 60px;
     position : absolute;
@@ -147,6 +137,21 @@ body{
     animation-duration: 5s;
     animation-iteration-count: infinite;
     transform:scale(0.9);
+    right: -350%;
+
+}
+
+#Soli5{
+    width : 40px;
+    height: 60px;
+    position : absolute;
+    bottom : 85%;
+    right : 5%;
+    animation-name: flo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform:scale(0.9);
+    right: -350%;
 
 }
 
@@ -179,7 +184,7 @@ header{
 }
 
 .commentaire-soli {
-    max-width: 95%;
+    max-width: 90%;
     left: 5%;
     right: 7%;
     position:static;
@@ -272,11 +277,21 @@ header{
     display: inline-block;
     margin-top: 20px;
     height: 60%;
-    width: 5%;
-    background-color: blue;
+    width: 5px;
+    background: rgba(188, 228, 250, 0.31);    
     position :absolute;
-    right : 3px;
+    right : 5%;
     top: 10%;
+    border-radius: 9px;
+/* Rectangle 12 */
+
+
+
+    /* Rectangle 12 */
+
+
+
+
 
 }
 
@@ -369,11 +384,21 @@ header{
     display: inline-block;
     margin-right: 5%;
 }
-.choix-logement{
-    margin-top: 10%;
+
+.choix-logement2 img{
+    display: inline-block;
+    margin-right: 5%;
 }
 
-.img-pente{
+.choix-logement{
+    margin-top: 15%;
+}
+
+.choix-logement2{
+    margin-top: 5%;
+}
+
+.img-pente, #tropdechoix{
     width: 80%;
 }
 video{
@@ -474,6 +499,37 @@ div.conteneur{
     right : 10%;
     animation: glowing 8000ms infinite;
       
+}
+
+#infoTxt{
+    border: black 1px solid;
+    text-align: center;
+    padding: 5%;
+    width: 75%;
+    margin: auto;
+    border-radius: 8px;
+    position : absolute;
+    left: 10%;
+    height: 90%;
+}
+
+#Saut {
+    padding-top : 7vw;
+    font-size: 4.5vw;
+}
+
+#bulleInfo{
+    position:absolute;
+    left:100%;
+    top:5%;
+    background-color: white;
+    animation: glowing 2000ms infinite;
+}
+
+#SoliInfo{
+    position: absolute;
+    left: 5%;
+    bottom: 3%;
 }
 
 @keyframes glowing {
@@ -694,7 +750,7 @@ body{
 display: flex;
 justify-content: flex-start;
 }
-/* Stylez et fixez le bouton sur la page 
+/* Stylez et fixez le bouton sur la page */
 .open-button {
 background-color: white;
 position: absolute;
@@ -703,7 +759,8 @@ border: none;
 animation: glowing 2000ms infinite;
 height: 22px;
 }
-*/
+
+
 /* Positionnez la forme Popup */
 .login-popup {
 position: relative;
@@ -753,10 +810,6 @@ background-color: #fff;
 opacity: 1;
 }
 
-#Saut {
-    padding-top : 2vw;
-    font-size: 3vw;
-}
 
 /* Style Checkbox */
 
