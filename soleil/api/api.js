@@ -86,7 +86,7 @@ function getRadiationData(latitude, longitude) {
         }
     });
 }
-getRadiationData(44.083, 5.059);
+//getRadiationData(44.083, 5.059);
 
 /**
  * Compute irradiation of the roof at a time given
