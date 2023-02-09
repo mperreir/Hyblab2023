@@ -465,7 +465,7 @@ div{
     position: relative;
 }
 
-button.retour{
+button.retour, button.info-bulle{
     left: 0%;
     margin: 2% ;
     width : 10%;
