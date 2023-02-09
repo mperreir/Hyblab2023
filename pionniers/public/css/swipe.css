@@ -9,6 +9,49 @@ body {
     height: 100vh;
 }
 
+.modal {
+    display: none;
+}
+
+.modal-back {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+.modal-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 150px;
+    top: 60%;
+    left: 50%;
+    padding: 25px;
+    border-radius: 50px;
+    background: rgba(255,255,255,1) ;
+    transform: translate(-50%, -50%)
+}
+
+.modal-container p {
+    margin-top: 15%;
+    color: #006A82;
+    font-family: 'Poppins', sans-serif
+
+}
+.modal-container img  {
+    width: 8%;
+    margin-top: -10%;
+    color: #006A82;
+    margin-left: 80%;
+    font-family: 'Poppins', sans-serif
+
+
+}
+
 #container > * {
     width: 75%;
 }
