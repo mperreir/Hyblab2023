@@ -70,13 +70,15 @@ app.get('/density/:town', async function (req, res) {
 
 app.get('/energy/:latitude/:longitude/:orientation/:inclination', async function (req, res) {
     getRadiationData(req.params.latitude, req.params.longitude);
-    readRadiationData(req.params.orientation, req.params.inclination, req.params.latitude, (err, totalEnergy) => {
-        if (err) {
-          console.error(err);
-        } else {
-          res.json({"total energy": totalEnergy});
-        }
-    });
+    setTimeout(() => {
+        readRadiationData(req.params.orientation, req.params.inclination, req.params.latitude, (err, totalEnergy) => {
+            if (err) {
+              console.error(err);
+            } else {
+              res.json({"total energy": totalEnergy});
+            }
+        });
+    }, 200000);
 });
 
 function getRadiationData(latitude, longitude) {
