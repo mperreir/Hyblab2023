@@ -27,15 +27,12 @@ regions.forEach(element => {
                 time = " ".concat(heures[compt.length + 1], " ");
                 window.localStorage.setItem('heure', time);
                 window.localStorage.setItem(element.id, "true");
-                
+
                 //gestion steps (nb de zones vues)
-                if (compt.length<4) {
-                    steps = " ".concat(compt.length + 1);
-                }
-                else steps = " ".concat(compt.length); //le repas fait prendre +1 a compt mais n'est pas compté comme une zone vue
+                steps = " ".concat(compt.length);
                 window.localStorage.setItem('steps', steps);
             }
-            
+
             str = element.id;
             nb_region = str.substr(1);
             path = "./dialogue.html?id=".concat(nb_region);
@@ -50,21 +47,21 @@ function load() {
     }
     window.localStorage.setItem('started', 1);
     document.getElementById("heure").value = window.localStorage.getItem('heure');
-    document.getElementById("steps").value = window.localStorage.getItem('steps') + "/8 ";
+    document.getElementById("steps").value = window.localStorage.getItem('compt').length + "/8 ";
     if (window.localStorage.getItem('pipi') == "true" && window.localStorage.getItem('manger') == "true") {
         window.localStorage.setItem("popup", "false");
-    }else{
+    } else {
         if (window.localStorage.getItem('pipi') == "true") {
             let bouton = document.getElementById("pipi");
-            bouton.setAttribute("class","bouton-repas-disabled");
+            bouton.setAttribute("class", "bouton-repas-disabled");
             bouton.disabled = true;
 
         }
         if (window.localStorage.getItem('manger') == "true") {
             let bouton = document.getElementById("manger");
-            bouton.setAttribute("class","bouton-repas-disabled");
+            bouton.setAttribute("class", "bouton-repas-disabled");
             bouton.disabled = true;
-        } 
+        }
     }
     if (window.localStorage.getItem("popup") == "true") {
         document.getElementById("popup").style.visibility = "visible";
@@ -114,7 +111,9 @@ function manger() {
     window.localStorage.setItem('compt', compt + 1);
     window.localStorage.setItem('heure', " 14:00 ");
     window.localStorage.setItem('manger', "true");
-    window.localStorage.setItem("_13","true");
+    window.localStorage.setItem("_13", "true");
+    steps = " ".concat(compt.length + 1);
+    window.localStorage.setItem('steps', steps);
     window.location = "./dialogue.html?id=13";
 }
 
@@ -122,7 +121,9 @@ function toilette() {
     compt = window.localStorage.getItem("compt");
     window.localStorage.setItem('compt', compt + 1);
     window.localStorage.setItem('pipi', "true");
-    window.localStorage.setItem("_14","true");
+    window.localStorage.setItem("_14", "true");
+    steps = " ".concat(compt.length + 1);
+    window.localStorage.setItem('steps', steps);
     window.location = "./dialogue.html?id=14";
 }
 
@@ -130,21 +131,21 @@ load();
 
 
 // When the user clicks on <span> (x), close the modal
-modal_acquis.onclick = function() {
+modal_acquis.onclick = function () {
     modal_acquis.style.display = "none";
 }
 
 // When the user clicks on <span> (x), close the modal
-modal.onclick = function() {
+modal.onclick = function () {
     modal.style.display = "none";
-  }
-  
+}
+
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
-if (event.target == modal_acquis) {
-    modal_acquis.style.display = "none";
-}
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    if (event.target == modal_acquis) {
+        modal_acquis.style.display = "none";
+    }
 }
