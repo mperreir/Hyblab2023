@@ -73,14 +73,14 @@ h1 {
     color: black;
     width: 75%;
     margin-bottom: 0.5rem;
-    border: 2px solid red;
+    border: 2px solid #79B77B;
     float: right;
     margin-right: 8%;
 }
 
 .choice:hover,
 .choice:focus {
-    background-color: red;
+    background-color: #79B77B;
 }
 
 
