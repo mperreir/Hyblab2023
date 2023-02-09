@@ -10,24 +10,20 @@ var people = {};
 var paused = false;
 var conversation = {};
 var dict_bkg = new Map();
-dict_bkg.set("8", ["Manon.svg", "back_1.svg"]);
-dict_bkg.set("9", ["Fab.svg", "back_2.svg"]);
-dict_bkg.set("10", ["Catherine.svg", "back_3.svg"]);
-dict_bkg.set("11", ["Manon.svg", "back_4.svg"]);
-dict_bkg.set("12", ["Manon.svg", "back_5.svg"]);
-dict_bkg.set("13", ["Manon.svg", "back_6.svg"]);
-dict_bkg.set("14", ["Manon.svg", "back_7.svg"]);
-dict_bkg.set("16", ["Manon.svg", "back_8.svg"]);
+dict_bkg.set("8", "back_1.svg");
+dict_bkg.set("9", "back_2.svg");
+dict_bkg.set("10", "back_3.svg");
+dict_bkg.set("11", "back_4.svg");
+dict_bkg.set("12", "back_5.svg");
+dict_bkg.set("13", "back_6.svg");
+dict_bkg.set("14", "back_7.svg");
+dict_bkg.set("16", "back_8.svg");
 
 async function initConversation() {
 
     fond = document.getElementById("fond");
-    perso = document.getElementById("personnage");
-    var img_perso = document.createElement("img");
-    img_perso.src = "img/perso/".concat(dict_bkg.get(conversationId)[0]);
-    perso.appendChild(img_perso);
     var img_fond = document.createElement("img");
-    img_fond.src = "img/background_conv/".concat(dict_bkg.get(conversationId)[1]);
+    img_fond.src = "img/background_conv/".concat(dict_bkg.get(conversationId));
     perso.appendChild(img_fond);
 
     response = await fetch(`data/conversation${conversationId}.json`);
