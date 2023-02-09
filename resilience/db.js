@@ -18,9 +18,9 @@ module.exports = function (param) {
             Vote: {
                 fromId: (id) => dbget('SELECT * FROM vote WHERE id = ?', [id]),
 
-                getAll: () => dball('SELECT * FROM vote ORDER BY nb DESC'),
+                getAll: () => dball('SELECT * FROM vote ORDER BY sumNote/(nbVote+1) DESC'),
 
-                addVote: (id) => dbrun('UPDATE vote SET nb = nb + 1 WHERE id = ?', [id])
+                addVote: (id, note) => dbrun('UPDATE vote SET nbVote = nbVote + 1, sumNote = sumNote + note WHERE id = ?', [id])
             }
         } 
     }

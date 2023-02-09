@@ -51,18 +51,23 @@ async function achievement() {
                     htmlE.textContent = e.text;
                     break;
                 case 'video':
-                    htmlE = document.createElement('iframe');
-                    htmlE.setAttribute("src", e.link);
+                    htmlE = document.createElement('div');
+                    //htmlE.setAttribute("src", e.link);
+
+                    htmlE.innerHTML = '<iframe width="560" height="315" src="' + e.link + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+                    //<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                    
+                    
                     //htmlE = createElement('<iframe width="560" height="315" src="' + e.link + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>')
                     break;
                 case 'image':
-                    htmlE = document.createElement('img');
-                    htmlE.scr = 'data/' + e.link;
+                    htmlE = document.createElement("img");
+                    htmlE.src = "img/achievement/" + e.link;
                     break;
                 case 'link':
                     htmlE = document.createElement('a');
                     htmlE.textContent = e.text;
                     htmlE.href = e.link;
+                    htmlE.target="_blank"
                     break;
                 default:
                     console.log("Unknown type : " + e.type);
@@ -122,12 +127,7 @@ async function achievement() {
         htmlAchievVisible.appendChild(htmlName);
         htmlAchiev.appendChild(htmlAchievVisible);
         result.appendChild(htmlAchiev);
-        console.log(result);
-
-
     }
-
-
 }
 
 achievement();

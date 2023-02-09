@@ -59,65 +59,137 @@
           "type": "text",
           "text": "- On peut également citer d’autres perturbations possibles, d’ordre politique, économique, sanitaire…",
           "class": ["indent","shortSkip"]
+        },
+        {
+          "type": "text",
+          "text": "Pour répondre à ces enjeux, la résilience alimentaire - soit la capacité d’un territoire à garantir la sécurité alimentaire de ses habitants dans un contexte de perturbations multiples et imprévisibles - constitue un levier d’action pertinent, de plus en plus pris en main par certaines collectivités.",
+          "class": ["shortSkip"]
         }
+
       ]
     },
     {
       "ID": "2",
-      "name": "Des synergies au sien des territoires et entre territoires",
+      "name": "Qu’est-ce que la résilience alimentaire ?",
       "data": [
         {
           "type": "text",
-          "text": "test",
-          "class": []
+          "text": "Notre expert t’explique cela en détail.",
+          "class": ["bold"]
         },
         {
           "type": "video",
-          "link": "https://www.youtube.com/embed/o6ygRNXivHw",
+          "link": "https://www.youtube.com/embed/pBqZw06vEHM",
           "class": []
         },
         {
-          "type": "image",
-          "link": "testimg.png",
+          "type": "text",
+          "text": "Pour aller un peu plus loin encore et comprendre les enjeux de la résilience alimentaire, Les Greniers d’Abondance apporte une définition ici :",
           "class": []
         },
         {
           "type": "link",
-          "text": "ici",
-          "link": "https://www.google.com/",
+          "text": "https://resiliencealimentaire.org/contexte/",
+          "link": "https://resiliencealimentaire.org/contexte/",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "En 2023 des métropoles ont déjà commencé à mettre en place ce système.",
+          "class": ["bold","midSkip"]
+        },
+        {
+          "type": "text",
+          "text": "À Bordeaux (33), la stratégie de résilience agricole et alimentaire a été adoptée le 03 novembre 2022. Voici le rapport :",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "https://www.bordeaux-metropole.fr/Vivre-habiter/Une-metropole-nature/Se-nourrir/La-strategie-de-resilience-agricole-et-alimentaire.",
+          "link": "https://www.bordeaux-metropole.fr/Vivre-habiter/Une-metropole-nature/Se-nourrir/La-strategie-de-resilience-agricole-et-alimentaire.",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "À Rennes (35),  le système agricole et alimentaire se veut résilient, avec 27 exploitations agricoles rennaises, deux tiers lieux agricoles, six exploitations semi-professionnelles,  70 jardins partagés et quatre fermes urbaines et péri urbaines : ",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "https://metropole.rennes.fr/rennes-cultive-son-jardin",
+          "link": "https://metropole.rennes.fr/rennes-cultive-son-jardin",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "À Vannes (56), une régie municipale maraîchère approvisionnent trois cuisines sur cinq des crèches municipales, depuis 2019 :",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "https://www.banquedesterritoires.fr/vannes-produit-des-fruits-et-legumes-bio-pour-ses-creches-56",
+          "link": "https://www.banquedesterritoires.fr/vannes-produit-des-fruits-et-legumes-bio-pour-ses-creches-56",
           "class": []
         }
       ]
     },
     {
       "ID": "3",
-      "name": "Des synergies au sien des territoires et entre territoires.",
+      "name": "Qu’est-ce qu’un système agro-écologique ?",
       "data": [
         {
           "type": "text",
-          "text": "test",
-          "class": []
+          "text": "Notre expert vous explique en quoi consiste un système agro-écologique",
+          "class": ["bold"]
         },
         {
           "type": "video",
-          "link": "https://www.youtube.com/embed/o6ygRNXivHw",
+          "link": "https://www.youtube.com/embed/1kt635phlKI",
           "class": []
         },
         {
-          "type": "image",
-          "link": "testimg.png",
-          "class": []
+          "type": "text",
+          "text": "Un système qui fait déjà ses preuves,",
+          "class": ["bold"]
+        },
+        {
+          "type": "text",
+          "text": "Avec pour exemples : ",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "text",
+          "text": "- la Ferme de l’Envol, à Brétigny-sur-Orge (91) :",
+          "class": ["indent","shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "https://www.coeuressonne.fr/lagglo/grands-projets/sesame-le-bio-souvre-a-vous/ferme-de-lenvol/",
+          "link": "ttps://www.coeuressonne.fr/lagglo/grands-projets/sesame-le-bio-souvre-a-vous/ferme-de-lenvol/",
+          "class": ["indent"]
+        },
+        {
+          "type": "text",
+          "text": "- la Ferme Emmaüs Baudonne, à Tarnos (40) :",
+          "class": ["indent","shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "https://www.fermeemmausbaudonne.fr/https://www.fermeemmausbaudonne.fr/",
+          "link": "https://www.fermeemmausbaudonne.fr/https://www.fermeemmausbaudonne.fr/",
+          "class": ["indent"]
         }
+
       ]
     },
     {
       "ID": "4",
-      "name": "Des synergies au sien des territoires et entre territoires",
+      "name": "En quoi consiste la relocalisation de la production alimentaire ?",
       "data": [
         {
           "type": "text",
-          "text": "test",
-          "class": []
+          "text": "Notre expert  vous explique en quoi c’est un pilier essentiel de la résilience alimentaire d’un territoire.",
+          "class": ["bold"]
         },
         {
           "type": "video",
@@ -125,8 +197,41 @@
           "class": []
         },
         {
-          "type": "image",
-          "link": "testimg.png",
+          "type": "text",
+          "text": "Transformer ses productions, à la ferme ou à côté, cela existe déjà :",
+          "class": ["bold","shortSkip"]
+        },
+        {
+          "type": "text",
+          "text": "En 2013, l’association Partage Ton frigo lance un projet de Conserverie locale, pour lutter contre le gaspillage alimentaire dans la région Grand Est :",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "https://laconserverielocale.fr/notre-histoire/",
+          "link": "https://laconserverielocale.fr/notre-histoire/",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "Créée en 2010 à Balazuc (Ardèche), Le Bateleur est une association qui propose de valoriser les productions locales avec des conserves de fruits ou légumes, charcuteries ou plats cuisinés. Pour cela, elle propose un atelier de transformation au service de différents usagers, comme les citoyens lors de journées de transformation collective ouvertes à tous.",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "https://www.culinaries.fr/producteurs/association-le-bateleur/",
+          "link": "https://www.culinaries.fr/producteurs/association-le-bateleur/",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "Dans le Pays Basque (64), l’Association Herriko Ogia fédère 25 exploitations agricoles, deux minoteries et 60 boulangeries pour proposer un pain entièrement local.",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "https://herriko.fr/herriko-ogia/ ",
+          "link": "https://herriko.fr/herriko-ogia/ ",
           "class": []
         }
       ]
