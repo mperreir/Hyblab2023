@@ -28,7 +28,6 @@ function onCheck(event) {
     if (themeBtn.classList.contains("unchecked")) {
         ajouteTheme(themeName);
         themeBtn.classList.remove("unchecked");
-
     } else {
 
         if (themeSelected.length === 1) {
@@ -48,8 +47,8 @@ function onCheck(event) {
             supprimeTheme(themeName);
             themeBtn.classList.add("unchecked");
         }
-
     }
+    updateCount();
 
 }
 document.addEventListener("DOMContentLoaded", function() {
@@ -86,5 +85,42 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
+    // Update the count of profiles
+    updateCount();
 });
 
+
+function updateCount() {
+    // Retrieve the selected topics
+    getProfiles(buildApiParameters()).then(r => {
+        // Update the count in the HTML
+        document.querySelector("footer span#profile_counter").innerHTML = r.length;
+    });
+}
+
+
+/**
+ * Build the API parameters from the selected topics
+ * @returns {string} The API parameters
+ */
+function buildApiParameters() {
+    const topics = ["alimentation", "economie_circulaire", "energie", "industrie", "mobilite", "numerique"]
+    let apiString = "";
+    topics.forEach(t => {
+        apiString += themeSelected.includes(t) ? "true" : "false";
+        apiString += "/";
+    });
+    return apiString;
+}
+
+/**
+ * Get the profiles from the API
+ * @param apiParameters The parameters to send to the API
+ * @returns {Promise<any>} The profiles as a JSON object
+ */
+async function getProfiles(apiParameters) {
+    // Fetch the data from the API
+    const response = await fetch("/pionniers/api/map/topics/" + apiParameters);
+    // Parse the response as JSON and return it
+    return await response.json();
+}
