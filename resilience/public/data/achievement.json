@@ -85,11 +85,11 @@
         {
           "type": "text",
           "text": "Pour aller un peu plus loin encore et comprendre les enjeux de la résilience alimentaire, Les Greniers d’Abondance apporte une définition ici :",
-          "class": []
+          "class": ["midSkip"]
         },
         {
           "type": "link",
-          "text": "https://resiliencealimentaire.org/contexte/",
+          "text": "resiliencealimentaire.org",
           "link": "https://resiliencealimentaire.org/contexte/",
           "class": []
         },
@@ -105,7 +105,7 @@
         },
         {
           "type": "link",
-          "text": "https://www.bordeaux-metropole.fr/Vivre-habiter/Une-metropole-nature/Se-nourrir/La-strategie-de-resilience-agricole-et-alimentaire.",
+          "text": "www.bordeaux-metropole.fr",
           "link": "https://www.bordeaux-metropole.fr/Vivre-habiter/Une-metropole-nature/Se-nourrir/La-strategie-de-resilience-agricole-et-alimentaire.",
           "class": []
         },
@@ -116,7 +116,7 @@
         },
         {
           "type": "link",
-          "text": "https://metropole.rennes.fr/rennes-cultive-son-jardin",
+          "text": "metropole.rennes.fr",
           "link": "https://metropole.rennes.fr/rennes-cultive-son-jardin",
           "class": []
         },
@@ -127,7 +127,7 @@
         },
         {
           "type": "link",
-          "text": "https://www.banquedesterritoires.fr/vannes-produit-des-fruits-et-legumes-bio-pour-ses-creches-56",
+          "text": "www.banquedesterritoires.fr",
           "link": "https://www.banquedesterritoires.fr/vannes-produit-des-fruits-et-legumes-bio-pour-ses-creches-56",
           "class": []
         }
@@ -150,7 +150,7 @@
         {
           "type": "text",
           "text": "Un système qui fait déjà ses preuves,",
-          "class": ["bold"]
+          "class": ["bold", "bigSkip"]
         },
         {
           "type": "text",
@@ -164,8 +164,8 @@
         },
         {
           "type": "link",
-          "text": "https://www.coeuressonne.fr/lagglo/grands-projets/sesame-le-bio-souvre-a-vous/ferme-de-lenvol/",
-          "link": "ttps://www.coeuressonne.fr/lagglo/grands-projets/sesame-le-bio-souvre-a-vous/ferme-de-lenvol/",
+          "text": "www.coeuressonne.fr",
+          "link": "https://www.coeuressonne.fr/lagglo/grands-projets/sesame-le-bio-souvre-a-vous/ferme-de-lenvol/",
           "class": ["indent"]
         },
         {
@@ -175,7 +175,7 @@
         },
         {
           "type": "link",
-          "text": "https://www.fermeemmausbaudonne.fr/https://www.fermeemmausbaudonne.fr/",
+          "text": "www.fermeemmausbaudonne.fr",
           "link": "https://www.fermeemmausbaudonne.fr/https://www.fermeemmausbaudonne.fr/",
           "class": ["indent"]
         }
@@ -199,7 +199,7 @@
         {
           "type": "text",
           "text": "Transformer ses productions, à la ferme ou à côté, cela existe déjà :",
-          "class": ["bold","shortSkip"]
+          "class": ["bold","bigSkip"]
         },
         {
           "type": "text",
@@ -208,7 +208,7 @@
         },
         {
           "type": "link",
-          "text": "https://laconserverielocale.fr/notre-histoire/",
+          "text": "laconserverielocale.fr",
           "link": "https://laconserverielocale.fr/notre-histoire/",
           "class": []
         },
@@ -219,7 +219,7 @@
         },
         {
           "type": "link",
-          "text": "https://www.culinaries.fr/producteurs/association-le-bateleur/",
+          "text": "www.culinaries.fr",
           "link": "https://www.culinaries.fr/producteurs/association-le-bateleur/",
           "class": []
         },
@@ -230,7 +230,7 @@
         },
         {
           "type": "link",
-          "text": "https://herriko.fr/herriko-ogia/ ",
+          "text": "herriko.fr",
           "link": "https://herriko.fr/herriko-ogia/ ",
           "class": []
         }
@@ -238,22 +238,175 @@
     },
     {
       "ID": "5",
-      "name": "Des synergies au sien des territoires et entre territoires",
+      "name": "Qu’est ce que la sécurité sociale de l’alimentation ?",
       "data": [
         {
           "type": "text",
-          "text": "test",
-          "class": []
+          "text": "Notre expert vous explique les enjeux liés à la mise en place d’une sécurité sociale de l’alimentation.",
+          "class": ["bold"]
         },
         {
           "type": "video",
-          "link": "https://www.youtube.com/embed/o6ygRNXivHw",
+          "link": "https://www.youtube.com/embed/M6y5x-FNpoY",
           "class": []
         },
         {
-          "type": "image",
-          "link": "testimg.png",
+          "type": "text",
+          "text": "En 2023, on commence tout juste à l'expérimenter dans certaines villes.",
+          "class": ["bold", "midSkip"]
+        },
+        {
+          "type": "text",
+          "text": "À Montpellier (34), un collectif soutenu par la municipalité lance l’expérimentation d’une forme de sécurité sociale de l’alimentation en 2023. Chacun cotise selon ses moyens et reçoit en retour une allocation alimentaire.",
+          "class": ["midSkip"]
+        },
+        {
+          "type": "link",
+          "text": "www.lemonde.fr",
+          "link": "https://www.lemonde.fr/planete/article/2023/02/03/montpellier-experimente-une-caisse-alimentaire-citoyenne_6160408_3244.html",
           "class": []
+        },
+        {
+          "type": "text",
+          "text": "Et un collectif de citoyen.nes pour la sécurité sociale alimentaire l’expliquait.",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "securite-sociale-alimentation.org",
+          "link": "https://securite-sociale-alimentation.org/la-ssa/",
+          "class": []
+        }
+      ]
+    },
+    {
+      "ID": "6",
+      "name": "Les jardins partagés, des ilôts nourriciers en ville.",
+      "data": [
+        {
+          "type": "text",
+          "text": "Sans être véritablement suffisants pour nourrir les habitants, les jardins partagés participent cependant à végétaliser la ville, à créer des espaces de sociabilités, à familiariser les habitants au jardinage et au travail de la terre, dans une démarche ludique et éducative.",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "Des exemples essaiment un peu partout déjà, comme ici en Martinique :",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "agriculture.gouv.fr",
+          "link": "https://agriculture.gouv.fr/martinique-le-jardin-partage-de-trenelle-citron-un-projet-educatif-et-solidaire",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "Dans un autre registre, les Incroyables Comestibles propose de planter des cultures comestibles partout où c’est possible en milieu urbain : chacun peut venir participer aux opérations de plantation, chacun peut participer à l’entretien dess plantations, et chacun peut venir récolter.",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "lesincroyablescomestibles.fr",
+          "link": "http://lesincroyablescomestibles.fr/qui-sommes-nous/",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "Plus loin, en Russie, les collectifs de jardins russe, vrai modèle d'agriculture péri-urbaine collective à grande échelle, peuvent être inspirants :",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "resiliencealimentaire.org",
+          "link": "https://resiliencealimentaire.org/les-collectifs-de-jardins-russes-une-organisation-resiliente/",
+          "class": []
+        }
+      ]
+    },
+    {
+      "ID": "7",
+      "name": "Les tiers lieux alimentaires, pour accompagner la transition.",
+      "data": [
+        {
+          "type": "text",
+          "text": "Yuna Chiffoleau, ingénieur agronome et directrice de recherche en sociologie économique à l’INRAE publie un article en mai 2022 pour l’Agence nationale pour la cohésion des territoires :",
+          "class": []
+        },
+        {
+          "type": "link",
+          "text": "Faire de l’alimentation durable une affaire de tous. Pour une meilleure reconnaissance du rôle des tiers-lieux nourriciers.",
+          "link": "https://tierslieux.anct.gouv.fr/fr/faire-de-lalimentation-durable-laffaire-de-tous/#:~:text=Les%20tiers%2Dlieux%20nourriciers%20en,de%20syst%C3%A8mes%20alimentaires%20plus%20durables.",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "Dans ce mouvement des tiers lieux alimentaires, Belle bouffe, une association lyonnaise, propose des ateliers à destination de tous, d’éducation mais aussi de formation à la transition alimentaire. Elle propose aussi un lieu ouvert à tous pour cuisiner, à la manière du Fab’lim.",
+          "class": ["midSkip"]
+        },
+        {
+          "type": "link",
+          "text": "www.bellebouffe.com",
+          "link": "https://www.bellebouffe.com/actions-1 ",
+          "class": []
+        }
+      ]
+    },
+    {
+      "ID": "8",
+      "name": "Les excrétas humains au secours des sols",
+      "data": [
+        {
+          "type": "text",
+          "text": "Notre expert vous explique les enjeux liès à la réutilisation des excrétas humains :",
+          "class": ["bold"]
+        },
+        {
+          "type": "video",
+          "link": "https://www.youtube.com/embed/LsmBQJak4zo",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "Boucler le cycle des nutriments, c’est recycler les excrétas humains…et ce, depuis longtemps !",
+          "class": ["bold","bigSkip"]
+        },
+        {
+          "type": "text",
+          "text": "La Fumainerie est une association bordelaise née en 2019 qui “accompagne les territoires dans la transition de leur système alimentation-excrétion par l'expérimentation et le développement de filières de gestion circulaire et de proximité de nos excréta.” Depuis 2020, elle lance avec plusieurs partenaires de la ville son premier réseau de recyclage des excrétas humains.",
+          "class": ["midSkip"]
+        },
+        {
+          "type": "link",
+          "text": "www.lafumainerie.com",
+          "link": "https://www.lafumainerie.com/",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "Fabien Esculier, chercheur et ingénieur à l’École des Ponts présente sa thèse :",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "Le système alimentation/excrétion des territoires urbains : régimes et transitions socio-écologiques.",
+          "link": "https://hal.science/tel-01787854/document",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "Des chercheurs de l’université de l’Environnement de Stockholm (SEI) ont publié :",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "Conseils Pratiques pour une Utilisation de l’Urine en Production Agricole.",
+          "link": "https://www.leesu.fr/ocapi/wp-content/uploads/2019/05/urine-humaine-et-v%C3%A9g%C3%A9taux.pdf",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "C’est sur ce texte que se base le calcul de la quantité d’urine à utiliser pour fertiliser vos cultures de légumes.",
+          "class": ["shortSkip"]
         }
       ]
     }

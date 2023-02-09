@@ -52,9 +52,10 @@ async function achievement() {
                     break;
                 case 'video':
                     htmlE = document.createElement('div');
+                    htmlE.classList.add("video");
                     //htmlE.setAttribute("src", e.link);
 
-                    htmlE.innerHTML = '<iframe width="560" height="315" src="' + e.link + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+                    htmlE.innerHTML = '<iframe src="' + e.link + '" title="YouTube video player" allowfullscreen></iframe>';
                     //<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                    
                     
                     //htmlE = createElement('<iframe width="560" height="315" src="' + e.link + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>')
@@ -67,7 +68,7 @@ async function achievement() {
                     htmlE = document.createElement('a');
                     htmlE.textContent = e.text;
                     htmlE.href = e.link;
-                    htmlE.target="_blank"
+                    htmlE.target="_blank";
                     break;
                 default:
                     console.log("Unknown type : " + e.type);
@@ -104,6 +105,7 @@ async function achievement() {
             if (window.localStorage.getItem("achievement".concat(htmlAchiev.id)) == "true") {
                 if (window.localStorage.getItem("achievement".concat(htmlAchiev.id))) {
                     let currentData = document.querySelector('.data');
+                    document.querySelector('#container').scrollTo(0,0);
                     if (currentData) {
                         currentData.remove();
                     }

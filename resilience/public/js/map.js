@@ -4,7 +4,7 @@ const heure = document.getElementById("heure").value;
 const heures = ['8:00', '9:30', '11:00', '12:30', '14:00', '15:30', '17:00', '18:30', '20:00', '21:00'];
 var modal = document.getElementById("myModal");
 var dict_achiev = new Map();
-dict_achiev.set("_8", [1, 2, 3, 4, 5]);
+dict_achiev.set("_8", [1, 2, 3, 4, 5, 6, 7, 8]);
 dict_achiev.set("_9", [6, 7, 8]);
 dict_achiev.set("_10", []);
 dict_achiev.set("_11", []);
