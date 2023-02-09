@@ -11,7 +11,7 @@ function createFicheMinia(profil) {
     const htmlString = `<li data-id="${Id}" class="flex-column align-items-flex-end">
                             <div class="overflow-buttons-top flex-row justify-content-flex-end">
                                 <div class="indicateur-id ${bgClass} flex-row align-items-center justify-content-center">
-                                    <p>${Id}</p>
+                                    <p>★</p>
                                 </div>
                                 <div class="croix-suppr">
                                     <img alt="X" src="../img/croix.svg">
