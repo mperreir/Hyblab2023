@@ -20,34 +20,24 @@ body {
     display: none;
 }
 
-#retour {
-    margin-right: auto;
+header a, header a div {
+    height : 2vh;
 }
 
-#petit-rond {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bolder;
-    font-size: calc(3vh + 3vw);
-    width: 4vh;
-    height: 4vh;
-    color: var(--bleu-fonce);
-    background: var(--blanc-fond);
-    border-radius: 100px;
-    margin-left: auto;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: 0.2s;
+header a div img {
+    height: 100%;
 }
 
-.bouton-rond {
+header .bouton-rond {
+    height: 2vh;
+    font-size: 1.5em;
+}
+
+header #petit-rond {
+    width: 2vh;
+    height: 2vh;
+    font-size: 1.5em;
     padding: 3%;
-}
-
-.bouton-rond:hover {
-    cursor: pointer;
-    color: var(--blanc-fond);
-    background: var(--bleu-fonce);
 }
 
 /*

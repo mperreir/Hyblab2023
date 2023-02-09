@@ -61,11 +61,24 @@ div#popup div#popup-content {
     width: 100%;
 }
 
-#petit-rond {
+header a, header a div {
+    height : 2vh;
+}
+
+header a div img {
+    height: 100%;
+}
+
+header .bouton-rond {
+    height: 2vh;
+    font-size: 1.5em;
+}
+
+header #petit-rond {
     width: 2vh;
     height: 2vh;
-    font-size: 2em;
-    margin-left: 1.2em;
+    font-size: 1.5em;
+    padding: 3%;
 }
 
 .carousel-list {

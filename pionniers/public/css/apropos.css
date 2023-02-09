@@ -13,34 +13,30 @@ body {
     width: 75%;
 }
 
-#retour {
-    margin-right: 10%;
-
+header a, header a div {
+    height : 2vh;
 }
 
-#petit-rond {
+header a div img {
+    height: 100%;
+}
+
+header .bouton-rond {
+    height: 2vh;
+    font-size: 1.5em;
+}
+
+header #petit-rond {
     width: 2vh;
     height: 2vh;
-    font-size: 2em;
-    margin-left: 20%;
+    font-size: 1.5em;
+    padding: 3%;
 }
 
 #info {
     text-align: center;
     justify-content: center;
     alignment: center;
-}
-
-#logo-appli {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 #remerciment {
