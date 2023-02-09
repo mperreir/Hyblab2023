@@ -15,7 +15,7 @@ const initSlide1 = async function(){
     logo.data = data.logo;
     change_svg_color(logo, "#000000");
 
-    const score = parseFloat(sessionStorage.getItem("score").replace("%",""))/100;
+    const score = parseFloat(sessionStorage.getItem("Score").replace("%",""))/100;
     const width = document.querySelector('#progress-bar').clientWidth;
     const height = document.querySelector('#progress-bar').clientHeight;
 
