@@ -37,7 +37,7 @@
                 ],
                 "explication": [
                     "<b>Attention</b> ! Si cette idée peut marcher en temps général, <b>utiliser une grande quantité d’eau va être compliqué<b>. Avec les stocks disponibles qui diminuent, d’autres secteurs jugés plus importants comme la culture de céréales seront prioritaires.",
-                    "<b>Bonne initiative !</b> Cela va permettre de sauver une partie de tes vignes en les protégeant efficacement contre le gel. En tout cas pour le moment. Car, si cette solution marche à <b>court-terme</b>, il vaut mieux penser à des plans sur la durée comme <b>adapter son terroir</b> ou <b>favoriser un lieu</b> avec des sols généralement plus froids - ce qui repousse l’éclosion.",
+                    "<b>Bonne initiative !</b> Cela va permettre de sauver une partie de tes vignes en les protégeant efficacement contre le gel. En tout cas pour le moment. Car, si cette solution marche à <b>court-terme</b>, il vaut mieux penser à des plans sur la durée comme <b>adapter son terroir</b> ou <b>favoriser un lieu</b> avec des sols généralement plus froids - ce qui repousse la floraison",
                     "Aïe ! Laisser les vignes combattre le gel sans intervenir revient à <b>sacrifier une part énorme</b> de ta plantation. C’est un choix <b>très risqué</b> et les <b>pertes peuvent être considérables</b>…"
                 ],
                 "consequence": [
@@ -153,7 +153,7 @@
                 ]
             },
             {
-                "contexte": "Mince ! Des tâches brunes sont apparues sur l’intégralité de la vigne, du fruit à la tige en passant par les feuilles… Nous sommes en septembre donc c’est sûrement l’apparition du botrytid, surnommée la pourriture grise !",
+                "contexte": "Mince ! Des tâches brunes sont apparues sur l’intégralité de la vigne, du fruit à la tige en passant par les feuilles… Nous sommes en septembre donc c’est sûrement l’apparition du botrytis, surnommée la pourriture grise !",
                 "enonce": "Le champignon se propage très rapidement, il faut donc agir rapidement ! Que veux-tu faire ?",
                 "img": "img/characters/vigne-taches-brunes.png",
                 "imgBulle" : "img/characters/bulle-dominique.png",
