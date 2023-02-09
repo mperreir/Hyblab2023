@@ -3,6 +3,7 @@ body
     background-color: #FBC5EB;
     margin: 0;
     overflow: hidden;
+    height: 100vh;
 }
 
 .texte-intro
@@ -10,7 +11,7 @@ body
     text-align: center;
     /*margin: 5em 3em 3em;*/
     margin: 10vh 9vw 9vw;
-    font-size: 2.3vh;
+    font-size: 2vh;
     color: #FFF8F1;
     font-weight: 400;
     font-family: 'Prompt', sans-serif;
@@ -19,10 +20,13 @@ body
 .texte-Elie
 {
     text-align: right;
-    width: 60vw;
-    font-size: 3vh;
+    width: 40vw;
+    font-size: 2.75vh;
     color: #0B6E5F;
     font-family: 'Covered By Your Grace', cursive;
+    margin-left: auto;
+    margin-right: 23vh;
+    /*margin-top: 10vh;*/
 }
 
 #elie
@@ -53,7 +57,7 @@ body
 
 #ligneDialogue
 {
-    width: 55vw;
+    width: 40vw;
     /*height: 2vh;*/
 }
 
