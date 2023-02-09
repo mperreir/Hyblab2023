@@ -142,7 +142,7 @@ app.get('/score/:codepostal', function ( req, res ) {
      */
     // Generate random integer between 22 and 84
     let code = req.params.codepostal
-    let score = Math.floor(Math.random() * (84 - 22 + 1) + 22);
+    let score = Math.floor(Math.random() * (84 - 70 + 1) + 70);
     if (code.length === 5 && code.split('').every(char => char >= '0' && char <= '9' )) {
         const output = {
             score: score
