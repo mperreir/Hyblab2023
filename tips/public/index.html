@@ -1,77 +1,160 @@
-<!doctype html>
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/tips/favicon-32x32.png">
 
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-  <title>Hyblab 2023</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="js/slide1.js" defer></script>
-  <script src="js/slide2.js" defer></script>
-  <script src="js/index.js" defer></script>
-</head>
-<body>
-    <!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
-    <div id="container">
-      <!-- Le loader-->
-      <section id="loader">
-        <div id="loader-img" class="ld ld-ring ld-cycle"></div>
-        <p id="loader-text">Veuillez patienter...</p>
-      </section>
-      <div id="mySwiper" class="swiper">
-        <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
-        <main class = "swiper-wrapper">
-            <section id="first-slide" class="swiper-slide">
-                <header>
-                    <h1 id="titre">Welcome to</h1>
-                </header>
-                
-                <img src="img/logo_hyblab.png" id="logo-hyblab" alt="logo hyblab"></img>
+   <script src="js/testQuizz.js" defer></script>
+   <title> Alternatips </title>
+ </head>
 
+ <body>
+    
+  <div id="container">
 
-                <!-- le footer sera rempli à partir de données lues dans un fichier Json-->
-                <footer>
-                  <p></p>
-                </footer>
-            </section>
-            <section id="second-slide" class="swiper-slide">
-                <header>
-                  <h1>This was...</h1>
-                </header>
-                <img id="img-fini" src="hyblab_2023.jpg">
-                <footer id="bandeau">
-                        <!-- Logo Hyblab -->
-                          <a href="http://www.hyblab.fr/"><img id="hyblab" src="logo_hyblab.png" alt="Hyblab DataSport"></a>
-                      
-                          <!-- Les organisateurs -->
-                          <ul>
-                            <li><a href="http://www.ouestmedialab.fr/"><img src="logo_oml.png" alt="Ouest Médialab"></a></li>
-                            <li><a href="http://www.agrnantes.fr"><img src="ecoles/logo_agr.png" alt="AGR école de l'image"></a></li>
-                            <li><a href="https://epjt.fr/"><img src="ecoles/logo_epjt.svg" alt="Ecole publique de journalisme de Tours"></a></li>
-                            <li><a href="http://www.polytech.univ-nantes.fr/"><img src="ecoles/logo_polytech.png" alt="Polytech Nantes"></a></li>
-                          <!-- Les autres logos -->
-                          <ul>
-                            <!-- Logos CC et opensource -->
-                            <li>
-                            <ul>
-                              <li class="stacked"><img id="cc" src="logo_cc.png" alt="Creative commons"></li>
-                              <li class="stacked"><img id="opensource" src="logo_opensource.png" alt="Open source"></li>
-                            </ul>
-                            </li>
-                            <!-- Logo de votre porteur de projet -->
-                            <li><a href="http://www.mon-porteur-de-projet.org"><img src="no-logo.png" alt="Logo de mon porteur de projet"></a></li>
-                            <!-- Partenaires institutionnels -->
-                            <li><a href="http://www.nantesmetropole.fr/"><img class="institutionnel" src="institutionnels/logo_nantesmetropole.png" alt="Nantes Métropole"></a></li>
-                          </ul>
-                </footer>
-            </section>
-        </main>
-        <div class="swiper-pagination"></div>
+    <section id="chargement">
+      <video src="./img/chargement.mp4" id="video" autoplay muted playsinline></video>
+    </section>
+
+    <section id="introduction" style="display: none;">
+      <div id="discourtEleph">
+        <video id = "elefunIntro" src="./img/anim_intro.mp4" autoplay muted playsinline></video>
+        <img id="phyphy" src="./img/PHYLACTERE.png" style="display: none;">
+        <p id="texteIntro" ></p>
+        <button id = "start" style="display: none;">passer</button>
+      </div>
+    </section>
+    <div id="allerCarteCont">
+      <button id="allerALaCarte" style="display: none;">Accéder à la carte</button>
+      <button id="retourCredits" style="display: none;">Retour</button>
     </div>
+
+    <section id = "jeu" style="display: none;">
+
+      <section id="menuouvert">
+        <div id="menutxt">
+          <p class="txt">Chaque thème compte :</p>
+          <p class="txt">3 questions simples</p>
+          <p class="txt">3 questions avancées</p>
+        </div>
+        <div id="choixThemes">
+          <button id="Alimentation">Alimentaire</button>
+          <button id="Jardinage">Jardinage</button>
+          <button id="Mode">Mode</button>
+          <button id="Maison">Maison</button>
+          <button id="Mobilité">Déplacement</button>
+          <button id="themeAlea">Aléatoire</button>
+        </div>
+        <div id="choixDifficulte" style="display: none;">
+          <button id="facile">Mode facile</button>
+          <button id="difficile">Mode difficile</button>
+        </div>
+        
+      </section>
+
+      <section id="corps">
+        <section id="carteQuestion" style="display: none;">
+          <div id="infoQuestContain">
+            <div id="infoQuestion">
+              <p id="difficulteQuestion"></p>
+              <h2 id="nbQuestion"></h2>
+              <p id="themeQuestion"></p>
+            </div>
+          </div>
+          
+          <div id="Images">
+            <div id="Illu">
+            </div>
+            <section id = "carteScore">
+              <div id="scoreTotal">
+              </div>
+            </section>
+          </div>
+          <div id="sectionQuestions">
+            <img src="./img/PHYLACTERE.png" id="phylactere">
+            <h2 id="question"></h2>
+          </div>
+          <div id="sectionReponses">
+          </div>
+          <div id="explication">
+          </div>
+          <div id="nextQuestionButtonContainer"></div>
+        </section>
+        
+        <div id="suivantContain">
+          <button class="boutonNav" id = "suivant" style="display: none;">Suivant</button>
+        </div>
+        <div id="nextQuestionButtonContainer"></div>
+      
+        
+        <div id="suivantContain">
+          <button class="boutonNav" id = "suivant" style="display: none;">Suivant</button>
+        </div>
+      
+        <section id="carteInitiative">
+          <div class="infoInitiatives" id="nomInitiative"></div>
+          <div class="infoInitiatives" id="adresseInitiative"></div>
+          <div id="miniCarteContain"> </div>
+          <div class="infoInitiatives" id="descriptionInitiative"></div>
+        </section>
+        <div id="voirPlusContainer"></div>
+
+        <section id="carteInitiativePlus" style="display: none;">
+          <div id="titre">
+            <div id="nomInitiativePlus"></div>
+            <img id="logoInitiative" src="" style="display: none;">
+          </div>
+          <div id="horaireOuverture"></div>
+          <div id="articleInitiative"></div>
+          <video id="videoArticle"  controls playsinline style="display: none;"></video>
+          <div id="voirMoinsContainer"></div>
+        </section>
+
+        <div id="boutonContain">
+          <button class="boutonNav" id="retourPlus" style="display: none;">Retour</button>
+          <button class="boutonNav" id="voirPlus" style="display: none;">En savoir +</button>
+          <button class="boutonNav" id="questionSuivante" style="display: none;">Question suivante</button>
+          <button class="boutonNav" id="finDuJeu" style="display: none;">Voir Score</button>
+        </div>
+
+        <section id="carteFin" style="display: none;">
+          <img  id="elefunMarche" src="./img/elefunMarche.png"></img>
+          <p>Bravo pour ton score ! </p>
+          <div id="scoreFin"></div>
+        </section> 
+
+        <section id="menu" style="display: none;">
+          <button class="itemmenu" id="boutonalea">Rejouer</button>
+          <button class="itemmenu" id="boutonmenu">Découvrir les thèmes</button>
+        </section>
+
+        <section id="carteCredits" style="display: none;">
+          <button id="credits">Crédits</button>
+          <div id="partenaires" style="display: none;">
+            <button id="retourCredits" style="display: none;">Retour</button>
+            <div id="logoContain">
+              <img class="logo" src="./img/credits/logo_nantesuniversite.png"></img>
+              <img class="logo" src="./img/credits/logo_polytech.png"></img>
+              <img class="logo" src="./img/credits/logo_agr.png"></img>
+              <img class="logo" src="./img/credits/logo_hyblab.png"></img>
+              <img class="logo" src="./img/credits/logo_epjt.svg"></img>
+            </div>
+            
+          </div>
+
+
+        </section>
+       
+
+        <div id="logoContain"></div>
+      </section>
+    </section>
+
   </div>
-</body>
+ </body>
+
 </html>

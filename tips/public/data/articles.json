@@ -1,0 +1,105 @@
+{
+    "Alimentation": {
+        "facile": {
+            "nom": "L'agronaute",
+            "article": "",
+            "ouverture" : [""],
+            "trajet" : [""],
+            "contact" : [""]
+        },
+        "difficile": {
+            "nom": "Scopéli",
+            "article": "Scopéli est un supermarché autogéré créé en 2016. Il s’engage à commercialiser des produits locaux et majoritairement bio. Leur objectif : une empreinte carbone faible et une politique zéro déchet. Pour devenir scopélien, rien de plus simple : vous payez une seule fois la somme de 50 euros et vous obtenez des parts sociales dans l’entreprise. Une fois l’inscription réalisée, vous pouvez venir faire vos courses autant de fois que vous le souhaitez ! Chaque bénévole est tenu de participer à treize vacations par an, soit trente-neuf heures dans l’année. Les vacations sont de nature différente : gérer le rayon fromage, viande ou vrac, réapprovisionner les étals, gérer les stocks ou encore tenir la caisse. L’adhésion permet également de bénéficier d’une voix lors des assemblées générales et des assemblées plénières. Alice, « une scopélienne parmi les autres », explique : « Nous sommes tous un peu propriétaires, nous marchons ensemble, nous sommes une grande famille. »",
+            "ouverture" : ["Ouvert du mardi au vendredi de 9h à 20h / Le samedi de 9h à 15h", "20 rue de l’Abbé Grégoire, 44400 Rezé"],
+            "trajet" : ["Bus ligne 36 arrêt Sorin. Navibus Trentemoult (+10 min à pied)"],
+            "contact" : ["06 28 51 25 71 ou 07. 50.58.75.38", "Mail : contact@scopeli.fr", "Facebook : @Scopéli", "Instagram : @scopeli_officiel", "Site web : https://www.scopeli.fr"]
+        }
+    },
+    "Mode": {
+        "facile": {
+            "nom": "Ding Fring",
+            "article": "Les friperies Ding Fring, présentes partout en France, dépendent de la Scop le Relais. Cette entreprise pose des bacs dans chaque ville de l’Hexagone afin de collecter des vêtements qui ne servent plus. Une fois récupérés, les vêtements sont triés à la main et les tissus en bon état sont mis en rayon dans les friperies Ding Fring. Leur tranche de prix est fixe : 4,50 euros pour toute pièce « ordinaire » (t-shirt, pantalon, robe, jupe etc.) et 15 euros les 5 pièces. Le Relais Atlantique basé à Couëron approvisionne deux fois par semaine les trois friperies Ding Fring de Nantes. Aucune des boutiques n’accepte les dons de particuliers, il est nécessaire de contacter directement le Relais.",
+            "ouverture" : [
+                "Le Relais Atlantiques :",
+                "ZAC des Hauts de Couëron 3, 26 rue Jan Palach, 44220 Couëron"
+            ],
+            "trajet" : [],
+            "contact" : [
+                "02 28 03 18 57",
+                "contact@relais-atlantique.fr",
+                "https://www.lerelais.org/relais_local.php?contact=15",
+                "5 rue Charles Brunellière, 44100 Nantes / Contact : 02 40 69 13 39",
+                "32 rue Fouré, 44000 Nantes / Contact : 02 28 03 18 57",
+                "15 rue des des Marsauderies, 44300 Nantes"
+            ]
+        },
+        "difficile": {
+            "nom": "Trocquerie",
+            "article": "",
+            "ouverture" : [""],
+            "trajet" : [""],
+            "contact" : [""]
+        }
+    },
+    "Mobilité": {
+        "facile": {
+            "nom": "Klaxit",
+            "article": "Cette application de covoiturage créée en 2012 est dédiée aux « petits trajets du quotidien ». Klaxit met en relation conducteurs et passagers. Il suffit d’indiquer son adresse de domicile, son adresse professionnelle ainsi que ses horaires de départ et l’algorithme s’occupe de tout ! La volonté de cette application : éviter d’utiliser sa voiture seul pour un trajet court. Leurs objectifs : une baisse des émissions de CO2 ainsi qu’une décongestion du trafic. Il est possible d’utiliser Klaxit au sein de la métropole nantaise, notamment dans des zones mal ou non desservies par les transports en commun. Bien que cette application soit implantée partout en France, son fonctionnement diffère suivant les départements. À Nantes, il est nécessaire d’avoir une carte de transport Libertan pour bénéficier des services de Klaxit. Si vous avez la formule sur-mesure, la course vous coûtera un euro et si vous souscrivez à la formule illimitée, vos trajets seront gratuits. La métropole nantaise rémunère également le conducteur à hauteur de deux euros par trajet. L’application vous permet d’effectuer deux trajets de covoiturage par jour maximum. Tous les majeurs peuvent s’inscrire, peu importe la date d’obtention du permis de conduire.",
+            "ouverture" : [""],
+            "trajet" : [""],
+            "contact" : ["https://www.klaxit.com"]
+        },
+        "difficile": {
+            "nom": "Vélo Campus",
+            "article": "Vélo Campus est une association créée par des étudiants de l’université de Nantes en 1997. Le but initial : récupérer des vieux vélos, les rénover puis les mettre en location à destination des étudiants. Aujourd’hui, l’activité s’est étendue. Des ateliers de vélonomie ont été mis en place : les bénévoles et salariés prodiguent leurs conseils pour apprendre à réparer son vélo en autonomie. Certains peuvent également récupérer des pièces neuves ou d’occasion afin de remettre leur vélo en état. Il est aussi possible d’acheter un vélo : les bénévoles et salariés de VéloCampus les retapent puis les vendent à moindre coût. Quelques pièces récupérées ne peuvent pas toujours être réutilisées, c’est pourquoi un atelier créatif a également vu le jour. Au programme : création d’attrapes-rêves ou de décapsuleurs. Tous ces services sont accessibles uniquement aux adhérents de l’association. L’adhésion est au prix de 16 euros. Pour les petits budgets, l’inscription est à 11 euros et au tarif de 1 euro pour les personnes migrantes. La location de vélos est destinée exclusivement aux étudiants et aux services civiques, les autres ateliers sont ouverts à tous.",
+            "ouverture" : ["Ouvert le mardi et jeudi de 15h30 à 22h et le mercredi et samedi de 14h à 18h", "3 Chemin de la Censive du Tertre, 44300 Nantes"],
+            "trajet" : ["Tramway ligne 2, arrêt Morrhonnière - Petit Port"],
+            "contact" : ["Téléphone : 02 40 16 26 45", "E-mail : contact@velocampus.net", "Site web : https://www.velocampus.net"]
+        }
+    },
+    "Maison": {
+        "facile": {
+            "nom": "La boite à récup",
+            "article": "La Boîte à Récup est une recyclerie de quartier créée en 2016. Son fonctionnement repose essentiellement sur le don. Tous les particuliers qui souhaitent donner des vêtements, des jouets, de la vaisselle, des livres ou encore des accessoires en bon état peuvent s’y rendre. Une déchetterie écologique, l’Éco-point de Nantes, les livres également toutes les trois semaines. La grille de tarifs oscille entre 20 centimes et 10 euros selon l’objet. L’association se donne deux objectifs : l’un est écologique, l’autre social. Leur but est de limiter les déchets en mettant en valeur des objets destinés à être jetés. La Boîte à Récup valorise aussi le lien social et facilite les échanges au sein du quartier. L’adhésion à l’association est à prix libre pour encourager l’engagement bénévole.",
+            "ouverture" : [
+                "Ouvert le lundi de 10h à 13h et de 14h30 à 19h et du mercredi au samedi de 10h à 13h et de 14h30 à 19h",
+                "112 Boulevard des Anglais, 44100 Nantes"
+            ],
+            "trajet" : [
+                "Lignes de Bus 10 et 54, arrêt Boulevard des Anglais",
+                "Lignes de Chronobus C3 et C6, arrêt Pointcarré"
+            ], 
+            "contact" : ["https://www.laboitearecup.fr"]
+        },
+        "difficile": {
+            "nom": "Envie",
+            "article": "Envie est un réseau de cinquante magasins en France. Cette association a été créée en 1984 à Strasbourg par Emmaüs et Darty. La boutique de Nantes a vu le jour en 1992. Le concept premier d’Envie : collecter des déchets électroménagers auprès de la grande distribution, des déchèteries et des particuliers. Le deuxième : trier et revaloriser ces déchets. Quand elles sont récupérées, ces pièces d’électroménager sont soit upcyclées, soit recyclées. Celles mises de côté par l’association sont réparées, nettoyées et souvent repeintes. Une maintenance est toujours effectuée pour des raisons de sécurité avant d’être revendu. À la boutique de Nantes, vous pourrez retrouver machines à laver, frigos, plaques de cuisson ou encore sèche-linges à moitié prix. Les trois objectifs d’Envie : fournir de l’électroménager à prix solidaire, favoriser l’emploi et réduire les déchets.",
+            "ouverture" : [
+                "Comptoir Envie au Solilab, 8 Rue St Domingue, 44200 Nantes",
+                "Du mardi au samedi  de 10h30 à 13h30 et de 14h30 à 18h30",
+                "Pour contacter le magasin : 02.40.08.09.68 ou comptoirenvie44@envie.org",
+                "Siège social  : 18 Rue Bobby Sands, 44800 Saint-Herblain",
+                "Du lundi au samedi : 10h – 13h / 14h – 18h"
+            ],
+            "trajet" : ["Bus ligne 5, arrêt Hangar à bananes"],
+            "contact" : ["https://www.velocampus.net",
+                        "02 40 43 21 11 ou magasin44sth@envie.org"]
+        }
+    },
+    "Jardinage": {
+        "facile": {
+            "nom": "Brocante verte",
+            "article": "",
+            "ouverture" : [""],
+            "trajet" : [""],
+            "contact" : [""]
+        },
+        "difficile": {
+            "nom": "Les composteurs du bocage nantais",
+            "article": "En 2015, les habitants de l’avenue Camille Guérin ont décidé de créer une association. Son nom : les composteurs du bocage nantais. Leurs activités sont nombreuses : compostage, jardin partagé, hôtel à insectes, discussions littéraires, apéros et aquaponie, technique qui consiste à arroser les plantes avec une eau où vivent les poissons, ce qui leur amène des vitamines et des minéraux. Pour intégrer l’association, enregistrez votre prénom et payez 5 euros pour l’année via un lien HelloAsso disponible sur le site web. Afin de fabriquer son compost, apportez des restes de légumes, fruits et épluchures lors des permanences. Vous pourrez en récupérer toutes les six à sept semaines une fois le bac plein. Les composteurs du bocage nantais vous attendent.",
+            "ouverture" : ["Permanence le mardi soir de 19h15 à 19h45 et le samedi de 11h30 à 12h15", "À l'angle de la rue du Coudray et de l'avenue Camille Guérin, 44000 Nantes"],
+            "trajet" : ["Bus C6 arrêt Chalet", "Bus C1 arrêt Saint Donatien, en face du magasin Picard"],
+            "contact" : ["Facebook : Les composteurs du bocage nantais", "Site web : https://www.les-composteurs-du-bocage-nantais.fr", "Lien HelloAsso d’adhésion : https://www.helloasso.com/associations/les-composteurs-du-bocage-nantais/adhesions/cotisation-2023"]
+        }
+    }
+}

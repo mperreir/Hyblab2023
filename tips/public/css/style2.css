@@ -1,0 +1,107 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: "Space Grotesk";
+}
+
+body{
+    background-color: #FFFBF0;
+    overflow: hidden;   /* to avoid slider bugs on some browsers */
+    font-family: SpaceGrotesk;
+}
+
+button {
+    color: black;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 1em;
+    font-size: 0.2em;
+    box-shadow: 6px 6px black;
+    position: relative;
+}
+
+button:hover {
+    box-shadow: 6px 6px black;
+    top: 2px;
+}
+
+button:active {
+    box-shadow: 0 0;
+    top: 6px;
+}
+
+#buttonContain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+button {
+    background-color: #FFFBF0;
+}
+
+#initiativeListConteneur {
+    text-align: center;
+    height : auto;
+    width : 100%;
+    font-size: 0.25em;
+    font-weight: normal;
+    background-color: #FFFBF0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#retourPagePrincipal{
+    display: flex;
+    
+}
+
+/* When the aspect ratio is smaller that 3/4, display a 3/4 content */
+#container{
+    position: fixed; /* To set the size of the container to 100% of the visible viewport height AND for absolute positionning of child elements*/ 
+    height: 100%;   /* even on mobile devices with url or navigation bars */
+    margin-left: calc((100vw - 100 * 3vh / 4) / 2); /* Add black bands on left and right */
+    width: calc(100 * 3vh / 4); /* Force 3/4 aspect ratio */
+}
+
+body{
+    font-size: calc(15vh * 3 / 4);
+}
+
+/* Fill the whole viewport when its aspect ratio is between 9/16 and 3/4 */
+@media screen and (max-aspect-ratio: 3/4) {
+    #container{
+        margin-left: 0; /* reset margin-left */
+        width: 100vw; /* content is full width (and full height because of the default rule for container height */
+    }
+
+    /* We set a default font size here. It will be the base for all other font sizes */
+    /* Here the font size is proportional to content width */
+    body{
+        font-size: 15vw;
+    }
+}
+
+/* The content is displayed at 9/16 If the aspect ratio is higher that 9/16  */ 
+@media screen and (max-aspect-ratio: 9/16) {
+    #container{
+        margin-left: 0; /* reset left margin */
+        width: 100vw;   /* content is full width */
+        margin-top: calc(-50 * 16vw / 9); /* move the content half the height to the top */
+        top:50%; /* then center it ! */
+        height: calc(100 * 16vw / 9); /* adjust height so that aspect ratio is 9/16 */
+    }
+
+    /* We set a default font size here. It will be the base for all other font sizes */
+    /* Here the font size is proportional to content width */
+    body{
+        font-size: 15vw;
+    }
+}
