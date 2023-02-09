@@ -1,11 +1,9 @@
 "use strict";
-
+//Initialisation des variables globales
 let IndicThermo = 85;
 let IndicMoney = 80;
 let IndicHappy = 50;
-
 let alreadyload = 0;
-
 let next_Question = 1
 
 
@@ -21,13 +19,11 @@ swiper.on("slideChange", function () {
 
   switch( swiper.activeIndex ) {
    
-    case 0:
-      
+    case 0:   
       initSlideVideo();
       break;
 
     case 1:
-     
       initSlideAccueil();
       break;
 
@@ -47,16 +43,16 @@ swiper.on("slideChange", function () {
 
     case 5: 
       if(next_Question == 2){
-      swiper.disable();
-      initSlideQuestion2(next_Question);
+        swiper.disable();
+        initSlideQuestion2(next_Question);
       }
       else(swiper.slideTo(7,1))
       break;
 
     case 6: 
-    if(next_Question == 3){
-      swiper.disable();
-      initSlideQuestion3(next_Question);
+      if(next_Question == 3){
+        swiper.disable();
+        initSlideQuestion3(next_Question);
       }
       else(swiper.slideTo(7,1))
       break;
@@ -72,24 +68,24 @@ swiper.on("slideChange", function () {
 
     case 9: 
       if(next_Question == 4){
-      swiper.disable();
-      initSlideQuestion4(next_Question);
+        swiper.disable();
+        initSlideQuestion4(next_Question);
       }
       else(swiper.slideTo(12,1))
       break;
 
     case 10: 
     if(next_Question == 5){
-      swiper.disable();
-      initSlideQuestion5(next_Question);
+        swiper.disable();
+        initSlideQuestion5(next_Question);
       }
       else(swiper.slideTo(11,1))
       break;
 
     case 11: 
-    if(next_Question == 6){
-      swiper.disable();
-      initSlideQuestion6(next_Question);
+      if(next_Question == 6){
+        swiper.disable();
+        initSlideQuestion6(next_Question);
       }
       else(swiper.slideTo(12,1))
       break;
@@ -104,9 +100,9 @@ swiper.on("slideChange", function () {
     break;
 
     case 14: 
-    if(next_Question == 7){
-      swiper.disable();
-      initSlideQuestion7(next_Question);
+      if(next_Question == 7){
+        swiper.disable();
+        initSlideQuestion7(next_Question);
       }
       else(swiper.slideTo(15,1))
     break;
@@ -117,7 +113,7 @@ swiper.on("slideChange", function () {
         initEndSlide();
       }
       else(swiper.allowSlidePrev=false)
-    break;
+      break;
 
     default:
       initSlideFin();

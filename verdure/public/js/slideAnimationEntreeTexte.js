@@ -16,11 +16,8 @@ const initSlideAnimationEntreeTexte = function(){
   haut.setAttribute('style', 'transform :translateY(-400%);');
   bas.setAttribute('style', 'transform :translateY(500%);');
   
+//Animations entrée des zones 
 
-
-  // Animate it
-
-/*****Easing elastic */
   anime({
     targets : "#quatre-zones .img_haut",
     translateY: 0,
@@ -51,6 +48,7 @@ const initSlideAnimationEntreeTexte = function(){
     easing : "linear"
   })
 
+  //Animation de la main de scroll
   anime({
     targets :'#scrollEntreeTexte',
     translateY: 10,
@@ -58,13 +56,6 @@ const initSlideAnimationEntreeTexte = function(){
     easing: 'easeInOutSine',
     loop : true
   })
-//   anime({
-//     targets: "#quatre-zones ",
-//     scale: 1.2,
-//     delay : 1400,
-//     direction: 'normal',
-//     duration :2000,
-//   })
 
 setTimeout(()=> {
   swiper.enable()
@@ -78,10 +69,8 @@ function UpdateSrcImage(id){
   if(id === '#animationSlideDroit'){selectedZone[3] = 'friche';};
   if(id === '#animationSlideHaut'){selectedZone[2] = 'place';};
 
-
   document.querySelector(id + ' .img_bas').src = './img/'+selectedZone[1]+'.png';
   document.querySelector(id + ' .img_gauche').src =  './img/'+selectedZone[0]+'.png';
   document.querySelector(id + ' .img_haut').src =  './img/'+selectedZone[2]+'.png';
   document.querySelector(id + ' .img_droit').src =  './img/'+selectedZone[3]+'.png';
-
 }

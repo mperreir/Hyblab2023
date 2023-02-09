@@ -2,7 +2,6 @@
 
 const initSlideAnimationBas = function(){
 
-
   UpdateSrcImage('#animationSlideBas');
   const droit = document.querySelector('#animationSlideBas .img_droit');
   var route = document.getElementById('route1');
@@ -11,21 +10,14 @@ const initSlideAnimationBas = function(){
     // (Re)set initial position of img
   droit.setAttribute('style', 'transform :scale(1);');
 
-  // Animate it
-
-
-  /*******
-   * GREEN TON place
-   */
-
   var logo2 = document.querySelector('#logoSlideBas');
 
   // (Re)set initial scale of logo
   logo2.setAttribute('style', 'transform : translateY(-50vh);');
   logo2.setAttribute('style', 'transform : scale(1);');
   
+//Animations sortie des zones 
 
-/*****Easing elastic */
   anime({
     targets : "#animationSlideBas .img_haut",
     translateY: -2700,
@@ -45,18 +37,7 @@ const initSlideAnimationBas = function(){
     delay : 1200
   });
 
-  // anime({
-  //   targets : "#animationSlideBas .route",
-  //   scale:0,
-  //   delay : 100,
-  //   easing: 'easeInOutSine',
-  //   direction: 'normal',
-  //   duration :2000,
-  // })
-
-  
-
-  //animation finale
+  //Animation zoom sur zone restante
   anime({
     targets: "#animationSlideBas .img_bas",
     scale: 3,
