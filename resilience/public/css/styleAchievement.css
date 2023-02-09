@@ -95,10 +95,6 @@
 
 }
 
-
-
-
-
 .achievement-any {
     background-color: white;
     border: solid;
@@ -154,7 +150,9 @@
 }
 
 .video {
-    margin: 2rem auto auto 2rem;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 .bold {
