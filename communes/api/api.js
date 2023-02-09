@@ -144,7 +144,10 @@ app.get('/score/:codepostal', function ( req, res ) {
     let code = req.params.codepostal
     let score = Math.floor(Math.random() * (84 - 22 + 1) + 22);
     if (code.length === 5 && code.split('').every(char => char >= '0' && char <= '9' )) {
-        res.json(score);
+        const output = {
+            score: score
+        }
+        res.json(output);
     }
     // Check if all the characters from the code are digits
     res.status(500).send('Internal Server Error');

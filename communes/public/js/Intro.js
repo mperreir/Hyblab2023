@@ -80,9 +80,8 @@ document.querySelector(".skip").addEventListener("click", function () {
 function submitPostal(){
     let codePostal = document.querySelector("#name").value;
 
-    fetch('../api/score/' + codePostal).then(
-        function(response) {
-            // if reponse status === 500
+    fetch('../api/score/' + codePostal).then((response) => response.json())
+        .then(function(response) {
             if (response.status === 500) {
                 alert("code postal non valide")
             } else {
