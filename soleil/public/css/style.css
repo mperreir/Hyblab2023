@@ -300,7 +300,6 @@ header{
 
 .choix-texte2{
     font-size: 3.5vw;  /* 2vw */
-    line-height: 20px;
     box-sizing: border-box;
     padding : 1vw;
     border: 0.75px solid rgba(0, 0, 0, 0.35);
