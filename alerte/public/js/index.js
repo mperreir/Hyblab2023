@@ -37,7 +37,7 @@ function changeBackground(color) {
 
 let next0 = document.getElementById("next0")
 next0.addEventListener("click", () => {
-    display("s16")
+    display("s1")
     changeBackground('#121212')
 })
 
