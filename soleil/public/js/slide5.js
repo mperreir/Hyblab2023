@@ -1,9 +1,13 @@
-"use strict";
+"use strict"; // ORIENTATION
 var executed5 = false;
 
 const initSlide5 = function(){
     if(!executed5){
         executed5 = true;
+        $("#orientation .open-button").click(function(){
+            swiper.slideTo(12, 0);
+
+        })
         $("#orientation header button").click(function(){
             
         });
