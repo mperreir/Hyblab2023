@@ -1,0 +1,87 @@
+body {
+    height : 100vh;
+    width : 100vw;
+    left: 0;
+    margin: 0;
+    overflow: scroll;
+}
+
+h1 {
+    margin-top: 10vh;
+    font-size: 6vw;
+}
+
+h2 {
+    font-size: 5vw;
+}
+
+.texte-principal {
+    font-size: 4vw;
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 4vh;
+    margin-top: 1vh;
+}
+
+.table td {
+    width: 100vw;
+    text-align: left;
+    padding-left: 6vw;
+}
+
+.img-fini {
+    width: 100vw;
+    display: block;
+    left : 0;
+    border-radius: 10vw 10vw 0% 0%;
+    margin-top: 8vh;
+    z-index: 1;
+}
+
+#container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFF8F1;
+    border-radius: 10vw 10vw 0% 0%;
+}
+
+.container1, .container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding-top: 2vh;
+}
+
+.container1 div, .container2 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    height: 5vh;
+}
+
+.container1 img, .container2 img {
+    padding: 1vw;
+    height: 6vw;
+}
+
+#bandeau {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.hyblab {
+    width: 100vw;
+    margin-top: -5vh;
+}
+

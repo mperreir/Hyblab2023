@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Liste des Animaux de cette Famille</title>
+  <link rel="styleSheet" href="./css/animalInfoStyle.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/animalInfo.js"></script>
+</head>
+<body>
+<header>
+  <img src="./img/croix_beige.png" id="quit" alt="exit button">
+  <div id="picture-div"><img id="animal-picture" src="" alt="Picture Not Found"></div>
+  <h6 id="copyright"></h6>
+</header>
+<main>
+  <script>
+    const animal = localStorage.getItem("animal");
+    animalInfo(animal);
+  </script>
+  <h1 id="animal-name"></h1>
+  <h5 id="desc">Les </h5>
+  <div id="menace">
+    <h5 id="menace-txt">enjeu de conservation</h5>
+    <h5 id="menace-level"></h5>
+  </div>
+  <div id="map"><h5></h5></div>
+</main>
+<footer>
+  <img id="mascotte" src="./img/charadesign-ficheanimal.png" alt="mascotte">
+  <div id="tips">
+    <h5>Le saviez-vous ?</h5>
+    <img src="./img/ligne_le_saviez_vous.png" alt="ligne" id="line-le-saviez-vous">
+  </div>
+  <h5 id="tips-text">Découvrez comment vous pouvez aider les </h5>
+  <img src="./img/fleche_beige.png" id="fleche2" alt="arrow button">
+</footer>
+</body>
+</html>

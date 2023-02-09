@@ -1,0 +1,174 @@
+body{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #FBC5EB;
+    margin: 0;
+}
+
+#pop-up{
+    display: none;
+}
+#animal-picture{
+    z-index: -5;
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    /*if no picture*/
+    font-size: 2vh;
+    text-align: center;
+    color: #0B6E5F;
+    font-family: 'Prompt', sans-serif;
+}
+#copyright{
+    z-index: 100;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    transform-origin: 100% 50%;
+    rotate: -90deg;
+    font-family: 'Prompt', sans-serif;
+    font-size: 1.2vh;
+    color: #FFF8F1;
+}
+#quit{
+    max-width: 7vw;
+    height: auto;
+    position: absolute;
+    right: 4vw;
+    top: 2.5vh;
+}
+
+
+main{
+    margin-top: -15%;
+    background-color: #FBC5EB;
+    border-radius: 10vw 10vw 0 0;
+    height: 68.2vh;
+}
+
+#animal-name{
+    position: absolute;
+    font-family: 'Prompt', sans-serif;
+    color: #FFF8F1;
+    left: 5%;
+    margin-top: 1%;
+    font-size: 6vw;
+}
+
+#desc{
+    position: absolute;
+    font-family: 'Prompt', sans-serif;
+    font-size: 2vh;
+    font-weight: lighter;
+    color: #0B6E5F;
+    left: 4%;
+    margin-top: 11.5%;
+}
+#menace{
+    position: absolute;
+    background-color: #FFF8F1;
+    font-family: 'Prompt', sans-serif;
+    color: #0B6E5F;
+    width: 94vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 20%;
+    border-radius: 10vw;
+}
+#menace #menace-txt{
+    font-size: 2.9vh;
+    font-weight: lighter;
+    max-width: 70%;
+    line-height: 3vh;
+    text-align: center;
+    margin-top: 1.6vh;
+    margin-bottom: 5vh;
+    transform: translate(20%, 0);
+}
+#menace #menace-level{
+    font-size: 3vh;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -4vh;
+    margin-bottom: 1vh;
+}
+
+#map{
+    position: absolute;
+    background-color: #FFF8F1;
+    width: 94%;
+    height: auto;
+    right: 3%;
+    bottom: 28vh;
+    border-radius: 10vw;
+    font-size: 3vh;
+    font-family: 'Prompt', sans-serif;
+    color: #0B6E5F;
+    text-align: center;
+    line-height: 10vh;
+}
+#map h5{
+    text-align: center;
+    font-size: 2.5vh;
+    font-weight: lighter;
+    font-family: 'Prompt', sans-serif;
+    color: #0B6E5F;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
+footer{
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+}
+#mascotte{
+    position: absolute;
+    right: 2%;
+    bottom: 0;
+    width: 33%;
+    height: auto;
+}
+#tips{
+    position: absolute;
+    left: 19vw;
+    bottom: 14.5vh;
+}
+#tips h5{
+    font-family: "Covered By Your Grace", cursive;
+    font-size: 3vh;
+    font-weight: lighter;
+    color: #0B6E5F;
+}
+#tips #line-le-saviez-vous{
+    position: absolute;
+    top: 70%;
+    width: 105%;
+    left: -4%;
+    margin-top: -7%;
+}
+
+#tips-text{
+    position: absolute;
+    font-family: 'Prompt', sans-serif;
+    line-height: 2.8vh;
+    font-size: 2vh;
+    font-weight: lighter;
+    color: #0B6E5F;
+    width: 60%;
+    text-align: center;
+    bottom: 8.7vh;
+    left: 35%;
+    transform: translate(-50%, 0);
+}
+#fleche2{
+    position: absolute;
+    max-width: 9vw;
+    left: 35%;
+    bottom: 8.3vh;
+    transform: translate(-50%, 0);
+
+}

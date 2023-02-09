@@ -1,0 +1,177 @@
+body {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #FBC5EB;
+}
+
+.swiper-wrapper {
+    align-items: center
+}
+
+.horizontal-slider {
+    font-family: Prompt, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FBC5EB;
+    font-family: 'Prompt', sans-serif;
+    color : #0B6E5F;
+}
+
+.swiper-slide {
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#Oiseaux {
+    background-image: url("../img/decors-mascotte-oiseaux.png");
+}
+
+#Rhopalocères {
+    background-image: url("../img/decors_rhopaloceres.png");
+}
+
+#Odonates {
+    background-image: url("../img/decor_odonate.png");
+}
+
+#Chiroptères {
+    background-image: url("../img/decor_chiroptere.png");
+}
+
+#Mammifères {
+    background-image: url("../img/decors-mammiferes.png");
+}
+
+#Reptiles {
+    background-image: url("../img/decors-mascotte-reptiles.png");
+}
+
+#Amphibiens {
+    background-image: url("../img/decors-mascotte-amphibiens.png");
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-slide .commune {
+    position: absolute;
+    margin-top: -120%;
+    font-size: 4vh;
+}
+
+.green {
+    color: #0B6E5F;
+}
+
+.white {
+    color: #FFF8F1;
+}
+
+.button {
+    border: none;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-top: 70%;
+    border-radius: 60px;
+    width: 80%;
+    height: 7%
+}
+
+.button {
+    background-color: #FFF8F1;
+    color: #0B6E5F;
+    border: 0.4vh solid #0B6E5F;
+}
+
+.decouvrir {
+    font-family: 'Prompt', sans-serif;
+    font-size: 4vw;
+    margin: auto;
+}
+
+.button:hover {
+    background-color: #0B6E5F;
+    color: #FFF8F1;
+}
+
+.groupe {
+    position: absolute;
+    font-size: 2vh;
+    color: #0B6E5F;
+    margin-top: 65vh;
+}
+
+.swiper-pagination-bullet {
+    position: relative;
+    width: 2vw;
+    height: 2vw;
+    display: inline-block;
+    background: none;
+    border: 0.2em solid #0B6E5F;
+    bottom: 10vh;
+}
+
+.swiper-pagination-bullet-active {
+    background: #0B6E5F;
+    border: 0.2em solid #0B6E5F;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after,
+.swiper-button-prev::before,
+.swiper-button-next::before {
+    content: "";
+}
+
+.swiper-button-prev {
+    background-image: url("../img/fleche_decor_g.png") !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 6vw;
+    height: 8vh;
+    margin-left: 1vh;
+    margin-top: 30vh;
+}
+
+.swiper-button-next {
+    background-image: url("../img/fleche_decor_d.png") !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 6vw;
+    height: 8vh;
+    margin-right: 1vh;
+    margin-top: 30vh;
+}
