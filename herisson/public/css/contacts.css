@@ -85,10 +85,10 @@ h1 {
     bottom: 0;
     background-color: #FFF8F1;
     width: 100vw;
-    height: 45vh;
+    height: 40vh;
     margin-right: 0;
     margin-left: 0;
-    margin-top: 5vh;
+    margin-top: 20vh;
     border-top-left-radius: 15%;
     border-top-right-radius: 15%;
     margin-bottom: 0;
@@ -100,7 +100,7 @@ h1 {
     color: #0B6E5F;
     font-weight: bold;
     font-family: Prompt, sans-serif;
-    font-size: 2vh;
+    font-size: 4vw;
     text-align: center;
     margin-bottom: 0;
 }
@@ -109,7 +109,8 @@ h1 {
     display: block;
     color: #0B6E5F;
     font-family: Prompt, sans-serif;
-    font-size: 2vh;
+    font-size: 3.8vw;
     text-align: center;
     margin-bottom: 3vh;
+    text-decoration: none;
 }
