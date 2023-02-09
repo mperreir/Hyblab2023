@@ -98,6 +98,7 @@
 
 
 
+
 .achievement-any {
     background-color: white;
     border: solid;
@@ -145,4 +146,17 @@
 .data-8,
 .achievement-8 {
     background-color: #FF73BA;
+}
+.up-arrow{
+    transform: rotate(-90deg);
+    display: flex;
+    margin: 2rem auto;
+}
+
+.indent {
+    padding-left: 2rem;
+}
+
+.shortSkip{
+    margin-top: 0.5rem;
 }

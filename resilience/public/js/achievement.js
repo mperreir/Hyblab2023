@@ -2,7 +2,6 @@ async function achievement() {
     let response = await fetch(`data/achievement.json`);
     const achievements = await response.json();
     let result = document.querySelector('#achievements');
-
     for (let i = 0; i < achievements.achievements.length; i++) {
 
         let achiev = achievements.achievements[i];
@@ -38,6 +37,11 @@ async function achievement() {
         htmlData.classList.add('data');
         htmlData.classList.add(`data-${achiev.ID}`);
 
+        let htmlImage = document.createElement("img");
+        htmlImage.src = "./img/ux_kit/fleche_droite.svg";
+        htmlImage.classList.add('up-arrow')
+        htmlImage.classList.add('fermer')
+
         // Parse Achievement data
         achiev.data.forEach(e => {
             let htmlE = document.createElement('p');
@@ -65,14 +69,15 @@ async function achievement() {
                     htmlE.href = e.link;
                     break;
                 default:
-                    console.log("Unknown type : "+ e.type);
+                    console.log("Unknown type : " + e.type);
             }
-            
+
             e.class.forEach(c => {
                 htmlE.classList.add(c);
             });
 
             htmlData.appendChild(htmlE);
+            htmlData.appendChild(htmlImage);
         });
 
         let isOpen = false;
@@ -94,6 +99,26 @@ async function achievement() {
                 }
             }
         });
+        htmlImage.addEventListener('click', function () {
+            if (window.localStorage.getItem("achievement".concat(htmlAchiev.id)) == "true") {
+                if (window.localStorage.getItem("achievement".concat(htmlAchiev.id))) {
+                    let currentData = document.querySelector('.data');
+                    if (currentData) {
+                        currentData.remove();
+                    }
+                    if (isOpen) {
+                        htmlData.remove();
+                        isOpen = false;
+                    } else {
+                        htmlAchiev.appendChild(htmlData);
+                        isOpen = true;
+                    }
+                }
+            }
+        });
+
+
+
 
         let htmlAchievVisible = document.createElement('div');
         htmlAchievVisible.setAttribute('id', 'visible');
@@ -108,4 +133,4 @@ achievement();
 
 function map() {
     window.location = "./map.html"
-}
+};
