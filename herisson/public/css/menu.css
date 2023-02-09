@@ -4,7 +4,7 @@
     font-weight: 700;
     margin-bottom: 12vh;
     margin-top: 12vh;
-    font-size: 3em;
+    font-size: 8vw;
 }
 
 .sousTitresMenu
@@ -13,7 +13,7 @@
     color: #0B6E5F;
     font-weight: 500;
     margin-bottom: 2vh;
-    font-size: 3.75vh;
+    font-size: 6vw;
 }
 
 .ligneSeparation
@@ -26,7 +26,6 @@
 #texteMenu
 {
     text-align: center;
-    font-size: 2.75vh;
     font-family: 'Prompt', sans-serif;
     /*margin-top: 5em;*/
     position: absolute;
@@ -45,7 +44,7 @@
     color: #0B6E5F;
     font-weight: 400;
     text-align: center;
-    font-size: 2vh;
+    font-size: 4vw;
 }
 
 header.main
