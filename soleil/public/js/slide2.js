@@ -30,8 +30,6 @@ async function initSlide2() {
       });
     })
     $('#adresse input').on('input', async function () { // au changement de caractere
-      if ($("#adresse input").val().charAt($("#adresse input").val().length - 1) == " ") {
-        
         let pa = await getPossibleAddresses($("#adresse input").val());
         console.log(pa);
 
@@ -52,7 +50,6 @@ async function initSlide2() {
           $('#adresse input').val($(this).html());
           $("div.result").hide();
         })
-      }
     });
 
 
