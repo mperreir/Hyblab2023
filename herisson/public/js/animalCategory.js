@@ -1,8 +1,3 @@
-const animalCategory = "Oiseaux";
-const commune = "Bordeaux";
-const db = "data/db.json";
-const dbAdd = "data/additionalDB.json";
-
 async function createAnimalCategory(commune, animalCategory) {
     /*function to create a dictionary of the wanted animals*/
     async function getAllAnimals() {
