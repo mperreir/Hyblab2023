@@ -17,7 +17,7 @@ async function vote() {
 
     let htmlVotes = document.getElementById("votes");
 
-    await data.forEach(async solution => {
+    for (const solution of data) {
         let htmlSolution = document.createElement('div');
         htmlSolution.classList.add('solution');
         htmlSolution.textContent = description[solution.id];
@@ -52,7 +52,7 @@ async function vote() {
 
         htmlSolution.appendChild(htmlVote);
         htmlVotes.appendChild(htmlSolution);
-    });
+    }
 
     let htmlSubmit = document.createElement('div');
     htmlSubmit.classList.add('submit');

@@ -1,21 +1,41 @@
-
 #container {
     background-color: #79B77B;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 1em;
+    margin-top: 0.2em;
 }
 
+#felicitation{
+    position: relative;
+    font-size: 20%;
+    text-align: center;
+    top: 50%;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
 
 #votes {
+    position: relative;
+    width: 100%;
+    border-top: 1px solid #000000;
     background-color: pink;
+    top: 60%;
 }
 
 .vote {
     background-color: #79B77B;
-    display: flex;
-    height: 3rem;
+
 }
 
 .note {
-    display: flex;
     background-color: white;
     height: 1rem;
     width: 1rem;
@@ -28,10 +48,8 @@
 }
 
 #logo-ecotopie{
-    width: 35%;
+    width: 30%;
     position: absolute;
-    margin-left: 30%;
-    margin-right: 30%;
 }
 
 #voy-ecotopie{
@@ -40,20 +58,4 @@
     width: 70%;
     position: absolute;
     margin-top: 40%;
-}
-
-#felicitation{
-    position: absolute;
-    font-size: 25%;
-    text-align: center;
-    margin: 10%;
-    top: 50%;
-}
-
-.fleche_bas{
-    width: 10%;
-    position: absolute;
-    left: 45%;
-    right: 45%;
-    top: 130%;
 }
