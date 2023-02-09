@@ -29,6 +29,7 @@ header div {
 .form__group {
     position: absolute;
     padding: 15px 0 0;
+    bottom: 48%;
     margin-top: 5%;
     right: 5%;
     width: 50%;
@@ -92,9 +93,18 @@ body {
     background-color:#222222;
 }
 .swiper-pagination-bullet-active{
-    background-color : #35A88A;
+    background-color : #35A88A !important;
 }
 
+input[type=button] {
+    background-color: #04AA6D;
+    padding: 1em 2em;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    border: none;
+    border-radius: 4em;
+    margin-top: 6%;
+}
 .button {
     border-radius: 40px 40px 40px 40px;
     padding: 8px;

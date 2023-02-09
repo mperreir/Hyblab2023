@@ -4,132 +4,84 @@
 const initSlide2 = function(data){
   /* Pie chart */
   document.querySelector('#desc-pie-chart').innerHTML = data.piechart.description;
-  const pie_chart = document.querySelector('#pie-chart');
-  const pie_width = pie_chart.clientWidth;
-  const pie_height = pie_chart.clientHeight;
-  const coeff = 0.8;
-  create_pie_chart(data.piechart.data[0], data.color.main[0], data.color.background[0], pie_chart, pie_width, pie_height, coeff);
-  create_pie_chart(data.piechart.data[1], data.color.main[0], data.color.background[0], pie_chart, pie_width, pie_height, coeff);
+
+  create_pie_chart(data.piechart.data[0], '#pie-chart', data.color.main[0], data.color.background[0]);
+  create_pie_chart(data.piechart.data[1], '#pie-chart', data.color.main[0], data.color.background[0]);
 
   /* Bar chart */
   document.querySelector('#desc-bar-chart').innerHTML = data.barchart.description;
-  const bar_chart = document.querySelector('#bar-chart');
-  const bar_width = bar_chart.clientWidth;
-  const bar_height = bar_chart.clientHeight;
 
-  create_bar_chart(data.barchart.data, bar_chart, bar_width, bar_height, data.color.main.slice(0, 2), data.color.background[0]);
+  d3.xml("../img/slope-chart.svg").then(function(xml) {
+    var importedNode = document.importNode(xml.documentElement, true);
+    d3.select(importedNode).attr("width", "100%").attr("height", "100%");
+    d3.select("#slope-chart").node().appendChild(importedNode);
+  });
 };
 
-
-const create_pie_chart = function(data, main_color, secondary_color, selector, width, height, coeff){
-  const radius = Math.min(width, height) / 2 * coeff;
+const create_pie_chart = function(data, selector, main_color, secondary_color) {
+// Set the dimensions of the view box
+  var width = 170,
+      height = 181,
+      viewBox = "0 0 " + width + " " + height,
+      radius = Math.min(width, height) / 2;
 
   const d = [
     {value: data.value, color: main_color},
-    {value: 100 - data.value, color: secondary_color},
+    {value: 100 - data.value, color: secondary_color}
   ];
 
-  const svg = d3.select(selector)
+// Define the arc generator for the pie chart
+  var arc = d3.arc()
+      .outerRadius(radius - 10)
+      .innerRadius(0);
+
+// Define the pie generator for the data
+  var pie = d3.pie()
+      .sort(null)
+      .value(function (d) {
+        return d.value;
+      });
+
+// Create the SVG element
+  var svg = d3.select(selector)
       .append("div")
       .attr("class", "pie-chart")
       .append("svg")
-      .attr("viewBox", [0, 0, radius * 2, height])
-      .append('g')
-      .attr('transform', `translate(${radius},${radius})`);
+      .attr("viewBox", viewBox)
+      .append("g")
+      .attr("transform", "translate(" + width / 2 + "," + (radius - 10) + ")");
 
-  const pie = d3.pie()
-      .value(d => d.value)
-      .sort(null);
 
-  const arc = d3.arc()
-      .outerRadius(radius)
-      .innerRadius(0);
-
-  const g = svg.selectAll('.arc')
+// Bind the data to the pie chart
+  var g = svg.selectAll(".arc")
       .data(pie(d))
-      .enter().append('g')
-      .attr('class', 'arc');
+      .enter().append("g")
+      .attr("class", "arc");
 
-  g.append('path')
-      .attr('d', arc)
-      .style('fill', d => d.data.color);
+// Append the path element for each slice of the pie chart
+  g.append("path")
+      .attr("d", arc)
+      .style("fill", function (d) {
+        return d.data.color;
+      });
+
 
   g.filter(d => d.index === 0)
       .append('text')
-      .attr('transform', d => `translate(${arc.centroid(d)})`)
-      .attr('dy', '.35em')
+      .attr("transform", function (d) {
+        return "translate(" + arc.centroid(d) + ")";
+      })
+      .attr("dy", ".35em")
       .style('fill', '#ffffff')
-      .style('font-size', '10px')
+      .style('font-family', 'Poppins')
       .style('text-anchor', 'middle')
       .text(d => d.data.value + '%');
 
-    svg.append("text")
-        .attr("text-anchor", "middle")
-        .attr("dominant-baseline", "central")
-        .attr("transform", `translate(0, ${radius * (2 - coeff) })`)
-        .style("font-size", "13px")
-        .style("fill", "#000000")
-        .text(data.year);
-}
-
-const create_bar_chart = function(data, selector, width, height, colors, rectangle_color){
-  const top = 20;
-  const bottom = 20;
-  const padding = width * 0.1;
-
-  var colors_map = d3.scaleOrdinal()
-      .domain(data.map(function(d) { return d.year; }))
-      .range(colors);
-
-  var x = d3.scaleLinear()
-      .domain(data.map(function(d) { return d.year; }))
-      .range([padding, width - width * 0.05 - padding]);
-
-  var y = d3.scaleLinear()
-      .domain([0, d3.max(data, function(d) { return d.value; })])
-      .range([0, height - top - bottom]);
-
-  var svg = d3.select(selector)
-      .append("svg")
-      .attr("viewBox", [0, 0, width, height])
-
-  svg.selectAll(".bar")
-      .data(data)
-      .enter()
-      .append("rect")
-      .attr("class", "bar")
-      .attr("x", function (d) { return x(d.year); })
-      .attr("y", function(d) { return height - y(d.value) - bottom; })
-      .attr("width", width * 0.05)
-      .attr("height", function(d) { return y(d.value); })
-      .style("fill", function(d, i) { return colors_map(i); });
-
-  svg.append("rect")
-      .attr("x", padding / 2)
-      .attr("y", height - bottom - bottom / 3 + 1)
-      .attr("width", width - padding)
-      .attr("height", 8)
-      .style("fill", rectangle_color);
-
-  svg.selectAll("text")
-      .data(data)
-      .enter()
-      .append("text")
-      .attr("x", function(d) { return x(d.year) + width * 0.05 / 2; })
-      .attr("y", function(d) { return height - y(d.value) - bottom - 5;})
-      .text(function(d) { return d.value + ' TW'; })
-      .style("text-anchor", "middle")
-      .style("font-size", "12px")
-      .style("fill", "black");
-
-  svg.selectAll(".year-label")
-      .data(data)
-      .enter()
-      .append("text")
-      .attr("x", function(d) { return x(d.year) + width * 0.05 / 2; })
-      .attr("y", height - 2)
-      .text(function(d) { return d.year; })
-      .style("text-anchor", "middle")
-      .style("font-size", "15px")
-      .style("fill", "black");
+  svg.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("transform", `translate(0, ${radius+5})`)
+      .style("font-family", "Poppins")
+      .style("fill", "#000000")
+      .text(data.year);
 }
