@@ -94,6 +94,7 @@ function getRadiationData(latitude, longitude) {
 }
 
 // getRadiationData(44.083, 5.059);
+
 function readRadiationData(orientation, inclinationAngle, latitude, callback) {
     let inputStream = fs.createReadStream('./data/temp/wps', 'utf-8');
     let totalEnergy = 0;
@@ -112,7 +113,8 @@ function readRadiationData(orientation, inclinationAngle, latitude, callback) {
             callback(null, totalEnergy);
         });
 }
-readRadiationData('S', 0.523599, 44.083, (err, totalEnergy) => {
+
+readRadiationData('N', 0, 44.083, (err, totalEnergy) => {
     if (err) {
       console.error(err);
     } else {
@@ -133,9 +135,9 @@ readRadiationData('S', 0.523599, 44.083, (err, totalEnergy) => {
  * @returns {float} total energy AC at this moment
  */
 function computeEnergy(time, day, ghi, dhi, bni, orientation, inclinationAngle, latitude) {
-    // solarAzimuthAngle based on latitude, longitude, time, day
+    // solarAzimuthAngle based on latitude, time, day
     const sunDeclination = Math.asin(0.398 * Math.sin((0.985 * day - 80) * Math.PI / 180));
-    const hourAngle = Math.PI * (((time - 0.5) / 4) / 12 - 1);
+    const hourAngle = Math.PI * (((time + 0.5) / 4) / 12 - 1);
     const sunElevationAngle = Math.asin(Math.sin(latitude * Math.PI / 180) * Math.sin(sunDeclination) + Math.cos(latitude * Math.PI / 180) * Math.cos(sunDeclination) * Math.cos(hourAngle));
     const solarAzimuthAngle = Math.asin((Math.cos(sunDeclination) * Math.sin(hourAngle)) / Math.cos(sunElevationAngle));
 
@@ -144,35 +146,35 @@ function computeEnergy(time, day, ghi, dhi, bni, orientation, inclinationAngle, 
 
     switch (orientation) {
         case 'N':
-            azimuthAngle = 0;
-            break;
-
-        case 'W':
-            azimuthAngle = 3 * Math.PI / 2;
-            break;
-
-        case 'E':
-            azimuthAngle = Math.PI / 2;
-            break;
-
-        case 'S':
             azimuthAngle = Math.PI;
             break;
 
+        case 'W':
+            azimuthAngle = Math.PI / 2;
+            break;
+
+        case 'E':
+            azimuthAngle = 3 * Math.PI / 2;
+            break;
+
+        case 'S':
+            azimuthAngle = 0;
+            break;
+
         case 'NW':
-            azimuthAngle = 7 * Math.PI / 4;
+            azimuthAngle = 3 * Math.PI / 4;
             break;
 
         case 'NE':
-            azimuthAngle = Math.PI / 4;
-            break;
-
-        case 'SW':
             azimuthAngle = 5 * Math.PI / 4;
             break;
 
+        case 'SW':
+            azimuthAngle = Math.PI / 4;
+            break;
+
         case 'SE':
-            azimuthAngle = 3 * Math.PI / 4;
+            azimuthAngle = 7 * Math.PI / 4;
             break;
     }
 
@@ -189,7 +191,6 @@ function computeEnergy(time, day, ghi, dhi, bni, orientation, inclinationAngle, 
     const bti = incidenceAngleCosine <= 0 ? 0 : incidenceAngleCosine * bni;
 
     // Total irradiation : sum of dti, rti, bti -> energy returned with this calculus
-    console.log("test" + (dti + rti + bti));
     return Math.min(160, 0.2 * 0.85 * (dti + rti + bti));
 }
 
