@@ -74,7 +74,7 @@ app.get('/energy/:latitude/:longitude/:orientation/:inclination', async function
         if (err) {
           console.error(err);
         } else {
-          console.log("total : " + totalEnergy);
+          res.json({"total energy": totalEnergy});
         }
     });
 });
@@ -85,7 +85,7 @@ function getRadiationData(latitude, longitude) {
 
     wget({
         url:  url,
-        dest: './data/temp/',
+        dest: './data/temp/test',
         timeout: 200000
     },
     function (error, response, body) {
@@ -102,7 +102,7 @@ function getRadiationData(latitude, longitude) {
 }
 
 function readRadiationData(orientation, inclinationAngle, latitude, callback) {
-    let inputStream = fs.createReadStream('./data/temp/wps', 'utf-8');
+    let inputStream = fs.createReadStream('./data/temp/test', 'utf-8');
     let totalEnergy = 0;
 
     inputStream
