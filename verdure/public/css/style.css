@@ -70,16 +70,14 @@ body {
 
 
 /* Last slide image is centered */
-#img-fini {
-
-    width: 47%;
-    left: 61%;
-
-
-    top: 30vh;
+#div-img-fin{
+    margin: 0 5vh;
+    top: 13vh;
     position: absolute;
-    margin-left: -35%;
-    margin-top: calc(-25% * 9 / 16); /* margins are relative to the element width... :-( */
+}
+
+#img-fini {
+    width: 100%;
 }
 
 main > section {
