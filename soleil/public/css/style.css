@@ -645,6 +645,34 @@ div.conteneur{
     margin-bottom: 3%;
 }
 
+.congrats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+#main-remerciments {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 55%;
+}
+
+#remerciements {
+    font-size: 4vw;
+    margin-bottom: 10%;
+    max-width: 90%;
+}
+
+#img-hyblab {
+    max-width: 90%;
+}
+
+.logos {
+    max-width: 25%;
+}
+
 /* Last slide image is centered */
 #img-fini{
     width: 70%;
