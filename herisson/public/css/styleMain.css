@@ -152,7 +152,7 @@ input[type="text"]
 {
     position: absolute;
     background-color: #FFF8F1;
-    border-radius: 0 0 50px 50px;
+    border-radius: 5px 5px 50px 50px;
     width: 89.5vw;
     padding-top: 5vh;
     margin-top: 6vh;
@@ -167,7 +167,7 @@ input[type="text"]
 {
     position: absolute;
     background-color: #FFF8F1;
-    border-radius: 10px 10px 50px 50px;
+    border-radius: 5px 5px 50px 50px;
     width: 90vw;
     padding-top: 4vh;
     margin-top: 18vh;
