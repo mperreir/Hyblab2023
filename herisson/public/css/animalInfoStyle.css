@@ -53,9 +53,9 @@ main{
     color: #FFF8F1;
     left: 5%;
     margin-top: 1%;
-    font-size: 4.5vh;
-
+    font-size: 4.5vw;
 }
+
 #desc{
     position: absolute;
     font-family: 'Prompt', sans-serif;
