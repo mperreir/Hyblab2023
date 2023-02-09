@@ -89,11 +89,6 @@ async function createAnimalCategory(commune, animalCategory) {
         const tipsButton2 = document.getElementById("fleche2");
 
 
-        if (animal.length > 22) {
-            animalName.style.fontSize = '6.7vw';
-        } else if (animal.length > 27) {
-            animalName.style.fontSize = '6.3vw';
-        }
 
         animalName.textContent = animal.toUpperCase();
         desc.textContent = "Les " + animalData["listCities"][0]["categorie"].toLowerCase() + " de " + commune;
