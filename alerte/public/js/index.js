@@ -37,7 +37,7 @@ function changeBackground(color) {
 
 let next0 = document.getElementById("next0")
 next0.addEventListener("click", () => {
-    display("s1")
+    display("s16")
     changeBackground('#121212')
 })
 
@@ -266,6 +266,11 @@ function initRepsDep() {
         changeBackground('aliceblue')
     })
 }
+
+let next16 = document.getElementById("next16")
+    next16.addEventListener("click", () => {
+        window.open('https://disclose.ngo/fr/article/disclose-partage-ses-methodes-et-outils-pour-enqueter', '_blank');
+    })
 
 let about_s0 = document.getElementById("about-s0")
 about_s0.addEventListener("click", () => {
