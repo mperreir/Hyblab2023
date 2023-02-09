@@ -94,7 +94,7 @@ body {
 
 .button {
     border: none;
-    padding: 16px 32px;
+    padding: 0;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -134,8 +134,8 @@ body {
 
 .swiper-pagination-bullet {
     position: relative;
-    width: 1.2vh;
-    height: 1.2vh;
+    width: 1em;
+    height: 1em;
     display: inline-block;
     background: none;
     border: 0.3em solid #0B6E5F;
