@@ -38,12 +38,12 @@
                     <button id="next0" class="next-btn"></button> <!-- Boutton commencer -->
                     <div id="networks">
                         <div>
-                            <a href="https://www.facebook.com/disclose.ngo/"><img id="fb" src="./img/networks/fb.svg"/></a>
-                            <a href="https://twitter.com/disclose_ngo?lang=fr"><img id="twitter"
+                            <a href="https://www.facebook.com/disclose.ngo/" target="_blank"><img id="fb" src="./img/networks/fb.svg"/></a>
+                            <a href="https://twitter.com/disclose_ngo?lang=fr" target="_blank"><img id="twitter"
                                                                                     src="./img/networks/twitter.svg"/></a>
-                            <a href=""><img id="about" src="./img/networks/about.svg"/></a>
+                            <a id="about-s0"><img id="about" src="./img/networks/about.svg"/></a>
                         </div>
-                        <a href="https://www.disclose.ngo"><img id="disclose" src="./img/networks/disclose.svg"/></a>
+                        <a href="https://www.disclose.ngo" target="_blank"><img id="disclose" src="./img/networks/disclose.svg"/></a>
                     </div>
                 </footer>
             </section>
@@ -75,7 +75,7 @@
                                 <div class="swiper-slide">
                                     Les fermes-usines sont plus proches de chez vous que vous ne l’imaginez.
                                     Découvrez-les grâce à notre
-                                    mini-jeu, connecté aux données du ministère de la transition écologique. Et poussez
+                                    mini-jeu, connecté aux données du ministère de la Transition écologique. Et poussez
                                     la porte de ces
                                     usines à animaux souvent privés de lumière du jour.
                                     <button id="next1" class="next-btn"></button>
@@ -129,7 +129,7 @@
                 </header>
                 <img src="img/illustrations/dessins/cow-wrong.svg" id="vache_4_1" alt="Illustration"/>
                 <section id="content_quizz">
-                    <div class="bubble">
+                    <div class="bubble" style="font-size: 14px">
                         <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
                         <div class="content">
                             <h2>Dommage !</h2>
@@ -157,7 +157,7 @@
                 </header>
                 <img src="img/illustrations/dessins/cow-right.svg" id="content_main_img" alt="vache dans un pré"/>
                 <section id="content_quizz">
-                    <div class="bubble bubbleWhite">
+                    <div class="bubble bubbleWhite" style="font-size: 14px">
                         <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle"/>
                         <div class="content">
                             <h2>Bravo !</h2>
@@ -184,7 +184,7 @@
                 </header>
                 <img src="img/illustrations/dessins/graph-5.svg" alt="Courbe"/>
                 <div>
-                    <div class="little-bubble">
+                    <div class="little-bubble" style="font-size: 11px">
                         <img src="img/illustrations/dessins/heads/head-open.svg">
                         <img src="img/utils/bubbles/bubble-small-side.svg">
                         <div class="content2">
@@ -208,7 +208,7 @@
                 </header>
                 <img src="img/illustrations/dessins/cow-6.svg" id="vache_6" alt="Illustration"/>
                 <section id="content_quizz">
-                    <div class="bubble">
+                    <div class="bubble" style="font-size: 12px">
                         <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
@@ -248,10 +248,10 @@
                     </div>
                 </div>
                 <div>
-                    <label id="labelDep">Saisissez votre département</label>
+                    <label id="labelDep">Saisissez le numéro de votre département</label>
                 </div>
                 <div>
-                    <input id="dep" type="number" autofocus>
+                    <input id="dep" type="number" required autofocus>
                 </div>
                 <button id="next7" class="next-btn" style="height: 50px; width: 100%"></button>
             </section>
@@ -319,9 +319,10 @@
                 </header>
                 <img src="img/illustrations/dessins/cow-wrong.svg" id="vache_4_1" alt="Illustration"/>
                 <section id="content_quizz">
-                    <div class="bubble">
+                    <div class="bubble" style="font-size: 17px">
                         <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
                         <div class="content">
+                            <h4 class="h4_wrong"></h4>
                             <h2>Dommage !</h2>
                             <p class="text9">
                                 Erreur
@@ -345,9 +346,10 @@
                 </header>
                 <img src="img/illustrations/dessins/cow-right.svg" id="content_main_img" alt="vache dans un pré"/>
                 <section id="content_quizz">
-                    <div class="bubble bubbleWhite">
+                    <div class="bubble bubbleWhite" style="font-size: 17px">
                         <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle"/>
                         <div class="content">
+                            <h4 class="h4_right"></h4>
                             <h2>Bravo !</h2>
                             <p class="text9">
                                 Erreur
@@ -383,7 +385,7 @@
                         <p>0</p>
                         <span id="demo"></span>
                     </div>
-                    <input type="range" min="0" max="50000" value="0" class="slider" id="myRange">
+                    <input type="range" step="5000" min="0" max="100000" value="0" class="slider" id="myRange">
                 </div>
                 <button id="next10" class="next-btn" style="height: 50px; width: 100%"></button>
             </section>
@@ -403,12 +405,10 @@
                     <div class="bubble">
                         <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
                         <div class="content">
+                            <h4 class="h4_wrong"></h4>
                             <h2>Dommage !</h2>
-                            <p>
-                                Dans la ferme-usine de [Entrer un nom et une localité] on dénombre pas moins de [Entrer
-                                un chiffre] [Entrer une catégorie d’animaux]. À l’échelle de la France, c’est la [Entrer
-                                un rang] plus grosse concentration de [porcs / bovins / vaches laitières / volailles] en
-                                une seule installation.
+                            <p class="text11">
+                                Erreur
                             </p>
                             <button id="next11_1" class="next-btn" style="height: 50px; width: 100%"></button>
                             <!-- Passer à la question suivante-->
@@ -432,12 +432,10 @@
                     <div class="bubble bubbleWhite">
                         <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle"/>
                         <div class="content">
+                            <h4 class="h4_right"></h4>
                             <h2>Bravo !</h2>
-                            <p>
-                                Dans la ferme-usine de [Entrer un nom et une localité] on dénombre pas moins de [Entrer
-                                un chiffre] [Entrer une catégorie d’animaux]. À l’échelle de la France, c’est la [Entrer
-                                un rang] plus grosse concentration de [porcs / bovins / vaches laitières / volailles] en
-                                une seule installation.
+                            <p class="text11">
+                                Erreur
                             </p>
                             <button id="next11_2" class="next-btn" style="height: 50px; width: 100%"></button>
                             <!-- Passer à la question suivante-->
@@ -488,9 +486,10 @@
                 </header>
                 <img src="img/illustrations/dessins/cow-wrong.svg" id="vache_4_1" alt="Illustration"/>
                 <section id="content_quizz">
-                    <div class="bubble">
+                    <div class="bubble" style="font-size: 11px">
                         <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
                         <div class="content">
+                            <h4 class="h4_wrong"></h4>
                             <h2>Dommage !</h2>
                             <p class="text13">
                                 L’ammoniac est un gaz qui se dégage massivement des déjections d’animaux ainsi que des
@@ -522,9 +521,10 @@
                 </header>
                 <img src="img/illustrations/dessins/cow-right.svg" id="content_main_img" alt="vache dans un pré"/>
                 <section id="content_quizz">
-                    <div class="bubble bubbleWhite">
+                    <div class="bubble bubbleWhite" style="font-size: 11px">
                         <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle"/>
                         <div class="content">
+                            <h4 class="h4_right"></h4>
                             <h2>Bravo !</h2>
                             <p class="text13">
                                 L’ammoniac est un gaz qui se dégage massivement des déjections d’animaux ainsi que des
@@ -588,6 +588,7 @@
                     <div class="bubble">
                         <img src="img/utils/bubbles/bubble.svg" id="bulle" alt="bulle"/>
                         <div class="content">
+                            <h4 class="h4_wrong"></h4>
                             <h2>Dommage !</h2>
                             <p class="text15">
                                 Mais bonne nouvelle, les fermes-usines de votre département sont visiblement aux normes.
@@ -617,6 +618,7 @@
                     <div class="bubble bubbleWhite">
                         <img src="img/utils/bubbles/bubble-inv.svg" id="bulle" alt="bulle"/>
                         <div class="content">
+                            <h4 class="h4_right"></h4>
                             <h2>Bravo !</h2>
                             <p class="text15">
                                 Bonne nouvelle, les fermes-usines de votre département sont visiblement aux normes.
@@ -656,20 +658,150 @@
                     <button id="next16" class="next-btn" style="height: 50px; width: 100%"></button>
                     <div id="networks">
                         <div>
-                            <a href="https://www.facebook.com/disclose.ngo/"><img id="fb"
+                            <a href="https://www.facebook.com/disclose.ngo/" target="_blank"><img id="fb"
                                                                                   src="./img/networks/fb-inv.svg"/></a>
-                            <a href="https://twitter.com/disclose_ngo?lang=fr"><img id="twitter"
+                            <a href="https://twitter.com/disclose_ngo?lang=fr" target="_blank"><img id="twitter"
                                                                                     src="./img/networks/twitter-inv.svg"/></a>
-                            <a href=""><img id="about" src="./img/networks/about-inv.svg"/></a>
+                            <a id="about-s16"><img id="about" src="./img/networks/about-inv.svg"/></a>
                         </div>
-                        <a href="https://www.disclose.ngo"><img id="disclose"
+                        <a href="https://www.disclose.ngo" target="_blank"><img id="disclose"
                                                                 src="./img/networks/disclose-inv.svg"/></a>
                     </div>
                 </footer>
             </section>
 
-            <section id="s17_1" class="slides" style="display: none">
+            <section id="s17" class="slides" style="display: none">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <section style="height: 80%;">
+                        <div>
+                          <img src="img/illustrations/logos/logo-meuh.svg" id="logo_meuh" alt="l'usine à meuh"/>
+                        </div>
+                        <div>
+                          <div class="little-bubble">
+                              <img src="img/illustrations/dessins/heads/head-open.svg">
+                              <img src="img/utils/bubbles/bubble-small-side.svg">
+                              <div class="content2" id="little-bubble-s17-1">
+                                  <p>
+                                      D'où proviennent les données ?
+                                  </p>
+                              </div>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="little-bubble">
+                              <img src="img/utils/bubbles/medium-bubble.svg">
+                              <div class="content-medium-bubble" id="medium-bubble-s17-1">
+                                  <p>
+                                    Les données utilisées proviennent d’ONG (organisations non gouvernementales), 
+                                    d’articles de presse et de différents ministères. Une base de données en particulier 
+                                    a été utilisée : géorisques.gouv.fr. C’est le ministère de la Transition écologique et 
+                                    de la cohésion des territoires qui l’alimente.
+                                  </p>
+                              </div>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="swiper-slide">
+                      <section style="height: 80%;">
+                        <div>
+                          <img src="img/illustrations/logos/logo-meuh.svg" id="logo_meuh" alt="l'usine à meuh"/>
+                        </div>
+                        <div>
+                          <div class="little-bubble">
+                              <img src="img/illustrations/dessins/heads/head-open.svg">
+                              <img src="img/utils/bubbles/bubble-small-side.svg">
+                              <div class="content2" id="little-bubble-s17-2">
+                                  <p>
+                                      Qui est Disclose ?
+                                  </p>
+                              </div>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="little-bubble">
+                              <img src="img/utils/bubbles/medium-bubble.svg">
+                              <div class="content-medium-bubble" id="medium-bubble-s17-1">
+                                  <p>
+                                    Disclose est un média d’investigation en accès libre et à but non-lucratif, 
+                                    créé par des journalistes indépendants et financé par le don. Sans actionnaire, 
+                                    sans publicité et en accès libre, Disclose enquête sur des sujets d’intérêt général 
+                                    depuis 2018.
+                                  </p>
+                              </div>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="swiper-slide">
+                      <section style="height: 80%;">
+                        <div>
+                          <img src="img/illustrations/logos/logo-meuh.svg" id="logo_meuh" alt="l'usine à meuh"/>
+                        </div>
+                        <div>
+                          <div class="little-bubble">
+                              <img src="img/illustrations/dessins/heads/head-open.svg">
+                              <img src="img/utils/bubbles/bubble-small-side.svg">
+                              <div class="content2" id="little-bubble-s17-3">
+                                  <p>
+                                      Qui a réalisé l'usine à meuh ?
+                                  </p>
+                              </div>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="little-bubble">
+                              <img src="img/utils/bubbles/left-bubble.svg">
+                              <div class="content-medium-bubble" id="medium-bubble-s17-1">
+                                  <p>
+                                    Ce mini-jeu a été réalisé par une équipe de huit étudiants de trois écoles 
+                                    différentes (Polytech Nantes, AGR et l’EPJT), en collaboration avec Disclose.
+                                    Il a été créé dans le cadre du Hyblab de février 2023.
+                                  </p>
 
+                              </div>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="swiper-slide">
+                      <section style="height: 100%;">
+                        <div>
+                          <img src="img/illustrations/logos/logo-meuh.svg" id="logo_meuh" alt="l'usine à meuh"/>
+                        </div>
+                        <div>
+                          <div class="little-bubble">
+                              <img src="img/illustrations/dessins/heads/head-open.svg">
+                              <img src="img/utils/bubbles/bubble-small-side.svg">
+                              <div class="content2" id="little-bubble-s17-4">
+                                  <p>
+                                    Quels sont les écoles et les sponsors ?
+                                  </p>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="sponsors">
+                          <img src="img/utils/logos/logo_hyblab.svg">
+                          <img src="img/utils/logos/logo_opensource 1.svg">
+                          <img src="img/utils/logos/logo_cc.svg">
+                          <img src="img/utils/logos/logo-epjt.svg">
+                          <img src="img/utils/logos/logo_agr.svg">
+                          <img src="img/utils/logos/logo_polytech.svg">
+                          <img src="img/utils/logos/logo_nantesuniversite.svg">
+                          <img src="img/utils/logos/logo_oml.svg">
+                          <img src="img/utils/logos/logo_pdl.svg">
+                          <img src="img/utils/logos/logo_nantesmetropole.svg">
+                          <img src="img/utils/logos/logo-discolse.svg">
+                        </div>
+                        <button id="back" class="back-btn" style="height: 50px; width: 100%"></button>
+                      </section>
+                    </div>
+                </div>
+                <!-- Add pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
             </section>
 
             <section id="s17_2" class="slides slidesWhite" style="display: none">
