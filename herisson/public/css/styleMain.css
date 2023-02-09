@@ -3,13 +3,15 @@ body
     background-color: #FBC5EB;
     margin: 0;
     overflow: hidden;
+    height: 100vh;
 }
 
 .texte-intro
 {
     text-align: center;
-    margin: 5em 3em 3em;
-    font-size: 40px;
+    /*margin: 5em 3em 3em;*/
+    margin: 10vh 9vw 9vw;
+    font-size: 2vh;
     color: #FFF8F1;
     font-weight: 400;
     font-family: 'Prompt', sans-serif;
@@ -18,10 +20,19 @@ body
 .texte-Elie
 {
     text-align: right;
-    width: 600px;
-    font-size: 55px;
+    width: 50vw;
+    font-size: 2.5vh;
     color: #0B6E5F;
     font-family: 'Covered By Your Grace', cursive;
+    margin-left: auto;
+    margin-right: 23vh;
+    /*margin-top: 10vh;*/
+}
+
+#elie
+{
+    /*width: 93vw;*/
+    height: 70vh;
 }
 
 .texte-Elie p
@@ -29,35 +40,39 @@ body
     margin-bottom: 0;
 }
 
-.texte-Elie img
-{
-    margin-left: 0.5em;
-}
-
 .mascotte {
-    top: 400px;
-    right: -250px;
+    /*bottom: -400px;*/
+    right: 0;
+    bottom: 0;
+    /*right: -22vw;*/
     position: absolute;
-    z-index: -1;
+    z-index: -10;
 }
 
 .barres-recherche
 {
     text-align: center;
-    margin-top: 20em;
+    margin-top: 15vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ligneDialogue
+{
+    width: 50vw;
+    /*height: 2vh;*/
 }
 
 .search
 {
-    margin-bottom: 4em;
     border: none;
-    border-radius: 75px;
+    border-radius: 75vw;
     background-color: #FFF8F1;
-    width: 90%;
+    width: 90vw;
     margin-left: auto;
     margin-right: auto;
-    height: 8em;
-    padding-top: 10px;
+    height: 8vh;
+    padding-top: 0.75vh;
     padding-bottom: 0;
 }
 
@@ -70,17 +85,27 @@ body
 {
     width: 80%;
     border: none;
-    padding-top: 20px;
+    padding-top: 2vh;
     box-sizing: border-box;
     background: none;
 }
 
-.searchBar::placeholder, input[type="text"]
+.searchBar::placeholder
 {
     font-weight: 500;
     font-family: 'Prompt', sans-serif;
     color : #0B6E5F;
-    font-size: 50px;
+    margin-left: -1vw;
+    opacity: 1;
+}
+
+input[type="text"]
+{
+    font-weight: 500;
+    font-family: 'Prompt', sans-serif;
+    color : #0B6E5F;
+    font-size: 5vw;
+    margin-left: -5vw;
     opacity: 1;
 }
 
@@ -89,42 +114,80 @@ body
     font-weight: 500;
     font-family: 'Prompt', sans-serif;
     color : #0B6E5F;
-    font-size: 50px;
     opacity: 0.6;
     -webkit-transition: opacity 0.2s linear;
 }
 
 .bouton-recherche {
     background-image: url("../img/loupe.png");
+    background-size: 6vw;
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    width: 50px;
-    height: 70px;
+    width: 6vw;
+    height: 6vw;
     position: absolute;
-    padding-top: 115px;
+    padding-top: 7vh;
 }
 
 .autoItemAni, .autoItemCom
 {
     background-color: transparent;
     border: none;
-    height: 70px;
-    font-size: 3em;
-    width: 100%;
+    height: 5vh;
+    font-size: 5vw;
+    margin-left: 7vw;
     font-family: 'Prompt', sans-serif;
+    color: #0B6E5F;
 }
 
 #autocompletionCom
 {
+    position: absolute;
     background-color: #FFF8F1;
-    border-radius: 0 0 75px 75px;
-    width: 90%;
+    border-radius: 0 0 50px 50px;
+    width: 90vw;
+    padding-top: 5vh;
+    margin-top: 6vh;
+    z-index: 3;
+    left: 0;
+    right: 0;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 75px;
-    margin-top: -75px;
-    height: 300px;
+}
+
+#autocompletionAni
+{
+    position: absolute;
+    background-color: #FFF8F1;
+    border-radius: 0 0 50px 50px;
+    width: 90vw;
+    padding-top: 4vh;
+    margin-top: 18vh;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#searchCommune
+{
+    position: absolute;
+    z-index: 4;
+    right: 0;
+    left: 0;
+    margin-top: 3vh;
+}
+
+#searchAnimal
+{
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    left: 0;
+    margin-top: 14vh;
 }
