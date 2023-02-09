@@ -665,6 +665,8 @@ div.conteneur{
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
+    width: 85%;
+    margin: auto;
     line-height: 17px;
     text-align: center;
 }
