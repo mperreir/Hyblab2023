@@ -165,7 +165,7 @@ async function createAnimalCategory(commune, animalCategory) {
 
     await selectAnimal();
     await quitPopUp();
-    await burgerPopUp();
+    //await burgerPopUp();
 }
 
 createAnimalCategory();
