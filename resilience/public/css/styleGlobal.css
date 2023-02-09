@@ -49,4 +49,5 @@ body {
 #right-arrow {
     display: flex;
     width: 11%;
+    margin-right: 0.2em;
 }
