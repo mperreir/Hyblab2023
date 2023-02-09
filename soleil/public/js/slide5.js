@@ -3,6 +3,7 @@ var executed5 = false;
 
 const initSlide5 = function(){
     if(!executed5){
+        $("#tropdechoix").attr("src", `img/ensoleillement/1-${quiz["pente"]}-commune.jpg`);
         executed5 = true;
         $("#orientation .open-button").click(function(){
             swiper.slideTo(12, 0);
