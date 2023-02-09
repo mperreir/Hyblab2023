@@ -1,21 +1,113 @@
 {
     "place": "La légumerie du coin",
-    "names": [
-        "Catherine",
-        "Voyageur"
+    "people": [
+        {
+            "name": "Catherine",
+            "background_color": "#FF73BA",
+            "border_color": "white",
+            "text_color": "black",
+            "side": "left"
+        },
+        {
+            "name": "Voyageur",
+            "background_color": "white",
+            "border_color": "black",
+            "text_color": "black",
+            "side": "right"
+        }
     ],
-    "background_color": "#FF73BA",
-    "text_color": "black",
     "messages": [
         {
             "type": "message",
             "name": "Voyageur",
-            "text": "Bonjour"
+            "text": "Bonjour, je… Je fais un reportage et j’aurai aimé en savoir plus sur votre légumerie…"
         },
         {
             "type": "message",
             "name": "Catherine",
-            "text": "Ah oui ?"
+            "text": "Bien sûr. Qu’est-ce que vous voulez savoir exactement ?"
+        },
+        {
+            "type": "all",
+            "messages": [
+                [
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Qu’est-ce que c’est qu’une légumerie, comment ça fonctionne ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Catherine",
+                        "text": "D’accord. Alors moi, c’est Paul, je suis maraîcher et je gère cette légumerie en coopérative avec d’autres maraîchers. Comme son nom l’indique, on transforme les légumes du coin. Et quelques fruits également - comme son nom ne l’indique pas (rire)."
+                    },
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Et comment vous vous y retrouvez ? Je veux dire, pour répartir les recettes après la vente ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Catherine",
+                        "text": "On commercialise l’ensemble de nos produits sur le département, sous la marque “La légumerie du coin”. Une fois arrivées à l’entrepôt, toutes les récoltes sont pesées, puis mises en commun pour la transformation. Donc on redistribue les recettes selon la quantité de récoltes apportée par chacun, c’est aussi simple que ça."
+                    }
+                    
+                ],
+                [
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Que peut-on y trouver ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Catherine",
+                        "text": "Et bien, on produit essentiellement des soupes, des sauces, des tartinades, des purées pour bébé, des confitures, des compotes… Le tout en bocaux de verre consignés. Certains agriculteurs ne transforment ici que les récoltes qu’ils n’ont pu vendre, pour limiter le gaspillage. Et d’autres agriculteurs y transforment quasiment toutes leurs récoltes, chacun fait comme il veut."
+                    },
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Et, il y a d’autres légumeries comme la vôtre ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Catherine",
+                        "text": "Oui bien sûr. Après, il existe plusieurs manières de faire. Certains transforment directement à la ferme, d’autres vendent leur récolte à des usines de transformation privées. Et bien sûr, il n’y a pas que des légumeries : il y a des unités de transformation dédiées aux produits laitiers, aux produits céréaliers (biscuit, céréales…), aux plats traiteurs, aux boissons… Le point commun à tous, c’est de produire avec des matières locales et de distribuer les produits sur le territoire."
+                    }
+                ],
+                [
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Où sont vendus vos produits ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Catherine",
+                        "text": "On distribue 60% en local, avec la légumerie mais aussi en circuit court avec les marchés ou encore les associations pour le maintien d’une agriculture paysanne (AMAP) et 20% de nos productions sont à destination des autres régions. Les 20% restants (uniquement des produits non périssables) sont achetés par les collectivités et stockés pour parer à d’éventuelles perturbations."
+                    },
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Ah, ça c’est résilient !"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Catherine",
+                        "text": "Oui, ça rentre dans le cadre de notre politique de gestion des risques. Tout à fait."
+                    }
+                ]
+            ]
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Et bien, je vous remercie, c’était très clair. Je vais continuer ma visite."
+        },
+        {
+            "type": "message",
+            "name": "Catherine",
+            "text": "Bonne route !"
         }
     ]
 }

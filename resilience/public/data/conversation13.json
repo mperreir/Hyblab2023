@@ -1,23 +1,138 @@
 {
     "place": "Cantine populaire",
-    "names": [
-        "Quentin",
-        "Stephanie",
-        "Voyageur"
+    "people": [
+        {
+            "name": "Quentin",
+            "background_color": "#A4A4FC",
+            "border_color": "white",
+            "text_color": "black",
+            "side": "left"
+        },
+        {
+            "name": "Stephanie",
+            "background_color": "#615FC2",
+            "border_color": "white",
+            "text_color": "black",
+            "side": "left"
+        },
+        {
+            "name": "Voyageur",
+            "background_color": "white",
+            "border_color": "black",
+            "text_color": "black",
+            "side": "right"
+        }
     ],
-    "background_color": "#A4A4FC",
-    "background_color": "#615FC2",
-    "text_color": "black",
     "messages": [
         {
             "type": "message",
             "name": "Voyageur",
-            "text": "Bonjour"
+            "text": "Bonjour, est-ce que je peux m’installer ici et vous embêter un peu ? J’ai plein de questions sur le lieu :)"
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Comment fonctionne cette cantine ?"
         },
         {
             "type": "message",
             "name": "Quentin",
-            "text": "Ah oui ?"
+            "text": "C’est un lieu où on peut se restaurer avec des produits locaux, et à des prix accessibles à tous. Il y a en a plusieurs en ville."
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Elles sont gérées par la ville ?"
+        },
+        {
+            "type": "message",
+            "name": "Quentin",
+            "text": "Tout à fait. Les cantines comme celles-ci ont été créées il y a une dizaine d’années dans le but de répondre à plusieurs enjeux environnementaux et sociaux : l’idée était de pouvoir offrir à tous une alimentation saine et équilibrée, tout en assurant des débouchés aux agriculteurs du territoire. Il faut que vous sachiez qu’ici, les menus et le service proposés sont conventionnés par notre Caisse de sécurité alimentaire."
+        },
+        {
+            "type": "message",
+            "name": "Stephanie",
+            "text": "Oui, ça permet à tout le monde, quelle que soit sa condition, de manger bien, bon et à moindre coût. Et puis nous on aime ce lieu… Ça nous fait un peu sortir de chez nous, rencontrer du monde - et pas que des anciens comme nous ! (rire)"
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "La caisse de sécurité alimentaire ? Qu’est-ce que c’est ?"
+        },
+        {
+            "type": "message",
+            "name": "Quentin",
+            "text": "La Caisse de sécurité sociale alimentaire fonctionne un peu comme la sécurité sociale. Chaque citoyen cotise et reçoit chaque mois 150 euros sur sa carte de sécurité alimentaire. Avec, on peut payer la cantine et des aliments dits conventionnés dans les commerces."
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Quels sont les aliments conventionnés ?"
+        },
+        {
+            "type": "message",
+            "name": "Stephanie",
+            "text": "La liste d’aliments conventionnés est définie au niveau national et ajustée au niveau local par l’Assemblée locale citoyenne de l’alimentation. On y retrouve tous les aliments de première nécessité et ceux produits localement. Les agriculteurs produisent en nombre ce qui a été choisi dans la liste et ils sont ainsi assurés d’avoir un revenu stable. Oh et tu reconnais les aliments conventionnés à leur étiquette. (clin d’oeil)"
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Que peut-on manger ici ?"
+        },
+        {
+            "type": "message",
+            "name": "Quentin",
+            "text": "Ici, on ne trouve que des plats cuisinés avec des produits locaux, qui viennent de notre agriculture urbaine, de la ceinture maraîchère de la ville  ou bien du département, mais rarement de plus loin. Les aliments ne font pas plus de 100 kilomètres pour venir jusque dans nos assiettes, le maire y tenait !"
+        },
+        {
+            "type": "message",
+            "name": "Stephanie",
+            "text": "Bon, des fois il y a des exceptions, pour les repas de fêtes par exemple, les aliments peuvent provenir d’autres départements et/ou régions."
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Ah d’accord, je vois. Et il y a de la viande parfois ? Je n’en ai pas vu au menu…"
+        },
+        {
+            "type": "message",
+            "name": "Stephanie",
+            "text": "Oui ça arrive, il y en a une ou deux fois dans la semaine ici. Mais on mange beaucoup moins de viande que par le passé."
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Et ça ne vous manque pas ?"
+        },
+        {
+            "type": "message",
+            "name": "Stephanie",
+            "text": "Pas franchement, la viande est redevenue un aliment festif et ça nous va très bien comme ça. Et puis quand on en mange, on a l’assurance que cette viande est de qualité, qu’elle provient d’un animal qui a été respecté, nourri avec l’herbe des prés et élevé à quelques kilomètres d’ici."
+        },
+        {
+            "type": "message",
+            "name": "Quentin",
+            "text": "Quand vous irez débarrasser votre plateau, vous noterez également qu’il n’y a pas de gaspillage, ici. Ça aussi, c’est important."
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Comment ça ?"
+        },
+        {
+            "type": "message",
+            "name": "Stephanie",
+            "text": "Partout dans la ville, il y a une collecte de tous les biodéchets : les déchets de table, les restes que les enfants laissent parfois par exemple (rires) ou les déchets verts, ceux issus de l’entretien des espaces verts par exemple. Alors ici comme chez nous, même si le gaspillage alimentaire est rare, il est toujours collecté pour faire du compost, qui est réutilisé par les fermiers de la ceinture maraîchère."
+        },
+        {
+            "type": "message",
+            "name": "Stephanie",
+            "text": "Oui, même les déchets de nos toilettes sont réutilisés ! Allez faire une pause pipi, vous verrez ;)"
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Ahah, d’accord, merci."
         }
     ]
 }
