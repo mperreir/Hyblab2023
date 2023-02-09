@@ -13,34 +13,40 @@
 
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
     <link rel="stylesheet" href="css/menu.css">
-    <script src="js/menuPopup.js"></script>
+    <script src="js/menuPopup.js" defer></script>
     <script src="js/nbChoc.js"></script>
 
 </head>
 <body>
-    <header id="headerMenu" class="main"> </header>
-    <main>
-        <div class="round-background" id="testets">
-            <p id="nbChoc"> 40 </p>
-            <p id="texteExplication">espèces sauvages observées près de <strong id="villeChoisie"></strong> !</p>
-            <p id="texteDanger"> Dont <span id="nbDanger">20 en danger</span>, voici comment vous pouvez les protéger ! </p>
-            <a href="index.html"> <img src="img/fleche_verte.png" alt="fleche vers le bas" id="fleche"> </a>
-        </div>
-    </main>
-    <script>
-        const commune = localStorage.getItem("commune");
-        createNbChocPage(commune);
-    </script>
-    <script>
+<header id="headerMenu" class="main"> </header>
+<main>
+    <div class="round-background" id="testets">
+        <p id="nbChoc"> 40 </p>
+        <p id="texteExplication">espèces sauvages observées près de <strong id="villeChoisie"></strong> !</p>
+        <p id="texteDanger"> Dont <span id="nbDanger">20 en danger</span>, voici comment vous pouvez les protéger ! </p>
+        <a href="commune.html"> <img src="img/fleche_verte.png" alt="fleche vers le bas" id="fleche"> </a>
+    </div>
+</main>
+<script>
+    const commune = localStorage.getItem("commune");
+    createNbChocPage(commune);
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
         const main = document.getElementsByTagName("main");
         const hammer = new Hammer(main[0]);
-        hammer.on("panup", (event) => {
+        hammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+        hammer.on("swipeup", (event) => {
             event.preventDefault();
             document.body.style.opacity = "0";
-            setTimeout(() => {
-                window.location.href = "main.html";
-            }, 0);
-        })
-    </script>
+            window.requestAnimationFrame(() => {
+                window.location.href = "commune.html";
+            });
+        });
+    });
+</script>
+<footer>
+    <div></div>
+</footer>
 </body>
 </html>

@@ -32,7 +32,10 @@ async function createNbChocPage(commune) {
         for (let categorie in data[Object.keys(data)[0]]) {
             for (let species in data[Object.keys(data)[0]][categorie]) {
                 console.log(data[Object.keys(data)[0]][categorie][species].enjeu_conservation)
-                if (data[Object.keys(data)[0]][categorie][species].enjeu_conservation === "Notable" || data[Object.keys(data)[0]][categorie][species].enjeu_conservation === "Fort" || data[Object.keys(data)[0]][categorie][species].enjeu_conservation === "Très Fort" || data[Object.keys(data)[0]][categorie][species].enjeu_conservation === "Majeur") {
+                if (data[Object.keys(data)[0]][categorie][species].enjeu_conservation === "Notable" ||
+                    data[Object.keys(data)[0]][categorie][species].enjeu_conservation === "Fort" ||
+                    data[Object.keys(data)[0]][categorie][species].enjeu_conservation === "Très Fort" ||
+                    data[Object.keys(data)[0]][categorie][species].enjeu_conservation === "Majeur") {
                     nbMenaced += 1
                 }
             }
@@ -42,6 +45,4 @@ async function createNbChocPage(commune) {
 
     const nbMenaced = getMenacedSpecis(dataCommune)
     Menaced.innerText = nbMenaced + " espèces menacées"
-
-
 }

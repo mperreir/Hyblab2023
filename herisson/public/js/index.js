@@ -37,7 +37,7 @@ document.querySelector("#rechercheCommune").addEventListener("keyup", async func
         autocompletionItems.forEach(item => {
             item.addEventListener("click", function () {
                 localStorage.setItem("commune", this.textContent);
-                window.location.href = `commune.html`;
+                window.location.href = `nbChoc.html`;
             });
         });
         timeoutCommune = null;

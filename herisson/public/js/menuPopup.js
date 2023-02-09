@@ -16,10 +16,10 @@ imgLogo.src = "img/logo_faunare.png";
 imgLogo.alt = "logo";
 imgLogo.id = "logo";
 imgLogo.style.position = "absolute";
-imgLogo.style.top = "0";
-imgLogo.style.left = "0px";
+imgLogo.style.top = "2vh";
+imgLogo.style.left = "5vw";
 imgLogo.style.zIndex = "2";
-imgLogo.style.width = "450px";
+imgLogo.style.height = "3vh";
 
 lienLogo.appendChild(imgLogo);
 
@@ -28,10 +28,10 @@ imgMenuBurger.src = "img/menu.png";
 imgMenuBurger.alt = "menu";
 imgMenuBurger.id = "popUpNav";
 imgMenuBurger.style.position = "absolute";
-imgMenuBurger.style.top = "50px";
-imgMenuBurger.style.right = "50px";
+imgMenuBurger.style.top = "2vh";
+imgMenuBurger.style.right = "5vw";
 imgMenuBurger.style.zIndex = "2";
-
+imgMenuBurger.style.height = "2.75vh";
 divIconeHeader.appendChild(lienLogo);
 divIconeHeader.appendChild(imgMenuBurger);
 header.appendChild(divIconeHeader);

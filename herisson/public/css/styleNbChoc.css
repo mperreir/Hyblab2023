@@ -1,3 +1,62 @@
+.menuTitre
+{
+    color: #FBC5EB;
+    font-weight: 700;
+    margin-bottom: 12vh;
+    margin-top: 12vh;
+    font-size: 3.5vh;
+}
+
+.sousTitresMenu
+{
+
+    color: #0B6E5F;
+    font-weight: 500;
+    margin-bottom: 2vh;
+}
+
+.ligneSeparation
+{
+    width: 70%;
+    margin-top: 18vh;
+    border: 0.1vh solid #FBC5EB;
+}
+
+#texteMenu
+{
+    text-align: center;
+    font-size: 2.75vh;
+    font-family: 'Prompt', sans-serif;
+    position: absolute;
+    background-color: #FFF8F1;
+    height: 100%;
+    z-index: 1;
+    width: 100%;
+}
+
+.texteFinMenu
+{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7vh;
+    color: #0B6E5F;
+    font-weight: 400;
+    text-align: center;
+    font-size: 2.5vh;
+}
+
+header.main
+{
+    height: 0.1vh;
+}
+
+#texteMenu {
+    transition: 1s;
+    display: none;
+    left: 100%;
+}
+
 body
 {
     background-color: #FBC5EB;
@@ -6,16 +65,19 @@ body
     margin: 0;
 }
 
+main{
+    height: 90vh;
+}
+
 #nbChoc
 {
-    font-size: 37.5em;
-    line-height: 0.8em;
-    margin: auto;
-    padding-top: 100px;
+    font-size: 45vw;
+    line-height: 25vh;
+    padding-top: 8vh;
     font-weight: 700;
     font-family: 'Prompt', sans-serif;
     color: #FBC5EB;
-    margin-top: 200px;
+    margin: 10vh 10vw 5vh 10vw;
 }
 
 div
@@ -25,15 +87,14 @@ div
 
 #texteExplication
 {
-    font-size: 55px;
-    margin-left : 1em;
-    margin-right : 1em;
+    font-size: 3vh;
+    margin: 2vh 3vw 2vh 3vw;
 }
 
 #texteDanger
 {
-    font-size: 45px;
-    margin: 2.5em 5em 5em;
+    font-size: 2.6vh;
+    margin: 6vh 6vw 6vh 6vw;
 }
 
 #nbDanger
@@ -42,26 +103,16 @@ div
 }
 
 #fleche {
-    padding-bottom: 3em;
+    width: 7vw;
+    height: 2vh;
+    margin: 6vh 1vw 2vh 1vw;
 }
+
 .round-background
 {
     background-color: #FFF8F1;
-    border-radius: 100px;
+    border-radius: 10vw;
     width: 90%;
-    height: 90%;
-    margin: 2em auto;
+    height: 85vh;
+    margin: 2vw auto;
 }
-
-/*@keyframes slideUp {*/
-/*    from {*/
-/*        transform: translateY(100%);*/
-/*    }*/
-/*    to {*/
-/*        transform: translateY(0);*/
-/*    }*/
-/*}*/
-
-/*body {*/
-/*    transition: all 1s ease-in-out;*/
-/*}*/
