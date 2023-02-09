@@ -67,8 +67,8 @@ h1{
 }
 
 h2{
-    font-weight: 400;
-    font-size: 1.6em;
+    font-weight: 500;
+    font-size: 2.6em;
     margin-top: 1em;
 }
 
@@ -294,4 +294,20 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#svg-container > object{
+    width: 40%;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+#autre-env{
+    margin-bottom: 2em;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+
+#svg-container{
+    margin-bottom: 1em;
 }

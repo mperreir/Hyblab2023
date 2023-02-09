@@ -36,10 +36,31 @@ const initSlide1 = async function(){
     });
 
 
+
+
     const objectElement = document.querySelector('#logo-environment');
     objectElement.data = "../"+data.file_name;
 
     change_svg_color(objectElement, data.main_color);
+
+    document.querySelector('#autre-env').innerHTML = data.autre_env.titre.toUpperCase();
+
+    const svg_container = document.querySelector("#svg-container");
+
+    const d = data.autre_env.liste;
+
+    for (let i = 0; i < d.length; i++) {
+      // create object
+      let objectElement = document.createElement("object");
+
+      objectElement.data = d[i].file_name;
+      objectElement.type = "image/svg+xml";
+
+      change_svg_color(objectElement, "#ffffff");
+
+      svg_container.appendChild(objectElement);
+    }
+
   }
 
   anime({
