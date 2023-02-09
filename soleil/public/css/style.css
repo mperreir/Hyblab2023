@@ -396,6 +396,7 @@ header{
 .choix-logement img{
     display: inline-block;
     margin-right: 5%;
+    width: 25%;
 }
 
 .choix-logement2 img{
@@ -404,7 +405,7 @@ header{
 }
 
 .choix-logement{
-    margin-top: 15%;
+    margin-bottom: 10%;
 }
 
 .choix-logement2{
@@ -595,6 +596,48 @@ div.conteneur{
     }
 }
 
+
+.main-location-page{
+    position: unset;
+    padding-top: 10%;
+}
+
+.location-input{
+    height: 20%;
+    margin: auto;
+    padding: 5%;
+    float: none;
+    text-align: center;
+    font-size: medium;
+}
+
+.valider{
+    bottom: 20%;
+}
+
+.illustrationAdresse{
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    margin: auto;
+}
+
+
+.illustration{
+    max-width: 100%;
+    height: auto;
+}
+
+.div-adresse{
+    width: 100%;
+    padding: 0;
+    height: 300px;
+}
+
+.choix-logement {
+    margin-bottom: 3%;
+}
+
 /* Last slide image is centered */
 #img-fini{
     width: 70%;
@@ -695,6 +738,7 @@ body{
     #container{
         margin-left: 0; /* reset margin-left */
         width: 100vw; /* content is full width (and full height because of the default rule for container height */
+        padding-left: 0;
     }
 
     /* We set a default font size here. It will be the base for all other font sizes */
@@ -702,44 +746,19 @@ body{
     body{
         font-size: 15vw;
     }
+
+    /* Page adresse*/
+    header {
+        margin-bottom: 0;
+    }
+    video {
+        max-width: 85%;
+    }
+    .main-location-page {
+        padding-top: 0;
+    }
 }
 
-.main-location-page{
-    position: unset;
-    padding-top: 10%;
-}
-
-.location-input{
-    height: 20%;
-    margin: auto;
-    padding: 5%;
-    float: none;
-    text-align: center;
-    font-size: medium;
-}
-
-.valider{
-    bottom: 20%;
-}
-
-.illustrationAdresse{
-    max-width: 100%;
-    height: auto;
-    display: flex;
-    margin: auto;
-}
-
-
-.illustration{
-    max-width: 100%;
-    height: auto;
-}
-
-.div-adresse{
-    width: 100%;
-    padding: 0;
-    height: 300px;
-}
 
 /* The content is displayed at 9/16 If the aspect ratio is higher that 9/16  */
 @media screen and (max-aspect-ratio: 9/16) {
@@ -762,33 +781,13 @@ body{
         font-size: 15vw;
     }
 
-/* Détails page adresse */
+    /* Détails page adresse */
     #adresse input {
         margin-top: 10%;
     }
 }
 
-@media screen and (min-aspect-ratio: 3/4) {
-    #container {
-        padding-left: 0;
-        width: 100vw;
-    }
-/* Page adresse*/
-    header {
-        margin-bottom: 0;
-    }
-    video {
-        max-width: 85%;
-    }
-    .main-location-page {
-        padding-top: 0;
-    }
-
-}
-
-
 /* Bouton Info */
-
 *{
     box-sizing: border-box;
 }
