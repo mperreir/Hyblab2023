@@ -1,16 +1,26 @@
+
 /* ------- Important ! Please at least keep the last part of this CSS ----------- */
 .article {
     overflow: scroll;
     height: 90%;
   }
+
+#premiere_page #Boris{
+    font-size: 20px;
+}
+
 #premiere_page #ligne p {
     width: 90%;
     margin: auto;
 }
+#Boris{
+    font-family: 'Boris';
+}
 
 p{
     font-size: 14px;
-    
+    font-family: 'Inter';
+    font-style: normal;
 }
 /* ------- that adapts content width and height so that aspect ratio  ----------- */
 /* ------- is kept between 9/16 a,d 3/4 (portait orientation)         ----------- */
@@ -19,15 +29,12 @@ p{
 *{
     padding:0;
     margin:0;
-    font-family: 'Inter';
-    font-style: normal;
 }
 
 body{
     background-color: black;
     color: black;
     overflow: hidden;   /* to avoid slider bugs on some browsers */
-    font-family: 'Inter', serif;
 }
 
 #image{
@@ -416,6 +423,7 @@ header{
 }
 
 .titre{
+    font-family: 'Boris';
     font-size: 5vw;
     padding: 10px;
     font-weight: bold;
@@ -423,6 +431,11 @@ header{
     margin: auto;
     width: 70%;
     padding-top: 10%;
+}
+
+@font-face {
+    font-family: 'Boris';
+    src: url('../Boris.woff');
 }
 
 /* Most of the elements in this demo are absolute positionned with percentages */
@@ -596,7 +609,7 @@ div.conteneur{
     right: 5%;
     border: none;
     animation: glowing 2000ms infinite;
-    height: 2%;
+    height: 24px;
     top: 5%;
 
 }
