@@ -3,6 +3,7 @@ body {
     width : 100vw;
     left: 0;
     margin: 0;
+    overflow: scroll;
 }
 
 h1 {
@@ -83,3 +84,4 @@ h2 {
     width: 100vw;
     margin-top: -5vh;
 }
+
