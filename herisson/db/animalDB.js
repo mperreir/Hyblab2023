@@ -66,6 +66,7 @@ async function initAnimalDB() {
         // check if the animalName as , in it
         if (animalName.includes(',')) {
             // select only the first animalName
+            console.log(animalName[0]);
             animalName = animalName[0];
         }
         allTaxon[animalName] = await getTaxon(taxon, db);

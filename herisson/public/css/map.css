@@ -43,5 +43,5 @@ html, body, #map {
     margin-right: 2vw;
 }
 .leaflet-bottom .leaflet-control {
-    margin-bottom: 2vh;
+    margin-bottom: 4vh;
 }
