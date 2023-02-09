@@ -102,7 +102,10 @@ body {
 
 .bubble {
     text-align: left;
-    font-size: 14px;
+    /*font-size: 14px;
+    font-size: 3vw;*/
+    font-size: 2.5vmin;
+    line-height: 4vmin;
     background-color: #7a170e;
     position: absolute;
     padding-left: 30px;
@@ -133,11 +136,11 @@ body {
 }
 
 .bulle {
-    width: 60px;
+    width: 15%;
     height: auto;
     position: absolute;
     display: block;
-    top: -15%;
+    top: -30%;
     left: -5%;
 }
 
@@ -687,6 +690,8 @@ img.button-next {
 }
 
 #txt-evenement>p{
+    position: relative;
+    top: -15%;
     margin:5%;
 }
 
@@ -694,7 +699,7 @@ img.button-next {
     position: relative;
     width: 60px;
     left: 10%;
-    top: -10%;
+    top: -15%;
 }
 
 #img-bulle-event{

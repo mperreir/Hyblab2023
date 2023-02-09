@@ -16,8 +16,8 @@
             "txtcolor": "black"
         },
         {
-            "nom": "Cabarnet d'Anjou",
-            "desc": "Le Cabarnet d’Anjou est l’unique vin d’AOP rosé tendre de France ! Ce vin est fait à base de Cabernet franc et cabernet sauvignon.<br><br>Le Cabarnet d’ Anjou se produit sur tout la zone sud de la Loire allant d’ Ancenis à Saumur.<br><br>Les raisins sont fermentés à des températures contrôlées, puis le vin est élevé en barriques de chêne ou en cuves en acier inoxydable pour développer ses arômes et ses saveurs.<br>Il peut avoir des arômes de fruits rouges, de réglisse et de violettes, ainsi que des notes de bois de chêne.",
+            "nom": "Cabernet d'Anjou",
+            "desc": "Le Cabernet d’Anjou est <b>l’unique</b> vin d’AOP rosé tendre de France ! Ce vin est fait à base de <b>cabernet franc</b> et <b>cabernet sauvignon</b>.<br><br>Le Cabernet d’ Anjou se produit sur tout <b>la zone sud</b> de la Loire allant <b>d’ Ancenis à Saumur</b>.<br><br>Les raisins sont fermentés à des températures <b>contrôlées</b>, puis le vin est élevé en barriques de chêne ou en cuves en acier inoxydable pour développer ses <b>arômes et ses saveurs</b>.<br>Il peut avoir des arômes de <b>fruits rouges<b>, de <b>réglisse</b> et de <b>violettes</b>, ainsi que des notes de <b>bois de chêne</b>.",
             "img": "img/bouteilles/bouteille-rose.png",
             "imgfin" : "img/bouteilles/bouteille2.png",
             "color": "#EF7E73",
