@@ -12,7 +12,7 @@ body
     /*margin: 5em 3em 3em;*/
     margin: 10vh 9vw 9vw;
     font-size: 2vh;
-    color: #FFF8F1;
+    color: #0B6E5F;
     font-weight: 400;
     font-family: 'Prompt', sans-serif;
 }
@@ -167,7 +167,7 @@ input[type="text"]
     position: absolute;
     background-color: #FFF8F1;
     border-radius: 0 0 50px 50px;
-    width: 85vw;
+    width: 88vw;
     padding-top: 4vh;
     margin-top: 18vh;
     z-index: 1;

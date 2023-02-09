@@ -36,7 +36,7 @@ document.querySelector("#rechercheCommune").addEventListener("keyup", async func
 
         document.querySelector("#autocompletionCom").style.height = `${nbElemCom * 5}vh`;
         document.querySelector("#autocompletionCom").style.display = 'block';
-        document.querySelector("#autocompletionCom").innerHTML = `<div id="autoItemCom">${autocompletionsCom.map(name => `<div class="autoItemCom">${name}</div>`).join('')}</div>`;
+        document.querySelector("#autocompletionCom").innerHTML = `<div id="autoItemCom">${autocompletionsCom.map(name => `<div class="autoItemCom" style="overflow: hidden; white-space: nowrap">${name}</div>`).join('')}</div>`;
 
         document.querySelector("#autoItemCom").style.height = `${nbElemCom * 5}vh`;
         document.querySelector("#autoItemCom").style.overflowY = 'scroll';
