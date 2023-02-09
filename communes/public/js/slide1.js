@@ -74,10 +74,14 @@ const initSlide1 = async function(){
 
   //const urlParams = new URLSearchParams(window.location.search);
   //const name = urlParams.get('name');
+  console.log(sessionStorage.getItem("visit"));
+  let map_response = await fetch('../api/energy/'+sessionStorage.getItem("visit"));
+  const data_map = await map_response.json();
+
 
   const data_filter = data.main.filter(function(item){return item.id === sessionStorage.getItem("visit");})[0]
   mise_en_forme(data_filter);
   initSlide2(data_filter);
-  initSlide3(data_filter, []);
+  initSlide3(data_filter, data_map);
 
 };

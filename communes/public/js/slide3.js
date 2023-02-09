@@ -4,8 +4,6 @@ const initSlide3 = function(data, data_map){
     console.log(data.carte.name);
     document.querySelector('#map-title').innerHTML = data.carte.name.toUpperCase();
 
-    const div_map = document.querySelector('#map');
-
     const d = [
         {"code": "1", "value": 3404},
         {"code": "2", "value": 95534},
@@ -119,15 +117,15 @@ const initSlide3 = function(data, data_map){
         let map = d3.select("#map");
         map.node().appendChild(importedNode);
 
-        color_map(map, d, data.main_color);
+        color_map(map, data_map, data.main_color);
     });
 
-    create_legend(document.getElementById("legend"), d, data.main_color);
+    create_legend(document.getElementById("legend"), data_map, data.main_color);
 };
 
 const color_map = function(map, data, main_color){
-    let list_code = data.map((item) => {return '.dept-'+item.code;});
-    let list_color = color_gradient(data.map((item) => {return item.value;}), main_color);
+    let list_code = data.map((item) => {return '.dept-'+item.Departement;});
+    let list_color = color_gradient(data.map((item) => {return item.Production;}), main_color);
 
     for (let i = 0; i < list_code.length; i++){
         map.selectAll(list_code[i]).style("fill", list_color[i]);
@@ -181,8 +179,8 @@ const create_legend = function(container, data, main_color){
     const rgb = main_color.match(/\w\w/g).map((x) => {return parseInt(x, 16);});
     const color_value_corrected = '#'+Math.round(rgb[0] * 0.7).toString(16)+Math.round(rgb[1] * 0.7).toString(16)+Math.round(rgb[2] * 0.7).toString(16);
 
-    const max = Math.max(...data.map((item) => {return item.value;}));
-    const min = Math.min(...data.map((item) => {return item.value;}));
+    const max = Math.max(...data.map((item) => {return item.Production;}));
+    const min = Math.min(...data.map((item) => {return item.Production;}));
 
     var legend = d3.select(container).append("svg")
         .attr("viewBox", "0 0 200 20")
