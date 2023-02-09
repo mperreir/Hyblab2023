@@ -56,7 +56,7 @@ app.get('/energy/:name', function ( req, res ) {
         // requete = 'SELECT D.Code_departement, COUNT(*), SUM(S.Puissance) FROM DEPARTEMENT D LEFT OUTER JOIN SOLAIRE S ON D.Code_departement = S.Code_departement WHERE S.Date_de_la_donnee LIKE "2021%" GROUP BY D.Code_departement';
         requete = 'SELECT D.Code_departement AS Departement, COUNT(*) AS Nombre, SUM(S.Puissance) AS Production FROM SOLAIRE S RIGHT OUTER JOIN DEPARTEMENT D ON S.Code_departement = D.Code_departement GROUP BY D.Code_departement'
     } else if (energy === "la-riviere") {
-        requete = 'SELECT D.Code_departement AS Departement, COUNT(*) AS Nombre, SUM(I.Capacite_production) AS Production FROM INJMETHANE I RIGHT OUTER JOIN DEPARTEMENT D ON I.Code_Departement = D.Code_departement GROUP BY D.Code_departement';
+        requete = 'SELECT H.Code_Departement AS Departement, COUNT(*) AS Nombre, SUM(H.Puissance) AS Puissance FROM HYDRAULIQUE H RIGHT OUTER JOIN DEPARTEMENT D ON H.Code_Departement = D.Code_departement GROUP BY D.Code_departement';
     }
 
     db.all(requete, [], (err, rows) => {
@@ -116,6 +116,41 @@ app.get('/energy/:name/:number', function ( req, res ) {
             res.json(rows);
         }
     });
+});
+
+
+app.get('/score/:codepostal', function ( req, res ) {
+    /* let code = req.params.codepostal;
+    let epci;
+
+    epci = '(SELECT DISTINCT EPCI.Nom_epci, (score_epci/score_france)*100 AS Score FROM EPCI LEFT OUTER JOIN BIOMETHANE AS B GROUP BY EPCI.Code_epci ON E.Code_epci = B.Code_ecpi OUTER JOIN (EOLIEN AS E GROUP BY E.Code_Insee_Epci ON E.Code_epci = ) AS V ON E.code_EPCI = B.Code_insee_epci ';
+
+    db.all(requete, [num_dep], (err, rows) => {
+        // listen for the error event
+        process.on('error', (err) => {
+            // error handling code
+            console.error(err);
+        });
+        if (err) {
+            console.error(err);
+            res.status(500).send('Internal Server Error');
+        } else {
+            res.json(rows);
+        }
+    });
+
+     */
+    // Generate random integer between 22 and 84
+    let code = req.params.codepostal
+    let score = Math.floor(Math.random() * (84 - 22 + 1) + 22);
+    if (code.length === 5 && code.split('').every(char => char >= '0' && char <= '9' )) {
+        const output = {
+            score: score
+        }
+        res.json(output);
+    }
+    // Check if all the characters from the code are digits
+    res.status(500).send('Internal Server Error');
 });
 
 

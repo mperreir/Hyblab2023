@@ -78,11 +78,17 @@ document.querySelector(".skip").addEventListener("click", function () {
 });
 
 function submitPostal(){
-    let codePostal = document.querySelector("#name").value
-    if (codePostal === "44470"){
-        location.href="actualstate.html";
-    }else{
-        alert("code postal non valide")
-    }
-    console.log(codePostal)
+    let codePostal = document.querySelector("#name").value;
+
+    fetch('../api/score/' + codePostal)
+        .then((response) => response.json())
+        .then((data) => {
+            sessionStorage.setItem("Score",data.score.toString()+"%");
+            location.href="actualstate.html";
+        })
+        .catch((error) => {
+            alert("Code postal non valide");
+        }
+    )
+
 }
