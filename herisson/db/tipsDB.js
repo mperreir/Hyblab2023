@@ -56,7 +56,8 @@ const tipsChiropteres = {
     'Plantez une haie variée' : 'Pour servir de haie, les espèces locales sont par définition parfaitement adaptées au sol et au climat. Ces plantes attirent et nourrissent de nombreux animaux. Un véritable garde-manger pour les chauves-souris.'
 }
 
-async function createTipsDB() {
+async function initTipsDB() {
+    console.log('initTipsDB')
     let tipsDB = {};
     for (let i = 0; i < listeCategories.length; i++) {
         tipsDB[listeCategories[i]] = {};
@@ -89,7 +90,7 @@ async function createTipsDB() {
         }
     }
 
-    fs.writeFileSync('../public/data/tipsDB.json', JSON.stringify(tipsDB));
+    fs.writeFileSync('herisson/public/data/tipsDB.json', JSON.stringify(tipsDB));
 }
 
-createTipsDB();
+module.exports = initTipsDB;

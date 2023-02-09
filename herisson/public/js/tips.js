@@ -53,7 +53,7 @@ async function createPageConseil(name) {
     }
 
     // Slider horizontal
-    var horizontalSlider = new Swiper('.horizontal-slider', {
+    const horizontalSlider = new Swiper('.horizontal-slider', {
         loop: true,
         nested: true,
         navigation: {
