@@ -133,7 +133,7 @@ div#popup div#popup-content {
 .bouton-voir-profil{
     width: 50%;
     margin-left: 55%;
-    transform: translateY(0.1em);
+    transform: translateY(0.5em);
 }
 
 .bouton-voir-profil button{
