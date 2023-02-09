@@ -151,7 +151,6 @@ function ajouteTheme(theme) {
     } else {
         nvxStorage = theme;
     }
-
     window.localStorage.setItem("themes", nvxStorage);
 }
 
@@ -459,11 +458,17 @@ async function onCheck(evnt) {
         await chercheEtAjouteProfilsCarousel(themeSelected, true);
     } else {
         if (themeSelected.length === 1) {
-            const modal =  document.querySelector('#modal');
-            const modalClose = document.querySelector('#modal-close');
-            modal.style.display = 'block';
-            modalClose.addEventListener('click', () => {
-                modal.style.display = 'none';
+            // Display the overlay
+            const overlay = document.querySelector("div#overlay");
+            overlay.classList.remove("display-none");
+            // Display the popup
+            const popup = document.querySelector("div#popup");
+            popup.classList.remove("display-none");
+            document.querySelector('div#popup img#fermeture-popup').addEventListener('click', function (e) {
+                // Undisplay the overlay
+                document.querySelector('div#overlay').classList.add('display-none');
+                // Undisplay the popup
+                document.querySelector('div#popup').classList.add('display-none');
             });
         } else {
             themeLi.classList.add("unchecked");
