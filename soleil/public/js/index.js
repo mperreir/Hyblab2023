@@ -4,8 +4,8 @@
 // Init of the (touch friendly) Swiper slider
 const swiper = new Swiper("#mySwiper", {
   direction: "vertical",
-  observer: true,
-  //mousewheel: true,
+  //observer: true,
+  mousewheel: false,
 });
 
 swiper.on("slideChange", function () {
