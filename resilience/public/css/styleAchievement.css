@@ -153,10 +153,27 @@
     margin: 2rem auto;
 }
 
+iframe {
+    display: flex;
+    margin: 2rem auto;
+}
+
+.bold {
+    font-weight: bold;
+}
+
 .indent {
     padding-left: 2rem;
 }
 
-.shortSkip{
+.shortSkip {
     margin-top: 0.5rem;
+}
+
+.midSkip {
+    margin-top: 1rem;
+}
+
+.bigSkip {
+    margin-top: 2rem;
 }

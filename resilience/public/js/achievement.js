@@ -67,6 +67,7 @@ async function achievement() {
                     htmlE = document.createElement('a');
                     htmlE.textContent = e.text;
                     htmlE.href = e.link;
+                    htmlE.target="_blank"
                     break;
                 default:
                     console.log("Unknown type : " + e.type);
