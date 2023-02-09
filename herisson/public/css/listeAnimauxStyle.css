@@ -160,7 +160,7 @@ main.pop-up{
     color: #FFF8F1;
     left: 5%;
     margin-top: 1%;
-    font-size: 4.5vw;
+    font-size: 5vw !important;
 }
 #desc{
     position: absolute;
@@ -182,7 +182,7 @@ main.pop-up{
     border-radius: 10vw;
 }
 #menace #menace-txt{
-    font-size: 2.5vh;
+    font-size: 3vw;
     font-weight: lighter;
     max-width: 70%;
     line-height: 3vh;
@@ -192,7 +192,7 @@ main.pop-up{
     transform: translate(7vw, 0);
 }
 #menace #menace-level{
-    font-size: 3vh;
+    font-size: 4vh;
     font-weight: bold;
     text-align: center;
     margin-top: -4vh;
@@ -211,7 +211,7 @@ main.pop-up{
     border-radius: 10vw;
 }
 #vus #vus-txt{
-    font-size: 2.5vh;
+    font-size: 4vw;
     font-weight: lighter;
     max-width: 75%;
     text-align: center;
