@@ -1,11 +1,21 @@
 {
     "place": "Ferme urbaine de Manon",
-    "names": [
-        "Manon",
-        "Voyageur"
+    "people": [
+        {
+            "name": "Manon",
+            "background_color": "#FD9E98",
+            "border_color": "white",
+            "text_color": "black",
+            "side": "left"
+        },
+        {
+            "name": "Voyageur",
+            "background_color": "white",
+            "border_color": "black",
+            "text_color": "black",
+            "side": "right"
+        }        
     ],
-    "background_color": "#FD9E98",
-    "text_color": "black",
     "messages": [
         {
             "type": "message",

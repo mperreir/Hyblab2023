@@ -5,7 +5,7 @@ const heures = ['8:00', '9:30', '11:00', '12:30', '14:00', '15:30', '17:00', '18
 var modal = document.getElementById("myModal");
 var modal_acquis = document.getElementById("notif-acquis");
 var dict_achiev = new Map();
-dict_achiev.set("_8", [1, 2, 3, 4, 5]);
+dict_achiev.set("_8", [1, 2, 3, 4, 5, 6, 7, 8]);
 dict_achiev.set("_9", [6, 7, 8]);
 dict_achiev.set("_10", []);
 dict_achiev.set("_11", []);
@@ -18,7 +18,7 @@ dict_achiev.set("_16", []);
 regions.forEach(element => {
     element.addEventListener('click', () => {
         compt = window.localStorage.getItem("compt");
-        if ((element.id != "_16" || compt.length > 7) && window.localStorage.getItem("popup") == "false") {
+        if ((element.id != "_16" || compt.length > 7) && (element.id != "_14" || window.localStorage.getItem("pipi") == "true") && window.localStorage.getItem("popup") == "false") {
             dict_achiev.get(element.id).forEach(e => {
                 window.localStorage.setItem('achievement'.concat(e), "true");
             });
@@ -119,7 +119,8 @@ function manger() {
 
 function toilette() {
     window.localStorage.setItem('pipi', "true");
-    window.location = "./dialogue.html?id=17";
+    window.localStorage.setItem("_14","true");
+    window.location = "./dialogue.html?id=14";
 }
 
 load();

@@ -1,11 +1,21 @@
 {
     "place": "Moulin de Fabien",
-    "names": [
-        "Fabien",
-        "Voyageur"
+    "people": [
+        {
+            "name": "Fabien",
+            "background_color": "#9088FF",
+            "border_color": "white",
+            "text_color": "black",
+            "side": "left"
+        },
+        {
+            "name": "Voyageur",
+            "background_color": "white",
+            "border_color": "black",
+            "text_color": "black",
+            "side": "right"
+        }
     ],
-    "background_color": "#9088FF",
-    "text_color": "black",
     "messages": [
         {
             "type": "message",

@@ -1,11 +1,21 @@
 {
     "place": "Le jardin partagé de l’école Prévert",
-    "names": [
-        "Marjolaine",
-        "Voyageur"
+    "people": [
+        {
+            "name": "Marjolaine",
+            "background_color": "#615FC2",
+            "border_color": "white",
+            "text_color": "white",
+            "side": "left"
+        },
+        {
+            "name": "Voyageur",
+            "background_color": "white",
+            "border_color": "black",
+            "text_color": "black",
+            "side": "right"
+        }
     ],
-    "background_color": "#615FC2",
-    "text_color": "white",
     "messages": [
         {
             "type": "message",

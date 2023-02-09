@@ -1,21 +1,51 @@
 {
     "place": "Assemblée locale",
-    "names": [
-        "Brandon",
-        "Voyageur"
+    "people": [
+        {
+            "name": "Brandon",
+            "background_color": "#A4A4FC",
+            "border_color": "white",
+            "text_color": "black",
+            "side": "left"
+        },
+        {
+            "name": "Voyageur",
+            "background_color": "white",
+            "border_color": "black",
+            "text_color": "black",
+            "side": "right"
+        }
     ],
-    "background_color": "#A4A4FC",
-    "text_color": "black",
     "messages": [
         {
             "type": "message",
+            "name": "Brandon",
+            "text": "Ah tiens notre voyageur, j’ai entendu parler de toi ! Comment vas-tu après cette journée bien remplie ?"
+        },
+        {
+            "type": "message",
             "name": "Voyageur",
-            "text": "Bonjour"
+            "text": "Ça va bien, j’ai fait plein de riches découvertes. On m’a d’ailleurs fait part de cette assemblée locale citoyenne, je suis curieux.se de découvrir ce qu’il s’y passe."
         },
         {
             "type": "message",
             "name": "Brandon",
-            "text": "Ah oui ?"
+            "text": "Ben tu tombes bien, elle commence dans dix minutes. C’est ici que chaque mois, sont choisis collectivement les aliments conventionnés par la SSA. Chacun vote et met une liste d’ingrédients dont il a besoin. Les agriculteurs produisent en fonction."
+        },
+        {
+            "type": "message",
+            "name": "Brandon",
+            "text": "C’est aussi ici que l’on peut proposer des idées pour améliorer notre système de résilience alimentaire. Il y a une réunion par mois et entre-temps, si quelqu’un souhaite faire part d’une idée, il y a la boîte à idées."
+        },
+        {
+            "type": "message",
+            "name": "Brandon",
+            "text": "N’hésite pas à l’utiliser si tu as des remarques ou des propositions. (clin d’oeil)"
+        },
+        {
+            "type": "message",
+            "name": "Brandon",
+            "text": "Avec plaisir !"
         }
     ]
 }
