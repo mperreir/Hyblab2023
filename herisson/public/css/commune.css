@@ -134,8 +134,8 @@ body {
 
 .swiper-pagination-bullet {
     position: relative;
-    width: 1em;
-    height: 1em;
+    width: 2vw;
+    height: 2vw;
     display: inline-block;
     background: none;
     border: 0.3em solid #0B6E5F;
