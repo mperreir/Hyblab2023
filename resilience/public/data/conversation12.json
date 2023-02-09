@@ -1,21 +1,81 @@
 {
     "place": "Fab’lim",
-    "names": [
-        "Charlotte",
-        "Voyageur"
+    "people": [
+        {
+            "name": "Charlotte",
+            "background_color": "#A0DAFF",
+            "border_color": "white",
+            "text_color": "black",
+            "side": "left"
+        },
+        {
+            "name": "Voyageur",
+            "background_color": "white",
+            "border_color": "black",
+            "text_color": "black",
+            "side": "right"
+        }
     ],
-    "background_color": "#A0DAFF",
-    "text_color": "black",
     "messages": [
         {
             "type": "message",
+            "name": "Charlotte",
+            "text": "Bonjour, je peux vous aider ?"
+        },
+        {
+            "type": "message",
             "name": "Voyageur",
-            "text": "Bonjour"
+            "text": "Oui, bonjour ! :)"
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "C’est quoi le Fab’Lim exactement ?"
         },
         {
             "type": "message",
             "name": "Charlotte",
-            "text": "Ah oui ?"
+            "text": "Un Fab’Lim, c’est une sorte de laboratoire alimentaire. Ici, on vient transformer nos récoltes après le jardinage. Des outils sont également mis à disposition pour cuisiner. On valorise toutes nos récoltes et comme on on est antigaspi, on valorise aussi nos déchets."
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Et tout le monde peut venir ?"
+        },
+        {
+            "type": "message",
+            "name": "Charlotte",
+            "text": "Oui, c’est ouvert à tous les habitants. Le matériel est mutualisé, c’est-à-dire que tout le monde peut l’utiliser, selon les besoins des uns et des autres. On a par exemple des espaces de stockage frigorifiques, des ateliers de transformation et une cuisine professionnelle."
+        },
+        {
+            "type": "message",
+            "name": "Charlotte",
+            "text": "Si tu sais déjà cuisiner et que tu as tes recettes, tu peux directement profiter de la cuisine commune pour te faire tes plats et partager ta recette aux autres si tu en as envie. Sinon, si tu as envie de découvrir des recettes, tu peux apprendre à cuisiner avec moi. Je travaille ici quatre  jours sur cinq et je fais en sorte de proposer tous les jours une nouvelle recette. Mais tous les  jardiniers qui viennent ici peuvent proposer leurs idées de recette ou de conservation. Dernièrement, on a fait de la confiture de figues, des compotes de pommes, des pickles de feuilles de brocolis, de tiges de chou-fleur, d’oignons, d’ail… puis on fait de la soupe aussi, du chutney, des sauces, du ketchup…"
+        },
+        {
+            "type": "message",
+            "name": "Charlotte",
+            "text": "Mon amie Stéphanie nous met toujours l’eau à la bouche avec ses recettes ! Elle s’occupe de l'atelier de conservation. Pour être sûr de ne pas manquer d’aliments et faire quelques provisions (pour l’hiver ou en cas de crise) , les jardiniers viennent pendant leur temps libre apprendre à conserver leurs fruits et légumes. Alors on participe aux pickles, mais nous faisons aussi beaucoup d’ateliers bocaux, puis déshydratation aussi."
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Depuis quand existe ce genre de tiers lieu  ?"
+        },
+        {
+            "type": "message",
+            "name": "Charlotte",
+            "text": "Dans les années 2020, beaucoup de tiers lieux comme celui-ci ont été mis en place par la société civile sous forme associative, un peu partout sur le territoire. Puis, voyant l’intérêt de ces lieux, les collectivités ont commencé à soutenir fortement ces initiatives, et c’est comme ça qu’elles se sont généralisées. Aujourd’hui, les Fab’Lim sont devenus un vrai service public, offert aux habitants de la ville en échange d’un abonnement - un peu sur le même modèle que les médiathèques ou les objethèques. Et les habitants ont un droit de regard, qu’ils expriment notamment lors de l’Assemblée locale citoyenne pour l’alimentation."
+        },
+        {
+            "type": "message",
+            "name": "Charlotte",
+            "text": "Mais j’y pense, il y a une session ce soir à la mairie, tu peux aller voir à quoi ça ressemble, c’est ouvert à tous."
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Ah oui, bonne idée ! Merci :)"
         }
     ]
 }

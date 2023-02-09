@@ -1,21 +1,126 @@
 {
     "place": "Toilettes sèches",
-    "names": [
-        "Charles",
-        "Voyageur"
+    "people": [
+        {
+            "name": "Charles",
+            "background_color": "#FEA2E1",
+            "border_color": "white",
+            "text_color": "black",
+            "side": "left"
+        },
+        {
+            "name": "Voyageur",
+            "background_color": "white",
+            "border_color": "black",
+            "text_color": "black",
+            "side": "right"
+        }
     ],
-    "background_color": "#FEA2E1",
-    "text_color": "black",
     "messages": [
         {
             "type": "message",
             "name": "Voyageur",
-            "text": "Bonjour"
+            "text": "Bonjour, il y a un peu de queue ici dites donc…"
         },
         {
             "type": "message",
             "name": "Charles",
-            "text": "Ah oui ?"
+            "text": "Oui, ils sont en train de récupérer les excrétas. Mais pas de panique, il y en a pour longtemps…"
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Comment ça fonctionne ?"
+        },
+        {
+            "type": "message",
+            "name": "Charles",
+            "text": "Ce sont des toilettes à séparation. Au lieu de partir dans les égouts, le pipi ici est réutilisé : c’est la séparation à la source."
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Mais, comment ça ?!"
+        },
+        {
+            "type": "message",
+            "name": "Charles",
+            "text": "C’est un modèle qui fonctionne avec un tapis roulant incliné, qui va permettre d’amener les urines par gravité sur le devant du trône, alors que les matières fécales, elles vont être amenées sur l’arrière de la machine, grâce à la pédale."
+        },
+        {
+            "type": "message",
+            "name": "Charles",
+            "text": "On récupère ensuite les urines, qu’on emmène à stocker dans des cuves, puis quand il y a vraiment beaucoup de volumes, on les emmène chez une entreprise spécialiste de la réutilisation de l’urine. Elle les transformera ensuite en un engrais normé et hygiénisé. Le pipi est un vrai fertilisant !"
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Pour les urines, d’accord, mais le reste ? "
+        },
+        {
+            "type": "message",
+            "name": "Charles",
+            "text": "Les selles sont collectées à l’arrière et sont transformées en lombri-compost, qui crée de la matière organique carbonée pour régénérer les sols. "
+        },
+        {
+            "type": "all",
+            "messages": [
+                [
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "L’urine, un fertilisant pour le potager ?!"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Charles",
+                        "text": "En fait, le pipi est composé à 75% d’eau. Mais il contient aussi plus de 3000 substances chimiques, dont 90% de l’azote consommé, 60% du phosphore et 75% du potassium. Et les plantes en raffolent ! Ces nutriments sont en fait nécessaires à leur croissance."
+                    },
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Mais, quelles plantes peuvent bien pousser avec du pipi ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Charles",
+                        "text": "Ben tiens, par exemple, les concombres, les aubergines, ou même les poivrons ! Il y a des spécialistes qui recommandent trois litres d’urine diluée dans de l’eau par mètre carré de terre et à peine un litre dilué par mètre carré pour cultiver des navets, des carottes ou des salades !"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Et pour des champs alors ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Charles",
+                        "text": "Très bonne question ! Ben tiens, prenons l’exemple du blé. Pour fertiliser un hectare de blé, il faut environ 30 000 litres d’urine. En fait, l’urine est stabilisée : l’entreprise qui la récolte s’assure qu’elle devienne inodore et qu’elle ne présente aucun risque sur le plan de l’hygiène. Après le stockage dans des bidons, l’urine devient une solution concentrée en bactéries. Il y en a un milliard par litre ! Et ce sont elles qui vont être utiles dans nos champs de blé. Elles captent l’azote présent dans l’air et le restituent directement aux plantes, qui en ont besoin pour leur croissance."
+                    }
+                ],
+                [
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Depuis quand ça existe ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Charles",
+                        "text": "Depuis très très longtemps ! Dans l’antiquité romaine, le pipi était déjà utilisé, comme à Paris au début du XXème siècle d’ailleurs."
+                    },
+                    {
+                        "type": "message",
+                        "name": "Charles",
+                        "text": "Il y a trente ans, en 2020, alors que la France continuait encore de perdre de grandes quantités d’azote dans ses eaux usées (notamment à cause du système linéaire des stations d’épurations), une série de start up avait commencé l'expérimentation de divers modes de récupération. Qui, comme tu le vois, a porté ses fruits ! :)"
+                    }
+                ]
+            ]
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Je me coucherai moins bête ce soir. Merci pour tous ces renseignement, bonne journée !"
         }
+
     ]
 }
