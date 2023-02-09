@@ -3,7 +3,7 @@ var executed6 = false;
 
 const initSlide6 = async function(){
     if(!executed6){
-        changeOmbre();
+        $("#ombre .img-ombre").attr("src", `img/Ombre/toit-${quiz["pente"]}-ombre-01.jpg`);
         executed6 = true;
         $("#ombre .open-button").click(function(){
             swiper.slideTo(13, 0);
