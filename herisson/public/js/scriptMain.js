@@ -21,10 +21,11 @@ document.querySelector("#rechercheCommune").addEventListener("keyup", async func
     if (dataCommune && dataCommune.filteredNames) {
         autocompletionsCom = dataCommune.filteredNames.slice(0, 10);
     }
-    let nbElemCom = autocompletionsCom.length;
-    if (nbElemCom > 3) {
-        nbElemCom = 3;
-    }
+    // let nbElemCom = autocompletionsCom.length;
+    // if (nbElemCom > 3) {
+    //     nbElemCom = 3;
+    // }
+    let nbElemCom = 3;
 
     if (nbElemCom === 0) {
         document.querySelector("#autocompletionCom").innerHTML = '';
@@ -78,11 +79,11 @@ document.querySelector("#rechercheAnimal").addEventListener("keyup", async funct
     if (dataAnimaux && dataAnimaux.filteredNames) {
         autocompletionsAni = dataAnimaux.filteredNames.slice(0, 10);
     }
-    let nbElemAni = autocompletionsAni.length;
-    if (nbElemAni > 3) {
-        nbElemAni = 3;
-    }
-
+    // let nbElemAni = autocompletionsAni.length;
+    // if (nbElemAni > 3) {
+    //     nbElemAni = 3;
+    // }
+    let nbElemAni = 3;
     if (nbElemAni === 0) {
         document.querySelector("#autocompletionAni").innerHTML = '';
         document.querySelector("#autocompletionAni").style.display = `none`;
@@ -110,28 +111,3 @@ document.querySelector("#rechercheAnimal").addEventListener("keyup", async funct
     }
     dataAnimaux = undefined;
 });
-//
-//
-//         // Make a GET request to the API endpoint
-//     fetch(`http://127.0.0.1:8080/herisson/api/animal/autocomplete/${searchTerm}`)
-//         .then(response => response.json())
-//         .then(data => {
-//             console.log(data);
-//             // Do something with the data returned by the API
-//             const autocompletionsAni = data.filteredNames.slice(0, 3);
-//             document.querySelector("#autocompletionAni").innerHTML = autocompletionsAni.map(name => `<div class="autoItemAni">${name}</div>`).join('');
-//             const autocompletionItems = document.querySelectorAll(".autoItemAni");
-//             autocompletionItems.forEach(item => {
-//                 item.addEventListener("click", function () {
-//                     document.querySelector("#rechercheAnimal").value = this.textContent;
-//                     document.querySelector("#autocompletionAni").innerHTML = '';
-//                     document.querySelector("#searchAnimal").submit();
-//                     document.querySelector("#rechercheAnimal").value = '';
-//                 });
-//             });
-//         })
-//         .catch(error => {
-//             console.error(error);
-//         });
-// });
-//
