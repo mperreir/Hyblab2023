@@ -18,52 +18,47 @@
         {
           "type": "text",
           "text": "- Il contribue de manière importante aux émissions de gaz à effet de serre (20% des GES en France, dont 90% sont liés à l’élevage).",
-          "class": ["indent"]
+          "class": ["indent","shortSkip"]
         },
         {
           "type": "text",
           "text": "- Il est le premier consommateur d’eau en France (45% de l’eau douce prélevée).",
-          "class": ["indent"]
+          "class": ["indent","shortSkip"]
         },
         {
           "type": "text",
           "text": "- Alors que la population agricole est vieillissante et que le nombre d’exploitations diminue chaque année, les exploitants agricoles constituent la catégorie professionnelle dont le niveau de vie est parmi les plus faibles (en notant cependant qu’il existe de grandes disparités entre exploitations).",
-          "class": ["indent"]
+          "class": ["indent","shortSkip"]
         },
         {
           "type": "text",
           "text": "- Enfin, alors qu’1/4 des français se restreignent sur la quantité de ce qu’ils mangent pour des raisons financières, l’alimentation inadaptée constitue le premier facteur de risque de mauvaise santé, et l’une des premières causes de mortalité en France.",
-          "class": ["indent"]
+          "class": ["indent","shortSkip"]
         },
         {
           "type": "text",
           "text": "De l’autre, le système agricole actuel est vulnérable et peu résilient :",
-          "class": []
+          "class": ["shortSkip"]
         },
         {
           "type": "text",
           "text": "- Il est dépendant des énergies fossiles à bien des niveaux : outils de production, transport des matières premières vers les usines de transformation, répartition des denrées sur le territoire…",
-          "class": ["indent"]
+          "class": ["indent","shortSkip"]
         },
         {
           "type": "text",
           "text": "- Il est soumis au dérèglement climatique et ses conséquences : sécheresse et tension sur l’usage de l’eau, évolution du climat et des écosystèmes locaux, multiplication des événements climatiques extrêmes (canicule, inondation…)",
-          "class": ["indent"]
+          "class": ["indent","shortSkip"]
         },
         {
           "type": "text",
           "text": "- Et il doit également faire avec l’effondrement de la biodiversité et la baisse de la fertilité des sols (dégradation et artificialisation des sols par l’activité humaine), pourtant essentiels aux cultures.",
-          "class": ["indent"]
+          "class": ["indent","shortSkip"]
         },
         {
           "type": "text",
           "text": "- On peut également citer d’autres perturbations possibles, d’ordre politique, économique, sanitaire…",
-          "class": ["indent"]
-        },
-        {
-          "type": "video",
-          "link": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          "class": []
+          "class": ["indent","shortSkip"]
         }
       ]
     },
