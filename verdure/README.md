@@ -1,15 +1,25 @@
-# Descriptif du projet
+# PROJET HYBLAB 2023
+### EQUIPE VERDURE
 
-Porteur de projet :
+__Porteur de projet__ : Denis Vannier / https://leplan.studio/
 
-Sujet :
+__Sujet__ : Sensibiliser aux enjeux et difficultées de la revégétalisation des villes
 
-Nom d'équipe :
+__Nom d'équipe__ :  GreenTah
 
-Participants : 
+__Participants__ : 
 
-- AGR :
+- AGR : 
+-- INES Alexis
+-- LIAIGRE Enzo
+--PERRICHOT Emma
 
-- EPJT
+- EPJT :
+-- PREVOST Maël
 
 - Polytech :  
+-- BLAIN Killian
+-- LOMELET Guilhem
+-- ROBERT Victor
+-- TILLE Rafael
+
