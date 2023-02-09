@@ -67,7 +67,7 @@ main div#credits-content section#members div#members-wd, main div#credits-conten
 
 main div#credits-content section#members div#members-wd div#members-w, main div#credits-content section#members div#members-wd div#members-d {
     width: 100%;
-    height: 40%;
+    height: 50%;
 }
 
 main div#credits-content section#helpers {
@@ -81,7 +81,6 @@ main div#credits-content section#helpers {
 main div#credits-content section#images {
     width: 80%;
     height: 40%;
-
 }
 
 main div#credits-content section#images div#images-t{
