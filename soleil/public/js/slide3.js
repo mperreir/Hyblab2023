@@ -17,11 +17,11 @@ const initSlide3 = async function(){
         $(".choix-logement img").click(function(){
             
             if($(this).attr("class") == "non-selection"){
-                $(this).attr("src", `img/Choix habitation/selection/${$(this).attr("title")}-selection.jpg`);
+                $(this).attr("src", `img/Choix habitation/selection/${$(this).attr("title")}-selection.svg`);
                 $(this).attr("class","selection");
                 let other_img = $(this).siblings()[1].title;
                  $(`.choix-logement img[title=${other_img}]`).attr("class", "non-selection");
-                $(`.choix-logement img[title=${other_img}]`).attr("src", `img/Choix habitation/Non selection/${other_img}-non-selection.jpg`);
+                $(`.choix-logement img[title=${other_img}]`).attr("src", `img/Choix habitation/Non selection/${other_img}-non-selection.svg`);
             }
         })
     }
