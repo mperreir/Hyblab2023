@@ -11,6 +11,7 @@ body {
     height: 100vh;
 }
 
+
 #container > * {
     width: 75%;
 }
@@ -37,6 +38,16 @@ body {
     margin-left: auto;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: 0.2s;
+}
+
+.bouton-rond {
+    padding: 3%;
+}
+
+.bouton-rond:hover {
+    cursor: pointer;
+    color: var(--blanc-fond);
+    background: var(--bleu-fonce);
 }
 
 /*

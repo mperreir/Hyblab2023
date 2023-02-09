@@ -45,11 +45,11 @@ function createFicheprofile(profile) {
                                 <section id="bio" class="align-items-center">
                                     <p>${ContentBio}</p>
                                 </section>
-                                <iframe id="podcast" name="Ausha Podcast Player" frameborder="0" loading="lazy" id="ausha-HePz" height="220" style="border: none; width:100%; height:220px" src="${Podcast}"></iframe><script src="https://player.ausha.co/ausha-player.js"></script>                            
+                                <iframe id="podcast" name="Ausha Podcast Player" loading="lazy" id="ausha-HePz" height="200px" style="border: none; width:100%; height: 200px; overflow: scroll;  " src="${Podcast}"></iframe><script src="https://player.ausha.co/ausha-player.js"></script>                            
                             </section>
                             <section id="links" class="flex-row align-items-center justify-content-space-between">
-                                <button onclick="window.open('${Article}','_blank')" class="bouton-rond">Lire l\'article</button>
-                                <button onclick="window.open('${URLLinkedin}','_blank')" class="bouton-rond">Le profil Linkedin</button>
+                                <button id="Artcicle" onclick="window.open('${Article}','_blank')" class="bouton-rond">Lire l\'article</button>
+                                <button id="Linkedin" onclick="window.open('${URLLinkedin}','_blank')" class="bouton-rond">Le profil Linkedin</button>
                             </section>
                         </div>`
     ;
@@ -65,6 +65,18 @@ function createFicheprofile(profile) {
         //Increase the font size of the bio if profile doesn't have a podcast
         const bio = document.querySelector('#bio');
         bio.style.fontSize = "1.17em";
+    }
+
+    if (Article === "") {
+        //Remove the article button if the profile doesn't have an Article link
+        const articleButton = document.querySelector('#Artcicle');
+        articleButton.remove();
+    }
+
+    if (URLLinkedin === "") {
+        //Remove the Linkedin button if the profile doesn't have a Linkedin link
+        const linkedinButton = document.querySelector('#Linkedin');
+        linkedinButton.remove();
     }
 }
 
