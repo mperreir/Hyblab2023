@@ -12,6 +12,7 @@ async function createAnimalCategory(commune, animalCategory) {
 
     /*call it*/
     const animalsData = await getAllAnimals();
+    console.log(animalsData);
 
     /*  main page */
     const footercontainer = document.getElementById("footerText")
