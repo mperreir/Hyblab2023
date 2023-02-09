@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
@@ -11,35 +11,77 @@
     <link rel="icon" type="image/png" href="../img/icon.png"/>
 </head>
 <body>
-<div id="container" class="flex-column align-items-center justify-content-space-between rainbow-background rbg-bottom">
-    <header class="flex-row align-items-center justify-content-center" id="logo-appli">
-        <button onclick="window.location.href = './apropos.html'" id="retour" class="bouton-rond">Retour</button>
-        <a id="logo" href="choix-themes.html">
-            <div class="flex-column align-items-center justify-content-center">
-                <img src="../img/profils_de_demain.svg" alt="profils_de_demain_logo">
+    <div id="container" class="flex-column align-items-center justify-content-space-between">
+        <header class="flex-row align-items-center justify-content-space-evenly" id="logo-appli">
+            <button id="retour" class="bouton-rond" onclick="window.location.href = 'choix-themes.html'">Retour</button>
+            <a href="choix-themes.html">
+                <div class="flex-column align-items-center justify-content-center">
+                    <img src="../img/profils_de_demain.svg" alt="profils_de_demain_logo">
+                </div>
+            </a>
+            <div onclick="window.location.href = 'apropos.html'" id="petit-rond" class="bouton-rond flex-row align-items-center justify-content-center">
+                <p>i</p>
             </div>
-        </a>
-        <button id="petit-rond" >cc</button>
-    </header>
-    <div id="remerciment">
-        <section id="texte-merci" class="flex-column">
-            <section class="flex-column justify-content-center">
-                <section id="personnes" class="flex-row justify-content-center">
-                    <section id="design" class="flex-column justify-content-center">
-                        <p><span class="gras">Rédaction</span><br>Arnaud Fischer<br><br><span class="gras">Design et animation</span><br>Margot Cusicanqui<br>Cloé CHARGÉ<br><br></p>
-                    </section>
-                    <section id="programmation" class="flex-column justify-content-center">
-                    <p><span class="gras">Programmation</span><br>Marin Chevolleau<br>Thomas Peray<br>Grégoire COSNE<br>Rémi DELORD<br>Thibault Sophys<br><br></p>
-                    </section>
+        </header>
+        <main>
+            <div id="credits-content" class="flex-column align-items-center justify-content-space-around">
+                <section id="members" class="flex-row align-items-center justify-content-space-between">
+                    <div id="members-wd" class="flex-column align-items-flex-start justify-content-space-between">
+                        <div id="members-w">
+                            <p class="gras">Rédaction</p>
+                            <p>
+                                Arnaud FISCHER
+                            </p>
+                        </div>
+                        <div id="members-d">
+                            <p class="gras">Design et animations</p>
+                            <p>
+                                Margot CUSICANQUI
+                                Cléo CHARGÉ
+                            </p>
+                        </div>
+                    </div>
+                    <div id="members-dev">
+                        <p class="gras">Programmation</p>
+                        <p>
+                            Marin CHEVOLLEAU
+                            Thomas PERAY
+                            Grégoire COSNE
+                            Rémi DELORD
+                            Thibault SOPHYS
+                        </p>
+                    </div>
                 </section>
-            </section>
-            <section id="merci" class="flex-column align-items-center justify-content-center ">
-                <p>Merci à Elodie Vallerey du Journal des Entreprises ainsi qu’à l’équipe encadrante pour leur accompagnement.
-                <br><br>
-                <span class="gras">En partenariat avec</span></p>
-            </section>
-        </section>
+                <section id="helpers" class="flex-row align-items-center justify-content-center">
+                    <p>
+                        Merci à Elodie VALLEREY du Journal des Entreprises ainsi qu'à l'équipe encadrante pour leur accompagnement.
+                    </p>
+                </section>
+                <section id="images" class="flex-column align-items-center justify-content-space-evenly">
+                    <div id="images-t" class="flex-row align-items-center justify-content-center">
+                        <p class="gras">
+                            En partenariat avec
+                        </p>
+                    </div>
+                    <div id="images-i">
+                        <img src="hyblab_2023.jpg" alt="hyblab_2023_logo">
+                        <img src="logo_cc.png" alt="cc_logo">
+                        <img src="../../../__common-logos__/logo_hyblab.png" alt="logo_hyblab">
+                        <img src="../../../__common-logos__/logo_oml.png" alt="logo_oml">
+                        <img src="../../../__common-logos__/logo_opensource.png" alt="logo_opensource">
+                        <img src="../../../__common-logos__/institutionnels/logo_nantesmetropole.png" alt="logo_nantesmetropole">
+                        <img src="../../../__common-logos__/institutionnels/logo_pdl.png" alt="logo_nantes">
+                        <img src="../../../__common-logos__/ecoles/logo_agr.png" alt="logo_agr">
+                        <img src="../../../__common-logos__/ecoles/logo_epjt.svg" alt="logo_epjt">
+                        <img src="../../../__common-logos__/ecoles/logo_nantesuniversite.png" alt="logo_nantesuniversite">
+                        <img src="../../../__common-logos__/ecoles/logo_polytech.png" alt="logo_polytech">
+                        <img src="../img/jde.jpg" alt="jde_logo">
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+        </footer>
     </div>
-</div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 
 // TODO : implementer retour arriere
 //
-// TODO : mettre les bons liens dans le header
+// TODO : implementer redirection vers la page de profil
 
 /*
   ----------------------------------------------------------------------------------------------------------------------

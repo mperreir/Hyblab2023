@@ -72,8 +72,8 @@ function createFiche(profil, dataPos) {
                                     <img src="../img/pictogrammes_themes/${tranlatedSimpleTopic}.svg" alt="${tranlatedSimpleTopic}">
                                     <p class="${fontClass} gras">${capitalizeFirstLetter(Topic)}</p>
                                 </section>
-                                <section class="bouton-voir-profil ">
-                                <button class="bouton-rond"> Lire le PROfil</button> 
+                                <section class="bouton-voir-profil">
+                                    <button class="bouton-rond"> Lire le PROfil</button> 
                                 </section>
                             </section>
                         </li>`;
@@ -216,7 +216,19 @@ function miseAJourEtatCarousel() {
     elems = Array.from(carouselItems);
 
     const cur = elems.find(elem => elem.getAttribute("data-pos") === '0');
+    updateLireProfil(cur);
     updateDownSwipeListener(cur);
+
+}
+
+function updateLireProfil(fiche) {
+    const lireProfilBtn = fiche.querySelector('.bouton-voir-profil');
+    const idProfil = fiche.dataset.id;
+    window.localStorage.setItem('idProfil', idProfil);
+    lireProfilBtn.addEventListener('click', () => {
+        window.location.href = './profils.html';
+    });
+
 }
 
 /**
@@ -450,8 +462,6 @@ async function onCheck(evnt) {
     let themeSelected = window.localStorage.getItem('themes');
     themeSelected = themeSelected.split(',');
 
-    console.log("themeSelected :", themeSelected);
-
     if (themeLi.classList.contains("unchecked")) {
         themeLi.classList.remove("unchecked");
         ajouteTheme(themeString);
@@ -464,7 +474,7 @@ async function onCheck(evnt) {
             // Display the popup
             const popup = document.querySelector("div#popup");
             popup.classList.remove("display-none");
-            document.querySelector('div#popup img#fermeture-popup').addEventListener('click', function (e) {
+            document.querySelector('div#popup img#fermeture-popup').addEventListener('click', function () {
                 // Undisplay the overlay
                 document.querySelector('div#overlay').classList.add('display-none');
                 // Undisplay the popup
@@ -479,7 +489,6 @@ async function onCheck(evnt) {
 }
 
 swiperSection.addEventListener('click', function (event) {
-    let newActive;
     let target = event.target;
 
     // Le click est possible si la target est la section d'ID swiper,
@@ -501,21 +510,23 @@ swiperSection.addEventListener('click', function (event) {
         const xClick = event.clientX;
         const clicADroite = xClick > (wWidth / 2);
 
-        if (clicADroite) {
-            newActive = carouselList.querySelector('.carousel-item[data-pos="1"]');
-        } else {
-            newActive = carouselList.querySelector('.carousel-item[data-pos="-1"]');
-        }
-
-        const newActivePos = newActive.dataset.pos;
-
-        // Mise à jour des positions suivant la nouvelle active
-        updatePos(newActivePos, true);
-
-        // Ajout
-        ajouterNouvelleFiche(newActivePos);
+        swipeHorizontal(clicADroite);
     }
 });
+
+function swipeHorizontal(aDroite) {
+    let newActive;
+    if (aDroite) {
+        newActive = carouselList.querySelector('.carousel-item[data-pos="1"]');
+    } else {
+        newActive = carouselList.querySelector('.carousel-item[data-pos="-1"]');
+    }
+    const newActivePos = newActive.dataset.pos;
+    // Mise à jour des positions suivant la nouvelle active
+    updatePos(newActivePos, true);
+    // Ajout nouvelle fiche
+    ajouterNouvelleFiche(newActivePos);
+}
 
 folderProfilEnr.addEventListener('click', () => {
     window.location.href = './profils-enregistres.html';
@@ -556,7 +567,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     );
 
     themeSelected = window.localStorage.getItem('themes');
-    console.log("window.localStorage.getItem('themes'); :", window.localStorage.getItem('themes'));
     themesCheckboxes.forEach(tc => {
             const img = tc.querySelector('img');
             const themeName = img.getAttribute('alt');
@@ -593,12 +603,6 @@ function updateDownSwipeListener(current) {
         onPan(e)
     });
 
-    hammer.on('tap', (e) => {console.log("tap");});
-
-    function onTap(e) {
-
-    }
-
     function onPan(e) {
         const swiper = document.querySelector('#swiper');
 
@@ -631,17 +635,18 @@ function updateDownSwipeListener(current) {
         // get degrees of rotation, between 0 and +/- 45
         let deg = isDraggingFrom * dirX * Math.abs(propX) * 45
 
-        // get scale ratio, between .95 and 1
-        let scale = (95 + (5 * Math.abs(propX))) / 100
-
 
         if (e.isFinal) {
-            let successful = false
+            let successful = false;
 
             // check threshold and movement direction
             if (e.direction === Hammer.DIRECTION_RIGHT) {
 
+                swipeHorizontal(false);
+
             } else if (e.direction === Hammer.DIRECTION_LEFT) {
+
+                swipeHorizontal(true);
 
             } else if (propY < 30 && e.direction === Hammer.DIRECTION_DOWN) {
 
