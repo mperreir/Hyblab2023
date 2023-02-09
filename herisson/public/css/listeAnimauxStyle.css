@@ -163,7 +163,7 @@ main.pop-up{
     color: #FFF8F1;
     left: 5%;
     margin-top: 1%;
-    font-size: 5vw !important;
+    font-size: 5.5vw !important;
 }
 #desc{
     position: absolute;
@@ -187,12 +187,12 @@ main.pop-up{
 }
 
 #menace #menace-txt{
-    font-size: 3vw;
+    font-size: 4vw;
     font-weight: lighter;
     max-width: 70%;
     line-height: 3vh;
     text-align: center;
-    margin-top: 1.6vh;
+    margin-top: 1.9vh;
     margin-bottom: 5vh;
     transform: translate(7vw, 0);
 }
