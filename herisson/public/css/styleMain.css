@@ -144,6 +144,7 @@ input[type="text"]
     font-size: 5vw;
     margin-left: 7vw;
     margin-right: 7vw;
+    margin-bottom: 5vh;
     font-family: 'Prompt', sans-serif;
     color: #0B6E5F;
 }
@@ -161,6 +162,7 @@ input[type="text"]
     right: 0;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 1vh;
 }
 
 #autocompletionAni
@@ -169,13 +171,14 @@ input[type="text"]
     background-color: #FFF8F1;
     border-radius: 5px 5px 50px 50px;
     width: 90vw;
-    padding-top: 5vh;
+    padding-top: 4vh;
     margin-top: 18vh;
     z-index: 1;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 1vh;
 }
 
 
