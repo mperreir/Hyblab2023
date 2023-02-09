@@ -66,13 +66,13 @@ app.get('/density/:town', async function (req, res) {
 
 // TODO finir cette fonction
 function getRadiationData(latitude, longitude) {
-    const username = "supy.game@gmail.com";
-    const url = `https://www.soda-is.com/service/wps?Service=WPS&Request=Execute&Identifier=get_cams_radiation&version=1.0.0&DataInputs=latitude=${latitude};longitude=${longitude};altitude=-999;date_begin=2022-01-01;date_end=2022-12-31;time_ref=UT;summarization=P01D;username=${username}&RawDataOutput=irradiation`;
+    const username = "supy.game%2540gmail.com";
+    const url = `https://www.soda-is.com/service/wps?Service=WPS&Request=Execute&Identifier=get_cams_radiation&version=1.0.0&DataInputs=latitude=${latitude};longitude=${longitude};altitude=-999;date_begin=2022-01-01;date_end=2022-12-31;time_ref=TST;summarization=P01D;username=${username}&RawDataOutput=irradiation`;
 
     wget({
         url:  url,
         dest: './data/temp/',
-        timeout: 2000
+        timeout: 200000
     },
     function (error, response, body) {
         if (error) {
@@ -86,7 +86,7 @@ function getRadiationData(latitude, longitude) {
         }
     });
 }
-//getRadiationData(44.083, 5.059, -999, "2017-01-01", "2017-01-05", "UT", "PT15M");
+getRadiationData(44.083, 5.059);
 
 /**
  * Compute irradiation of the roof at a time given
