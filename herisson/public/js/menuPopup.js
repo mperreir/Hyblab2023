@@ -4,7 +4,7 @@ const divIconeHeader = document.createElement("div");
 divIconeHeader.id = "iconeHeader";
 
 const lienLogo = document.createElement("a");
-lienLogo.href = "main.html";
+lienLogo.href = "index.html";
 lienLogo.style.textDecoration = "none";
 
 const imgLogo = document.createElement("img");
