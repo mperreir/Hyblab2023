@@ -25,6 +25,9 @@ function readTextFile(file, callback) {
 }
 
 //usage:
+readTextFile("./data/3.json", function (text) {
+    data3 = JSON.parse(text);
+});
 readTextFile("./data/4.json", function (text) {
     data4 = JSON.parse(text);
 });
@@ -155,6 +158,12 @@ inputDep.addEventListener('input', () => {
 })
 
 function initRepsDep() {
+    for (let key in data3) {
+        if (data3[key]["departement"] == dep) {
+            res3 = data3[key]
+            break
+        }
+    }
     for (let key in data4) {
         if (data4[key]["departement"] == dep && data4[key]["unite"] == "Animaux-Eq") {
             res4 = data4[key]
@@ -187,7 +196,7 @@ function initRepsDep() {
     let answer = false
     let btns8 = document.getElementsByClassName("btn8")
     for (let btn8 of btns8) {
-        if (btn8.dataset.value == res4["type"]) {
+        if (btn8.dataset.value == res3["reponse"]) {
             btn8.addEventListener('click', () => {
                 if (!answer) {
                     answer = true
@@ -204,7 +213,7 @@ function initRepsDep() {
                     answer = true
                     btn8.style.backgroundColor = 'red'
                     for (let btn_tmp of btns8) {
-                        if (btn_tmp.dataset.value == res4["type"]) {
+                        if (btn_tmp.dataset.value == res3["reponse"]) {
                             btn_tmp.style.backgroundColor = 'lightgreen'
                         }
                     }
@@ -220,14 +229,15 @@ function initRepsDep() {
     let texts9 = document.getElementsByClassName("text9")
     let qt = res4['quantite_mean']
     let str
+    let tmp = "Dans votre département, ce sont les volailles qui sont les plus nombreuses parmi les animaux d’élevage. On en dénombre pas moins de " + qt + " dans les 56 fermes-usines de ce département."
     if (res4["type"] == "VOLAILLES") {
-        str = "Dans votre département, ce sont les volailles qui sont les plus nombreuses parmi les animaux d’élevage. On en dénombre pas moins de " + qt + " dans les 56 fermes-usines de ce département."
+        str = "Dans votre département, ce sont les volailles qui sont les plus nombreuses parmi les animaux d’élevage. On en dénombre pas moins de " + qt + "."
     } else if (res4["type"] == "PORCS") {
-        str = "Dans votre département, ce sont les porcs qui sont les plus nombreux parmi les animaux d’élevage. On en dénombre pas moins de " + qt + " dans les 56 fermes-usines de ce département."
+        str = "Dans votre département, ce sont les porcs qui sont les plus nombreux parmi les animaux d’élevage. On en dénombre pas moins de " + qt + "."
     } else if (res4["type"] == "BOVINS") {
-        str = "Dans votre département, ce sont les bovins qui sont les plus nombreux parmi les animaux d’élevage. On en dénombre pas moins de " + qt + " dans les 56 fermes-usines de ce département"
+        str = "Dans votre département, ce sont les bovins qui sont les plus nombreux parmi les animaux d’élevage. On en dénombre pas moins de " + qt + "."
     } else {
-        str = "Dans votre département, ce sont les moutons qui sont les plus nombreux parmi les animaux d’élevage. On en dénombre pas moins de " + qt + " dans les 56 fermes-usines de ce département"
+        str = "Dans votre département, ce sont les moutons qui sont les plus nombreux parmi les animaux d’élevage. On en dénombre pas moins de " + qt + "."
     }
     for (let text of texts9) {
         text.textContent = str
