@@ -70,26 +70,27 @@ main{
     background-color: #FFF8F1;
     font-family: 'Prompt', sans-serif;
     color: #0B6E5F;
-    width: 94%;
-    left: 3%;
+    width: 94vw;
+    left: 5vw;
     margin-top: 20%;
     border-radius: 10vw;
 }
 #menace #menace-txt{
-    font-size: 2.8vh;
+    font-size: 2.5vh;
     font-weight: lighter;
-    max-width: 75%;
+    max-width: 70%;
+    line-height: 3vh;
     text-align: center;
-    margin-top: 4%;
-    margin-bottom: 10%;
+    margin-top: 1.6vh;
+    margin-bottom: 5vh;
     transform: translate(16%, 0);
 }
 #menace #menace-level{
-    font-size: 2.8vh;
+    font-size: 3vh;
     font-weight: bold;
     text-align: center;
-    margin-top: -11.5%;
-    margin-bottom: 4.8%;
+    margin-top: -4vh;
+    margin-bottom: 1vh;
 }
 
 #map{
@@ -98,7 +99,7 @@ main{
     width: 94%;
     height: auto;
     right: 3%;
-    margin-top: 45%;
+    bottom: 28vh;
     border-radius: 10vw;
     font-size: 3vh;
     font-family: 'Prompt', sans-serif;
@@ -150,18 +151,19 @@ footer{
 #tips-text{
     position: absolute;
     font-family: 'Prompt', sans-serif;
-    line-height: 3.5vh;
+    line-height: 2.8vh;
     font-size: 2vh;
     font-weight: lighter;
     color: #0B6E5F;
     width: 60%;
     text-align: center;
-    bottom: 8vh;
+    bottom: 8.7vh;
     left: 35%;
     transform: translate(-50%, 0);
 }
 #fleche2{
     position: absolute;
+    max-width: 9vw;
     left: 35%;
     bottom: 8.3vh;
     transform: translate(-50%, 0);

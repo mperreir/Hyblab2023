@@ -54,7 +54,7 @@ async function createAnimalCategory(commune, animalCategory) {
         main.style.minHeight = `${buttonContainer.offsetHeight + footer.offsetHeight}px`;
     }
     else{
-        main.style.minHeight = '74.4vh';
+        main.style.minHeight = '74.9vh';
     }
 
     const tipsButton = document.getElementById("fleche");
@@ -93,10 +93,11 @@ async function createAnimalCategory(commune, animalCategory) {
 
 
         if (animal.length > 22) {
-            animalName.style.fontSize = '3.5vh';
+            animalName.style.fontSize = '6.7vw';
         } else if (animal.length > 27) {
-            animalName.style.fontSize = '3vh';
+            animalName.style.fontSize = '6.3vw';
         }
+
         animalName.textContent = animal.toUpperCase();
         desc.textContent = "Les " + animalData["listCities"][0]["categorie"].toLowerCase() + " de " + commune;
         if (animalData["listCities"][0]["enjeu_conservation"] == null){
@@ -118,7 +119,6 @@ async function createAnimalCategory(commune, animalCategory) {
         img.src = "img/animals/" + animalData["id"] + ".jpg";
         imgDiv.style.minHeight = '41vh';
         imgDiv.style.maxHeight = '41vh';
-        imgDiv.style.maxWidth = '100vw';
         imgDiv.style.width = "auto";
         imgDiv.style.zIndex = "200";
         copyright.textContent = animalData["copyright"];

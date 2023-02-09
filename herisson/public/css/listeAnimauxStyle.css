@@ -29,7 +29,7 @@ header.main{
     min-height: 10vh;
     position: sticky;
     top: 1%;
-    margin-top: 9%;
+    margin-top: 5vh;
     text-align: center;
     z-index: 4;
 }
@@ -91,10 +91,11 @@ footer.main{
 }
 
 .main #footerText{
-    width: auto;
+    width: 80vw;
     text-align: center;
     position: absolute;
     left: 50%;
+    top: -10%;
     font-size: 2vh;
     transform: translate(-50%, 0);
     font-family: 'Prompt', sans-serif;
@@ -102,9 +103,10 @@ footer.main{
 }
 #fleche{
     position: absolute;
-    top: 70%;
+    top: 41%;
     left: 50%;
     transform: translate(-50%, 0);
+    max-width: 9vw;
 }
 
 /*//// POP-UP ////*/
@@ -127,8 +129,8 @@ footer.main{
 #copyright{
     z-index: 100;
     position: absolute;
-    top: 2%;
-    right: 2%;
+    top: 5vh;
+    right: 3vw;
     transform-origin: 100% 50%;
     rotate: -90deg;
     font-family: 'Prompt', sans-serif;
@@ -136,9 +138,11 @@ footer.main{
     color: #FFF8F1;
 }
 #quit{
+    max-width: 7vw;
+    height: auto;
     position: absolute;
-    right: 2%;
-    top: 1%;
+    right: 4vw;
+    top: 2.5vh;
 }
 
 
@@ -155,7 +159,7 @@ main.pop-up{
     color: #FFF8F1;
     left: 5%;
     margin-top: 1%;
-    font-size: 4.5vh;
+    font-size: 7.6vw;
 }
 #desc{
     position: absolute;
@@ -171,24 +175,27 @@ main.pop-up{
     background-color: #FFF8F1;
     font-family: 'Prompt', sans-serif;
     color: #0B6E5F;
-    width: 44%;
-    left: 3%;
+    width: 44vw;
+    left: 5vw;
     margin-top: 20%;
     border-radius: 10vw;
 }
 #menace #menace-txt{
     font-size: 2.5vh;
-    max-width: 75%;
+    font-weight: lighter;
+    max-width: 70%;
+    line-height: 3vh;
     text-align: center;
-    margin-top: 5%;
-    transform: translate(16%, 0);
+    margin-top: 1.6vh;
+    margin-bottom: 5vh;
+    transform: translate(7vw, 0);
 }
 #menace #menace-level{
     font-size: 3vh;
     font-weight: bold;
     text-align: center;
-    margin-top: -16%;
-    margin-bottom: 5%;
+    margin-top: -4vh;
+    margin-bottom: 1vh;
 }
 
 
@@ -197,25 +204,26 @@ main.pop-up{
     background-color: #FFF8F1;
     font-family: 'Prompt', sans-serif;
     color: #0B6E5F;
-    width: 44%;
-    right: 3%;
+    width: 44vw;
+    right: 5vw;
     margin-top: 20%;
     border-radius: 10vw;
 }
 #vus #vus-txt{
     font-size: 2.5vh;
+    font-weight: lighter;
     max-width: 75%;
     text-align: center;
     transform: translate(16%, 0);
     line-height: 3vh;
-    margin-top: -24%;
-    margin-bottom: 10%;
+    margin-top: -6vh;
+    margin-bottom: 1.8vh;
 }
 #vus #nb{
     font-size: 3.5vh;
     font-weight: bold;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 1vh;
 }
 
 #map{
@@ -224,7 +232,7 @@ main.pop-up{
     width: 94%;
     height: auto;
     right: 3%;
-    margin-top: 48%;
+    bottom: 28vh;
     border-radius: 10vw;
     font-size: 3vh;
     font-family: 'Prompt', sans-serif;
@@ -276,18 +284,19 @@ footer.pop-up{
 #tips-text{
     position: absolute;
     font-family: 'Prompt', sans-serif;
-    line-height: 3.5vh;
+    line-height: 2.8vh;
     font-size: 2vh;
     font-weight: lighter;
     color: #0B6E5F;
     width: 60%;
     text-align: center;
-    bottom: 8vh;
+    bottom: 8.7vh;
     left: 35%;
     transform: translate(-50%, 0);
 }
 #fleche2{
     position: absolute;
+    max-width: 9vw;
     left: 35%;
     bottom: 8.3vh;
     transform: translate(-50%, 0);
