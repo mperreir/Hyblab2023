@@ -35,7 +35,7 @@ module.exports = {
       ]
     }
   },
-  // publicPath: process.env.NODE_ENV === 'production'
-  //   ? '/carbone/'
-  //   : '/'
+  publicPath: process.env.NODE_ENV === 'production'
+   ? '/carbone/'
+   : '/'
 }
