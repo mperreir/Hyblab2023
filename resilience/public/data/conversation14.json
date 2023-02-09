@@ -28,43 +28,45 @@
             "text": "Oui, ils sont en train de récupérer les excrétas. Mais pas de panique, il y en a pour longtemps…"
         },
         {
-            "type": "message",
-            "name": "Voyageur",
-            "text": "Comment ça fonctionne ?"
-        },
-        {
-            "type": "message",
-            "name": "Charles",
-            "text": "Ce sont des toilettes à séparation. Au lieu de partir dans les égouts, le pipi ici est réutilisé : c’est la séparation à la source."
-        },
-        {
-            "type": "message",
-            "name": "Voyageur",
-            "text": "Mais, comment ça ?!"
-        },
-        {
-            "type": "message",
-            "name": "Charles",
-            "text": "C’est un modèle qui fonctionne avec un tapis roulant incliné, qui va permettre d’amener les urines par gravité sur le devant du trône, alors que les matières fécales, elles vont être amenées sur l’arrière de la machine, grâce à la pédale."
-        },
-        {
-            "type": "message",
-            "name": "Charles",
-            "text": "On récupère ensuite les urines, qu’on emmène à stocker dans des cuves, puis quand il y a vraiment beaucoup de volumes, on les emmène chez une entreprise spécialiste de la réutilisation de l’urine. Elle les transformera ensuite en un engrais normé et hygiénisé. Le pipi est un vrai fertilisant !"
-        },
-        {
-            "type": "message",
-            "name": "Voyageur",
-            "text": "Pour les urines, d’accord, mais le reste ? "
-        },
-        {
-            "type": "message",
-            "name": "Charles",
-            "text": "Les selles sont collectées à l’arrière et sont transformées en lombri-compost, qui crée de la matière organique carbonée pour régénérer les sols. "
-        },
-        {
-            "type": "all",
-            "messages": [
+            "type":"all",
+            "messages":[
+                [
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Comment ça fonctionne ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Charles",
+                        "text": "Ce sont des toilettes à séparation. Au lieu de partir dans les égouts, le pipi ici est réutilisé : c’est la séparation à la source."
+                    },
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Mais, comment ça ?!"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Charles",
+                        "text": "C’est un modèle qui fonctionne avec un tapis roulant incliné, qui va permettre d’amener les urines par gravité sur le devant du trône, alors que les matières fécales, elles vont être amenées sur l’arrière de la machine, grâce à la pédale."
+                    },
+                    {
+                        "type": "message",
+                        "name": "Charles",
+                        "text": "On récupère ensuite les urines, qu’on emmène à stocker dans des cuves, puis quand il y a vraiment beaucoup de volumes, on les emmène chez une entreprise spécialiste de la réutilisation de l’urine. Elle les transformera ensuite en un engrais normé et hygiénisé. Le pipi est un vrai fertilisant !"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Pour les urines, d’accord, mais le reste ? "
+                    },
+                    {
+                        "type": "message",
+                        "name": "Charles",
+                        "text": "Les selles sont collectées à l’arrière et sont transformées en lombri-compost, qui crée de la matière organique carbonée pour régénérer les sols. "
+                    }
+                ],
                 [
                     {
                         "type": "message",
@@ -119,7 +121,7 @@
         {
             "type": "message",
             "name": "Voyageur",
-            "text": "Je me coucherai moins bête ce soir. Merci pour tous ces renseignement, bonne journée !"
+            "text": "C’est très intéressant, je vous remercie. Je crois que c’est à votre tour (clin d’oeil)."
         }
 
     ]
