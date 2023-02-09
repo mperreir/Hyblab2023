@@ -154,6 +154,23 @@ async function createAnimalCategory(commune, animalCategory) {
         }
     }
 
+    /* header pop-up */
+    async function burgerPopUp(){
+        const main = document.getElementById("list-animals-main");
+        const foot = document.getElementById("list-animals-footer");
+        const button = document.getElementById("popUpNav");
+        button.addEventListener("click", function() {
+            if(main.style.display !== "none"){
+                main.style.display = "none";
+                foot.style.display = "none";
+            } else {
+                main.style.display = "block";
+                foot.style.display = "block";
+            }
+        })
+    }
+
     await selectAnimal();
     await quitPopUp();
+    await burgerPopUp();
 }
