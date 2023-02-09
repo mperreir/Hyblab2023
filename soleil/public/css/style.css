@@ -289,7 +289,7 @@ header{
 }
 
 .choix-texte2{
-    font-size: 2vw;  /* 2vw */
+    font-size: 3.5vw;  /* 2vw */
     line-height: 20px;
     box-sizing: border-box;
     padding : 1vw;
@@ -407,6 +407,7 @@ header{
     text-align: center;
     margin: auto;
     width: 70%;
+    padding-top: 10%;
 }
 
 /* Most of the elements in this demo are absolute positionned with percentages */
