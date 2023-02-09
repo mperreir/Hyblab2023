@@ -7,6 +7,4 @@ const initSlideVideo = async function(){
     swiper.enable();
     swiper.slideTo(1);
   },5500)
-
-
 };
