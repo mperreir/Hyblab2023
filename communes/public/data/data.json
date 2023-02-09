@@ -8,13 +8,12 @@
       "background_color": "#FFEDEF",
       "intro": "La ville peut sembler peu compatible avec la production d’énergie renouvelable. La densité immobilière et démographique et le manque de zone ouverte exploitable rend difficile l’implantation de ce type de dispositifs. Pourtant, les sous-sols de zone urbaine peuvent produire de l’énergie grâce à la géothermie. Cette technique consiste à exploiter la chaleur de la croûte terrestre. <br>À Vertville, nous avons installé une centrale géothermique dans une zone peu résidentielle, proche des autres industries locales. Celle-ci creuse à 3 500 mètres de profondeur pour fournir du chauffage à une grande partie des habitations de la ville. Certains parcs de grands immeubles utilisent des doublets géothermiques, qui creusent moins profondément et produisent moins d’énergie thermique. Cela suffit pour un faible nombre d’habitations.",
       "exemple": {
-        "ville": "Paris",
-        "video": "https://civam.fr/wp-content/uploads/sites/4/2014/10/big_buck_bunny.mp4",
-        "description": "Lorem ipsum dolor sit amet voluptua labore duo ipsum at labore labore lorem. Sadipscing dolor eos amet. Ipsum lobortis diam exerci rebum takimata."
+        "ville": "Grigny",
+        "video": "http://wb44.free.fr/hyblab/ville.mp4",
+        "description": "En Essonne, les villes de Grigny et Viry-Châtillon investissent dès 2014 dans l’énergie géothermique. Ils inaugurent 4 ans plus tard une centrale géothermique commune, aujourd’hui surnommée « La Tour Eiffel de Grigny ». Cette installation permet de chauffer près de 10 000 logements et de nombreux bâtiments publics. Une initiative aussi bien sociale qu’écologique : elle réduit la précarité énergétique des habitants et évite l’émission de 15 000 tonnes de CO2 chaque année."
       },
       "carte": {
-        "name": "La géothermie en France",
-        "api": "https://api-adresse.data.gouv.fr/search/?q={search}"
+        "name": "La géothermie en France"
       },
       "autre_env": {
         "titre": "LA BIOMASSE EST Compatible avec la friche ET LA FORÊT ET LES CHAMPS",
@@ -23,7 +22,7 @@
             "file_name": "../img/friche.svg"
           },
           {
-            "file_name": "../img/friche.svg"
+            "file_name": "../img/campagne.svg"
           }
         ]
       }
@@ -36,13 +35,23 @@
       "background_color": "#EDF3FF",
       "intro": "La mer et l’océan constituent un terrain peu favorable au développement d’énergie renouvelable. Installer des infrastructures est coûteux et nécessite de prendre en compte une multitude de paramètres comme la biodiversité sous-marine, la dégradation des fonds ou encore la pêche qui s’y pratique.<br>À Vertville, nous avons opter pour l’éolien. Le vent y est plus fort et plus constant que sur terre, ce qui permet de doubler voire tripler la production d’électricité d’éoliennes terrestres. De plus, sa position, loin des habitations, dérange moins la population locale. Cela permet une meilleure acceptabilité du dispositif, souvent rejeté par les riverains.",
       "exemple": {
-        "ville": "Strasbourg",
-        "video": "https://civam.fr/wp-content/uploads/sites/4/2014/10/big_buck_bunny.mp4",
-        "description": "Lorem ipsum dolor sit amet voluptua labore duo ipsum at labore labore lorem. Sadipscing dolor eos amet. Ipsum lobortis diam exerci rebum takimata."
+        "ville": "L'île de la Désirade",
+        "video": "http://wb44.free.fr/hyblab/mer.mp4",
+        "description": "Le développement de l'énergie renouvelable en mer/océan est difficile en raison des coûts élevés et des considérations environnementales. Seul l'éolien est compatible et plus performant en mer, doublant/triplant la production d'électricité. L'éloignement des habitations permet une meilleure acceptabilité."
       },
       "carte": {
-        "name": "La géothermie en France",
-        "api": "https://api-adresse.data.gouv.fr/search/?q={search}"
+        "name": "L’éolien EN FRANCE"
+      },
+      "autre_env": {
+        "titre": "L’éolien EST Compatible avec la friche ET LA FORÊT ET LES CHAMPS",
+        "liste": [
+          {
+            "file_name": "../img/friche.svg"
+          },
+          {
+            "file_name": "../img/campagne.svg"
+          }
+        ]
       }
     },
     {
@@ -53,13 +62,23 @@
       "background_color": "#FFF5EF",
       "intro": "Anciens champs, zones industrielles désaffectées, les friches ne manquent pas. Souvent laissées à l’abandon, elles constituent un terrain idéal pour le développement d’énergies renouvelables. Leur grande surface et l’absence d’arbre ou d’infrastructures trop importante permetttent d’y installer toute sorte de dispositifs. <br>À Vertville, une ancienne carrière de plusieurs hectares bénéficie d’une importante exposition au soleil. Nous avons choisi de disposer des panneaux photovoltaïques sur tout le terrain. Un choix pertinent puisque l’énergie solaire est entièrement renouvelable. Elle permet à la fois de produire de l’électricité mais également de la chaleur.",
       "exemple": {
-        "ville": "Strasbourg",
-        "video": "https://civam.fr/wp-content/uploads/sites/4/2014/10/big_buck_bunny.mp4",
-        "description": "Lorem ipsum dolor sit amet voluptua labore duo ipsum at labore labore lorem. Sadipscing dolor eos amet. Ipsum lobortis diam exerci rebum takimata."
+        "ville": "Crucey-Villages",
+        "video": "http://wb44.free.fr/hyblab/friche.mp4",
+        "description": "La friche, en matière de transition énergétique, Crucey-Villages fait figure de modèle. La commune d’Eure-et-Loir amorce dès 2009 des travaux sur une ancienne base militaire laissée en friche. En 2012, ce sont plus de 741 150 panneaux photovoltaïques qui sont inaugurés, pour un parc d’environ 250 hectares, ce qui en fait l’un des plus vastes de France et d’Europe. Au-delà de verdir la production d’énergie, ce dispositif a permis de dépolluer les friches militaires, jonchées de déchets du bâtiment"
       },
       "carte": {
-        "name": "La géothermie en France",
-        "api": "https://api-adresse.data.gouv.fr/search/?q={search}"
+        "name": "Le photovoltaïque EN FRANCE"
+      },
+      "autre_env": {
+        "titre": "LE PHOTOVOLTAÏQUE EST Compatible avec LA FORÊT ET LES CHAMPS ET LA VILLE",
+        "liste": [
+          {
+            "file_name": "../img/ville.svg"
+          },
+          {
+            "file_name": "../img/campagne.svg"
+          }
+        ]
       }
     },
     {
@@ -70,13 +89,20 @@
       "background_color": "#F2FDFF",
       "intro": "Les cours d’eau constituent une source d’énergie décarbonée et durable s’ils sont correctement exploités. <br>À Vertville, nous profitons de nos terrains en aval de montagne pour y installer une centrale hydraulique et un barrage. Ce dernier retient l’eau mais laisse s’échapper un flux très puissant qui permet d’actionner une turbine pour produire de l’électricité. Nous avons combiné ce dispositif avec des retenues d’eau. Cette technique consiste à stocker de grandes quantités d’eau pour l’utiliser si la demande devient plus importante.",
       "exemple": {
-        "ville": "Strasbourg",
-        "video": "https://civam.fr/wp-content/uploads/sites/4/2014/10/big_buck_bunny.mp4",
-        "description": "Lorem ipsum dolor sit amet voluptua labore duo ipsum at labore labore lorem. Sadipscing dolor eos amet. Ipsum lobortis diam exerci rebum takimata."
+        "ville": "Dun-sur-Meuse",
+        "video": "http://wb44.free.fr/hyblab/riviere.mp4",
+        "description": "Au nord-est de la France, plus d’une quarantaine de communes ont fait le choix de l’hydraulique. Pour cela, elles utilisent la puissance de deux cours d’eau : l’Aisne et la Meuse. Ce projet s’est achevé en 2020 après 5 ans de travaux. Grâce à trois microcentrales hydraulique, ce dispositif permet de produire une importante quantité d’énergie sans nécessiter de grosse quantité d’eau ou un fort dénivelé."
       },
       "carte": {
-        "name": "La géothermie en France",
-        "api": "https://api-adresse.data.gouv.fr/search/?q={search}"
+        "name": "L’hydraulique EN FRANCE"
+      },
+      "autre_env": {
+        "titre": "LE hydraulique EST Compatible avec LA mer",
+        "liste": [
+          {
+            "file_name": "../img/mer.svg"
+          }
+        ]
       }
     },
     {
@@ -87,13 +113,20 @@
       "background_color": "#F2FFFB",
       "intro": "Les forêts et les champs sont riches en ressources organiques, aussi appelées biomasse. Le bois des arbres peut être brûlé pour produire de la chaleur et de l’énergie. Les biodéchets, c’est-à-dire les déchets issus de l’agriculture, de la consommation des ménages ou de l’entretien de terrains végétaux, peuvent passer par le processus de méthanisation. Ce dernier consiste à faire fermenter la biomasse pour créer du gaz.<br>À Vertville, nous sommes muni d’une installation à méthanisation, qui permet la fermentation des biodéchets et d’une chaufferie, pour brûler le bois. Ces dispositifs sont reliés à tous les foyers situés en périphérie de l’intercommunalité pour assurer leur chauffage tout au long de l’année. ",
       "exemple": {
-        "ville": "Strasbourg",
-        "video": "https://civam.fr/wp-content/uploads/sites/4/2014/10/big_buck_bunny.mp4",
-        "description": "Lorem ipsum dolor sit amet voluptua labore duo ipsum at labore labore lorem. Sadipscing dolor eos amet. Ipsum lobortis diam exerci rebum takimata."
+        "ville": "Tramayes",
+        "video": "http://wb44.free.fr/hyblab/campagne.mp4",
+        "description": "En Saône-et-Loire, la ville de Tramayes a diminué sa consommation électrique de près de 71 % en 10 ans. Sa solution ? Rénover les immeubles de sa commune et utiliser le bois des forêts alentours pour chauffer les foyers. Le maire espère que la commune produira plus d’énergie qu’elle n’en consomme pour les prochaines années."
       },
       "carte": {
-        "name": "La géothermie en France",
-        "api": "https://api-adresse.data.gouv.fr/search/?q={search}"
+        "name": "LA BIOMASSE EN FRANCE"
+      },
+      "autre_env": {
+        "titre": "LA Compatible avec la friche",
+        "liste": [
+          {
+            "file_name": "../img/friche.svg"
+          }
+        ]
       }
     }
   ],
