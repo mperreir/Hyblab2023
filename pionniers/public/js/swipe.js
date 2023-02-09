@@ -228,7 +228,6 @@ function updateLireProfil(fiche) {
     lireProfilBtn.addEventListener('click', () => {
         window.location.href = './profils.html';
     });
-
 }
 
 /**

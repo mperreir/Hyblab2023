@@ -45,7 +45,7 @@ function createFicheprofile(profile) {
                                 <section id="bio" class="align-items-center">
                                     <p>${ContentBio}</p>
                                 </section>
-                                <iframe name="Ausha Podcast Player" frameborder="0" loading="lazy" id="ausha-HePz" height="220" style="border: none; width:100%; height:220px" src="${Podcast}"></iframe><script src="https://player.ausha.co/ausha-player.js"></script>                            
+                                <iframe id="podcast" name="Ausha Podcast Player" frameborder="0" loading="lazy" id="ausha-HePz" height="220" style="border: none; width:100%; height:220px" src="${Podcast}"></iframe><script src="https://player.ausha.co/ausha-player.js"></script>                            
                             </section>
                             <section id="links" class="flex-row align-items-center justify-content-space-between">
                                 <button onclick="window.open('${Article}','_blank')" class="bouton-rond">Lire l\'article</button>
@@ -63,7 +63,8 @@ function createFicheprofile(profile) {
         const podcastDiv = document.querySelector('#podcast');
         podcastDiv.remove();
         //Increase the font size of the bio if profile doesn't have a podcast
-        document.querySelector('#bio').style.fontsize = "0.95em";
+        const bio = document.querySelector('#bio');
+        bio.style.fontSize = "1.17em";
     }
 }
 

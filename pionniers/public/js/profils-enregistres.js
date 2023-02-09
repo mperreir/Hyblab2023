@@ -86,6 +86,12 @@ document.addEventListener("DOMContentLoaded", async function () {
         const profil = await fetch('/pionniers/api/miniature/' + id).then(r => r.json());
         profilFav.push(profil);
         const ficheMinia = createFicheMinia(profil);
+        const boutonLire = ficheMinia.querySelector('.lire-profil');
+        const idProfil = ficheMinia.dataset.id;
+        boutonLire.addEventListener('click', () => {
+            window.localStorage.setItem('idProfil', idProfil);
+            window.location.href = './profils.html';
+        });
         listeProfils.append(ficheMinia);
     }
 
@@ -94,7 +100,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     croixSuppr.forEach(croixSuppr => {
         croixSuppr.addEventListener('click', onSupprProfile);
     });
-
 });
 
 
