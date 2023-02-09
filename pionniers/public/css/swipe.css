@@ -120,18 +120,24 @@ div#popup div#popup-content {
 }
 
 .information-fiche {
+    margin-top: 5%;
     height: 60%;
     width: 80%;
+}
+
+.information-fiche p {
+    line-height: 1.2em;
+    font-size: 0.55em;
 }
 
 .bouton-voir-profil{
     width: 50%;
     margin-left: 55%;
-    transform: translateY(50%);
+    transform: translateY(0.1em);
 }
 
 .bouton-voir-profil button{
-    padding: 6%;
+    padding: 4% 8% 4% 8%;
 }
 
 .entreprise-info, .keywords, .topic {
@@ -202,7 +208,7 @@ div#popup div#popup-content {
 }
 
 #label-selector img{
-    height: 1em;
+    height: 1.2em;
 }
 
 .recreate-deck-animation-1 {

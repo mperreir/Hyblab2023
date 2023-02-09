@@ -54,7 +54,7 @@ function createFiche(profil, dataPos) {
                             <section class="photo-case">
                                 <img draggable="false" alt="photo-profil" src="${URLImage}">
                             </section>
-                            <section class="information-fiche flex-column justify-content-space-evenly">
+                            <section class="information-fiche flex-column justify-content-space-between">
                                 <section class="carte-identite flex-column align-items-center-flex-start ${fontClass}">
                                     <p class="gras">${Name}</p>
                                     <p class="gras">${Age}</p>
