@@ -214,7 +214,7 @@ body {
 
 #backgroundFirstSlide{
     opacity: 35%;
-    margin-top: 70%;
+    margin-top: 63%;
     margin-left: 11%;
     width: 145%;
 }
@@ -318,7 +318,7 @@ SLIDE ANIMATION SORTIE+ZOOM
 
 .img_gauche {
     position: absolute;
-    top: 41.65%;
+    top: 41.5%;
     text-align: center;
     left: 7.5%;
 }
@@ -327,7 +327,7 @@ SLIDE ANIMATION SORTIE+ZOOM
     position: absolute;
     top: 41.5%;
     text-align: center;
-    right: 3%;
+    right: 3.4%;
 }
 
 .route {
@@ -703,7 +703,7 @@ li{
     Slide Entree texte
 **************************/
 .recap{
-    font-size: 32%;
+    font-size: 3%;
     position: absolute;
     top: 24%;
     width: 76%;
