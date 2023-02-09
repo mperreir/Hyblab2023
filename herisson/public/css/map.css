@@ -3,12 +3,12 @@ body {
     margin: 0;
 }
 html, body, #map {
-    height: 100vw;
+    height: 100vh;
     width: 100vw;
 }
 
 .info {
-    padding: 18px 24px;
+    padding: 1vh 1vw;
     font: 3vw/4vw Arial, Helvetica, sans-serif;
     background: white;
     background: rgba(255,255,255,0.8);
@@ -21,6 +21,7 @@ html, body, #map {
 }
 
 .legend {
+    font-size: 2vw;
     line-height: 2vw;
     color: #555;
 }
