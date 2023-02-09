@@ -6,8 +6,8 @@ const initSlide4 = async function(){
         executed4 = true;
         changePente();
 
-        $(".open-button").click(function(){
-            SlideTo(9)
+        $("#pente .open-button").click(function(){
+            swiper.slideTo(11, 0);
 
         })
 
@@ -16,14 +16,16 @@ const initSlide4 = async function(){
         })
     
         $("#pente footer button").click(function(){
-            quiz["pente"] = $("#logement input[type=radio][name=pente]:checked").val();
+            console.log($("#pente input[type=radio][name=pente]:checked"));
+            quiz["pente"] = $("#pente input[type=radio][name=pente]:checked").val();
             if (quiz["pente"] == "Plat"){
                 swiper.slideNext();
                 swiper.slideNext();
                 //initSlide6();
             }
             else{
-                swiper.slideNext()
+                swiper.slideNext();
+                console.log(quiz);
                 //initSlide5();
             }
         });
@@ -34,19 +36,20 @@ const initSlide4 = async function(){
 function changePente(){
     let pente = $("#pente input[name=pente]:checked").val();
         switch (pente) {
-            case "Plat":
-                $("#pente #image3 p").html("Plat");
-                $("#pente .img-pente").attr("src", "img/PenteBasse.png");
-                break;
-            case "Standard":
+            case "2":
                 $("#pente #image3 p").html("Standard");
-                $("#pente .img-pente").attr("src", "img/PenteHaut.png");
+                $("#pente .img-pente").attr("src", "img/Ombre/toit-mid-ombre-01.jpg");
+                break;
+            case "1":
+                $("#pente #image3 p").html("Plat");
+                $("#pente .img-pente").attr("src", "img/Ombre/toit-flat-ombre-01.jpg");
             break;
-            case "Pentu":
+            case "3":
                 $("#pente #image3 p").html("Pentu");
-                $("#pente .img-pente").attr("src", "img/PenteMoyen.png");
+                $("#pente .img-pente").attr("src", "img/Ombre/toit-hi-ombre-01.jpg");
                 break;
             default:
+                console.log(pente);
                 break;
         }
 }
