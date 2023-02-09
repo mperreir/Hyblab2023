@@ -590,6 +590,7 @@ img.button-next {
 }
 
 .choice {
+    font-size: 14px;
     width: 40%;
     height: 3em;
     line-height: 110%;
