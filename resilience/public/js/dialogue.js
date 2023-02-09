@@ -23,7 +23,7 @@ async function initConversation() {
 
     fond = document.getElementById("fond");
     var img_fond = document.createElement("img");
-    img_fond.src = "img/background_conv/".concat(dict_bkg.get(conversationId));
+    img_fond.src = "img/background/".concat(dict_bkg.get(conversationId));
     fond.appendChild(img_fond);
 
     response = await fetch(`data/conversation${conversationId}.json`);
