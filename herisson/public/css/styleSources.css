@@ -1,6 +1,7 @@
 body
 {
     background-color: #FBC5EB;
+    overflow: hidden;
 }
 
 h1
@@ -64,7 +65,7 @@ h2
     position: absolute;
     text-align: center;
     font-size: 2vh;
-    margin-top: 8vh;
+    margin-top: 5vh;
     color: #0B6E5F;
     font-weight: 400;
     font-family: 'Prompt', sans-serif;
