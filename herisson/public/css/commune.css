@@ -44,13 +44,13 @@ body {
 }
 
 @supports ( -webkit-touch-callout : none) {
-    #Oiseaux #Rhopalocères #Odonates #Chiroptères #Mammifères #Reptiles #Amphibiens {
+    .swiper-slide {
         background-attachment:scroll
     }
 }
 
 @supports not ( -webkit-touch-callout : none) {
-    #Oiseaux #Rhopalocères #Odonates #Chiroptères #Mammifères #Reptiles #Amphibiens {
+    .swiper-slide {
         background-attachment: fixed;
     }
 }
