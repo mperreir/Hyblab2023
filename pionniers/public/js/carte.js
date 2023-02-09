@@ -6,7 +6,13 @@
 //
 // TODO : implementer retour arriere
 //
-// TODO : ajouter le header
+// TODO : mettre les bons liens dans le header
+//
+// TODO : patcher en CSS le blanc au bord des images sur les miniatures
+//
+// TODO : mettre à jour le nombre de favoris dans le dossier
+//
+// TODO : implémenter l'animation du dossier
 /*
   ----------------------------------------------------------------------------------------------------------------------
   | Global variables                                                                                                   |
@@ -586,9 +592,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }));
     hammer.on('pan', onPan);
 
-    const folder = document.querySelector('#folder');
+    const folder_front = document.querySelector('div#folder-front-pane');
+    const folder_back = document.querySelector('footer#folder-back-pane');
 
-    folder.addEventListener('click', () => {
+    folder_front.addEventListener('click', () => {
+        window.location.href = './profils-enregistres.html';
+        window.localStorage.setItem('pagePrecedente', "carte");
+    });
+    folder_back.addEventListener('click', () => {
         window.location.href = './profils-enregistres.html';
         window.localStorage.setItem('pagePrecedente', "carte");
     });
@@ -636,7 +647,8 @@ function onPan(e) {
     if (e.isFinal && successful) {
         let start = null;
         let duration = 1000; // 1 second
-
+        const folder_front = document.querySelector('div#folder-front-pane');
+        folder_front.classList.add('open-folder-animation-map');
         function animation(timestamp) {
             if (!start) start = timestamp;
             let progress = timestamp - start;
@@ -656,6 +668,8 @@ function onPan(e) {
                 // Add the Id of the related profile to the local storage
                 const Id = miniature.getAttribute('identifier');
                 pushProfilFav(Id);
+                // Stop the folder animation
+                folder_front.classList.remove('open-folder-animation-map');
             }
         }
         requestAnimationFrame(animation);

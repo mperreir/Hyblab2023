@@ -241,6 +241,22 @@ footer#folder-back-pane div#folder-back-body-map {
     border-radius: 0 25px 0 0;
 }
 
+.open-folder-animation-map {
+    animation: 1s open-folder-map ease-in forwards;
+}
+
+@keyframes open-folder-map {
+    0% {
+        transform: perspective(0px) rotateX(0deg) scale(1);
+    }
+    50% {
+        transform: perspective(25px) rotateX(-0.20deg) scale(1.2);
+    }
+    100% {
+        transform: perspective(0px) rotateX(0deg) scale(1);
+    }
+}
+
 .display-none {
     display: none;
 }
