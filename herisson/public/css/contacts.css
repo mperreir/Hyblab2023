@@ -68,6 +68,7 @@ h1 {
     text-align: center;
 }
 
+
 .bulle-text {
     color: #0B6E5F;
     font-family: Prompt, sans-serif;
@@ -81,18 +82,18 @@ h1 {
 
 
 .white-rectangle {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     background-color: #FFF8F1;
     width: 100vw;
     height: 40vh;
-    margin-right: 0;
-    margin-left: 0;
-    margin-top: 20vh;
     border-top-left-radius: 15%;
     border-top-right-radius: 15%;
-    margin-bottom: 0;
     z-index: 2;
+}
+
+.textes {
+    height: 50em;
 }
 
 .titre {
