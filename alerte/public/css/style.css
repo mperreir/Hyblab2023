@@ -389,6 +389,12 @@ main>section {
     border-radius: 15px;
 }
 
+#repS6 {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+
 /* white navigation bullets */
 .swiper-pagination-bullet-active {
     background-color: white !important;
