@@ -2,10 +2,6 @@
 
 // TODO: WHEN SELECTION ON THE PREVIOUS PAGE IS DONE, DISPLAY THE MAP WITH THE SELECTED TOPICS
 //
-// TODO : interaction de la miniature avec le swipe dans le dossier
-//
-// TODO : les profils favoris sont affichés en evidence sur la carte
-//
 // TODO : si l'utilisateur accède direct à la carte, cocher tous les topics par défaut
 //
 // TODO : implementer retour arriere
@@ -53,12 +49,21 @@ map.on('zoomend', updateSelectedMarkersPosition);
  */
 function createIcon(p) {
     // Define the global icon size and global icon anchor
-    const globalIconSize = isMobileDevice() ? [75, 75] : [26, 26];
-    const globalIconAnchor = isMobileDevice() ? [37.5, 37.5] : [13, 13];
+    let globalIconSize = isMobileDevice() ? [60, 60] : [20, 20];
+    let globalIconAnchor = isMobileDevice() ? [30, 30] : [10, 10];
+    if (getProfilsFav().includes(p.Id)) {
+       globalIconSize = isMobileDevice() ? [90, 90] : [30, 30];
+       globalIconAnchor = isMobileDevice() ? [45, 45] : [15, 15];
+    }
+    // Define the prefix for the icon url
+    const iconUrlPrefix = getProfilsFav().includes(p.Id) ? '../img/pictogrammes_carte/favori_' : '../img/pictogrammes_carte/point_';
     // If the selected topics list is not empty and the profile doesn't contain all the selected topics, return the inactive icon
     if (selectedTopics.length > 0 && !selectedTopics.includes(translate(p.Topic))) {
+        if (getProfilsFav().includes(p.Id)) {
+
+        }
         return L.icon({
-            iconUrl: '../img/pictogrammes_carte/point_inactif.svg',
+            iconUrl: iconUrlPrefix + 'inactif.svg',
             iconSize: globalIconSize,
             iconAnchor: globalIconAnchor
         });
@@ -66,45 +71,51 @@ function createIcon(p) {
     // If the used keywords list is not empty and the profile doesn't contain at least one of the used keywords, return the inactive icon
     if (usedKeywords.length > 0 && !usedKeywords.map(k => k.replace('#', '')).some(keyword => p.Keywords.includes(keyword))) {
         return L.icon({
-            iconUrl: '../img/pictogrammes_carte/point_inactif.svg',
+            iconUrl: iconUrlPrefix + 'inactif.svg',
             iconSize: globalIconSize,
             iconAnchor: globalIconAnchor
         });
     }
+    if (getProfilsFav().includes(p.Id)) {
+
+    }
+    else {
+
+    }
     switch (p.Topic) {
         case 'énergie':
             return L.icon({
-                iconUrl: '../img/pictogrammes_carte/point_energie.svg',
+                iconUrl: iconUrlPrefix + 'energie.svg',
                 iconSize: globalIconSize,
                 iconAnchor: globalIconAnchor
             });
         case 'alimentation':
             return L.icon({
-                iconUrl: '../img/pictogrammes_carte/point_alimentation.svg',
+                iconUrl: iconUrlPrefix + 'alimentation.svg',
                 iconSize: globalIconSize,
                 iconAnchor: globalIconAnchor
             });
         case 'industrie':
             return L.icon({
-                iconUrl: '../img/pictogrammes_carte/point_industrie.svg',
+                iconUrl: iconUrlPrefix + 'industrie.svg',
                 iconSize: globalIconSize,
                 iconAnchor: globalIconAnchor
             });
         case 'économie circulaire':
             return L.icon({
-                iconUrl: '../img/pictogrammes_carte/point_economie_circulaire.svg',
+                iconUrl: iconUrlPrefix + 'economie_circulaire.svg',
                 iconSize: globalIconSize,
                 iconAnchor: globalIconAnchor
             });
         case 'mobilité':
             return L.icon({
-                iconUrl: '../img/pictogrammes_carte/point_mobilite.svg',
+                iconUrl: iconUrlPrefix + 'mobilite.svg',
                 iconSize: globalIconSize,
                 iconAnchor: globalIconAnchor
             });
         case 'numérique':
             return L.icon({
-                iconUrl: '../img/pictogrammes_carte/point_numerique.svg',
+                iconUrl: iconUrlPrefix + 'numerique.svg',
                 iconSize: globalIconSize,
                 iconAnchor: globalIconAnchor
             });
