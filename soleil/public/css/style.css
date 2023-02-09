@@ -1,7 +1,7 @@
 /* ------- Important ! Please at least keep the last part of this CSS ----------- */
 .article {
-    height: 200px;
     overflow: scroll;
+    height: 90%;
   }
 
 
@@ -341,7 +341,7 @@ header{
     border: 0.75px solid #000000;
     border-radius: 8px;
     height: auto;
-    width: 50%;
+    width: 80%;
     text-align: center;
     padding-top : 10%;
 
