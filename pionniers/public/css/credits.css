@@ -92,14 +92,16 @@ main div#credits-content section#images div#images-t{
 
 main div#credits-content section#images div#images-i{
     width: 100%;
+    max-width: 100%;
     height: 80%;
+    max-height: 80%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+    place-items: center center;
 }
 
 main div#credits-content section#images div#images-i img{
-    width: 100%;
+    width: 60%;
     height: auto;
 }
 
