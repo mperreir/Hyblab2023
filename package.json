@@ -15,5 +15,8 @@
     "nominatim-js": "^1.0.10"
   },
   "author": "MPDS",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.13.0"
+  }
 }

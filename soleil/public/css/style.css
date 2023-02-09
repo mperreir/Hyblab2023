@@ -1,4 +1,9 @@
 /* ------- Important ! Please at least keep the last part of this CSS ----------- */
+.article {
+    height: 200px;
+    overflow: scroll;
+  }
+
 
 p{
     font-size: 14px;

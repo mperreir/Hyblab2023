@@ -24,5 +24,7 @@ const initSlide9 = async function(){
 }
 
 function getMission(){
+    let missions = [];
+    if()
     return [{"title":"t", "texte":"blabla"},{"title":"t", "texte":"blabla"}];
 }
