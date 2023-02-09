@@ -347,6 +347,10 @@ body{
     top: 20%;
 }
 
+#end{
+    top: 20%;
+}
+
 .modal {
     margin-left: calc((100vw - 90 * 3vh / 4) / 2);
     width: calc(90 * 3vh / 4);
