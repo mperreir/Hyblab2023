@@ -25,117 +25,128 @@
         {
             "type": "message",
             "name": "Manon",
-            "text": "Oui, enfin, là, vous êtes dans le pré des moutons, qui sont allés pâturer en ville (rire)."
+            "text": "Oui, enfin, là, vous êtes dans le pré des moutons, qui sont allés pâturer en ville (rire). Je me présente, je suis Manon, la gérante des lieux."
         },
         {
             "type": "message",
             "name": "Voyageur",
-            "text": "Ah d'accord, pardon !"
+            "text": "Ah d'accord, pardon ! Votre ferme m’intrigue, j’ai quelques petites questions."
+        },
+        {
+            "type": "all",
+            "messages": [
+                [
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Quel est le concept d’une ferme urbaine ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Il y en a beaucoup d'autres de fermes comme celle-ci, tout autour de la ville ? Parce que là, vous êtes quasiment au pied des immeubles ! C'est original."
+                    },
+                    {
+                        "type": "message",
+                        "name": "Manon",
+                        "text": "Ahaha, oui, il y en a beaucoup, on appelle ça la ceinture maraîchère. On y trouve un mélange de petites fermes : en régie, comme la mienne, ou indépendantes, qui approvisionnent plutôt les commerces de la ville ou les habitants en vente directe. Et puis ça et là, on peut aussi trouver des gros potagers collectifs qui sont gérés par des groupements d’habitants, pour leur propre consommation."
+                    },
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Vous êtes en régie, c’est-à-dire ?  C’est une ferme municipale, c’est ça ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Manon",
+                        "text": "Oui tout à fait, cette ferme appartient à la ville. Elle sert à approvisionner une partie des cantines. Tous ceux qui travaillent ici sont des agents municipaux. La ville s’assure comme ça de pouvoir disposer des denrées dont elle a besoin. Et puis, pour moi en tout cas, c’est une vraie sécurité : mon salaire ne dépend pas de la vente des légumes."
+                    }                    
+                ],
+                [
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Vous y cultivez quoi ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Manon",
+                        "text": "Ici, on est spécialisé en maraîchage, on cultive principalement des légumes, quelques petits fruits. On a aussi un poulailler, et puis je fais un peu de fromage avec les moutons, mais ça c'est à mon compte."
+                    },
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Vous êtes en 100% bio j’imagine ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Manon",
+                        "text": "Oui, on cultive sans intrants chimiques ni mécaniques et selon les principes de l’agro-écologie, comme toutes les fermes aujourd’hui d’ailleurs. Cela fait partie du cahier des charges pour pouvoir s’installer."
+                    },
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "En agro-écologie, c’est-à-dire ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Manon",
+                        "text": "C'est-à-dire que notre manière de cultiver se veut la plus sobre possible et dans le respect de la biodiversité. On s'adapte au territoire (climat, faune, flore) et on prend appui sur la nature pour mieux produire, plus intelligemment et en adéquation avec elle. Donc, on ne cultive que des variétés locales et on diversifie un maximum les cultures. Ça nous permet de produire plus efficacement (c’est forcément plus simple quand les plantes se plaisent où elles sont) et puis de s’adapter en cas de soucis (sécheresse, pluie, etc)."
+                    }
+                ],
+                [
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Comment faites-vous pour approvisionner la ville ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Manon",
+                        "text": "Les fermes de la ceinture approvisionne en partie la ville en légumes, fruits et oeufs. Mais on s’appuie aussi sur les fermes du département. Et puis, on ne se nourrit pas qu’avec des fruits et des légumes ! Il faut aussi des céréales, des légumineuses, un peu de viande… Et ça, ce sont plutôt les fermes en grandes cultures qui nous l’apportent. On les trouve en zone rurale, car elles demandent plus de surface agricole."
+                    },
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Alors, est-ce qu’on peut dire que vous êtes autonome ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Manon",
+                        "text": "Oui et non. Ici, on ne cherche pas à être autonome mais résilient, ce n’est pas tout à fait la même chose. Notre système alimentaire se raisonne à l’échelle de la ville, du département, des régions, voir du pays, parce qu’il y a quand même de fortes disparités entre les territoires : de nature, et en cas de d’aléas climatiques par exemple. Et puis on ne peut pas tout produire partout."
+                    },
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Mais ici, dans ce département, les fermes arrivent à nourrir combien de personnes ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Manon",
+                        "text": "Ici, je dirais que les fermes nourrissent bien à 60% les habitants du département. Je n'ai pas les chiffres exactes mais on est dans cette fourchette là je pense."
+                    },
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Et les 40% restants, c'est quoi ? Qu'est ce qui vous manque ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Manon",
+                        "text": "Pour le reste, on doit importer les aliments exotiques, les boissons (hors cidre, jus de pomme et infusion), quelques produits transformés (on ne fait pas beaucoup de pâtes dans le coin par exemple) ou encore certains aliments qu'on n'arrive pas à cultiver ici en grande quantité (avocats, orange, poivrons, tomates...). Et puis, comme je vous le disais, il existe une complémentarité, je dirais même une solidarité entre les régions, donc il y a aussi une partie qu'on réserve à d'autres territoires."
+                    }
+                ]
+            ]
         },
         {
             "type": "message",
             "name": "Manon",
-            "text": "Pas de souci. Je me présente, je suis Manon, la gérante des lieux, mais cette ferme appartient à la ville. Elle sert à approvisionner une partie des cantines."
+            "text": "Ecoutez, il faut que je file, je dois aller accueillir une classe pour lui présenter la ferme."
         },
         {
             "type": "message",
             "name": "Voyageur",
-            "text": "C’est donc une ferme municipale, c’est ça ?"
-        },
-        {
-            "type": "message",
-            "name": "Manon",
-            "text": "Oui tout à fait, tous ceux qui travaillent ici sont des agents municipaux. La ville s’assure comme ça de pouvoir disposer des denrées dont elle a besoin. Et puis, pour moi en tout cas, c’est une vraie sécurité : mon salaire ne dépend pas de la vente des légumes."
-        },
-        {
-            "type": "message",
-            "name": "Voyageur",
-            "text": "Je comprends ! Et vous y cultivez quoi ?"
-        },
-        {
-            "type": "message",
-            "name": "Manon",
-            "text": "Ici, on est spécialisé en maraîchage, on cultive principalement des légumes, quelques petits fruits. On a aussi un poulailler, et puis je fais un peu de fromage avec les moutons, mais ça c'est à mon compte."
-        },
-        {
-            "type": "message",
-            "name": "Voyageur",
-            "text": "Vous êtes en 100% bio j’imagine ?"
-        },
-        {
-            "type": "message",
-            "name": "Manon",
-            "text": "Oui, on cultive sans intrants chimiques ni mécaniques et selon les principes de l’agro-écologie, comme toutes les fermes aujourd’hui d’ailleurs. Cela fait partie du cahier des charges pour pouvoir s’installer."
-        },
-        {
-            "type": "message",
-            "name": "Voyageur",
-            "text": "L’agro-écologie ? C’est-à-dire ?"
-        },
-        {
-            "type": "message",
-            "name": "Manon",
-            "text": "C'est-à-dire que notre manière de cultiver se veut la plus sobre possible et dans le respect de la biodiversité. On s'adapte au territoire (climat, faune, flore) et on prend appui sur la nature pour mieux produire, plus intelligemment et en adéquation avec elle. Donc, on ne cultive que des variétés locales et on diversifie un maximum les cultures. Ça nous permet de produire plus efficacement (c’est forcément plus simple quand les plantes se plaisent où elles sont) et puis de s’adapter en cas de soucis (sécheresse, pluie, etc)."
-        },
-        {
-            "type": "message",
-            "name": "Voyageur",
-            "text": "Et il y en a beaucoup d'autres de fermes comme ça, tout autour de la ville ? Parce que là, vous êtes quasiment au pied des immeubles ! C'est original."
-        },
-        {
-            "type": "message",
-            "name": "Manon",
-            "text": "Ahaha, oui, il y en a beaucoup, on appelle ça la ceinture maraîchère. On y trouve un mélange de petites fermes : en régie, comme la mienne, ou indépendantes, qui approvisionnent plutôt les commerces de la ville ou les habitants en vente directe. Et puis ça et là, on peut aussi trouver des gros potagers collectifs qui sont gérés par des groupements d’habitants, pour leur propre consommation."
-        },
-        {
-            "type": "message",
-            "name": "Voyageur",
-            "text": "Et cette ceinture maraîchère, elle permet de nourrir tous les habitants de la ville ?"
-        },
-        {
-            "type": "message",
-            "name": "Manon",
-            "text": "Non bien sûr, on s’appuie aussi sur les fermes du département pour approvisionner la ville. Et puis, on ne se nourrit pas qu’avec des fruits et des légumes ! Il faut aussi des céréales, des légumineuses, un peu de viande… Et ça, ce sont plutôt les fermes en grandes cultures qui nous l’apportent. On les trouve en zone rurale, car elles demandent plus de surface agricole."
-        },
-        {
-            "type": "message",
-            "name": "Voyageur",
-            "text": "Donc, vous êtes autonome, mais plutôt à l’échelle du département si je comprends bien ?"
-        },
-        {
-            "type": "message",
-            "name": "Manon",
-            "text": "Oui et non. Ici, on ne cherche pas à être autonome mais résilient, ce n’est pas tout à fait la même chose. Notre système alimentaire se raisonne à l’échelle de la ville, du département, des régions, voir du pays, parce qu’il y a quand même de fortes disparités entre les territoires : de nature, et en cas de d’aléas climatiques par exemple. Et puis on ne peut pas tout produire partout."
-        },
-        {
-            "type": "message",
-            "name": "Voyageur",
-            "text": "Mais ici, dans ce département, les fermes arrivent à nourrir combien de personnes ?"
-        },
-        {
-            "type": "message",
-            "name": "Manon",
-            "text": "Ici, je dirais que les fermes nourrissent bien à 60% les habitants du département. Je n'ai pas les chiffres exactes mais on est dans cette fourchette là je pense."
-        },
-        {
-            "type": "message",
-            "name": "Voyageur",
-            "text": "Et les 40% restants, c'est quoi ? Qu'est ce qui vous manque ?"
-        },
-        {
-            "type": "message",
-            "name": "Manon",
-            "text": "Pour le reste, on doit importer les aliments exotiques, les boissons (hors cidre, jus de pomme et infusion), quelques produits transformés (on ne fait pas beaucoup de pâtes dans le coin par exemple) ou encore certains aliments qu'on n'arrive pas à cultiver ici en grande quantité (avocats, orange, poivrons, tomates...). Et puis, comme je te le disais, il existe une complémentarité, je dirais même une solidarité entre les régions, donc il y a aussi une partie qu'on réserve à d'autres territoires."
-        },
-        {
-            "type": "message",
-            "name": "Manon",
-            "text": "Ecoutez, je dois aller accueillir une classe pour lui présenter la ferme. Mais si vous voulez en savoir plus, passez voir Fabien, il s’occupe d’une ferme en grandes cultures un peu plus loin. Il pourra un peu vous expliquer comment ça fonctionne. Vous prenez ce petit chemin là qui longe la ceinture, et vous montez dans le tram : comptez 10 arrêts et vous serez arrivé à la ferme du Moulin."
-        },
-        {
-            "type": "message",
-            "name": "Voyageur",
-            "text": "Merci, j’y vais de ce pas, bonne journée !"
+            "text": "Oui bien sûr, merci pour vos explications, bonne journée !"
         }
     ]
 }
