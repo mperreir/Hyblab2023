@@ -298,11 +298,12 @@ function onTopicCheck(event) {
     const topicImg = event.target;
     // Retrieve the topic string from the alt attribute of the image
     const topicString = topicImg.getAttribute('alt');
-
     // Alter the list of selected topics depending on the state of the checkboxes and add/remove the "unchecked" class
     if (topicImg.classList.contains("unchecked")) {
         topicImg.classList.remove("unchecked");
         selectedTopics.push(topicString);
+        // Update the localStorage
+        localStorage.setItem("themes", selectedTopics.join(','));
     } else {
         // If the selected topics array has length 1, do not remove the topic
         if (selectedTopics.length === 1) {
@@ -320,8 +321,9 @@ function onTopicCheck(event) {
         if (indexToRemove > -1) {
             selectedTopics.splice(indexToRemove, 1);
         }
+        // Update the localStorage
+        localStorage.setItem("themes", selectedTopics.join(','));
     }
-
     updateMap();
 }
 
