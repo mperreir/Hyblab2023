@@ -323,7 +323,8 @@ header{
     height: auto;
     width: 50%;
     text-align: center;
-    padding-top : 10%;
+    margin-top : 10px;
+    margin:auto;
 
 }
 

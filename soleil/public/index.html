@@ -21,6 +21,9 @@
   <script src="js/slide7.js" defer></script>
   <script src="js/slide8.js" defer></script>
   <script src="js/slide9.js" defer></script>
+  <script src="js/slideInfo1.js" defer></script>
+  <script src="js/slideInfo2.js" defer></script>
+  <script src="js/slideInfo3.js" defer></script>
   <script src="js/index.js" defer></script>
 </head>
 <body>
@@ -304,44 +307,9 @@
 
       <section id="mission" class="swiper-slide">
         <header>
-          <button class="retour">Accueil A rajouter</button>
-          <p class="titre">Des idées ?</p>
+          <img src="">
         </header>
-        <section>
-          <img src="img/SoliQuete.png">
-        </section>
-        <section>
-          <!--Lettre de mission n°1
-          
-          Votre mission, si vous l’acceptez : Installer des panneaux sur votre toit
-
-          Lettre de mission n°2
-          Présenter un projet d’auto-consommation à votre copropriété
-
-          Lettre de mission n°3
-
-          Convaincre votre mairie d’agir sur un espace public (toitures des bâtiments publics, délaissés urbains, parking…)
-          
-          Lettre de mission n°4
-          Intéressez-vous à l’agri-voltaïsme 
-
-          Lettre de mission n°5
-          Souscrire à une coopérative
-
-          Lettre de mission n°6
-          Ombrières de parking
-          
-          Lettre de mission n°7
-          Je présente un projet à mon propriétaire / agence
-
-
-          Lettre de mission n°8
-           Parlez-en !
-
-
-          -->
-        </section>
-
+        <div id="lettre_mission"></div>
         <footer>
           <button>Retour à l'accueil</button>
         </footer>
@@ -357,9 +325,15 @@
 
       <section id="info1" class="swiper-slide">
         <header>
+<<<<<<< HEAD
+=======
+          <button class="retour" onclick={swiper.slideTo(4,0);swiper.slideNext()}>
+            <img class="img-fleche" src="img/FlecheRetour.png">
+          </button>
+>>>>>>> 3b7b82aed4947dae190bdb255a7cd07ec26a5965
         </header>
         <section id="infoTxt">
-          <img id="bulleInfo" onclick={swiper.slideTo(3,0);swiper.slideNext()} src="img/info/info-ouvert2.png">
+          <img id="bulleInfo" onclick={swiper.slideTo(3,0)} src="img/info/info-ouvert2.png">
           <p id="Saut">
             Si votre toit est incliné, vos panneaux le seront aussi. <br> Idéalement, ils doivent être
             perpendiculaires au rayon du soleil. <br> Un petit peu de physique pour mieux comprendre
