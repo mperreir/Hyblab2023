@@ -4,12 +4,13 @@ var executed4 = false;
 const initSlide4 = async function(){
     if(!executed4){
         executed4 = true;
-        changePente();
+        $("#pente .img-pente").attr("src", `img/Ombre/toit-1-ombre-01.jpg`);
+        $("#pente #image3 p").html("Plat");
 
         $("#pente .open-button").click(function(){
             swiper.slideTo(11, 0);
 
-        })
+        });
 
         $("#pente input[name=pente]").click(function(){
             changePente();
