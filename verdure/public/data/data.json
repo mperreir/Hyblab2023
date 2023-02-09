@@ -4,7 +4,7 @@
     "choices": [{
       "prompt": "Planter des arbres",
       "positive": "<p class=\"positive-titles\">POSITIF</p> <ul><li>Réduction de la température.</li></ul>",
-      "negative": "<p class=\"negative-titles\">NEGATIF</p> <ul><li> Ronge de l'espace public.</li></ul>",
+      "negative": "<p class=\"negative-titles\">NEGATIF</p> <ul><li> Rogne de l'espace public.</li></ul>",
       "explanation": "Planter des arbres en ville est une solution pour lutter contre les îlots de chaleur. Les arbres apportent de l’ombre et compensent avec les milieux urbains à base de béton, d’asphalte ou de goudron. L’arbre bloque la lumière du soleil, fait de l’ombre et transpire par ses feuilles, ce qui crée de l’humidité et permet d’assurer une climatisation naturelle.</br>Une étude menée par l’ADEME (Agence De l'Environnement et de la Maîtrise de l'Énergie) en juin 2022 démontre qu’un arbre mature peut évaporer jusqu’à 450 litres d’eau par jour. C’est l’équivalent de cinq climatiseurs qui tourneraient pendant 20h : utile pour rafraîchir une rue !</br>Planter quelques arbres, c’est sympa, mais les effets seront visibles d’ici quelques années. Bon choix cependant !",
       "temperature": -1,
       "happiness": 1,
