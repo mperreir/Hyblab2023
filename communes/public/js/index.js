@@ -1,5 +1,9 @@
 "use strict";
-
+var monObjet = document.querySelectorAll('.logo');
+for (var i = 0; i < monObjet.length; i++) {
+  monObjet[i].data = "../img/logo.svg";
+  change_svg_color(monObjet[i], "#000000");
+}
 // Init of the (touch friendly) Swiper slider
 const swiper = new Swiper("#mySwiper", {
   direction: "horizontal",
