@@ -1,35 +1,46 @@
 'use strict';
 
 let dataCommune = undefined;
-//attendre x ms avant de lancer la recherche
-let timeoutCommune;
 
 document.querySelector("#rechercheCommune").addEventListener("keyup", async function (event) {
-    const searchTerm = event.target.value;
+    const searchTermCom = event.target.value;
 
-    clearTimeout(timeoutCommune);
+    if (!searchTermCom) {
+        document.querySelector("#autocompletionCom").innerHTML = '';
+        document.querySelector("#autocompletionCom").style.display = `none`;
+        document.querySelector("#searchAnimal").style.display = `block`;
+        return;
+    }
 
-    timeoutCommune = setTimeout(async function () {
+    if (dataCommune === undefined) {
+        dataCommune = await fetch(`http://127.0.0.1:8080/herisson/api/commune/autocomplete/${searchTermCom}`)
+        dataCommune = await dataCommune.json();
+    }
 
-        if (!searchTerm) {
-            document.querySelector("#autocompletionCom").innerHTML = '';
-            return;
-        }
+    let autocompletionsCom = [];
+    if (dataCommune && dataCommune.filteredNames) {
+        autocompletionsCom = dataCommune.filteredNames.slice(0, 10);
+    }
+    let nbElemCom = autocompletionsCom.length;
+    if (nbElemCom > 3) {
+        nbElemCom = 3;
+    }
 
-        if (dataCommune === undefined) {
-            dataCommune = await fetch(`http://127.0.0.1:8080/herisson/api/commune/autocomplete/${searchTerm}`)
-            dataCommune = await dataCommune.json();
-        }
+    if (nbElemCom === 0) {
+        document.querySelector("#autocompletionCom").innerHTML = '';
+        document.querySelector("#autocompletionCom").style.display = `none`;
+        document.querySelector("#searchAnimal").style.display = `block`;
+    }
+    else {
+        document.querySelector("#searchAnimal").style.display = `none`;
 
-        const autocompletionsCom = dataCommune.filteredNames.slice(0, 10);
-        // Add container for autocompletion items
+        document.querySelector("#autocompletionCom").style.height = `${nbElemCom * 5}vh`;
+        document.querySelector("#autocompletionCom").style.display = 'block';
         document.querySelector("#autocompletionCom").innerHTML = `<div id="autoItemCom">${autocompletionsCom.map(name => `<div class="autoItemCom">${name}</div>`).join('')}</div>`;
 
-// Set height and overflow for container
-        document.querySelector("#autoItemCom").style.height = '225px';
+        document.querySelector("#autoItemCom").style.height = `${nbElemCom * 5}vh`;
         document.querySelector("#autoItemCom").style.overflowY = 'scroll';
 
-// Listen for wheel or touch events on container
         document.querySelector("#autoItemCom").addEventListener("wheel", function (event) {
             this.scrollTop += event.deltaY;
         });
@@ -42,41 +53,85 @@ document.querySelector("#rechercheCommune").addEventListener("keyup", async func
                 document.querySelector("#rechercheCommune").value = '';
             });
         });
-        timeoutCommune = null;
-        dataCommune = undefined;
-    }, 350);
+    }
+    dataCommune = undefined;
 });
+
 
 let dataAnimaux = undefined;
-let timeoutAnimaux;
 
+document.querySelector("#rechercheAnimal").addEventListener("keyup", async function (event) {
+    const searchTermAni = event.target.value;
 
-document.querySelector("#rechercheAnimal").addEventListener("keyup", function (event) {
-    const searchTerm = event.target.value;
-    if (!searchTerm) {
+    if (!searchTermAni) {
         document.querySelector("#autocompletionAni").innerHTML = '';
+        document.querySelector("#autocompletionAni").style.display = `none`;
         return;
     }
-    // Make a GET request to the API endpoint
-    fetch(`http://127.0.0.1:8080/herisson/api/animal/autocomplete/${searchTerm}`)
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            // Do something with the data returned by the API
-            const autocompletionsAni = data.filteredNames.slice(0, 3);
-            document.querySelector("#autocompletionAni").innerHTML = autocompletionsAni.map(name => `<div class="autoItemAni">${name}</div>`).join('');
-            const autocompletionItems = document.querySelectorAll(".autoItemAni");
-            autocompletionItems.forEach(item => {
-                item.addEventListener("click", function () {
-                    document.querySelector("#rechercheAnimal").value = this.textContent;
-                    document.querySelector("#autocompletionAni").innerHTML = '';
-                    document.querySelector("#searchAnimal").submit();
-                    document.querySelector("#rechercheAnimal").value = '';
-                });
-            });
-        })
-        .catch(error => {
-            console.error(error);
-        });
-});
 
+    if (dataAnimaux === undefined) {
+        dataAnimaux = await fetch(`http://127.0.0.1:8080/herisson/api/animal/autocomplete/${searchTermAni}`)
+        dataAnimaux = await dataAnimaux.json();
+    }
+
+    let autocompletionsAni = [];
+    if (dataAnimaux && dataAnimaux.filteredNames) {
+        autocompletionsAni = dataAnimaux.filteredNames.slice(0, 10);
+    }
+    let nbElemAni = autocompletionsAni.length;
+    if (nbElemAni > 3) {
+        nbElemAni = 3;
+    }
+
+    if (nbElemAni === 0) {
+        document.querySelector("#autocompletionAni").innerHTML = '';
+        document.querySelector("#autocompletionAni").style.display = `none`;
+    }
+    else {
+        document.querySelector("#autocompletionAni").style.height = `${nbElemAni * 5}vh`;
+        document.querySelector("#autocompletionAni").style.display = 'block';
+        document.querySelector("#autocompletionAni").innerHTML = `<div id="autoItemAni">${autocompletionsAni.map(name => `<div class="autoItemAni">${name}</div>`).join('')}</div>`;
+
+        document.querySelector("#autoItemAni").style.height = `${nbElemAni * 5}vh`;
+        document.querySelector("#autoItemAni").style.overflowY = 'scroll';
+
+        document.querySelector("#autoItemAni").addEventListener("wheel", function (event) {
+            this.scrollTop += event.deltaY;
+        });
+        const autocompletionItems = document.querySelectorAll(".autoItemAni");
+        autocompletionItems.forEach(item => {
+            item.addEventListener("click", function () {
+                document.querySelector("#rechercheAnimal").value = this.textContent;
+                document.querySelector("#autocompletionAni").innerHTML = '';
+                document.querySelector("#searchAnimal").submit();
+                document.querySelector("#rechercheAnimal").value = '';
+            });
+        });
+    }
+    dataAnimaux = undefined;
+});
+//
+//
+//         // Make a GET request to the API endpoint
+//     fetch(`http://127.0.0.1:8080/herisson/api/animal/autocomplete/${searchTerm}`)
+//         .then(response => response.json())
+//         .then(data => {
+//             console.log(data);
+//             // Do something with the data returned by the API
+//             const autocompletionsAni = data.filteredNames.slice(0, 3);
+//             document.querySelector("#autocompletionAni").innerHTML = autocompletionsAni.map(name => `<div class="autoItemAni">${name}</div>`).join('');
+//             const autocompletionItems = document.querySelectorAll(".autoItemAni");
+//             autocompletionItems.forEach(item => {
+//                 item.addEventListener("click", function () {
+//                     document.querySelector("#rechercheAnimal").value = this.textContent;
+//                     document.querySelector("#autocompletionAni").innerHTML = '';
+//                     document.querySelector("#searchAnimal").submit();
+//                     document.querySelector("#rechercheAnimal").value = '';
+//                 });
+//             });
+//         })
+//         .catch(error => {
+//             console.error(error);
+//         });
+// });
+//

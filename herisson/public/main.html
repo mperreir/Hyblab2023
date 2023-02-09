@@ -39,25 +39,30 @@
             <input id="rechercheCommune" class="searchBar" type="text" name="searchCommune" placeholder="Nom de votre commune">
             <button class="bouton-recherche"> </button>
         </form>
-        <div id="autocompletionCom"></div>
-
+    </div>
+    <div id="autocompletionCom" style="display: none"></div>
+    <div class="barres-recherche">
         <form class="search" id="searchAnimal" action="animal.html" method="get" name="RechercheAnimal">
                 <input id="rechercheAnimal" class="searchBar" type="text" name="searchAnimal" placeholder="Nom de l'animal">
             <button class="bouton-recherche"> </button>
         </form>
-        <div id="autocompletionAni"></div>
-
-
-        <!--         <div style="display: flex; align-items: center;">-->
-<!--             <label style="margin-right: auto;" for="switch">Code Postal</label>-->
-<!--             <label id="switch">-->
-<!--                 <input type="checkbox">-->
-<!--                 <span class="slider round"></span>-->
-<!--             </label>-->
-<!--             <label style="margin-left: auto;" for="switch">Animal</label>-->
-<!--         </div>-->
     </div>
+    <div id="autocompletionAni" style="display: none"></div>
 
+    <script>
+        document.addEventListener("click", function(event) {
+            const searchCommune = document.getElementById("searchCommune");
+            const autoCom = document.getElementById("autocompletionCom");
+            const searchAnimal = document.getElementById("searchAnimal");
+            const autoAni = document.getElementById("autocompletionAni");
+            if (!searchCommune.contains(event.target)) {
+                autoCom.style.display = "none";
+                searchAnimal.style.display = "block";
+            }
+            if (!searchAnimal.contains(event.target)) {
+                autoAni.style.display = "none";}
+        });
+    </script>
 
 
 </body>

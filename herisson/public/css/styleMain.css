@@ -46,13 +46,15 @@ body
     bottom: 0;
     /*right: -22vw;*/
     position: absolute;
-    z-index: -1;
+    z-index: -10;
 }
 
 .barres-recherche
 {
     text-align: center;
     margin-top: 15vh;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #ligneDialogue
@@ -102,7 +104,7 @@ input[type="text"]
     font-weight: 500;
     font-family: 'Prompt', sans-serif;
     color : #0B6E5F;
-    font-size: 3vh;
+    font-size: 2vh;
     margin-left: -5vw;
     opacity: 1;
 }
@@ -123,8 +125,8 @@ input[type="text"]
     background-color: transparent;
     border: none;
     cursor: pointer;
-    width: 10vw;
-    /*height: 8vh;*/
+    width: 5vw;
+    height: 5vw;
     position: absolute;
     padding-top: 7vh;
 }
@@ -133,20 +135,58 @@ input[type="text"]
 {
     background-color: transparent;
     border: none;
-    height: 4vh;
-    font-size: 2.5vh;
-    width: 100%;
+    height: 5vh;
+    font-size: 3vh;
+    margin-left: 7vw;
     font-family: 'Prompt', sans-serif;
+    color: #0B6E5F;
 }
 
 #autocompletionCom
 {
+    position: absolute;
     background-color: #FFF8F1;
     border-radius: 0 0 50px 50px;
     width: 90vw;
+    padding-top: 5vh;
+    margin-top: 14vh;
+    z-index: 3;
+    left: 0;
+    right: 0;
     margin-left: auto;
     margin-right: auto;
+}
+
+#autocompletionAni
+{
+    position: absolute;
+    background-color: #FFF8F1;
+    border-radius: 0 0 50px 50px;
+    width: 90vw;
     padding-top: 5vh;
-    margin-top: -5vh;
-    height: 20vh;
+    margin-top: 26vh;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#searchCommune
+{
+    position: absolute;
+    z-index: 4;
+    right: 0;
+    left: 0;
+    margin-top: 10vh;
+}
+
+#searchAnimal
+{
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    left: 0;
+    margin-top: 21vh;
 }

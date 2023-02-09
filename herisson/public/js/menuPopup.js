@@ -14,7 +14,7 @@ imgLogo.id = "logo";
 imgLogo.style.position = "absolute";
 imgLogo.style.top = "2vh";
 imgLogo.style.left = "5vw";
-imgLogo.style.zIndex = "2";
+imgLogo.style.zIndex = "6";
 imgLogo.style.width = "auto";
 imgLogo.style.height = "3vh";
 
@@ -28,7 +28,7 @@ imgMenuBurger.id = "popUpNav";
 imgMenuBurger.style.position = "absolute";
 imgMenuBurger.style.top = "2vh";
 imgMenuBurger.style.right = "5vw";
-imgMenuBurger.style.zIndex = "2";
+imgMenuBurger.style.zIndex = "6";
 imgMenuBurger.style.width = "auto";
 imgMenuBurger.style.height = "2.75vh";
 
