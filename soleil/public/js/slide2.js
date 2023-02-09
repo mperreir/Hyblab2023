@@ -29,16 +29,22 @@ const initSlide2 = async function(){
     })
     $('#adresse input').on('input', function() { // au changement de caractere
       if($("#adresse input").val().charAt($("#adresse input").val().length - 1) == " "){
-        let pa =getPossibleAdresse();
+        let pa =getPossibleAdresse($("#adresse input").val());
+        console.log(pa);
         $("div.result").html("");
         pa.forEach(elt => {
-          $("div.result").append(`<option>${elt}</option>`)
+          $("div.result").append(`<option>${elt[address_text]}</option>`)
         });
         
         $("div.result").show();
-        $("div.result option").click(function(){
+        $("div.result option").click(async function(){
           console.log("option");
-          quiz["adresse"] = $(this).html();
+          quiz["adresse"] = pa.find(elt => elt["adress_text"] == $(this).html()); 
+          let response = await fetch('api/density/' + quiz["adresse"]["full_adress"]["town"]);
+          const density = await response.json();
+          quiz["density"] = density["density"];
+          // ajouter l'image correspondante
+          $("#adresse video").attr("src", `animation/geo-0${quiz["density"].mp4}`);
           $('#adresse input').val($(this).html());
           $("div.result").hide();
         })
@@ -61,8 +67,9 @@ function changeText(){
   $("#adresse .commentaire-soli p").html("Vous me trouvez trop curieux ? Votre adresse va servir à calculer votre potentiel d’ensoleillement.")
 }
 
-function getPossibleAdresse(s){
-  return ["bon","ici"];
+const getPossibleAdresse = async function(s){
+  let response = await fetch('api/searchAddresses/' + s);
+  return await response.json();
 }
 
 function showOptions(){
