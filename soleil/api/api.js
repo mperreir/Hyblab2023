@@ -66,7 +66,7 @@ app.get('/density/:town', async function (req, res) {
 
 // TODO finir cette fonction
 function getRadiationData(latitude, longitude, altitude, date_begin, date_end, time_ref, summatization) {
-    const username = "supy.game@gmail.com";
+    const username = "supy.game%2540gmail.com";
     const url = `https://www.soda-is.com/service/wps?Service=WPS&Request=Execute&Identifier=get_cams_radiation&version=1.0.0&DataInputs=latitude=${latitude};longitude=${longitude};altitude=${altitude};date_begin=${date_begin};date_end=${date_end};time_ref=${time_ref};summarization=${summatization};username=${username}&RawDataOutput=irradiation`;
 
     wget({
@@ -86,7 +86,7 @@ function getRadiationData(latitude, longitude, altitude, date_begin, date_end, t
         }
     });
 }
-//getRadiationData(44.083, 5.059, -999, "2017-01-01", "2017-01-05", "UT", "PT15M");
+//getRadiationData(44.083, 5.059, -999, "2017-01-01", "2017-01-05", "TST", "PT15M");
 
 /**
  * Compute irradiation of the roof at a time given
@@ -102,9 +102,9 @@ function getRadiationData(latitude, longitude, altitude, date_begin, date_end, t
  */
 function computeIrradiation(time, day, ghi, dhi, bni, orientation, inclinationAngle, latitude) {
     // solarAzimutAngle based on latitude, longitude, time, day
-    const sunDeclination = Math.asin(0.398 * Math.sin(0.985 * day - 80));
-    const hourAngle = 86 < day < 300 ? 180 * (((time - 0.5) / 4 - 2) / 12 - 1) : 180 * (((time - 0.5) / 4 - 1) / 12 - 1);
-    const sunElevationAngle = Math.asin(Math.sin(latitude) * Math.sin(sunDeclination) + Math.cos(latitude) * Math.cos(sunDeclination) * Math.cos(hourAngle));
+    const sunDeclination = Math.asin(0.398 * Math.sin((0.985 * day - 80) * Math.PI / 180));
+    const hourAngle = Math.PI * (((time - 0.5) / 4) / 12 - 1);
+    const sunElevationAngle = Math.asin(Math.sin(latitude * Math.PI / 180) * Math.sin(sunDeclination) + Math.cos(latitude * Math.PI / 180) * Math.cos(sunDeclination) * Math.cos(hourAngle));
     const solarAzimutAngle = Math.asin((Math.cos(sunDeclination) * Math.sin(hourAngle)) / Math.cos(sunElevationAngle));
 
     // azimutAngle computed with the orientation (in rad)
