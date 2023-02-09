@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/styleGlobal.css">
   <link rel="stylesheet" href="css/styleVote.css">
+  <link rel="stylesheet" href="css/styleGlobal.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
@@ -18,12 +19,19 @@
 
 <body>
   <div id="container">
-    <header>
-      <div id="titre">
-        <h1>Vote</h1>
+    <header> 
+      <div>
+        <img src="img/logo_ecotopie.svg" id="logo-ecotopie" />
+        <img src="img/nouveau_titre.svg" id="voy-ecotopie" />
       </div>
-      <img src="img/ux_kit/fleche_gauche.svg" id="left-arrow" onclick="map()">
+        
     </header>
+    <div id="felicitation">
+      <p>
+        Votre mission est désormais terminée, merci pour votre précieuse collaboration. Avant un débriefing plus poussé avec l’équipe, pouvez-vous nous donner vos premières impressions de voyage ?
+      </p>
+      <img src="img/ux_kit/fleche_bas.svg" class="fleche_bas"/>
+    </div>
     <div id="votes">
       
     </div>
@@ -31,3 +39,7 @@
 </body>
 
 </html>
+
+<!doctype html>
+
+<html lang="fr">

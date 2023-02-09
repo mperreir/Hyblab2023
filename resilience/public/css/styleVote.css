@@ -1,5 +1,6 @@
+
 #container {
-    background-color: white;
+    background-color: #79B77B;
 }
 
 
@@ -24,4 +25,35 @@
 .selected {
     height: 1.5rem;
     width: 1.5rem;
+}
+
+#logo-ecotopie{
+    width: 35%;
+    position: absolute;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#voy-ecotopie{
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 70%;
+    position: absolute;
+    margin-top: 40%;
+}
+
+#felicitation{
+    position: absolute;
+    font-size: 25%;
+    text-align: center;
+    margin: 10%;
+    top: 50%;
+}
+
+.fleche_bas{
+    width: 10%;
+    position: absolute;
+    left: 45%;
+    right: 45%;
+    top: 130%;
 }
