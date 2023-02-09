@@ -11,7 +11,7 @@ var iRow; // initialise current row
 
 
 
-const introSlide1 = async function() {
+const introSlide = async function() {
     let response = await fetch('../data/data.json');
     const data = await response.json();
     const value = swiper.activeIndex +1
@@ -32,7 +32,13 @@ const introSlide2 = async function() {
     const value = swiper.activeIndex +6
     const data_filter = data.intro.filter(function(item){return item.name === "intro"+value;})[0]
     document.querySelector("#Elu"+value).data=data_filter.file_name
-    aText = new Array(data_filter.tchat)
+    if(value === 6){
+        aText = new Array(data_filter.tchat + sessionStorage.getItem("Score"))
+    }
+    else{
+        aText = new Array(data_filter.tchat)
+    }
+    console.log(aText)
     iIndex = 0;
     iArrLength = aText[0].length;
     iTextPos = 0;

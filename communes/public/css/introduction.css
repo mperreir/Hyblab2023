@@ -29,7 +29,7 @@ header div {
 .form__group {
     position: absolute;
     padding: 15px 0 0;
-    bottom: 50%;
+    margin-top: 5%;
     right: 5%;
     width: 50%;
 }
@@ -93,4 +93,19 @@ body {
 }
 .swiper-pagination-bullet-active{
     background-color : #35A88A;
+}
+
+.button {
+    border-radius: 40px 40px 40px 40px;
+    padding: 8px;
+    margin-top: 15px;
+}
+
+#voirEnv{
+    position: absolute;
+    right: 5%;
+    margin-top: 5%;
+}
+header p{
+    font-size: 25px;
 }

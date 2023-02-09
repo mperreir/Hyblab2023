@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="../js/IntroSlide1.js" defer></script>
+    <script src="../js/IntroSlide.js" defer></script>
     <script src="../js/actualState.js" defer></script>
     <script src="../js/change_svg_color.js"></script>
+    <script src="../js/score.js" defer></script>
+
 </head>
 <body>
 <!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
@@ -23,7 +25,9 @@
         <header>
             <div class="headerOne">
                 <object class="logo" type="image/svg+xml"></object>
-
+            </div>
+            <div class="headerThree">
+                <p> Score : <?s</p>
             </div>
         </header>
         <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
@@ -50,8 +54,8 @@
                 <div class = Elu>
                     <object id="Elu7"></object>
                 </div>
-                <div>
-                    <input onclick="accueil()" value="Voir les environnements">
+                <div id="voirEnv">
+                    <input type="button" class="button"  onclick="accueil()" value="Voir les environnements">
                 </div>
                 <footer>
                     <p></p>

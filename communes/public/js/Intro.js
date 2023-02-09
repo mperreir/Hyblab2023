@@ -1,5 +1,6 @@
 "use strict";
 sessionStorage.setItem("alreadyVisited","")
+sessionStorage.setItem("Score","0")
 var monObjet = document.querySelectorAll('.logo');
 for (var i = 0; i < monObjet.length; i++) {
     monObjet[i].data = "../img/logo.svg";
@@ -16,7 +17,7 @@ const swiper = new Swiper("#mySwiper", {
 });
 
 swiper.on("slideChange", function () {
-    introSlide1();
+    introSlide();
 });
 const swiper2 = new Swiper("#mySecondSwiper", {
     direction: "horizontal",
@@ -44,7 +45,7 @@ setTimeout(() => {
         easing: 'easeOutQuad',
     });
     // Init first slide
-    introSlide1();
+    introSlide();
 }, 1000);
 const iSpeed = 50;
 const iScrollAt = 20;

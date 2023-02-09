@@ -1,5 +1,9 @@
 'use strict';
-
+var monObjet = document.querySelectorAll('.logo');
+for (var i = 0; i < monObjet.length; i++) {
+    monObjet[i].data = "../img/logo.svg";
+    change_svg_color(monObjet[i], "#000000");
+}
 let options = {
     dist: -300,
     onCycleTo: function(slide) {
@@ -10,6 +14,11 @@ let options = {
 
         background.css('background-color', $(slide).attr('background-color'));
         background.css('transition', 'background-color 1s ease-in-out');
+        let item = document.querySelector('#detail')
+        item.style.backgroundColor = $(slide).attr('color');
+        item.style.color = "#ffffff";
+
+
 
     },
     shift: 150,
