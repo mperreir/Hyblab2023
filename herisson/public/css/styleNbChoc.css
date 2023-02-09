@@ -73,11 +73,11 @@ main{
 {
     font-size: 45vw;
     line-height: 25vh;
-    padding-top: 8vh;
+    padding-top: 3vh;
     font-weight: 700;
     font-family: 'Prompt', sans-serif;
     color: #FBC5EB;
-    margin: 10vh 10vw 5vh 10vw;
+    margin: 10vh 10vw 0vh 10vw;
 }
 
 div
@@ -105,7 +105,7 @@ div
 #fleche {
     width: 7vw;
     height: 2vh;
-    margin: 6vh 1vw 2vh 1vw;
+    margin: 2vh 1vw 2vh 1vw;
 }
 
 .round-background
