@@ -25,12 +25,15 @@ const initSlide9 = async function(){
 
 function getMission(){
     let missions = [];
-    if(quiz["propriétaire"] == "locataire"){
-        missions.push({"title": "Présentez un projet à votre propriétaire", "index":19 })
+
+    if (true) {
+        if(quiz["propriétaire"] == "locataire"){
+            missions.push({"title": "Présentez un projet à votre propriétaire", "index":19 })
+        } else {
+            missions.push({"title": "Installez des panneaux sur mon toit", "index":14 })
+        }
     }
-    if(true){
-        missions.push({"title": "Installez des panneaux sur mon toit", "index":14 })
-    }
+
     if(Object.keys(quiz).includes("facultatif")){
         if(quiz["facultatif"][0] == "1"){ 
             missions.push({"title": "Présentez un projet à votre copropriété", "index":15 })
