@@ -85,7 +85,7 @@ body
 {
     width: 80%;
     border: none;
-    padding-top: 1.5vh;
+    padding-top: 2vh;
     box-sizing: border-box;
     background: none;
 }
@@ -150,7 +150,7 @@ input[type="text"]
     border-radius: 0 0 50px 50px;
     width: 90vw;
     padding-top: 5vh;
-    margin-top: 9vh;
+    margin-top: 6vh;
     z-index: 3;
     left: 0;
     right: 0;
@@ -165,7 +165,7 @@ input[type="text"]
     border-radius: 0 0 50px 50px;
     width: 90vw;
     padding-top: 4vh;
-    margin-top: 21vh;
+    margin-top: 18vh;
     z-index: 1;
     left: 0;
     right: 0;
@@ -180,7 +180,7 @@ input[type="text"]
     z-index: 4;
     right: 0;
     left: 0;
-    margin-top: 6vh;
+    margin-top: 3vh;
 }
 
 #searchAnimal
@@ -189,5 +189,5 @@ input[type="text"]
     z-index: 2;
     right: 0;
     left: 0;
-    margin-top: 17vh;
+    margin-top: 14vh;
 }
