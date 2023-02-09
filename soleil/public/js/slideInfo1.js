@@ -7,8 +7,9 @@ const initSlideInfo1 = async function(){
         $("#facultatif footer button").eq(0).click(function(){
             swiper.slideNext();
         })
-        $("#facultatif footer .passer").click(function(){
-            swiper.slideNext();
+        $("#bulleInfo").click(function(){
+            swiper.slideTo(5, 0);
+
         })
     }
 }

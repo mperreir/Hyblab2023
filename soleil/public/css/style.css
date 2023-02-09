@@ -507,6 +507,8 @@ div.conteneur{
     position:absolute;
     left:100%;
     top:5%;
+    background-color: white;
+    animation: glowing 2000ms infinite;
 }
 
 #SoliInfo{
@@ -733,7 +735,7 @@ body{
 display: flex;
 justify-content: flex-start;
 }
-/* Stylez et fixez le bouton sur la page 
+/* Stylez et fixez le bouton sur la page */
 .open-button {
 background-color: white;
 position: absolute;
@@ -742,7 +744,8 @@ border: none;
 animation: glowing 2000ms infinite;
 height: 22px;
 }
-*/
+
+
 /* Positionnez la forme Popup */
 .login-popup {
 position: relative;
