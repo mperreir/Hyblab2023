@@ -24,7 +24,7 @@ body{
     background-color: black;
     color: black;
     overflow: hidden;   /* to avoid slider bugs on some browsers */
-    font-family: sans-serif;
+    font-family: 'Inter', serif;
 }
 
 #image{
