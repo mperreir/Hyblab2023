@@ -1,0 +1,27 @@
+#container {
+    background-color: white;
+}
+
+
+#votes {
+    background-color: pink;
+}
+
+.vote {
+    background-color: #79B77B;
+    display: flex;
+    height: 3rem;
+}
+
+.note {
+    display: flex;
+    background-color: white;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 1rem;
+}
+
+.selected {
+    height: 1.5rem;
+    width: 1.5rem;
+}
