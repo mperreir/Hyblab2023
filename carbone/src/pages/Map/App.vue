@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a href="index.html" style="text-align:center;   display: block;"> Retour vers la page d'acceuil </a>
+    <a href="home.html" style="text-align:center;   display: block;"> Retour vers la page d'acceuil </a>
     <a href="solutions.html" style="text-align:center;   display: block;">Des solutions concrètes </a>
     <div class="search-container">
         <p style="margin-top:1em;text-align:center;">Choisir le critère de recherche:</p>
