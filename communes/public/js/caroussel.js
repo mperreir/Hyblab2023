@@ -71,7 +71,12 @@ fetch('../data/data.json')
     });
 
 function openEnv(){
+    let monscore = sessionStorage.getItem("Score");
+    monscore=monscore.substring(0,monscore.length-1);
+    let result = parseInt(monscore)+3;
+    sessionStorage.setItem("Score",result.toString()+"%");
     let idEnv=document.querySelector(".active").id
     sessionStorage.setItem("visit",idEnv)
     location.href = "home.html"
+
 }
