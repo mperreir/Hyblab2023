@@ -37,6 +37,7 @@ header.main{
 #titles h1{
     position: absolute;
     left: 50%;
+    min-width: 90vw;
     transform: translate(-50%, 0%);
     font-family: 'Prompt', sans-serif;
     font-size: 6vw;
