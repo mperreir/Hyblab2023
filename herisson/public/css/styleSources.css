@@ -64,13 +64,13 @@ h2
     position: absolute;
     text-align: center;
     font-size: 2vh;
-    margin-top: 10vh;
+    margin-top: 8vh;
     color: #0B6E5F;
     font-weight: 400;
     font-family: 'Prompt', sans-serif;
     width: 55vw;
     margin-left: 0;
-    margin-right: 23vh;
+    margin-right: 20vh;
     right: 0;
 }
 
@@ -88,5 +88,15 @@ h2
 .texte-Elie p
 {
     margin-bottom: 0;
+}
+
+#ligne
+{
+    width: 35vw;
+}
+
+#fleche
+{
+    width: 7vw;
 }
 
