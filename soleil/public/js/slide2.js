@@ -1,4 +1,39 @@
 "use strict";
+let help = [
+  {
+    "latitude": "43.7009358",
+    "longitude": "7.2683912",
+    "full_address": {
+      "street_number": 0,
+      "street": "Nice",
+      "zip_code": "France métropolitaine",
+      "town": "Provence-Alpes-Côte d'Azur"
+    },
+    "address_text": "0 Nice, France métropolitaine PROVENCE-ALPES-CÔTE D'AZUR"
+  },
+  {
+    "latitude": "43.7047452",
+    "longitude": "7.2615981",
+    "full_address": {
+      "street_number": 0,
+      "street": "Nice-Ville",
+      "zip_code": "06000",
+      "town": "Thiers"
+    },
+    "address_text": "0 Nice-Ville, 06000 THIERS"
+  },
+  {
+    "latitude": "43.7048948",
+    "longitude": "7.2617264",
+    "full_address": {
+      "street_number": 0,
+      "street": "Nice-Ville",
+      "zip_code": "06000",
+      "town": "Thiers"
+    },
+    "address_text": "0 Nice-Ville, 06000 THIERS"
+  }
+];
 
 var executed2 = false;
 // Just animate the logo
@@ -13,7 +48,19 @@ async function initSlide2() {
       }
     });
     $("#adresse #search").click(async function(){
-      let pa = await getPossibleAddresses($("#adresse input").val());
+      let pa = [
+        {
+          "latitude": "47.0000315",
+          "longitude": "2.4493021",
+          "full_address": {
+            "street_number": "15",
+            "street": "Rue du Bois au Moine",
+            "zip_code": "18340",
+            "town": "Plaimpied-Givaudins"
+          },
+          "address_text": "15 Rue du Bois au Moine, 18340 PLAIMPIED-GIVAUDINS"
+        }
+      ];
         console.log(pa);
 
         $("div.result").html("");
@@ -23,8 +70,20 @@ async function initSlide2() {
 
         $("div.result").show();
         $("div.result option").click(async function () {
-          console.log("option");
+          console.log(quiz["adresse"]);
+          quiz["adresse"] = {
+            "latitude": "47.0000315",
+            "longitude": "2.4493021",
+            "full_address": {
+              "street_number": "15",
+              "street": "Rue du Bois au Moine",
+              "zip_code": "18340",
+              "town": "Plaimpied-Givaudins"
+            },
+            "address_text": "15 Rue du Bois au Moine, 18340 PLAIMPIED-GIVAUDINS"
+          }
           quiz["adresse"] = pa.find(elt => elt["adress_text"] == $(this).html());
+          console.log(quiz["adresse"]);
           let response = await fetch('api/density/' + quiz["adresse"]["full_adress"]["town"]);
           const density = await response.json();
           quiz["density"] = density["density"];
@@ -47,7 +106,7 @@ async function initSlide2() {
 
         $("div.result").show();
         $("div.result option").click(async function () {
-          console.log("option");
+          console.log(quiz["adresse"]);
           quiz["adresse"] = pa.find(elt => elt["adress_text"] == $(this).html());
           let response = await fetch('api/density/' + quiz["adresse"]["full_adress"]["town"]);
           const density = await response.json();
