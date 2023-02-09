@@ -38,9 +38,18 @@
     <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
     <main class = "swiper-wrapper">
       <section id="premiere_page" onclick={swiper.slideNext()} class="swiper-slide">
-        <img src="img/logo.jpg">
-        <p>Objectif Soleil</p>
-        <p>Le défi citoyen pour développer l’énergie solaire autour de chez vous</p>
+        <section id="image4">
+          <img src="img/ObjectifSoleil.png">
+          <p>OBJECTIF SOLEIL</p>
+        </section>
+        <section id="ligne">
+          <p id="Saut">Le défi citoyen pour développer l’énergie solaire autour de chez vous</p>
+          <p id="presentation">
+            Selon l'Agence internationale de l'énergie, 
+            la planète devra installer chaque année d'ici à 2030 quatre fois plus de capacités solaires qu'elle ne le fait aujourd'hui. 
+            Le but : atteindre la neutralité carbone et limiter le réchauffement climatique à 1,5°C. Passez à l'action !
+          </p>
+        </section>
       </section>
 
       <!-- section d'accueil -->
@@ -157,7 +166,7 @@
               </form>
           <div class="commentaire-soli">
             <img src="img/soliMontgolfiere.png">
-            <p id="SoliExTex">Mais pourquoi parler de l’inclinaison du toit ? C’est essentiel pour la performance de votre module photovoltaïque. </p>
+            <p id="SoliExTex">Mais pourquoi parler de l’inclinaison du toit ? <br> C’est essentiel pour la performance de votre module photovoltaïque. </p>
           </div>
           </div>
           
@@ -178,14 +187,15 @@
             <img class="img-fleche" src="img/FlecheRetour.png">
           </button>
           <button class="open-button"><img src="img/Info2.png"></button>
-          <h1 class="titre">Comment votre toit est-il orienté</h1>
+          <h1 class="titre">Et l’orientation dans toute cette histoire ?
+          </h1>
         </header>
         <div id="ligne">
           <section id="image" >
             <img id="tropdechoix" src="img/ensoleillement/1-1-commune.jpg">
           </section>
           <div id="image3" class="boussole"><img class="illustration" src="img/boussole/0.jpg" alt="0">
-          <p>Appuier sur la boussole 
+          <p id="indication">Appuier sur la boussole 
             pour choisir votre orientation</p></div>
         </div>
         <div id="jauge">
@@ -263,7 +273,7 @@
               <section id="bulle-question">
                 <input type="checkbox" id="facul3"
                        name="contact" value="Toujours">
-                <label class="choix-texte2" for="facul3">Je m'engage aux décisions prises par ma municipalité</label>
+                <label class="choix-texte2" for="facul3">Je m'intéresse  aux décisions prises par ma municipalité</label>
               </section>
               <section id="bulle-question">
                 <input type="checkbox" id="facul4"
@@ -320,7 +330,7 @@
           </button>
         </header>
         <section id="infoTxt">
-          <img id="bulleInfo" onclick={swiper.slideTo(3,0);swiper.slideNext()} src="img/info/info-ouvert2.png">
+          <img id="bulleInfo" onclick={swiper.slideTo(3,0)} src="img/info/info-ouvert2.png">
           <p id="Saut">
             Si votre toit est incliné, vos panneaux le seront aussi. <br> Idéalement, ils doivent être
             perpendiculaires au rayon du soleil. <br> Un petit peu de physique pour mieux comprendre
@@ -336,9 +346,6 @@
 
       <section id="info2" class="swiper-slide">
         <header>
-          <button class="info-bulle" onclick={swiper.slideTo(5,0)}>
-            <img class="img-fleche" src="img/FlecheRetour.png">
-          </button>
         </header>
         <section id="infoTxt">
           <img id="bulleInfo" onclick={swiper.slideTo(4,0);swiper.slideNext()} src="img/info/info-ouvert2.png">
@@ -356,9 +363,12 @@
 
       <section id="info3" class="swiper-slide">
         <header>
+<<<<<<< HEAD
+=======
           <button class="info-bulle" onclick={swiper.slideTo(6,0)}>
             <img class="img-fleche" src="img/FlecheRetour.png">
           </button>
+>>>>>>> 0360bac874da3295012b671a22bda4a1e18e006f
         </header>
         <section id="infoTxt">
           <img id="bulleInfo" onclick={swiper.slideTo(5,0);swiper.slideNext()} src="img/info/info-ouvert2.png">

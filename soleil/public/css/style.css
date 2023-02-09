@@ -41,6 +41,19 @@ body{
     margin :auto
 }
 
+
+#image4{
+    width: 100%;
+    height: 40%;
+    padding-top: 30%;
+}
+
+#presentation{
+    width: 80%;
+    margin: auto;
+    padding-top: 15%;
+}
+
 #choix-log{
     width : 24%;
     height: 12%;
@@ -552,6 +565,16 @@ div.conteneur{
     top: 5%;
     
 }
+
+#indication{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+}
+
 
 #SoliInfo{
     position: absolute;
