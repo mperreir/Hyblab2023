@@ -149,9 +149,12 @@ function displayMessage(message) {
 
 document.getElementById('right-arrow').addEventListener('click', function () {
     if (window.localStorage.getItem("compt").length == 3) {
-        window.localStorage.setItem("popup", "true")
+        window.localStorage.setItem("popup", "true");
     }
-    window.location = "./map.html"
+    if (window.localStorage.getItem("compt").length == 1) {
+        window.localStorage.setItem("first-acquis", "true");
+    }
+    window.location = "./map.html";
 
 });
 

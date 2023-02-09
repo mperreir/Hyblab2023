@@ -343,6 +343,10 @@ body{
     top: 20%;
 }
 
+#notif-acquis{
+    top: 20%;
+}
+
 .modal {
     margin-left: calc((100vw - 90 * 3vh / 4) / 2);
     width: calc(90 * 3vh / 4);
@@ -382,7 +386,7 @@ body{
     border-radius: 3vh;
     border-color: black;
     border-width: thick;
-    cursor: pointer;
+    cursor: normal;
     visibility: hidden;
 }
 
@@ -398,7 +402,8 @@ body{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0 2.5% 0 2.5%
+    margin: 0 2.5% 0 2.5%;
+    cursor: pointer;
 }
 
 .text {
