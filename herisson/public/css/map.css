@@ -9,7 +9,7 @@ html, body, #map {
 
 .info {
     padding: 1vh 1vw;
-    font: 3vw/4vw Arial, Helvetica, sans-serif;
+    font: 4vw/5vw Arial, Helvetica, sans-serif;
     background: white;
     background: rgba(255,255,255,0.8);
     box-shadow: 0 0 3vw rgba(0,0,0,0.2);
@@ -21,9 +21,10 @@ html, body, #map {
 }
 
 .legend {
-    font-size: 2vw;
-    line-height: 2vw;
+    font-size: 4vw;
+    line-height: 4vw;
     color: #555;
+    padding: 1vh 1vw;
 }
 .legend i {
     width: 2vw;
