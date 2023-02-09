@@ -1,9 +1,13 @@
+
 /* ------- Important ! Please at least keep the last part of this CSS ----------- */
 .article {
     overflow: scroll;
     height: 90%;
   }
 
+#Boris{
+    font-family: 'Boris';
+}
 
 p{
     font-size: 14px;
@@ -597,7 +601,7 @@ div.conteneur{
     right: 5%;
     border: none;
     animation: glowing 2000ms infinite;
-    height: 2%;
+    height: 24px;
     top: 5%;
 
 }
