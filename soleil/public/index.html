@@ -56,7 +56,9 @@
 
       <section id="adresse" class="swiper-slide">
         <header>
-          <button class="retour">←</button>
+          <button class="retour">
+            <img class="img-fleche" src="img/FlecheRetour.png">
+          </button>
           <p class="titre">Où habitez-vous ?</p>
         </header>
         <section class="main-location-page">
@@ -83,7 +85,9 @@
 
       <section id="logement" class="swiper-slide"> <!-- Page du type de logement -->
         <header>
-          <button class="retour">←</button>
+          <button class="retour">
+            <img class="img-fleche" src="img/FlecheRetour.png">
+          </button>
         </header>
         <div class="choix-logement">
           <p class="titre">Vous habitez dans :</p>
@@ -112,7 +116,17 @@
 
       <section id="pente" class="swiper-slide"> <!-- Page de la pente -->
         <header>
-          <button class="retour">←</button>
+          <div class="form-popup" id="popupForm">
+            <form action="/action_page.php" class="form-container">
+              <button type="button" class="btn cancel" onclick="closeForm()">X</button>
+            </form>
+          </div>
+          <button class="retour">
+            <img class="img-fleche" src="img/FlecheRetour.png">
+          </button>
+          <button class="retour">
+            <img class="img-fleche" src="img/FlecheRetour.png">
+          </button>
           <button class="open-button"><img src="img/Info2.png"></button>
           <!--<div class="open-btn">   <button id="info">I</button>
             <button class="open-button" onclick="openForm()"><strong>Info</strong></button>
@@ -155,9 +169,11 @@
 
       <section id="orientation" class="swiper-slide">
         <header>
-          <button class="retour">←</button>
-          <h1 class="titre">Comment votre toit est-il orienté</h1>
+          <button class="retour">
+            <img class="img-fleche" src="img/FlecheRetour.png">
+          </button>
           <button class="open-button"><img src="img/Info2.png"></button>
+          <h1 class="titre">Comment votre toit est-il orienté</h1>
         </header>
         <div id="ligne">
           <section id="image" >
@@ -180,6 +196,9 @@
         <header>
           <button class="retour">←</button>
           <button class="open-button"><img src="img/Info2.png"></button>
+          <button class="retour">
+            <img class="img-fleche" src="img/FlecheRetour.png">
+          </button>
           <p class="titre">
             Il y a t’il de l’ombre sur votre toit ?
           </p>
@@ -191,11 +210,11 @@
           </div>
               <form >
                   <input type="radio" id="contactChoice1"
-                         name="ombre" value="Jamais">
+                         name="ombre" value="1">
                   <input type="radio" id="contactChoice2"
-                         name="ombre" value="Pas trop">
+                         name="ombre" value="2">
                   <input type="radio" id="contactChoice3"
-                         name="ombre" value="Toujours">
+                         name="ombre" value="3">
               </form>
               <div class="commentaire-soli">
                 <img src="img/soliMontgolfiere.png">
@@ -215,7 +234,9 @@
 
       <section id="facultatif" class="swiper-slide">
         <header>
-          <button class="retour">←</button>
+          <button class="retour">
+            <img class="img-fleche" src="img/FlecheRetour.png">
+          </button>
           <p class="titre">Parlons de vous</p>
         </header>
         <div id = "ligne">
@@ -258,7 +279,9 @@
 
       <section id="resultat" class="swiper-slide">
         <header>
-          <button class="retour">←</button>
+          <button class="retour">
+            <img class="img-fleche" src="img/FlecheRetour.png">
+          </button>
         </header>
         <footer>
           <button>Analyse des Résultats</button>
@@ -279,22 +302,24 @@
 
       <section id="analyse" class="swiper-slide">
         <header>
-          <button class="retour">←</button>
+          <button class="retour">
+            <img class="img-fleche" src="img/FlecheRetour.png">
+          </button>
         </header>
       </section>
 
       <section id="info1" class="swiper-slide">
         <header>
-          <button class="retour" onclick={swiper.slideTo(4,0);swiper.slideNext()}>←</button>
+          <button class="info-bulle" onclick={swiper.slideTo(4,0)}>←</button>
         </header>
         <section id="infoTxt">
           <img id="bulleInfo" onclick={swiper.slideTo(3,0);swiper.slideNext()} src="img/info/info-ouvert2.png">
           <p id="Saut">
-            Si votre toit est incliné, vos panneaux le seront aussi. <br> Idéalement, ils doivent être 
-            perpendiculaires au rayon du soleil. <br> Un petit peu de physique pour mieux comprendre 
-            (rien de bien méchant). <br> Pour maximiser l’énergie produite sur l’année, il faut que les 
+            Si votre toit est incliné, vos panneaux le seront aussi. <br> Idéalement, ils doivent être
+            perpendiculaires au rayon du soleil. <br> Un petit peu de physique pour mieux comprendre
+            (rien de bien méchant). <br> Pour maximiser l’énergie produite sur l’année, il faut que les
             panneaux soient inclinés en fonction de l’ordre de latitude du point où vous vous trouvez. <br>
-            Vous ne comprenez pas ? <br> Pas de panique, voici un exemple.<br> En France, la latitude varie entre 40 et 45 degrés. 
+            Vous ne comprenez pas ? <br> Pas de panique, voici un exemple.<br> En France, la latitude varie entre 40 et 45 degrés.
             Inclinez-donc vos panneaux selon cet ordre pour maximiser l’énergie produite sur l’année.<br> Et si votre toit est plat ? <br>
             Rien à faire dans ce cas !
           </p>
@@ -304,7 +329,9 @@
 
       <section id="info2" class="swiper-slide">
         <header>
-          <button class="retour">←</button>
+          <button class="info-bulle" onclick={swiper.slideTo(5,0)}>
+            <img class="img-fleche" src="img/FlecheRetour.png">
+          </button>
         </header>
         <section id="infoTxt">
           <img id="bulleInfo" onclick={swiper.slideTo(4,0);swiper.slideNext()} src="img/info/info-ouvert2.png">
@@ -322,7 +349,7 @@
 
       <section id="info3" class="swiper-slide">
         <header>
-          <button class="retour">←</button>
+          <button class="info-bulle" onclick={swiper.slideTo(6,0)}>←</button>
         </header>
         <section id="infoTxt">
           <img id="bulleInfo" onclick={swiper.slideTo(5,0);swiper.slideNext()} src="img/info/info-ouvert2.png">
