@@ -11,16 +11,16 @@ body {
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
 }
 
-/* When the aspect ratio is smaller that 3/4, display a 3/4 content */
+/* When the aspect ratio is smaller that 9/16, display a 9/16 content */
 #container {
     position: fixed;
     /* To set the size of the container to 100% of the visible viewport height AND for absolute positionning of child elements*/
     height: 100%;
     /* even on mobile devices with url or navigation bars */
-    margin-left: calc((100vw - 100 * 3vh / 4) / 2);
+    margin-left: calc((100vw - 100 * 9vh / 16) / 2);
     /* Add black bands on left and right */
-    width: calc(100 * 3vh / 4);
-    /* Force 3/4 aspect ratio */
+    width: calc(100 * 9vh / 16);
+    /* Force 9/16 aspect ratio */
     background-color: #FBF6C3;
 }
 
@@ -28,17 +28,17 @@ body {
 /* We set a default font size here. It will be the base for all other font sizes */
 /* Here the font size is proportional to content width */
 body {
-    font-size: calc(15vh * 3 / 4);
+    font-size: calc(15vh * 9 / 16);
 }
 
-/* Fill the whole viewport when its aspect ratio is between 9/20 and 3/4 */
-@media screen and (max-aspect-ratio: 3/4) {
+/* Fill the whole viewport when its aspect ratio is between 9/20 and 9/16 */
+@media screen and (max-aspect-ratio: 9/16) {
     #container {
         margin-left: 0;
         /* reset margin-left */
         width: 100vw;
         /* content is full width (and full height because of the default rule for container height */
-    }
+    }button-resume
 
     /* We set a default font size here. It will be the base for all other font sizes */
     /* Here the font size is proportional to content width */
@@ -105,7 +105,7 @@ body {
     /*font-size: 14px;
     font-size: 3vw;*/
     font-size: 2.5vmin;
-    line-height: 4vmin;
+    line-height: 3vmin;
     background-color: #7a170e;
     position: absolute;
     padding-left: 30px;
@@ -118,7 +118,8 @@ body {
 }
 
 .circle {
-    font-size: 20px;
+    /*font-size: 20px;*/
+    font-size: 4vmin;
     background-color: #7a170e;
     padding: 0;
     width: 30px;
@@ -140,8 +141,8 @@ body {
     height: auto;
     position: absolute;
     display: block;
-    top: -30%;
-    left: -5%;
+    top: -10%;
+    left: -8%;
 }
 
 .left-button {
@@ -466,7 +467,7 @@ img.button-next {
     padding-left: 0;
     padding-right: 0;
     text-align: center;
-    font-size: 12px;
+    font-size: 2vmin;
 }
 
 #vigne-container {
@@ -510,7 +511,6 @@ img.button-next {
 #explaination-cepage {
     background-color: #FFD78C;
     color: black;
-    width: 100%;
     bottom: 0;
     left: 0;
     right: 0;
@@ -527,8 +527,11 @@ img.button-next {
     padding-top: 2%;
 }
 
-#vigne-gauche,
-#vigne-droite {
+.vigne-gauche,
+.vigne-droite,
+.vigne-gauche-bottom,
+.vigne-droite-bottom
+{
     position: absolute;
     display: block;
     z-index: 1;
@@ -536,14 +539,24 @@ img.button-next {
     height: auto;
 }
 
-#vigne-gauche {
+.vigne-gauche {
     left: 0;
     top: 25%;
 }
 
-#vigne-droite {
+.vigne-droite {
     right: 0;
     top: 10%;
+}
+
+.vigne-gauche-bottom {
+    left: 0;
+    top: 60%;
+}
+
+.vigne-droite-bottom {
+    right: 0;
+    top: 25%;
 }
 
 /* page de question */
@@ -604,9 +617,9 @@ img.button-next {
 
 .container-vin-score{
     position:absolute;  
-    width: 20%;
+    width: 18%;
     height: 36%;
-    left: 40%;
+    left: 41%;
     top: 12%;
     background-color:#FBF6C3;
     margin: 0px;
@@ -615,10 +628,10 @@ img.button-next {
 
 .container-vin-resume{
     position:absolute;  
-    width: 26%;
-    height: 70%;
-    left: 10%;
-    bottom: 20%;
+    width: 24%;
+    height: 48%;
+    left: 38%;
+    top: 30%;
     background-color: #FBF6C3;
     margin: 0px;
     padding: 0px; 
@@ -711,6 +724,26 @@ img.button-next {
     margin:5%;
 }
 
+#txt-resume>p{
+    text-align: left;
+    color: black;
+    font-size: 16px;
+    position: absolute;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 22px;
+}
+
+#txt-resume{
+    position: absolute;
+    width:38%;
+    height:30%;
+    right : 2%;
+    top : 40%;
+}
+
 #button-evenement { 
     position: absolute;
     width:10%;
@@ -738,18 +771,20 @@ img.button-next {
 }
 
 #button-resume {
-    color: white;
+    width: 15%;
+    height: auto;
     position:absolute;
-    bottom: 20%;
-    right: 5%;
+    bottom: 8%;
+    right: 8%;
     cursor : pointer;
 }
 
 #button-restart {
-    color: white;
+    width: 15%;
+    height: auto;
     position:absolute;
-    bottom: 10%;
-    right: 5%;
+    bottom: 8%;
+    left : 8%;
     cursor : pointer;
 }
 

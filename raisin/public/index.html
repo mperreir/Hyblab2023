@@ -16,7 +16,6 @@
   <link rel="stylesheet" href="css/style.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
   <script type="text/javascript" src="https://unpkg.com/howler@2.2.3/dist/howler.js"></script>
 
@@ -123,8 +122,8 @@
       <div class="bubble" id="explaination-cepage">
         <p></p>
       </div>
-      <img id="vigne-gauche" src="img/deco/vigne-gauche.png">
-      <img id="vigne-droite" src="img/deco/vigne-droite.png">
+      <img class="vigne-gauche" src="img/deco/vigne-gauche.png">
+      <img class="vigne-droite" src="img/deco/vigne-droite.png">
     </div>
 
     <!-- Entrée dans la boucle de jeu -->
@@ -163,26 +162,35 @@
         <div class="vin"></div>
         <img src="img/bouteilles/bouteille.png" id="bouteille" alt="Une bouteille">
       </div>
-      <img id="vigne-gauche" src="img/deco/vigne-gauche.png">
-      <img id="vigne-droite" src="img/deco/vigne-droite.png">
+      <img class="vigne-gauche" src="img/deco/vigne-gauche.png">
+      <img class="vigne-droite" src="img/deco/vigne-droite.png">
       <div class="bubble" id="txt-score">
         <p></p>
       </div>
       <img src="img/icons/right-button.png" id="button-score">
     </div>
 
+    <!-- Sortie de la boucle de jeu -->
+
     <!-- Page de conclusion/résumé -->
     <div class="page" id="page-resume">
+      <div id="cepage-container">
+        <img class="bulle-question anim" src="img/characters/bulle-dominique-question.png">
+        <div class="bubble handwritten" id="cepage-choice">
+          <img class="bulle" src="img/characters/bulle-dominique.png">
+          Quel est le résultat de ma récolte ?
+        </div>
+      </div>
       <div class="container-vin-resume">
         <div class="vin"></div>
         <img src="img/bouteilles/bouteille1.png" id="bouteille-resume" alt="Une bouteille">
       </div>
-      <img id="vigne-droite" src="img/deco/vigne-droite.png">
-      <input type="button" class="bubble" id="button-resume" value="Voir les sources et crédits">
-      <input type="button" class="bubble" id="button-restart" value="Recommencer une partie">
+      <div id="txt-resume"><p></p></div>
+      <img class="vigne-gauche-bottom" src="img/deco/vigne-gauche.png">
+      <img class="vigne-droite-bottom" src="img/deco/vigne-droite.png">
+      <img id="button-restart" src="img/icons/reset-button.png">
+      <img id="button-resume" src="img/icons/right-button.png">
     </div>
-
-    <!-- Sortie de la boucle de jeu -->
 
     <!-- Page des sources 1-->
     <div class="page" id="page-sources">

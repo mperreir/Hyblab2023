@@ -230,6 +230,15 @@ $("#button-score").click(() => {
     nbquestion+=1;
     console.log(nbquestion);
     if (nbquestion == 6){
+        if (wineQuantity > 55){
+            $("#txt-resume>p").html("Bravo, vous avez sauvé une grande partie de votre récolte !");
+        }
+        else if (wineQuantity > 35){
+            $("#txt-resume>p").html("Vous avez réussi à sauver environ la moitié de votre récolte.");
+        }
+        else{
+            $("#txt-resume>p").html("Dommage, vous n’avez pas réussi à sauver une grande partie de votre récolte.");
+        }
         setPage("#page-resume", "fade");
     }
     else if (nbquestion == 3){
@@ -252,7 +261,7 @@ $("#button-score").click(() => {
 });
 
 $("#button-resume").click(() => {
-    $(".header, #home-button").hide();
+    //$(".header, #home-button").hide();
     $(".header").attr("src", `img/progressbar/checkpoint-0.png`);
     nbquestion = 0;
     wineQuantity = 90;
