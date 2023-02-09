@@ -4,6 +4,14 @@
     overflow: scroll;
     height: 90%;
   }
+#search{
+    width: 20px;
+    vertical-align: middle;
+    margin-left: 4px;
+    display: inline-block;
+}
+
+
 
 #premiere_page #Boris{
     font-size: 20px;
@@ -479,7 +487,7 @@ video{
 
 #adresse input{
     box-sizing: border-box;
-    display: flex;
+    display: inline-block;
     flex-direction: row;
     align-items: flex-start;
     padding: 3px 5px;
@@ -488,7 +496,7 @@ video{
     border-radius: 8px;
     position: relative;
     margin: auto;
-    width: 100%;
+    width: 90%;
     text-align: center;
     font-size: 4vw;
 }
