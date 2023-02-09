@@ -107,6 +107,7 @@ main div#miniature-related div#miniature-content {
 main div#miniature-related div#miniature-content section.photo-case {
     height: 40%;
     width: 100%;
+    border-radius: 50px 50px 0 0;
 }
 
 main div#miniature-related div#miniature-content section.photo-case img {
@@ -241,6 +242,10 @@ footer#folder-back-pane div#folder-back-body-map {
     border-radius: 0 25px 0 0;
 }
 
+div#folder-front-pane:hover {
+    transform: perspective(25px) rotateX(-0.20deg) scale(1.2);
+}
+
 .open-folder-animation-map {
     animation: 1s open-folder-map ease-in forwards;
 }
@@ -256,6 +261,8 @@ footer#folder-back-pane div#folder-back-body-map {
         transform: perspective(0px) rotateX(0deg) scale(1);
     }
 }
+
+
 
 .display-none {
     display: none;

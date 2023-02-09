@@ -1,18 +1,9 @@
 'use strict';
 
-// TODO: WHEN SELECTION ON THE PREVIOUS PAGE IS DONE, DISPLAY THE MAP WITH THE SELECTED TOPICS
-//
-// TODO : si l'utilisateur accède direct à la carte, cocher tous les topics par défaut
-//
 // TODO : implementer retour arriere
 //
 // TODO : mettre les bons liens dans le header
-//
-// TODO : patcher en CSS le blanc au bord des images sur les miniatures
-//
-// TODO : mettre à jour le nombre de favoris dans le dossier
-//
-// TODO : implémenter l'animation du dossier
+
 /*
   ----------------------------------------------------------------------------------------------------------------------
   | Global variables                                                                                                   |
@@ -185,7 +176,11 @@ async function addMarkers() {
   | Miniatures management                                                                                              |
   ----------------------------------------------------------------------------------------------------------------------
  */
-
+/**
+ * Get the miniature related to the given Id
+ * @param Id The Id of the miniature to retrieve
+ * @returns {Promise<any>} The miniature
+ */
 async function getMiniature(Id) {
     // Fetch the data from the API
     const response = await fetch("/pionniers/api/miniature/" + Id);
@@ -194,6 +189,10 @@ async function getMiniature(Id) {
 }
 
 
+/**
+ * Display the miniature related to the given Id
+ * @param Id The Id of the miniature to display
+ */
 function displayMiniature(Id){
     getMiniature(Id).then(p => {
         // Display the overlay
@@ -572,6 +571,16 @@ document.addEventListener("DOMContentLoaded", function () {
     topicCheckboxes.forEach(tc =>
         tc.addEventListener('click', onTopicCheck)
     );
+    // Update the topics list from the selection of the previous page
+    selectedTopics = window.localStorage.getItem('themes');
+    selectedTopics = selectedTopics ? selectedTopics.split(',') : ['alimentation', 'economie_circulaire', 'energie', 'industrie', 'mobilite', 'numerique'];
+    // Remove the "unchecked" class from the selected topics
+    topicCheckboxes.forEach(tc => {
+        const img = tc.querySelector('img');
+        if (selectedTopics.includes(img.getAttribute('alt'))) {
+            img.classList.remove('unchecked');
+        }
+    });
     // Keywords management
     const keywordManageButton = document.querySelector('section.keywords #keyword-manage');
     keywordManageButton.addEventListener('click', onKeywordManage);
@@ -591,10 +600,9 @@ document.addEventListener("DOMContentLoaded", function () {
         threshold: 0
     }));
     hammer.on('pan', onPan);
-
+    // Change the page when clicking on the folder
     const folder_front = document.querySelector('div#folder-front-pane');
     const folder_back = document.querySelector('footer#folder-back-pane');
-
     folder_front.addEventListener('click', () => {
         window.location.href = './profils-enregistres.html';
         window.localStorage.setItem('pagePrecedente', "carte");
@@ -603,12 +611,20 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = './profils-enregistres.html';
         window.localStorage.setItem('pagePrecedente', "carte");
     });
+    // Update the folder number of favorite profiles
+    updateFolder();
+    // Update the map
+    updateMap();
 });
 
 /*
   ----------------------------------------------------------------------------------------------------------------------
   | Swipe action management                                                                                            |
   ----------------------------------------------------------------------------------------------------------------------
+ */
+/**
+ * Manage the swipe action on the miniature
+ * @param e The event
  */
 function onPan(e) {
     const miniature = document.querySelector('main div#miniature-related');
@@ -635,7 +651,6 @@ function onPan(e) {
     let deg = isDraggingFrom * dirX * Math.abs(propX) * 45;
     // Get scale ratio, between .95 and 1
     let scale = (95 + (5 * Math.abs(propX))) / 100;
-
     let successful = false;
     // Check if the card is dragged down
     if (propY < 30 && e.direction === Hammer.DIRECTION_DOWN) {
@@ -643,7 +658,6 @@ function onPan(e) {
         // Get top border position
         posY = +(miniature.clientHeight + miniature.clientHeight);
     }
-
     if (e.isFinal && successful) {
         let start = null;
         let duration = 1000; // 1 second
@@ -670,8 +684,21 @@ function onPan(e) {
                 pushProfilFav(Id);
                 // Stop the folder animation
                 folder_front.classList.remove('open-folder-animation-map');
+                // Update the folder number of favorite profiles
+                updateFolder();
             }
         }
         requestAnimationFrame(animation);
     }
+}
+
+
+/**
+ * Update the folder number of favorite profiles
+ */
+function updateFolder() {
+    const favProfilesNumberText = document.querySelector('footer#folder-back-pane div#folder-tab-map span#nombre-profil');
+    const favProfilesIds = getProfilsFav();
+    let favProfilesNumber = favProfilesIds.length;
+    favProfilesNumberText.innerHTML = favProfilesNumber > 0 ? favProfilesNumber.toString() : "";
 }
