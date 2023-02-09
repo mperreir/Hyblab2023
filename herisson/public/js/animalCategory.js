@@ -151,7 +151,7 @@ async function createAnimalCategory(commune, animalCategory) {
     async function burgerPopUp(){
         const main = document.getElementById("list-animals-main");
         const foot = document.getElementById("list-animals-footer");
-        const button = document.getElementById("popUpNav");
+        const button = document.getElementById("menu");
         button.addEventListener("click", function() {
             if(main.style.display !== "none"){
                 main.style.display = "none";
