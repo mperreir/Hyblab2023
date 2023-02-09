@@ -54,6 +54,7 @@ body {
     margin-top: 10%;
     scroll-behavior: smooth;
     overflow: scroll;
+    overflow-x: hidden;
 
 }
 
