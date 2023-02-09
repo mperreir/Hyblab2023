@@ -593,9 +593,9 @@ div.conteneur{
     right: 5%;
     border: none;
     animation: glowing 2000ms infinite;
-    height: 22px;
-    top: 6%;
-    
+    height: 2%;
+    top: 5%;
+
 }
 
 #indication{
@@ -668,6 +668,34 @@ div.conteneur{
 
 .choix-logement {
     margin-bottom: 3%;
+}
+
+.congrats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+#main-remerciments {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 55%;
+}
+
+#remerciements {
+    font-size: 4vw;
+    margin-bottom: 10%;
+    max-width: 90%;
+}
+
+#img-hyblab {
+    max-width: 90%;
+}
+
+.logos {
+    max-width: 25%;
 }
 
 /* Last slide image is centered */
@@ -766,7 +794,7 @@ body{
 }
 
 /* Fill the whole viewport when its aspect ratio is between 9/16 and 3/4 */
-@media screen and (max-aspect-ratio: 3/4) {
+@media screen and (min-aspect-ratio: 3/4) {
     #container{
         margin-left: 0; /* reset margin-left */
         width: 100vw; /* content is full width (and full height because of the default rule for container height */
@@ -788,6 +816,15 @@ body{
     }
     .main-location-page {
         padding-top: 0;
+    }
+
+    /*Page pente*/
+    .img-pente {
+        width: 75%;
+    }
+
+    .open-button {
+        top: 13%;
     }
 }
 
