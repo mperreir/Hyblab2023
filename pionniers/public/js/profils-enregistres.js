@@ -85,12 +85,9 @@ document.addEventListener("DOMContentLoaded", async function () {
     for (const id of idsProfilsFav) {
         const profil = await fetch('/pionniers/api/miniature/' + id).then(r => r.json());
         profilFav.push(profil);
-    }
-
-    profilFav.forEach((profil) => {
         const ficheMinia = createFicheMinia(profil);
         listeProfils.append(ficheMinia);
-    });
+    }
 
     const croixSuppr = document.querySelectorAll('.croix-suppr');
 
