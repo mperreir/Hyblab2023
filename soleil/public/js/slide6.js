@@ -24,18 +24,19 @@ const initSlide6 = async function(){
 function changeOmbre(){
     console.log("ombre");
     let ombre = $("#ombre input[name=ombre]:checked").val();
+    $("#ombre .img-ombre").attr("src", `img/Ombre/toit-${quiz["pente"]}-ombre-0${ombre}.jpg`);
+    console.log(ombre);
         switch (ombre) {
-            case "Jamais":
+            case "1":
                 $("#ombre #image3 p").html("Jamais");
-                $("#ombre .img-ombre").attr("src", "img/Ombre/toit-flat-ombre-01.jpg");
+                
                 break;
-            case "Pas trop":
+            case "2":
                 $("#ombre #image3 p").html("Pas trop");
-                $("#ombre .img-ombre").attr("src", "img/Ombre/toit-flat-ombre-02.jpg");
+               
             break;
-            case "Toujours":
+            case "3":
                 $("#ombre #image3 p").html("Toujours");
-                $("#ombre .img-ombre").attr("src", "img/Ombre/toit-flat-ombre-03.jpg");
                 break;
             default:
                 break;
