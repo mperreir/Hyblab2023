@@ -52,7 +52,13 @@ ul#liste-profils::-webkit-scrollbar-track {
 
 ul#liste-profils li {
     height: 40vh;
+    padding: 5% 0;
     width: 100%;
+}
+
+/* for the last li of ul#liste-profils add a margin-bottom: 5%;*/
+ul#liste-profils li:last-child {
+    margin-bottom: 20vh;
 }
 
 
@@ -88,6 +94,41 @@ ul#liste-profils li {
 
 .information-fiche > div > section {
     margin: 5% 0 5% 0;
+}
+
+.information-fiche section.topic {
+    border-radius: 500px;
+    background-color: var(--blanc-fond);
+    padding: 2% 7% 2% 2%;
+    width: min-content;
+    white-space: nowrap;
+}
+
+.information-fiche section.topic img {
+    max-height: 5vh;
+    max-width: 5vw;
+}
+
+.information-fiche section.topic p {
+    margin-left: 5px;
+}
+
+.information-fiche .right-content {
+    width: 90%;
+}
+
+.keywords {
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.keyword-item {
+    white-space: nowrap;
+    border-radius: 500px;
+    background-color: var(--blanc-fond);
+    margin-top: 3%;
+    margin-right: 7%;
+    padding: 2%;
 }
 
 .overflow-buttons-top {

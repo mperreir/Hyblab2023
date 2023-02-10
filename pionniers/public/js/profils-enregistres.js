@@ -2,7 +2,7 @@ const nombreProfilFavText = document.querySelector("#nombre-profil");
 
 function createFicheMinia(profil) {
     // Récupération des attributs de l'objet profil (par méthode destructuring)
-    const { Id, Age, City, Company, Name, Status, Topic, URLImage } = profil;
+    const { Id, Age, City, Company, Name, Status, Topic, Keywords, URLImage } = profil;
     // Simplification du thème (pas d'accents et d'espace)
     const tranlatedSimpleTopic = translateThemeToSimpleChar(Topic);
     // Récupération de la classe relative à la couleur de la police du theme
@@ -22,7 +22,7 @@ function createFicheMinia(profil) {
                                     <img draggable="false" alt="photo-profil" src="${URLImage}">
                                 </section>
                                 <section class="information-fiche flex-row align-items-center">
-                                    <div class="flex-column">
+                                    <div class="flex-column right-content">
                                         <section class="carte-identite flex-column align-items-center-flex-start ${fontClass}">
                                             <p class="gras">${Name}</p>
                                             <p class="gras">${Age}</p>
@@ -32,6 +32,13 @@ function createFicheMinia(profil) {
                                             <p class="gras">${Company}</p>
                                             <p>${City}</p>
                                         </section>
+                                        <section class="keywords flex-row">
+                                            <!-- Section qui va se remplir dans la suite de la fonction -->
+                                        </section>
+                                        <section class="topic flex-row align-items-center">
+                                            <img src="../img/pictogrammes_themes/${translateThemeToSimpleChar(Topic)}.svg" alt="${Topic}">
+                                            <p class="${fontClass} gras">${capitalizeFirstLetter(Topic)}</p>
+                                        </section>
                                     </div>
                                 </section>
                             </div>
@@ -40,7 +47,17 @@ function createFicheMinia(profil) {
                             </div>
                          </li>`
     ;
-    return createElementFromHTML(htmlString);
+    const ficheMinia = createElementFromHTML(htmlString);
+    // Retrieve the keywords section
+    const keywordSection = ficheMinia.querySelector("section.keywords");
+    // Add the keywords (if any non empty keyword is present)
+    Keywords.split(';').forEach(k => {
+        if(k.trim() === '') {
+            return;
+        }
+        keywordSection.append(createKeywordItem(k));
+    });
+    return ficheMinia;
 }
 
 function onSupprProfile(event) {
@@ -115,7 +132,11 @@ function translateThemeToSimpleChar(topic) {
     return topic;
 }
 
-
-
+function createKeywordItem(Keyword) {
+    const htmlString = `<div class="keyword-item flex-row align-items-center">
+                            <p>#${Keyword.toLowerCase()}</p>
+                        </div>`;
+    return createElementFromHTML(htmlString);
+}
 
 
