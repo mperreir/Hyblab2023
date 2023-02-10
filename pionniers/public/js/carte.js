@@ -326,6 +326,34 @@ function onTopicCheck(event) {
         }
         // Update the localStorage
         localStorage.setItem("themes", selectedTopics.join(','));
+        // Retrieve the selected-keywords-list element
+        const selectedKeywordsList = document.querySelector('#selected-keywords-list');
+        // Retrieve the selected keywords
+        const selectedKeywords = selectedKeywordsList.querySelectorAll('div.keyword-item p');
+        // Provide the list of selected keywords (without the "Ajouter" element)
+        const selectedKeywordsListWithoutAdd = Array.from(selectedKeywords).slice(0, selectedKeywords.length - 1);
+        // Map the selected keywords by withdrawing the # character
+        const selectedKeywordsMap = Array.from(selectedKeywordsListWithoutAdd).map(k => k.textContent.substring(1));
+        // Fetch the keywords corresponding to the selected topics
+        getKeywords().then(keywords => {
+            // Transform keywords to lowercase
+            keywords = keywords.map(k => k.toLowerCase());
+            // For each keyword in selectedKeywordsMap, if it is not in keywords
+            selectedKeywordsMap.forEach(k => {
+                k = k.toLowerCase();
+                if (!keywords.includes(k)) {
+                    // Retrieve the instance of the keyword in the selected keywords list
+                    for (let i = 0; i < selectedKeywordsList.children.length; i++) {
+                        const keywordItem = selectedKeywordsList.children[i];
+                        if (keywordItem.textContent === "#" + k) {
+                            // Remove the keyword from the selected keywords list
+                            selectedKeywordsList.removeChild(keywordItem);
+                            break;
+                        }
+                    }
+                }
+            });
+        });
     }
     updateMap();
 }
