@@ -83,7 +83,6 @@ function typewriter() {
   iRow = Math.max(0, iIndex - iScrollAt);
   let value = swiper.activeIndex-2
   var destination=document.querySelector("#textEluConclusion"+value);
-  console.log(destination)
   while (iRow < iIndex) {
     sContents += aText[iRow++] + '<br />';
   }
