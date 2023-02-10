@@ -1,0 +1,569 @@
+[
+  {
+    "departement": 10,
+    "BOVINS": 5.0,
+    "PORCS": 3.0,
+    "VOLAILLES": 12.0,
+    "dominant_type": "VOLAILLES"
+  },
+  {
+    "departement": 11,
+    "BOVINS": 1.0,
+    "PORCS": 9.0,
+    "VOLAILLES": 3.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 12,
+    "BOVINS": 16.0,
+    "PORCS": 99.0,
+    "VOLAILLES": 1.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 13,
+    "BOVINS": null,
+    "PORCS": 5.0,
+    "VOLAILLES": 1.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 14,
+    "BOVINS": 48.0,
+    "PORCS": 45.0,
+    "VOLAILLES": 1.0,
+    "dominant_type": "BOVINS"
+  },
+  {
+    "departement": 15,
+    "BOVINS": 7.0,
+    "PORCS": 10.0,
+    "VOLAILLES": null,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 16,
+    "BOVINS": 9.0,
+    "PORCS": 46.0,
+    "VOLAILLES": null,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 17,
+    "BOVINS": 5.0,
+    "PORCS": 5.0,
+    "VOLAILLES": null,
+    "dominant_type": "BOVINS"
+  },
+  {
+    "departement": 18,
+    "BOVINS": 5.0,
+    "PORCS": 5.0,
+    "VOLAILLES": 10.0,
+    "dominant_type": "VOLAILLES"
+  },
+  {
+    "departement": 19,
+    "BOVINS": 19.0,
+    "PORCS": 28.0,
+    "VOLAILLES": null,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 21,
+    "BOVINS": 6.0,
+    "PORCS": 8.0,
+    "VOLAILLES": 13.0,
+    "dominant_type": "VOLAILLES"
+  },
+  {
+    "departement": 22,
+    "BOVINS": 146.0,
+    "PORCS": 1166.0,
+    "VOLAILLES": 117.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 23,
+    "BOVINS": 20.0,
+    "PORCS": 19.0,
+    "VOLAILLES": null,
+    "dominant_type": "BOVINS"
+  },
+  {
+    "departement": 24,
+    "BOVINS": 16.0,
+    "PORCS": 28.0,
+    "VOLAILLES": 5.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 25,
+    "BOVINS": 7.0,
+    "PORCS": 25.0,
+    "VOLAILLES": null,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 26,
+    "BOVINS": 6.0,
+    "PORCS": 36.0,
+    "VOLAILLES": 44.0,
+    "dominant_type": "VOLAILLES"
+  },
+  {
+    "departement": 27,
+    "BOVINS": 9.0,
+    "PORCS": 16.0,
+    "VOLAILLES": 3.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 28,
+    "BOVINS": 2.0,
+    "PORCS": 17.0,
+    "VOLAILLES": 6.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 29,
+    "BOVINS": 179.0,
+    "PORCS": 780.0,
+    "VOLAILLES": 62.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 31,
+    "BOVINS": 4.0,
+    "PORCS": 3.0,
+    "VOLAILLES": null,
+    "dominant_type": "BOVINS"
+  },
+  {
+    "departement": 32,
+    "BOVINS": 13.0,
+    "PORCS": 24.0,
+    "VOLAILLES": 14.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 33,
+    "BOVINS": 3.0,
+    "PORCS": null,
+    "VOLAILLES": 2.0,
+    "dominant_type": "BOVINS"
+  },
+  {
+    "departement": 34,
+    "BOVINS": 1.0,
+    "PORCS": 2.0,
+    "VOLAILLES": 1.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 35,
+    "BOVINS": 203.0,
+    "PORCS": 514.0,
+    "VOLAILLES": 39.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 36,
+    "BOVINS": 9.0,
+    "PORCS": 30.0,
+    "VOLAILLES": 11.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 37,
+    "BOVINS": 14.0,
+    "PORCS": 28.0,
+    "VOLAILLES": 5.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 38,
+    "BOVINS": 9.0,
+    "PORCS": 16.0,
+    "VOLAILLES": 1.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 39,
+    "BOVINS": 5.0,
+    "PORCS": 15.0,
+    "VOLAILLES": 3.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 40,
+    "BOVINS": 1.0,
+    "PORCS": 15.0,
+    "VOLAILLES": 27.0,
+    "dominant_type": "VOLAILLES"
+  },
+  {
+    "departement": 41,
+    "BOVINS": 6.0,
+    "PORCS": 21.0,
+    "VOLAILLES": 14.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 42,
+    "BOVINS": 21.0,
+    "PORCS": 36.0,
+    "VOLAILLES": 4.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 43,
+    "BOVINS": 13.0,
+    "PORCS": 29.0,
+    "VOLAILLES": 1.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 44,
+    "BOVINS": 46.0,
+    "PORCS": 118.0,
+    "VOLAILLES": 41.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 45,
+    "BOVINS": 3.0,
+    "PORCS": 9.0,
+    "VOLAILLES": 15.0,
+    "dominant_type": "VOLAILLES"
+  },
+  {
+    "departement": 46,
+    "BOVINS": 5.0,
+    "PORCS": 34.0,
+    "VOLAILLES": 1.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 47,
+    "BOVINS": 8.0,
+    "PORCS": 1.0,
+    "VOLAILLES": 8.0,
+    "dominant_type": "BOVINS"
+  },
+  {
+    "departement": 48,
+    "BOVINS": 1.0,
+    "PORCS": 4.0,
+    "VOLAILLES": null,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 49,
+    "BOVINS": 53.0,
+    "PORCS": 129.0,
+    "VOLAILLES": 35.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 50,
+    "BOVINS": 151.0,
+    "PORCS": 148.0,
+    "VOLAILLES": 11.0,
+    "dominant_type": "BOVINS"
+  },
+  {
+    "departement": 51,
+    "BOVINS": 12.0,
+    "PORCS": 29.0,
+    "VOLAILLES": 8.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 52,
+    "BOVINS": 22.0,
+    "PORCS": 4.0,
+    "VOLAILLES": 1.0,
+    "dominant_type": "BOVINS"
+  },
+  {
+    "departement": 53,
+    "BOVINS": 96.0,
+    "PORCS": 215.0,
+    "VOLAILLES": 33.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 54,
+    "BOVINS": 14.0,
+    "PORCS": 10.0,
+    "VOLAILLES": null,
+    "dominant_type": "BOVINS"
+  },
+  {
+    "departement": 55,
+    "BOVINS": 19.0,
+    "PORCS": 14.0,
+    "VOLAILLES": 2.0,
+    "dominant_type": "BOVINS"
+  },
+  {
+    "departement": 56,
+    "BOVINS": 119.0,
+    "PORCS": 702.0,
+    "VOLAILLES": 188.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 57,
+    "BOVINS": 10.0,
+    "PORCS": 5.0,
+    "VOLAILLES": 4.0,
+    "dominant_type": "BOVINS"
+  },
+  {
+    "departement": 58,
+    "BOVINS": 4.0,
+    "PORCS": 14.0,
+    "VOLAILLES": 5.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 59,
+    "BOVINS": 39.0,
+    "PORCS": 180.0,
+    "VOLAILLES": 26.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 60,
+    "BOVINS": 7.0,
+    "PORCS": 4.0,
+    "VOLAILLES": 7.0,
+    "dominant_type": "BOVINS"
+  },
+  {
+    "departement": 61,
+    "BOVINS": 38.0,
+    "PORCS": 53.0,
+    "VOLAILLES": 7.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 62,
+    "BOVINS": 22.0,
+    "PORCS": 122.0,
+    "VOLAILLES": 12.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 63,
+    "BOVINS": 14.0,
+    "PORCS": 36.0,
+    "VOLAILLES": 12.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 64,
+    "BOVINS": 15.0,
+    "PORCS": 104.0,
+    "VOLAILLES": 11.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 65,
+    "BOVINS": 4.0,
+    "PORCS": 19.0,
+    "VOLAILLES": 3.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 66,
+    "BOVINS": 1.0,
+    "PORCS": null,
+    "VOLAILLES": null,
+    "dominant_type": "BOVINS"
+  },
+  {
+    "departement": 67,
+    "BOVINS": 10.0,
+    "PORCS": 29.0,
+    "VOLAILLES": 8.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 68,
+    "BOVINS": 8.0,
+    "PORCS": 9.0,
+    "VOLAILLES": null,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 69,
+    "BOVINS": 4.0,
+    "PORCS": 3.0,
+    "VOLAILLES": 2.0,
+    "dominant_type": "BOVINS"
+  },
+  {
+    "departement": 70,
+    "BOVINS": 14.0,
+    "PORCS": 15.0,
+    "VOLAILLES": null,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 71,
+    "BOVINS": 27.0,
+    "PORCS": 24.0,
+    "VOLAILLES": 14.0,
+    "dominant_type": "BOVINS"
+  },
+  {
+    "departement": 72,
+    "BOVINS": 29.0,
+    "PORCS": 153.0,
+    "VOLAILLES": 101.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 73,
+    "BOVINS": 4.0,
+    "PORCS": 5.0,
+    "VOLAILLES": null,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 74,
+    "BOVINS": 5.0,
+    "PORCS": 6.0,
+    "VOLAILLES": 1.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 76,
+    "BOVINS": 27.0,
+    "PORCS": 28.0,
+    "VOLAILLES": 1.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 77,
+    "BOVINS": 3.0,
+    "PORCS": 1.0,
+    "VOLAILLES": 3.0,
+    "dominant_type": "BOVINS"
+  },
+  {
+    "departement": 79,
+    "BOVINS": 30.0,
+    "PORCS": 94.0,
+    "VOLAILLES": 45.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 80,
+    "BOVINS": 37.0,
+    "PORCS": 48.0,
+    "VOLAILLES": 9.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 81,
+    "BOVINS": 3.0,
+    "PORCS": 46.0,
+    "VOLAILLES": 4.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 82,
+    "BOVINS": 6.0,
+    "PORCS": 8.0,
+    "VOLAILLES": 4.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 84,
+    "BOVINS": null,
+    "PORCS": null,
+    "VOLAILLES": 1.0,
+    "dominant_type": "VOLAILLES"
+  },
+  {
+    "departement": 85,
+    "BOVINS": 91.0,
+    "PORCS": 241.0,
+    "VOLAILLES": 163.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 86,
+    "BOVINS": 13.0,
+    "PORCS": 27.0,
+    "VOLAILLES": 3.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 87,
+    "BOVINS": 15.0,
+    "PORCS": 11.0,
+    "VOLAILLES": 1.0,
+    "dominant_type": "BOVINS"
+  },
+  {
+    "departement": 88,
+    "BOVINS": 26.0,
+    "PORCS": 5.0,
+    "VOLAILLES": null,
+    "dominant_type": "BOVINS"
+  },
+  {
+    "departement": 89,
+    "BOVINS": 9.0,
+    "PORCS": 26.0,
+    "VOLAILLES": 5.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 90,
+    "BOVINS": 1.0,
+    "PORCS": null,
+    "VOLAILLES": 1.0,
+    "dominant_type": "BOVINS"
+  },
+  {
+    "departement": 93,
+    "BOVINS": null,
+    "PORCS": null,
+    "VOLAILLES": 1.0,
+    "dominant_type": "VOLAILLES"
+  },
+  {
+    "departement": 971,
+    "BOVINS": null,
+    "PORCS": 6.0,
+    "VOLAILLES": 1.0,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 972,
+    "BOVINS": null,
+    "PORCS": 3.0,
+    "VOLAILLES": null,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 973,
+    "BOVINS": null,
+    "PORCS": 2.0,
+    "VOLAILLES": null,
+    "dominant_type": "PORCS"
+  },
+  {
+    "departement": 974,
+    "BOVINS": 1.0,
+    "PORCS": 23.0,
+    "VOLAILLES": 7.0,
+    "dominant_type": "PORCS"
+  }
+]
