@@ -10,7 +10,12 @@ h2 {
     font-weight: 600;
 }
 
-header div {
+section#logo-accueil {
+    margin-top: 10%;
+    height: 20%;
+}
+
+section#logo-accueil div {
     padding: 10% 12%;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     background-color: var(--gris-clair);
@@ -18,9 +23,9 @@ header div {
     width: fit-content;
 }
 
-header div img {
+section#logo-accueil div img {
     width: 70%;
-    height: auto;
+    height: 80%;
     transform: translateX(2%);
 }
 
@@ -28,7 +33,15 @@ h2 {
     text-align: center;
 }
 
+#dummy-presentation {
+    height: 5%;
+}
+
 footer {
-    height: 20%;
+    height: 15%;
+}
+
+.bouton-rond {
+    height: fit-content;
 }
 
