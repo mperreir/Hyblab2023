@@ -17,7 +17,7 @@ function OnGreen(id){
   document.getElementById(id).style.backgroundColor="#9BFF82";
 }
 function copy() {
-      this.copyContent = "http://localhost:5173/";//也可以直接写上等于你想要复制的内容
+      this.copyContent = "http://hyblab.polytech.univ-nantes.fr";//也可以直接写上等于你想要复制的内容
       var input = document.createElement("input"); // 直接构建input
       input.value = this.copyContent; // 设置内容
       console.log(input.value);
@@ -188,7 +188,7 @@ function copy() {
         Ajoutez le pour aider les festivaliers à s'y rendre !
       </div>
       <div id="question">
-          <a href="/credit/" style="text-align:center;  color:red; display: block;">Credits </a>
+          <a href="credit.html" style="text-align:center;  color:red; display: block;">Credits </a>
       </div>
       <div id="eemail">
         <el-button type="button" id="btnemail" @click="OpenWeb('https://mail.google.com')"></el-button>
@@ -820,14 +820,14 @@ function copy() {
   background-color: #ffffff;
   position: absolute;
   top: 9vh;
-  left: 10vh;
+  left: 5vh;
   width: 7vh;
   height: 4vh;
   align-items: center;
   font-family: 'JetBrains Mono';
   font-style: normal;
   font-weight: 800;
-  font-size: 0.15em;
+  font-size: 0.5em;
   text-align: center;
   border-color: #d3d3d3;
   border-radius: 2vh;
@@ -838,7 +838,7 @@ function copy() {
   background-color: #ffffff;
   position: absolute;
   top: 9vh;
-  left: 25vh;
+  left: 20vh;
   width: 7vh;
   height: 4vh;
   
@@ -846,7 +846,7 @@ function copy() {
   font-family: 'JetBrains Mono';
   font-style: normal;
   font-weight: 800;
-  font-size: 0.15em;
+  font-size: 0.5em;
   text-align: center;
   border-color: #d3d3d3;
   border-radius: 2vh;
@@ -857,7 +857,7 @@ function copy() {
   background-color: #ffffff;
   position: absolute;
   top: 9vh;
-  left: 40vh;
+  left: 35vh;
   width: 7vh;
   height: 4vh;
   
@@ -865,7 +865,7 @@ function copy() {
   font-family: 'JetBrains Mono';
   font-style: normal;
   font-weight: 800;
-  font-size: 0.15em;
+  font-size: 0.5em;
   text-align: center;
   border-color: #d3d3d3;
   border-radius: 2vh;
@@ -876,14 +876,14 @@ function copy() {
   background-color: #ffffff;
   position: absolute;
   top: 22vh;
-  left: 10vh;
+  left: 5vh;
   width: 7vh;
   height: 4vh;
   align-items: center;
   font-family: 'JetBrains Mono';
   font-style: normal;
   font-weight: 800;
-  font-size: 0.15em;
+  font-size: 05em;
   text-align: center;
   border-color: #d3d3d3;
   border-radius: 2vh;
@@ -894,7 +894,7 @@ function copy() {
   background-color: #ffffff;
   position: absolute;
   top: 22vh;
-  left: 25vh;
+  left: 20vh;
   width: 7vh;
   height: 4vh;
   
@@ -902,7 +902,7 @@ function copy() {
   font-family: 'JetBrains Mono';
   font-style: normal;
   font-weight: 800;
-  font-size: 0.15em;
+  font-size: 0.5em;
   text-align: center;
   border-color: #d3d3d3;
   border-radius: 2vh;
@@ -913,7 +913,7 @@ function copy() {
   background-color: #ffffff;
   position: absolute;
   top: 22vh;
-  left: 40vh;
+  left: 35vh;
   width: 7vh;
   height: 4vh;
   
@@ -921,7 +921,7 @@ function copy() {
   font-family: 'JetBrains Mono';
   font-style: normal;
   font-weight: 800;
-  font-size: 0.15em;
+  font-size: 0.5em;
   text-align: center;
   border-color: #d3d3d3;
   border-radius: 2vh;
@@ -932,14 +932,14 @@ function copy() {
   background-color: #ffffff;
   position: absolute;
   top: 37vh;
-  left: 10vh;
+  left: 5vh;
   width: 7vh;
   height: 4vh;
   align-items: center;
   font-family: 'JetBrains Mono';
   font-style: normal;
   font-weight: 800;
-  font-size: 0.15em;
+  font-size: 0.5em;
   text-align: center;
   border-color: #d3d3d3;
   border-radius: 2vh;
@@ -950,7 +950,7 @@ function copy() {
   background-color: #ffffff;
   position: absolute;
   top: 37vh;
-  left: 25vh;
+  left: 20vh;
   width: 7vh;
   height: 4vh;
   
@@ -958,7 +958,7 @@ function copy() {
   font-family: 'JetBrains Mono';
   font-style: normal;
   font-weight: 800;
-  font-size: 0.15em;
+  font-size: 0.5em;
   text-align: center;
   border-color: #d3d3d3;
   border-radius: 2vh;
@@ -969,7 +969,7 @@ function copy() {
   background-color: #ffffff;
   position: absolute;
   top: 37vh;
-  left: 40vh;
+  left: 35vh;
   width: 7vh;
   height: 4vh;
   
@@ -977,7 +977,7 @@ function copy() {
   font-family: 'JetBrains Mono';
   font-style: normal;
   font-weight: 800;
-  font-size: 0.15em;
+  font-size: 0.5em;
   text-align: center;
   border-color: #d3d3d3;
   border-radius: 2vh;
