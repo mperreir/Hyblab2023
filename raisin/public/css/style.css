@@ -1,207 +1,863 @@
-/* ------- Important ! Please at least keep the last part of this CSS ----------- */
-/* ------- that adapts content width and height so that aspect ratio  ----------- */
-/* ------- is kept between 9/16 a,d 3/4 (portait orientation)         ----------- */
-
-/* Normalize margin and padding to ease elements positioning */
-*{
-    padding:0;
-    margin:0;
+* {
+    padding: 0;
+    margin: 0;
 }
 
-body{
+body {
     background-color: black;
     color: white;
-    overflow: hidden;   /* to avoid slider bugs on some browsers */
-    font-family: sans-serif;
+    overflow: hidden;
+    /* to avoid slider bugs on some browsers */
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
 }
 
-/* -------------- Loader --------------*/
-#loader{
+/* When the aspect ratio is smaller that 9/16, display a 9/16 content */
+#container {
+    position: fixed;
+    /* To set the size of the container to 100% of the visible viewport height AND for absolute positionning of child elements*/
+    height: 100%;
+    /* even on mobile devices with url or navigation bars */
+    margin-left: calc((100vw - 100 * 9vh / 16) / 2);
+    /* Add black bands on left and right */
+    width: calc(100 * 9vh / 16);
+    /* Force 9/16 aspect ratio */
+    background-color: #FBF6C3;
+}
+
+
+/* We set a default font size here. It will be the base for all other font sizes */
+/* Here the font size is proportional to content width */
+body {
+    font-size: calc(15vh * 9 / 16);
+}
+
+/* Fill the whole viewport when its aspect ratio is between 9/20 and 9/16 */
+@media screen and (max-aspect-ratio: 9/16) {
+    #container {
+        margin-left: 0;
+        /* reset margin-left */
+        width: 100vw;
+        /* content is full width (and full height because of the default rule for container height */
+    }button-resume
+
+    /* We set a default font size here. It will be the base for all other font sizes */
+    /* Here the font size is proportional to content width */
+    body {
+        font-size: 15vw;
+    }
+}
+
+/* The content is displayed at 9/20 If the aspect ratio is higher that 9/20  */
+@media screen and (max-aspect-ratio: 9/20) {
+    #container {
+        margin-left: 0;
+        /* reset left margin */
+        width: 100vw;
+        /* content is full width */
+        margin-top: calc(-50 * 20vw / 9);
+        /* move the content half the height to the top */
+        top: 50%;
+        /* then center it ! */
+        height: calc(100 * 20vw / 9);
+        /* adjust height so that aspect ratio is 9/20 */
+    }
+
+    /* We set a default font size here. It will be the base for all other font sizes */
+    /* Here the font size is proportional to content width */
+    body {
+        font-size: 15vw;
+    }
+}
+
+/* général */
+
+#sound-toggle {
+    position: absolute;
+    width: 10%;
+    height: auto;
+    top: 2%;
+    left: 2%;
+    cursor: pointer;
+}
+
+.header {
+    z-index: 1;
+    position: absolute;
+    top: 1%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 95%;
+}
+
+#home-button {
     z-index: 2;
-    position:absolute;
-}
-
-#loader-img{
-    top:40%;
-    left:40%;
     position: absolute;
+    top: 1%;
+    left: 0;
+    width: 30%;
+    height: 5%;
+    cursor: pointer;
 }
 
-#loader-text{
+.bubble {
+    text-align: left;
+    /*font-size: 2.5vmin;*/
+    font-size: 20%;
+    line-height: 120%;
+    background-color: #7a170e;
+    position: absolute;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 16px;
+    border: 3px solid #000000;
+}
+
+.circle {
+    /*font-size: 20px;*/
+    font-size: 4vmin;
+    background-color: #7a170e;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+    border: 3px solid #000000;
+    cursor: pointer;
+}
+
+.circle>p {
     text-align: center;
-    font-size: 25%;
-    position: absolute;
-    top:60%;
-    width: 100%
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
-/* -------------- End of Loader --------------*/
 
-/* Swiper slider. Need to fill the container */
-#mySwiper{
+.bulle {
+    width: 15%;
+    height: auto;
+    position: absolute;
+    display: block;
+    top: -10%;
+    left: -8%;
+}
+
+.left-button {
+    z-index: 1;
+    position: absolute;
+    width: 10%;
+    height: auto;
+    left: 5%;
+    top: 10%;
+    cursor: pointer;
+}
+
+.handwritten {
+    font-family: 'Handlee';
+}
+
+#top-logo {
+    top:0;
+    width:95%;
+    height:auto;
+}
+
+/* page d'accueil */
+
+#container>.page {
+    height: 100%;
     width: 100%;
-    height:100%;
+}
+
+.button {
+    text-align: center;
+    cursor: pointer;
+}
+
+#button-play>p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#button-play {
     position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 25%;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.03em;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 55%;
+    height: 10%;
 }
 
-/* white navigation bullets */
-.swiper-pagination-bullet-active {
-    background-color: white !important;
+.footer {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    right: 0px;
+    padding: 0px;
+    margin:0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    font-size: 10px;
+    text-align: center;
+    color: #CB9796;
+    background-color: #AF0702;
 }
 
-/* the slides and the loader should fill the whole 9:16 zone */
-.swiper-wrapper section, #loader{
-    background-color: dodgerblue;
+.personnage {
+    position: absolute;
+    width: 66%;
+    height: auto;
+    left: 25%;
+    top: 25%;
+}
+
+/* page de présentation */
+.page-presentation-Domi{
     width: 100%;
     height: 100%;
 }
 
-/* Most of the elements in this demo are absolute positionned with percentages */
-#first-slide header, #second-slide header{
-    text-align: center;
-    width: 100%;
-    top: 10%;
+#img-presentation-Domi{
     position: absolute;
-    font-size: 30%;
-    z-index: 2;
+    bottom: 45%;
+    left:0;
+    right: 0;
+    margin:auto;
+    width: 50%;
 }
 
-#logo-hyblab{
-    text-align: center;
-    width: 50%;
-    left: 50%;
+#img-presentation-Domi img{
+    width: 100%;
+}
+
+#message-presentation-haut #tete-presentation{
+    position: relative;
+    width: 60px;
+    top: -30%;
+    left: 5%;
+    color: red;
+}
+
+#message-presentation-haut{
     top: 50%;
-    margin-left:-25%;
-    margin-top:calc(-7.5% * 9 / 16 ); /* margins are relative to the element width... :-( */
+    background: #004605;
+    border: 2px solid #000000;
+    border-radius: 0px 20px 20px 20px;
+    height: 16%;
+}
+
+#message-presentation-haut p{
     position: absolute;
-    font-size: 50%;
-    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 80%;
+}
+
+#message-presentation-bas{
+    bottom: 0;
+    background: #A51916;
+    border: 2px solid #000000;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#message-presentation-bas p{
+    position: relative;
+    top: 10%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 82%;
+}
+
+#message-presentation-bas .button-next{
+    bottom: 15%;
+}
+
+#image-winemaker {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    margin: auto;
+    width: 50%;
+    height: auto;
+}
+
+#image-logo {
+    display: block;
+    position: absolute;
+    left: 15%;
+    width: 70%;
+    top: 10%;
+    height: auto;
+    bottom: 0.39%;
+}
+
+#image-dominique {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 15%;
+    height: 35%;
+    width: auto;
+}
+
+/* Page crédits */
+
+#page-credits h3, dl {
+    font-size: 28%;
+    color: black;
+}
+
+#page-credits h3 {
+    text-align: center;
+    margin-top: 12%;
+}
+
+#page-credits dd {
+    margin-left: 8%;
+}
+
+#page-credits dt {
+    margin-top: 5%;
+}
+
+#page-credits dl {
+    margin-left: 15%;
+}
+
+.logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 5%;
+    grid-row-gap: 20%;
+    text-align: center;
+    position: absolute;
+    left: 5%;
+    bottom: 8%;
+    width: 90%;
+}
+
+.logos img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.message {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20%;
+    text-align: justify;
+    background-color: #AF0702;
+    border-radius: 0px 20px 20px 20px;
+    border: solid;
+    border-color: black;
+    padding: 0.7em;
+    box-sizing: border-box;
+    width: 100.1%;
+    height: 30%;
+}
+
+div .button-next {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    width: 50px;
+    height: 50px;
+}
+
+img.button-next {
+    width: 100%;
+    height: auto;
     cursor: pointer;
 }
 
-/* Last slide image is centered */
-#img-fini{
-    width: 70%;
-    left: 50%;
-    top: 40%;
+/* page de cepage */
+
+.bulle-question {
+    z-index: 1;
+    right: 8%;
+    top: 25%;
     position: absolute;
-    margin-left:-35%;
-    margin-top:calc(-25% * 9 / 16 ); /* margins are relative to the element width... :-( */
-}
-
-main > section{
-    background-image: url('../img/background.svg');
-    background-size: 100% 100%;
-}
-
-/* Footer of last slide is at the bottom and content is centered */
-#first-slide footer{
-    bottom: 5%;
-    position: absolute;
-    box-sizing: border-box; /* So that padding is not added to width (and width: 100% works) */
-    width: 100%; /* could also use  width: calc(100% - 2em) if not using box-sizing */
-    font-size: 20%;
-    text-align: center;
-    padding: 1em;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-
-/* ---------- Positionning of logos on the last slide -------------------- */
-/* here we have a contraint on the height of the logos (not the width)     */
-/* so we cannot use % and use em (which are proportinal to the size of the */
-/* slide because of body's font size rule at the end of this CSS           */
-#bandeau {
-    padding-top: 3%;
-    width:100%;
-    position: absolute;
-    bottom: 0;
-    background-color: white;
-    font-size: 20%;
-  }
-
-  #bandeau li{
-    list-style-type: none;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 0.5em;
-  }
-
-  #bandeau img{
-    height: 2.5em;
-  }
-
-  #bandeau #hyblab{
-    margin: 1em auto;
-    height: 3em;
     display: block;
-  }
+    width: 30%;
+    height: auto;
+}
 
-  #bandeau #cc, #bandeau #opensource
-  {
-    height: 1em;
-  }
+#cepage-choice {
+    padding-top: 5%;
+    top: 20%;
+    left: 8%;
+    width: 50%;
+    background-color: #004605;
+}
 
-  #bandeau .stacked{
-    display:block;
-  }
+#cepage-container {
+    position: absolute;
+    top: 5%;
+    width: 100%;
+    height: 25%;
+}
 
-  #bandeau ul{
+.bouteilles-container {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 70%;
+    height: 40%;
+}
+
+#liste-cepages {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 15%;
+    width: 100%;
+}
+
+.bouteille {
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: auto;
+}
+
+#liste-cepages-boutons {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 15%;
+    width: 100%;
+}
+
+.button-cepage {
+    border-radius: 10px;
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 80%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 0;
+    padding-right: 0;
     text-align: center;
-    padding: 0 0;
-    margin-bottom: 0.5em;
-  }
-
-  #bandeau .institutionnel
-  {
-    height: 2em;
-  }
-
-/* ---------- Important media queries for easy responsive content :-) ----------------- */
-/* Whatever the devie used, the content will be displayed full width and height if      */
-/* the aspect ratio is between 3/4 and 9/16. If not it is locked to either 3/4 or 3/16  */
-
-/* When the aspect ratio is smaller that 3/4, display a 3/4 content */
-#container{
-    position: fixed; /* To set the size of the container to 100% of the visible viewport height AND for absolute positionning of child elements*/ 
-    height: 100%;   /* even on mobile devices with url or navigation bars */
-    margin-left: calc((100vw - 100 * 3vh / 4) / 2); /* Add black bands on left and right */
-    width: calc(100 * 3vh / 4); /* Force 3/4 aspect ratio */
+    font-size: 2vmin;
 }
 
-/* We set a default font size here. It will be the base for all other font sizes */
-/* Here the font size is proportional to content width */
-body{
-    font-size: calc(15vh * 3 / 4);
+#vigne-container {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    bottom: 10%;
 }
 
-/* Fill the whole viewport when its aspect ratio is between 9/16 and 3/4 */
-@media screen and (max-aspect-ratio: 3/4) {
-    #container{
-        margin-left: 0; /* reset margin-left */
-        width: 100vw; /* content is full width (and full height because of the default rule for container height */
-    }
-
-    /* We set a default font size here. It will be the base for all other font sizes */
-    /* Here the font size is proportional to content width */
-    body{
-        font-size: 15vw;
-    }
+#image-vigne {
+    display: block;
+    width: 98%;
+    height: auto;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
-/* The content is displayed at 9/16 If the aspect ratio is higher that 9/16  */ 
-@media screen and (max-aspect-ratio: 9/16) {
-    #container{
-        margin-left: 0; /* reset left margin */
-        width: 100vw;   /* content is full width */
-        margin-top: calc(-50 * 16vw / 9); /* move the content half the height to the top */
-        top:50%; /* then center it ! */
-        height: calc(100 * 16vw / 9); /* adjust height so that aspect ratio is 9/16 */
-    }
-
-    /* We set a default font size here. It will be the base for all other font sizes */
-    /* Here the font size is proportional to content width */
-    body{
-        font-size: 15vw;
-    }
+.info {
+    position: absolute;
+    top: 0;
+    margin-left: 20%;
 }
 
+/* page d'expliqaution du cépage */
+
+.bouteille-container {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 40%;
+}
+
+.bouteille-container>img {
+    height: 100%;
+    width: auto;
+}
+
+#explaination-cepage {
+    background-color: #FFD78C;
+    color: black;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 0;
+    height: 45%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#explaination-cepage>p {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+}
+
+.vigne-gauche,
+.vigne-droite,
+.vigne-gauche-bottom,
+.vigne-droite-bottom
+{
+    position: absolute;
+    display: block;
+    z-index: 1;
+    width: 35%;
+    height: auto;
+}
+
+.vigne-gauche {
+    left: 0;
+    top: 25%;
+}
+
+.vigne-droite {
+    right: 0;
+    top: 10%;
+}
+
+.vigne-gauche-bottom {
+    left: 0;
+    top: 60%;
+}
+
+.vigne-droite-bottom {
+    right: 0;
+    top: 25%;
+}
+
+/* page de question */
+
+#question-container {
+    margin-top: 15%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#question-character {
+    display: block;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+    height: auto;
+}
+
+#question {
+    background-color: #004605;
+    position: relative;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-top: 4%;
+    padding-bottom: 2%;
+}
+
+#choices {
+    text-align: center;
+    font-size: 0;
+}
+
+.choice {
+    font-size: 14px;
+    width: 40%;
+    height: 3em;
+    line-height: 110%;
+    padding: 1%;
+    margin: 2%;
+    border-radius: 8px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    cursor: pointer;
+}
+
+.choice>p {
+    position: absolute;
+    left:0;
+    right: 0;
+    margin: auto;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.container-vin-score{
+    position:absolute;  
+    width: 18%;
+    height: 36%;
+    left: 41%;
+    top: 12%;
+    background-color:#FBF6C3;
+    margin: 0px;
+    padding: 0px; 
+}
+
+.container-vin-resume{
+    position:absolute;  
+    width: 24%;
+    height: 48%;
+    left: 38%;
+    top: 30%;
+    background-color: #FBF6C3;
+    margin: 0px;
+    padding: 0px; 
+}
+
+#button-score{
+    position:absolute;  
+    width: 10%;
+    height: auto;
+    right: 5%;
+    bottom: 5%;
+    margin: 0px;
+    padding: 0px; 
+}
+
+.vin {
+    position: absolute;
+    background-color: blue;
+    width: 96%;
+    left: 2%;
+    bottom: 1%;
+    height: 90%;
+    transition: height 3s, background-color 3s;
+}
+
+#bouteille {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#bouteille-resume {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+#img-evenement {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+}
+
+#txt-evenement {
+    background-color: #AF0702;
+    position: absolute;
+    left:0px;
+    right:0px;
+    height: 35%;
+    padding:0px;
+    margin:auto;
+    bottom:8%;    
+}
+
+#txt-score {
+    position: absolute;
+    left:0px;
+    right:0px;
+    height: 45%;
+    padding:0px;
+    margin:auto;
+    bottom:0px;    
+}
+
+#txt-evenement>p{
+    position: relative;
+    top: -15%;
+    margin:5%;
+}
+
+#bulle-event{
+    position: relative;
+    width: 60px;
+    left: 10%;
+    top: -15%;
+}
+
+#img-bulle-event{
+    position: relative;
+    width: 100%;
+}
+
+#txt-score>p{
+    margin:5%;
+}
+
+#txt-resume>p{
+    text-align: left;
+    color: black;
+    font-size: 16px;
+    position: absolute;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 22px;
+}
+
+#txt-resume{
+    position: absolute;
+    width:38%;
+    height:30%;
+    right : 2%;
+    top : 40%;
+}
+
+#button-evenement { 
+    position: absolute;
+    width:10%;
+    height: auto;
+    right:5%;
+    bottom:13%;
+    cursor : pointer;
+}
+
+#button-score { 
+    position: absolute;
+    width:10%;
+    height: auto;
+    right:5%;
+    bottom:5%;
+    cursor : pointer;
+}
+
+#button-resultat {
+    position:absolute;
+    left: 40%;
+    bottom: 10%;
+    cursor : pointer;
+
+}
+
+#button-resume {
+    width: 15%;
+    height: auto;
+    position:absolute;
+    bottom: 8%;
+    right: 8%;
+    cursor : pointer;
+}
+
+#button-restart {
+    width: 15%;
+    height: auto;
+    position:absolute;
+    bottom: 8%;
+    left : 8%;
+    cursor : pointer;
+}
+
+/*Page de sources et sources 2*/
+
+#presenter {
+    position: absolute;
+    width:100%;
+    height: auto;
+    left: 0%;
+    bottom: 55%;
+}
+
+#bulle-presenter{
+    position: absolute;
+    left:7.5%;
+    bottom: 36%;
+    width:10%;
+    height:auto;
+}
+
+#bureau {
+    position:absolute;
+    background-color: #FFD78C;
+    color: black;
+    bottom: 35%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 0;
+    height: 20%;
+    border-radius: 0;
+}
+
+#bulle-sources{
+    position:absolute;
+    background-color: #AF0702;
+    color: black;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 0;
+    height: 40%;
+    border-top-left-radius: 0;
+}
+
+.right-button-source{
+    position: absolute;
+    width: 8%;
+    height: auto;
+    right: 2.5%;
+    bottom: 12%;
+    cursor: pointer;
+}
+
+#bubble-text {
+    width:60%;
+    margin-left:20%;
+    margin-top:2%;
+    color:white;
+}
+
+.lien{
+    color:white;
+}
+
+#liens {
+    margin-left: 10%;
+}
+
+#f3_icon {
+    position:absolute;
+    top:10%;
+    right:5%;
+    width:10%;
+    height:auto;
+}

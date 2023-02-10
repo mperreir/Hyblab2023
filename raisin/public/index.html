@@ -1,77 +1,268 @@
 <!doctype html>
 
 <html lang="fr">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-  <title>Hyblab 2023</title>
+  <title>Sauve ta grappe</title>
+
+  <link rel="icon" type="image/x-icon" href="img/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="js/slide1.js" defer></script>
-  <script src="js/slide2.js" defer></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/howler@2.2.3/dist/howler.js"></script>
+
   <script src="js/index.js" defer></script>
 </head>
+
 <body>
-    <!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
-    <div id="container">
-      <!-- Le loader-->
-      <section id="loader">
-        <div id="loader-img" class="ld ld-ring ld-cycle"></div>
-        <p id="loader-text">Veuillez patienter...</p>
-      </section>
-      <div id="mySwiper" class="swiper">
-        <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
-        <main class = "swiper-wrapper">
-            <section id="first-slide" class="swiper-slide">
-                <header>
-                    <h1 id="titre">Welcome to</h1>
-                </header>
-                
-                <img src="img/logo_hyblab.png" id="logo-hyblab" alt="logo hyblab"></img>
+  <div id="container">
+    <!-- Header logo -->
+    <div id="home-button"></div>
+    <img class="header" src="img/progressbar/checkpoint-0.png">
+    <!-- Footer de disclaimer -->
+    <div class="bubble footer">
+      <p>L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
+    </div>
 
+    <!-- Page de titre -->
+    <div class="page" id="page-title">
+      <img id="sound-toggle" src="img/icons/sound-off.png">
+      <div class="bubble button" id="button-play">
+        <p>FABRIQUER LE VIN</p>
+      </div>
+      <img id="image-logo" src="img/logo.png">
+      <img id="image-dominique" class="anim" src="img/characters/dominique.png">
+    </div>
 
-                <!-- le footer sera rempli à partir de données lues dans un fichier Json-->
-                <footer>
-                  <p></p>
-                </footer>
-            </section>
-            <section id="second-slide" class="swiper-slide">
-                <header>
-                  <h1>This was...</h1>
-                </header>
-                <img id="img-fini" src="hyblab_2023.jpg">
-                <footer id="bandeau">
-                        <!-- Logo Hyblab -->
-                          <a href="http://www.hyblab.fr/"><img id="hyblab" src="logo_hyblab.png" alt="Hyblab DataSport"></a>
-                      
-                          <!-- Les organisateurs -->
-                          <ul>
-                            <li><a href="http://www.ouestmedialab.fr/"><img src="logo_oml.png" alt="Ouest Médialab"></a></li>
-                            <li><a href="http://www.agrnantes.fr"><img src="ecoles/logo_agr.png" alt="AGR école de l'image"></a></li>
-                            <li><a href="https://epjt.fr/"><img src="ecoles/logo_epjt.svg" alt="Ecole publique de journalisme de Tours"></a></li>
-                            <li><a href="http://www.polytech.univ-nantes.fr/"><img src="ecoles/logo_polytech.png" alt="Polytech Nantes"></a></li>
-                          <!-- Les autres logos -->
-                          <ul>
-                            <!-- Logos CC et opensource -->
-                            <li>
-                            <ul>
-                              <li class="stacked"><img id="cc" src="logo_cc.png" alt="Creative commons"></li>
-                              <li class="stacked"><img id="opensource" src="logo_opensource.png" alt="Open source"></li>
-                            </ul>
-                            </li>
-                            <!-- Logo de votre porteur de projet -->
-                            <li><a href="http://www.mon-porteur-de-projet.org"><img src="no-logo.png" alt="Logo de mon porteur de projet"></a></li>
-                            <!-- Partenaires institutionnels -->
-                            <li><a href="http://www.nantesmetropole.fr/"><img class="institutionnel" src="institutionnels/logo_nantesmetropole.png" alt="Nantes Métropole"></a></li>
-                          </ul>
-                </footer>
-            </section>
-        </main>
-        <div class="swiper-pagination"></div>
+    <!-- Page de Présentation de Dominique -->
+    <div class="page" id="page-presentation-Domi">
+      <div id="img-presentation-Domi">
+        <img class="anim" src="img/characters/dominique-bonjour.png" alt="Dominique qui fait signe de la main">
+      </div>
+      <div class="message" id="message-presentation-haut">
+        <div id="tete-presentation"><img id="tete-presentation" src="img/characters/bulle-dominique.png" alt=""></div>
+        <p class="handwritten">
+          Hey ! Je me présente, je m’appelle Dominique. Je me lance dans la vigne, et j’aurais besoin de toi pour faire du bon vin !
+        </p>
+      </div>
+      <div class="message" id="message-presentation-bas">
+        <p>
+          À travers différents périples, vous devrez faire les bons choix pour que Dominique fasse le meilleur vin possible.<br><br>
+          Vous allez premièrement devoir choisir quel type de cépage vous souhaitez cultiver.
+        </p>
+        <div class="button-next">
+          <img class="button-next" src="img/icons/right-button.png" alt="bouton suivant">
+        </div>
+      </div>
+    </div>
+
+    <!-- Page de choix du cépage -->
+    <div class="page" id="page-cepage">
+      <div id="cepage-container">
+        <img class="bulle-question anim" src="img/characters/bulle-dominique-question.png">
+        <div class="bubble handwritten" id="cepage-choice">
+          <img class="bulle" src="img/characters/bulle-dominique.png">
+          Le choix va être difficile !
+          <br>
+          Je te laisse choisir.
+        </div>
+      </div>
+      <div class="bouteilles-container">
+        <div id="liste-cepages">
+          <div id="cepage-1">
+            <img class="bouteille" src="img/bouteilles/bouteille-rouge.png">
+            <div class="info circle" id="info-1">
+              <p>i</p>
+            </div>
+          </div>
+          <div id="cepage-2">
+            <img class="bouteille" src="img/bouteilles/bouteille-blanc.png">
+            <div class="info circle" id="info-2">
+              <p>i</p>
+            </div>
+          </div>
+          <div id="cepage-3">
+            <img class="bouteille" src="img/bouteilles/bouteille-rose.png">
+            <div class="info circle" id="info-3">
+              <p>i</p>
+            </div>
+          </div>
+        </div>
+        <div id="liste-cepages-boutons">
+          <div>
+            <div class="bubble button button-cepage" id="cepage-1-bouton">Choisir</div>
+          </div>
+          <div>
+            <div class="bubble button button-cepage" id="cepage-2-bouton">Choisir</div>
+          </div>
+          <div>
+            <div class="bubble button button-cepage" id="cepage-3-bouton">Choisir</div>
+          </div>
+        </div>
+      </div>
+      <div id="vigne-container">
+        <img id="image-vigne" src="img/deco/vigne.png">
+      </div>
+    </div>
+
+    <!-- Page d'explication du cépage! -->
+    <div class="page" id="page-explaination-cepage">
+      <img class="left-button" id="left-button-cepage" src="img/icons/left-button.png">
+      <div class="bouteille-container">
+        <img class="bouteille" id="bouteille-solo" src="img/bouteilles/bouteille-rouge.png">
+      </div>
+      <div class="bubble" id="explaination-cepage">
+        <p></p>
+      </div>
+      <img class="vigne-gauche" src="img/deco/vigne-gauche.png">
+      <img class="vigne-droite" src="img/deco/vigne-droite.png">
+    </div>
+
+    <!-- Entrée dans la boucle de jeu -->
+
+    <!-- Page evenement -->
+    <div class="page" id="page-evenement">
+      <img src="img/characters/missmeteo.png" id="img-evenement">
+      <div class="bubble" id="txt-evenement">
+        <div id="bulle-event">
+          <img id="img-bulle-event">
+        </div>
+        <p class="handwritten"></p>
+      </div>
+      <img src="img/icons/right-button.png" id="button-evenement">
+    </div>
+
+    <!-- Page de question -->
+    <div class="page" id="page-question">
+      <div id="question-container">
+        <img id="question-character" class="anim" src="img/characters/dominique-question.png">
+        <div class="bubble" id="question">
+          <img class="bulle" src="img/characters/bulle-dominique.png">
+          <div id="question-text"><p></p></div>
+        </div>
+        <div id="choices">
+          <div class="bubble choice" id="choice-1"><p></p></div>
+          <div class="bubble choice" id="choice-2"><p></p></div><br>
+          <div class="bubble choice" id="choice-3"><p></p></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Page de score -->
+    <div class="page" id="page-score">
+      <div class="container-vin-score">
+        <div class="vin"></div>
+        <img src="img/bouteilles/bouteille.png" id="bouteille" alt="Une bouteille">
+      </div>
+      <img class="vigne-gauche" src="img/deco/vigne-gauche.png">
+      <img class="vigne-droite" src="img/deco/vigne-droite.png">
+      <div class="bubble" id="txt-score">
+        <p></p>
+      </div>
+      <img src="img/icons/right-button.png" id="button-score">
+    </div>
+
+    <!-- Sortie de la boucle de jeu -->
+
+    <!-- Page de conclusion/résumé -->
+    <div class="page" id="page-resume">
+      <div id="cepage-container">
+        <img class="bulle-question anim" src="img/characters/bulle-dominique-question.png">
+        <div class="bubble handwritten" id="cepage-choice">
+          <img class="bulle" src="img/characters/bulle-dominique.png">
+          Quel est le résultat de ma récolte ?
+        </div>
+      </div>
+      <div class="container-vin-resume">
+        <div class="vin"></div>
+        <img src="img/bouteilles/bouteille1.png" id="bouteille-resume" alt="Une bouteille">
+      </div>
+      <div id="txt-resume"><p></p></div>
+      <img class="vigne-gauche-bottom" src="img/deco/vigne-gauche.png">
+      <img class="vigne-droite-bottom" src="img/deco/vigne-droite.png">
+      <img id="button-restart" src="img/icons/reset-button.png">
+      <img id="button-resume" src="img/icons/right-button.png">
+    </div>
+
+    <!-- Page des sources 1-->
+    <div class="page" id="page-sources">
+      <img id="presenter" src="img/characters/presenter.png">
+      <div class="bubble" id="bureau"></div>
+      <div class="bubble" id="bulle-sources">
+        <div id="bubble-text">
+          <p>Pour finir et rendre l’antenne, voici toutes les sources qui nous ont permis de réaliser ce JT: </p>
+          <ul id="liens">
+            <li><a class="lien" href="http://www.comite21.org/docs/comite21-grandouest/giecpaysdelaloire/rapportgiecpaysdelaloire.pdf">Rapport GIEC des Pays de la Loire (juin 2022)</a></li>
+            <li><a class="lien" href="https://jardinage.lemonde.fr">Le Monde - rubrique jardinage</a></li>
+            <li><a class="lien" href="https://www.nationalgeographic.fr/environnement/episodes-de-grele-comment-sen-proteger">“Épisodes de grêle : comment s'en protéger ?” (National Geographic)</a></li>
+            <li><a class="lien" href="https://atlasagroclimatique.techniloire.com">Atlas agroclimatique (TechniLoire)</a></li>
+            <li><a class="lien" href="https://www.vignevin-occitanie.com">Institut français de la vigne et du vin Occitanie</a></li>
+          </ul>
+        </div>
+      </div>
+      <img id="bulle-presenter" src="img/characters/bulle-presenter.png">
+      <img id="f3_icon" src="img/deco/f3_icon.png">
+      <img class="right-button-source" id="right-button-sources" src="img/icons/right-button.png">
+    </div>
+
+    <!-- Page des sources 2-->
+    <div class="page" id="page-sources2">
+      <img id="presenter" src="img/characters/presenter.png">
+      <div class="bubble" id="bureau"></div>
+      <div class="bubble" id="bulle-sources">
+        <div id="bubble-text">
+          <ul id="liens">
+            <li><a class="lien" href="https://www.plan-deperissement-vigne.fr/outils/fiches-techniques/regreffage-des-ceps-atteints-desca">Plan national dépérissement du vignoble</a></li>
+            <li><a class="lien" href="https://www.natura-sciences.com/comprendre/gel-tardif-rechauffement-climatique.html">Gel tardif : un risque de plus en plus probable à cause du réchauffement climatique</a><p>(Natura Sciences)</p></li>
+            <li><a class="lien" href="https://www.worldweatherattribution.org/wp-content/uploads/GrowingPeriodFrost2021.pdf">Étude : Le changement climatique causé par l'homme a augmenté la probabilité de gel de la période de croissance précoce en France</a></li>
+            <li><a class="lien" href="https://www.lunion.fr/id399936/article/2022-08-21/une-partie-de-la-vigne-francaise-est-menacee">“Une partie de la vigne française est menacée” (L’Union)</a></li>
+          </ul>
+          <p>Merci et à très bientôt !</p>
+        </div>
+      </div>
+      <img id="bulle-presenter" src="img/characters/bulle-presenter.png">
+      <img id="f3_icon" src="img/deco/f3_icon.png">
+      <img class="right-button-source" id="right-button-sources2" src="img/icons/right-button.png">
+    </div>
+
+    <!-- Page des crédits-->
+    <div class="page" id="page-credits">
+      <h3>CREDITS:</h3>
+      <dl>
+        <dt>AGR</dt>
+        <dd>- Bérénice LEGROS</dd>
+        <dd>- Lea COUTURIER</dd>
+        <dd>- Wiliam CARDOSO</dd>
+        <dt>EPJT</dt>
+        <dd>- Tom DEMARS-GRANJA</dd>
+        <dt>Polytech Nantes</dt>
+        <dd>- Paul BODIN</dd>
+        <dd>- Lucas CHATTELEYN</dd>
+        <dd>- Alexander SAUVIGNET</dd>
+        <dd>- Léopold VARLET</dd>
+        <dt>REMERCIEMENTS</dt>
+        <dd>- Guénolé SEILER / France 3</dd>
+      </dl>
+      <div class="logos">
+        <img id="image-agr" src="img/logos/logo_agr.png">
+        <img id="image-polytech" src="img/logos/logo_polytech.png">
+        <img id="image-epjt" src="img/logos/logo_epjt.svg">
+        <img id="image-hyblab" src="img/logos/logo_hyblab.png">
+        <img id="image-oml" src="img/logos/logo_oml.png">
+        <img id="image-nantes" src="img/logos/logo_nantesmetropole.png">
+        <img id="image-univ" src="img/logos/logo_nantesuniversite.png">
+        <img id="image-pdl" src="img/logos/logo_pdl.png">
+      </div>
     </div>
   </div>
 </body>
+
 </html>
