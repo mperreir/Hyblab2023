@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "createDB": "sqlite3 ./communes/api/communes.db < ./communes/api/createDB.sql",
+    "createDB": "sqlite3 ./communes/api/communes3.db < ./communes/api/test.sql",
     "start": "node server.js"
   },
   "dependencies": {

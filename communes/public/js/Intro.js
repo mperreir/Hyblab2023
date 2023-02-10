@@ -83,7 +83,12 @@ function submitPostal(){
     fetch('../api/score/' + codePostal)
         .then((response) => response.json())
         .then((data) => {
-            sessionStorage.setItem("Score",data.score.toString()+"%");
+            if (data.score == null) {
+                alert("Code postal non valide");
+                return;
+            }
+            let score_int = Math.round(data.score);
+            sessionStorage.setItem("Score",score_int.toString()+"%");
             location.href="actualstate.html";
         })
         .catch((error) => {

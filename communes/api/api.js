@@ -120,12 +120,12 @@ app.get('/energy/:name/:number', function ( req, res ) {
 
 
 app.get('/score/:codepostal', function ( req, res ) {
-    /* let code = req.params.codepostal;
+    let code = req.params.codepostal;
     let epci;
 
-    epci = '(SELECT DISTINCT EPCI.Nom_epci, (score_epci/score_france)*100 AS Score FROM EPCI LEFT OUTER JOIN BIOMETHANE AS B GROUP BY EPCI.Code_epci ON E.Code_epci = B.Code_ecpi OUTER JOIN (EOLIEN AS E GROUP BY E.Code_Insee_Epci ON E.Code_epci = ) AS V ON E.code_EPCI = B.Code_insee_epci ';
+    epci = 'WITH b AS (SELECT Code_insee_epci as epci, SUM(Production) as prod FROM BIOMETHANE GROUP BY Code_insee_epci), e AS (SELECT Code_EPCI as epci, SUM(Puissance) as prod FROM EOLIEN GROUP BY Code_EPCI), h AS ( SELECT Code_EPCI as epci, SUM(Puissance) as prod FROM HYDRAULIQUE GROUP BY Code_EPCI), i AS ( SELECT Code_EPCI as epci, SUM(Capacite_production) as prod FROM INJMETHANE GROUP BY Code_EPCI), s AS ( SELECT Code_EPCI as epci, SUM(Puissance) as prod FROM SOLAIRE GROUP BY Code_EPCI), epci AS ( SELECT DISTINCT siren, total_pop_tot FROM ville), siren_to_score AS ( SELECT v.siren as epci, v.total_pop_tot as pop, CAST(COALESCE(b.prod, 0) as FLOAT) / v.total_pop_tot as b_prod, CAST(COALESCE(e.prod, 0) as FLOAT) / v.total_pop_tot as e_prod, CAST(COALESCE(h.prod, 0) as FLOAT) / v.total_pop_tot as h_prod, CAST(COALESCE(i.prod, 0) as FLOAT) / v.total_pop_tot as i_prod, CAST(COALESCE(s.prod, 0) as FLOAT) / v.total_pop_tot as s_prod FROM epci v LEFT OUTER JOIN b ON v.siren = b.epci LEFT OUTER JOIN e ON v.siren = e.epci LEFT OUTER JOIN h ON v.siren = h.epci LEFT OUTER JOIN i ON v.siren = i.epci LEFT OUTER JOIN s ON v.siren = s.epci), max AS ( SELECT epci, b_prod + e_prod * (SELECT MAX(b_prod) / MAX(e_prod) FROM siren_to_score) + h_prod * (SELECT MAX(b_prod) / MAX(h_prod) FROM siren_to_score) + i_prod * (SELECT MAX(b_prod) / MAX(i_prod) FROM siren_to_score) + s_prod * (SELECT MAX(b_prod) / MAX(s_prod) FROM siren_to_score) as sum FROM siren_to_score ), calcul_score AS ( SELECT epci, (sum * (80 - 40) / 20000) + 40 as score FROM max) SELECT ville.code_postal, calcul_score.score FROM VILLE LEFT JOIN calcul_score ON VILLE.siren = calcul_score.epci WHERE ville.code_postal = ?;';
 
-    db.all(requete, [num_dep], (err, rows) => {
+    db.all(epci, [code], (err, rows) => {
         // listen for the error event
         process.on('error', (err) => {
             // error handling code
@@ -139,10 +139,10 @@ app.get('/score/:codepostal', function ( req, res ) {
         }
     });
 
-     */
+    /*
     // Generate random integer between 22 and 84
     let code = req.params.codepostal
-    let score = Math.floor(Math.random() * (70 - 20 + 1) + 20);
+    let score = Math.floor(Math.random() * (84 - 70 + 1) + 70);
     if (code.length === 5 && code.split('').every(char => char >= '0' && char <= '9' )) {
         const output = {
             score: score
@@ -151,6 +151,8 @@ app.get('/score/:codepostal', function ( req, res ) {
     }
     // Check if all the characters from the code are digits
     res.status(500).send('Internal Server Error');
+
+     */
 });
 
 
