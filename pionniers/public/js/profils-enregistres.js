@@ -29,7 +29,7 @@ function createFicheMinia(profil) {
                                             <p class="gras">${Company}</p>
                                             <p>${City}</p>
                                         </section>
-                                        <section class="keywords flex-row">
+                                        <section class="keywords flex-row align-items-center">
                                             <!-- Section qui va se remplir dans la suite de la fonction -->
                                         </section>
                                         <section class="topic flex-row align-items-center">
