@@ -883,7 +883,7 @@ function copy() {
   font-family: 'JetBrains Mono';
   font-style: normal;
   font-weight: 800;
-  font-size: 05em;
+  font-size: 0.5em;
   text-align: center;
   border-color: #d3d3d3;
   border-radius: 2vh;
