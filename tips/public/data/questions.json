@@ -1,0 +1,380 @@
+{
+    "Alimentation": {
+        "facile": [
+            {
+                "question": "Combien de tonnes de nourriture est jetées chaque année en France ?",
+                "propositions": [
+                    "10 millions",
+                    "40 millions",
+                    "10 000",
+                    "3 millions"
+                ],
+                "reponsesIndices": [
+                    0
+                ],
+                "explication": "Ca fait beaucoup ! (Source : ADEME)"
+            },
+            {
+                "question": "Qui gaspille le plus sur l'ensemble de la chaîne alimentaire ?",
+                "propositions": [
+                    "Les producteurs",
+                    "La grande distribution",
+                    "Les consommateurs",
+                    "Les transformateurs"
+                ],
+                "reponsesIndices": [
+                    2
+                ],
+                "explication": "Les consommateurs engendrent 33% du gaspillage alimentaire, les producteurs 32%, les transformateurs 21% et la grande distribution 14%."
+            },
+            {
+                "question": "Quelle est la principale source d'exposition aux pesticides selon l'OMS ?",
+                "propositions": [
+                    "Mettre de la crème pour la peau",
+                    "L'eau",
+                    "Les hammam",
+                    "L'alimentation"
+                ],
+                "reponsesIndices": [
+                    3
+                ],
+                "explication": "Depuis les années 1960 l'agriculture intensive s'est imposée dans le paysage agricole mondiale. L'utilisation d'intrants chimiques en constitue le fondement. Par conséquent, des traces de pesticides se retrouvent dans l'alimentation."
+            }
+        ],
+        "difficile": [
+            {
+                "question": "Selon WWF, 70 à 80% de la déforestation dans le monde provient de la production agricole.",
+                "propositions": [
+                    "Vrai",
+                    "faux"
+                ],
+                "reponsesIndices": [
+                    0
+                ],
+                "explication": "Il suffit de regarder vers l'Amazonie brésilienne pour comprendre les effets de la production agricole sur le poumon de la planète."
+            },
+            {
+                "question": "Quelle est la loi qui a interdit les grandes surfaces de plus de 400m2 de jeter leurs invendus alimentaire ?",
+                "propositions": [
+                    "La loi AGEC",
+                    "La loi sécurité globale",
+                    "La loi Garot",
+                    "La loi contre la réforme des retraites"
+                ],
+                "reponsesIndices": [
+                    2
+                ],
+                "explication": "Votée en 2016, la loi relative à la lutte contre le gaspillage alimentaire aussi appelé \"Loi Garot\" est une première mondiale. Elle oblige les grandes surfaces de plus de 400m2 à nouer des partenariats avec les associations."
+            },
+            {
+                "question": "D'après l'INSEE, en 2016, en France, parmi les 57 000 magasins alimentaires « de proximité », 1 970 sont spécialisés dans la vente de produits biologiques.",
+                "propositions": [
+                    "Vrai",
+                    "faux"
+                ],
+                "reponsesIndices": [
+                    0
+                ],
+                "explication": "Soit 3,5% environ. Un chiffre en constante augmentation."
+            }
+        ]
+    },
+    "Mode": {
+        "facile": [
+            {
+                "question": "D'après OXFAM, l’industrie textile est le cinquième secteur le plus consommateur d’eau dans le monde.",
+                "propositions": [
+                    "Vrai",
+                    "faux"
+                ],
+                "reponsesIndices": [
+                    1
+                ],
+                "explication": "L'industrie textile est à la troisième place !"
+            },
+            {
+                "question": "En Europe, quelle quantité de textiles neufs ou usagés sont jetés chaque année en Europe ?",
+                "propositions": [
+                    "4 millions de tonnes",
+                    "600 000 kilos",
+                    "3 millions de tonnes",
+                    "2 millards de tonnes"
+                ],
+                "reponsesIndices": [
+                    0
+                ],
+                "explication": "Sur 5 millions de tonnes présentes sur le marché, près de 4 millions sont jetés."
+            },
+            {
+                "question": "Selon OXFAM, 130 milliards de vêtements sont consommés, par an, dans le monde.",
+                "propositions": [
+                    "Vrai",
+                    "faux"
+                ],
+                "reponsesIndices": [
+                    0
+                ],
+                "explication": "La quantité a doublé entre 2000 et 2014 !"
+            }
+        ],
+        "difficile": [
+            {
+                "question": "Combien de kilomètres peut parcourir un jean du champ de coton jusqu'au magasin de vente ?",
+                "propositions": [
+                    "10 km à la ronde",
+                    "600 000 km à vol d'oiseau",
+                    "65 000 km",
+                    "9999 km la distance du diable"
+                ],
+                "reponsesIndices": [
+                    2
+                ],
+                "explication": "65 000 km soit 1,5 fois le tour de la planète selon OXFAM"
+            },
+            {
+                "question": "Selon l'ADEME, il faut 2500 litres d'eau pour fabriquer un t-shirt en coton.",
+                "propositions": [
+                    "Vrai",
+                    "faux"
+                ],
+                "reponsesIndices": [
+                    0
+                ],
+                "explication": "Et oui ! C'est l'équivalent de 70 douches !"
+            },
+            {
+                "question": "Combien de tonnes de gaz à effet de serre sont émis chaque année par le secteur du textile selon OXFAM ?",
+                "propositions": [
+                    "1,2 milliard de tonnes",
+                    "32 milliards de tonnes",
+                    "70 000 millions de tonnes",
+                    "23 tonnes"
+                ],
+                "reponsesIndices": [
+                    0
+                ],
+                "explication": "Un impact plus conséquent que le trafic maritime et les vols internationaux réunis."
+            }
+        ]
+    },
+    "Mobilité": {
+        "facile": [
+            {
+                "question": "D'après WWF, sur 100 voitures qui roulent en France, combien utilisent des énergies fossiles ?",
+                "propositions": [
+                    "12%",
+                    "47%",
+                    "82%",
+                    "99%"
+                ],
+                "reponsesIndices": [3],
+                "explication": "Bon, de toute façon, les véhicules électriques posent des problèmes de pollutions tout aussi important."
+            },
+            {
+                "question": "Dans les actifs habitant à moins de 5 km de leur travail, combien privilégient la voiture pour se déplacer au boulot ?",
+                "propositions": [
+                    "10%",
+                    "35%",
+                    "42%",
+                    "60%"
+                ],
+                "reponsesIndices": [3],
+                "explication": "On trouve le reste dans la marche et le vélo (23%), les transports en commun (15%) et les deux roues motorisés (2%). Source : INSEE 2021."
+            },
+            {
+                "question": "Selon vous, quel pourcentage de la population française est prête à utiliser plus souvent les transports en commun, le vélo ou la marche à pied ?",
+                "propositions": [
+                    "20%",
+                    "35%",
+                    "61%",
+                    "82%"
+                ],
+                "reponsesIndices": [3],
+                "explication": "Ya plus qu'à ! (sondage WWF France IFOP, 2017)"
+            }
+        ],
+        "difficile": [
+            {
+                "question": "La pollution atmosphérique engendre 67 000 morts prématurées par an en France. Quelle est la part du secteur des transports ?",
+                "propositions": [
+                    "33%",
+                    "50%",
+                    "75%",
+                    "90%"
+                ],
+                "reponsesIndices": [0],
+                "explication": "L'agence nationale Santé Publique France : Réfléchir à l'écologie, c'est aussi réfléchir à notre santé."
+            },
+            {
+                "question": "Quelle est la part de la mobilité dans les émissions de gaz à effets de serre (GES) en France ?",
+                "propositions": [
+                    "10%",
+                    "20%",
+                    "30%",
+                    "50%"
+                ],
+                "reponsesIndices": [
+                    2
+                ],
+                "explication": "C'est le secteur le plus polluant en terme d'émission de GES. Source : service des données et études statistiques (SDES). Le développement du réseau ferroviaire diminuerait cette pollution. A savoir : en France, à son apogée à la fin des années  1920, le réseau ferroviaire comportait le double de kilomètres de voies ferrées par rapport à aujourd'hui."
+            },
+            {
+                "question": "Les SUV, ces véhicules de loisirs plus lourds et plus énergivores que la moyenne, représentaient 5 % des ventes françaises en 2008. A combien s'élève leur part de marché aujourd’hui ?",
+                "propositions": [
+                    "2%",
+                    "5%",
+                    "16%",
+                    "38%"
+                ],
+                "reponsesIndices": [
+                    3
+                ],
+                "explication": "ADEME ; page internet"
+            }
+        ]
+    },
+    "Maison": {
+        "facile": [
+            {
+                "question": "Quelle pourcentage de la population française remplace son téléphone portable alors que le précédent fonctionne encore ?",
+                "propositions": [
+                    "25%",
+                    "31%",
+                    "42%",
+                    "65%"
+                ],
+                "reponsesIndices": [3],
+                "explication": "Source : ADEME"
+            },
+            {
+                "question": "Des quantités importantes d'objets peuvent s'accumuler dans nos logements. En moyenne, combien de tonnes d'objets sont accumulées dans un foyer français ?",
+                "propositions": [
+                    "1,2 tonnes",
+                    "2,5 tonnes",
+                    "9 tonnes",
+                    "20 tonnes"
+                ],
+                "reponsesIndices": [1],
+                "explication": "Source : ADEME"
+            },
+            {
+                "question": "En moyenne, un foyer français possède combien d'équipements électriques ?",
+                "propositions": [
+                    "20",
+                    "35",
+                    "67",
+                    "99"
+                ],
+                "reponsesIndices": [3],
+                "explication": "Source: Ecologic-france.com (en 2016)."
+            }
+        ],
+        "difficile": [
+            {
+                "question": "Combien de litres d'eau nécessite une baignoire ?",
+                "propositions": [
+                    "Plus de 150",
+                    "Moins de 50",
+                    "Entre 50 et 150"
+                ],
+                "reponsesIndices": [2],
+                "explication": "Donc essayez de trouver un autre moyen de vous relaxer après une journée stressante."
+            },
+            {
+                "question": "Quel est l'appareil éléctroménager le plus énergivore dans les maisons des français ?",
+                "propositions": [
+                    "Le four",
+                    "Le chauffage",
+                    "La climatisation"
+                ],
+                "reponsesIndices": [
+                    2
+                ],
+                "explication": "avec un cout moyen de 127,89 euros sur la base du cout moyen du KWh autour de 0,158. Etude Agence de la transition écologique Ademe 2021."
+            },
+            {
+                "question": "Globalement combien de téléphones ont été jété en 2022 ?",
+                "propositions": [
+                    "5,3 milliards",
+                    "1,5 milliard",
+                    "7 milliards"
+                ],
+                "reponsesIndices": [0],
+                "explication": "Selon le WEEE forum"
+            }
+        ]
+    },
+    "Jardinage": {
+        "facile": [
+            {
+                "question": "A quoi servent les coccinelles pour le jardinage ?",
+                "propositions": [
+                    "À chasser les pucerons",
+                    "À rendre le jardin plus joli",
+                    "À manger les mauvaises herbes",
+                    "À planter des haricots"
+                ],
+                "reponsesIndices": [0],
+                "explication": "Ce qui évite d'utiliser des pesticides"
+            },
+            {
+                "question": "Qu'est ce que l'éco-jardinage ?",
+                "propositions": [
+                    "Jardiner en adéquation avec l'économie",
+                    "Jardiner uniquement avec des herbicides",
+                    "Jardiner sans rateau",
+                    "Jardiner de façon durable sans utiliser de pesticides et en gérant sa quantité d'eau"
+                ],
+                "reponsesIndices": [
+                    3
+                ],
+                "explication": "Le choix n'était pas si difficile..."
+            },
+            {
+                "question": "Quelles sont les méthodes alternatives pour lutter contre les insectes ravageurs et les maladies présentes dans votre jardin ?",
+                "propositions": [
+                    "Utiliser des pesticides",
+                    "Asperger son jardin de gazoil",
+                    "Utiliser des prédateurs naturels",
+                    "Aucune méthode : votre jardin sera terrassé"
+                ],
+                "reponsesIndices": [2],
+                "explication": "Les remèdes maison à base de plantes, les barrières physiques et les méthodes de rotation des cultures sont les meilleures options !"
+            }
+        ],
+        "difficile": [
+            {
+                "question": "Quelle saison est la plus conseillée pour rempoter une plante ?",
+                "propositions": [
+                    "Printemps",
+                    "Été",
+                    "Automne",
+                    "Hiver"
+                ],
+                "reponsesIndices": [0],
+                "explication": "Et oui c'est le début des beaux jours !"
+            },
+            {
+                "question": "Quelle part de la population française trie ses biodéchets ?",
+                "propositions": [
+                    "10%",
+                    "63%",
+                    "44%",
+                    "74%"
+                ],
+                "reponsesIndices": [2],
+                "explication": "Rapport \"SPHERE\", avec OpinionWay (2020)"
+            },
+            {
+                "question": "Qu'est-ce que l'oïdium ?",
+                "propositions": [
+                    "Un répulsif contre les insectes",
+                    "La base de la tige d'une plante",
+                    "Une moisissure parasite des plantes"
+                ],
+                "reponsesIndices": [2],
+                "explication": "Qui d'entre vous, le savez ?"
+            }
+        ]
+    }
+}

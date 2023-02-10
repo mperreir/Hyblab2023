@@ -1,0 +1,92 @@
+{
+    "Alimentation": {
+        "facile": {
+            "nom": "L'agronaute",
+            "description": " L'Agronaute est une ferme urbaine",
+            "adresse" : "Rue du Sénégal, 44200 Nantes",
+            "fichier": "truc",
+            "lat": 47.200462,
+            "long": -1.567157
+        },
+        "difficile": {
+            "nom": "Scopéli",
+            "description": "Supermarché citoyen autogéré",
+            "adresse" : "20 rue de l’Abbé Grégoire 44 400 Rezé",
+            "fichier": "truc",
+            "lat": 47.1953127,
+            "long": -1.5770746
+        }
+    },
+    "Mode": {
+        "facile": {
+            "nom": "Ding Fring",
+            "description": "Magasins de type friperie, permettant de recycler et de donner une nouvelle vie aux vêtements à des prix abordables",
+            "adresse" : " 5 rue Charles Brunellière, 44100 Nantes",
+            "fichier": "truc",
+            "lat": 47.2090692,
+            "long": -1.5890913
+        },
+        "difficile": {
+            "nom": "Trocquerie",
+            "description": "Une boutique de seconde main",
+            "adresse" : "23 Rue Petite Biesse, 44200 Nantes",
+            "fichier": "truc",
+            "lat": 47.204088,
+            "long": -1.547592
+        }
+    },
+    "Mobilité": {
+        "facile": {
+            "nom": "Klaxit",
+            "description": "Application de covoiturage",
+            "adresse" : "",
+            "fichier": "truc",
+            "lat": 47.218102,
+            "long": -1.552800
+        },
+        "difficile": {
+            "nom": "Vélocampus",
+            "description": "Prêt de vélos aux étudiants",
+            "adresse" : "3 Chemin de la Censive du Tertre",
+            "fichier": "truc",
+            "lat": 47.2432793,
+            "long": -1.5632288
+        }
+    },
+    "Maison": {
+        "facile": {
+            "nom": "La boite à récup",
+            "description": "Association à but non lucratif, qui récupère des dons et les revend en boutique à petit prix.",
+            "adresse" : "112 Boulevard des Anglais Nantes",
+            "fichier": "truc",
+            "lat": 47.2262405,
+            "long": -1.592182
+        },
+        "difficile": {
+            "nom": "Envie",
+            "description": "Rénovation et revente d'appareils électriques",
+            "adresse" : "8 Rue St Domingue, 44200 Nantes",
+            "fichier": "truc",
+            "lat": 47.2014066,
+            "long": -1.579711
+        }
+    },
+    "Jardinage": {
+        "facile": {
+            "nom": "Brocante verte",
+            "description": "Brocante de plantes",
+            "adresse" : "13 boulevard des martyrs Nantais de la Résistance 44 000 Nantes",
+            "fichier": "truc",
+            "lat": 47.2041811,
+            "long": -1.5549895
+        },
+        "difficile": {
+            "nom": "Les composteurs du bocage nantais",
+            "description": "Animation d'un espace de convivialité, de compostage et d'un jardin partagé",
+            "adresse" : "à l'angle de la rue du Coudray et de l'avenue Camille Guérin, Nantes",
+            "fichier": "truc",
+            "lat": 47.2306007,
+            "long": -1.5524318
+        }
+    }
+}

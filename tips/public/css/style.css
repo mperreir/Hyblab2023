@@ -1,164 +1,470 @@
-/* ------- Important ! Please at least keep the last part of this CSS ----------- */
-/* ------- that adapts content width and height so that aspect ratio  ----------- */
-/* ------- is kept between 9/16 a,d 3/4 (portait orientation)         ----------- */
-
-/* Normalize margin and padding to ease elements positioning */
 *{
     padding:0;
     margin:0;
+    font-family: "Space Grotesk";
 }
 
 body{
-    background-color: black;
-    color: white;
+    background-color: #FFF3ED;
     overflow: hidden;   /* to avoid slider bugs on some browsers */
-    font-family: sans-serif;
+    font-family: SpaceGrotesk;
 }
 
-/* -------------- Loader --------------*/
-#loader{
-    z-index: 2;
-    position:absolute;
+#allerCarteCont {
+    display: flex;
+    justify-content: space-between;
 }
 
-#loader-img{
-    top:40%;
-    left:40%;
-    position: absolute;
+#scoreFin {
+    display: flex;
+    flex-direction: row-reverse;
 }
 
-#loader-text{
-    text-align: center;
-    font-size: 25%;
-    position: absolute;
-    top:60%;
-    width: 100%
+#allerALaCarte {
+    margin-left: 5%;
+    border-radius: 1em;
 }
-/* -------------- End of Loader --------------*/
 
-/* Swiper slider. Need to fill the container */
-#mySwiper{
+#phylactere {
+    width: 300px;
+    height: 60px;
+}
+
+#sectionReponses {
+    margin-bottom: 10px;
+}
+
+#sectionQuestions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#boutonIntro {
     width: 100%;
-    height:100%;
-    position: absolute;
+    display: flex;
+    justify-content: space-around;
 }
 
-/* white navigation bullets */
-.swiper-pagination-bullet-active {
-    background-color: white !important;
-}
-
-/* the slides and the loader should fill the whole 9:16 zone */
-.swiper-wrapper section, #loader{
-    background-color: dodgerblue;
-    width: 100%;
-    height: 100%;
-}
-
-/* Most of the elements in this demo are absolute positionned with percentages */
-#first-slide header, #second-slide header{
-    text-align: center;
-    width: 100%;
-    top: 10%;
-    position: absolute;
-    font-size: 30%;
-    z-index: 2;
-}
-
-#logo-hyblab{
-    text-align: center;
-    width: 50%;
-    left: 50%;
-    top: 50%;
-    margin-left:-25%;
-    margin-top:calc(-7.5% * 9 / 16 ); /* margins are relative to the element width... :-( */
-    position: absolute;
-    font-size: 50%;
-    z-index: 2;
-    cursor: pointer;
-}
-
-/* Last slide image is centered */
-#img-fini{
-    width: 70%;
-    left: 50%;
-    top: 40%;
-    position: absolute;
-    margin-left:-35%;
-    margin-top:calc(-25% * 9 / 16 ); /* margins are relative to the element width... :-( */
-}
-
-main > section{
-    background-image: url('../img/background.svg');
-    background-size: 100% 100%;
-}
-
-/* Footer of last slide is at the bottom and content is centered */
-#first-slide footer{
-    bottom: 5%;
-    position: absolute;
-    box-sizing: border-box; /* So that padding is not added to width (and width: 100% works) */
-    width: 100%; /* could also use  width: calc(100% - 2em) if not using box-sizing */
-    font-size: 20%;
-    text-align: center;
+button {
+    color: black;
+    font-weight: bold;
+    border: 4px solid black;
     padding: 1em;
-    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 0.2em;
+    border-radius: 1em;
 }
 
+.rep {
+    box-shadow: 6px 6px black;
+}
 
-/* ---------- Positionning of logos on the last slide -------------------- */
-/* here we have a contraint on the height of the logos (not the width)     */
-/* so we cannot use % and use em (which are proportinal to the size of the */
-/* slide because of body's font size rule at the end of this CSS           */
-#bandeau {
-    padding-top: 3%;
-    width:100%;
-    position: absolute;
-    bottom: 0;
-    background-color: white;
-    font-size: 20%;
-  }
+.rep:hover {
+    box-shadow: 6px 6px black;
+    top: 2px;
+}
 
-  #bandeau li{
-    list-style-type: none;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 0.5em;
-  }
+.rep:active {
+    box-shadow: 0 0 ;
+    top: 6px;
+}
 
-  #bandeau img{
-    height: 2.5em;
-  }
+#elefunMarche {
+    height: 600px;
+    width: 600px;
+}
 
-  #bandeau #hyblab{
-    margin: 1em auto;
-    height: 3em;
-    display: block;
-  }
+img {
+    width: 60px;
+    height: 60px;
+}
 
-  #bandeau #cc, #bandeau #opensource
-  {
-    height: 1em;
-  }
+#video {
+    z-index: -1;
+    width: 100%;
+}
 
-  #bandeau .stacked{
-    display:block;
-  }
+#miniCarte {
+    height: 506px;
+    width: 710px;
+    border-radius: 12px;
+}
 
-  #bandeau ul{
+#introduction {
+    display: flex;
+    justify-content: space-between;
+} 
+
+#discourtEleph {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#elefunIntro {
+    position: static;
+    width: 100%;
+    z-index: 1;
+}
+
+#phyphy {
+    position: relative;
+    bottom: 520px;
+    width: 300px;
+    height: 60px;
+    z-index: 10;
+}
+
+#texteIntro {
+    position: relative;
+    bottom: 500px;
+    z-index: 10;
+    text-align: justify;
+    font-size: 0.3em;
+    margin: 0 5%;
+}
+
+#carteFin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 0 0;
-    margin-bottom: 0.5em;
-  }
+}
 
-  #bandeau .institutionnel
-  {
-    height: 2em;
-  }
+#start {
+    position: relative;
+    bottom: 300px;
+    z-index: 10;
+}
 
-/* ---------- Important media queries for easy responsive content :-) ----------------- */
-/* Whatever the devie used, the content will be displayed full width and height if      */
-/* the aspect ratio is between 3/4 and 9/16. If not it is locked to either 3/4 or 3/16  */
+#carteInitiativePlus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#nomInitiativePlus {
+    text-align: center;
+    font-size : 0.5em;
+    font-weight: bold;
+}
+
+#titre {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logoInitiative {
+    width: 20%;
+    height: 20%;
+}
+
+#articleInitiative {
+    text-align: left;
+    font-size : 0.35em;
+    margin: 0.6em 0;
+    width: 800px;
+    height: 1000px;
+    overflow-y: scroll;
+    border-radius: 5%;
+    padding: 30px;
+}
+
+#credits {
+    border: none;
+    margin: 2em 0 0;
+}
+
+#logoContain {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15% 0;
+    gap: 0.5em;
+}
+
+#partenaires {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 25%;
+    height: 2%;
+}
+
+#carteCredits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content : center;
+}
+
+#retourCredits {
+    border-radius: 1em;
+    margin-right: 5%;
+}
+
+#Images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#carteScore {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 10%;
+}
+
+#scoreTotal {
+    display: flex;
+    flex-direction: column;
+}
+
+.elefunResultat {
+    width: 350px;
+    height: 350px;
+}
+
+#carteQuestion {
+    margin: 0.2em 0.3em 0 0.3em;
+    padding: 0.1em;
+    height: 15%;
+}
+
+#infoQuestContain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#menu {
+    display: flex;
+    font-size: 0.3em;
+    justify-content: space-around;
+    margin: 0.4em;
+    padding-top: 0.4em;
+}
+
+#menu button {
+    color: black;
+    background-color: #FFFBF0;
+    padding: 0.2em;
+    font-weight: normal;
+    margin: 0;
+    border: 4px solid black;
+}
+
+button {
+    background-color: #FFFBF0;
+}
+
+#menuouvert {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menuouvert button {
+    color: black;
+    font-size: 0.2em;
+    border: 4px solid black;
+    border-radius: 1em;
+    margin: 0.2em;
+}
+
+.itemmenu {
+    color: black;
+    font-size: 1em;
+    border: 1px solid black;
+    border-radius: 0.2em;
+}
+
+#menutxt {
+    display: flex;
+    flex-direction: column;
+    margin: 0.25em; 
+}
+
+.txt {
+    font-size: 0.3em;
+    font-weight: normal;
+}
+
+#choixThemes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    margin: 0.25em;
+    width: fit-content;
+    font-size: 1.2em;
+}
+
+#choixThemes button {
+    width: fit-content;
+}
+
+#Alimentation {
+    background-color: #FFE248;
+}
+
+#Mobilité {
+    background-color: #FF8B00;
+}
+
+#Jardinage {
+    background-color: #FEC6CD;
+}
+
+#Mode {
+    background-color: #B6A0FF;
+}
+
+#Maison {
+    background-color: #69D1FD;
+}
+
+#infoQuestion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.2em;
+    width: fit-content;
+}
+
+#difficulteQuestion {
+    font-size: 0.25em;
+    align-self: flex-start;
+}
+
+#nbQuestion {
+    font-size: 0.5em;
+}
+
+#themeQuestion {
+    font-size: 0.25em;
+    align-self: flex-end;
+}
+
+#sectionThemes {
+    display: flex;
+    flex-direction: column;
+}
+
+#Illu {
+    margin: 5px;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    flex-grow: 3;
+}
+
+.elefunStatic {
+    width: 400px;
+    height: 400px;
+}
+
+#sectionQuestions {
+    margin: 0.2em;
+    height: 25%;
+}
+
+#carteInitiative {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5% 10%;
+    height: 15em;
+    padding: 0 5%;
+}
+
+#nomInitiative {
+    font-weight: bold;
+}
+
+#boutonContain {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#voirPlusContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#videoArticle {
+    width: 60%;
+}
+
+.boutonNav {
+    border-radius: 1em;
+    margin: 0.2em;
+}
+
+#suivantContain {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#nextQuestionButtonContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#descriptionInitiative {
+    font-size: 0.6em;
+    align-content: center;
+}
+
+#adresseInitiative {
+    font-style: italic;
+    font-size: 0.5em;
+}
+
+#question {
+    font-size: 0.30em;
+    margin-top: 3%;
+}
+
+#sectionReponses {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    height: 30%;
+}
+
+.rep {
+    margin: 0.2em;
+    font-size: 0.2em;
+    border-radius: 1em;
+
+}
+
+#explication {
+    font-size: 0.2em;
+    height: 15%;
+    margin: 20px 0;
+}
+
+#carteInitiative {
+    font-size: 0.5em;
+}
 
 /* When the aspect ratio is smaller that 3/4, display a 3/4 content */
 #container{
@@ -168,8 +474,6 @@ main > section{
     width: calc(100 * 3vh / 4); /* Force 3/4 aspect ratio */
 }
 
-/* We set a default font size here. It will be the base for all other font sizes */
-/* Here the font size is proportional to content width */
 body{
     font-size: calc(15vh * 3 / 4);
 }
@@ -204,4 +508,3 @@ body{
         font-size: 15vw;
     }
 }
-
