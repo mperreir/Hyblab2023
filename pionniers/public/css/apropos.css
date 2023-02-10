@@ -43,10 +43,15 @@ header #petit-rond {
     background: var(--gris-clair);
     border-radius: 25px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    height: 70%;
+    height: 80%;
     width: 80%;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
     margin-top: 10%;
+}
+
+#remerciment a {
+    color: var(--bleu-fonce);
+    text-decoration: none;
 }
 
 #texte-merci {
@@ -55,10 +60,6 @@ header #petit-rond {
 
     font-size: 1.3em;
     line-height: 1.3;
-
-    scroll-behavior: smooth;
-    overflow: scroll;
-    overflow-x: hidden;
 
     margin-top: 5%;
 }
