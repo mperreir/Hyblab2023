@@ -210,7 +210,7 @@ function displayMiniature(Id){
         // Update the miniature content inner HTML
         miniature_content.innerHTML = `
                     <section class="photo-case">
-                        <img draggable="false" alt="photo-profil" src="${p.URLImage}">
+                        <img draggable="false" alt="photo-profil" src="${p.URLImage}" style="object-position: 50% ${p.HeightShiftImage}%;">
                     </section>
                     <section class="information-fiche flex-column justify-content-space-evenly">
                         <section class="carte-identite flex-column align-items-center-flex-start ${font_class}">

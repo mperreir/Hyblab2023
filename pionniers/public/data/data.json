@@ -1,5 +1,5 @@
 {
-  "range": "database!A1:AI974",
+  "range": "database!A1:AJ974",
   "majorDimension": "ROWS",
   "values": [
     [
@@ -20,6 +20,7 @@
       "ID Podcast",
       "Article associé",
       "URL image associée",
+      "Décalage vertical de l'image (0 = en centré en haut, 50 = centré verticalement, 100 = centré en bas)",
       "Lien linkedin"
     ],
     [
@@ -40,6 +41,7 @@
       "B6mqaSGLqGG3",
       "https://www.lejournaldesentreprises.com/loire-atlantique-vendee/article/la-start-athena-produit-de-lhydrogene-partir-des-dechets-de-lindustrie-agroalimentaire-2048717",
       "https://media.licdn.com/dms/image/C4D03AQEjDPcB0bdBRg/profile-displayphoto-shrink_800_800/0/1574691711067?e=1680739200&v=beta&t=txganjO7q7qPkZGMKtp8foVbFQS8itkU7AcTKRtXLPA",
+      "50",
       "https://www.linkedin.com/in/ludovic-briand-athena-hydrogene-biologique-vert-d%C3%A9carbone"
     ],
     [
@@ -60,6 +62,7 @@
       "bj7QxI8LK0ZP",
       "https://www.lejournaldesentreprises.com/loire-atlantique-vendee/article/lhyfe-deploie-la-premiere-plateforme-de-production-dhydrogene-en-mer-2045798",
       "https://media.licdn.com/dms/image/C4D03AQHwiQYHZs6Elg/profile-displayphoto-shrink_800_800/0/1600118338672?e=1680739200&v=beta&t=rFF4omZ9alNQNeSaf7Ah1ICCd2WwnRKAtDmh1nDA_rM",
+      "50",
       "https://www.linkedin.com/in/nolwenn-belléguic-202ba188"
     ],
     [
@@ -80,6 +83,7 @@
       "Bj7QxIQ5DnOE",
       "https://www.lejournaldesentreprises.com/finistere/article/lentreprise-dinvestissement-forestier-ecotree-leve-12-millions-deuros-2040548",
       "https://media.licdn.com/dms/image/C5603AQHjxYUjjxL93A/profile-displayphoto-shrink_800_800/0/1631004244160?e=1680739200&v=beta&t=k5QRZN7Hn2DOQ6D0FSNGVbmxd-RFGFdkx1cYBd7OEts",
+      "50",
       "https://www.linkedin.com/in/erwanlemene"
     ],
     [
@@ -100,6 +104,7 @@
       "B5kGahlGLr0",
       "https://www.lejournaldesentreprises.com/loire-atlantique-vendee/article/lisaqua-avance-grands-pas-vers-la-plus-grande-ferme-de-gambas-deurope-2047613",
       "https://media.licdn.com/dms/image/C4D03AQEQtY_qeXHiIQ/profile-displayphoto-shrink_800_800/0/1600245536358?e=1680739200&v=beta&t=DokM_xjLTVEthR9YF1U57Zz-EQI2Z4u8abpE7QfEuVk",
+      "50",
       "https://www.linkedin.com/in/gabrielboneu"
     ],
     [
@@ -120,6 +125,7 @@
       "B4nVaIDvw3qj",
       "https://www.lejournaldesentreprises.com/loire-atlantique-vendee/article/hoffmann-green-cement-le-ciment-est-le-second-materiau-le-plus-consomme-au-monde-apres-leau-2049886",
       "https://media.licdn.com/dms/image/C5603AQHNcYFuImdDCg/profile-displayphoto-shrink_800_800/0/1547030068835?e=1680739200&v=beta&t=EbEYqDrcYMbI7axqAcD2YG2hJi2bSdQTrhEX2Y3N7f4",
+      "50",
       "https://www.linkedin.com/in/julien-blanchard-a2232980"
     ],
     [
@@ -140,6 +146,7 @@
       "BxXRlTqjKlrj",
       "https://www.lejournaldesentreprises.com/loire-atlantique-vendee/article/les-voyants-sont-au-vert-pour-la-marque-de-mode-nantaise-faguo-2047422",
       "https://media.licdn.com/dms/image/D4E03AQGw680gKP20VA/profile-displayphoto-shrink_800_800/0/1667314218682?e=1680739200&v=beta&t=X60LbGairhR4nDgiQzKha_Im5rP0ZhMObFn6bfdR_Zo",
+      "50",
       "https://www.linkedin.com/in/fredmugnier"
     ],
     [
@@ -160,6 +167,7 @@
       "bl0QGU48zzWV",
       "https://www.lejournaldesentreprises.com/finistere/breve/les-hydroliennes-sabella-bientot-testees-dans-le-golfe-du-morbihan-2052050",
       "https://media.licdn.com/dms/image/C5603AQEknKFZXX9tRg/profile-displayphoto-shrink_800_800/0/1517475397492?e=1680739200&v=beta&t=I4ONcua83gAQuyEqPc6tfPxjQ-kkGN_R7NbVuBc0OiA",
+      "50",
       "https://www.linkedin.com/in/fanch-le-bris-0930a748"
     ],
     [
@@ -180,6 +188,7 @@
       "yJ3qAFaV2gdz",
       "https://www.lejournaldesentreprises.com/normandie/article/le-finisterien-towt-met-les-voiles-depuis-le-havre-pour-changer-dechelle-1753395?auHash=w2kxTjFJMhRgtoIkOTJi-SDuk-8zvA3xB0mF85m_BIo",
       "https://media.licdn.com/dms/image/C4E03AQG3FBjwWyrt-A/profile-displayphoto-shrink_800_800/0/1660056537761?e=1680739200&v=beta&t=BUeVBE-15OJLowSRehWL2Tyv189StPslur_8-oylpW0",
+      "50",
       "https://www.linkedin.com/in/guillaumelegrand"
     ],
     [
@@ -200,6 +209,7 @@
       "omlQxC92aE4J",
       "https://www.lejournaldesentreprises.com/loire-atlantique-vendee/article/sur-ses-terreaux-florentaise-fait-pousser-de-nouveaux-engagements-environnementaux-1964021?auHash=DwhOYnmh9Nx4Z0HVRHy0YFTpYukUKobSc13i_f8w6rQ",
       "https://static.wixstatic.com/media/a43666_c6e9d1a48d4f446db9692ddfcdcbc769~mv2.png/v1/fill/w_500,h_500,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/Capsule%2093_edited.png",
+      "50",
       "https://www.linkedin.com/in/chloé-moreau-chupin-9a5167101"
     ],
     [
@@ -220,6 +230,7 @@
       "braElTKrA7wy",
       "https://www.lejournaldesentreprises.com/region-sud/article/avec-sa-micro-algue-inalve-veut-nourrir-la-planete-728238",
       "https://media.licdn.com/dms/image/D4E35AQFsBrWlMhuvDw/profile-framedphoto-shrink_800_800/0/1672674431307?e=1676473200&v=beta&t=bTkbaDmxZ97cXvCmQ6VB99PlvwXokoO577raQx4HHGg",
+      "50",
       "https://www.linkedin.com/in/veronique-raoul"
     ],
     [
@@ -240,6 +251,7 @@
       "oRJr1Cq6OOWm",
       "https://www.lejournaldesentreprises.com/finistere/article/eco-action-plus-et-mego-prennent-une-nouvelle-dimension-saint-divy-2042353",
       "https://media.licdn.com/dms/image/C5603AQGhN_GIRCf-TQ/profile-displayphoto-shrink_800_800/0/1570292140598?e=1680739200&v=beta&t=T4b2M8zKqT6uOGWJRFYdJZWu01LaOLeJyDjyTHwIMlQ",
+      "50",
       "https://www.linkedin.com/in/bastien-lucas-14011821"
     ],
     [
@@ -260,6 +272,7 @@
       "b3jpaUMgk9G2",
       "https://www.lejournaldesentreprises.com/hauts-de-france/article/ynsect-inaugure-ynfarm-la-plus-grande-ferme-dinsectes-au-monde-1271459",
       "https://media.licdn.com/dms/image/C5603AQGICCWiN5nsug/profile-displayphoto-shrink_800_800/0/1516869998457?e=1680739200&v=beta&t=DlIRsFpH6-llyWLVHpPZGK1Ch4mR6bTEqCglmEzD2qw",
+      "50",
       "https://www.linkedin.com/in/antoine-hubert-38a3523b"
     ],
     [
@@ -280,6 +293,7 @@
       "B4nVaIKJ0774",
       "https://www.lejournaldesentreprises.com/normandie/article/recyouest-veut-recycler-les-filets-agricoles-linfini-1578632",
       "https://media.licdn.com/dms/image/C4E03AQFsyW2FRvOQ_w/profile-displayphoto-shrink_800_800/0/1517238615665?e=1680739200&v=beta&t=G_nJKZX1iJWGXGRQpwuzjFFnJK-jOYmxmoDzmPIEil8",
+      "50",
       "https://www.linkedin.com/in/marcela-moisson-5ba54a89"
     ],
     [
@@ -300,6 +314,7 @@
       "oZmr2SGJajL7",
       "https://www.lejournaldesentreprises.com/occitanie/article/la-plateforme-de-financement-participatif-enerfip-lance-le-bon-coin-des-actions-vertes-2044590",
       "https://media.licdn.com/dms/image/C5603AQFU156ID5_SkQ/profile-displayphoto-shrink_800_800/0/1517518984466?e=1680739200&v=beta&t=atWp-UbL5u2vrLT7rnKDzMcWwOnEQAb9TMeYs7BE-kw",
+      "50",
       "https://www.linkedin.com/in/julienhostache"
     ],
     [
@@ -320,6 +335,7 @@
       "b5kGah20a1PY",
       "https://www.lejournaldesentreprises.com/finistere/article/la-start-brestoise-de-location-davions-electriques-green-aerolease-prepare-son-envol-2045074",
       "https://media.licdn.com/dms/image/C4E03AQEnOwl_KcaKTg/profile-displayphoto-shrink_800_800/0/1552470495906?e=1680739200&v=beta&t=EZL0nBesw7AgUK9Sz6nnkL0RCWgvcb9tD-en8J0Ffnk",
+      "50",
       "https://www.linkedin.com/in/charlescabillic"
     ],
     [
@@ -340,6 +356,7 @@
       "bz9jltrgQ6DN",
       "https://www.lejournaldesentreprises.com/region-sud/article/pour-neptech-les-jo-de-paris-2024-vont-constituer-une-vitrine-internationale-sans-equivalent-2040718",
       "https://media.licdn.com/dms/image/C4E03AQFSU0ppdG-fig/profile-displayphoto-shrink_800_800/0/1620721707753?e=1680739200&v=beta&t=I2ZTY05yC8C8m8NJuohd9eZV2yNkAMZNsEIYi_lfcEA",
+      "50",
       "https://www.linkedin.com/in/tanguy-goetz-a1b81a40"
     ],
     [
@@ -360,6 +377,7 @@
       "BMqdzFL1V3pk",
       "https://www.lejournaldesentreprises.com/ille-et-vilaine/article/hydrogene-eodev-leve-20-millions-deuros-pour-passer-lindustrialisation-528569",
       "https://media.licdn.com/dms/image/C4E03AQEqpGJNhi6r7w/profile-displayphoto-shrink_800_800/0/1516843038580?e=1680739200&v=beta&t=w_1sJsaBod438iVl69g10IF9lKSDJACWJREx9VBXU9Q",
+      "50",
       "https://www.linkedin.com/in/jeremie-lagarrigue-2a724b97/"
     ],
     [
@@ -380,6 +398,7 @@
       "yeQpvuEVn0Zw",
       "https://www.lejournaldesentreprises.com/normandie/article/reglo-innove-avec-des-croquettes-aux-insectes-1709740?auHash=64m2-b3BYaN_QcChPqqGoOJP52jGBFtUM-AWpVbJeFI",
       "https://media.licdn.com/dms/image/C4E03AQHvZ3FRh0EZsw/profile-displayphoto-shrink_800_800/0/1641654878539?e=1680739200&v=beta&t=DEHdBTvpQro8Fg9KYEeJzSIf-PaGLi8NfKh9mQPeFdk",
+      "50",
       "https://www.linkedin.com/in/basile-laigre/"
     ],
     [
@@ -400,6 +419,7 @@
       "B1RlaIrranN7",
       "https://www.lejournaldesentreprises.com/occitanie/article/aline-bsaibes-itk-la-crise-climatique-favorise-lacceptation-du-numerique-dans-lagriculture-1765944",
       "https://media.licdn.com/dms/image/D4D03AQEi1nIup0wqDg/profile-displayphoto-shrink_800_800/0/1670226195054?e=1680739200&v=beta&t=blyf9JJAE982l79XdkeYIjXPdpvImAFn_8lC8g1DDv8",
+      "50",
       "https://www.linkedin.com/in/aline-bsaibes-1229ba25/"
     ],
     [
@@ -420,6 +440,7 @@
       "ykewxUqlN4OY",
       "",
       "https://media.licdn.com/dms/image/D4E03AQEcrUhgKRmfXg/profile-displayphoto-shrink_800_800/0/1668674488221?e=1680739200&v=beta&t=He44YtLebum4EEqiX9hR_B1s5nU8oyh-bOvwHQAYtdA",
+      "50",
       "https://www.linkedin.com/in/etienne-beaugrand-0b924b14/"
     ],
     [
@@ -440,6 +461,7 @@
       "BNa6OTDZmYK9",
       "https://www.lejournaldesentreprises.com/maine-et-loire-sarthe/article/la-start-industrielle-neolithe-leve-20-millions-deuros-pour-entamer-son-deploiement-commercial-2040063",
       "https://media.licdn.com/dms/image/C5603AQG9ykVNGezuXw/profile-displayphoto-shrink_800_800/0/1646070375689?e=1680739200&v=beta&t=hpV53KyeKWoMORo8ovVlCQbEyiNiziLaWxW2ROA4Abo",
+      "50",
       "https://www.linkedin.com/in/nicolas-cruaud/"
     ],
     [
@@ -460,6 +482,7 @@
       "oLKqOCgOw3EB",
       "https://www.lejournaldesentreprises.com/maine-et-loire-sarthe/article/le-groupe-comesa-transforme-les-masques-jetables-en-seaux-compost-2011378",
       "https://media.licdn.com/dms/image/C4D03AQE-odZpYvMoog/profile-displayphoto-shrink_800_800/0/1638357100231?e=1680739200&v=beta&t=nPNMBcafAxJWCp83zJBRfO3x5GJ2o2FLHdodvV68wDM",
+      "50",
       "https://www.linkedin.com/in/emmanuel-bardin/"
     ],
     [
@@ -480,6 +503,7 @@
       "oRJr1C7kEKN4",
       "",
       "https://media.licdn.com/dms/image/C4E03AQE_yBdo3HGqrg/profile-displayphoto-shrink_800_800/0/1649349772998?e=1680739200&v=beta&t=7cZ_9dcvNnDHqU1_9b7Xr20j6U8jE6LfC9eNkowr34Y",
+      "50",
       "https://www.linkedin.com/in/patrick-buchard-2b90525b/"
     ],
     [
@@ -500,6 +524,7 @@
       "bz9jlt129RRm",
       "https://www.lejournaldesentreprises.com/maine-et-loire-sarthe/article/comerso-poursuit-son-developpement-avec-les-invendus-non-alimentaires-1694822",
       "https://media.licdn.com/dms/image/C5603AQHGeVLHLju4lQ/profile-displayphoto-shrink_800_800/0/1623861847922?e=1680739200&v=beta&t=jzR1NZ30NIcRWiFOhVvE73nYBLLo7UCT1OdkWVYsfVQ",
+      "50",
       "https://www.linkedin.com/in/pierre-yves-pasquier-4169466b/"
     ],
     [
@@ -520,6 +545,7 @@
       "yOEa8Tz2m9Op",
       "https://www.lejournaldesentreprises.com/nouvelle-aquitaine/article/toopi-organics-autorise-commercialiser-son-engrais-base-durine-2048105",
       "https://media.licdn.com/dms/image/C5603AQFgjW-ZpoMWlg/profile-displayphoto-shrink_800_800/0/1660145023842?e=1680739200&v=beta&t=h9UgdZtDQM52BdRu2PE6F-KRDoAwLXLb7XlYUEwqo10",
+      "50",
       "https://www.linkedin.com/in/michael-roes-322994144/"
     ],
     [
@@ -540,6 +566,7 @@
       "ygGmxHnMx79K",
       "https://www.lejournaldesentreprises.com/alsace/article/knot-etoffe-son-offre-de-stations-pour-trottinettes-electriques-2049371",
       "https://media.licdn.com/dms/image/C4E03AQF4cWWkzzNmog/profile-displayphoto-shrink_800_800/0/1630920176863?e=1681344000&v=beta&t=BPEltpOzQMawVahnhw18-fLOlWJLMdQdCD3mIRtWTi4",
+      "50",
       "https://www.linkedin.com/in/polina-knot/"
     ],
     [
@@ -560,6 +587,7 @@
       "bj7QxIxd4REk",
       "https://www.lejournaldesentreprises.com/cotes-darmor/article/algroupe-veut-valoriser-lalgue-lactofermentee-pour-lagroalimentaire-et-la-nutrition-animale-1913488",
       "https://media.licdn.com/dms/image/C4E03AQGBlyLeodjq2A/profile-displayphoto-shrink_800_800/0/1611660726660?e=1680739200&v=beta&t=Wv4nK5MwlosiXbMJyQIBNpMn_P4PNsfF9jmq0tXIqOw",
+      "50",
       "https://www.linkedin.com/in/mahe-st%C3%A9phane-algood/"
     ],
     [
@@ -580,6 +608,7 @@
       "BQMG1I96A2Ew",
       "https://www.lejournaldesentreprises.com/morbihan/article/zalg-sinvite-en-cuisine-avec-ses-des-dalgues-poeler-2039952",
       "https://media.licdn.com/dms/image/C4D03AQESE2l6iIRqFg/profile-displayphoto-shrink_800_800/0/1611669026069?e=1680739200&v=beta&t=Hhu9R_oGumCVl5ZDzhJTg5u3DWhy840owd4IC5MVTuE",
+      "50",
       "https://www.linkedin.com/in/tanguy-gestin/"
     ],
     [
@@ -600,6 +629,7 @@
       "ykewxU4rQQVZ",
       "https://www.lejournaldesentreprises.com/auvergne-rhone-alpes/breve/revcoo-leve-35-millions-deuros-pour-accelerer-sur-la-captation-de-co2-2041163",
       "https://media.licdn.com/dms/image/C4D03AQFoCv70WlRJoA/profile-displayphoto-shrink_800_800/0/1581327091682?e=1680739200&v=beta&t=cqjslWA4zgS39DsMd2CyxLYHLVhmCtEjsoXyJFnS_y8",
+      "50",
       "https://www.linkedin.com/in/hugo-lucas-a21479111/"
     ],
     [
@@ -620,6 +650,7 @@
       "bz9jltkPJRJw",
       "https://www.lejournaldesentreprises.com/maine-et-loire-sarthe/article/inwest-group-sengage-dans-le-developpement-durable-en-creant-ma-grande-foret-2050399",
       "https://static.wixstatic.com/media/a43666_b8b25e7a8be740668fca79bc8fd26100~mv2.png/v1/fill/w_625,h_625,al_c,q_90,usm_0.33_1.00_0.00,enc_auto/Capsule%2093_edited.png",
+      "50",
       "https://www.linkedin.com/in/mickael-esnault-72323438/"
     ],
     [
@@ -640,6 +671,7 @@
       "yvJ2lCqeXalm",
       "https://www.lejournaldesentreprises.com/lorraine/article/labellise-solar-impulse-green-tech-innovations-vise-linternational-855859",
       "https://media.licdn.com/dms/image/C4D03AQGfyssk5V0qVQ/profile-displayphoto-shrink_800_800/0/1607828757928?e=1680739200&v=beta&t=4zfuZadLeRQ7prhGtc7078l1qjQGhyN-_WpdFPeI7Bg",
+      "50",
       "https://www.linkedin.com/in/green-tech-innovations-david-chquiry/"
     ],
     [
@@ -660,6 +692,7 @@
       "BD8dOIGQ2r1X",
       "https://www.lejournaldesentreprises.com/finistere/article/chancerelle-simpose-sa-propre-charte-de-peche-responsable-513912",
       "https://media.licdn.com/dms/image/C5603AQHj0WV88g5EBQ/profile-displayphoto-shrink_800_800/0/1642780353986?e=1680739200&v=beta&t=kIYIC9OHKhy4S0pPyviKEztL45VKixn6I2LCJD8fx1Q",
+      "50",
       "https://www.linkedin.com/in/jean-fran%C3%A7ois-feillet-37a50949/"
     ],
     [
@@ -680,6 +713,7 @@
       "b5kGahAMPJwa",
       "https://www.lejournaldesentreprises.com/region-sud/article/avec-ses-mini-centrales-le-varois-mini-green-power-cible-les-grands-comptes-1784583",
       "https://media.licdn.com/dms/image/C4E03AQHKY97eZgRW1A/profile-displayphoto-shrink_800_800/0/1639112573420?e=1680739200&v=beta&t=c2BHmVq4oMNFEn2O2yjhE1I0omyyzOEX3ZdBlWgq0do",
+      "50",
       "https://www.linkedin.com/in/jean-riondel-339a6457/"
     ],
     [
@@ -700,6 +734,7 @@
       "BGeqOU81XLR6",
       "https://www.lejournaldesentreprises.com/occitanie/breve/arm-engineering-va-developper-une-centrale-electrique-verte-pour-lindustrie-du-batiment-2051205",
       "https://media.licdn.com/dms/image/C4D03AQErW-ZMycaFWA/profile-displayphoto-shrink_800_800/0/1647699101397?e=1680739200&v=beta&t=rNb16bKziRzyxCLY7YAYXLS4a2srxbraXV234A4bGwY",
+      "50",
       "https://www.linkedin.com/in/marc-lambec-b2a39212b/"
     ],
     [
@@ -720,6 +755,7 @@
       "y0Xx4TkZX4EZ",
       "",
       "https://media.licdn.com/dms/image/C5603AQFThOlQ1Yy9FQ/profile-displayphoto-shrink_800_800/0/1571297821208?e=1680739200&v=beta&t=uB9aCE5VEMDdahFayG5olSCAkv3s1Rfd5Zw0T1NUvaQ",
+      "50",
       "https://www.linkedin.com/in/jean-foyer-01b46812/"
     ],
     [
@@ -740,6 +776,7 @@
       "BGeqOUJAeGjX",
       "https://www.lejournaldesentreprises.com/nouvelle-aquitaine/article/fonroche-veut-rendre-leclairage-public-plus-ecologique-2008903",
       "https://static.wixstatic.com/media/a43666_7657df4cd31a415c8c1eef8aa932f1e4~mv2.png/v1/fill/w_625,h_625,al_c,q_90,usm_0.33_1.00_0.00,enc_auto/Capsule%2093_edited.png",
+      "50",
       "https://www.linkedin.com/company/fonroche-eclairage/"
     ],
     [
@@ -760,6 +797,7 @@
       "ypKQaC6n8wNn",
       "https://www.lejournaldesentreprises.com/occitanie/article/swan-h-veut-revolutionner-la-filiere-energie-avec-lammoniac-vert-2049959",
       "https://media.licdn.com/dms/image/D4E03AQFA3F5KANUPHA/profile-displayphoto-shrink_800_800/0/1669651403195?e=1680739200&v=beta&t=29rGtvnAkqnrEYn7GuJbC46X5eRfL06wW0yu7p49LVQ",
+      "50",
       "https://www.linkedin.com/in/augustin-de-bettignies/"
     ],
     [
@@ -780,6 +818,7 @@
       "bj7QxIXRz3Og",
       "",
       "https://media.licdn.com/dms/image/C4D03AQGTMV_LlryfFg/profile-displayphoto-shrink_800_800/0/1602498299136?e=1680739200&v=beta&t=WYIO67JgNaHUVlPyj1l0AxJgbbGSEmFbovziRI03yQM",
+      "50",
       "https://www.linkedin.com/in/luc-les%C3%A9n%C3%A9cal-7b53761b6/"
     ],
     [
@@ -800,6 +839,7 @@
       "BQMG1IWaaYnR",
       "https://www.lejournaldesentreprises.com/auvergne-rhone-alpes/article/la-relocalisation-des-jeans-1083-se-poursuit-avec-les-boutons-2053262",
       "https://www.lejournaldesentreprises.com/sites/lejournaldesentreprises.com/files/styles/landscape_web/public/2023-01/Thomas-Huriez-dirigeant-fondateur-de-la-marque-de-25589233.jpeg?h=14796896&itok=O3GVs6eR",
+      "50",
       "https://www.linkedin.com/in/thomas-huriez-348756184/"
     ],
     [
@@ -820,6 +860,7 @@
       "BMqdzFEalNQZ",
       "https://www.lejournaldesentreprises.com/alsace/article/les-initiatives-des-eaux-carola-wattwiller-en-faveur-de-lenvironnement-1487664",
       "https://media.licdn.com/dms/image/C4E03AQEZxEZJgeGFvg/profile-displayphoto-shrink_800_800/0/1608386486985?e=1680739200&v=beta&t=PjUCgCok932GPfB08mplD_vJjPXW6w4JM8Jx5uT5Nz8",
+      "50",
       "https://www.linkedin.com/in/valerie-siegler-ba59578/"
     ],
     [
@@ -840,6 +881,7 @@
       "ypKQaCNYxd6z",
       "https://www.lejournaldesentreprises.com/occitanie/breve/la-climtech-sweep-cree-une-solution-pour-verdir-les-portefeuilles-dinvestissement-2047433",
       "https://media.licdn.com/dms/image/C4E03AQErVbCw0jMZEA/profile-displayphoto-shrink_800_800/0/1626109259402?e=1680739200&v=beta&t=umrxWCxIkHjdgNoPHNwcA37WgmHKFsB_yVwVkR2QBDQ",
+      "50",
       "https://www.linkedin.com/in/wearecloudrachel/"
     ],
     [
@@ -860,6 +902,7 @@
       "ykewxUQRm1Vp",
       "",
       "https://media.licdn.com/dms/image/C4D03AQHry2FGLaP22A/profile-displayphoto-shrink_800_800/0/1601891772947?e=1680739200&v=beta&t=heAko9K_Ml4gWuF_VfHogeijAFoluNqUJvsU1oeqKwg",
+      "50",
       "https://www.linkedin.com/in/caroline-poissonnier-a5bb97142/"
     ],
     [
@@ -880,6 +923,7 @@
       "yvJ2lCWx5V78",
       "",
       "https://media.licdn.com/dms/image/C5603AQFQ64IfFnSMqg/profile-displayphoto-shrink_800_800/0/1573768494980?e=1680739200&v=beta&t=aPFEdqkj9GqBuAWLHxvxS9CzeF2rjm7rbUaBg_YQbks",
+      "50",
       "https://www.linkedin.com/in/jean-olivier-michaux-15374b3/"
     ],
     [
@@ -900,6 +944,7 @@
       "gyJ3qAF32jdb",
       "",
       "https://media.licdn.com/dms/image/C5603AQExkgMoE56Dug/profile-displayphoto-shrink_800_800/0/1520270613272?e=1680739200&v=beta&t=t0Lu16nVXqdZdssbxdfb9z0nOE8XFoij7GDZIzJqk08",
+      "50",
       "https://www.linkedin.com/in/jmhupe-64/"
     ],
     [
@@ -920,6 +965,7 @@
       "",
       "https://www.lejournaldesentreprises.com/loire-atlantique-vendee/article/fairmat-industrialise-le-recyclage-de-la-fibre-de-carbone-dans-son-usine-pilote-de-nantes-2051372",
       "https://www.lejournaldesentreprises.com/sites/lejournaldesentreprises.com/files/styles/landscape_web/public/2023-01/Benjamin-Saada-a-fond-en-2020-la-socit-Saasa-231939.jpeg?h=e5e44c6a&itok=gqoLGgQT",
+      "50",
       "https://www.linkedin.com/in/ben-saada-8b09a518/"
     ],
     [
@@ -940,6 +986,7 @@
       "",
       "https://www.lejournaldesentreprises.com/morbihan/article/terremologic-offre-une-seconde-vie-aux-coquilles-doeufs-2049572",
       "https://media.licdn.com/dms/image/D4E03AQGfDkBDMTetNA/profile-displayphoto-shrink_800_800/0/1668449233213?e=1680739200&v=beta&t=FNXzwrm2tbqcW7YBXqOxpN1FIfvM60FrwZ51VmzkEDI",
+      "50",
       "https://www.linkedin.com/in/paul-gilles-chedaleux-09a0b2255/"
     ],
     [
@@ -960,6 +1007,7 @@
       "",
       "https://www.lejournaldesentreprises.com/normandie/article/binhappy-developpe-le-recyclage-des-dechets-alimentaires-des-restaurants-1766401?auHash=VfmEuhL_6CGJkcjMsuoZUDeCwrt2SlR8NttCmes2NYw",
       "https://media.licdn.com/dms/image/D4E03AQHRdJp8mMJVdQ/profile-displayphoto-shrink_800_800/0/1669061712635?e=1680739200&v=beta&t=XdTfCNnXS8PZPn0yazGNISgM3mDd4N9o5dDugcucXYs",
+      "50",
       "https://www.linkedin.com/in/ma%C3%ABlis-de-witte-796940142/"
     ],
     [
@@ -980,6 +1028,7 @@
       "",
       "https://www.lejournaldesentreprises.com/occitanie/article/greensea-va-batir-une-bioraffinerie-de-microalgues-2049680",
       "https://media.licdn.com/dms/image/C4D03AQFU0YvecxhkFA/profile-displayphoto-shrink_800_800/0/1574791030393?e=1680739200&v=beta&t=b8hZ7XbqaAaaSRQegz8VxiCm6ajHJTHg8sVg0K6ol7Y",
+      "50",
       "https://www.linkedin.com/in/eric-causse-16960a3b/"
     ],
     [
@@ -1000,6 +1049,7 @@
       "",
       "https://www.lejournaldesentreprises.com/auvergne-rhone-alpes/article/les-bateaux-volants-de-seabubbles-entament-leur-decollage-2049822?auHash=hkPP37bZycX6CTMQvxx12j7Gmjkv8iNgqCNm94oKrQw",
       "https://media.licdn.com/dms/image/D5603AQEU_okr902Lhw/profile-displayphoto-shrink_800_800/0/1630568336856?e=1680739200&v=beta&t=7MioPzGsvNaAdwUdVA_smlFugrx7rijrsHDYVJJCMRo",
+      "50",
       "https://www.linkedin.com/in/virginielucseurat/"
     ],
     [
@@ -1020,6 +1070,7 @@
       "",
       "https://www.lejournaldesentreprises.com/region-sud/article/sakowin-mise-sur-le-co-developpement-pour-generaliser-la-production-dhydrogene-decarbone-1817963",
       "https://media.licdn.com/dms/image/D4E03AQHPP8ZNeGYrdA/profile-displayphoto-shrink_800_800/0/1665239652775?e=1680739200&v=beta&t=ebc7X1v9vJoDLNFRuaHbnqs5QodslddAJNYISQ88JRM",
+      "50",
       "https://www.linkedin.com/in/gerard-gatt/"
     ],
     [
@@ -1040,6 +1091,7 @@
       "",
       "https://www.lejournaldesentreprises.com/normandie/article/la-start-greenoco-mesure-lempreinte-carbone-des-sites-web-2025183?auHash=iO3s2uaOdStvtDFeeX_h01599kx2JWrP3XgUC0UawvA",
       "https://media.licdn.com/dms/image/C4E03AQFmEUhmeps_Gw/profile-displayphoto-shrink_100_100/0/1659710662296?e=1680739200&v=beta&t=Lv0v9zz0tVxJNeBcz8FEmUisoPo4_AvNi-U16E4lhgE",
+      "50",
       "https://www.linkedin.com/in/mathieu-cottard-5999254b/"
     ],
     [
@@ -1060,6 +1112,7 @@
       "",
       "https://www.lejournaldesentreprises.com/morbihan/article/windcoop-passe-par-lita-pour-accelerer-la-decarbonation-du-fret-maritime-2051749",
       "https://media.licdn.com/dms/image/C4E03AQEevZxDjola2A/profile-displayphoto-shrink_800_800/0/1647369633045?e=1680739200&v=beta&t=HUdvIYBZbVviV3-ofQHz84HUfhV5m-UwjS8XIjZ-h3A",
+      "50",
       "https://www.linkedin.com/in/louisechopinet/"
     ],
     [
@@ -1080,6 +1133,7 @@
       "",
       "https://www.lejournaldesentreprises.com/auvergne-rhone-alpes/article/verkor-leve-250-millions-deuros-pour-son-centre-technologique-grenoble-2048510",
       "https://media.licdn.com/dms/image/D4E03AQH1C8n7xqtg8A/profile-displayphoto-shrink_800_800/0/1630615635091?e=1680739200&v=beta&t=kb10AB25G8c1sdGqASOAtCNB6XbDfdcBTp-XxWNwfdE",
+      "50",
       "https://www.linkedin.com/in/benoit-lemaignan/"
     ],
     [
@@ -1100,6 +1154,7 @@
       "",
       "https://www.lejournaldesentreprises.com/loire-atlantique-vendee/article/bout-bout-cherche-400-000-euros-pour-accelerer-le-recyclage-des-bouteilles-en-verre-2044848",
       "https://media.licdn.com/dms/image/C5603AQFHs1TJOdZ5FQ/profile-displayphoto-shrink_800_800/0/1620399580787?e=1680739200&v=beta&t=3lq7juz3HGsADScMa8lGHymP1fKLVS1IMNbjLRrnrPw",
+      "50",
       "https://www.linkedin.com/in/celie-couche/"
     ],
     [
@@ -1120,6 +1175,7 @@
       "",
       "https://www.lejournaldesentreprises.com/hauts-de-france/article/starklab-est-pret-depolluer-lair-du-monde-entier-279966",
       "https://media.licdn.com/dms/image/C5103AQFsxu7_jiDi-g/profile-displayphoto-shrink_800_800/0/1516276648712?e=1680739200&v=beta&t=UC8AILS8rFwadPqUgXmSTGl6uG63Bj5q_3l0sRs3Fz4",
+      "50",
       "https://www.linkedin.com/in/jaouad-zemmouri-3344ab1/"
     ],
     [
@@ -1140,6 +1196,7 @@
       "",
       "https://www.lejournaldesentreprises.com/normandie/article/grace-ses-levees-de-fonds-greenbig-accelere-son-developpement-1984775?auHash=ISby7HBsbbrhqu_MTD2Bb8w4sJTwAeWc2y6ItOb6UoU",
       "https://media.licdn.com/dms/image/D4E03AQGIMGnCXAySmw/profile-displayphoto-shrink_800_800/0/1673814395800?e=1680739200&v=beta&t=Hn3z4GtcmJrdhzC3v4XMQHuVT1w7ESlDmvOyHEeOpps",
+      "50",
       "https://www.linkedin.com/in/benoitpaget/"
     ],
     [
@@ -1160,6 +1217,7 @@
       "",
       "https://www.lejournaldesentreprises.com/nouvelle-aquitaine/article/newheat-decarbone-la-ville-de-pons-avec-sa-centrale-solaire-thermique-2042818",
       "https://media.licdn.com/dms/image/C4E03AQE-sxvsLVSVgA/profile-displayphoto-shrink_800_800/0/1656684108440?e=1680739200&v=beta&t=G8MNnG7EWuGRiRmi-Xj3e3U0FhCJp4X8tQ37MOMFeW4",
+      "50",
       "https://www.linkedin.com/in/hugues-defr%C3%A9ville/"
     ],
     [
@@ -1180,6 +1238,7 @@
       "",
       "https://www.lejournaldesentreprises.com/finistere/article/grain-de-sail-ouvre-son-capital-bpifrance-et-credit-mutuel-equity-1786810",
       "https://media.licdn.com/dms/image/C4D03AQEkNgJDlU_YtQ/profile-displayphoto-shrink_800_800/0/1641849227302?e=1680739200&v=beta&t=vwlUaBU2dHBvDgT2VMaBU-p541EmYOO8eSIaJANxjPo",
+      "50",
       "https://www.linkedin.com/in/olivier-barreau-191844165/"
     ],
     [
@@ -1200,6 +1259,7 @@
       "B1RlaI15eXWR",
       "https://www.lejournaldesentreprises.com/normandie/article/cycle-concept-factory-pedale-pour-lenvironnement-2047897?auHash=bEAYzpLuxSqUq2NIYlRkHTytaAuM6D-xzE2RsTstCkg",
       "https://media.licdn.com/dms/image/C4D03AQHKEDDJt09tOA/profile-displayphoto-shrink_800_800/0/1629826307047?e=1680739200&v=beta&t=yVLJijJxT76hhM-lMz4Ym1FZ21gHWrOwk_s_4D8u1PA",
+      "50",
       "https://www.linkedin.com/in/charles-j-de-donder-a46932100/"
     ],
     [
@@ -1220,6 +1280,7 @@
       "",
       "https://www.lejournaldesentreprises.com/region-sud/breve/lentreprise-hubcycle-qui-valorise-les-dechets-agroalimentaires-leve-35-millions-deuros-1960152",
       "https://media.licdn.com/dms/image/C4E03AQHEAAi7196pRQ/profile-displayphoto-shrink_800_800/0/1643970697492?e=1680739200&v=beta&t=XQ3LmvbnO5HwxJDUj0SjpgSao9mNwRT4JTQLXcl0yoc",
+      "50",
       "https://www.linkedin.com/in/julien-lesage-90a9689b/"
     ],
     [
@@ -1240,6 +1301,7 @@
       "",
       "https://www.lejournaldesentreprises.com/region-sud/article/maca-flight-reve-de-competitions-de-voitures-volantes-1946529",
       "https://media.licdn.com/dms/image/C4E03AQFTdsNX02IMEA/profile-displayphoto-shrink_800_800/0/1516203291620?e=1680739200&v=beta&t=1Nknvdmxz2fVCkmqP4pKHSHI5eF1g3xed7_yubd3q40",
+      "50",
       "https://www.linkedin.com/in/chrispineau/"
     ],
     [
@@ -1260,6 +1322,7 @@
       "",
       "https://www.lejournaldesentreprises.com/region-sud/article/hynova-yachts-lance-la-production-en-serie-du-tout-premier-bateau-lhydrogene-au-monde-1923915",
       "https://media.licdn.com/dms/image/D4E03AQFRWome3bvdpw/profile-displayphoto-shrink_800_800/0/1666094633252?e=1680739200&v=beta&t=9m03nKwyE2kDK4XAb_hRsviGwHJVylNWAZTL16y2Wuk",
+      "50",
       "https://www.linkedin.com/in/chloezaied/"
     ],
     [
@@ -1280,6 +1343,7 @@
       "",
       "https://www.lejournaldesentreprises.com/occitanie/breve/la-start-montpellieraine-scop3-leve-17-million-deuros-1908182",
       "https://media.licdn.com/dms/image/C5103AQE5L9bwbkGhHA/profile-displayphoto-shrink_800_800/0/1516570613939?e=1680739200&v=beta&t=8KlRoHApCUhwZxmZv6AWWNxgLcnSYfQjKU6aSw8ezQ0",
+      "50",
       "https://www.linkedin.com/in/frederic-salles-26a22b52/"
     ],
     [
@@ -1300,6 +1364,7 @@
       "",
       "https://www.lejournaldesentreprises.com/occitanie/breve/kyanos-biotechnologies-leve-26-millions-deuros-pour-augmenter-sa-production-de-microalgues-1826113",
       "https://media.licdn.com/dms/image/C4E03AQHo1WT6L1vANw/profile-displayphoto-shrink_800_800/0/1602697901742?e=1680739200&v=beta&t=6RkczTzknncnpdm7GOlXLdpp43paQpu8RYTrOSPv2iY",
+      "50",
       "https://www.linkedin.com/in/vinhly/"
     ],
     [
@@ -1320,6 +1385,7 @@
       "",
       "https://www.lejournaldesentreprises.com/occitanie/article/micropep-technologies-seme-les-nouvelles-graines-de-son-developpement-1948000",
       "https://media.licdn.com/dms/image/C5603AQHfnR13xLEgIA/profile-displayphoto-shrink_800_800/0/1603274321357?e=1680739200&v=beta&t=axIEMo9xxDiDANwyMmgkVNTDhoxYeq0eWPb4UbDvjIE",
+      "50",
       "https://www.linkedin.com/in/thomas-laurent-92127418/"
     ],
     [
@@ -1340,6 +1406,7 @@
       "ow2X3c8qRlp9",
       "https://www.lejournaldesentreprises.com/maine-et-loire-sarthe/article/wello-lance-un-velo-cargo-dote-dun-caisson-frigorifique-2040264",
       "https://media.licdn.com/dms/image/C5603AQFT6bk2WYz8Yg/profile-displayphoto-shrink_800_800/0/1517399015575?e=1680739200&v=beta&t=AgS0eYoRzBN9h_qgZ0meDTjX065chw07f3fsVboy8vk",
+      "50",
       "https://www.linkedin.com/in/arnaud-chereau-46a4b5158/"
     ],
     [
@@ -1360,6 +1427,7 @@
       "",
       "https://www.lejournaldesentreprises.com/ille-et-vilaine/breve/sweetch-energy-leve-6-millions-deuros-pour-deployer-grande-echelle-lenergie-de-melange-2045583",
       "https://media.licdn.com/dms/image/C5603AQGvcqpEqHEo3w/profile-displayphoto-shrink_800_800/0/1643638688861?e=1680739200&v=beta&t=MmflWRdKoGzbTBG09uSPdOFrKZy4hDM8mtDCszEW3SQ",
+      "50",
       "https://www.linkedin.com/in/nicolasheuze/"
     ],
     [
@@ -1380,6 +1448,7 @@
       "BGeqOUw7Jz8E",
       "https://www.lejournaldesentreprises.com/hauts-de-france/article/accro-debute-lindustrialisation-de-sa-viande-vegetale-2046785",
       "https://media.licdn.com/dms/image/C4E03AQGCbhwuJ3Lomw/profile-displayphoto-shrink_800_800/0/1654521862290?e=1680739200&v=beta&t=Q58xjuj-3gXf266bKlQvvN9O-LY4_P44Y7uWUQEn7Cw",
+      "50",
       "https://www.linkedin.com/in/renaud-saisset-318a927b/"
     ],
     [
@@ -1400,6 +1469,7 @@
       "",
       "https://www.lejournaldesentreprises.com/hauts-de-france/article/lagritech-jungle-leve-42-millions-deuros-pour-agrandir-sa-ferme-verticale-1115695",
       "https://media.licdn.com/dms/image/C4E03AQEjUG6wPQimbw/profile-displayphoto-shrink_800_800/0/1650383378010?e=1680739200&v=beta&t=vfwNeYgLCTtbOiIrXkI92EBgVaDnwjayEsnhO-BfFH4",
+      "50",
       "https://www.linkedin.com/in/nicolasseguy/"
     ],
     [
@@ -1420,6 +1490,7 @@
       "",
       "https://www.lejournaldesentreprises.com/nouvelle-aquitaine/article/flying-whales-leve-122-millions-deuros-pour-son-projet-de-dirigeables-2040808",
       "https://media.licdn.com/dms/image/C4E03AQFwcK6JhBgwyw/profile-displayphoto-shrink_800_800/0/1547722001571?e=1680739200&v=beta&t=m5_6c21s986rNXZugkjA8AMe5sUpdbF0LjBtEzzunFs",
+      "50",
       "https://www.linkedin.com/in/sebastien-bougon-25bb6117/"
     ],
     [
@@ -1440,6 +1511,7 @@
       "",
       "https://www.lejournaldesentreprises.com/auvergne-rhone-alpes/article/carbon-veut-relocaliser-la-production-de-panneaux-photovoltaiques-1879792",
       "https://media.licdn.com/dms/image/D4E03AQFNR5k9530bxg/profile-displayphoto-shrink_800_800/0/1671874923039?e=1680739200&v=beta&t=y493C_aYyQT2ygEIzPL255Ax2AVc3Rc-bv6alJMcTA8",
+      "50",
       "https://www.linkedin.com/in/pierre-emmanuel-martin-06054955/"
     ],
     [
@@ -1460,6 +1532,7 @@
       "",
       "https://www.lejournaldesentreprises.com/auvergne-rhone-alpes/article/eenuee-la-start-qui-veut-faire-redecoller-laeroport-de-saint-etienne-loire-1803228",
       "https://media.licdn.com/dms/image/C4E03AQGJu-6HNuOlvw/profile-displayphoto-shrink_800_800/0/1650949865017?e=1680739200&v=beta&t=wVFre3jRq3et773yu-pEsHvxUXvuLQ_3ck7j8Evk5b8",
+      "50",
       "https://www.linkedin.com/in/erick-herzberger-698a13a5/"
     ],
     [
@@ -1480,6 +1553,7 @@
       "",
       "https://www.lejournaldesentreprises.com/nouvelle-aquitaine/article/rediv-accelere-dans-les-vetements-de-seconde-main-en-levant-12-millions-deuros-2040707?auHash=uSPKgzL802fw5vop7tSVtXuT9PYFhhDbSpF_7U449bw",
       "https://media.licdn.com/dms/image/D4E35AQH6xdBKAdLG7Q/profile-framedphoto-shrink_800_800/0/1672423942116?e=1676138400&v=beta&t=V0doP_E8GXKc8rZfoIkPY7J1I-yeUunVDRHMCCDF9JE",
+      "50",
       "https://www.linkedin.com/in/eric-gagnaire-91816a39/"
     ],
     [
@@ -1500,6 +1574,7 @@
       "",
       "https://www.lejournaldesentreprises.com/nouvelle-aquitaine/article/dioxycle-veut-recycler-le-dioxyde-de-carbone-des-industriels-2039389?auHash=CUttSIA2263EPpFCqKb4KQS23o0iteJkHQP-Lw8iGzM",
       "https://media.licdn.com/dms/image/D4E35AQFevDxNrkxIEg/profile-framedphoto-shrink_800_800/0/1673814963060?e=1676156400&v=beta&t=s_SNdg4pQflTQ2eE9-ZSOnHjCjD8g5RZpzMrG9sUANo",
+      "50",
       "https://www.linkedin.com/in/sarah-lamaison-phd-96594068/"
     ],
     [
@@ -1520,6 +1595,7 @@
       "",
       "https://www.lejournaldesentreprises.com/nouvelle-aquitaine/article/gouach-leve-33-millions-deuros-pour-la-commercialisation-de-ses-batteries-reparables-1843498?auHash=vXX4X2VXN0619suRrwVUiITH3qaGktvcxxNl8YPKZBY",
       "https://media.licdn.com/dms/image/C5603AQEOzX1prlhM3Q/profile-displayphoto-shrink_800_800/0/1577355549640?e=1680739200&v=beta&t=FprbajVUWWk1YqM9gJHNuPUBPKWKPRRnZVJ5ItbZuTo",
+      "50",
       "https://www.linkedin.com/in/vallettea/"
     ],
     [
@@ -1540,6 +1616,7 @@
       "",
       "https://www.lejournaldesentreprises.com/region-sud/breve/seanergy-boucle-sa-premiere-levee-de-fonds-pour-dessaler-leau-de-mer-2046946",
       "https://media.licdn.com/dms/image/D4E03AQFpPnjuwG-L6w/profile-displayphoto-shrink_800_800/0/1669762805822?e=1680739200&v=beta&t=V3U5npIpVJD-yGq1JYv6rAB6UArkYmM8QXKp4bMgB5Y",
+      "50",
       "https://www.linkedin.com/in/hubertmontcoudiol/ "
     ],
     [
@@ -1560,6 +1637,7 @@
       "",
       "https://www.lejournaldesentreprises.com/finistere/article/polymaris-avance-grand-pas-vers-lindustrialisation-de-ses-bioplastiques-2052057",
       "https://www.lejournaldesentreprises.com/sites/lejournaldesentreprises.com/files/styles/landscape_web/public/2023-02/Anthony-Courtois--gauche-et-Bertrand-Thollas--9469541.jpeg?h=44bf7ad5&itok=kedorDlf",
+      "50",
       "https://www.linkedin.com/in/anthony-courtois-72ab2111/ "
     ],
     [
@@ -1580,6 +1658,7 @@
       "",
       "https://www.lejournaldesentreprises.com/occitanie/breve/ascendance-flight-technologies-conclut-un-protocole-daccord-avec-la-filiale-mro-dair-france-2048086",
       "https://media.licdn.com/dms/image/C4D03AQEDGIkbqD4_6w/profile-displayphoto-shrink_800_800/0/1560518839094?e=2147483647&v=beta&t=YESLrltr6IpebXrSE0urMBXf2sM8i3_jOYP7zgblnAA",
+      "50",
       "https://www.linkedin.com/in/jean-christophe-lambert/"
     ],
     [
@@ -1600,6 +1679,7 @@
       "",
       "https://www.lejournaldesentreprises.com/ille-et-vilaine/article/linstallateur-dombrieres-photovoltaiques-see-you-sun-simplante-cesson-sevigne-et-accelere-son-2050283",
       "https://media.licdn.com/dms/image/C5103AQEXOJlPavoGHg/profile-displayphoto-shrink_800_800/0/1517549277351?e=2147483647&v=beta&t=DFbcYfycjxa6PHrSS-kYnFmIAySZ21eojg3kSJNnICk",
+      "50",
       "https://www.linkedin.com/in/fran%C3%A7ois-gu%C3%A9rin-5a000b12/"
     ],
     [
@@ -1620,6 +1700,7 @@
       "",
       "https://www.lejournaldesentreprises.com/morbihan/article/stratosfair-nous-avons-cinq-data-centers-sur-les-rails-dici-2022-1709837",
       "https://media.licdn.com/dms/image/C4E03AQF-_4bBegbimQ/profile-displayphoto-shrink_800_800/0/1645998439426?e=2147483647&v=beta&t=hWkM5hR8cN41VxLv-rVufvRTCbfv-6tgnhDxFWXpkrI",
+      "50",
       "https://www.linkedin.com/in/berengercadoret/"
     ],
     [
@@ -1640,6 +1721,7 @@
       "",
       "",
       "https://media.licdn.com/dms/image/C4D03AQHJpyty_thnFw/profile-displayphoto-shrink_800_800/0/1620054682910?e=2147483647&v=beta&t=Jpjz-4IOrcQyDbziy0dJOaRsgcHZQ7K6JKM8bKXI184",
+      "50",
       "https://www.linkedin.com/in/antoine-galonnier-13809260/"
     ]
   ]

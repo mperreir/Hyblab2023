@@ -44,7 +44,7 @@ function generateApiParameters(themeSelected) {
  */
 function createFiche(profil, dataPos) {
     // Récupération des attributs de l'objet profil (par méthode destructuring)
-    const { Id, Age, City, Company, Keywords, MiniBio, Name, Status, Topic, URLImage } = profil;
+    const { Id, Age, City, Company, Keywords, MiniBio, Name, Status, Topic, URLImage, HeightShiftImage} = profil;
     // Simplification du thème (pas d'accents et d'espace)
     const tranlatedSimpleTopic = translateThemeToSimpleChar(Topic);
     // Récupération de la classe relative à la couleur de la police du theme
@@ -52,7 +52,7 @@ function createFiche(profil, dataPos) {
     // Node HTML
     const htmlString = `<li class="carousel-item flex-column align-items-center justify-content-space-between" data-pos="${dataPos}" data-id="${Id}">
                             <section class="photo-case">
-                                <img draggable="false" alt="photo-profil" src="${URLImage}">
+                                <img draggable="false" alt="photo-profil" src="${URLImage}" style="object-position: 50% ${HeightShiftImage}%;">
                             </section>
                             <section class="information-fiche flex-column justify-content-space-between">
                                 <section class="carte-identite flex-column align-items-center-flex-start ${fontClass}">

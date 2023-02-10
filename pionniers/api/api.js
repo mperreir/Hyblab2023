@@ -105,7 +105,8 @@ app.get('/miniature/:id', function (req, res) {
                 "MiniBio": row[9].toString().trim(),
                 "Topic": row[11].toString().trim(),
                 "Keywords": row[12].toString().trim(),
-                "URLImage": row[16].toString().trim()
+                "URLImage": row[16].toString().trim(),
+                "HeightShiftImage": row[17].toString().trim()
             }
         });
         // Remove lines with no Id
@@ -142,7 +143,8 @@ app.get('/miniature/topics/:feed/:circular_economy/:energy/:industry/:mobility/:
                 "MiniBio": row[9].toString().trim(),
                 "Topic": row[11].toString().trim(),
                 "Keywords": row[12].toString().trim(),
-                "URLImage": row[16] !== undefined ? row[16].toString().trim() : row[16]
+                "URLImage": row[16] !== undefined ? row[16].toString().trim() : row[16],
+                "HeightShiftImage": row[17].toString().trim()
             }
         });
         // Remove lines with no Id
@@ -184,7 +186,7 @@ app.get('/profile/:id', function (req, res) {
                 "PodcastId": row[14].toString().trim(),
                 "Article": row[15].toString().trim(),
                 "URLImage": row[16].toString().trim(),
-                "URLLinkedin": row[17].toString().trim()
+                "URLLinkedin": row[18].toString().trim()
             }
         });
         // Remove lines with no Id
