@@ -136,15 +136,6 @@ ul#liste-profils li:last-child {
     transform: translateY(60%);
 }
 
-.indicateur-id {
-    border-radius: 100px;
-    color: white;
-    height: 1vh;
-    width: 1vh;
-    padding: 3%;
-    margin-right: 43%;
-}
-
 .croix-suppr {
     margin-right: 10%;
     cursor: pointer;
