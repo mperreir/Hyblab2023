@@ -73,7 +73,7 @@ function createFiche(profil, dataPos) {
                                     <p class="${fontClass} gras">${capitalizeFirstLetter(Topic)}</p>
                                 </section>
                                 <section class="bouton-voir-profil">
-                                    <button class="bouton-rond"> Lire le PROfil</button> 
+                                    <button class="bouton-rond"> Voir le PROfil</button> 
                                 </section>
                             </section>
                         </li>`;
