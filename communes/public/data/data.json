@@ -16,7 +16,7 @@
         "name": "La géothermie en France"
       },
       "autre_env": {
-        "titre": "LA BIOMASSE EST Compatible avec la friche ET LA FORÊT ET LES CHAMPS",
+        "titre": "LA géothermie EST Compatible avec la friche ET LA FORÊT ET LES CHAMPS",
         "liste": [
           {
             "file_name": "../img/friche.svg"
@@ -121,7 +121,7 @@
         "name": "LA BIOMASSE EN FRANCE"
       },
       "autre_env": {
-        "titre": "LA Compatible avec la friche",
+        "titre": "LA BIOMASSE est Compatible avec la friche",
         "liste": [
           {
             "file_name": "../img/friche.svg"
