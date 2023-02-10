@@ -6,7 +6,6 @@ if(visited ===""){
   visited=visited+";"+sessionStorage.getItem("visit")
 }
 sessionStorage.setItem("alreadyVisited",visited)
-console.log(sessionStorage.getItem("alreadyVisited"))
 // async init function (because of the awaits on fetches)
 const initSlide1 = async function(){
   let response = await fetch('../data/data.json');
@@ -75,7 +74,6 @@ const initSlide1 = async function(){
 
   //const urlParams = new URLSearchParams(window.location.search);
   //const name = urlParams.get('name');
-  console.log(sessionStorage.getItem("visit"));
   let map_response = await fetch('../api/energy/'+sessionStorage.getItem("visit").replace("è","e").replace("ê","e"));
   const data_map = await map_response.json();
 

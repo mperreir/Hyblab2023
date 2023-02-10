@@ -7,6 +7,4 @@ const initSlide2 = function(data){
     document.querySelector('#exemple-text').innerHTML = data.exemple.description;
     document.querySelector('#video').src = data.exemple.video;
 
-    console.log(document.querySelector('#video-container'));
-
 };

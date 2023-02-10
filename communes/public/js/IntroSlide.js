@@ -38,7 +38,6 @@ const introSlide2 = async function() {
     else{
         aText = new Array(data_filter.tchat)
     }
-    console.log(aText)
     iIndex = 0;
     iArrLength = aText[0].length;
     iTextPos = 0;

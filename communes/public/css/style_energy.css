@@ -31,14 +31,14 @@ body{
     margin-bottom: 5%;
     align-items: center;
     justify-content: center;
-    height: 50%;
+    height: 38%;
 }
 #legend-carousel p{
     max-width: 40%;
 }
 .carouselResult{
     border-radius: 40px 40px 40px 40px;
-    font-size: 30px;
+    font-size: 20px;
     padding: 15px;
     border: none;
 }
