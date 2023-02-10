@@ -249,7 +249,7 @@ function initRepsDep() {
     let type = res3["reponse"]
     let nbFerme = res3bis["VOLAILLES"] + res3bis["BOVINS"] + res3bis["PORCS"]
     for (let text of texts9) {
-        text.textContent = "Dans votre département, ce sont les " + type + " qui sont les plus nombreuses parmi les animaux d’élevage dans les " + nbFerme + " fermes-usines."
+        text.textContent = "Dans votre département, ce sont les " + type + " qui sont les plus nombreuses parmi les animaux d’élevage des " + nbFerme + " fermes-usines."
     }
 
     let next9_1 = document.getElementById("next9_1")
