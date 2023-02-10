@@ -176,7 +176,7 @@
   ],
   "conclusion": {
     "titre" : "Ton bilan !",
-    "texte1" : "Au niveau national et européen, nous nous sommes fixés des objectifs qui permettront une amélioration de notre santé et de notre impact sur la planète.",
+    "texte1" : "Au niveau national et européen, nous nous sommes fixés des objectifs qui permettront une amélioration de notre santé et de notre impact sur la planète.<br><br>Le score prend en compte les productions des 5 types d'énergies vertes présentés sur ce site au sein de l'intercommunalité à laquelle se ratache la ville dont le code postal à été entré lors de l'introduction. Il s'incrémente au fil du parcours du site afin d'inciter l'utilisateur à s'informer des différentes manières de valoriser les espaces de sa communes.",
     "texte2" : "Voici nos objectifs pour 2030 !",
     "logo" : "../img/logo.svg",
     "bouton" : "Retour à l’accueil",
