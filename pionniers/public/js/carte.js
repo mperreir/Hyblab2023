@@ -348,6 +348,8 @@ function onTopicCheck(event) {
                         if (keywordItem.textContent === "#" + k) {
                             // Remove the keyword from the selected keywords list
                             selectedKeywordsList.removeChild(keywordItem);
+                            // Remove the keyword from the used keywords js list
+                            usedKeywords.splice(usedKeywords.indexOf(k), 1);
                             break;
                         }
                     }
