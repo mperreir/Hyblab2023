@@ -15,7 +15,8 @@ function createFicheprofile(profile) {
         PodcastId,
         Article,
         URLLinkedin,
-        Topic
+        Topic,
+        Keywords
     } = profile;
     // Simplification du thème (pas d'accents et d'espace)
     const tranlatedSimpleTopic = translateThemeToSimpleChar(Topic);
@@ -38,6 +39,13 @@ function createFicheprofile(profile) {
                                         <p class="gras">${Status}</p>
                                         <p class="gras">${Company}</p>
                                         <p>${City}</p>
+                                    </section>
+                                    <section class="keywords flex-row align-items-center">
+                                        <!-- Section qui va se remplir dans la suite de la fonction -->
+                                    </section>
+                                    <section class="topic flex-row align-items-center">
+                                        <img src="../img/pictogrammes_themes/${translateThemeToSimpleChar(Topic)}.svg" alt="${Topic}">
+                                        <p class="${fontClass} gras">${capitalizeFirstLetter(Topic)}</p>
                                     </section>
                                 </section>
                             </section>
@@ -78,6 +86,16 @@ function createFicheprofile(profile) {
         const linkedinButton = document.querySelector('#Linkedin');
         linkedinButton.remove();
     }
+
+    // Retrieve the keywords section
+    const keywordSection = ficheprofile.querySelector("section.keywords");
+    // Add the keywords (if any non empty keyword is present)
+    Keywords.split(';').forEach(k => {
+        if(k.trim() === '') {
+            return;
+        }
+        keywordSection.append(createKeywordItem(k));
+    });
 }
 
 /**
@@ -134,3 +152,11 @@ getprofile(Id).then(r => {
     createFicheprofile(r);
     console.log(r);
 });
+
+
+function createKeywordItem(Keyword) {
+    const htmlString = `<div class="keyword-item flex-row align-items-center">
+                            <p>#${Keyword.toLowerCase()}</p>
+                        </div>`;
+    return createElementFromHTML(htmlString);
+}
