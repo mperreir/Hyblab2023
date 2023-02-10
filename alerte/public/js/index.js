@@ -215,7 +215,7 @@ function initRepsDep() {
     let answer = false
     let btns8 = document.getElementsByClassName("btn8")
     for (let btn8 of btns8) {
-        if (btn8.dataset.value == res4["type"]) {
+        if (btn8.dataset.value == res3["reponse"]) {
             btn8.addEventListener('click', () => {
                 if (!answer) {
                     answer = true
@@ -232,7 +232,7 @@ function initRepsDep() {
                     answer = true
                     btn8.style.backgroundColor = 'red'
                     for (let btn_tmp of btns8) {
-                        if (btn_tmp.dataset.value == res4["type"]) {
+                        if (btn_tmp.dataset.value == res3["reponse"]) {
                             btn_tmp.style.backgroundColor = 'lightgreen'
                         }
                     }
@@ -246,11 +246,10 @@ function initRepsDep() {
     }
 
     let texts9 = document.getElementsByClassName("text9")
-    let qt = res4['quantite_mean']
-    let type = res4["type"].toLowerCase()
+    let type = res3["reponse"]
     let nbFerme = res3bis["VOLAILLES"] + res3bis["BOVINS"] + res3bis["PORCS"]
     for (let text of texts9) {
-        text.textContent = "Dans votre département, ce sont les " + type + " qui sont les plus nombreuses parmi les animaux d’élevage. On en dénombre pas moins de " + qt + " dans les " + nbFerme + " fermes-usines de ce département."
+        text.textContent = "Dans votre département, ce sont les " + type + " qui sont les plus nombreuses parmi les animaux d’élevage dans les " + nbFerme + " fermes-usines."
     }
 
     let next9_1 = document.getElementById("next9_1")
@@ -267,6 +266,7 @@ function initRepsDep() {
 
     let texts11 = document.getElementsByClassName("text11")
     let name = res4["name"]
+    let qt = res4['quantite_mean']
     let rang = res4["france_unite_rank"]
     for (let text of texts11) {
         text.textContent = "Dans la ferme-usine de " + name + " on dénombre pas moins de " + qt + " " + type +". À l’échelle de la France, c’est la " + rang + "ème plus grosse concentration de " + type + " en une seule installation."
