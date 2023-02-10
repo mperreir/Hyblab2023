@@ -404,6 +404,10 @@ main>section {
     background: rgb(255, 255, 255) !important;
 }
 
+.swiper-pagination-inv .swiper-pagination-bullet {
+    background: rgb(0, 0, 0) !important;
+}
+
 .swiper-container {
     overflow: hidden;
 }

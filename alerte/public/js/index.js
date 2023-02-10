@@ -2,10 +2,12 @@
 let dep
 let depName
 let res3
+let res3bis
 let res4
 let res5
 let res6
 let data3
+let data3bis
 let data4
 let data5
 let data6
@@ -28,8 +30,14 @@ function readTextFile(file, callback) {
 readTextFile("./data/3.json", function (text) {
     data3 = JSON.parse(text);
 });
+readTextFile("./data/3_bis.json", function (text) {
+    data3bis = JSON.parse(text);
+});
 readTextFile("./data/4.json", function (text) {
     data4 = JSON.parse(text);
+});
+readTextFile("./data/5.json", function (text) {
+    data5 = JSON.parse(text);
 });
 readTextFile("./data/6.json", function (text) {
     data6 = JSON.parse(text);
@@ -164,13 +172,24 @@ function initRepsDep() {
             break
         }
     }
+    for (let key in data3bis) {
+        if (data3bis[key]["departement"] == dep) {
+            res3bis = data3bis[key]
+            break
+        }
+    }
     for (let key in data4) {
-        if (data4[key]["departement"] == dep && data4[key]["unite"] == "Animaux-Eq") {
+        if (data4[key]["departement"] == dep) {
             res4 = data4[key]
             break
         }
     }
-
+    for (let key in data5) {
+        if (data5[key]["Departement"] == dep) {
+            res5 = data5[key]
+            break
+        }
+    }
     for (let key in data6) {
         if (data6[key]["departement"] == dep) {
             res6 = data6[key]
@@ -196,7 +215,7 @@ function initRepsDep() {
     let answer = false
     let btns8 = document.getElementsByClassName("btn8")
     for (let btn8 of btns8) {
-        if (btn8.dataset.value == res3["reponse"]) {
+        if (btn8.dataset.value == res4["type"]) {
             btn8.addEventListener('click', () => {
                 if (!answer) {
                     answer = true
@@ -213,7 +232,7 @@ function initRepsDep() {
                     answer = true
                     btn8.style.backgroundColor = 'red'
                     for (let btn_tmp of btns8) {
-                        if (btn_tmp.dataset.value == res3["reponse"]) {
+                        if (btn_tmp.dataset.value == res4["type"]) {
                             btn_tmp.style.backgroundColor = 'lightgreen'
                         }
                     }
@@ -228,19 +247,10 @@ function initRepsDep() {
 
     let texts9 = document.getElementsByClassName("text9")
     let qt = res4['quantite_mean']
-    let str
-    let tmp = "Dans votre département, ce sont les volailles qui sont les plus nombreuses parmi les animaux d’élevage. On en dénombre pas moins de " + qt + " dans les 56 fermes-usines de ce département."
-    if (res4["type"] == "VOLAILLES") {
-        str = "Dans votre département, ce sont les volailles qui sont les plus nombreuses parmi les animaux d’élevage. On en dénombre pas moins de " + qt + "."
-    } else if (res4["type"] == "PORCS") {
-        str = "Dans votre département, ce sont les porcs qui sont les plus nombreux parmi les animaux d’élevage. On en dénombre pas moins de " + qt + "."
-    } else if (res4["type"] == "BOVINS") {
-        str = "Dans votre département, ce sont les bovins qui sont les plus nombreux parmi les animaux d’élevage. On en dénombre pas moins de " + qt + "."
-    } else {
-        str = "Dans votre département, ce sont les moutons qui sont les plus nombreux parmi les animaux d’élevage. On en dénombre pas moins de " + qt + "."
-    }
+    let type = res4["type"].toLowerCase()
+    let nbFerme = res3bis["VOLAILLES"] + res3bis["BOVINS"] + res3bis["PORCS"]
     for (let text of texts9) {
-        text.textContent = str
+        text.textContent = "Dans votre département, ce sont les " + type + " qui sont les plus nombreuses parmi les animaux d’élevage. On en dénombre pas moins de " + qt + " dans les " + nbFerme + " fermes-usines de ce département."
     }
 
     let next9_1 = document.getElementById("next9_1")
@@ -257,7 +267,6 @@ function initRepsDep() {
 
     let texts11 = document.getElementsByClassName("text11")
     let name = res4["name"]
-    let type = res4["type"].toLowerCase()
     let rang = res4["france_unite_rank"]
     for (let text of texts11) {
         text.textContent = "Dans la ferme-usine de " + name + " on dénombre pas moins de " + qt + " " + type +". À l’échelle de la France, c’est la " + rang + "ème plus grosse concentration de " + type + " en une seule installation."
@@ -289,16 +298,59 @@ function initRepsDep() {
         changeBackground('#121212')
     })
 
+    let texts13 = document.getElementsByClassName("text13")
+    let nbEmission = res5["num_fermes_emission_massive"]
+    if (nbEmission == 0) {
+        for (let text of texts13) {
+            text.textContent = "L’ammoniac est un gaz qui se dégage massivement des déjections d’animaux ainsi que des engrais. Sa présence dans l’air provoque la formation de particules fines, responsables de maladies cardio-vasculaires et respiratoires. Dans votre département, il n’y a pas de ferme-usine qui rejette plus de 10 tonnes d’ammoniac"
+        }
+    } else {
+        for (let text of texts13) {
+            text.textContent = "L’ammoniac est un gaz qui se dégage massivement des déjections d’animaux ainsi que des engrais. Sa présence dans l’air provoque la formation de particules fines, responsables de maladies cardio-vasculaires et respiratoires. Dans votre département, il y a " + nbEmission + " fermes-usines qui ont émis plus de 10 tonnes d’ammoniac"
+        }
+    }
 
+    let correct
+    if (nbEmission > 30)
+        correct = 3
+    else if (nbEmission > 20)
+        correct = 2
+    else if (nbEmission > 10)
+        correct = 1
+    else
+        correct = 0
+
+    let answer12 = false
     let btns12 = document.getElementsByClassName("btn12")
     for (let btn12 of btns12) {
-        btn12.addEventListener('click', () => {
-            btn12.style.backgroundColor = 'red'
-            setTimeout(() => {
-                display("s13_1")
-                changeBackground('#121212')
-            }, 2000)
-        })
+        if (btn12.dataset.value == correct) {
+            btn12.addEventListener('click', () => {
+                if (!answer12) {
+                    answer12 = true
+                    btn12.style.backgroundColor = 'green'
+                    setTimeout(() => {
+                        display("s13_2")
+                        changeBackground('aliceblue')
+                    }, 2000)
+                }
+            })
+        } else {
+            btn12.addEventListener('click', () => {
+                if (!answer12) {
+                    answer12 = true
+                    btn12.style.backgroundColor = 'red'
+                    for (let btn_tmp of btns12) {
+                        if (btn_tmp.dataset.value == correct) {
+                            btn_tmp.style.backgroundColor = 'lightgreen'
+                        }
+                    }
+                    setTimeout(() => {
+                        display("s13_1")
+                        changeBackground('#121212')
+                    }, 2000)
+                }
+            })
+        }
     }
 
     let next13_1 = document.getElementById("next13_1")
