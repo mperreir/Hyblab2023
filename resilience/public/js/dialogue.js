@@ -20,7 +20,6 @@ dict_bkg.set("14", "back_7.svg");
 dict_bkg.set("16", "back_8.svg");
 
 async function initConversation() {
-
     fond = document.getElementById("fond");
     var img_fond = document.createElement("img");
     img_fond.src = "img/background/".concat(dict_bkg.get(conversationId));
@@ -92,6 +91,7 @@ function runConversation() {
                     console.log('Unknown message type : ' + message.type);
             };
         };
+
         let dialogue = document.getElementById("dialogue")
         htmlDialogue.scrollTo(0, dialogue.scrollHeight)
     });
@@ -102,6 +102,7 @@ function choose(message, all) {
     // Create each answer
     let htmlMessage = document.createElement('div');
     htmlMessage.classList.add('choices');
+
     message.messages.forEach(subMessageLine => {
         let subMessage = subMessageLine[0]; // First message of the sub-conversation is the answer
 

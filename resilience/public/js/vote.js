@@ -66,6 +66,7 @@ async function vote() {
                     note: e[1],
                 }
             });
+
             console.log(req);
             await fetch('/resilience/api/vote', {
                 method: 'POST',
@@ -87,7 +88,6 @@ async function vote() {
     htmlVotes.appendChild(htmlSubmit);
 
 };
-
 
 vote();
 

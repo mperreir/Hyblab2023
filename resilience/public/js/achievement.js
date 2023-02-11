@@ -2,6 +2,8 @@ async function achievement() {
     let response = await fetch(`data/achievement.json`);
     const achievements = await response.json();
     let result = document.querySelector('#achievements');
+
+
     for (let i = 0; i < achievements.achievements.length; i++) {
 
         let achiev = achievements.achievements[i];
@@ -53,12 +55,7 @@ async function achievement() {
                 case 'video':
                     htmlE = document.createElement('div');
                     htmlE.classList.add("video");
-                    //htmlE.setAttribute("src", e.link);
-
                     htmlE.innerHTML = '<iframe src="' + e.link + '" title="YouTube video player" allowfullscreen></iframe>';
-                    //<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                    
-                    
-                    //htmlE = createElement('<iframe width="560" height="315" src="' + e.link + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>')
                     break;
                 case 'image':
                     htmlE = document.createElement("img");
@@ -68,7 +65,7 @@ async function achievement() {
                     htmlE = document.createElement('a');
                     htmlE.textContent = e.text;
                     htmlE.href = e.link;
-                    htmlE.target="_blank";
+                    htmlE.target = "_blank";
                     break;
                 default:
                     console.log("Unknown type : " + e.type);
@@ -101,11 +98,12 @@ async function achievement() {
                 }
             }
         });
+
         htmlImage.addEventListener('click', function () {
             if (window.localStorage.getItem("achievement".concat(htmlAchiev.id)) == "true") {
                 if (window.localStorage.getItem("achievement".concat(htmlAchiev.id))) {
                     let currentData = document.querySelector('.data');
-                    document.querySelector('#container').scrollTo(0,0);
+                    document.querySelector('#container').scrollTo(0, 0);
                     if (currentData) {
                         currentData.remove();
                     }
@@ -119,9 +117,6 @@ async function achievement() {
                 }
             }
         });
-
-
-
 
         let htmlAchievVisible = document.createElement('div');
         htmlAchievVisible.setAttribute('id', 'visible');
