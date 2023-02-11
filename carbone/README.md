@@ -1,15 +1,24 @@
-# Descriptif du projet
+# festigofinal
 
-Porteur de projet :
+## Project setup
+```
+npm install
+```
 
-Sujet :
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-Nom d'équipe :
+### Compiles and minifies for production
+```
+npm run build
+```
 
-Participants : 
+### Lints and fixes files
+```
+npm run lint
+```
 
-- AGR :
-
-- EPJT
-
-- Polytech :  
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
