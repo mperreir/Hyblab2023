@@ -20,30 +20,30 @@
     text-indent: 0;
 }
 
-#equipetitre{ 
+#equipetitre {
     margin-top: 10%;
     font-weight: bolder;
 }
 
-#equipe{
+#equipe {
     margin-top: 2%;
     font-weight: bolder;
 }
 
-img{
+img {
     margin-top: 5%;
-    width:25%;
+    width: 25%;
 }
 
-#credits h1{
+#credits h1 {
     font-size: 0.25em;
     line-height: 1em;
     background-color: #FFB84E;
     margin: 1rem 0;
     padding: 3% 20% 3% 20%;
     color: white;
-    border-bottom-right-radius:0;
-    border-top-right-radius:0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
     display: flex;
     justify-content: center;
     align-items: center;

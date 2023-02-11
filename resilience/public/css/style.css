@@ -3,43 +3,45 @@
 /* ------- is kept between 9/16 a,d 3/4 (portait orientation)         ----------- */
 
 /* Normalize margin and padding to ease elements positioning */
-*{
-    padding:0;
-    margin:0;
+* {
+    padding: 0;
+    margin: 0;
 }
 
-body{
+body {
     background-color: black;
     color: white;
-    overflow: hidden;   /* to avoid slider bugs on some browsers */
+    overflow: hidden;
+    /* to avoid slider bugs on some browsers */
 
 }
 
 /* -------------- Loader --------------*/
-#loader{
+#loader {
     z-index: 2;
-    position:absolute;
-}
-
-#loader-img{
-    top:40%;
-    left:40%;
     position: absolute;
 }
 
-#loader-text{
+#loader-img {
+    top: 40%;
+    left: 40%;
+    position: absolute;
+}
+
+#loader-text {
     text-align: center;
     font-size: 25%;
     position: absolute;
-    top:60%;
+    top: 60%;
     width: 100%
 }
+
 /* -------------- End of Loader --------------*/
 
 /* Swiper slider. Need to fill the container */
-#mySwiper{
+#mySwiper {
     width: 100%;
-    height:100%;
+    height: 100%;
     position: absolute;
 }
 
@@ -49,20 +51,22 @@ body{
 }
 
 /* the slides and the loader should fill the whole 9:16 zone */
-.swiper-wrapper section, #loader{
+.swiper-wrapper section,
+#loader {
     background-color: #79B77B;
     width: 100%;
     height: 100%;
 }
 
 /* Most of the elements in this demo are absolute positionned with percentages */
-#logo-hyblab{
+#logo-hyblab {
     text-align: center;
     width: 50%;
     left: 50%;
     top: 50%;
-    margin-left:-25%;
-    margin-top:calc(-7.5% * 9 / 16 ); /* margins are relative to the element width... :-( */
+    margin-left: -25%;
+    margin-top: calc(-7.5% * 9 / 16);
+    /* margins are relative to the element width... :-( */
     position: absolute;
     font-size: 50%;
     z-index: 2;
@@ -70,13 +74,14 @@ body{
 }
 
 /* Last slide image is centered */
-#img-fini{
+#img-fini {
     width: 70%;
     left: 50%;
     top: 40%;
     position: absolute;
-    margin-left:-35%;
-    margin-top:calc(-25% * 9 / 16 ); /* margins are relative to the element width... :-( */
+    margin-left: -35%;
+    margin-top: calc(-25% * 9 / 16);
+    /* margins are relative to the element width... :-( */
 }
 
 
@@ -90,96 +95,105 @@ body{
 /* slide because of body's font size rule at the end of this CSS           */
 #bandeau {
     padding-top: 3%;
-    width:100%;
+    width: 100%;
     position: absolute;
     bottom: 0;
     background-color: white;
     font-size: 20%;
-  }
+}
 
-  #bandeau li{
+#bandeau li {
     list-style-type: none;
     display: inline-block;
     vertical-align: middle;
     margin: 0 0.5em;
-  }
+}
 
-  #bandeau img{
+#bandeau img {
     height: 2.5em;
-  }
+}
 
-  #bandeau #hyblab{
+#bandeau #hyblab {
     margin: 1em auto;
     height: 3em;
     display: block;
-  }
+}
 
-  #bandeau #cc, #bandeau #opensource
-  {
+#bandeau #cc,
+#bandeau #opensource {
     height: 1em;
-  }
+}
 
-  #bandeau .stacked{
-    display:block;
-  }
+#bandeau .stacked {
+    display: block;
+}
 
-  #bandeau ul{
+#bandeau ul {
     text-align: center;
     padding: 0 0;
     margin-bottom: 0.5em;
-  }
+}
 
-  #bandeau .institutionnel
-  {
+#bandeau .institutionnel {
     height: 2em;
-  }
+}
 
 /* ---------- Important media queries for easy responsive content :-) ----------------- */
 /* Whatever the devie used, the content will be displayed full width and height if      */
 /* the aspect ratio is between 3/4 and 9/16. If not it is locked to either 3/4 or 3/16  */
 
 /* When the aspect ratio is smaller that 3/4, display a 3/4 content */
-#container{
-    position: fixed; /* To set the size of the container to 100% of the visible viewport height AND for absolute positionning of child elements*/ 
-    height: 100%;   /* even on mobile devices with url or navigation bars */
-    margin-left: calc((100vw - 100 * 3vh / 4) / 2); /* Add black bands on left and right */
-    width: calc(100 * 3vh / 4); /* Force 3/4 aspect ratio */
+#container {
+    position: fixed;
+    /* To set the size of the container to 100% of the visible viewport height AND for absolute positionning of child elements*/
+    height: 100%;
+    /* even on mobile devices with url or navigation bars */
+    margin-left: calc((100vw - 100 * 3vh / 4) / 2);
+    /* Add black bands on left and right */
+    width: calc(100 * 3vh / 4);
+    /* Force 3/4 aspect ratio */
 }
 
 /* We set a default font size here. It will be the base for all other font sizes */
 /* Here the font size is proportional to content width */
-body{
+body {
     font-size: calc(15vh * 3 / 4);
 }
 
 /* Fill the whole viewport when its aspect ratio is between 9/16 and 3/4 */
 @media screen and (max-aspect-ratio: 3/4) {
-    #container{
-        margin-left: 0; /* reset margin-left */
-        width: 100vw; /* content is full width (and full height because of the default rule for container height */
+    #container {
+        margin-left: 0;
+        /* reset margin-left */
+        width: 100vw;
+        /* content is full width (and full height because of the default rule for container height */
     }
 
     /* We set a default font size here. It will be the base for all other font sizes */
     /* Here the font size is proportional to content width */
-    body{
+    body {
         font-size: 15vw;
     }
 }
 
-/* The content is displayed at 9/16 If the aspect ratio is higher that 9/16  */ 
+/* The content is displayed at 9/16 If the aspect ratio is higher that 9/16  */
 @media screen and (max-aspect-ratio: 9/16) {
-    #container{
-        margin-left: 0; /* reset left margin */
-        width: 100vw;   /* content is full width */
-        margin-top: calc(-50 * 16vw / 9); /* move the content half the height to the top */
-        top:50%; /* then center it ! */
-        height: calc(100 * 16vw / 9); /* adjust height so that aspect ratio is 9/16 */
+    #container {
+        margin-left: 0;
+        /* reset left margin */
+        width: 100vw;
+        /* content is full width */
+        margin-top: calc(-50 * 16vw / 9);
+        /* move the content half the height to the top */
+        top: 50%;
+        /* then center it ! */
+        height: calc(100 * 16vw / 9);
+        /* adjust height so that aspect ratio is 9/16 */
     }
 
     /* We set a default font size here. It will be the base for all other font sizes */
     /* Here the font size is proportional to content width */
-    body{
+    body {
         font-size: 15vw;
     }
 }
-
