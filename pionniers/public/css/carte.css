@@ -159,7 +159,7 @@ main div#miniature-related button.bouton-rond {
 
 main div#overlay {
     position: absolute;
-    z-index: 2;
+    z-index: 99;
     top: 0;
     left: 0;
     width: 100%;
@@ -170,7 +170,7 @@ main div#overlay {
 
 main div#popup {
     position: absolute;
-    z-index: 4;
+    z-index: 100;
     top: 40%;
     left: 30%;
     width: 40%;
@@ -179,7 +179,7 @@ main div#popup {
 
 main div#popup img#fermeture-popup {
     position: absolute;
-    z-index: 4;
+    z-index: 100;
     top: 0;
     right: 15%;
     width: 20%;
