@@ -508,12 +508,14 @@ swiperSection.addEventListener('click', function (event) {
         const wWidth = window.innerWidth;
         const xClick = event.clientX;
         const clicADroite = xClick > (wWidth / 2);
-
-        swipeHorizontal(clicADroite);
+        if(clicADroite) {   // Click uniquement possible à droite pour éviter les bugs liés au swipe horizontal gauche
+            swipeHorizontal(clicADroite);
+        }
     }
 });
 
 function swipeHorizontal(aDroite) {
+    console.log()
     let newActive;
     if (aDroite) {
         newActive = carouselList.querySelector('.carousel-item[data-pos="1"]');
@@ -641,10 +643,10 @@ function updateDownSwipeListener(current) {
             // check threshold and movement direction
             if (e.direction === Hammer.DIRECTION_RIGHT) {
 
-                swipeHorizontal(false);
+                // Swipe uniquement possible à droite pour éviter les bugs liés au swipe horizontal gauche
+                //swipeHorizontal(false);
 
             } else if (e.direction === Hammer.DIRECTION_LEFT) {
-
                 swipeHorizontal(true);
 
             } else if (propY < 30 && e.direction === Hammer.DIRECTION_DOWN) {
