@@ -83,7 +83,7 @@ main div#map .leaflet-map-pane .leaflet-tile-pane {
 
 main div#miniature-related {
     position: absolute;
-    z-index: 4;
+    z-index: 101;
     top: 20%;
     left: 15%;
     width: 70%;
