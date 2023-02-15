@@ -6,9 +6,8 @@ function ajouteTheme(theme) {
 }
 
 function supprimeTheme(theme) {
-        themeSelected.splice(themeSelected.indexOf(theme), 1);
-        window.localStorage.setItem('themes', themeSelected.toString());
-
+    themeSelected.splice(themeSelected.indexOf(theme), 1);
+    window.localStorage.setItem('themes', themeSelected.toString());
 }
 
 /**
@@ -31,18 +30,7 @@ function onCheck(event) {
     } else {
 
         if (themeSelected.length === 1) {
-            // Display the overlay
-            const overlay = document.querySelector("div#overlay");
-            overlay.classList.remove("display-none");
-            // Display the popup
-            const popup = document.querySelector("div#popup");
-            popup.classList.remove("display-none");
-            document.querySelector('div#popup img#fermeture-popup').addEventListener('click', function (e) {
-                // Undisplay the overlay
-                document.querySelector('div#overlay').classList.add('display-none');
-                // Undisplay the popup
-                document.querySelector('div#popup').classList.add('display-none');
-            });
+            displayErrorModal();
         } else {
             supprimeTheme(themeName);
             themeBtn.classList.add("unchecked");
@@ -53,7 +41,6 @@ function onCheck(event) {
 }
 document.addEventListener("DOMContentLoaded", function() {
     const themes = document.querySelectorAll('#liste-theme ul li');
-    console.log(window.localStorage.getItem("themes"));
     if (window.localStorage.getItem("themes") === null){
         themes.forEach((t) => {
             const theme = t.querySelector('img');

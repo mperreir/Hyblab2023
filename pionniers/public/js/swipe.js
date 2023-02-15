@@ -141,34 +141,22 @@ function getFontClass(topic) {
     ----------------------------------------------------------------
  */
 
+/**
+ * Ajoute un thème à la fois dans la liste courante et dans le localStorage
+ * @param theme {string} le thème à ajouter
+ */
 function ajouteTheme(theme) {
     themeSelected.push(theme);
-    let ancienStorage = window.localStorage.getItem("themes");
-    let nvxStorage;
-
-    if(ancienStorage) {
-        nvxStorage = ancienStorage + "," + theme;
-    } else {
-        nvxStorage = theme;
-    }
-    window.localStorage.setItem("themes", nvxStorage);
+    window.localStorage.setItem('themes', themeSelected.toString());
 }
 
+/**
+ * Supprime un thème à la fois dans la liste courante et dans le localStorage
+ * @param theme {string} le thème à ajouter
+ */
 function supprimeTheme(theme) {
     themeSelected.splice(themeSelected.indexOf(theme), 1);
-    let ancienStorage = window.localStorage.getItem("themes");
-    let storageFiltre = ancienStorage.split(",");
-    let nvxStorage;
-    storageFiltre.forEach( (t) =>{
-        if(t !== theme){
-            if (nvxStorage === undefined){
-                nvxStorage = t;
-            }else {
-                nvxStorage = nvxStorage + "," + t;
-            }
-        }
-    })
-    window.localStorage.setItem("themes", nvxStorage);
+    window.localStorage.setItem('themes', themeSelected.toString());
 }
 
 /**
@@ -249,11 +237,10 @@ function recreeCarouselDeck(profilsTrouves) {
 
 /**
  * Rempli le carousel avec les fiches des profils trouvé suivant les thèmes choisis
- * @param themeSelected {Array} thèmes sélectionnés
  * @param shuffleResults {boolean} résultats mélangés aléatoirement
  * @returns {Promise<void>}
  */
-async function chercheEtAjouteProfilsCarousel(themeSelected, shuffleResults) {
+async function chercheEtAjouteProfilsCarousel(shuffleResults) {
     const baseURL = document.location.origin;
 
     carouselItems.forEach(f => {
@@ -458,31 +445,21 @@ async function onCheck(evnt) {
     let themeString = themeLi.querySelector('img');
     themeString = themeString.getAttribute('alt');
 
-    let themeSelected = window.localStorage.getItem('themes');
-    themeSelected = themeSelected.split(',');
-
-    if (themeLi.classList.contains("unchecked")) {
+    if (themeLi.classList.contains("unchecked")) {  // Theme désélectionné
         themeLi.classList.remove("unchecked");
         ajouteTheme(themeString);
-        await chercheEtAjouteProfilsCarousel(themeSelected, true);
-    } else {
-        if (themeSelected.length === 1) {
-            // Display the overlay
-            const overlay = document.querySelector("div#overlay");
-            overlay.classList.remove("display-none");
-            // Display the popup
-            const popup = document.querySelector("div#popup");
-            popup.classList.remove("display-none");
-            document.querySelector('div#popup img#fermeture-popup').addEventListener('click', function () {
-                // Undisplay the overlay
-                document.querySelector('div#overlay').classList.add('display-none');
-                // Undisplay the popup
-                document.querySelector('div#popup').classList.add('display-none');
-            });
-        } else {
+        await chercheEtAjouteProfilsCarousel(true);
+    } else {                                        // Theme sélectionné
+
+        if (themeSelected.length === 1) {           // Il n'y a plus qu'un thème de sélectionné
+            // À 1 seul thème sélectionné, il est impossible de le désélectionner
+            // Il est alors affiché un popup
+
+            displayErrorModal();
+        } else {    // Désélection du thème
             themeLi.classList.add("unchecked");
             supprimeTheme(themeString);
-            await chercheEtAjouteProfilsCarousel(themeSelected, true);
+            await chercheEtAjouteProfilsCarousel(true);
         }
     }
 }
@@ -508,12 +485,14 @@ swiperSection.addEventListener('click', function (event) {
         const wWidth = window.innerWidth;
         const xClick = event.clientX;
         const clicADroite = xClick > (wWidth / 2);
-
-        swipeHorizontal(clicADroite);
+        if(clicADroite) {   // Click uniquement possible à droite pour éviter les bugs liés au swipe horizontal gauche
+            swipeHorizontal(clicADroite);
+        }
     }
 });
 
 function swipeHorizontal(aDroite) {
+    console.log()
     let newActive;
     if (aDroite) {
         newActive = carouselList.querySelector('.carousel-item[data-pos="1"]');
@@ -537,6 +516,7 @@ folderProfilEnr.addEventListener('click', () => {
 // AU CHARGEMENT DE LA PAGE, RECUPERATION DES VALEUR POUR REMPLIR LES DIFFERENTES COMPOSANTES DE LA PAGE
 document.addEventListener("DOMContentLoaded", async function () {
 
+    // ------------ APROPOS ------------
     const apropos = document.querySelector('#petit-rond');
     apropos.addEventListener('click', () => {
         window.localStorage.setItem('pagePrecedente', "swipe");
@@ -548,24 +528,15 @@ document.addEventListener("DOMContentLoaded", async function () {
     // ------------ THEMES ------------
 
     // Récupération des thèmes déjà choisis dans la page précédente
-    let themeSelected = window.localStorage.getItem('themes');
+    themeSelected = window.localStorage.getItem('themes');
     themeSelected = themeSelected ? themeSelected.split(',') : [];
-
-    if(themeSelected.length === 0) { // Cas ou aucun thème selection (normalement impossible dans une navigation normale)
-        themesCheckboxes.forEach(tc => {
-                const img = tc.querySelector('img');
-                const themeName = img.getAttribute('alt');
-                ajouteTheme(themeName);
-            }
-        );
-    }
 
     // Listener de click pour chaque filtre-theme
     themesCheckboxes.forEach(tc =>
         tc.addEventListener('click', onCheck)
     );
 
-    themeSelected = window.localStorage.getItem('themes');
+    // Mise en forme des theme suivant la sélection
     themesCheckboxes.forEach(tc => {
             const img = tc.querySelector('img');
             const themeName = img.getAttribute('alt');
@@ -578,7 +549,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     // ------------ SWIPER ------------
 
     // Remplissage du carousel/swiper avec les données de l'API, suivant les themes choisis
-    await chercheEtAjouteProfilsCarousel(themeSelected, true);
+    await chercheEtAjouteProfilsCarousel(true);
 
     if(getProfilsFav().length === 0) {
         premiereVisite();
@@ -641,10 +612,10 @@ function updateDownSwipeListener(current) {
             // check threshold and movement direction
             if (e.direction === Hammer.DIRECTION_RIGHT) {
 
-                swipeHorizontal(false);
+                // Swipe uniquement possible à droite pour éviter les bugs liés au swipe horizontal gauche
+                //swipeHorizontal(false);
 
             } else if (e.direction === Hammer.DIRECTION_LEFT) {
-
                 swipeHorizontal(true);
 
             } else if (propY < 30 && e.direction === Hammer.DIRECTION_DOWN) {
