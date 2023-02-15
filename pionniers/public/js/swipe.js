@@ -5,7 +5,7 @@ let carouselList = document.querySelector('.carousel-list');
 let carouselItems = document.querySelectorAll('.carousel-item');
 let elems = Array.from(carouselItems);
 const swiperSection = document.querySelector('#swiper');
-const folderProfilEnr = document.querySelector('#folder');
+const folder_front = document.querySelector('div#folder-front-pane');
 
 /*  --------------------------------------------------------
     ------------------ CREATION DOM FICHE ------------------
@@ -183,6 +183,9 @@ function removeAllItemCorrespondingToField(fieldName, objectArray, array2) {
     return arrayFiltered;
 }
 
+/**
+ * Filtre les profils trouver, en enlevant ceux qui sont déjà dans les favoris
+ */
 function filterProfilsTrouves() {
     let idsProfilsFav = getProfilsFav();
     if(idsProfilsFav.length > 0) {
@@ -267,9 +270,14 @@ async function chercheEtAjouteProfilsCarousel(shuffleResults) {
 
     filterProfilsTrouves();
 
+    if(profilsTrouves.length < 5) { // Cas
+        displayNoMoreResultModal();
+    }
+
     // Recrée le contenu du carousel avec les fiches des profils trouvés
     // (seules les 5 premières sont nécessaires pour avoir un carrousel complet)
     recreeCarouselDeck(profilsTrouves.slice(0, 5));
+
 
     // Met à jour l'état du carrousel
     miseAJourEtatCarousel();
@@ -290,11 +298,10 @@ async function chercheEtAjouteProfilsCarousel(shuffleResults) {
 }
 
 function updateFolder() {
-    const nombreProfilsFavText = document.querySelector('footer#folder #nombre-profil');
-    const idsProfilsEnregistres = getProfilsFav();
-    let nombreProfilFav = idsProfilsEnregistres.length;
-
-    nombreProfilsFavText.innerHTML = nombreProfilFav > 0 ? nombreProfilFav.toString() : "";
+    const favProfilesNumberText = document.querySelector('footer#folder-back-pane div#folder-tab-map span#nombre-profil');
+    const favProfilesIds = getProfilsFav();
+    let favProfilesNumber = favProfilesIds.length;
+    favProfilesNumberText.innerHTML = favProfilesNumber > 0 ? favProfilesNumber.toString() : "";
 }
 
 /*  -------------------------------------------------
@@ -302,6 +309,20 @@ function updateFolder() {
     -------------------------------------------------
  */
 
+function displayNoMoreResultModal() {
+    // Display the overlay
+    const overlay = document.querySelector("div#overlay2");
+    overlay.classList.remove("display-none");
+    // Display the popup
+    const popup = document.querySelector("div#popup2");
+    popup.classList.remove("display-none");
+    document.querySelector('div#popup2 img#fermeture-popup2').addEventListener('click', () => {
+        // Undisplay the overlay
+        document.querySelector('div#overlay2').classList.add('display-none');
+        // Undisplay the popup
+        document.querySelector('div#popup2').classList.add('display-none');
+    });
+}
 
 /**
  * Ajout d'une nouvelle fiche suite à un Swipe bas (enregistrement profil dans les fav)
@@ -409,8 +430,8 @@ function premiereVisite() {
 
             if (successful) {
                 popupTutoASwipe.style.transform = 'translateX(' + posX + 'px) translateY(' + (posY - 300) + 'px) rotate(' + deg + 'deg)';
-                const folderBody = document.querySelector("footer#folder #folder-front-body");
-                folderBody.classList.add("open-folder-animation");
+                const folder_front = document.querySelector('div#folder-front-pane');
+                folder_front.classList.add("open-folder-animation-map");
                 setTimeout(() => {
 
                     popupTuto.classList.remove('flex-column');
@@ -419,7 +440,7 @@ function premiereVisite() {
                     flecheGif.remove();
                 }, 200);
                 setTimeout(() => {
-                    folderBody.classList.remove("open-folder-animation");
+                    folder_front.classList.remove("open-folder-animation-map");
                 }, 1000);
             }
         }
@@ -506,9 +527,12 @@ function swipeHorizontal(aDroite) {
     ajouterNouvelleFiche(newActivePos);
 }
 
-folderProfilEnr.addEventListener('click', () => {
+
+folder_front.addEventListener('click', () => {
     window.location.href = './profils-enregistres.html';
-    window.localStorage.setItem('pagePrecedente', "swipe");
+})
+folder_front.addEventListener('click', () => {
+    window.location.href = './profils-enregistres.html';
 })
 
 // -----------------------------------------------------
@@ -607,45 +631,54 @@ function updateDownSwipeListener(current) {
 
 
         if (e.isFinal) {
-            let successful = false;
+            let downswipe = false;
 
-            // check threshold and movement direction
             if (e.direction === Hammer.DIRECTION_RIGHT) {
-
                 // Swipe uniquement possible à droite pour éviter les bugs liés au swipe horizontal gauche
                 //swipeHorizontal(false);
-
             } else if (e.direction === Hammer.DIRECTION_LEFT) {
                 swipeHorizontal(true);
-
             } else if (propY < 30 && e.direction === Hammer.DIRECTION_DOWN) {
-
-                successful = true
-                // get top border position
-                posY = +(swiper.clientHeight + topcard.clientHeight)
-
+                downswipe = true;
+                posY = +(topcard.clientHeight + topcard.clientHeight) + 5000;
             }
 
-            if (successful) {
-                // animation de la carte qui va vers le bas
-                topcard.style.transform = 'translateX(' + posX + 'px) translateY(' + posY + 'px) rotate(' + deg + 'deg)'
+            if (downswipe) {
+                let start = null;
+                let duration = 1000; // 1 second
+                const folder_front = document.querySelector('div#folder-front-pane');
+                folder_front.classList.add('open-folder-animation');
+                function animation(timestamp) {
+                    if (!start) start = timestamp;
+                    let progress = timestamp - start;
+                    let translateY = posY * (progress / duration);
+                    topcard.style.transform = `translateX(${posX}px) translateY(${translateY}px) rotate(${deg}deg)`;
+                    if (progress < duration) {
+                        requestAnimationFrame(animation);
+                    } else {
+                        // Décalage des positions
+                        updatePos('1');
 
-                // quand la transition est finie, on stock l'id de la carte et on passe a la suivante
-                setTimeout(() => {
-                    // Décalage des positions
-                    updatePos('1');
+                        // Ajout nouvelle fiche dans Swiper
+                        const idFicheFav = topcard.getAttribute('data-id');
+                        ajouterNouvelleFicheSwipeBas(idFicheFav);
 
-                    const idFicheFav = topcard.getAttribute('data-id');
-                    ajouterNouvelleFicheSwipeBas(idFicheFav);
+                        // Stock de la carte en fav
+                        pushProfilFav(idFicheFav);
 
-                    // stock la carte et on affiche la prochain
-                    pushProfilFav(idFicheFav);
+                        // enleve la carte swipe
+                        topcard.remove();
+                        if(profilsTrouves.length < 5) { // Cas
+                            displayNoMoreResultModal();
+                        } else {
+                            miseAJourEtatCarousel();
+                        }
+                        updateFolder();
 
-                    // enleve la carte swipe
-                    topcard.remove();
-                    miseAJourEtatCarousel();
-                    updateFolder();
-                }, 200);
+                        folder_front.classList.remove('open-folder-animation');
+                    }
+                }
+                requestAnimationFrame(animation);
             }
         }
     }

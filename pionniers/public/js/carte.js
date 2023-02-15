@@ -196,9 +196,6 @@ async function getMiniature(Id) {
  */
 function displayMiniature(Id){
     getMiniature(Id).then(p => {
-        // Display the overlay
-        const overlay = document.querySelector("main div#overlay");
-        overlay.classList.remove("display-none");
         // Display the miniature related part
         const miniature_related = document.querySelector("main div#miniature-related");
         miniature_related.classList.remove("display-none");
@@ -244,10 +241,9 @@ function displayMiniature(Id){
         });
         // Retrieve the close button
         const closeButton = document.querySelector("main div#miniature-related img#fermeture-miniature");
-        // Add the event listener to close the miniature and undisplay the miniature related part and the overlay
+        // Add the event listener to close the miniature and undisplay the miniature related part
         closeButton.addEventListener('click', () => {
             miniature_related.classList.add("display-none");
-            overlay.classList.add("display-none");
         });
         // Retrieve the button to see the full profile
         const seeFullProfileButton = document.querySelector("main div#miniature-related button#seeFillProfile");
@@ -685,8 +681,7 @@ function onPan(e) {
     let dirX = e.deltaX < 0 ? -1 : 1;
     // Get degrees of rotation, between 0 and +/- 45
     let deg = isDraggingFrom * dirX * Math.abs(propX) * 45;
-    // Get scale ratio, between .95 and 1
-    let scale = (95 + (5 * Math.abs(propX))) / 100;
+
     let successful = false;
     // Check if the card is dragged down
     if (propY < 30 && e.direction === Hammer.DIRECTION_DOWN) {
@@ -698,7 +693,7 @@ function onPan(e) {
         let start = null;
         let duration = 1000; // 1 second
         const folder_front = document.querySelector('div#folder-front-pane');
-        folder_front.classList.add('open-folder-animation-map');
+        folder_front.classList.add('open-folder-animation');
         function animation(timestamp) {
             if (!start) start = timestamp;
             let progress = timestamp - start;
@@ -707,9 +702,6 @@ function onPan(e) {
             if (progress < duration) {
                 requestAnimationFrame(animation);
             } else {
-                // Undisplay the overlay
-                const overlay = document.querySelector("main div#overlay");
-                overlay.classList.add("display-none");
                 // Undisplay the miniature
                 miniature.classList.add("display-none");
                 miniature.style.transform = null;
@@ -719,7 +711,7 @@ function onPan(e) {
                 const Id = miniature.getAttribute('identifier');
                 pushProfilFav(Id);
                 // Stop the folder animation
-                folder_front.classList.remove('open-folder-animation-map');
+                folder_front.classList.remove('open-folder-animation');
                 // Update the folder number of favorite profiles
                 updateFolder();
             }

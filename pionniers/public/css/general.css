@@ -276,33 +276,75 @@ header#logo-appli a div img {
 
 
 /* Animation d'ouverture du dossier au passage de la souris */
-footer#folder:hover{
-    cursor: pointer;
+
+div#folder-front-pane, footer#folder-back-pane div#folder-tab-map, footer#folder-back-pane div#folder-back-body-map {
+    box-shadow: 0 -10px 20px -5px rgba(115,115,115,0.75);
 }
 
-footer#folder:hover #folder-back-body{
-    height: 11vh;
+div#folder-front-pane {
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+    z-index: 6;
+    width: 80%;
+    height: 7.5%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 25px 25px 0 0;
+    perspective : 600px;
+    transition: 0.5s;
+    background-color: var(--gris-clair);
 }
 
-footer#folder:hover #folder-front-body {
-    transform: perspective(50px) rotateX(-1deg) scale(1.1);
+footer#folder-back-pane {
+    position: absolute;
+    z-index: -12;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 15%;
 }
 
-footer#folder { /* Pour coller le folder en bas de la page */
-    transform: translateY(20%);
+footer#folder-back-pane div#folder-tab-map {
+    width: 45%;
+    height: 20%;
+    background-color: var(--gris-clair);
+    border-radius: 25px 25px 0 0;
+    padding: 2%;
+    z-index: 4;
+    position: relative;
+    color: var(--bleu-fonce);
+}
+
+footer#folder-back-pane div#folder-back-body-map {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 85%;
+    background-color: var(--gris-clair);
+    border-radius: 0 25px 0 0;
+}
+
+div#folder-front-pane:hover {
+    transform: perspective(25px) rotateX(-0.20deg) scale(1.2);
+}
+
+footer#folder-back-pane:hover ~ div#folder-front-pane {
+    transform: perspective(25px) rotateX(-0.20deg) scale(1.2);
 }
 
 .open-folder-animation {
-    animation: 0.5s open-folder ease-in forwards;
+    animation: 1s open-folder ease-in forwards;
 }
 
 @keyframes open-folder {
-    from {
+    0% {
         transform: perspective(0px) rotateX(0deg) scale(1);
     }
-
-    to {
-        transform: perspective(25px) rotateX(-0.5deg) scale(1.1);
+    50% {
+        transform: perspective(25px) rotateX(-0.20deg) scale(1.2);
+    }
+    100% {
+        transform: perspective(0px) rotateX(0deg) scale(1);
     }
 }
 

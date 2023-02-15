@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<div id="container" class="flex-column align-items-center justify-content-space-evenly rainbow-background rbg-bottom">
+<div id="container" class="flex-column align-items-center rainbow-background rbg-bottom">
     <header class="flex-row align-items-center justify-content-space-evenly" id="logo-appli">
         <div onclick="history.back()" id="retour" class="bouton-rond flex-row align-items-center justify-content-center">
             <p>Retour</p>
@@ -37,6 +37,18 @@
         </div>
     </div>
 
+    <div id="overlay2" class="display-none"></div>
+    <div id="popup2" class="display-none">
+        <div id="popup-content2" class="flex-column align-items-center justify-content-space-between">
+            <p>
+                Nous ne sommes plus en mesure de vous proposer des profils.
+            </p>
+            <p>
+                <a href="./profils-enregistres.html">Voir mes favoris</a>
+            </p>
+        </div>
+    </div>
+
     <section id="theme-selector" class="flex-column align-items-center-flex-start">
         <div id="label-selector" class="flex-row align-items-center justify-content-center">
             <p class="gras">Je recherche un &nbsp<img src="../img/pro-logo.svg" alt="PRO"> dans quels domaines ?</p>
@@ -53,23 +65,23 @@
 
     <section class="flex-row justify-content-center" id="swiper">
         <ul class="carousel-list flex-row justify-content-center align-items-center">
-            <li class="carousel-item" data-pos="-2">1</li>
-            <li class="carousel-item" data-pos="-1">2</li>
-            <li class="carousel-item" data-pos="0">3</li>
-            <li class="carousel-item" data-pos="1">4</li>
-            <li class="carousel-item" data-pos="2">5</li>
+            <li class="carousel-item" data-pos="-2"></li>
+            <li class="carousel-item" data-pos="-1"></li>
+            <li class="carousel-item" data-pos="0"></li>
+            <li class="carousel-item" data-pos="1"></li>
+            <li class="carousel-item" data-pos="2"></li>
         </ul>
     </section>
-    <footer id="folder">
-        <div id="folder-tab" class="flex-row align-items-center justify-content-space-evenly">
-            <p class="gras">Voir mes favoris :
-            <span class="gras" id="nombre-profil" ></span> ★</p>
+    <footer id="folder-back-pane" class="flex-column cursor-pointer">
+        <div id="folder-tab-map" class="flex-row align-items-center justify-content-space-evenly">
+            <p class="gras">
+                Voir mes favoris : <span class="gras" id="nombre-profil"></span>★
+            </p>
         </div>
-        <div id="folder-back-body">
-            <div id="folder-front-body"></div>
-        </div>
+        <div id="folder-back-body-map"> </div>
     </footer>
-
+    <div id="folder-front-pane" class="cursor-pointer">
+    </div>
 
     <div id="tuto" class="display-none justify-content-flex-end align-items-center">
         <div id="tuto-content" class="flex-column justify-content-space-between align-items-center">

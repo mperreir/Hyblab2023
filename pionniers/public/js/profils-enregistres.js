@@ -7,7 +7,6 @@ function createFicheMinia(profil) {
     const tranlatedSimpleTopic = translateThemeToSimpleChar(Topic);
     // Récupération de la classe relative à la couleur de la police du theme
     const fontClass = getFontClass(tranlatedSimpleTopic);
-    const bgClass = getBackgroundClass(tranlatedSimpleTopic)
     const htmlString = `<li data-id="${Id}" class="flex-column align-items-flex-end">
                             <div class="overflow-buttons-top flex-row justify-content-flex-end">
                                 <div class="croix-suppr">
@@ -81,16 +80,12 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     const listeProfils = document.querySelector('#liste-profils');
     const idsProfilsFav = getProfilsFav();
-    const retourBtn = document.querySelector('#retour');
     const apropos = document.querySelector('#petit-rond');
 
     apropos.addEventListener('click', () => {
         window.location.href = './apropos.html';
     });
 
-    retourBtn.addEventListener('click', () => {
-        window.location.href = window.localStorage.getItem('pagePrecedente') + ".html";
-    });
 
     updateNombreProfil(idsProfilsFav);
 
