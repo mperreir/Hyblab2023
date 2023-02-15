@@ -455,18 +455,7 @@ async function onCheck(evnt) {
             // À 1 seul thème sélectionné, il est impossible de le désélectionner
             // Il est alors affiché un popup
 
-            // Display the overlay
-            const overlay = document.querySelector("div#overlay");
-            overlay.classList.remove("display-none");
-            // Display the popup
-            const popup = document.querySelector("div#popup");
-            popup.classList.remove("display-none");
-            document.querySelector('div#popup img#fermeture-popup').addEventListener('click',  () => {
-                // Undisplay the overlay
-                document.querySelector('div#overlay').classList.add('display-none');
-                // Undisplay the popup
-                document.querySelector('div#popup').classList.add('display-none');
-            });
+            displayErrorModal();
         } else {    // Désélection du thème
             themeLi.classList.add("unchecked");
             supprimeTheme(themeString);

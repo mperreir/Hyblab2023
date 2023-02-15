@@ -30,18 +30,7 @@ function onCheck(event) {
     } else {
 
         if (themeSelected.length === 1) {
-            // Display the overlay
-            const overlay = document.querySelector("div#overlay");
-            overlay.classList.remove("display-none");
-            // Display the popup
-            const popup = document.querySelector("div#popup");
-            popup.classList.remove("display-none");
-            document.querySelector('div#popup img#fermeture-popup').addEventListener('click', () => {
-                // Undisplay the overlay
-                document.querySelector('div#overlay').classList.add('display-none');
-                // Undisplay the popup
-                document.querySelector('div#popup').classList.add('display-none');
-            });
+            displayErrorModal();
         } else {
             supprimeTheme(themeName);
             themeBtn.classList.add("unchecked");
