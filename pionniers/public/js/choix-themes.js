@@ -80,8 +80,10 @@ document.addEventListener("DOMContentLoaded", function() {
 function updateCount() {
     // Retrieve the selected topics
     getProfiles(buildApiParameters()).then(r => {
+        const idsProfilsFav = getProfilsFav();
+        r = removeAllItemCorrespondingToField("Id", r, idsProfilsFav);
         // Update the count in the HTML
-        document.querySelector("footer span#profile_counter").innerHTML = r.length;
+        document.querySelector("footer span#profile_counter").innerHTML = r.length.toString();
     });
 }
 

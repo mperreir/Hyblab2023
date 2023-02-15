@@ -101,3 +101,27 @@ function displayErrorModal() {
     document.querySelector('div#popup').classList.add('display-none');
   });
 }
+
+/**
+ * Supprime tous les objets avec un attribut ayant une valeur incluse dans un array fournis
+ * @param fieldName {string} nom de l'attribut/champ à traiter
+ * @param objectArray {Array} array d'objet, comportant au moins un champ de nom fieldName
+ * @param array2 {Array}
+ * @returns {*[]}
+ */
+function removeAllItemCorrespondingToField(fieldName, objectArray, array2) {
+  let arrayFiltered = [];
+
+  objectArray.forEach(item => {
+    let aucuneCorrespondance = true;
+    array2.forEach(value => {
+      if(item[fieldName] === value) {
+        aucuneCorrespondance = false;
+      }
+    });
+    if(aucuneCorrespondance) {
+      arrayFiltered.push(item);
+    }
+  });
+  return arrayFiltered;
+}
