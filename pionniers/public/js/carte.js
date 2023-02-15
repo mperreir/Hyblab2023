@@ -63,7 +63,11 @@ function createIcon(p) {
         });
     }
     // If the used keywords list is not empty and the profile doesn't contain at least one of the used keywords, return the inactive icon
-    if (usedKeywords.length > 0 && !usedKeywords.map(k => k.replace('#', '')).some(keyword => p.Keywords.includes(keyword))) {
+    const usedKeywordsToLowerCase = usedKeywords.map(k => k.toLowerCase());
+    if (usedKeywordsToLowerCase.length > 0 && !usedKeywordsToLowerCase.map(k => k.replace('#', '')).some(keyword => {
+        const pKeywordsToLowerCase = p.Keywords.split(';').map(k => k.trim().toLowerCase());
+        return pKeywordsToLowerCase.includes(keyword.toLowerCase());
+    })) {
         return L.icon({
             iconUrl: iconUrlPrefix + 'inactif.svg',
             iconSize: globalIconSize,
@@ -206,7 +210,7 @@ function displayMiniature(Id){
         // Update the miniature content inner HTML
         miniature_content.innerHTML = `
                     <section class="photo-case">
-                        <img draggable="false" alt="photo-profil" src="${p.URLImage}">
+                        <img draggable="false" alt="photo-profil" src="${p.URLImage}" style="object-position: 50% ${p.HeightShiftImage}%;">
                     </section>
                     <section class="information-fiche flex-column justify-content-space-evenly">
                         <section class="carte-identite flex-column align-items-center-flex-start ${font_class}">
@@ -220,12 +224,6 @@ function displayMiniature(Id){
                             <p>${p.MiniBio}</p>
                         </section>
                         <section class="keywords flex-row">
-                            <div class="keyword-item flex-row align-items-center">
-                                <p>#biodéchets</p>
-                            </div>
-                            <div class="keyword-item flex-row align-items-center">
-                                <p>#hydrogène</p>
-                            </div>
                             <!-- Section qui va se remplir dans la suite de la fonction -->
                         </section>
                         <section class="topic flex-row align-items-center">
@@ -328,6 +326,36 @@ function onTopicCheck(event) {
         }
         // Update the localStorage
         localStorage.setItem("themes", selectedTopics.join(','));
+        // Retrieve the selected-keywords-list element
+        const selectedKeywordsList = document.querySelector('#selected-keywords-list');
+        // Retrieve the selected keywords
+        const selectedKeywords = selectedKeywordsList.querySelectorAll('div.keyword-item p');
+        // Provide the list of selected keywords (without the "Ajouter" element)
+        const selectedKeywordsListWithoutAdd = Array.from(selectedKeywords).slice(0, selectedKeywords.length - 1);
+        // Map the selected keywords by withdrawing the # character
+        const selectedKeywordsMap = Array.from(selectedKeywordsListWithoutAdd).map(k => k.textContent.substring(1));
+        // Fetch the keywords corresponding to the selected topics
+        getKeywords().then(keywords => {
+            // Transform keywords to lowercase
+            keywords = keywords.map(k => k.toLowerCase());
+            // For each keyword in selectedKeywordsMap, if it is not in keywords
+            selectedKeywordsMap.forEach(k => {
+                k = k.toLowerCase();
+                if (!keywords.includes(k)) {
+                    // Retrieve the instance of the keyword in the selected keywords list
+                    for (let i = 0; i < selectedKeywordsList.children.length; i++) {
+                        const keywordItem = selectedKeywordsList.children[i];
+                        if (keywordItem.textContent === "#" + k) {
+                            // Remove the keyword from the selected keywords list
+                            selectedKeywordsList.removeChild(keywordItem);
+                            // Remove the keyword from the used keywords js list
+                            usedKeywords.splice(usedKeywords.indexOf(k), 1);
+                            break;
+                        }
+                    }
+                }
+            });
+        });
     }
     updateMap();
 }
@@ -480,7 +508,8 @@ function onKeywordManage() {
             // Set the keyword list as visible
             keywordsList.classList.remove('display-none');
             // Filter the keywords to keep only the ones that are not already used
-            keywords = keywords.filter(k => !usedKeywords.includes('#' + k));
+            const usedKeywordsToLowerCase = usedKeywords.map(k => k.toLowerCase());
+            keywords = keywords.filter(k => !usedKeywordsToLowerCase.includes('#' + k.toLowerCase()));
             // For each keyword, create the available keyword element as HTML
             keywords.forEach(k => {
                 // Create the keyword element
@@ -489,7 +518,7 @@ function onKeywordManage() {
                 keywordDiv.classList.add('flex-row');
                 keywordDiv.classList.add('align-items-center');
                 keywordDiv.classList.add('cursor-pointer');
-                keywordDiv.innerHTML = `<p>#${k}</p>`;
+                keywordDiv.innerHTML = `<p>#${k.toLowerCase()}</p>`;
                 // Add the keyword element as a child of the keywords list
                 keywordsList.appendChild(keywordDiv);
                 // Add the event listener to the keyword element

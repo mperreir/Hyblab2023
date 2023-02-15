@@ -49,7 +49,7 @@ header #petit-rond {
 #profile {
     background-color: var(--gris-clair);
     border-radius: 15px;
-    min-height: 75%;
+    min-height: 50%;
     margin: 1.5em auto;
 }
 
@@ -68,7 +68,7 @@ header #petit-rond {
 #resume {
     align-self: start;
     width: 100%;
-    height: 25%;
+    height: 50%;
     font-size: 1.1em;
 }
 
@@ -116,4 +116,35 @@ header #petit-rond {
     width: 85%;
     height: 10%;
     padding: 0.8em 5%;
+}
+
+#identity section.topic {
+    border-radius: 500px;
+    background-color: var(--blanc-fond);
+    padding: 2% 7% 2% 2%;
+    width: min-content;
+    white-space: nowrap;
+}
+
+#identity section.topic img {
+    max-height: 5vh;
+    max-width: 5vw;
+}
+
+#identity section.topic p {
+    margin-left: 5px;
+}
+
+.keywords {
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.keyword-item {
+    white-space: nowrap;
+    border-radius: 500px;
+    background-color: var(--blanc-fond);
+    margin-bottom: 3%;
+    margin-right: 7%;
+    padding: 2%;
 }

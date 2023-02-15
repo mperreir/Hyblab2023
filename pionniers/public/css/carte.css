@@ -251,6 +251,10 @@ div#folder-front-pane:hover {
     transform: perspective(25px) rotateX(-0.20deg) scale(1.2);
 }
 
+footer#folder-back-pane:hover ~ div#folder-front-pane {
+    transform: perspective(25px) rotateX(-0.20deg) scale(1.2);
+}
+
 .open-folder-animation-map {
     animation: 1s open-folder-map ease-in forwards;
 }
