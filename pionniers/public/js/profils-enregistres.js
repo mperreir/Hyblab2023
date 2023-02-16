@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     let profilFav = [];
 
     for (const id of idsProfilsFav) {
-        const profil = await fetch('/pionniers/api/miniature/' + id).then(r => r.json());
+        const profil = await fetch('../api/miniature/' + id).then(r => r.json());
         profilFav.push(profil);
         const ficheMinia = createFicheMinia(profil);
         const boutonLire = ficheMinia.querySelector('.lire-profil');

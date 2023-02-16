@@ -184,7 +184,7 @@ async function addMarkers() {
  */
 async function getMiniature(Id) {
     // Fetch the data from the API
-    const response = await fetch("/pionniers/api/miniature/" + Id);
+    const response = await fetch("../api/miniature/" + Id);
     // Parse the response as JSON and return it
     return await response.json();
 }
@@ -282,7 +282,7 @@ function createKeywordItem(Keyword) {
  */
 async function getProfiles(apiParameters) {
     // Fetch the data from the API
-    const response = await fetch("/pionniers/api/map/topics/" + apiParameters);
+    const response = await fetch("../api/map/topics/" + apiParameters);
     // Parse the response as JSON and return it
     return await response.json();
 }
@@ -378,7 +378,7 @@ function buildApiParameters() {
  */
 async function getKeywords() {
     // Fetch the data from the API
-    const response = await fetch("/pionniers/api/map/keywords/" + buildApiParameters());
+    const response = await fetch("../api/map/keywords/" + buildApiParameters());
     // Parse the response as JSON and return it
     return await response.json();
 }

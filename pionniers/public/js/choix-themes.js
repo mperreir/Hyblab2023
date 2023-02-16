@@ -109,7 +109,7 @@ function buildApiParameters() {
  */
 async function getProfiles(apiParameters) {
     // Fetch the data from the API
-    const response = await fetch("/pionniers/api/map/topics/" + apiParameters);
+    const response = await fetch("../api/map/topics/" + apiParameters);
     // Parse the response as JSON and return it
     return await response.json();
 }

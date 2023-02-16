@@ -105,7 +105,7 @@ function createFicheprofile(profile) {
  */
 async function getprofile(Id) {
     // Fetch the data from the API
-    const response = await fetch("/pionniers/api/profile/" + Id);
+    const response = await fetch("../api/profile/" + Id);
     // Parse the response as JSON and return it
     return await response.json();
 }

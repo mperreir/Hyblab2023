@@ -238,7 +238,7 @@ async function chercheEtAjouteProfilsCarousel(shuffleResults) {
 
 
     // Appel API
-    profilsTrouves = await fetch(baseURL + "/pionniers/api/miniature/topics/" + generateApiParameters(themeSelected)).then(r => r.json());
+    profilsTrouves = await fetch("../api/miniature/topics/" + generateApiParameters(themeSelected)).then(r => r.json());
 
     if (shuffleResults) {    // Tri aléatoire si souhaité
         profilsTrouves = profilsTrouves.sort(() => 0.5 - Math.random());
