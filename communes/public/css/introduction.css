@@ -1,0 +1,119 @@
+header div {
+    margin: 4%;
+    font-size: 12pt;
+
+}
+
+#mySwiper, .swiper-slide{
+    background-color: #F2FFFB;
+    margin: 0;
+}
+.textElu{
+    margin-top: 10%;
+    font-size: 7pt;
+    font-weight: 100;
+    display: inline-block;
+    background-color: #d7d1d1;
+    border-radius: 10px;
+    padding: 1em 1em;
+    width: 50%;
+    margin-left: 25%;
+}
+.Elu{
+    position: absolute;
+    width: 40%;
+    bottom: 30%;
+
+}
+
+.form__group {
+    position: absolute;
+    padding: 15px 0 0;
+    bottom: 48%;
+    margin-top: 5%;
+    right: 5%;
+    width: 50%;
+}
+
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 70%;
+    color: #000000;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s
+}
+
+.form__field::placeholder {
+    color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #9b9b9b;
+}
+
+.form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image-slice: 1
+}
+~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #11998e;
+    font-weight:700;
+}
+/* demo */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 1.5rem;
+    background-color:#222222;
+}
+.swiper-pagination-bullet-active{
+    background-color : #35A88A !important;
+}
+
+input[type=button] {
+    background-color: #04AA6D;
+    padding: 1em 2em;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    border: none;
+    border-radius: 4em;
+    margin-top: 6%;
+}
+
+header p{
+    font-size: 20px;
+}
+#voirEnv {
+    position: absolute;
+    padding: 15px 0 0;
+    bottom: 34%;
+    margin-top: 5%;
+    right: 7%;
+    width: 50%;
+}

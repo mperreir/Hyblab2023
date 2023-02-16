@@ -10,21 +10,50 @@
 
 body{
     background-color: black;
-    color: white;
+    color: black;
     overflow: hidden;   /* to avoid slider bugs on some browsers */
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
-/* -------------- Loader --------------*/
+p{
+    font-weight: 500;
+    font-size: 2em;
+}
+
+#titre{
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+    margin: 10% 0 5%;
+}
+
+
+.carousel{
+    height: 200px;
+}
+
+#carousel-text{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/*------------ Loader --------------*/
 #loader{
     z-index: 2;
     position:absolute;
+    width: 100%;
+    text-align: center;
+    background-color: #35A88A;
 }
 
 #loader-img{
-    top:40%;
-    left:40%;
+    top:50%;
+    left:50%;
     position: absolute;
+    transform: translate(-50%,-50%);
+    max-height: 100%;
+    max-width: 100%;
 }
 
 #loader-text{
@@ -41,6 +70,7 @@ body{
     width: 100%;
     height:100%;
     position: absolute;
+    background: white;
 }
 
 /* white navigation bullets */
@@ -50,19 +80,37 @@ body{
 
 /* the slides and the loader should fill the whole 9:16 zone */
 .swiper-wrapper section, #loader{
-    background-color: dodgerblue;
     width: 100%;
     height: 100%;
 }
 
 /* Most of the elements in this demo are absolute positionned with percentages */
-#first-slide header, #second-slide header{
-    text-align: center;
+header{
     width: 100%;
-    top: 10%;
-    position: absolute;
-    font-size: 30%;
-    z-index: 2;
+    height: 15%;
+    margin-bottom: 2%;
+
+}
+header img{
+    width: 100%;
+}
+header > div {
+    display: inline-block;
+    margin: 4%;
+    font-size: 12pt;
+}
+
+.headerOne{
+    width: 33%;
+}
+.headerThree{
+    float: right;
+    width: 33%;
+    text-align: right;
+}
+
+header p{
+    font-size: 20px;
 }
 
 #logo-hyblab{
@@ -89,7 +137,7 @@ body{
 }
 
 main > section{
-    background-image: url('../img/background.svg');
+    background-color: white;
     background-size: 100% 100%;
 }
 
@@ -171,7 +219,7 @@ main > section{
 /* We set a default font size here. It will be the base for all other font sizes */
 /* Here the font size is proportional to content width */
 body{
-    font-size: calc(15vh * 3 / 4);
+    font-size: 13pt;
 }
 
 /* Fill the whole viewport when its aspect ratio is between 9/16 and 3/4 */
@@ -181,11 +229,6 @@ body{
         width: 100vw; /* content is full width (and full height because of the default rule for container height */
     }
 
-    /* We set a default font size here. It will be the base for all other font sizes */
-    /* Here the font size is proportional to content width */
-    body{
-        font-size: 15vw;
-    }
 }
 
 /* The content is displayed at 9/16 If the aspect ratio is higher that 9/16  */ 
@@ -201,7 +244,24 @@ body{
     /* We set a default font size here. It will be the base for all other font sizes */
     /* Here the font size is proportional to content width */
     body{
-        font-size: 15vw;
+        font-size: 13pt;
     }
 }
 
+#detail {
+    border-radius: 40px 40px 40px 40px;
+    padding: 1em;
+    margin-top: 15px;
+    border: none;
+
+}
+#divDetail{
+    text-align: center;
+}
+
+#logo-intercom{
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

@@ -1,0 +1,120 @@
+<!doctype html>
+
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="icon" type="image/png" href="../img/CARRE_VERT.png" />
+    <title>La vie en vert</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/introduction.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../js/IntroSlide.js" defer></script>
+    <script src="../js/Intro.js" defer></script>
+    <script src="../js/change_svg_color.js"></script>
+</head>
+<body>
+<!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
+<div id="container">
+    <!-- Le loader-->
+    <section id="loader">
+        <img id="loader-img" src="../img/CARRE_VERT.png" alt="loader">
+        <img id="logo-intercom" src="../img/logo-intercmmunalites.svg" alt="intercom">
+        <!-- <p id="loader-text">Veuillez patienter...</p> -->
+    </section>
+    <div id="mySwiper" class="swiper">
+        <header>
+            <div class="headerOne">
+                <object class="logo" type="image/svg+xml"></object>
+
+            </div>
+            <div class="headerThree skip">
+                Passer l'introduction
+            </div>
+        </header>
+        <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
+        <main class = "swiper-wrapper">
+            <section id="first-slide" class="swiper-slide">
+                <!-- le footer sera rempli à partir de données lues dans un fichier Json-->
+                <div class="textElu">
+                    <p class="bubble-text" id="textElu1">
+                    </p>
+                </div>
+                <div class = Elu>
+                    <object id="Elu1"></object>
+                </div>
+
+                <footer>
+                    <p></p>
+                </footer>
+            </section>
+            <section id="second-slide" class="swiper-slide">
+                <!-- le footer sera rempli à partir de données lues dans un fichier Json-->
+                <div class="textElu" >
+                    <p class="bubble-text" id="textElu2">
+                    </p>
+                </div>
+                <div class = Elu>
+                    <object id="Elu2"></object>
+                </div>
+                <footer>
+                    <p></p>
+                </footer>
+            </section>
+            <section id="third-slide" class="swiper-slide">
+                <!-- le footer sera rempli à partir de données lues dans un fichier Json-->
+                <div class="textElu" >
+                    <p class="bubble-text" id="textElu3">
+                    </p>
+                </div>
+                <div class = Elu>
+                    <object id="Elu3"></object>
+                </div>
+                <footer>
+                    <p></p>
+                </footer>
+            </section>
+            <section id="fourth-slide" class="swiper-slide">
+                <!-- le footer sera rempli à partir de données lues dans un fichier Json-->
+                <div class="textElu" >
+                    <p class="bubble-text" id="textElu4">
+                    </p>
+                </div>
+                <div class = Elu>
+                    <object id="Elu4"></object>
+                </div>
+                <footer>
+                    <p></p>
+                </footer>
+            </section>
+            <section id="fifth-slide" class="swiper-slide">
+                <!-- le footer sera rempli à partir de données lues dans un fichier Json-->
+                <div class="textElu" >
+                    <p class="bubble-text" id="textElu5">
+                    </p>
+                </div>
+                <div class="form__group field">
+                    <input type="text" class="form__field" placeholder="Name" name="name" id='name' required />
+                    <label for="name" class="form__label">Code Postal</label>
+                    <input type="button" onclick="submitPostal()" class="button" value="Valider"/>
+
+                </div>
+                <div>
+                </div>
+                <div class = Elu>
+                    <object id="Elu5"></object>
+                </div>
+                <footer>
+                    <p></p>
+                </footer>
+            </section>
+
+        </main>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+</body>
+</html>

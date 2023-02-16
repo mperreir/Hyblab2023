@@ -1,0 +1,344 @@
+/* ------- Important ! Please at least keep the last part of this CSS ----------- */
+/* ------- that adapts content width and height so that aspect ratio  ----------- */
+/* ------- is kept between 9/16 a,d 3/4 (portait orientation)         ----------- */
+
+/* Normalize margin and padding to ease elements positioning */
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    background-color: black;
+    color: #ffffff;
+    overflow: hidden;   /* to avoid slider bugs on some browsers */
+    font-family: "Poppins", sans-serif;
+}
+.carousel{
+    height: 200px;
+    margin-top: 8%;
+}
+
+#carousel-text{
+    text-align: center;
+    font-size: 30px;
+    margin-top: -0.8em;
+}
+
+#legend-carousel{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5%;
+    align-items: center;
+    justify-content: center;
+    height: 38%;
+}
+#legend-carousel p{
+    max-width: 40%;
+}
+.carouselResult{
+    border-radius: 40px 40px 40px 40px;
+    font-size: 20px;
+    padding: 15px;
+    border: none;
+}
+.navigate{
+    background : transparent;
+    border: transparent;
+    padding-bottom: 20px;
+}
+
+#legend-carousel > * {
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+}
+
+#next, #prev{
+    width: 10%;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    font-size: 2em;
+    margin-top: 5%;
+    font-weight: 600;
+    color: #e81313;
+}
+
+h2{
+    font-weight: 500;
+    font-size: 2.6em;
+    margin-top: 1em;
+}
+
+#third-slide object {
+    width: fit-content;
+}
+
+#logo-environment{
+    width: 20%;
+}
+
+p{
+    font-size: 1.2em;
+}
+
+/* -------------- Loader --------------*/
+#loader{
+    z-index: 2;
+    position:absolute;
+    width: 100%;
+    text-align: center;
+    background-color: #35A88A;
+}
+
+#loader-img{
+    top:50%;
+    left:50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#loader-text{
+    text-align: center;
+    font-size: 25%;
+    position: absolute;
+    top:60%;
+    width: 100%
+}
+/* -------------- End of Loader --------------*/
+
+/* Swiper slider. Need to fill the container */
+#mySwiper{
+    width: 100%;
+    height:100%;
+    position: absolute;
+}
+
+/* white navigation bullets */
+.swiper-pagination-bullet-active {
+    background-color: #da0404;
+}
+
+/* the slides and the loader should fill the whole 9:16 zone */
+#loader{
+    width: 100%;
+    height: 100%;
+}
+.swiper-wrapper section{
+    width: 100%;
+    height: 85%;
+}
+
+/* Most of the elements in this demo are absolute positionned with percentages */
+#first-slide .topEnv, #second-slide .topEnv{
+    text-align: center;
+    width: 100%;
+    font-size: 30%;
+    z-index: 2;
+}
+
+/* Last slide image is centered */
+#img-fini{
+    width: 70%;
+    left: 50%;
+    top: 40%;
+    position: absolute;
+    margin-left:-35%;
+    margin-top:calc(-25% * 9 / 16 ); /* margins are relative to the element width... :-( */
+}
+
+/* Footer of last slide is at the bottom and content is centered */
+.swiper-slide main{
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box; /* So that padding is not added to width (and width: 100% works) */
+    /*width: 100%; /* could also use  width: calc(100% - 2em) if not using box-sizing */
+    border-radius: 20px;
+    width: 90%;
+    font-size: x-small;
+    text-align: center;
+    padding: 1em 1em;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 15%;
+    background-color: #6e0c0c;
+    box-shadow: -0.5em 0.5em 0 0 #000000;
+}
+#mainMap{
+    width: 75%;
+    margin-left: 12%;
+}
+
+
+/* ---------- Positionning of logos on the last slide -------------------- */
+/* here we have a contraint on the height of the logos (not the width)     */
+/* so we cannot use % and use em (which are proportinal to the size of the */
+/* slide because of body's font size rule at the end of this CSS           */
+#bandeau {
+    padding-top: 3%;
+    width:100%;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    font-size: 20%;
+  }
+
+  #bandeau li{
+    list-style-type: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0.5em;
+  }
+
+  #bandeau img{
+    height: 2.5em;
+  }
+
+  #bandeau #hyblab{
+    margin: 1em auto;
+    height: 3em;
+    display: block;
+  }
+
+  #bandeau #cc, #bandeau #opensource
+  {
+    height: 1em;
+  }
+
+  #bandeau .stacked{
+    display:block;
+  }
+
+  #bandeau ul{
+    text-align: center;
+    padding: 0 0;
+    margin-bottom: 0.5em;
+  }
+
+  #bandeau .institutionnel
+  {
+    height: 2em;
+  }
+
+/* ---------- Important media queries for easy responsive content :-) ----------------- */
+/* Whatever the devie used, the content will be displayed full width and height if      */
+/* the aspect ratio is between 3/4 and 9/16. If not it is locked to either 3/4 or 3/16  */
+
+/* When the aspect ratio is smaller that 3/4, display a 3/4 content */
+#container{
+    position: fixed; /* To set the size of the container to 100% of the visible viewport height AND for absolute positionning of child elements*/ 
+    height: 100%;   /* even on mobile devices with url or navigation bars */
+    margin-left: calc((100vw - 100 * 3vh / 4) / 2); /* Add black bands on left and right */
+    width: calc(100 * 3vh / 4); /* Force 3/4 aspect ratio */
+}
+
+/* We set a default font size here. It will be the base for all other font sizes */
+/* Here the font size is proportional to content width */
+body{
+    font-size: calc(15vh * 3 / 4);
+}
+
+/* Fill the whole viewport when its aspect ratio is between 9/16 and 3/4 */
+@media screen and (max-aspect-ratio: 3/4) {
+    #container{
+        margin-left: 0; /* reset margin-left */
+        width: 100vw; /* content is full width (and full height because of the default rule for container height */
+    }
+
+    /* We set a default font size here. It will be the base for all other font sizes */
+    /* Here the font size is proportional to content width */
+    body{
+        font-size: 15vw;
+    }
+}
+
+/* The content is displayed at 9/16 If the aspect ratio is higher that 9/16  */ 
+@media screen and (max-aspect-ratio: 9/16) {
+    #container{
+        margin-left: 0; /* reset left margin */
+        width: 100vw;   /* content is full width */
+        margin-top: calc(-50 * 16vw / 9); /* move the content half the height to the top */
+        top:50%; /* then center it ! */
+        height: calc(100 * 16vw / 9); /* adjust height so that aspect ratio is 9/16 */
+    }
+
+    /* We set a default font size here. It will be the base for all other font sizes */
+    /* Here the font size is proportional to content width */
+    body{
+        font-size: 15vw;
+    }
+}
+
+#legend {
+    margin-bottom: 1em;
+}
+
+#video-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.carousel-item {
+    margin-left: 0.25em;
+}
+
+#topEnv-slide-3 {
+    height: 28%;
+}
+
+#topEnv-slide-2{
+    height: 34%;
+}
+
+
+.topEnv{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+header{
+    width: 100%;
+    height: 15%;
+}
+header img{
+    width: 100%;
+}
+header > div {
+    display: inline-block;
+    margin: 4%;
+    font-size: 12pt;
+}
+
+.headerOne{
+    width: 33%;
+}
+.headerThree{
+    float: right;
+    width: 33%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+header p{
+    font-size: 20px;
+}
+
+#svg-container > object{
+    width: 40%;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+#autre-env{
+    margin-bottom: 2em;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+
+#svg-container{
+    margin-bottom: 1em;
+}

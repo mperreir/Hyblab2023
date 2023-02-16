@@ -1,15 +1,15 @@
 # Descriptif du projet
 
-Porteur de projet :
+Porteur de projet : Sébastien - Oriane
 
-Sujet :
+Sujet : Communes
 
-Nom d'équipe :
+Nom d'équipe : Komune
 
 Participants : 
 
-- AGR :
+- AGR : Simon Gasnier, Adam Le Sommer, Marie Nicol
 
-- EPJT
+- EPJT : Léo Segura
 
-- Polytech :  
+- Polytech : William BLot, Clément Daudin, Tristan Le Gall, Dimitra Sakellariou

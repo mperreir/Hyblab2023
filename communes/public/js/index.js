@@ -1,8 +1,12 @@
 "use strict";
-
+var monObjet = document.querySelectorAll('.logo');
+for (var i = 0; i < monObjet.length; i++) {
+  monObjet[i].data = "../img/logo.svg";
+  change_svg_color(monObjet[i], "#000000");
+}
 // Init of the (touch friendly) Swiper slider
 const swiper = new Swiper("#mySwiper", {
-  direction: "vertical",
+  direction: "horizontal",
   mousewheel: true,
   pagination: {
     el: ".swiper-pagination",
@@ -13,10 +17,13 @@ const swiper = new Swiper("#mySwiper", {
 swiper.on("slideChange", function () {
   switch( swiper.activeIndex ) {
     case 0:
-      initSlide1();
+      //initSlide1();
       break;
     case 1:
-      initSlide2();
+      //initSlide2();
+      break;
+    case 2:
+      //initSlide3();
       break;
   }
 });

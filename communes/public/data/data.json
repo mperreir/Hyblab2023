@@ -1,0 +1,281 @@
+{
+  "main": [
+    {
+      "name": "La ville",
+      "id": "la-ville",
+      "file_name": "img/ville2.svg",
+      "main_color": "#A04952",
+      "background_color": "#FFEDEF",
+      "intro": "La ville peut sembler peu compatible avec la production d’énergie renouvelable. La densité immobilière et démographique et le manque de zone ouverte exploitable rend difficile l’implantation de ce type de dispositifs. Pourtant, les sous-sols de zone urbaine peuvent produire de l’énergie grâce à la géothermie. Cette technique consiste à exploiter la chaleur de la croûte terrestre. <br>À Vertville, nous avons installé une centrale géothermique dans une zone peu résidentielle, proche des autres industries locales. Celle-ci creuse à 3 500 mètres de profondeur pour fournir du chauffage à une grande partie des habitations de la ville. Certains parcs de grands immeubles utilisent des doublets géothermiques, qui creusent moins profondément et produisent moins d’énergie thermique. Cela suffit pour un faible nombre d’habitations.",
+      "exemple": {
+        "ville": "Grigny",
+        "video": "http://wb44.free.fr/hyblab/ville.mp4",
+        "description": "En Essonne, les villes de Grigny et Viry-Châtillon investissent dès 2014 dans l’énergie géothermique. Ils inaugurent 4 ans plus tard une centrale géothermique commune, aujourd’hui surnommée « La Tour Eiffel de Grigny ». Cette installation permet de chauffer près de 10 000 logements et de nombreux bâtiments publics. Une initiative aussi bien sociale qu’écologique : elle réduit la précarité énergétique des habitants et évite l’émission de 15 000 tonnes de CO2 chaque année."
+      },
+      "carte": {
+        "name": "La géothermie en France"
+      },
+      "autre_env": {
+        "titre": "LA géothermie EST Compatible avec la friche ET LA FORÊT ET LES CHAMPS",
+        "liste": [
+          {
+            "file_name": "../img/friche.svg"
+          },
+          {
+            "file_name": "../img/campagne.svg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "La mer",
+      "id": "la-mer",
+      "file_name": "img/mer2.svg",
+      "main_color": "#5A76B4",
+      "background_color": "#EDF3FF",
+      "intro": "La mer et l’océan constituent un terrain peu favorable au développement d’énergie renouvelable. Installer des infrastructures est coûteux et nécessite de prendre en compte une multitude de paramètres comme la biodiversité sous-marine, la dégradation des fonds ou encore la pêche qui s’y pratique.<br>À Vertville, nous avons opter pour l’éolien. Le vent y est plus fort et plus constant que sur terre, ce qui permet de doubler voire tripler la production d’électricité d’éoliennes terrestres. De plus, sa position, loin des habitations, dérange moins la population locale. Cela permet une meilleure acceptabilité du dispositif, souvent rejeté par les riverains.",
+      "exemple": {
+        "ville": "L'île de la Désirade",
+        "video": "http://wb44.free.fr/hyblab/mer.mp4",
+        "description": "Le développement de l'énergie renouvelable en mer/océan est difficile en raison des coûts élevés et des considérations environnementales. Seul l'éolien est compatible et plus performant en mer, doublant/triplant la production d'électricité. L'éloignement des habitations permet une meilleure acceptabilité."
+      },
+      "carte": {
+        "name": "L’éolien EN FRANCE"
+      },
+      "autre_env": {
+        "titre": "L’éolien EST Compatible avec la friche ET LA FORÊT ET LES CHAMPS",
+        "liste": [
+          {
+            "file_name": "../img/friche.svg"
+          },
+          {
+            "file_name": "../img/campagne.svg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "La friche",
+      "id": "la-friche",
+      "file_name": "img/friche2.svg",
+      "main_color": "#FFAC7F",
+      "background_color": "#FFF5EF",
+      "intro": "Anciens champs, zones industrielles désaffectées, les friches ne manquent pas. Souvent laissées à l’abandon, elles constituent un terrain idéal pour le développement d’énergies renouvelables. Leur grande surface et l’absence d’arbre ou d’infrastructures trop importante permetttent d’y installer toute sorte de dispositifs. <br>À Vertville, une ancienne carrière de plusieurs hectares bénéficie d’une importante exposition au soleil. Nous avons choisi de disposer des panneaux photovoltaïques sur tout le terrain. Un choix pertinent puisque l’énergie solaire est entièrement renouvelable. Elle permet à la fois de produire de l’électricité mais également de la chaleur.",
+      "exemple": {
+        "ville": "Crucey-Villages",
+        "video": "http://wb44.free.fr/hyblab/friche.mp4",
+        "description": "La friche, en matière de transition énergétique, Crucey-Villages fait figure de modèle. La commune d’Eure-et-Loir amorce dès 2009 des travaux sur une ancienne base militaire laissée en friche. En 2012, ce sont plus de 741 150 panneaux photovoltaïques qui sont inaugurés, pour un parc d’environ 250 hectares, ce qui en fait l’un des plus vastes de France et d’Europe."
+      },
+      "carte": {
+        "name": "Le photovoltaïque EN FRANCE"
+      },
+      "autre_env": {
+        "titre": "LE PHOTOVOLTAÏQUE EST Compatible avec LA FORÊT ET LES CHAMPS ET LA VILLE",
+        "liste": [
+          {
+            "file_name": "../img/ville.svg"
+          },
+          {
+            "file_name": "../img/campagne.svg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "La rivière",
+      "id": "la-rivière",
+      "file_name": "img/riviere2.svg",
+      "main_color": "#73CAD6",
+      "background_color": "#F2FDFF",
+      "intro": "Les cours d’eau constituent une source d’énergie décarbonée et durable s’ils sont correctement exploités. <br>À Vertville, nous profitons de nos terrains en aval de montagne pour y installer une centrale hydraulique et un barrage. Ce dernier retient l’eau mais laisse s’échapper un flux très puissant qui permet d’actionner une turbine pour produire de l’électricité. Nous avons combiné ce dispositif avec des retenues d’eau. Cette technique consiste à stocker de grandes quantités d’eau pour l’utiliser si la demande devient plus importante.",
+      "exemple": {
+        "ville": "Dun-sur-Meuse",
+        "video": "http://wb44.free.fr/hyblab/riviere.mp4",
+        "description": "Au nord-est de la France, plus d’une quarantaine de communes ont fait le choix de l’hydraulique. Pour cela, elles utilisent la puissance de deux cours d’eau : l’Aisne et la Meuse. Ce projet s’est achevé en 2020 après 5 ans de travaux. Grâce à trois microcentrales hydraulique, ce dispositif permet de produire une importante quantité d’énergie sans nécessiter de grosse quantité d’eau ou un fort dénivelé."
+      },
+      "carte": {
+        "name": "L’hydraulique EN FRANCE"
+      },
+      "autre_env": {
+        "titre": "LE hydraulique EST Compatible avec LA mer",
+        "liste": [
+          {
+            "file_name": "../img/mer.svg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "La campagne et la forêt",
+      "id": "la-campagne-et-la-forêt",
+      "file_name": "img/campagne2.svg",
+      "main_color": "#59A78D",
+      "background_color": "#F2FFFB",
+      "intro": "Les forêts et les champs sont riches en ressources organiques, aussi appelées biomasse. Le bois des arbres peut être brûlé pour produire de la chaleur et de l’énergie. Les biodéchets, c’est-à-dire les déchets issus de l’agriculture, de la consommation des ménages ou de l’entretien de terrains végétaux, peuvent passer par le processus de méthanisation. Ce dernier consiste à faire fermenter la biomasse pour créer du gaz.<br>À Vertville, nous sommes muni d’une installation à méthanisation, qui permet la fermentation des biodéchets et d’une chaufferie, pour brûler le bois. Ces dispositifs sont reliés à tous les foyers situés en périphérie de l’intercommunalité pour assurer leur chauffage tout au long de l’année. ",
+      "exemple": {
+        "ville": "Tramayes",
+        "video": "http://wb44.free.fr/hyblab/campagne.mp4",
+        "description": "En Saône-et-Loire, la ville de Tramayes a diminué sa consommation électrique de près de 71 % en 10 ans. Sa solution ? Rénover les immeubles de sa commune et utiliser le bois des forêts alentours pour chauffer les foyers. Le maire espère que la commune produira plus d’énergie qu’elle n’en consomme pour les prochaines années."
+      },
+      "carte": {
+        "name": "LA BIOMASSE EN FRANCE"
+      },
+      "autre_env": {
+        "titre": "LA BIOMASSE est Compatible avec la friche",
+        "liste": [
+          {
+            "file_name": "../img/friche.svg"
+          }
+        ]
+      }
+    }
+  ],
+  "intro": [
+    {
+      "name": "intro1",
+      "tchat": "Bonjour, je suis Sacha, je suis président.e de l’intercommunalité de Vertville.",
+      "background_color": "#F2FFFB",
+      "file_name": "../img/Bonhomme_1.svg"
+    },
+    {
+      "name": "intro2",
+      "tchat": "Ici, élus et citoyens œuvrent ensemble pour lutter contre le réchauffement climatique.",
+      "background_color": "#F2FFFB",
+      "file_name": "../img/Bonhomme_2.svg"
+    },
+    {
+      "name": "intro3",
+      "tchat": "Nous choisissons de mettre à profit (d’exploiter) nos différentes ressources pour produire des énergies renouvelables. ",
+      "background_color": "#F2FFFB",
+      "file_name": "../img/Bonhomme_3.svg"
+    },
+    {
+      "name": "intro4",
+      "tchat": "Cela nous permet d’être également plus indépendant énergétiquement et de créer des emplois.",
+      "background_color": "#F2FFFB",
+      "file_name": "../img/Bonhomme_4.svg"
+    },
+    {
+      "name": "intro5",
+      "tchat": "Entrez votre code postal pour découvrir le score de votre intercommunalité.",
+      "background_color": "#F2FFFB",
+      "file_name": "../img/Bonhomme_5.svg"
+    },
+    {
+      "name": "intro6",
+      "tchat": " Votre score est de ",
+      "background_color": "#F2FFFB",
+      "file_name": "../img/Bonhomme_6.svg"
+    },
+    {
+      "name": "intro7",
+      "tchat": "Il n’est pas définitif. En consultant nos différentes initiatives, vous aurez l’opportunité de le modifier. Il vous suffira d’augmenter votre production dans chacune des énergies.",
+      "background_color": "#F2FFFB",
+      "file_name": "../img/Bonhomme_1.svg"
+    }
+  ],
+  "conclusion": {
+    "titre" : "Ton bilan !",
+    "texte1" : "Au niveau national et européen, nous nous sommes fixés des objectifs qui permettront une amélioration de notre santé et de notre impact sur la planète.<br><br>Le score prend en compte les productions des 5 types d'énergies vertes présentés sur ce site au sein de l'intercommunalité à laquelle se ratache la ville dont le code postal à été entré lors de l'introduction. Il s'incrémente au fil du parcours du site afin d'inciter l'utilisateur à s'informer des différentes manières de valoriser les espaces de sa communes.",
+    "texte2" : "Voici nos objectifs pour 2030 !",
+    "logo" : "../img/logo.svg",
+    "bouton" : "Retour à l’accueil",
+    "color": {
+      "main": ["#59A78D", "#A04952"],
+      "background": ["#D9D9D9", "#F6F6F6"]
+    },
+    "credits": {
+      "titre": "Crédits",
+      "membres": [{
+        "nom": "Le Gall",
+        "prenom": "Tristan",
+        "ecole": "Polytech Nantes"
+      },{
+        "nom": "Blot",
+        "prenom": "William",
+        "ecole": "Polytech Nantes"
+      },{
+        "nom": "Daudin",
+        "prenom": "Clément",
+        "ecole": "Polytech Nantes"
+      },{
+        "nom": "Sakellariou",
+        "prenom": "Dimitra",
+        "ecole": "Polytech Nantes"
+      },{
+        "nom": "Gasnier",
+        "prenom": "Simon",
+        "ecole": "AGR"
+      },{
+        "nom": "Le Sommer",
+        "prenom": "Adam",
+        "ecole": "AGR"
+      },{
+        "nom": "Nicol",
+        "prenom": "Marie",
+        "ecole": "AGR"
+      },{
+        "nom": "Segura",
+        "prenom": "Léo",
+        "ecole": "EPJT"
+      }]
+    },
+
+    "piechart": {
+      "description": "Part d’énergie renouvelable dans le mix énergétique en France",
+      "data": [
+        {
+          "year": 2020,
+          "value": 20
+        },
+        {
+          "year": 2030,
+          "value": 40
+        }
+      ]
+    },
+    "barchart": {
+      "description": "Consommation d’énergie en France sur un an",
+      "data": [
+        {
+          "year": 2020,
+          "value": 2570
+        },
+        {
+          "year": 2050,
+          "value": 1820
+        }
+      ]
+    },
+    "barchart_global": {
+      "description": "Taux de la population favorable à l’installation d’énergies renouvelables",
+      "data": [
+        {
+          "energy": "Solaire",
+          "percent": 75,
+          "color": "#FFAC7F"
+        },
+        {
+          "energy": "Biomasse",
+          "percent": 67,
+          "color": "#59A78D"
+        },
+        {
+          "energy": "Géothermie",
+          "percent": 62,
+          "color": "#A04952"
+        },
+        {
+          "energy": "Hydraulique",
+          "percent": 55,
+          "color": "#73CAD6"
+        },
+        {
+          "energy": "Éolien",
+          "percent": 52,
+          "color": "#5A76B4"
+        }
+      ]
+    }
+  }
+}

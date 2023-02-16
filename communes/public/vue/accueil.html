@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="icon" type="image/png" href="../img/CARRE_VERT.png" />
+    <title>La vie en vert</title>
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="../js/change_svg_color.js" defer></script>
+
+    <script src="../js/caroussel.js" defer></script>
+    <script src="../js/score.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
+<div id="container">
+    <div id="mySwiper" class="swiper">
+        <header>
+            <div class="headerOne">
+                <object class="logo" type="image/svg+xml"></object>
+            </div>
+            <div class="headerThree">
+                <p> Score : </p>
+            </div>
+        </header>
+        <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
+        <main>
+            <h2 id="titre">bienvenue à<br>Vertville</h2>
+            <div class="carousel" id="carousel"></div>
+            <p id="carousel-text"></p>
+        </main>
+        <div id="divDetail">
+            <input type="button" id="detail" value="En savoir plus" onclick="openEnv()">
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
