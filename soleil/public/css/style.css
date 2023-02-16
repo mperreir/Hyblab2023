@@ -677,6 +677,11 @@ div.conteneur{
     left: -30px;
 }
 
+#SoliInfo2{
+    position: absolute;
+    left: -30px;
+}
+
 @keyframes glowing {
     0% {
     background-color: white;
