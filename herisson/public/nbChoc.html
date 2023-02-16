@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/styleNbChoc.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;700&display=swap" rel="stylesheet">
+
+    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="js/menuPopup.js" defer></script>
+    <script src="js/nbChoc.js"></script>
+
+</head>
+<body>
+<header id="headerMenu" class="main"> </header>
+<main>
+    <div class="round-background" id="testets">
+        <p id="nbChoc"> 40 </p>
+        <p id="texteExplication">espèces sauvages observées près de <strong id="villeChoisie"></strong> !</p>
+        <p id="texteDanger"> Dont <span id="nbDanger">20 en danger</span>, voici comment vous pouvez les protéger ! </p>
+        <a href="commune.html"> <img src="img/fleche_verte.png" alt="fleche vers le bas" id="fleche"> </a>
+    </div>
+</main>
+<script>
+    const commune = localStorage.getItem("commune");
+    createNbChocPage(commune);
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const main = document.getElementsByTagName("main");
+        const hammer = new Hammer(main[0]);
+        hammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+        hammer.on("swipeup", (event) => {
+            event.preventDefault();
+            document.body.style.opacity = "0";
+            window.requestAnimationFrame(() => {
+                window.location.href = "commune.html";
+            });
+        });
+    });
+</script>
+<footer>
+    <div></div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des Animaux de cette Famille</title>
+    <link rel="styleSheet" href="./css/listeAnimauxStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/animalCategory.js"></script>
+<!--    <script src="js/animalInfo.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="js/menuPopup.js" defer></script>
+
+</head>
+<body>
+    <div id="pop-up">
+        <header class="pop-up">
+            <img src="./img/croix_beige.png" id="quit" alt="exit button">
+            <div id="picture-div"><img id="animal-picture" src="" alt="Picture Not Found"></div>
+            <h6 id="copyright"></h6>
+        </header>
+        <main class="pop-up">
+            <h1 id="animal-name"></h1>
+            <h5 id="desc"></h5>
+            <div id="menace">
+                <h5 id="menace-txt">Enjeu de conservation</h5>
+                <h5 id="menace-level"></h5>
+            </div>
+            <div id="vus">
+                <h5 id="nb"></h5>
+                <h5 id="vus-txt">vus dans votre commune</h5>
+            </div>
+            <div id="map"><h5></h5></div>
+        </main>
+        <footer class="pop-up">
+            <img id="mascotte" src="./img/charadesign-ficheanimal.png" alt="mascotte">
+            <div id="tips">
+                <h5>Le saviez-vous ?</h5>
+                <img src="./img/ligne_le_saviez_vous.png" alt="ligne" id="line-le-saviez-vous">
+            </div>
+            <h5 id="tips-text"></h5>
+            <img src="./img/fleche_beige.png" id="fleche2" alt="arrow button">
+        </footer>
+    </div>
+    <div id="main">
+        <header id="headerMenu" class="main"> </header>
+        <main id="list-animals-main" class="main">
+            <div id="titles">
+                <h1 id="category"></h1>
+                <h5 id="commune"></h5>
+            </div>
+            <div id="rec"></div>
+            <div id="animals-buttons"></div>
+        </main>
+        <footer id="list-animals-footer" class="main">
+            <div>
+                <h5 id="footerText"></h5>
+                <script>
+                    const animalName = localStorage.getItem("animal");
+                    animalInfo(animalName);
+                </script>
+            </div>
+            <img src="./img/fleche_beige.png" id="fleche" alt="arrow button">
+            <script>
+                const category = localStorage.getItem("category");
+                const commune = localStorage.getItem("commune");
+                createAnimalCategory(commune, category);
+            </script>
+        </footer>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+html, body, #map {
+    height: 100vh;
+    width: 100vw;
+}
+
+.info {
+    padding: 1vh 1vw;
+    font: 4vw/5vw Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 3vw rgba(0,0,0,0.2);
+    border-radius: 1vw;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+.legend {
+    font-size: 4vw;
+    line-height: 4vw;
+    color: #555;
+    margin-bottom: 4vh;
+    padding: 1vh 1vw;
+}
+.legend i {
+    width: 2vw;
+    height: 2vw;
+    float: left;
+    margin-right: 1vw;
+    opacity: 0.7;
+}
+
+.leaflet-control-zoom {
+    display: none;
+}
+
+.leaflet-right .leaflet-control {
+    margin-right: 2vw;
+}
+.leaflet-bottom .leaflet-control {
+    margin-bottom: 4vh;
+}

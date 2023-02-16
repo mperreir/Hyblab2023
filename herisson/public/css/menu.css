@@ -1,0 +1,60 @@
+.menuTitre
+{
+    color: #FBC5EB;
+    font-weight: 700;
+    margin-bottom: 12vh;
+    margin-top: 12vh;
+    font-size: 8vw;
+}
+
+.sousTitresMenu
+{
+
+    color: #0B6E5F;
+    font-weight: 500;
+    margin-bottom: 2vh;
+    padding-bottom: 3vh;
+    font-size: 6vw;
+}
+
+.ligneSeparation
+{
+    width: 70%;
+    margin-top: 7vh;
+    border: 0.1vh solid #FBC5EB;
+}
+
+#texteMenu
+{
+    text-align: center;
+    font-family: 'Prompt', sans-serif;
+    /*margin-top: 5em;*/
+    position: absolute;
+    background-color: #FFF8F1;
+    height: 100vh;
+    z-index: 5;
+    width: 100%;
+}
+
+.texteFinMenu
+{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    color: #0B6E5F;
+    font-weight: 400;
+    text-align: center;
+    font-size: 4vw;
+}
+
+header.main
+{
+    height: 0.1vh;
+}
+
+#texteMenu {
+    transition: 1s;
+    display: none;
+    left: 100%;
+}

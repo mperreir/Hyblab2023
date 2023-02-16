@@ -1,0 +1,103 @@
+body
+{
+    background-color: #FBC5EB;
+    overflow: hidden;
+}
+
+h1
+{
+    text-align: center;
+    color: #FFF8F1;
+    font-weight: 700;
+    font-size: 3.5vh;
+    margin-bottom: 0;
+    font-family: 'Prompt', sans-serif;
+    margin-top: 10vh;
+}
+
+h2
+{
+    text-align: center;
+    color: #0B6E5F;
+    margin-top: 0;
+    font-size: 2.5vh;
+    font-weight: 500;
+    font-family: 'Prompt', sans-serif;
+}
+
+.texte-principal
+{
+    text-align: center;
+    font-size: 2vh;
+    margin-right: 2.25vw;
+    margin-left: 2.25vw;
+    color: #0B6E5F;
+    font-weight: 400;
+    font-family: 'Prompt', sans-serif;
+}
+
+.mascotte
+{
+    bottom: -2.5vh;
+    right : 0;
+    position: absolute;
+    z-index: -1;
+}
+
+#elie
+{
+    height: 60vw;
+}
+
+.texte-Elie
+{
+    width: 40vw;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3vh;
+    color: #0B6E5F;
+    font-family: 'Covered By Your Grace', cursive;
+}
+
+.texte-secondaire
+{
+    position: absolute;
+    text-align: center;
+    font-size: 2vh;
+    margin-top: 2vh;
+    color: #0B6E5F;
+    font-weight: 400;
+    font-family: 'Prompt', sans-serif;
+    width: 60vw;
+    margin-left: 0;
+    margin-right: 15vh;
+    right: 0;
+}
+
+.texte-secondaire #ligne
+{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.texte-secondaire p
+{
+    margin-top: 0;
+}
+
+.texte-Elie p
+{
+    margin-bottom: 0;
+}
+
+#ligne
+{
+    width: 40vw;
+}
+
+#fleche
+{
+    width: 7vw;
+}
+
