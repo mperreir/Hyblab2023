@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+
+   _____ _           _            _         _   _      __
+  / ____| |         (_)          | |       | | | |     \_\
+ | |    | |__   ___  ___  __   __| |_   _  | |_| |__   ___ _ __ ___   ___
+ | |    | '_ \ / _ \| \ \/ /  / _` | | | | | __| '_ \ / _ \ '_ ` _ \ / _ \
+ | |____| | | | (_) | |>  <  | (_| | |_| | | |_| | | |  __/ | | | | |  __/
+  \_____|_| |_|\___/|_/_/\_\  \__,_|\__,_|  \__|_| |_|\___|_| |_| |_|\___|
+
+
+-->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/choix-themes.css">
+    <script src="../js/index.js" defer></script>
+    <script src="../js/choix-themes.js" defer></script>
+    <title>Thème</title>
+    <link rel="icon" type="image/png" href="../img/icon.png"/>
+</head>
+<body>
+
+<div id="container" class="flex-column align-items-center justify-content-space-between rainbow-background rbg-bottom">
+    <div id="overlay" class="display-none"></div>
+    <div id="popup" class="display-none">
+        <img id="fermeture-popup" src="../img/croix.svg" alt="fermeture" class="cursor-pointer">
+        <div id="popup-content" class="flex-column align-items-center justify-content-space-between">
+            <p>
+                Vous devez sélectionner <span class="gras">au moins</span> un domaine.
+            </p>
+        </div>
+    </div>
+    <header class="flex-column align-items-center justify-content-center" id="logo-appli">
+        <a href="choix-themes.html">
+            <div class="flex-column align-items-center justify-content-center">
+                <img src="../img/profils_de_demain.svg" alt="profils_de_demain_logo">
+            </div>
+        </a>
+    </header>
+    <section id="theme-selector-long" class="flex-column justify-content-space-between align-items-center">
+        <div id="label-selector" class="flex-row justify-content-center align-items-center">
+            <p class="gras">Je recherche un <img src="../img/pro-logo.svg" alt="PRO"> :</p>
+        </div>
+        <div id="liste-theme" class="flex-row align-items-center justify-content-space-evenly">
+            <ul class="flex-column align-items-flex-start justify-content-space-between">
+                <li class="flex-row justify-content-center align-items-center " >
+                    <img alt="alimentation" src="../img/pictogrammes_themes/alimentation.svg">
+                    <p class="orange-font">Alimentation</p>
+                </li>
+                <li class="flex-row justify-content-center align-items-center ">
+                    <img alt="economie_circulaire" src="../img/pictogrammes_themes/economie_circulaire.svg">
+                    <p class="caca-doie-font">Économie circulaire</p>
+                </li>
+                <li class="flex-row justify-content-center align-items-center ">
+                    <img alt="energie" src="../img/pictogrammes_themes/energie.svg">
+                    <p class="vert-font">Énergie</p>
+                </li>
+            </ul>
+            <ul class="flex-column align-items-flex-start justify-content-space-between">
+                <li class="flex-row justify-content-center align-items-center ">
+                    <img alt="industrie" src="../img/pictogrammes_themes/industrie.svg">
+                    <p class="turquoise-font">Industrie</p>
+                </li>
+                <li class="flex-row justify-content-center align-items-center ">
+                    <img alt="mobilite" src="../img/pictogrammes_themes/mobilite.svg">
+                    <p class="cyan-font">Mobilité</p>
+                </li>
+                <li class="flex-row justify-content-center align-items-center ">
+                    <img alt="numerique" src="../img/pictogrammes_themes/numerique.svg">
+                    <p class="bleu-clair-font">Numérique</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="flex-row align-items-flex-start justify-content-space-between">
+        <button onclick="window.location.href = './carte.html'" class="bouton-rond">Voir la carte</button>
+        <button onclick="window.location.href = './swipe.html'" class="bouton-rond">
+            Voir les<span class="italic">
+                            <span id="profile_counter" class="gras"></span> profils
+                        </span>
+        </button>
+    </footer>
+</div>
+
+</body>
+</html>

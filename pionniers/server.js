@@ -8,6 +8,10 @@ const path = require('path');
 // Create our application
 const app = express();
 
+// Update server database (JSON) from Google Sheets
+const sheet_scrapper = require('./api/sheet_scrapper');
+sheet_scrapper.updateJSONServerFile();
+
 // Load and register our REST API
 const api = require('./api/api');
 app.use('/api', api);

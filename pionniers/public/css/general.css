@@ -1,0 +1,445 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+/* Normalize margin and padding to ease elements positioning */
+* {
+    padding:0;
+    margin:0;
+}
+
+/* Variables des couleurs - charte graphique - nuancier */
+:root {
+    /* Couleurs thèmes/catégories */
+    --orange: #F5AF0A;
+    --caca-doie: #C8AF37;
+    --vert: #9BAF64;
+    --turquoise: #6EAF91;
+    --cyan: #41AFBE;
+    --bleu-clair: #14AFF0;
+
+
+    /* Interface */
+    --blanc-fond: #FFFFFF;
+    --gris-clair: #F8F8F8;
+    --gris-moyen: #7F7F7F;
+    --bleu-fonce: #006A82;
+
+}
+
+/*  -----------------------------------
+    -------- CLASSES DE POLICE --------
+    -----------------------------------
+ */
+
+.orange-font {
+    color: var(--orange);
+}
+
+.caca-doie-font {
+    color: var(--caca-doie);
+}
+
+.vert-font {
+    color: var(--vert);
+}
+
+.turquoise-font {
+    color: var(--turquoise);
+}
+
+.cyan-font {
+    color: var(--cyan);
+}
+
+.bleu-clair-font {
+    color: var(--bleu-clair);
+}
+
+.orange-bg {
+    background-color: var(--orange);
+}
+
+.caca-doie-bg {
+    background-color: var(--caca-doie);
+}
+
+.vert-bg {
+    background-color: var(--vert);
+}
+
+.turquoise-bg {
+    background-color: var(--turquoise);
+}
+
+.cyan-bg {
+    background-color: var(--cyan);
+}
+
+.bleu-clair-bg {
+    background-color: var(--bleu-clair);
+}
+
+.italic {
+    font-style: italic;
+}
+
+.gras {
+    font-weight: bold;
+}
+
+/*  -----------------------------------------
+    -------- PROPRIÉTÉS UNIVERSELLES --------
+    -----------------------------------------
+ */
+body {
+    background-color: #202124; /* Couleur du fond sur les côtés de l'écran */
+    color: var(--bleu-fonce);
+    overflow: hidden;   /* to avoid slider bugs on some browsers */
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+h2 {
+    font-size: 1em;
+}
+
+p {
+    font-size: 0.5em;
+}
+
+#container {
+    background-color: var(--blanc-fond);
+}
+
+.display-none {
+    display: none;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+/*  -------------------------------------------------------------------------------------
+    -------- PROPRIÉTÉS DE PLACEMENT DES ÉLÉMENTS, UTILISÉES DANS LES PAGES HTML --------
+    ---------------------------------------- FLEX-BOX -----------------------------------
+    -------------------------------------------------------------------------------------
+ */
+
+.flex-column {
+    display: flex;
+    flex-flow: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-flow: row;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+.justify-content-space-around {
+    justify-content: space-around;
+}
+
+.justify-content-space-evenly {
+    justify-content: space-evenly;
+}
+
+.justify-content-flex-end {
+    justify-content: flex-end;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-flex-start {
+    align-items: flex-start;
+}
+
+.align-items-flex-end {
+    align-items: flex-end;
+}
+
+/*  ------------------------------------------------------------------------
+    -------- PROPRIÉTÉS RELATIVES AUX ÉLÉMENTS RÉCURRENTS DES PAGES --------
+    ------------------------------------------------------------------------
+ */
+
+header#logo-appli {
+    margin-top: 3%;
+}
+header#logo-appli a {
+    padding: 3% 5%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--gris-clair);
+    border-radius: 500px;
+    width: fit-content;
+}
+
+header#logo-appli a div img {
+    min-height: 5vh;
+    max-height: 6vh;
+    transform: translateX(6%);
+}
+
+.bouton-rond {
+    font-family: 'Poppins', sans-serif;
+    color: var(--bleu-fonce);
+    border-radius: 500px;
+    padding: 3% 6%;
+    border: none;
+    background: var(--blanc-fond);
+    font-size: 0.7em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
+}
+
+.bouton-rond:hover {
+    cursor: pointer;
+    color: var(--blanc-fond);
+    background: var(--bleu-fonce);
+}
+
+.rainbow-background {
+    background-color: var(--blanc-fond);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/* Fond sur la "moitié" haute */
+.rbg-top {
+    background-image: url("../img/rainbow_background_top.svg");
+    background-position: center -25vh;
+
+}
+
+/* Fond sur la moitié  */
+.rbg-center {
+    background-image: url("../img/rainbow_background_bottom.svg");
+    background-position: center 45vh;
+
+}
+
+/* Fond sur la "moitié" basse */
+.rbg-bottom {
+    background-image: url("../img/rainbow_background_bottom.svg");
+    background-position: center 58vh;
+}
+
+/* Fond sur le dernier quart en bas */
+.rbg-bottom-extreme {
+    background-image: url("../img/rainbow_background_bottom.svg");
+    background-position: center 80vh;
+}
+
+/*  ----------------------------------------------------------
+    -------- PROPRIÉTÉS RELATIVES SÉLECTEUR DE THEMES --------
+    ----------------------------------------------------------
+ */
+
+
+#theme-selector ul {
+    width: 100%;
+    margin-top: 2%;
+}
+
+#theme-selector ul li {
+    border-radius: 100px;
+    transition: 0.2s;
+    height: fit-content;
+}
+
+#theme-selector ul li:hover {
+    cursor: pointer;
+}
+
+#theme-selector ul li img {
+    height: 6vh;
+}
+
+.unchecked {
+    opacity: 40%;
+}
+
+/*  --------------------------------------------
+    -------- FOLDER PROFILS ENREGISTRÉS --------
+    --------------------------------------------
+ */
+
+
+/* Animation d'ouverture du dossier au passage de la souris */
+
+div#folder-front-pane, footer#folder-back-pane div#folder-tab-map, footer#folder-back-pane div#folder-back-body-map {
+    box-shadow: 0 -10px 20px -5px rgba(115,115,115,0.75);
+}
+
+div#folder-front-pane {
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+    z-index: 6;
+    width: 80%;
+    height: 7.5%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 25px 25px 0 0;
+    perspective : 600px;
+    transition: 0.5s;
+    background-color: var(--gris-clair);
+}
+
+footer#folder-back-pane {
+    position: absolute;
+    z-index: -12;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 15%;
+}
+
+footer#folder-back-pane div#folder-tab-map {
+    width: 45%;
+    height: 20%;
+    background-color: var(--gris-clair);
+    border-radius: 25px 25px 0 0;
+    padding: 2%;
+    z-index: 4;
+    position: relative;
+    color: var(--bleu-fonce);
+}
+
+footer#folder-back-pane div#folder-back-body-map {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 85%;
+    background-color: var(--gris-clair);
+    border-radius: 0 25px 0 0;
+}
+
+div#folder-front-pane:hover {
+    transform: perspective(25px) rotateX(-0.20deg) scale(1.2);
+}
+
+footer#folder-back-pane:hover ~ div#folder-front-pane {
+    transform: perspective(25px) rotateX(-0.20deg) scale(1.2);
+}
+
+.open-folder-animation {
+    animation: 1s open-folder ease-in forwards;
+}
+
+@keyframes open-folder {
+    0% {
+        transform: perspective(0px) rotateX(0deg) scale(1);
+    }
+    50% {
+        transform: perspective(25px) rotateX(-0.20deg) scale(1.2);
+    }
+    100% {
+        transform: perspective(0px) rotateX(0deg) scale(1);
+    }
+}
+
+
+
+#folder-tab {
+    width: 45%;
+    background-color: var(--gris-clair);
+    border-radius: 3vh 3vh 0 0;
+    padding: 2%;
+    z-index: 3;
+    position: relative;
+    color: var(--bleu-fonce);
+}
+
+#folder-tab p {
+    width: fit-content;
+}
+
+#folder-back-body {
+    width: 100%;
+    height: 10vh;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);;
+    background-color: var(--gris-clair);
+    border-radius: 0 3vh 0 0;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+#folder-front-body {
+    width: 100%;
+    height: 80%;
+    background-color: var(--blanc-fond);
+    position: relative;
+    top: 25%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 3vh 3vh 0 0;
+    perspective : 600px;
+    transition: 0.5s;
+    z-index: 6;
+}
+
+
+
+/*  -----------------------------------------------
+    -------- PROPRIÉTÉS POUR LE RESPONSIVE --------
+    -----------------------------------------------
+ */
+
+/* ---------- Important media queries for easy responsive content :-) ----------------- */
+/* Whatever the devie used, the content will be displayed full width and height if      */
+/* the aspect ratio is between 3/4 and 9/16. If not it is locked to either 3/4 or 3/16  */
+
+/* When the aspect ratio is smaller that 3/4, display a 3/4 content */
+#container{
+    position: fixed; /* To set the size of the container to 100% of the visible viewport height AND for absolute positionning of child elements*/ 
+    height: 100%;   /* even on mobile devices with url or navigation bars */
+    margin-left: calc((100vw - 100 * 3vh / 4) / 2); /* Add black bands on left and right */
+    width: calc(100 * 3vh / 4); /* Force 3/4 aspect ratio */
+}
+
+/* We set a default font size here. It will be the base for all other font sizes */
+/* Here the font size is proportional to content width */
+body{
+    font-size: calc(5vh * 3 / 4);
+}
+
+/* Fill the whole viewport when its aspect ratio is between 9/16 and 3/4 */
+@media screen and (max-aspect-ratio: 3/4) {
+    #container{
+        margin-left: 0; /* reset margin-left */
+        width: 100vw; /* content is full width (and full height because of the default rule for container height */
+    }
+
+    /* We set a default font size here. It will be the base for all other font sizes */
+    /* Here the font size is proportional to content width */
+    body{
+        font-size: 5vw;
+    }
+}
+
+/* The content is displayed at 9/16 If the aspect ratio is higher that 9/16  */ 
+@media screen and (max-aspect-ratio: 9/16) {
+    #container{
+        margin-left: 0; /* reset left margin */
+        width: 100vw;   /* content is full width */
+        margin-top: calc(-50 * 16vw / 9); /* move the content half the height to the top */
+        top:50%; /* then center it ! */
+        height: calc(100 * 16vw / 9); /* adjust height so that aspect ratio is 9/16 */
+    }
+
+    /* We set a default font size here. It will be the base for all other font sizes */
+    /* Here the font size is proportional to content width */
+    body{
+        font-size: 5vw;
+    }
+}
+

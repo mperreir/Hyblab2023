@@ -1,0 +1,150 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100vh;
+}
+
+
+#container > * {
+    width: 75%;
+}
+
+.hidden {
+    display: none;
+}
+
+header a, header a div {
+    height : 2vh;
+}
+
+header a div img {
+    height: 100%;
+}
+
+header .bouton-rond {
+    height: 2vh;
+    font-size: 1.5em;
+}
+
+header #petit-rond {
+    width: 2vh;
+    height: 2vh;
+    font-size: 1.5em;
+    padding: 3%;
+}
+
+/*
+----------------------------------------------
+-------------- Profile container --------------
+----------------------------------------------
+*/
+
+#profile {
+    background-color: var(--gris-clair);
+    border-radius: 15px;
+    min-height: 50%;
+    margin: 1.5em auto;
+}
+
+.photo-case {
+    height: 100%;
+    width: 33%;
+}
+
+.photo-case img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 15px 0 0 15px;
+}
+
+#resume {
+    align-self: start;
+    width: 100%;
+    height: 50%;
+    font-size: 1.1em;
+}
+
+#identity {
+    padding: 0.5em;
+}
+
+.entreprise-info {
+    margin-top: 0.47em;
+}
+
+/*
+----------------------------------------------
+------------- Scrollable section -------------
+----------------------------------------------
+*/
+.scrollable {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 65%;
+    width: 85%;
+    margin: 0.5em;
+}
+
+#bio {
+    padding-bottom: 0.5em;
+    text-align: left;
+    font-size: 1em;
+}
+
+/* Not working */
+/*
+#podcast {
+    width: 85%;
+    height: 220px;
+}
+*/
+
+/*
+----------------------------------------------
+------------------ Links --------------------
+----------------------------------------------
+*/
+#links {
+    width: 85%;
+    height: 10%;
+    padding: 0.8em 5%;
+}
+
+#identity section.topic {
+    border-radius: 500px;
+    background-color: var(--blanc-fond);
+    padding: 2% 7% 2% 2%;
+    width: min-content;
+    white-space: nowrap;
+}
+
+#identity section.topic img {
+    max-height: 5vh;
+    max-width: 5vw;
+}
+
+#identity section.topic p {
+    margin-left: 5px;
+}
+
+.keywords {
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.keyword-item {
+    white-space: nowrap;
+    border-radius: 500px;
+    background-color: var(--blanc-fond);
+    margin-bottom: 3%;
+    margin-right: 7%;
+    padding: 2%;
+}

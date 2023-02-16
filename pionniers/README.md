@@ -1,15 +1,28 @@
 # Descriptif du projet
 
-Porteur de projet :
+<img alt="journal_des_entreprises" src="https://espla.fr/wp-content/uploads/2017/11/logo-jde.png" width="50">
 
-Sujet :
+Porteur de projet : *Élodie Vallerey* (Le Journal des Entreprises)
 
-Nom d'équipe :
+
+Sujet : Cartographie d'entreprises
+
+Nom d'équipe : Laïka
 
 Participants : 
 
 - AGR :
+  - Cloé Chargé
+  - Margot Cusicanqui
 
-- EPJT
+
+- EPJT :
+  - Arnaud Fischer
+
 
 - Polytech :  
+  - Grégoire Cosne
+  - Marin Chevolleau
+  - Rémi Delord
+  - Thomas Peray
+  

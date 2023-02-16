@@ -1,0 +1,352 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+html {
+    height: 100vh;
+}
+body {
+    height: 100vh;
+}
+
+div#overlay {
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gris-moyen);
+    opacity: 0.75;
+}
+
+div#popup {
+    position: absolute;
+    z-index: 100;
+    top: 40%;
+    left: 30%;
+    width: 40%;
+    height: 20%;
+}
+
+div#popup img#fermeture-popup {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 15%;
+    width: 20%;
+    height: 20%;
+}
+
+div#popup div#popup-content {
+    position: relative;
+    top: 10%;
+    bottom: 10%;
+    width: 100%;
+    height: 80%;
+    background-color: var(--gris-clair);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+div#overlay2 {
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gris-moyen);
+    opacity: 0.75;
+}
+
+div#popup2 {
+    position: absolute;
+    z-index: 100;
+    top: 40%;
+    left: 30%;
+    width: 40%;
+    height: 20%;
+}
+
+div#popup2 div#popup-content2 {
+    position: relative;
+    top: 10%;
+    bottom: 10%;
+    width: 100%;
+    height: 80%;
+    background-color: var(--gris-clair);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#container > * {
+    width: 75%;
+}
+
+#swiper {
+    height: 55%;
+    width: 100%;
+    margin-top: 5%;
+}
+
+header a, header a div {
+    height : 2vh;
+}
+
+header a div img {
+    height: 100%;
+}
+
+header .bouton-rond {
+    height: 2vh;
+    font-size: 1.5em;
+}
+
+header #petit-rond {
+    width: 2vh;
+    height: 2vh;
+    font-size: 1.5em;
+    padding: 3%;
+}
+
+.carousel-list {
+    user-select: none;
+    width: 64%;
+    height: 100%;
+    perspective: 300px;
+}
+.carousel-item {
+    width: 100%;
+    height: 100%;
+    border-radius: 1em;
+    box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.5);
+    position: absolute;
+    transition: all 0.3s ease-in;
+}
+.carousel-item {
+    background: var(--gris-clair);
+}
+
+.carousel-item[data-pos="0"] {
+    z-index: 5;
+}
+
+.carousel-item[data-pos="-1"] {
+    transform: translateX(-12.5%) scale(0.9);
+    z-index: 4;
+}
+.carousel-item[data-pos="1"] {
+    transform: translateX(12.5%) scale(0.9);
+    z-index: 4;
+}
+.carousel-item[data-pos="-2"] {
+    transform: translateX(-25%) scale(0.8);
+    z-index: 3;
+}
+.carousel-item[data-pos="2"] {
+    transform: translateX(25%) scale(0.8);
+    z-index: 3;
+}
+
+.photo-case {
+    height: 40%;
+    width: 100%;
+}
+
+.carousel-item .photo-case img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 1em 1em 0 0;
+}
+
+.information-fiche {
+    margin-top: 5%;
+    height: 60%;
+    width: 80%;
+}
+
+.information-fiche p {
+    line-height: 1.2em;
+    font-size: 0.55em;
+}
+
+.bouton-voir-profil{
+    width: 75%;
+    margin-left: 55%;
+    transform: translateY(0.5em);
+}
+
+.bouton-voir-profil button{
+    padding: 4% 8% 4% 8%;
+}
+
+.entreprise-info, .keywords, .topic {
+    font-size: 0.8em; /* Combiné au 0.5em du p dans general.css */
+}
+
+.keywords {
+    flex-wrap: wrap;
+}
+
+.keyword-item {
+    white-space: nowrap;
+    border-radius: 500px;
+    background-color: var(--blanc-fond);
+    margin-right: 7%;
+    margin-bottom: 2%;
+    padding: 2%;
+}
+
+.topic {
+    border-radius: 500px;
+    background-color: var(--blanc-fond);
+    padding: 2% 7% 2% 2%;
+    width: min-content;
+    white-space: nowrap;
+    max-height: 10%;
+}
+
+.topic img {
+    height: 100%;
+}
+
+.topic p {
+    margin-left: 5px;
+}
+
+#tuto {
+    position: fixed; /* Stay in place */
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00698280; /* Black w/ opacity */
+    transition: 0.2s;
+}
+
+#tuto #tuto-content {
+    width: 60%;
+    height: 50%;
+    margin-bottom: 5%;
+}
+
+#tuto #tuto-content #tuto-explication {
+    background-color: var(--gris-clair);
+    width: 100%;
+    height: 60%;
+    border-radius: 30px;
+}
+
+#tuto #tuto-content #tuto-explication p {
+    text-align: center;
+    width: 80%;
+}
+
+#tuto #tuto-content img{
+    height: 40%;
+}
+
+#theme-selector {
+    margin-top: 5%;
+}
+
+#label-selector img{
+    height: 1.2em;
+}
+
+.recreate-deck-animation-1 {
+    animation-duration: 0.5s;
+    animation-name: suffle-card-1;
+}
+
+.recreate-deck-animation-2 {
+    animation-duration: 1s;
+    animation-name: suffle-card-2;
+}
+
+.recreate-deck-animation-3 {
+    animation-duration: 1s;
+    animation-name: suffle-card-3;
+}
+
+@keyframes suffle-card-1 {
+    0% {
+        transform: translateY(0%);
+    }
+
+    10% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(-5%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes suffle-card-1 {
+    0% {
+        transform: translateY(0%);
+    }
+
+    10% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(-5%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes suffle-card-2 {
+    0% {
+        transform: translateY(0%);
+    }
+
+    20% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(-10%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes suffle-card-3 {
+    0% {
+        transform: translateY(0%);
+    }
+
+    30% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(-20%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
