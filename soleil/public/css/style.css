@@ -45,8 +45,8 @@ body{
     overflow: hidden;   /* to avoid slider bugs on some browsers */
 }
 
-#image{
-    width : 85%;
+#image, #tropdechoix{
+    max-width : 85%;
     /*height : 150px;*/
     margin :auto
 }
@@ -290,7 +290,8 @@ header{
 }
 
 #bulle-question {
-    height: 8vw;
+    /*height: 8vw;*/
+    padding-top: 1%;
 }
 
 #colonne2 {
@@ -441,7 +442,7 @@ header{
     text-align: center;
     margin: auto;
     width: 70%;
-    padding-top: 10%;
+    /*padding-top: 10%;*/
 }
 
 @font-face {
@@ -472,17 +473,23 @@ header{
     margin-top: 5%;
 }
 
-.img-pente, #tropdechoix{
-    width: 80%;
+.img-pente{
+    max-width: 80%;
 }
 video{
     margin:auto;
+    max-width: 85%;
+    max-height: 30%;
 }
 
 .boussole{
     margin: auto;
-    width: 100%;
+    max-width: 100%;
     position: relative;
+}
+
+.boussole .illustration{
+    max-width: 30%;
 }
 
 #article1{
@@ -880,9 +887,7 @@ body{
     header {
         margin-bottom: 0;
     }
-    video {
-        max-width: 85%;
-    }
+    
     .main-location-page {
         padding-top: 0;
     }
