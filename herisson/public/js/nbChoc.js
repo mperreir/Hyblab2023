@@ -6,7 +6,7 @@ async function createNbChocPage(commune) {
 
     async function getDataCommune(nom) {
         return await
-            fetch(`https://hyblab.polytech.univ-nantes.fr/herisson/api/commune/${nom}`)
+            fetch(`api/commune/${nom}`)
                 .then(response => response.json())
                 .then(data => {
                         return data.filteredData;

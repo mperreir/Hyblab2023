@@ -13,7 +13,7 @@ document.querySelector("#rechercheCommune").addEventListener("keyup", async func
     }
 
     if (dataCommune === undefined) {
-        dataCommune = await fetch(`https://hyblab.polytech.univ-nantes.fr/herisson/api/commune/autocomplete/${searchTermCom}`)
+        dataCommune = await fetch(`api/commune/autocomplete/${searchTermCom}`)
         dataCommune = await dataCommune.json();
     }
 
@@ -71,7 +71,7 @@ document.querySelector("#rechercheAnimal").addEventListener("keyup", async funct
     }
 
     if (dataAnimaux === undefined) {
-        dataAnimaux = await fetch(`https://hyblab.polytech.univ-nantes.fr/herisson/api/animal/autocomplete/${searchTermAni}`)
+        dataAnimaux = await fetch(`api/animal/autocomplete/${searchTermAni}`)
         dataAnimaux = await dataAnimaux.json();
     }
 
