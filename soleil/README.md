@@ -6,7 +6,7 @@ Sujet : Soleil
 
 Nom d'équipe : Équinoxe
 
-Participants : 
+Participants :
 
 - AGR :
     - Maëlys BACHELIER

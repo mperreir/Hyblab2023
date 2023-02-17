@@ -1,4 +1,35 @@
+
 /* ------- Important ! Please at least keep the last part of this CSS ----------- */
+.article {
+    overflow: scroll;
+    height: 90%;
+  }
+#search{
+    width: 20px;
+    vertical-align: middle;
+    margin-left: 4px;
+    display: inline-block;
+}
+
+
+
+#premiere_page #Boris{
+    font-size: 20px;
+}
+
+#premiere_page #ligne p {
+    width: 90%;
+    margin: auto;
+}
+#Boris{
+    font-family: 'Boris';
+}
+
+p{
+    font-size: 14px;
+    font-family: 'Inter';
+    font-style: normal;
+}
 /* ------- that adapts content width and height so that aspect ratio  ----------- */
 /* ------- is kept between 9/16 a,d 3/4 (portait orientation)         ----------- */
 
@@ -10,10 +41,355 @@
 
 body{
     background-color: black;
-    color: white;
+    color: black;
     overflow: hidden;   /* to avoid slider bugs on some browsers */
-    font-family: sans-serif;
 }
+
+#image, #tropdechoix{
+    max-width : 85%;
+    /*height : 150px;*/
+    margin :auto
+}
+
+#contactChoice{
+    margin: 8px;
+}
+
+#contactChoice1 {
+    margin: 8px;
+}
+
+#contactChoice2 {
+    margin: 8px;
+}
+
+#contactChoice3 {
+    margin: 8px;
+}
+
+#imageLog{
+    margin :auto;
+    width: 100%;
+    float: left;
+    height: 150px;
+}
+
+#image2{
+    width : 85%;
+    height : 25%;
+    margin :auto
+}
+
+
+#image4{
+    width: 100%;
+    height: 40%;
+    padding-top: 30%;
+}
+
+#presentation{
+    width: 80%;
+    margin: auto;
+    padding-top: 15%;
+}
+
+#choix-log{
+    width : 24%;
+    height: 12%;
+}
+
+#SoliExImg {
+    text-align: center;
+    width: 20%
+}
+
+#SoliExTex2 {
+    padding-left: 20px;
+    text-align: justify;
+    width: 70%;
+    position: relative;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4vw;
+    bottom: 15px;
+
+
+}
+
+#SoliExTex {
+    text-align: justify;
+    width: 70%;
+    bottom: 20%;
+    position: relative;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4vw;
+}
+
+/* ---------- Animation de Soli-mongolfière dans la jauge ------------ */
+
+#Soli1{ /* penser a bouger la montgolfiere par raaport a la taille de la page et au nombre de slides associées*/
+    width : 40px;
+    height: 60px;
+    position : absolute;
+    bottom : 5%;
+    right : 5%;
+    animation-name: flo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform:scale(0.9);
+    right: -350%;
+        
+
+}
+
+@keyframes flo{
+    50%{
+      transform: translateY(20px);
+    }
+}
+
+#Soli2{
+    width : 40px;
+    height: 60px;
+    position : absolute;
+    bottom : 25%;
+    right : 5%;
+    animation-name: flo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform:scale(0.9);
+    right: -350%;
+
+}
+
+#Soli3{
+    width : 40px;
+    height: 60px;
+    position : absolute;
+    bottom : 45%;
+    right : 5%;
+    animation-name: flo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform:scale(0.9);
+    right: -350%;
+
+}
+
+#Soli4{
+    width : 40px;
+    height: 60px;
+    position : absolute;
+    bottom : 65%;
+    right : 5%;
+    animation-name: flo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform:scale(0.9);
+    right: -350%;
+
+}
+
+#Soli5{
+    width : 40px;
+    height: 60px;
+    position : absolute;
+    bottom : 85%;
+    right : 5%;
+    animation-name: flo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform:scale(0.9);
+    right: -350%;
+
+}
+
+div {
+    font-size: 15px;
+    text-align: center;
+}
+
+header{
+    margin-top: 8%;
+    margin-bottom: 0;
+    text-align: center;
+    width: 100%;
+    top: 10%;
+    z-index: 2;
+}
+
+#objsol {
+    font-family: 'Boris';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 26px;
+    text-align: center;
+}
+
+#Choix2 {
+    width: 100%;
+    height: auto;
+}
+
+.commentaire-soli {
+    max-width: 90%;
+    left: 5%;
+    right: 7%;
+    position:static;
+    text-align: justify;
+}
+
+.commentaire-soli2 {
+    max-width: 90%;
+    bottom: 7%;
+    text-align: justify;
+
+}
+
+.commentaire-soli2 p {
+    max-width: 75%;
+    display: inline-block;
+    font-size: 1.9vw;
+}
+
+.commentaire-soli2 img {
+    max-width: 20%;
+}
+
+.commentaire-soli p {
+    max-width: 75%;
+    display: inline-block;
+    font-size: 1.9vw;
+}
+
+.commentaire-soli img {
+    max-width: 20%;
+}
+
+.contenu-page {
+    display: inline-block;
+    max-width: 87%;
+    top: 10%;
+}
+
+#ligne{
+    width: 100%;
+    float: left;
+    height: 150px;
+}
+
+#lignelongue{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+
+}
+
+#bulle-question {
+    /*height: 8vw;*/
+    padding-top: 1%;
+}
+
+#colonne2 {
+    width: 45%;
+    text-align: center;
+    float: left;
+    height: 150px;
+}
+
+#colonne3{
+    width: 27%;
+    float: left;
+    height: 150px;
+}
+
+.choix-texte {
+    font-size: 20px; /* vw pour tous les ecran ? 3vw */
+}
+
+.choix-texte2{
+    font-size: 3.5vw;  /* 2vw */
+    box-sizing: border-box;
+    padding : 1vw;
+    border: 0.75px solid rgba(0, 0, 0, 0.35);
+    border-radius: 8px;
+}
+
+#img-ques {
+    padding-bottom: 10%;
+}
+
+#choix-ombre {
+    position: static;
+    margin-top: 10%;
+}
+
+#ContourMiss{
+    border: 0.75px solid #000000;
+    border-radius: 8px;
+    height: 80%;
+    width: auto;
+    text-align: center;
+    padding: 3%;
+    margin-top: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#jauge{
+    display: inline-block;
+    margin-top: 20px;
+    height: 60%;
+    width: 5px;
+    background: rgba(188, 228, 250, 0.31);    
+    position :absolute;
+    right : 5%;
+    top: 10%;
+    border-radius: 9px;
+/* Rectangle 12 */
+
+
+
+    /* Rectangle 12 */
+
+
+
+
+
+}
+
+/* -------------- Slide Mission --------------*/
+
+#flex-miss{
+    display :flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Contour{
+    border: 0.75px solid #000000;
+    border-radius: 8px;
+    height: auto;
+    width: 80%;
+    text-align: center;
+    padding-top : 10%;
+
+}
+
+#LdM{
+    display: inline-block;
+    margin-right: 10%;
+}
+
+#numero {
+    display: inline-block;
+}
+
 
 /* -------------- Loader --------------*/
 #loader{
@@ -22,8 +398,8 @@ body{
 }
 
 #loader-img{
-    top:40%;
-    left:40%;
+    top:50%;
+    left:50%;
     position: absolute;
 }
 
@@ -31,7 +407,6 @@ body{
     text-align: center;
     font-size: 25%;
     position: absolute;
-    top:60%;
     width: 100%
 }
 /* -------------- End of Loader --------------*/
@@ -50,32 +425,353 @@ body{
 
 /* the slides and the loader should fill the whole 9:16 zone */
 .swiper-wrapper section, #loader{
-    background-color: dodgerblue;
+    background-color: white;
     width: 100%;
     height: 100%;
 }
 
-/* Most of the elements in this demo are absolute positionned with percentages */
-#first-slide header, #second-slide header{
-    text-align: center;
+#accueil{
     width: 100%;
-    top: 10%;
-    position: absolute;
-    font-size: 30%;
-    z-index: 2;
 }
 
-#logo-hyblab{
+.titre{
+    font-family: 'Boris';
+    font-size: 5vw;
+    padding: 10px;
+    font-weight: bold;
     text-align: center;
-    width: 50%;
-    left: 50%;
-    top: 50%;
-    margin-left:-25%;
-    margin-top:calc(-7.5% * 9 / 16 ); /* margins are relative to the element width... :-( */
+    margin: auto;
+    width: 70%;
+    /*padding-top: 10%;*/
+}
+
+@font-face {
+    font-family: 'Boris';
+    src: url('../Boris.woff');
+}
+
+/* Most of the elements in this demo are absolute positionned with percentages */
+
+
+/*mes ajouts*/
+.choix-logement img{
+    display: inline-block;
+    margin-right: 5%;
+    width: 25%;
+}
+
+.choix-logement2 img{
+    display: inline-block;
+    margin-right: 5%;
+}
+
+.choix-logement{
+    margin-bottom: 10%;
+}
+
+.choix-logement2{
+    margin-top: 5%;
+}
+
+.img-pente{
+    max-width: 80%;
+}
+video{
+    margin:auto;
+    max-width: 85%;
+    max-height: 30%;
+}
+
+.boussole{
+    margin: auto;
+    max-width: 100%;
+    position: relative;
+}
+
+.boussole .illustration{
+    max-width: 30%;
+}
+
+#article1{
+    overflow-y: scroll;
+    scroll-behavior: auto;
+}
+
+#article2 {
+    overflow-y: scroll;
+    scroll-behavior: auto;
+  }
+
+  #article3 {
+    overflow-y: scroll;
+    scroll-behavior: auto;
+  }
+
+  #article4 {
+    overflow-y: scroll;
+    scroll-behavior: auto;
+  }
+
+  #article5 {
+    overflow-y: scroll;
+    scroll-behavior: auto;
+  }
+
+  #article6 {
+    overflow-y: scroll;
+    scroll-behavior: auto;
+  }
+
+  #article7 {
+    overflow-y: scroll;
+    scroll-behavior: auto;
+  }
+
+#adresse input{
+    box-sizing: border-box;
+    display: inline-block;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 3px 5px;
+    gap: 16px;
+    border: 0.75px solid #000000;
+    border-radius: 8px;
+    position: relative;
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    font-size: 4vw;
+}
+
+img.img-adresse{
+    height: 200px;
+}
+
+footer button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 5px 9px;
+    gap: 16px;
+    background: #9185BE;
+    border-radius: 8px;
+    color: #FFFFFF;
+    margin: auto;
+    border: transparent;
+
+    text-transform: uppercase;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 5vw;
+}
+
+.passer{
+    color: #9185BE;
+    text-transform: uppercase;
+    justify-content: center;
+    margin: auto;
+    background-color: #FFFFFF;
+    margin-top: 7px;
+}
+
+div{
+    position: relative;
+}
+
+button.retour, button.info-bulle{
+    left: 0%;
+    margin: 2% ;
+    width : 10%;
+    text-align: center;
+    font-size: 5vw;
     position: absolute;
-    font-size: 50%;
-    z-index: 2;
-    cursor: pointer;
+    background-color: transparent;
+    border: transparent;
+}
+
+.img-fleche {
+    width: 55%;
+}
+
+p.intitulé {
+    padding-top: 2%;
+    font-size: 5vw;
+}
+
+div.conteneur{
+    margin: auto;
+}
+
+#info{
+    display:inline-block;
+    border:#666 1px solid;
+    margin:2px;
+    font-size:24px;
+    cursor:pointer;
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    font-size: small;
+    position: absolute;
+    right : 10%;
+    animation: glowing 8000ms infinite;
+      
+}
+
+#infoTxt{
+    border: black 1px solid;
+    text-align: justify;
+    padding: 5%;
+    width: 75%;
+    margin: auto;
+    border-radius: 8px;
+    position : absolute;
+    left: 10%;
+    height: auto;
+    padding-bottom: 10%;
+}
+
+#SecBouInf{
+    padding: 5%;
+    width: 75%;
+    margin: auto;
+    position : absolute;
+    left: 10%;
+    height: 90%;
+}
+
+#Saut {
+    padding-top : 7vw;
+    font-size: 4.5vw;
+}
+
+#bulleInfo{
+    position:absolute;
+    left:100%;
+    top:2%;
+    background-color: white;
+    animation: glowing 2000ms infinite;
+}
+
+.open-button {
+    background-color: white;
+    position: absolute;
+    right: 5%;
+    border: none;
+    animation: glowing 2000ms infinite;
+    height: 24px;
+    top: 5%;
+
+}
+
+#indication{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    width: 85%;
+    margin: auto;
+    line-height: 17px;
+    text-align: center;
+}
+
+
+#SoliInfo{
+    position: absolute;
+    left: -30px;
+}
+
+#SoliInfo2{
+    position: absolute;
+    left: -30px;
+}
+
+@keyframes glowing {
+    0% {
+    background-color: white;
+    box-shadow: 0 0 5px white;
+    }
+    50% {
+    background-color: #f7fd61;
+    box-shadow: 0 0 20px #f7fd61;
+    }
+    100% {
+    background-color: white;
+    box-shadow: 0 0 5px white;
+    }
+}
+
+
+.main-location-page{
+    position: unset;
+    padding-top: 10%;
+}
+
+.location-input{
+    height: 20%;
+    margin: auto;
+    padding: 5%;
+    float: none;
+    text-align: center;
+    font-size: medium;
+}
+
+.valider{
+    bottom: 20%;
+}
+
+.illustrationAdresse{
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    margin: auto;
+}
+
+
+.illustration{
+    max-width: 100%;
+    height: auto;
+}
+
+.div-adresse{
+    width: 100%;
+    padding: 0;
+    height: 300px;
+}
+
+.choix-logement {
+    margin-bottom: 3%;
+}
+
+.congrats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+#main-remerciments {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 55%;
+}
+
+#remerciements {
+    font-size: 4vw;
+    margin-bottom: 10%;
+    max-width: 90%;
+}
+
+#img-hyblab {
+    max-width: 90%;
+}
+
+.logos {
+    max-width: 25%;
 }
 
 /* Last slide image is centered */
@@ -89,12 +785,12 @@ body{
 }
 
 main > section{
-    background-image: url('../img/background.svg');
+    /*background-image: url('../img/background.svg');*/
     background-size: 100% 100%;
 }
 
 /* Footer of last slide is at the bottom and content is centered */
-#first-slide footer{
+footer{
     bottom: 5%;
     position: absolute;
     box-sizing: border-box; /* So that padding is not added to width (and width: 100% works) */
@@ -102,7 +798,6 @@ main > section{
     font-size: 20%;
     text-align: center;
     padding: 1em;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 
@@ -117,44 +812,44 @@ main > section{
     bottom: 0;
     background-color: white;
     font-size: 20%;
-  }
+}
 
-  #bandeau li{
+#bandeau li{
     list-style-type: none;
     display: inline-block;
     vertical-align: middle;
     margin: 0 0.5em;
-  }
+}
 
-  #bandeau img{
+#bandeau img{
     height: 2.5em;
-  }
+}
 
-  #bandeau #hyblab{
+#bandeau #hyblab{
     margin: 1em auto;
     height: 3em;
     display: block;
-  }
+}
 
-  #bandeau #cc, #bandeau #opensource
-  {
+#bandeau #cc, #bandeau #opensource
+{
     height: 1em;
-  }
+}
 
-  #bandeau .stacked{
+#bandeau .stacked{
     display:block;
-  }
+}
 
-  #bandeau ul{
+#bandeau ul{
     text-align: center;
     padding: 0 0;
     margin-bottom: 0.5em;
-  }
+}
 
-  #bandeau .institutionnel
-  {
+#bandeau .institutionnel
+{
     height: 2em;
-  }
+}
 
 /* ---------- Important media queries for easy responsive content :-) ----------------- */
 /* Whatever the devie used, the content will be displayed full width and height if      */
@@ -162,7 +857,7 @@ main > section{
 
 /* When the aspect ratio is smaller that 3/4, display a 3/4 content */
 #container{
-    position: fixed; /* To set the size of the container to 100% of the visible viewport height AND for absolute positionning of child elements*/ 
+    position: fixed; /* To set the size of the container to 100% of the visible viewport height AND for absolute positionning of child elements*/
     height: 100%;   /* even on mobile devices with url or navigation bars */
     margin-left: calc((100vw - 100 * 3vh / 4) / 2); /* Add black bands on left and right */
     width: calc(100 * 3vh / 4); /* Force 3/4 aspect ratio */
@@ -175,10 +870,11 @@ body{
 }
 
 /* Fill the whole viewport when its aspect ratio is between 9/16 and 3/4 */
-@media screen and (max-aspect-ratio: 3/4) {
+@media screen and (min-aspect-ratio: 3/4) {
     #container{
         margin-left: 0; /* reset margin-left */
         width: 100vw; /* content is full width (and full height because of the default rule for container height */
+        padding-left: 0;
     }
 
     /* We set a default font size here. It will be the base for all other font sizes */
@@ -186,9 +882,28 @@ body{
     body{
         font-size: 15vw;
     }
+
+    /* Page adresse*/
+    header {
+        margin-bottom: 0;
+    }
+    
+    .main-location-page {
+        padding-top: 0;
+    }
+
+    /*Page pente*/
+    .img-pente {
+        width: 75%;
+    }
+
+    .open-button {
+        top: 13%;
+    }
 }
 
-/* The content is displayed at 9/16 If the aspect ratio is higher that 9/16  */ 
+
+/* The content is displayed at 9/16 If the aspect ratio is higher that 9/16  */
 @media screen and (max-aspect-ratio: 9/16) {
     #container{
         margin-left: 0; /* reset left margin */
@@ -196,12 +911,121 @@ body{
         margin-top: calc(-50 * 16vw / 9); /* move the content half the height to the top */
         top:50%; /* then center it ! */
         height: calc(100 * 16vw / 9); /* adjust height so that aspect ratio is 9/16 */
+        padding-left: 0;
     }
+    /* --------------------------------------- Notes FAQ -------------------------------------- */
+    /*  Pour ce format, on met le bouton commencer un peu + haut sur la page d'accueil ? (sinon c'est nikel)
 
+
+    */
     /* We set a default font size here. It will be the base for all other font sizes */
     /* Here the font size is proportional to content width */
     body{
         font-size: 15vw;
     }
+
+    /* Détails page adresse */
+    #adresse input {
+        margin-top: 10%;
+    }
 }
 
+/* Bouton Info */
+*{
+    box-sizing: border-box;
+}
+
+  /* Fixez le bouton sur le côté gauche de la page the button on the left side of the page */
+.open-btn {
+display: flex;
+justify-content: flex-start;
+}
+/* Stylez et fixez le bouton sur la page */
+
+
+
+/* Positionnez la forme Popup */
+.login-popup {
+position: relative;
+text-align: center;
+width: 100%;
+}
+/* Masquez la forme Popup */
+.form-popup {
+display: none;
+position: absolute;
+left: 45%;
+top: 5%;
+transform: translate(-45%, 5%);
+border: 2px solid #666;
+z-index: 9;
+border-radius: 5px;
+height: 90%;
+width : 90%;
+
+
+}
+/* Styles pour le conteneur de la forme */
+.form-container {
+width: 90%;
+height : 100%;
+padding: 20px;
+background-color: #fff;
+}
+
+/* Stylez le bouton pour annuler */
+.form-container .cancel {
+    display:inline-block;
+    border:#666 1px solid;
+    margin:2px;
+    font-size:24px;
+    cursor:pointer;
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    font-size: small;
+    position: absolute;
+    right : 10%;
+}
+/* Planez les effets pour les boutons */
+.form-container .btn:hover,
+.open-button:hover {
+opacity: 1;
+}
+
+
+/* Style Checkbox */
+
+
+/* Specify the background color to be shown when checkbox is active */
+#bulle-question input:active ~ #facul1 {
+  background-color: white;
+}
+/* Specify the background color to be shown when checkbox is checked */
+#bulle-question input:checked ~ #facul1 {
+  background-color: orange;
+}
+/* Checkmark to be shown in checkbox */
+/* It is not be shown when not checked */
+.w3docs:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Display checkmark when checked */
+#bulle-question input:checked ~ .w3docs:after {
+  display: block;
+}
+/* Styling the checkmark using webkit */
+/* Rotated the rectangle by 45 degree and showing only two border to make it look like a tickmark */
+.main .w3docs:after {
+  left: 8px;
+  bottom: 5px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

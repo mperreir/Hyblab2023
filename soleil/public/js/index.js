@@ -1,22 +1,56 @@
 "use strict";
 
+
 // Init of the (touch friendly) Swiper slider
 const swiper = new Swiper("#mySwiper", {
   direction: "vertical",
-  mousewheel: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+  //observer: true,
+  mousewheel: false,
+  preventInteractionOnTransition: true,
+  allowTouchMove: false,
 });
 
 swiper.on("slideChange", function () {
+  console.log(swiper.activeIndex); 
   switch( swiper.activeIndex ) {
     case 0:
-      initSlide1();
+      initSlide0();
       break;
     case 1:
+      initSlide1();
+      break;
+    case 2:
       initSlide2();
+      break;
+    case 3:
+      initSlide3();
+      break;
+    case 4:
+      initSlide4();
+      break;
+    case 5:
+      initSlide5();
+      break;
+    case 6:
+      initSlide6();
+      break;
+    case 7:
+      initSlide7();
+      break;
+    case 8:
+      initSlide8();
+      break;
+    case 9:
+      initSlide9();
+      break;
+    case 10:
+      initSlideInfo1();
+      break;
+    case 11:
+      initSlideInfo2();
+      break;
+    case 12:
+      initSlideInfo3();
       break;
   }
 });
@@ -34,5 +68,9 @@ setTimeout(() => {
     easing: 'easeOutQuad',
   });
   // Init first slide
-  initSlide1();
+  initSlide0();
 }, 1000);
+
+$(".retour").click(function(){
+  swiper.slidePrev();
+})
