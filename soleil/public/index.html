@@ -142,9 +142,6 @@
           <button class="retour">
             <img class="img-fleche" src="img/FlecheRetour.png">
           </button>
-          <button class="retour">
-            <img class="img-fleche" src="img/FlecheRetour.png">
-          </button>
           <button class="open-button"><img src="img/Info2.png"></button>
           <!--<div class="open-btn">   <button id="info">I</button>
             <button class="open-button" onclick="openForm()"><strong>Info</strong></button>
@@ -213,7 +210,6 @@
       </section>  <!-- OMBRE -->
       <section id="ombre" class="swiper-slide">
         <header>
-          <button class="retour">←</button>
           <button class="open-button"><img src="img/Info2.png"></button>
           <button class="retour">
             <img class="img-fleche" src="img/FlecheRetour.png">
@@ -301,11 +297,13 @@ Y a-t-il de l'ombre sur votre toit ?
 
       <section id="mission" class="swiper-slide">
         <header>
-          
+          <button class="home">
+            <img class="img-accueil" src="img/home.png">
+          </button>
         </header>
         <img id="img-ques" src="img/SoliQuete.png">
         <div id="lettre_mission"></div>
-        <footer>
+        <footer id="footerScroll">
           <button onclick={swiper.slideTo(21,0)}>crédits</button>
         </footer>
       </section>

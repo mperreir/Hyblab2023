@@ -10,7 +10,7 @@
 }
 
 #lettre_mission{
-    bottom: 10%;
+    margin-bottom: 10%;
   } 
 
 #search{
@@ -333,7 +333,7 @@ header{
 }
 
 #img-ques {
-    padding-bottom: 10%;
+
     max-height: 30%;
 }
 
@@ -604,6 +604,30 @@ div{
     position: relative;
 }
 
+#info1{
+    overflow: scroll;
+}
+
+#info2{
+    overflow: scroll;
+}
+
+#info3{
+    overflow: scroll;
+}
+
+#scroll{
+    overflow: scroll;
+}
+
+#facultatif{
+    overflow: scroll;
+}
+
+#mission{
+    overflow: scroll;
+}
+
 button.retour, button.info-bulle{
     left: 0%;
     margin: 2% ;
@@ -615,7 +639,22 @@ button.retour, button.info-bulle{
     border: transparent;
 }
 
+.home{
+    left: 0%;
+    margin: 2% ;
+    width : 10%;
+    text-align: center;
+    font-size: 5vw;
+    position: absolute;
+    background-color: transparent;
+    border: transparent;
+}
+
 .img-fleche {
+    width: 55%;
+}
+
+.img-accueil {
     width: 55%;
 }
 
@@ -826,6 +865,9 @@ footer{
     padding: 1em;
 }
 
+#footerScroll{
+    position: relative;
+}
 
 /* ---------- Positionning of logos on the last slide -------------------- */
 /* here we have a contraint on the height of the logos (not the width)     */
