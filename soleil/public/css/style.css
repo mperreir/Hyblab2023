@@ -5,6 +5,10 @@
     height: 90%;
   }
 
+#premiere_page img{
+    max-width: 25%;
+}
+
 #lettre_mission{
     margin-bottom: 10%;
   } 
@@ -19,7 +23,7 @@
 
 
 #premiere_page #Boris{
-    font-size: 20px;
+    font-size: 7vw;
 }
 
 #premiere_page #ligne p {
@@ -76,7 +80,7 @@ body{
     margin :auto;
     width: 100%;
     float: left;
-    height: 150px;
+    position: relative;
 }
 
 #image2{
@@ -88,8 +92,8 @@ body{
 
 #image4{
     width: 100%;
-    height: 40%;
-    padding-top: 30%;
+    height: 30%;
+    padding-top: 15%;
 }
 
 #presentation{
@@ -105,7 +109,8 @@ body{
 
 #SoliExImg {
     text-align: center;
-    width: 20%
+    width: 20%;
+    bottom: 10%;
 }
 
 #SoliExTex2 {
@@ -116,7 +121,7 @@ body{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    bottom: 15px;
+    bottom: 10%;
 
 
 }
@@ -242,24 +247,28 @@ header{
     max-width: 90%;
     left: 5%;
     right: 7%;
-    position:static;
+    
     text-align: justify;
+    
 }
 
 .commentaire-soli2 {
     max-width: 90%;
     bottom: 7%;
     text-align: justify;
+    
 
 }
 
 .commentaire-soli2 p {
     max-width: 75%;
     display: inline-block;
+    
 }
 
 .commentaire-soli2 img {
     max-width: 20%;
+    
 }
 
 .commentaire-soli p {
@@ -459,7 +468,7 @@ header{
 .choix-logement img{
     display: inline-block;
     margin-right: 5%;
-    width: 25%;
+    width: 20%;
 }
 
 .choix-logement2 img{
@@ -467,9 +476,7 @@ header{
     margin-right: 5%;
 }
 
-.choix-logement{
-    margin-bottom: 10%;
-}
+
 
 .choix-logement2{
     margin-top: 5%;
@@ -477,6 +484,11 @@ header{
 
 .img-pente{
     max-width: 80%;
+    position: relative;
+}
+
+.corps{
+    bottom: 10%;
 }
 
 .video{
@@ -589,6 +601,7 @@ div{
     position: relative;
 }
 
+<<<<<<< HEAD
 #info1{
     overflow: scroll;
 }
@@ -613,6 +626,8 @@ div{
     overflow: scroll;
 }
 
+=======
+>>>>>>> cf499c305796980549bd9f43832e79bf92945231
 button.retour, button.info-bulle{
     left: 0%;
     margin: 2% ;
@@ -791,10 +806,6 @@ div.conteneur{
     height: 300px;
 }
 
-.choix-logement {
-    margin-bottom: 3%;
-}
-
 .congrats {
     display: flex;
     justify-content: space-around;
@@ -950,13 +961,11 @@ body{
     }
 
     /*Page pente*/
-    .img-pente {
-        width: 75%;
-    }
-/*
+    
+
     .open-button {
-        /*top: 13%; 
-    }*/
+        top: 13%;
+    }
 }
 
 
