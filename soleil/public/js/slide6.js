@@ -4,7 +4,7 @@ var executed6 = false;
 const initSlide6 = async function(){
     if(!executed6){
         $("#ombre .img-ombre").attr("src", `img/Ombre/toit-${quiz["pente"]}-ombre-01.jpg`);
-        $("#ombre #image3 p").html("Jamais");
+        $("#ombre #image5 p").html("Jamais");
         executed6 = true;
         $("#ombre .open-button").click(function(){
             swiper.slideTo(13, 0);
@@ -29,15 +29,15 @@ function changeOmbre(){
     console.log(ombre);
         switch (ombre) {
             case "1":
-                $("#ombre #image3 p").html("Jamais");
+                $("#ombre #image5 p").html("Jamais");
                 
                 break;
             case "2":
-                $("#ombre #image3 p").html("Pas trop");
+                $("#ombre #image5 p").html("Pas trop");
                
             break;
             case "3":
-                $("#ombre #image3 p").html("Toujours");
+                $("#ombre #image5 p").html("Toujours");
                 break;
             default:
                 break;
