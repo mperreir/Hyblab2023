@@ -484,7 +484,6 @@ header{
 
 .img-pente{
     max-width: 80%;
-    width: auto;
     position: relative;
 }
 
@@ -600,26 +599,6 @@ footer button{
 
 div{
     position: relative;
-}
-
-#info1{
-    overflow: scroll;
-}
-
-#info2{
-    overflow: scroll;
-}
-
-#info3{
-    overflow: scroll;
-}
-
-#scroll{
-    overflow: scroll;
-}
-
-#facultatif{
-    overflow: scroll;
 }
 
 button.retour, button.info-bulle{
@@ -940,8 +919,8 @@ body{
     
 
     .open-button {
-        /*top: 13%; 
-    }*/
+        top: 13%;
+    }
 }
 
 
