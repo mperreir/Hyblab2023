@@ -279,7 +279,7 @@ header{
 #ligne{
     width: 100%;
     float: left;
-    height: 150px;
+    height: 20%;
 }
 
 #lignelongue{
@@ -441,7 +441,7 @@ header{
     font-weight: bold;
     text-align: center;
     margin: auto;
-    width: 70%;
+    width: 55%;
     /*padding-top: 10%;*/
 }
 
@@ -476,6 +476,11 @@ header{
 .img-pente{
     max-width: 80%;
 }
+
+.video{
+    margin-top: 20%;
+}
+
 video{
     margin:auto;
     max-width: 85%;
@@ -486,6 +491,7 @@ video{
     margin: auto;
     max-width: 100%;
     position: relative;
+    margin-top: 10%;
 }
 
 .boussole .illustration{
@@ -676,6 +682,8 @@ div.conteneur{
     margin: auto;
     line-height: 17px;
     text-align: center;
+    margin-top: 10%;
+
 }
 
 
