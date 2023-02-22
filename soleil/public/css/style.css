@@ -54,6 +54,13 @@ body{
     overflow: hidden;   /* to avoid slider bugs on some browsers */
 }
 
+#image3{
+    position: relative;
+    max-height: 20%;
+}
+
+
+
 #image, #tropdechoix{
     max-width : 85%;
     /*height : 150px;*/
@@ -307,6 +314,9 @@ header{
     /*height: 8vw;*/
     padding-top: 1%;
 }
+#bulle-question img{
+    max-width: 80%;
+}
 
 #colonne2 {
     width: 45%;
@@ -491,10 +501,6 @@ header{
 .img-pente{
     max-width: 80%;
     position: relative;
-}
-
-.corps{
-    bottom: 10%;
 }
 
 .video{
