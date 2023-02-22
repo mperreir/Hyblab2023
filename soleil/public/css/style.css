@@ -90,6 +90,10 @@ body{
 }
 
 
+#image3{
+    z-index: 0;
+}
+
 #image4{
     width: 100%;
     height: 30%;
@@ -453,6 +457,8 @@ header{
     text-align: center;
     margin: auto;
     width: 55%;
+    position: relative;
+    z-index: 1;
     /*padding-top: 10%;*/
 }
 
@@ -723,7 +729,7 @@ div.conteneur{
     animation: glowing 2000ms infinite;
     height: 24px;
     top: 5%;
-
+    z-index: 1;
 }
 
 #indication{
