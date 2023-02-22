@@ -4,6 +4,8 @@
     overflow: scroll;
     height: 90%;
   }
+
+
 #search{
     width: 20px;
     vertical-align: middle;
@@ -749,7 +751,12 @@ div.conteneur{
 .congrats {
     display: flex;
     justify-content: space-around;
-    margin-top: 5%;
+    max-height: 3%;
+    height: auto;
+}
+
+#credits p {
+    font-size: 3vw;
 }
 
 #main-remerciments {
@@ -757,10 +764,10 @@ div.conteneur{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 55%;
+    /*height: 55%;*/
 }
 
-#remerciements {
+p#remerciements {
     font-size: 4vw;
     margin-bottom: 10%;
     max-width: 90%;
@@ -772,6 +779,7 @@ div.conteneur{
 
 .logos {
     max-width: 25%;
+    max-height: 10%;
 }
 
 /* Last slide image is centered */
@@ -870,7 +878,7 @@ body{
 }
 
 /* Fill the whole viewport when its aspect ratio is between 9/16 and 3/4 */
-@media screen and (min-aspect-ratio: 3/4) {
+@media screen and (max-aspect-ratio: 3/4) {
     #container{
         margin-left: 0; /* reset margin-left */
         width: 100vw; /* content is full width (and full height because of the default rule for container height */
