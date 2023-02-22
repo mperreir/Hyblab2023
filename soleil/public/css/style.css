@@ -601,7 +601,6 @@ div{
     position: relative;
 }
 
-<<<<<<< HEAD
 #info1{
     overflow: scroll;
 }
@@ -626,8 +625,6 @@ div{
     overflow: scroll;
 }
 
-=======
->>>>>>> cf499c305796980549bd9f43832e79bf92945231
 button.retour, button.info-bulle{
     left: 0%;
     margin: 2% ;
