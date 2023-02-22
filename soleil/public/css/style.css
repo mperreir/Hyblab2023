@@ -303,6 +303,9 @@ header{
     /*height: 8vw;*/
     padding-top: 1%;
 }
+#bulle-question img{
+    max-width: 80%;
+}
 
 #colonne2 {
     width: 45%;
