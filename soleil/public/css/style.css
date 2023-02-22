@@ -5,6 +5,9 @@
     height: 90%;
   }
 
+#lettre_mission{
+    bottom: 10%;
+  } 
 
 #search{
     width: 20px;
@@ -28,7 +31,7 @@
 }
 
 p{
-    font-size: 14px;
+    font-size: 3.5vw;
     font-family: 'Inter';
     font-style: normal;
 }
@@ -113,7 +116,6 @@ body{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 4vw;
     bottom: 15px;
 
 
@@ -127,7 +129,6 @@ body{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 4vw;
 }
 
 /* ---------- Animation de Soli-mongolfière dans la jauge ------------ */
@@ -210,7 +211,7 @@ body{
 }
 
 div {
-    font-size: 15px;
+    font-size: 3.5vw;
     text-align: center;
 }
 
@@ -255,7 +256,6 @@ header{
 .commentaire-soli2 p {
     max-width: 75%;
     display: inline-block;
-    font-size: 1.9vw;
 }
 
 .commentaire-soli2 img {
@@ -265,7 +265,6 @@ header{
 .commentaire-soli p {
     max-width: 75%;
     display: inline-block;
-    font-size: 1.9vw;
 }
 
 .commentaire-soli img {
@@ -323,6 +322,7 @@ header{
 
 #img-ques {
     padding-bottom: 10%;
+    max-height: 30%;
 }
 
 #choix-ombre {
@@ -546,9 +546,9 @@ video{
     border-radius: 8px;
     position: relative;
     margin: auto;
-    width: 90%;
+    width: 80%;
     text-align: center;
-    font-size: 4vw;
+    font-size: 3.5vw;
 }
 
 img.img-adresse{
@@ -784,7 +784,7 @@ div.conteneur{
 }
 
 #credits p {
-    font-size: 3vw;
+    font-size: 3.5vw;
 }
 
 #main-remerciments {
@@ -796,7 +796,6 @@ div.conteneur{
 }
 
 p#remerciements {
-    font-size: 4vw;
     margin-bottom: 10%;
     max-width: 90%;
 }
