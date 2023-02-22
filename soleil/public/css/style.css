@@ -602,6 +602,26 @@ div{
     position: relative;
 }
 
+#info1{
+    overflow: scroll;
+}
+
+#info2{
+    overflow: scroll;
+}
+
+#info3{
+    overflow: scroll;
+}
+
+#scroll{
+    overflow: scroll;
+}
+
+#facultatif{
+    overflow: scroll;
+}
+
 button.retour, button.info-bulle{
     left: 0%;
     margin: 2% ;
@@ -920,8 +940,8 @@ body{
     
 
     .open-button {
-        top: 13%;
-    }
+        /*top: 13%; 
+    }*/
 }
 
 
