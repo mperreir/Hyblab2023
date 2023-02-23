@@ -227,10 +227,8 @@ div {
 
 header{
     margin-top: 8%;
-    margin-bottom: 0;
     text-align: center;
     width: 100%;
-    top: 10%;
     z-index: 2;
 }
 
@@ -497,7 +495,7 @@ header{
 .choix-logement img{
     display: inline-block;
     margin-right: 5%;
-    width: 20%;
+    width: 25%;
 }
 
 .choix-logement2 img{
