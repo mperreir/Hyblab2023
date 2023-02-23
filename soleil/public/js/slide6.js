@@ -4,7 +4,8 @@ var executed6 = false;
 const initSlide6 = async function(){
     if(!executed6){
         $("#ombre .img-ombre").attr("src", `img/Ombre/toit-${quiz["pente"]}-ombre-01.jpg`);
-        $("#ombre #image5 p").html("Jamais");
+        $("#ombre #image5 p").eq(0).html("Jamais");
+        $("#ombre #image5 p").eq(1).html("Votre toit est entièrement dégagé");
         executed6 = true;
         $("#ombre .open-button").click(function(){
             swiper.slideTo(13, 0);
@@ -30,14 +31,16 @@ function changeOmbre(){
         switch (ombre) {
             case "1":
                 $("#ombre #image5 p").html("Jamais");
+                $("#ombre #image5 p").eq(1).html("Votre toit est entièrement dégagé");
                 
                 break;
             case "2":
                 $("#ombre #image5 p").html("Pas trop");
-               
+                $("#ombre #image5 p").eq(1).html("Votre toit est un peu ombragé");
             break;
             case "3":
                 $("#ombre #image5 p").html("Toujours");
+                $("#ombre #image5 p").eq(1).html("Votre toit est ombragé");
                 break;
             default:
                 break;
