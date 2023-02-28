@@ -1,4 +1,4 @@
-.swiper-slide header{
+.swiper-slide header {
     text-align: center;
     width: 100%;
     top: 10%;
@@ -8,14 +8,14 @@
     z-index: 2;
 }
 
-#logo-ecotopie{
+#logo-ecotopie {
     width: 40%;
     position: absolute;
     margin-left: 30%;
     margin-right: 30%;
 }
 
-#voy-ecotopie{
+#voy-ecotopie {
     margin-left: 10%;
     margin-right: 10%;
     width: 80%;
@@ -23,13 +23,13 @@
     margin-top: 40%;
 }
 
-.swiper-slide p{
+.swiper-slide p {
     font-size: 25%;
     text-align: center;
     margin: 10%;
 }
 
-.nuages{
+.nuages {
     position: absolute;
     width: 80%;
     left: 10%;
@@ -37,25 +37,26 @@
     margin-top: 12%;
 }
 
-#colline1, #colline3{
+#colline1,
+#colline3 {
     position: absolute;
     width: 15%;
     left: 10%;
     bottom: 7%;
 }
 
-#colline2{
+#colline2 {
     position: absolute;
     width: 15%;
     right: 10%;
     bottom: 7%;
 }
 
-#colline3{
+#colline3 {
     width: 30%;
 }
 
-.fleche_haut{
+.fleche_haut {
     width: 10%;
     position: absolute;
     left: 45%;
@@ -64,7 +65,7 @@
 
 }
 
-.fleche_bas{
+.fleche_bas {
     width: 10%;
     position: absolute;
     left: 45%;
@@ -72,7 +73,7 @@
     bottom: 10%;
 }
 
-#g_fleche{
+#g_fleche {
     width: 25%;
     position: absolute;
     left: 37.5%;
@@ -80,11 +81,11 @@
     bottom: 10%;
 }
 
-#first-slide p{
+#first-slide p {
     margin-top: 80%;
 }
 
-.text-front-page{
+.text-front-page {
     margin-top: 40%;
     vertical-align: middle;
     z-index: 0;

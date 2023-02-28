@@ -87,5 +87,5 @@ function init_storage() {
   window.localStorage.setItem('achievement6', "false");
   window.localStorage.setItem('achievement7', "false");
   window.localStorage.setItem('achievement8', "false");
-  window.location= "./map.html"
+  window.location = "./map.html"
 }

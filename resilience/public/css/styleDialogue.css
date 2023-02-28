@@ -6,7 +6,7 @@ h1 {
     background-color: #79B77B;
 }
 
-#fond{
+#fond {
     z-index: -1;
     width: 100%;
     position: absolute;
@@ -14,7 +14,7 @@ h1 {
     left: 0%;
 }
 
-#fond img{
+#fond img {
     width: 100%;
 }
 

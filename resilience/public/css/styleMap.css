@@ -3,43 +3,45 @@
 /* ------- is kept between 9/16 a,d 3/4 (portait orientation)         ----------- */
 
 /* Normalize margin and padding to ease elements positioning */
-*{
-    padding:0;
-    margin:0;
+* {
+    padding: 0;
+    margin: 0;
 }
 
-body{
+body {
     background-color: black;
     color: white;
-    overflow: hidden;   /* to avoid slider bugs on some browsers */
+    overflow: hidden;
+    /* to avoid slider bugs on some browsers */
     font-family: sans-serif;
 }
 
 /* -------------- Loader --------------*/
-#loader{
+#loader {
     z-index: 2;
-    position:absolute;
-}
-
-#loader-img{
-    top:40%;
-    left:40%;
     position: absolute;
 }
 
-#loader-text{
+#loader-img {
+    top: 40%;
+    left: 40%;
+    position: absolute;
+}
+
+#loader-text {
     text-align: center;
     font-size: 25%;
     position: absolute;
-    top:60%;
+    top: 60%;
     width: 100%
 }
+
 /* -------------- End of Loader --------------*/
 
 /* Swiper slider. Need to fill the container */
-#mySwiper{
+#mySwiper {
     width: 100%;
-    height:100%;
+    height: 100%;
     position: absolute;
 }
 
@@ -49,14 +51,16 @@ body{
 }
 
 /* the slides and the loader should fill the whole 9:16 zone */
-.swiper-wrapper section, #loader{
+.swiper-wrapper section,
+#loader {
     background-color: dodgerblue;
     width: 100%;
     height: 100%;
 }
 
 /* Most of the elements in this demo are absolute positionned with percentages */
-#first-slide header, #second-slide header{
+#first-slide header,
+#second-slide header {
     text-align: center;
     width: 100%;
     top: 10%;
@@ -65,13 +69,14 @@ body{
     z-index: 2;
 }
 
-#logo-hyblab{
+#logo-hyblab {
     text-align: center;
     width: 50%;
     left: 50%;
     top: 50%;
-    margin-left:-25%;
-    margin-top:calc(-7.5% * 9 / 16 ); /* margins are relative to the element width... :-( */
+    margin-left: -25%;
+    margin-top: calc(-7.5% * 9 / 16);
+    /* margins are relative to the element width... :-( */
     position: absolute;
     font-size: 50%;
     z-index: 2;
@@ -79,26 +84,29 @@ body{
 }
 
 /* Last slide image is centered */
-#img-fini{
+#img-fini {
     width: 70%;
     left: 50%;
     top: 40%;
     position: absolute;
-    margin-left:-35%;
-    margin-top:calc(-25% * 9 / 16 ); /* margins are relative to the element width... :-( */
+    margin-left: -35%;
+    margin-top: calc(-25% * 9 / 16);
+    /* margins are relative to the element width... :-( */
 }
 
-main > section{
+main>section {
     background-image: url('../img/background.svg');
     background-size: 100% 100%;
 }
 
 /* Footer of last slide is at the bottom and content is centered */
-#first-slide footer{
+#first-slide footer {
     bottom: 5%;
     position: absolute;
-    box-sizing: border-box; /* So that padding is not added to width (and width: 100% works) */
-    width: 100%; /* could also use  width: calc(100% - 2em) if not using box-sizing */
+    box-sizing: border-box;
+    /* So that padding is not added to width (and width: 100% works) */
+    width: 100%;
+    /* could also use  width: calc(100% - 2em) if not using box-sizing */
     font-size: 20%;
     text-align: center;
     padding: 1em;
@@ -112,114 +120,124 @@ main > section{
 /* slide because of body's font size rule at the end of this CSS           */
 #bandeau {
     padding-top: 3%;
-    width:100%;
+    width: 100%;
     position: absolute;
     bottom: 0;
     background-color: white;
     font-size: 20%;
-  }
+}
 
-  #bandeau li{
+#bandeau li {
     list-style-type: none;
     display: inline-block;
     vertical-align: middle;
     margin: 0 0.5em;
-  }
+}
 
-  #bandeau img{
+#bandeau img {
     height: 2.5em;
-  }
+}
 
-  #bandeau #hyblab{
+#bandeau #hyblab {
     margin: 1em auto;
     height: 3em;
     display: block;
-  }
+}
 
-  #bandeau #cc, #bandeau #opensource
-  {
+#bandeau #cc,
+#bandeau #opensource {
     height: 1em;
-  }
+}
 
-  #bandeau .stacked{
-    display:block;
-  }
+#bandeau .stacked {
+    display: block;
+}
 
-  #bandeau ul{
+#bandeau ul {
     text-align: center;
     padding: 0 0;
     margin-bottom: 0.5em;
-  }
+}
 
-  #bandeau .institutionnel
-  {
+#bandeau .institutionnel {
     height: 2em;
-  }
+}
 
 /* ---------- Important media queries for easy responsive content :-) ----------------- */
 /* Whatever the devie used, the content will be displayed full width and height if      */
 /* the aspect ratio is between 3/4 and 9/16. If not it is locked to either 3/4 or 3/16  */
 
 /* When the aspect ratio is smaller that 3/4, display a 3/4 content */
-#container{
-    position: fixed; /* To set the size of the container to 100% of the visible viewport height AND for absolute positionning of child elements*/ 
-    height: 100%;   /* even on mobile devices with url or navigation bars */
-    margin-left: calc((100vw - 100 * 3vh / 4) / 2); /* Add black bands on left and right */
-    width: calc(100 * 3vh / 4); /* Force 3/4 aspect ratio */
+#container {
+    position: fixed;
+    /* To set the size of the container to 100% of the visible viewport height AND for absolute positionning of child elements*/
+    height: 100%;
+    /* even on mobile devices with url or navigation bars */
+    margin-left: calc((100vw - 100 * 3vh / 4) / 2);
+    /* Add black bands on left and right */
+    width: calc(100 * 3vh / 4);
+    /* Force 3/4 aspect ratio */
 }
 
 /* We set a default font size here. It will be the base for all other font sizes */
 /* Here the font size is proportional to content width */
-body{
+body {
     font-size: calc(15vh * 3 / 4);
 }
 
 /* Fill the whole viewport when its aspect ratio is between 9/16 and 3/4 */
 @media screen and (max-aspect-ratio: 3/4) {
-    #container{
-        margin-left: 0; /* reset margin-left */
-        width: 100vw; /* content is full width (and full height because of the default rule for container height */
+    #container {
+        margin-left: 0;
+        /* reset margin-left */
+        width: 100vw;
+        /* content is full width (and full height because of the default rule for container height */
     }
 
     .modal {
         margin-left: 0 !important;
-        width: 100vw !important; 
+        width: 100vw !important;
     }
 
     /* We set a default font size here. It will be the base for all other font sizes */
     /* Here the font size is proportional to content width */
-    body{
+    body {
         font-size: 15vw;
     }
 }
 
-/* The content is displayed at 9/16 If the aspect ratio is higher that 9/16  */ 
+/* The content is displayed at 9/16 If the aspect ratio is higher that 9/16  */
 @media screen and (max-aspect-ratio: 9/16) {
-    #container{
-        margin-left: 0; /* reset left margin */
-        width: 100vw;   /* content is full width */
-        margin-top: calc(-50 * 16vw / 9); /* move the content half the height to the top */
-        top:50%; /* then center it ! */
-        height: calc(100 * 16vw / 9); /* adjust height so that aspect ratio is 9/16 */
+    #container {
+        margin-left: 0;
+        /* reset left margin */
+        width: 100vw;
+        /* content is full width */
+        margin-top: calc(-50 * 16vw / 9);
+        /* move the content half the height to the top */
+        top: 50%;
+        /* then center it ! */
+        height: calc(100 * 16vw / 9);
+        /* adjust height so that aspect ratio is 9/16 */
     }
 
     .modal {
-        margin-left:0 !important;
-        width: 100vw !important; 
+        margin-left: 0 !important;
+        width: 100vw !important;
     }
 
     /* We set a default font size here. It will be the base for all other font sizes */
     /* Here the font size is proportional to content width */
-    body{
+    body {
         font-size: 15vw;
     }
 }
 
 /*********************************************************************/
 
-#page-map{
+#page-map {
     /*background-color:#296C2B;*/
-    background: rgb(51,134,53);
+    background: rgb(51, 134, 53);
     /*background: linear-gradient(180deg, rgba(51,134,53,1) 26%, rgba(38,85,39,1) 100%);*/
     width: 100%;
     height: 100%;
@@ -227,7 +245,7 @@ body{
     flex-direction: column;
 }
 
-#header-icons{
+#header-icons {
     height: 10%;
     width: auto;
     margin-left: 7%;
@@ -236,40 +254,42 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 5%; /*5px 0.3em*/
+    margin-top: 5%;
+    /*5px 0.3em*/
 }
 
-#credits-audio{
+#credits-audio {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#credits{
+#credits {
     /*filter: drop-shadow(1px 1px 5px rgb(0 0 0 / 0.8));*/
     max-width: 100%;
 }
 
-#book{
+#book {
     /*filter: drop-shadow(1px 1px 5px rgb(0 0 0 / 0.8));*/
     max-width: 100%;
 }
 
-#unlock_audio{
+#unlock_audio {
     width: 42px;
     height: 42px;
     max-width: 100%;
-    filter: brightness(0) invert(1); /*drop-shadow(1px 1px 5px rgb(0 0 0 / 0.8));*/
+    filter: brightness(0) invert(1);
+    /*drop-shadow(1px 1px 5px rgb(0 0 0 / 0.8));*/
     margin-left: 0.1em;
 }
 
-#logo{
+#logo {
     /*filter: drop-shadow(1px 1px 5px rgb(0 0 0 / 0.8));*/
     width: 100%;
-    cursor: default; 
+    cursor: default;
 }
 
-#map{
+#map {
     width: 100%;
     height: 81%;
     display: flex;
@@ -281,18 +301,20 @@ body{
     margin-right: 7%;
 }
 
-#bottom{
+#bottom {
     display: flex;
-    height:7%;
+    height: 7%;
     justify-content: space-between;
     /*margin-left: 0.6em; 10px
     margin-right: 0.6em;*/
     margin-left: 7%;
     margin-right: 7%;
-    margin-top: -7%;; /*-5px -0.3em*/
+    margin-top: -7%;
+    ;
+    /*-5px -0.3em*/
 }
 
-#heure{
+#heure {
     height: 42px;
     max-height: 100%;
     font-size: 2.6vh;
@@ -305,7 +327,7 @@ body{
     padding: 0.3em;
 }
 
-#steps{
+#steps {
     height: 42px;
     max-height: 100%;
     font-size: 2.6vh;
@@ -339,28 +361,33 @@ body{
 
 
 /* The Modal (background) */
-#myModal{
+#myModal {
     top: 20%;
 }
 
-#notif-acquis{
+#notif-acquis {
     top: 20%;
 }
 
-#end{
+#end {
     top: 20%;
 }
 
 .modal {
     margin-left: calc((100vw - 90 * 3vh / 4) / 2);
     width: calc(90 * 3vh / 4);
-    display: none; /* Hidden by default */
-    position: absolute; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
     top: 0;
-    height: 60%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    cursor:pointer;
+    height: 60%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    cursor: pointer;
     border-radius: 3vh;
     background-size: 80%, 80%;
     background-color: white;
@@ -373,16 +400,16 @@ body{
     font-size: 22%;
     position: absolute;
     top: 50%;
-    width:80%;    
+    width: 80%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
-    text-align:center;
-    cursor:pointer;
+    text-align: center;
+    cursor: pointer;
 }
-  
+
 
 .popup {
-    z-index:1;
+    z-index: 1;
     position: absolute !important;
     background-size: 80%, 80%;
     background-color: white;

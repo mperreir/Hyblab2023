@@ -11,14 +11,14 @@ header {
     align-items: center;
 }
 
-#logo-ecotopie{
+#logo-ecotopie {
     width: 40%;
     position: absolute;
     margin-left: 30%;
     margin-right: 30%;
 }
 
-#voy-ecotopie{
+#voy-ecotopie {
     margin-left: 10%;
     margin-right: 10%;
     width: 80%;
@@ -26,7 +26,7 @@ header {
     margin-top: 35%;
 }
 
-#felicitation{
+#felicitation {
     position: absolute;
     font-size: 20%;
     text-align: center;
@@ -35,7 +35,7 @@ header {
     margin-right: 3rem;
 }
 
-#felicitation p{
+#felicitation p {
     padding-top: 1rem;
 }
 
@@ -55,7 +55,7 @@ header {
     border-radius: 2rem;
     background-color: white;
     padding-bottom: 0.75rem;
-    padding-top:0.75em;
+    padding-top: 0.75em;
     margin-top: 1rem;
 
 }
@@ -70,7 +70,8 @@ header {
     border: black solid 2px;
 
 }
-.solution{
+
+.solution {
     border-radius: 2rem;
     background-color: pink;
     margin-bottom: 1rem;
@@ -80,12 +81,13 @@ header {
     padding: 1rem 1rem;
     text-align: center;
 }
+
 .selected {
     height: 1.5rem;
     width: 1.5rem;
 }
 
-.submit{
+.submit {
     margin-top: 2rem;
     margin-bottom: 2rem;
     border: black solid 2px;

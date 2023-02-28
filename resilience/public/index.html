@@ -22,78 +22,57 @@
 <body>
   <!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
   <div id="container">
-    
-
     <div id="mySwiper" class="swiper">
-
       <main class="swiper-wrapper">
-
-
         <section id="first-slide" class="swiper-slide">
-
           <img src="img/logo_ecotopie.svg" id="logo-ecotopie" />
           <img src="img/nouveau_titre.svg" id="voy-ecotopie" />
-
-          <p> En 2023, l’état de la planète s’aggrave. Les bouleversements liés au dérèglement <b>climatique</b> s’accélèrent, et plus personne ne peut nier l’impact de l’activité <b>humaine</b> sur ce dernier.</p>
-          
-          <img src="img/ux_kit/fleche_bas.svg" class="fleche_bas" onclick="swiper.slideNext()"/>
-
+          <p> En 2023, l’état de la planète s’aggrave. Les bouleversements liés au dérèglement <b>climatique</b>
+            s’accélèrent, et plus personne ne peut nier l’impact de l’activité <b>humaine</b> sur ce dernier.</p>
+          <img src="img/ux_kit/fleche_bas.svg" class="fleche_bas" onclick="swiper.slideNext()" />
           <footer>
           </footer>
         </section>
-
-
         <section id="second-slide" class="swiper-slide">
-
-          <img src="img/nuages2.svg" class="nuages"/>
-          <img src="img/ux_kit/fleche_haut.svg" class="fleche_haut" onclick="swiper.slidePrev()"/>
-
+          <img src="img/nuages2.svg" class="nuages" />
+          <img src="img/ux_kit/fleche_haut.svg" class="fleche_haut" onclick="swiper.slidePrev()" />
           <div class="text-front-page">
             <p>
-              Dans le plus grand secret, une équipe de scientifiques met au point une machine à voyager dans le futur, dans l’espoir de pouvoir observer et mieux mesurer les conséquences du triste drame qui est en train de se jouer.
+              Dans le plus grand secret, une équipe de scientifiques met au point une machine à voyager dans le futur,
+              dans l’espoir de pouvoir observer et mieux mesurer les conséquences du triste drame qui est en train de se
+              jouer.
             </p>
-
             <p>
-            Le premier voyage est bref (quelques petites minutes), quoique surprenant : le bêta-voyageur rapporte avoir déambulé dans une ville paisible, fertile, inondée de verdure.
-            Tout semblait aller… pour le mieux.
+              Le premier voyage est bref (quelques petites minutes), quoique surprenant : le bêta-voyageur rapporte
+              avoir déambulé dans une ville paisible, fertile, inondée de verdure.
+              Tout semblait aller… pour le mieux.
             </p>
           </div>
-
-          <img src="img/colline2.svg" id="colline2"/>
-          <img src="img/colline1.svg" id="colline1"/>
-          
-          <img src="img/ux_kit/fleche_bas.svg" class="fleche_bas" onclick="swiper.slideNext()"/>
-
+          <img src="img/colline2.svg" id="colline2" />
+          <img src="img/colline1.svg" id="colline1" />
+          <img src="img/ux_kit/fleche_bas.svg" class="fleche_bas" onclick="swiper.slideNext()" />
           <footer>
           </footer>
         </section>
-
-
         <section id="third-slide" class="swiper-slide">
-
-          <img src="img/nuages1.svg" class="nuages"/>
-          <img src="img/ux_kit/fleche_haut.svg" class="fleche_haut" onclick="swiper.slidePrev()"/>
-         
+          <img src="img/nuages1.svg" class="nuages" />
+          <img src="img/ux_kit/fleche_haut.svg" class="fleche_haut" onclick="swiper.slidePrev()" />
           <div class="text-front-page">
-            <p> 
-              Stupéfait de cette découverte, le programme scientifique devient la priorité du gouvernement, 
-              il est médiatisé, les financements affluent. En deux mois, la machine est améliorée pour permettre un voyage dans le temps de douze heures…
-            </p>
-  
             <p>
-              Parmi une liste de citoyens volontaires, <b>vous avez été tiré au sort</b> pour effectuer le prochain voyage 
+              Stupéfait de cette découverte, le programme scientifique devient la priorité du gouvernement,
+              il est médiatisé, les financements affluent. En deux mois, la machine est améliorée pour permettre un
+              voyage dans le temps de douze heures…
+            </p>
+            <p>
+              Parmi une liste de citoyens volontaires, <b>vous avez été tiré au sort</b> pour effectuer le prochain
+              voyage
               en <b>2050</b>...
             </p>
           </div>
-         
-          <img src="img/colline3.svg" id="colline3"/>
-
-          <img src="img/ux_kit/grande_fleche.svg" id="g_fleche" onclick="init_storage()"/>
-
+          <img src="img/colline3.svg" id="colline3" />
+          <img src="img/ux_kit/grande_fleche.svg" id="g_fleche" onclick="init_storage()" />
           <footer></footer>
         </section>
-
-
       </main>
       <div class="swiper-pagination"></div>
     </div>

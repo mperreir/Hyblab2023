@@ -19,10 +19,12 @@ dict_achiev.set("_16", []);
 regions.forEach(element => {
     element.addEventListener('click', () => {
         compt = window.localStorage.getItem("compt");
+
         if ((element.id != "_16" || compt.length > 6) && (element.id != "_14" || window.localStorage.getItem("pipi") == "true") && (element.id != "_13" || window.localStorage.getItem("manger") == "true") && window.localStorage.getItem("popup") == "false") {
             dict_achiev.get(element.id).forEach(e => {
                 window.localStorage.setItem('achievement'.concat(e), "true");
             });
+
             if (window.localStorage.getItem(element.id) == "false") {
                 window.localStorage.setItem('compt', compt + 1);
                 time = " ".concat(heures[compt.length + 1], " ");
@@ -46,9 +48,11 @@ function load() {
     if (window.localStorage.getItem('started') == 0) {
         modal.style.display = "block";
     }
+
     window.localStorage.setItem('started', 1);
     document.getElementById("heure").value = window.localStorage.getItem('heure');
     document.getElementById("steps").value = window.localStorage.getItem('compt').length + "/8 ";
+
     if (window.localStorage.getItem('pipi') == "true" && window.localStorage.getItem('manger') == "true") {
         window.localStorage.setItem("popup", "false");
     } else {
@@ -64,16 +68,20 @@ function load() {
             bouton.disabled = true;
         }
     }
+
     if (window.localStorage.getItem("popup") == "true") {
         document.getElementById("popup").style.visibility = "visible";
     }
+
     if (window.localStorage.getItem("first-acquis") == "true") {
         modal_acquis.style.display = "block";
     }
     window.localStorage.setItem("first-acquis", "false");
+
     if (window.localStorage.getItem("is_end") == "true") {
         modal_end.style.display = "block";
     }
+
     window.localStorage.setItem("is_end", "false");
     regions.forEach(element => {
         if (window.localStorage.getItem(element.id) == "true") {
@@ -120,7 +128,7 @@ function manger() {
     window.localStorage.setItem("_13", "true");
     steps = " ".concat(compt.length + 1);
     window.localStorage.setItem('steps', steps);
-    window.localStorage.setItem("achievement5","true");
+    window.localStorage.setItem("achievement5", "true");
     window.location = "./dialogue.html?id=13";
 }
 
@@ -131,7 +139,7 @@ function toilette() {
     window.localStorage.setItem("_14", "true");
     steps = " ".concat(compt.length + 1);
     window.localStorage.setItem('steps', steps);
-    window.localStorage.setItem("achievement8","true");
+    window.localStorage.setItem("achievement8", "true");
     window.location = "./dialogue.html?id=14";
 }
 

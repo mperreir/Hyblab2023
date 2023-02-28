@@ -14,11 +14,13 @@ app.get('/topic', function (req, res) {
     res.json({ 'topic': topic });
 });
 
+// Get all votes
 app.get('/vote', async function (req, res) {
     const votes = await db.Vote.getAll();
     res.json(votes);
 });
 
+// Add votes
 app.post('/vote', async function (req, res) {
     try {
         const data = req.data;
