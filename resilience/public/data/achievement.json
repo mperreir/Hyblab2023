@@ -8,7 +8,7 @@
   "achievements": [
     {
       "ID": "1",
-      "name": "En quoi le système alimentaire de 2023 est-il défaillant ",
+      "name": "En quoi le système alimentaire de 2023 est-il défaillant ?",
       "data": [
         {
           "type": "text",
@@ -74,7 +74,7 @@
       "data": [
         {
           "type": "text",
-          "text": "Notre expert t’explique cela en détail.",
+          "text": "Notre expert vous explique cela en détail.",
           "class": ["bold"]
         },
         {
@@ -139,7 +139,7 @@
       "data": [
         {
           "type": "text",
-          "text": "Notre expert vous explique en quoi consiste un système agro-écologique",
+          "text": "Notre expert vous explique en quoi consiste un système agro-écologique.",
           "class": ["bold"]
         },
         {
@@ -154,7 +154,7 @@
         },
         {
           "type": "text",
-          "text": "Avec pour exemples : ",
+          "text": "avec pour exemples : ",
           "class": ["shortSkip"]
         },
         {

@@ -1,5 +1,5 @@
 {
-    "place": "Assemblée locale",
+    "place": "L'assemblée locale de l'alimentation",
     "people": [
         {
             "name": "Brandon",
@@ -20,7 +20,7 @@
         {
             "type": "message",
             "name": "Brandon",
-            "text": "Ah tiens notre voyageur, j’ai entendu parler de toi ! Comment vas-tu après cette journée bien remplie ?"
+            "text": "Ah tiens notre voyageur, j’ai entendu parler de vous ! Comment allez-vous après cette journée bien remplie ?"
         },
         {
             "type": "message",
@@ -30,7 +30,7 @@
         {
             "type": "message",
             "name": "Brandon",
-            "text": "Ben tu tombes bien, elle commence dans dix minutes. C’est ici que chaque mois, sont choisis collectivement les aliments conventionnés par la SSA. Chacun vote et met une liste d’ingrédients dont il a besoin. Les agriculteurs produisent en fonction."
+            "text": "Ben vous tombez bien, elle commence dans dix minutes. C’est ici que chaque mois, sont choisis collectivement les aliments conventionnés par la SSA. Chacun vote et met une liste d’ingrédients dont il a besoin. Les agriculteurs produisent en fonction."
         },
         {
             "type": "message",
@@ -40,7 +40,7 @@
         {
             "type": "message",
             "name": "Brandon",
-            "text": "N’hésite pas à l’utiliser si tu as des remarques ou des propositions. (clin d’oeil)"
+            "text": "N’hésitez pas à l’utiliser si vous avez des remarques ou des propositions. (clin d’oeil)"
         },
         {
             "type": "message",

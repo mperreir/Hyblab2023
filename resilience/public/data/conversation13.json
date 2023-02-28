@@ -1,15 +1,15 @@
 {
-    "place": "Cantine populaire",
+    "place": "La cantine pop'",
     "people": [
         {
-            "name": "Quentin",
+            "name": "Stephanie",
             "background_color": "#A4A4FC",
             "border_color": "white",
             "text_color": "black",
             "side": "left"
         },
         {
-            "name": "Stephanie",
+            "name": "Quentin",
             "background_color": "#615FC2",
             "border_color": "white",
             "text_color": "black",
