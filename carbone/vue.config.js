@@ -36,6 +36,6 @@ module.exports = {
     }
   },
   publicPath: process.env.NODE_ENV === 'production'
-   ? '/carbone/'
+   ? '/nantes2023/carbone/'
    : '/'
 }
