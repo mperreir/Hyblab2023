@@ -1,0 +1,106 @@
+<!doctype html>
+
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <title>Apropos</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/styleGlobal.css">
+  <link rel="stylesheet" href="css/styleApropos.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/map.js" defer></script>
+  <script src="js/apropos.js" defer></script>
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <div id="titre">
+        <h1>A propos</h1>
+      </div>
+      <img src="img/ux_kit/fleche_droite.svg" id="right-arrow" onclick="map()">
+    </header>
+
+    <div class="texte">
+      <div class="paragraphe">
+        Marion Lecointre, journaliste indépendante, a lancé ce projet avec une équipe composée de cinq
+        étudiants en première année de master à l’école de Polytech et d’AGR Nantes et de l’EPJT Tours. Avec ce projet
+        interdisciplinaire, nous souhaitons vous emmener dans une ville futuriste de manière ludique, interactive et
+        innovante.
+      </div>
+      <div class="paragraphe">
+        Notre projet veut vous faire explorer la manière dont des solutions peuvent être mises en place afin de garantir
+        une sécurité alimentaire durable et responsable pour tous, à l’échelle locale et nationale. Nous proposons
+        ainsi, à travers Voyage en Écotopie(s) de découvrir une ville ayant adopté/construit un système alimentaire
+        résilient capable de nourrir toute la population.
+      </div>
+      <div class="paragraphe">
+        L’urgence climatique est là et bon nombre de médias abordent ce sujet, il semble que le traitement médiatique de
+        ce sujet tend à en exposer les conséquences de façon dramatique sans y apporter de solution. Ce traitement
+        médiatique de l'urgence climatique fait souvent de cette question un constat douloureux, contre lequel il nous
+        paraît presque impossible d’agir.
+        Nous proposons ici un traitement constructif de l’urgence climatique, en mettant en lumière des solutions
+        possibles tout en encourageant des actions concrètes pour d’une part témoigner de l’urgence climatique, mais
+        aussi afin de proposer un avenir plus durable.
+      </div>
+      <div class="paragraphe">
+        À travers une narration fictive, nous proposons une projection dans le futur d’une métropole, en 2050. À travers
+        un parcours d’étape en étape, découvrez les solutions d’un système alimentaire résilient.
+        Quelles soient déjà expérimentées ou mûrement réfléchies et analysées par des experts, certaines solutions
+        existent déjà.
+      </div>
+      <div class="paragraphe">
+        Pour proposer un futur possible de manière concrète, nous nous sommes basés sur des études réalisées par des
+        scientifiques ainsi que sur des exemples concrets de systèmes déjà mis en place, qui ont prouvé leur capacité à
+        être résilientes et/ou à le devenir.
+      </div>
+      <div class="paragraphe">
+        Voici quelques liens que vous pouvez consulter :
+        <div class="lien">
+          Le rapport « <a href="https://resiliencealimentaire.org/wp-content/uploads/2021/01/VersLaResilienceAlimentaire-DigitaleVersion-HD-1.pdf">Vers la résilience alimentaire : faire face aux menaces globales à l’échelle des territoires</a> », de l’association Les greniers d’abondance.
+          
+        </div>
+        <div class="lien">
+          Le rapport « <a href="https://resiliencealimentaire.org/wp-content/uploads/2022/02/Livre-Qui-veille-au-grain-3.pdf">Qui veille au grain</a> » de l’association Les Greniers d’Abondance.
+        </div>
+        <div class="lien">
+          La synthèse de l’agence de l’environnement et de la maîtrise de l’énergie (ADEME) « <a href="https://librairie.ademe.fr/cadic/6529/transitions2050-synthese.pdf?modal=false">Transitions 2050, Choisir Maintenant, Agir pour le climat</a> ».
+        </div>
+        <div class="lien">
+          L’enquête ADEME : <a href="https://librairie.ademe.fr/cadic/6939/feuilleton_modes_de_vie_transitions2050_ademe.pdf">31 entretiens individuels de deux heures, présentant une grande diversité de caractéristiques socio-démographiques</a>.
+        </div>
+        <div class="lien">
+          Le rapport The Shift Projet « <a href="https://theshiftproject.org/wp-content/uploads/2022/01/TSP_SRT_Tome2_211206.pdf">La résilience des territoires, pour tenir le cap de la transition écologique</a> ».
+        </div>
+        <div class="lien">
+          Le rapport « <a href="https://theshiftproject.org/wp-content/uploads/2022/10/TSP_SRT_Cahiers_brochure_20221010.pdf">Comment transformer nos territoires</a> » de The Shift Project.
+        </div>
+      </div>
+    </div>
+
+    <div id="credits">
+      <h1>Crédits</h1>
+    </div>
+
+    <div class="texte">
+      
+      <p id="equipetitre">Equipe : </p>
+      <p id="equipe">Romane AUDREN - Martin BERTHOU - Guillaume BEZIER - Louise DUBOIS-AUGER - Clara DUCHENE - Maxime FONTENEAU - Marion LECOINTRE - Tristan MANIER - Antoine PILATUS KOLATA </p>
+
+      <a href="http://www.hyblab.fr/"><img id="hyblab" src="logo_hyblab.png" alt="Hyblab DataSport"></a>
+      <a href="http://www.ouestmedialab.fr/"><img src="logo_oml.png" alt="Ouest Médialab"></a>
+      <a href="http://www.agrnantes.fr"><img src="ecoles/logo_agr.png" alt="AGR école de l'image"></a>
+      <a href="https://epjt.fr/"><img src="ecoles/logo_epjt.svg" alt="Ecole publique de journalisme de Tours"></a>
+      <a href="http://www.polytech.univ-nantes.fr/"><img src="ecoles/logo_polytech.png" alt="Polytech Nantes"></a>
+
+    </div>
+
+  </div>
+</body>
+
+</html>

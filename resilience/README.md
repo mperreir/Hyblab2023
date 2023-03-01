@@ -1,15 +1,33 @@
 # Descriptif du projet
 
-Porteur de projet :
+Porteur de projet : Marion LECOINTRE
 
-Sujet :
+Sujet : Résilience alimentaire
 
-Nom d'équipe :
+Nom d'équipe : Résalience
 
-Participants : 
+Participants :
 
 - AGR :
+  - Romane AUDREN
+  - Guillaume BEZIER
 
-- EPJT
+- EPJT :
+  - Clara DUCHENE
 
-- Polytech :  
+- Polytech :
+  - Tristan MANIER (chef de projet)
+  - Louise DUBOIS--AUGER
+  - Maxime FONTENEAU
+  - Martin BERTHOU
+  - Antoine PILATUS--KOLATA
+
+## Database
+
+Création de la based edonnées avant de lancer le serveur :
+
+```{sql}
+sqlite3 database.db
+> .read createDB.sql
+> .exit
+```

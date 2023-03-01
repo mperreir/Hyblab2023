@@ -17,6 +17,9 @@ swiper.on("slideChange", function () {
     case 1:
       initSlide2();
       break;
+    case 2:
+      initSlide3();
+      break;
   }
 });
 
@@ -62,6 +65,8 @@ function init_storage() {
   window.localStorage.setItem('compt', "");
   window.localStorage.setItem('heure', " 8:00 ");
   window.localStorage.setItem("popup", "false");
+  window.localStorage.setItem("first-acquis", "false");
+  window.localStorage.setItem("is_end", "false");
   window.localStorage.setItem('started', 0);
   window.localStorage.setItem('steps', 0);
   window.localStorage.setItem('manger', "false");
@@ -74,7 +79,7 @@ function init_storage() {
   window.localStorage.setItem('_13', "false");
   window.localStorage.setItem('_14', "false");
   window.localStorage.setItem('_16', "false");
-  window.localStorage.setItem('achievement1', "false");
+  window.localStorage.setItem('achievement1', "true");
   window.localStorage.setItem('achievement2', "false");
   window.localStorage.setItem('achievement3', "false");
   window.localStorage.setItem('achievement4', "false");

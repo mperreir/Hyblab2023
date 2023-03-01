@@ -1,0 +1,118 @@
+{
+    "place": "La ferme du moulin de Fabien",
+    "people": [
+        {
+            "name": "Fabien",
+            "background_color": "#9088FF",
+            "border_color": "white",
+            "text_color": "black",
+            "side": "left"
+        },
+        {
+            "name": "Voyageur",
+            "background_color": "white",
+            "border_color": "black",
+            "text_color": "black",
+            "side": "right"
+        }
+    ],
+    "messages": [
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Bonjour, je ne vous dérange pas ? J’étais en train de regarder le moulin… De là où je viens, on n’en voit plus beaucoup !"
+        },
+        {
+            "type": "message",
+            "name": "Fabien",
+            "text": "Ah oui ? Vous devez venir de loin alors, c’est assez courant par ici. il nous sert à moudre nos céréales pour les transformer en farine, qu’on revend ensuite à des boulangers essentiellement, un peu en commerce également. Mais pardon, je me présente, je suis Fabien, je gère l’exploitation."
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Enchanté.e, et vous cultivez quoi ici, à part les céréales ?"
+        },
+        {
+            "type": "message",
+            "name": "Fabien",
+            "text": "On cultive aussi des légumineuses, des oléagineux, et on fait un peu d’élevage."
+        },
+        {
+            "type": "all",
+            "messages": [
+                [
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Il y a beaucoup plus de fermes qu’avant, que s’est il passé ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Je reviens d’un long voyage et je me rends compte qu’il y a des fermes un peu partout par ici. Bien plus qu’à mon époq… Enfin, j’essaie de comprendre, voilà, comment ça fonctionne."
+                    },
+                    {
+                        "type": "message",
+                        "name": "Fabien",
+                        "text": "D’accord. Et bien, vous n’êtes pas sans savoir que le dérèglement climatique nous a joué quelques tours ces 30 dernières années… Jusqu’à menacer le système agricole de l’époque, qui était déjà défaillant de toute façon. Donc, pour pallier les aléas du climat (et aussi essayer de limiter notre empreinte carbone), l’état a lancé un vaste programme de résilience alimentaire, dont l’objectif était notamment de pouvoir bien nourrir tous ses citoyens, même en cas de crise majeure (climatique, économique, et j’en passe.)"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Et comment ça s’est passé ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Fabien",
+                        "text": "L’État a lancé un grand plan national de soutien à l'installation de fermes \"nourricières\", c'est-à-dire des fermes dédiées à l’alimentation humaine et capables de nourrir les habitants des territoires alentours. Il a aussi fallu revoir notre régime alimentaire, en y incorporant plus de végétal, et en diminuant par deux notre consommation de viande - la plupart des champs céréaliers de l’époque servaient à nourrir les bêtes, ça occupait beaucoup trop de terres, qui servent maintenant à l’alimentation humaine. Et enfin, il a fallu diversifier les cultures, créer des synergies entre territoires. Pour faire très simple."
+                    }
+                    
+                ],
+                [
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "La transition a-t-elle été difficile ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Comment vous y êtes parvenu ? J'imagine que vous avez dû changer vos habitudes alimentaires, vos pratiques agricoles…"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Fabien",
+                        "text": "Effectivement, ça n’a pas été simple, mais il y avait urgence à changer les choses et tout le monde était d’accord là-dessus. Et puis notre système alimentaire de l’époque était aberrant. Non seulement il ne suffisait pas à nourrir convenablement tout le monde, mais en plus il était responsable d’un quart des émissions de gaz à effet de serre. Sans oublier que les pratiques agricoles intensives étaient très gourmandes en eau, appauvrissaient les sols et tuaient la biodiversité."
+                    }
+                ],
+                [
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Le métier d’agriculteur a-t-il évolué ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "J’ai vécu loin d’ici et de là où je viens, le métier est usant et très mal payé. J’imagine donc qu’il a fallu trouver du monde pour gérer et travailler dans ces fermes. Il y a eu des candidats pour se lancer ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Fabien",
+                        "text": "Oui c'était comme ça avant chez nous aussi, mes parents étaient agriculteurs, et ça n'a pas toujours été simple. Maintenant les choses ont bien changé. ll y a eu une \"fonctionnarisation\" du métier puisque pas mal de fermes sont régies par des collectivités ou fortement soutenues - notamment par la mise à disposition des moyens de production, qui coûtent très chers."
+                    },
+                    {
+                        "type": "message",
+                        "name": "Fabien",
+                        "text": "Et puis, c’est vrai que le système agro-écologique est très intensif en main d’oeuvre, mais avec le développement de la commande publique, la baisse des marges distributeurs et surtout les débouchés locaux assurés par le conventionnement des produits, le métier est plus sécurisé, et donc plus attractif."
+                    }
+                ]
+            ]
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Je vous remercie, je dois continuer ma visite, bonne journée !"
+        }
+    ]
+}

@@ -1,0 +1,118 @@
+{
+    "place": "Le jardin partagé de l’école Prévert",
+    "people": [
+        {
+            "name": "Mila",
+            "background_color": "#615FC2",
+            "border_color": "white",
+            "text_color": "white",
+            "side": "left"
+        },
+        {
+            "name": "Voyageur",
+            "background_color": "white",
+            "border_color": "black",
+            "text_color": "black",
+            "side": "right"
+        }
+    ],
+    "messages": [
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "Bonjour, excusez-moi, qu’est ce que vous êtes en train de faire ?"
+        },
+        {
+            "type": "message",
+            "name": "Mila",
+            "text": "Bonjour, et vous (rire)?"
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "(rire) Ah oui pardon, je suis en visite dans la ville. J’ai vu ce jardin ouvert, alors je suis rentré.e et j’ai vu les enfants. C’est un potager, c’est ça ?"
+        },
+        {
+            "type": "message",
+            "name": "Mila",
+            "text": "Oui, c’est un potager partagé. Je suis Mila, leur institutrice. La partie là-bas est gérée par les habitants de cet immeuble et cette partie-là par les enfants de l’école."
+        },
+
+        {
+            "type": "all",
+            "messages": [
+                [
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Tout le monde peut s’occuper d’un jardin partagé ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Mila",
+                        "text": "Oui, c’est le principe. Tous ceux qui souhaitent mettre la main à.. la terre (hihi) peuvent contribuer à n'importe quel jardin partagé de la ville."
+                    },
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Et les écoles aussi à ce que je vois ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Mila",
+                        "text": "Oui, tout à fait, chaque école dispose d’un jardin potager ou partage une parcelle avec d’autres habitants. L’apprentissage du jardinage, du travail de la terre, fait partie du programme scolaire. Dès la maternelle, on apprend aux élèves les bases du jardinage, à manipuler la terre, à comprendre ce qui y vit, de quoi une plante a besoin pour grandir. Et puis, dès le primaire, on apprend aux enfants à être autonomes et à gérer une parcelle de culture."
+                    },
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Et ils ramènent les récoltes à la maison ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Mila",
+                        "text": "Oui, une fois par semaine, on distribue équitablement les récoltes. Bon, ça représente un ou deux légumes, mais ils sont fiers de les ramener à la maison."
+                    }                    
+                ],
+                [
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Il y en a beaucoup en ville ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "C’est intéressant… En me promenant, j’en ai vu pas mal des potagers comme celui-ci……"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Mila",
+                        "text": "Effectivement, il y a une vingtaine d’années, il y a eu un grand plan de végétalisation des quartiers ici. Notamment pour répondre aux fortes chaleurs l’été. On en a profité pour créer des îlots nourriciers un peu partout en ville : des potagers dans les cours, sur les toits, dans les parcs… Des fruitiers ici et là. Beaucoup de groupes d’habitants cultivent en ville de cette manière."
+                    }
+                ],
+                [
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Ça ne vous demande pas trop de temps tout ce jardinage ?"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Voyageur",
+                        "text": "Et ça doit demander un peu de temps quand même. Je vois le potager, ici, il est assez grand, ce n’est pas rien à gérer…"
+                    },
+                    {
+                        "type": "message",
+                        "name": "Mila",
+                        "text": "C’est vrai, mais on gagne un peu au porte-monnaie à cultiver ainsi. Et puis surtout, on se détend, on s’y met à plusieurs, on se rencontre, on discute, ça crée du lien. Sans oublier que la plupart des gens sont passés à la semaine de quatre jours, ce qui a libéré un peu de temps disponible pour jardiner, mais aussi transformer nos aliments."
+                    }
+                ]
+            ]
+        },
+        {
+            "type": "message",
+            "name": "Voyageur",
+            "text": "C’est inspirant, je vous remercie, bonne journée !"
+        }
+    ]
+}

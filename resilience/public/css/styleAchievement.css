@@ -1,0 +1,177 @@
+#container {
+    background-color: white;
+    overflow-y: scroll;
+}
+
+#presentation {
+    font-size: 3vh;
+    color: black;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.achievement {
+    color: black;
+    width: 100%;
+    height: auto;
+    font-size: 10%;
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+    padding: 1rem 1rem 3rem;
+}
+
+.achievement:not(:first-of-type) {
+    margin-top: -40px;
+}
+
+.achievement:not(:last-of-type) {
+    padding: 1rem 1rem 3rem;
+}
+
+#visible {
+    color: black;
+    width: 100%;
+    height: auto;
+    padding: 0 1em 3em;
+    font-size: 30%;
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: nowrap;
+}
+
+
+.ID {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+
+.cadenas {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 4vw;
+    border: 1px solid rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+#image_cadenas {
+    width: 100%
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: normal;
+    max-width: 80%;
+}
+
+
+.data {
+    /*display: flex;*/
+    font-size: 1rem;
+    color: black;
+
+    height: 100%;
+    margin-top: 1rem;
+    margin-left: 1rem;
+
+}
+
+.achievement-any {
+    background-color: white;
+    border: solid;
+    border-color: black;
+    border-width: 2px;
+
+}
+
+.data-1,
+.achievement-1 {
+    background-color: #CFCCF9;
+
+}
+
+.data-2,
+.achievement-2 {
+    background-color: #A4A4FC;
+}
+
+.data-3,
+.achievement-3 {
+    background-color: #9088FF;
+}
+
+.data-4,
+.achievement-4 {
+    background-color: #FFC8A2;
+}
+
+.data-5,
+.achievement-5 {
+    background-color: #FFB84E;
+}
+
+.data-6,
+.achievement-6 {
+    background-color: #F89E62;
+}
+
+.data-7,
+.achievement-7 {
+    background-color: #FD9E98;
+}
+
+.data-8,
+.achievement-8 {
+    background-color: #FF73BA;
+}
+
+.up-arrow {
+    transform: rotate(-90deg);
+    display: flex;
+    margin: 2rem auto;
+}
+
+.video {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.indent {
+    padding-left: 2rem;
+}
+
+.shortSkip {
+    margin-top: 0.5rem;
+}
+
+.midSkip {
+    margin-top: 1rem;
+}
+
+.bigSkip {
+    margin-top: 2rem;
+}

@@ -1,0 +1,414 @@
+{
+  "badges": [
+    {
+      "name": "Survivant",
+      "img": "survivant.png"
+    }
+  ],
+  "achievements": [
+    {
+      "ID": "1",
+      "name": "En quoi le système alimentaire de 2023 est-il défaillant ?",
+      "data": [
+        {
+          "type": "text",
+          "text": "D’un côté, le système agricole actuel montre des failles :",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "- Il contribue de manière importante aux émissions de gaz à effet de serre (20% des GES en France, dont 90% sont liés à l’élevage).",
+          "class": ["indent","shortSkip"]
+        },
+        {
+          "type": "text",
+          "text": "- Il est le premier consommateur d’eau en France (45% de l’eau douce prélevée).",
+          "class": ["indent","shortSkip"]
+        },
+        {
+          "type": "text",
+          "text": "- Alors que la population agricole est vieillissante et que le nombre d’exploitations diminue chaque année, les exploitants agricoles constituent la catégorie professionnelle dont le niveau de vie est parmi les plus faibles (en notant cependant qu’il existe de grandes disparités entre exploitations).",
+          "class": ["indent","shortSkip"]
+        },
+        {
+          "type": "text",
+          "text": "- Enfin, alors qu’1/4 des français se restreignent sur la quantité de ce qu’ils mangent pour des raisons financières, l’alimentation inadaptée constitue le premier facteur de risque de mauvaise santé, et l’une des premières causes de mortalité en France.",
+          "class": ["indent","shortSkip"]
+        },
+        {
+          "type": "text",
+          "text": "De l’autre, le système agricole actuel est vulnérable et peu résilient :",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "text",
+          "text": "- Il est dépendant des énergies fossiles à bien des niveaux : outils de production, transport des matières premières vers les usines de transformation, répartition des denrées sur le territoire…",
+          "class": ["indent","shortSkip"]
+        },
+        {
+          "type": "text",
+          "text": "- Il est soumis au dérèglement climatique et ses conséquences : sécheresse et tension sur l’usage de l’eau, évolution du climat et des écosystèmes locaux, multiplication des événements climatiques extrêmes (canicule, inondation…)",
+          "class": ["indent","shortSkip"]
+        },
+        {
+          "type": "text",
+          "text": "- Et il doit également faire avec l’effondrement de la biodiversité et la baisse de la fertilité des sols (dégradation et artificialisation des sols par l’activité humaine), pourtant essentiels aux cultures.",
+          "class": ["indent","shortSkip"]
+        },
+        {
+          "type": "text",
+          "text": "- On peut également citer d’autres perturbations possibles, d’ordre politique, économique, sanitaire…",
+          "class": ["indent","shortSkip"]
+        },
+        {
+          "type": "text",
+          "text": "Pour répondre à ces enjeux, la résilience alimentaire - soit la capacité d’un territoire à garantir la sécurité alimentaire de ses habitants dans un contexte de perturbations multiples et imprévisibles - constitue un levier d’action pertinent, de plus en plus pris en main par certaines collectivités.",
+          "class": ["shortSkip"]
+        }
+
+      ]
+    },
+    {
+      "ID": "2",
+      "name": "Qu’est-ce que la résilience alimentaire ?",
+      "data": [
+        {
+          "type": "text",
+          "text": "Notre expert vous explique cela en détail.",
+          "class": ["bold"]
+        },
+        {
+          "type": "video",
+          "link": "https://www.youtube.com/embed/pBqZw06vEHM",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "Pour aller un peu plus loin encore et comprendre les enjeux de la résilience alimentaire, Les Greniers d’Abondance apporte une définition ici :",
+          "class": ["midSkip"]
+        },
+        {
+          "type": "link",
+          "text": "resiliencealimentaire.org",
+          "link": "https://resiliencealimentaire.org/contexte/",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "En 2023 des métropoles ont déjà commencé à mettre en place ce système.",
+          "class": ["bold","midSkip"]
+        },
+        {
+          "type": "text",
+          "text": "À Bordeaux (33), la stratégie de résilience agricole et alimentaire a été adoptée le 03 novembre 2022. Voici le rapport :",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "www.bordeaux-metropole.fr",
+          "link": "https://www.bordeaux-metropole.fr/Vivre-habiter/Une-metropole-nature/Se-nourrir/La-strategie-de-resilience-agricole-et-alimentaire.",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "À Rennes (35),  le système agricole et alimentaire se veut résilient, avec 27 exploitations agricoles rennaises, deux tiers lieux agricoles, six exploitations semi-professionnelles,  70 jardins partagés et quatre fermes urbaines et péri urbaines : ",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "metropole.rennes.fr",
+          "link": "https://metropole.rennes.fr/rennes-cultive-son-jardin",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "À Vannes (56), une régie municipale maraîchère approvisionnent trois cuisines sur cinq des crèches municipales, depuis 2019 :",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "www.banquedesterritoires.fr",
+          "link": "https://www.banquedesterritoires.fr/vannes-produit-des-fruits-et-legumes-bio-pour-ses-creches-56",
+          "class": []
+        }
+      ]
+    },
+    {
+      "ID": "3",
+      "name": "Qu’est-ce qu’un système agro-écologique ?",
+      "data": [
+        {
+          "type": "text",
+          "text": "Notre expert vous explique en quoi consiste un système agro-écologique.",
+          "class": ["bold"]
+        },
+        {
+          "type": "video",
+          "link": "https://www.youtube.com/embed/1kt635phlKI",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "Un système qui fait déjà ses preuves,",
+          "class": ["bold", "bigSkip"]
+        },
+        {
+          "type": "text",
+          "text": "avec pour exemples : ",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "text",
+          "text": "- la Ferme de l’Envol, à Brétigny-sur-Orge (91) :",
+          "class": ["indent","shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "www.coeuressonne.fr",
+          "link": "https://www.coeuressonne.fr/lagglo/grands-projets/sesame-le-bio-souvre-a-vous/ferme-de-lenvol/",
+          "class": ["indent"]
+        },
+        {
+          "type": "text",
+          "text": "- la Ferme Emmaüs Baudonne, à Tarnos (40) :",
+          "class": ["indent","shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "www.fermeemmausbaudonne.fr",
+          "link": "https://www.fermeemmausbaudonne.fr/https://www.fermeemmausbaudonne.fr/",
+          "class": ["indent"]
+        }
+
+      ]
+    },
+    {
+      "ID": "4",
+      "name": "En quoi consiste la relocalisation de la production alimentaire ?",
+      "data": [
+        {
+          "type": "text",
+          "text": "Notre expert  vous explique en quoi c’est un pilier essentiel de la résilience alimentaire d’un territoire.",
+          "class": ["bold"]
+        },
+        {
+          "type": "video",
+          "link": "https://www.youtube.com/embed/o6ygRNXivHw",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "Transformer ses productions, à la ferme ou à côté, cela existe déjà :",
+          "class": ["bold","bigSkip"]
+        },
+        {
+          "type": "text",
+          "text": "En 2013, l’association Partage Ton frigo lance un projet de Conserverie locale, pour lutter contre le gaspillage alimentaire dans la région Grand Est :",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "laconserverielocale.fr",
+          "link": "https://laconserverielocale.fr/notre-histoire/",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "Créée en 2010 à Balazuc (Ardèche), Le Bateleur est une association qui propose de valoriser les productions locales avec des conserves de fruits ou légumes, charcuteries ou plats cuisinés. Pour cela, elle propose un atelier de transformation au service de différents usagers, comme les citoyens lors de journées de transformation collective ouvertes à tous.",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "www.culinaries.fr",
+          "link": "https://www.culinaries.fr/producteurs/association-le-bateleur/",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "Dans le Pays Basque (64), l’Association Herriko Ogia fédère 25 exploitations agricoles, deux minoteries et 60 boulangeries pour proposer un pain entièrement local.",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "herriko.fr",
+          "link": "https://herriko.fr/herriko-ogia/ ",
+          "class": []
+        }
+      ]
+    },
+    {
+      "ID": "5",
+      "name": "Qu’est ce que la sécurité sociale de l’alimentation ?",
+      "data": [
+        {
+          "type": "text",
+          "text": "Notre expert vous explique les enjeux liés à la mise en place d’une sécurité sociale de l’alimentation.",
+          "class": ["bold"]
+        },
+        {
+          "type": "video",
+          "link": "https://www.youtube.com/embed/M6y5x-FNpoY",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "En 2023, on commence tout juste à l'expérimenter dans certaines villes.",
+          "class": ["bold", "midSkip"]
+        },
+        {
+          "type": "text",
+          "text": "À Montpellier (34), un collectif soutenu par la municipalité lance l’expérimentation d’une forme de sécurité sociale de l’alimentation en 2023. Chacun cotise selon ses moyens et reçoit en retour une allocation alimentaire.",
+          "class": ["midSkip"]
+        },
+        {
+          "type": "link",
+          "text": "www.lemonde.fr",
+          "link": "https://www.lemonde.fr/planete/article/2023/02/03/montpellier-experimente-une-caisse-alimentaire-citoyenne_6160408_3244.html",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "Et un collectif de citoyen.nes pour la sécurité sociale alimentaire l’expliquait.",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "securite-sociale-alimentation.org",
+          "link": "https://securite-sociale-alimentation.org/la-ssa/",
+          "class": []
+        }
+      ]
+    },
+    {
+      "ID": "6",
+      "name": "Les jardins partagés, des ilôts nourriciers en ville.",
+      "data": [
+        {
+          "type": "text",
+          "text": "Sans être véritablement suffisants pour nourrir les habitants, les jardins partagés participent cependant à végétaliser la ville, à créer des espaces de sociabilités, à familiariser les habitants au jardinage et au travail de la terre, dans une démarche ludique et éducative.",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "Des exemples essaiment un peu partout déjà, comme ici en Martinique :",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "agriculture.gouv.fr",
+          "link": "https://agriculture.gouv.fr/martinique-le-jardin-partage-de-trenelle-citron-un-projet-educatif-et-solidaire",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "Dans un autre registre, les Incroyables Comestibles propose de planter des cultures comestibles partout où c’est possible en milieu urbain : chacun peut venir participer aux opérations de plantation, chacun peut participer à l’entretien dess plantations, et chacun peut venir récolter.",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "lesincroyablescomestibles.fr",
+          "link": "http://lesincroyablescomestibles.fr/qui-sommes-nous/",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "Plus loin, en Russie, les collectifs de jardins russe, vrai modèle d'agriculture péri-urbaine collective à grande échelle, peuvent être inspirants :",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "resiliencealimentaire.org",
+          "link": "https://resiliencealimentaire.org/les-collectifs-de-jardins-russes-une-organisation-resiliente/",
+          "class": []
+        }
+      ]
+    },
+    {
+      "ID": "7",
+      "name": "Les tiers lieux alimentaires, pour accompagner la transition.",
+      "data": [
+        {
+          "type": "text",
+          "text": "Yuna Chiffoleau, ingénieur agronome et directrice de recherche en sociologie économique à l’INRAE publie un article en mai 2022 pour l’Agence nationale pour la cohésion des territoires :",
+          "class": []
+        },
+        {
+          "type": "link",
+          "text": "Faire de l’alimentation durable une affaire de tous. Pour une meilleure reconnaissance du rôle des tiers-lieux nourriciers.",
+          "link": "https://tierslieux.anct.gouv.fr/fr/faire-de-lalimentation-durable-laffaire-de-tous/#:~:text=Les%20tiers%2Dlieux%20nourriciers%20en,de%20syst%C3%A8mes%20alimentaires%20plus%20durables.",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "Dans ce mouvement des tiers lieux alimentaires, Belle bouffe, une association lyonnaise, propose des ateliers à destination de tous, d’éducation mais aussi de formation à la transition alimentaire. Elle propose aussi un lieu ouvert à tous pour cuisiner, à la manière du Fab’lim.",
+          "class": ["midSkip"]
+        },
+        {
+          "type": "link",
+          "text": "www.bellebouffe.com",
+          "link": "https://www.bellebouffe.com/actions-1 ",
+          "class": []
+        }
+      ]
+    },
+    {
+      "ID": "8",
+      "name": "Les excrétas humains au secours des sols",
+      "data": [
+        {
+          "type": "text",
+          "text": "Notre expert vous explique les enjeux liès à la réutilisation des excrétas humains :",
+          "class": ["bold"]
+        },
+        {
+          "type": "video",
+          "link": "https://www.youtube.com/embed/LsmBQJak4zo",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "Boucler le cycle des nutriments, c’est recycler les excrétas humains…et ce, depuis longtemps !",
+          "class": ["bold","bigSkip"]
+        },
+        {
+          "type": "text",
+          "text": "La Fumainerie est une association bordelaise née en 2019 qui “accompagne les territoires dans la transition de leur système alimentation-excrétion par l'expérimentation et le développement de filières de gestion circulaire et de proximité de nos excréta.” Depuis 2020, elle lance avec plusieurs partenaires de la ville son premier réseau de recyclage des excrétas humains.",
+          "class": ["midSkip"]
+        },
+        {
+          "type": "link",
+          "text": "www.lafumainerie.com",
+          "link": "https://www.lafumainerie.com/",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "Fabien Esculier, chercheur et ingénieur à l’École des Ponts présente sa thèse :",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "Le système alimentation/excrétion des territoires urbains : régimes et transitions socio-écologiques.",
+          "link": "https://hal.science/tel-01787854/document",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "Des chercheurs de l’université de l’Environnement de Stockholm (SEI) ont publié :",
+          "class": ["shortSkip"]
+        },
+        {
+          "type": "link",
+          "text": "Conseils Pratiques pour une Utilisation de l’Urine en Production Agricole.",
+          "link": "https://www.leesu.fr/ocapi/wp-content/uploads/2019/05/urine-humaine-et-v%C3%A9g%C3%A9taux.pdf",
+          "class": []
+        },
+        {
+          "type": "text",
+          "text": "C’est sur ce texte que se base le calcul de la quantité d’urine à utiliser pour fertiliser vos cultures de légumes.",
+          "class": ["shortSkip"]
+        }
+      ]
+    }
+  ]
+}

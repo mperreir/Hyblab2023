@@ -1,0 +1,114 @@
+#container {
+    background-color: white;
+}
+
+h1 {
+    background-color: #79B77B;
+}
+
+#fond {
+    z-index: -1;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+#fond img {
+    width: 100%;
+}
+
+/*
+#personnage{
+    position: absolute;
+    width: 25%;
+    top: 20%;
+    left: 20%;
+}*/
+
+#dialogue {
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    position: absolute;
+    height: 53%;
+    width: 100%;
+    top: 45%;
+    background-color: white;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+
+    border-top: 1px solid #000000;
+}
+
+#messages {
+    margin-bottom: 5rem;
+}
+
+#head {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.name {
+    padding: 0.5em 0.75em;
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
+    margin: 2%;
+    border-radius: 1.5rem;
+
+    border: 1px solid #000000;
+    background-color: White;
+}
+
+#messages>* {
+    display: flex;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.message {
+    max-width: 30em;
+
+    padding: 0.5em 0.75em;
+    font-size: 0.2em;
+    bottom: 1rem;
+    width: 75%;
+    margin-bottom: 0.5rem;
+
+    border: 1px solid #000000;
+    background-color: White;
+    color: black;
+}
+
+.choice {
+    max-width: 30em;
+    padding: 0.5em 0.75em;
+    font-size: 0.2em;
+    bottom: 1rem;
+    color: black;
+    width: 75%;
+    margin-bottom: 0.5rem;
+    border: 2px solid #79B77B;
+    float: right;
+    margin-right: 8%;
+}
+
+.choice:hover,
+.choice:focus {
+    background-color: #79B77B;
+}
+
+
+.left {
+    float: left;
+    margin-left: 8%;
+}
+
+.right {
+    float: right;
+    margin-right: 8%;
+}
