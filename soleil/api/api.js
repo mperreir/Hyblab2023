@@ -6,6 +6,7 @@ const app = express();
 const wget = require('node-wget');
 const CsvReadableStream = require('csv-reader');
 const fs = require('fs');
+const https = require('https');
 
 const data = require('./data/densite.json');
 const { setTimeout } = require('timers/promises');
@@ -65,76 +66,54 @@ app.get('/searchAddresses/:address', async function (req, res) {
 app.get('/density/:town', async function (req, res) {
     let density = data.find(e => e["Libellé commune"] === req.params.town)["Degré de Densité"];
 
-    res.json({'town': req.params.town, 'density': density});
+    res.json({ 'town': req.params.town, 'density': density });
 });
 
 app.get('/energy/:latitude/:longitude/:orientation/:inclination', async function (req, res) {
-    res.json({"total energy": 340016.31672820327});
+    const solarData = await getRadiationData(req.params.latitude, req.params.longitude);
+    
+    const totalEnergy = readRadiationData(solarData, req.params.orientation, req.params.inclination, req.params.latitude);
 
-    /*
-    if (!fs.existsSync(`./soleil/api/data/temp/radiation-${req.params.latitude}-${req.params.longitude}.csv`)) {
-        getRadiationData(req.params.latitude, req.params.longitude);
-        setTimeout(() => {
-            readRadiationData(req.params.orientation, req.params.inclination, req.params.latitude, req.params.longitude, (err, totalEnergy) => {
-                if (err) {
-                    console.error(err);
-                } else {
-                    console.log("Done");
-                    res.json({"total energy": totalEnergy});
-                }
-            });
-        }, 0);
-    } else {
-        readRadiationData(req.params.orientation, req.params.inclination, req.params.latitude, req.params.longitude, (err, totalEnergy) => {
-            if (err) {
-                console.error(err);
-            } else {
-                console.log("Done");
-                res.json({"total energy": totalEnergy});
-            }
-        });
-    }*/
+    console.log(totalEnergy);
+
+    res.json({ "total energy": totalEnergy });
 });
 
 function getRadiationData(latitude, longitude) {
     const username = "supy.game%2540gmail.com";
     const url = `https://www.soda-is.com/service/wps?Service=WPS&Request=Execute&Identifier=get_cams_radiation&version=1.0.0&DataInputs=latitude=${latitude};longitude=${longitude};altitude=-999;date_begin=2022-01-01;date_end=2022-12-31;time_ref=TST;summarization=PT15M;username=${username}&RawDataOutput=irradiation`;
 
-    wget({
-        url:  url,
-        dest: `./soleil/api/data/temp/radiation-${latitude}-${longitude}.csv`,
-        timeout: 12000
-    },
-    function (error, response, body) {
-        if (error) {
-            console.log('--- error:');
-            console.log(error);            // error encountered
-        } else {
-            console.log('--- headers:');
-            console.log(response.headers); // response headers
-            console.log('--- body:');
-            console.log(body);             // content of package
-        }
+    return new Promise((res, rej) => {
+        https.get(url, (resp) => {
+        let data = '';
+
+        resp.on('data', (chunk) => {
+            data += chunk;
+        });
+
+        resp.on('end', () => {
+            res(data);
+        });
+
+        }).on("error", (err) => {
+            rej(err.message);
+        });
     });
 }
 
-function readRadiationData(orientation, inclinationAngle, latitude, longitude, callback) {
-    let inputStream = fs.createReadStream(`./soleil/api/data/temp/radiation-${latitude}-${longitude}.csv`, 'utf-8');
+function readRadiationData(solarData, orientation, inclinationAngle, latitude) {
     let totalEnergy = 0;
 
-    inputStream
-        .pipe(new CsvReadableStream({ delimiter: ';', parseNumbers: true }))
-        .on('data', function (row) {
-            if (!(row[0][0] == '#')) {
-                const date = new Date(row[0].split('/')[0]);
-                const day = Math.floor((date - new Date(date.getFullYear(), 0, 1)) / 1000 / 60 / 60 / 24) + 1;
-                const time = Math.floor((date - new Date(date.getFullYear(), date.getMonth(), date.getDate())) / 1000 / 60 / 15) + 1;
-                totalEnergy += computeEnergy(time, day, row[6], row[8], row[9], orientation, inclinationAngle, latitude)
-            }
-        })
-        .on('end', function () {
-            callback(null, totalEnergy);
-        });
+    for (const line of solarData.split("\n").map(e => e.trim())) {
+        if (!line.startsWith('#') && line) {
+            const row = line.split(';');
+            const date = new Date(row[0].split('/')[0]);
+            const day = Math.floor((date - new Date(date.getFullYear(), 0, 1)) / 1000 / 60 / 60 / 24) + 1;
+            const time = Math.floor((date - new Date(date.getFullYear(), date.getMonth(), date.getDate())) / 1000 / 60 / 15) + 1;
+            totalEnergy += computeEnergy(time, day, parseFloat(row[6]), parseFloat(row[8]), parseFloat(row[9]), orientation, inclinationAngle, latitude);
+        }
+    }
+    return totalEnergy
 }
 
 /**
