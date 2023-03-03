@@ -16,38 +16,23 @@ app.use(express.json());
 // Retrieves multiple matches for the address and sends it
 app.get('/searchAddresses/:address', async function (req, res) {
     const apiCall = await NominatimJS.search({
-        q: req.params.address
+        q: req.params.address,
+        addressdetails: 1
     });
 
     console.log(apiCall);
 
     const results = [];
 
-    apiCall.slice(0, 4).forEach(apiElement => {
+    apiCall.forEach(apiElement => {
+        if (apiElement.address.town == undefined && apiElement.address.city == undefined && apiElement.address.village == undefined) return;
+        if (apiElement.address.country != "France") return;
+
         let address = {
-            'street_number': 0,
-            'street': "",
-            'zip_code': 0,
-            'town': ""
-        };
-
-        const addressInfo = apiElement.display_name.split(', ');
-
-        // Securities to avoid problems later on
-        if (addressInfo.length < 5) return;
-        if (addressInfo.pop() !== "France") return;
-
-        // We need to check if the returned address starts with a number, or is just the name of the street
-        address = addressInfo[0].match(/^\d/) ? {
-            'street_number': addressInfo[0],
-            'street': addressInfo[1],
-            'zip_code': addressInfo.pop(),
-            'town': addressInfo[3]
-        } : {
-            'street_number': 0,
-            'street': addressInfo[0],
-            'zip_code': addressInfo.pop(),
-            'town': addressInfo[2]
+            'street_number': apiElement.address.house_number == undefined ? "" : apiElement.address.house_number,
+            'street': apiElement.address.road == undefined ? "" : apiElement.address.road,
+            'zip_code': apiElement.address.postcode == undefined ? "" : apiElement.address.postcode,
+            'town': apiElement.address.town == undefined ? (apiElement.address.village == undefined ? apiElement.address.city : apiElement.address.village) : apiElement.address.town
         };
 
         results.push({
@@ -57,9 +42,10 @@ app.get('/searchAddresses/:address', async function (req, res) {
             'address_text': address.street_number + " " + address.street + ", " + address.zip_code + " " + address.town.toUpperCase()
         });
     });
+
     console.log(results);
 
-    res.json(results);
+    res.json(results.slice(0, 4));
 });
 
 // Retrieves the density of the town the person lives in
