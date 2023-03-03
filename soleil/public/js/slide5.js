@@ -1,39 +1,52 @@
 "use strict"; // ORIENTATION
 var executed5 = false;
 
-const initSlide5 = function(){
-    if(!executed5){
+const initSlide5 = function () {
+    if (!executed5) {
         $("#tropdechoix").attr("src", `img/ensoleillement/1-${quiz["pente"]}-commune.jpg`);
         executed5 = true;
-        $("#orientation .open-button").click(function(){
+        $("#orientation .open-button").click(function () {
             swiper.slideTo(12, 0);
 
         })
-        $("#orientation header button").click(function(){
-            
+        $("#orientation header button").click(function () {
+
         });
-        $("#orientation footer button").click(function(){
+        $("#orientation footer button").click(function () {
+            quiz["solarData"] = getSolarData(quiz["adresse"]["latitude"], quiz["adresse"]["longitude"], , quiz["pente"]); 
+            //TODO pente n'est pas exrimé en degré wtf c'est normal ?
+            //TODO l'orientation est selectionne mais on la sauvegarde pas donc je peux pas l'integrer
+
             swiper.slideNext();
         })
-        $("#orientation .boussole").click(function(){
+        $("#orientation .boussole").click(function () {
             changeEnsoleillement();
         })
-        $("#orientation #tropdechoix").click(function(){
+        $("#orientation #tropdechoix").click(function () {
             changeEnsoleillement();
         })
     }
-    
+
 }
 
- function changeEnsoleillement(){
-    let alt = (parseInt($(".boussole img").attr("alt")) + 1) %8;
+function changeEnsoleillement() {
+    let alt = (parseInt($(".boussole img").attr("alt")) + 1) % 8;
     // changement de la boussole
     $(".boussole img").attr("alt", alt);
     $(".boussole img").attr("src", `img/boussole/${alt}.jpg`);
     // changement de l'image au dessus
     $("#tropdechoix").attr("src", `img/ensoleillement/${alt + 1}-${quiz["pente"]}-commune.jpg`);
-    
- }
+
+}
+
+
+async function getSolarData(latitude, longitude, orientation, inclination) {
+    // Security
+    if (s == undefined) return;
+
+    let response = await fetch(`api/energy/${latitude}/${longitude}/${orientation}/${inclination}` + s);
+    return await response.json();
+}
 /*
 let ensoleillement = $(???).val();   // CAMPAGNE - TOIT PLAT
 switch (ensoleillement) {
