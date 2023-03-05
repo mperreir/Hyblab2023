@@ -13,7 +13,7 @@ const initSlide5 = function () {
 
         });
         $("#orientation footer button").click(function () {
-            quiz["solarData"] = getSolarData(quiz["adresse"]["latitude"], quiz["adresse"]["longitude"], , quiz["pente"]); 
+            quiz["solarData"] = getSolarData(quiz["adresse"]["latitude"], quiz["adresse"]["longitude"], 0, quiz["pente"]); 
             //TODO pente n'est pas exrimé en degré wtf c'est normal ?
             //TODO l'orientation est selectionne mais on la sauvegarde pas donc je peux pas l'integrer
 
