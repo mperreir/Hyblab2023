@@ -132,7 +132,7 @@ body{
 }
 
 #SoliExTex2 {
-    padding-left: 20px;
+    padding-right: 7%;
     text-align: justify;
     width: 70%;
     position: relative;
@@ -146,12 +146,12 @@ body{
 
 #SoliExTex {
     text-align: justify;
-    width: 70%;
     bottom: 20%;
     position: relative;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
+    padding-right: 7%;
 }
 
 /* ---------- Animation de Soli-mongolfière dans la jauge ------------ */
@@ -249,8 +249,8 @@ header{
 .commentaire-soli {
     max-width: 90%;
     left: 5%;
-    right: 7%;
-    
+    right: 5%;
+    margin: auto;
     text-align: justify;
     
 }
@@ -501,12 +501,6 @@ header{
 .choix-logement2 img{
     display: inline-block;
     margin-right: 5%;
-}
-
-
-
-.choix-logement2{
-    margin-top: 5%;
 }
 
 .img-pente{
