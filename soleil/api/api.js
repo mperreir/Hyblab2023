@@ -1,15 +1,13 @@
 'use strict';
 
+require('global-agent/bootstrap');
+
 const express = require('express');
 const { NominatimJS } = require('nominatim-js');
 const app = express();
-const wget = require('node-wget');
-const CsvReadableStream = require('csv-reader');
-const fs = require('fs');
 const https = require('https');
 
 const data = require('./data/densite.json');
-const { setTimeout } = require('timers/promises');
 
 app.use(express.json());
 
