@@ -2,7 +2,7 @@ async function createAnimalCategory(commune, animalCategory) {
     /*function to create a dictionary of the wanted animals*/
     async function getAllAnimals() {
         return await
-            fetch(`https://hyblab.polytech.univ-nantes.fr/herisson/api/commune/${commune}`)
+            fetch(`/herisson/api/commune/${commune}`)
                 .then(response => response.json())
                 .then(data => {
                         return data.filteredData[commune][animalCategory];
@@ -66,7 +66,7 @@ async function createAnimalCategory(commune, animalCategory) {
     async function getInfoPage(animal, commune) {
         async function getAnimalData() {
             return await
-                fetch(`https://hyblab.polytech.univ-nantes.fr/herisson/api/animal/${animal}`)
+                fetch(`/herisson/api/animal/${animal}`)
                     .then(response => response.json())
                     .then(data => {
                             return data.filteredData[animal];

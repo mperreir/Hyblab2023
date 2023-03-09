@@ -13,7 +13,7 @@ document.querySelector("#rechercheCommune").addEventListener("keyup", async func
     }
 
     if (dataCommune === undefined) {
-        dataCommune = await fetch(`https://hyblab.polytech.univ-nantes.fr/herisson/api/commune/autocomplete/${searchTermCom}`)
+        dataCommune = await fetch(`/herisson/api/commune/autocomplete/${searchTermCom}`)
         dataCommune = await dataCommune.json();
     }
 

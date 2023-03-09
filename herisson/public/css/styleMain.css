@@ -62,6 +62,7 @@ body
 #ligneDialogue
 {
     width: 90%;
+    max-width: 400px;
     /*height: 2vh;*/
 }
 
