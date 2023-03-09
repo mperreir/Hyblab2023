@@ -2,7 +2,7 @@ async function createAnimalCategory(commune, animalCategory) {
     /*function to create a dictionary of the wanted animals*/
     async function getAllAnimals() {
         return await
-            fetch(`/herisson/api/commune/${commune}`)
+            fetch(`api/commune/${commune}`)
                 .then(response => response.json())
                 .then(data => {
                         return data.filteredData[commune][animalCategory];
@@ -66,7 +66,7 @@ async function createAnimalCategory(commune, animalCategory) {
     async function getInfoPage(animal, commune) {
         async function getAnimalData() {
             return await
-                fetch(`/herisson/api/animal/${animal}`)
+                fetch(`api/animal/${animal}`)
                     .then(response => response.json())
                     .then(data => {
                             return data.filteredData[animal];
