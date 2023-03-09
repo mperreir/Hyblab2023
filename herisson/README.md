@@ -33,8 +33,7 @@ Aller sur http://127.0.0.1:8080/herisson/
 
 ### SSH
 Aller sur : https://hyblab.polytech.univ-nantes.fr/ssh/ <br>
-login : herisson <br>
-mdp : hyblab4herisson
+
 
 ### Lancement
 
