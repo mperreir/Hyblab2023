@@ -2,7 +2,7 @@ async function animalInfo(animal) {
     /*function to get the datas of a given animal */
     async function getData(taxon) {
         return await
-            fetch(`api/animal/${taxon}`)
+            fetch(`/herisson/api/animal/${taxon}`)
                 .then(response => response.json())
                 .then(data => {
                         return data.filteredData[taxon];

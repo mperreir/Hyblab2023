@@ -9,7 +9,7 @@ const createMap = async function (taxon) {
 
     async function getAnimalData(taxon) {
         return await
-            fetch(`api/animal/${taxon}`)
+            fetch(`/herisson/api/animal/${taxon}`)
                 .then(response => response.json())
                 .then(data => {
                         return data.filteredData[taxon];

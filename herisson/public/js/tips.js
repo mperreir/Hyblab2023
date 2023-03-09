@@ -1,7 +1,7 @@
 async function createPageConseil(name) {
     async function getDataTips(nom) {
         return await
-            fetch(`api/tips/${nom}`)
+            fetch(`/herisson/api/tips/${nom}`)
                 .then(response => response.json())
                 .then(data => {
                         return data.filteredData;

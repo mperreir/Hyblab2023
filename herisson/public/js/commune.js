@@ -3,7 +3,7 @@ async function createCommunePage(commune) {
 
     async function getDataCommune(nom) {
         return await
-            fetch(`api/commune/${nom}`)
+            fetch(`/herisson/api/commune/${nom}`)
                 .then(response => response.json())
                 .then(data => {
                         return data.filteredData;
