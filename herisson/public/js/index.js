@@ -71,7 +71,7 @@ document.querySelector("#rechercheAnimal").addEventListener("keyup", async funct
     }
 
     if (dataAnimaux === undefined) {
-        dataAnimaux = await fetch(`https://hyblab.polytech.univ-nantes.fr/herisson/api/animal/autocomplete/${searchTermAni}`)
+        dataAnimaux = await fetch(`/herisson/api/animal/autocomplete/${searchTermAni}`)
         dataAnimaux = await dataAnimaux.json();
     }
 
