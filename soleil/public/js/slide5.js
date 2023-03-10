@@ -14,8 +14,49 @@ const initSlide5 = function () {
         });
         $("#orientation footer button").click(function () {
             quiz["orientation"] = $(".boussole img").attr("alt");
-            quiz["solarData"] = getSolarData(quiz["adresse"]["latitude"], quiz["adresse"]["longitude"], quiz["orientation"], quiz["pente"]); 
-            //TODO pente n'est pas exrimé en degré wtf c'est normal ?
+
+            let orientation = "N";
+            switch (quiz["orientation"]) {
+                case 1:
+                    orientation = "NE";
+                    break;
+                case 2:
+                    orientation = "E";
+                    break;
+                case 3:
+                    orientation = "SE";
+                    break;
+                case 4:
+                    orientation = "S";
+                    break;
+                case 5:
+                    orientation = "SW";
+                    break;
+                case 5:
+                    orientation = "W";
+                    break;
+                case 5:
+                    orientation = "NW";
+                    break;
+                default:
+                    orientation = "N";
+                    break;
+            }
+
+            let pente = Math.PI/4;
+            switch (quiz["orientation"]) {
+                case 1:
+                    pente = 0;
+                    break;
+                case 2:
+                    pente = Math.PI/6;
+                    break;
+                default:
+                    pente = Math.PI/4;
+                    break;
+            }
+
+            quiz["solarData"] = getSolarData(quiz["adresse"]["latitude"], quiz["adresse"]["longitude"], orientation, pente); 
             swiper.slideNext();
         })
         $("#orientation .boussole").click(function () {

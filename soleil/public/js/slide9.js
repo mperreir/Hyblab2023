@@ -26,10 +26,12 @@ const initSlide9 = async function(){
 function getMission(){
     let missions = [];
 
+    const threshold = 200000;
+
     if (true) {
         if(quiz["propriétaire"] == "locataire"){
             missions.push({"title": "Présentez un projet à votre propriétaire", "index":19 })
-        } else {
+        } else if (quiz["solarData"] >= threshold) {
             missions.push({"title": "Installez des panneaux sur mon toit", "index":14 })
         }
     }
