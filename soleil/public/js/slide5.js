@@ -13,11 +13,9 @@ const initSlide5 = function () {
 
         });
         $("#orientation footer button").click(function () {
-            quiz["solarData"] = getSolarData(quiz["adresse"]["latitude"], quiz["adresse"]["longitude"], 0, quiz["pente"]); 
             quiz["orientation"] = $(".boussole img").attr("alt");
+            quiz["solarData"] = getSolarData(quiz["adresse"]["latitude"], quiz["adresse"]["longitude"], quiz["orientation"], quiz["pente"]); 
             //TODO pente n'est pas exrimé en degré wtf c'est normal ?
-            //TODO l'orientation est selectionne mais on la sauvegarde pas donc je peux pas l'integrer
-
             swiper.slideNext();
         })
         $("#orientation .boussole").click(function () {
@@ -45,7 +43,7 @@ async function getSolarData(latitude, longitude, orientation, inclination) {
     // Security
     if (s == undefined) return;
 
-    let response = await fetch(`api/energy/${latitude}/${longitude}/${orientation}/${inclination}` + s);
+    let response = await fetch(`api/energy/${latitude}/${longitude}/${orientation}/${inclination}`);
     return await response.json();
 }
 /*
