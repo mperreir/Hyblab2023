@@ -60,19 +60,15 @@ async function initSlide2() {
       $("div.result option").click(async function () {
         console.log("option");
         quiz["adresse"] = pa.find(elt => elt["address_text"] == $(this).html());
-        let response = await fetch('api/density/' + quiz["adresse"]["full_address"]["town"]).then(result=>{
-          const density =  result.json();
-          console.log(density);
-          quiz["density"] = density["density"];
+        
+        let response = await fetch('api/density/' + quiz["adresse"]["full_address"]["town"])
+        const density = await response.json();
+        console.log(density);
+        quiz["density"] = density["density"];
         // ajouter l'image correspondante
-          $("#adresse video").attr("src", `animation/geo-0${quiz["density"].mp4}`);
-          $('#adresse input').val($(this).html());
-          $("div.result").hide();
-        }).catch(error =>{
-          quiz["density"] = erreur;
-        });
-        
-        
+        $("#adresse video").attr("src", `animation/geo-0${quiz["density"]}.mp4`);
+        $('#adresse input').val($(this).html());
+        $("div.result").hide();
       })
     })
 
@@ -90,17 +86,14 @@ async function initSlide2() {
         console.log(quiz["adresse"]);
         quiz["adresse"] = pa.find(elt => elt["address_text"] == $(this).html());
 
-        let response = await fetch('api/density/' + quiz["adresse"]["full_address"]["town"]).then(result=>{
-          const density =  result.json();
-          console.log(density);
-          quiz["density"] = density["density"];
+        let response = await fetch('api/density/' + quiz["adresse"]["full_address"]["town"])
+        const density = await response.json();
+        console.log(density);
+        quiz["density"] = density["density"];
         // ajouter l'image correspondante
-          $("#adresse video").attr("src", `animation/geo-0${quiz["density"].mp4}`);
-          $('#adresse input').val($(this).html());
-          $("div.result").hide();
-        }).catch(error =>{
-          quiz["density"] = erreur;
-        });
+        $("#adresse video").attr("src", `animation/geo-0${quiz["density"]}.mp4`);
+        $('#adresse input').val($(this).html());
+        $("div.result").hide();
       })
 
     })
