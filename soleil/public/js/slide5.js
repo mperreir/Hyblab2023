@@ -40,9 +40,6 @@ function changeEnsoleillement() {
 
 
 async function getSolarData(latitude, longitude, orientation, inclination) {
-    // Security
-    if (s == undefined) return;
-
     let response = await fetch(`api/energy/${latitude}/${longitude}/${orientation}/${inclination}`);
     return await response.json();
 }
