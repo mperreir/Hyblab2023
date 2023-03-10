@@ -59,7 +59,7 @@
       <section id="accueil" class="swiper-slide">
         <header>
         </header>
-        <div class="video" width="100%" margin="auto">
+        <div class="video2" width="100%" margin="auto">
           
           <video src="animation/soli-01.mp4" muted cache="false">
           </video>
@@ -108,7 +108,7 @@
           <p class="titre">Vous habitez dans une/un</p>
         </header>
         <div class="choix-logement">
-          
+          <p></p>
           <img src="img/Choix habitation/Non selection/maison-non-selection.svg" class="non-selection" title="maison">
           <img src="img/Choix habitation/Non selection/immeuble-non-selection.svg" class="non-selection" title="immeuble">
         </div>
@@ -142,9 +142,6 @@
           <button class="retour">
             <img class="img-fleche" src="img/FlecheRetour.png">
           </button>
-          <button class="retour">
-            <img class="img-fleche" src="img/FlecheRetour.png">
-          </button>
           <button class="open-button"><img src="img/Info2.png"></button>
           <!--<div class="open-btn">   <button id="info">I</button>
             <button class="open-button" onclick="openForm()"><strong>Info</strong></button>
@@ -154,30 +151,26 @@
             Comment est la pente de votre toit ?
           </p>
         </header>
-        <section>
-          <div >
-            <section id="image3">
+            <div id="image3">
               <img class="img-pente" src="img/PenteHaut.png">
               <p>Standard</p>
-            </section>
               <form>
-                  <input type="radio" id="contactChoice"
-                         name="pente" value=1>
-                  <input type="radio" id="contactChoice"
-                         name="pente" value=2>
-                  <input type="radio" id="contactChoice"
-                         name="pente" value=3>
-              </form>
+                <input type="radio" id="contactChoice"
+                       name="pente" value=1>
+                <input type="radio" id="contactChoice"
+                       name="pente" value=2>
+                <input type="radio" id="contactChoice"
+                       name="pente" value=3>
+            </form>
+            </div>
+              
           <div class="commentaire-soli">
             <img src="img/soliMontgolfiere.svg">
             <p id="SoliExTex">“ Mais pourquoi parler de l’inclinaison du toit ? C’est essentiel pour la performance de votre module photovoltaïque. ”</p>
           </div>
-          </div>
-          
           <div id="jauge">
             <img id="Soli2" src="img/montgolfiereAvancee.png"/>
           </div>
-        </section>
         <footer>
           <button>Valider</button>
         </footer>
@@ -213,7 +206,6 @@
       </section>  <!-- OMBRE -->
       <section id="ombre" class="swiper-slide">
         <header>
-          <button class="retour">←</button>
           <button class="open-button"><img src="img/Info2.png"></button>
           <button class="retour">
             <img class="img-fleche" src="img/FlecheRetour.png">
@@ -223,19 +215,23 @@ Y a-t-il de l'ombre sur votre toit ?
           </p>
         </header>
         <section>
-          <div id="image3">
+          <div id="image5">
             <img id="image" class="img-ombre" src="img/Ombre/toit-flat-ombre-01.jpg"> <!-- A changer suivant le type de toit-->
             <p></p>
+            <p style="color:grey"></p>
+            <form >
+              <input type="radio" id="contactChoice1"
+                     name="ombre" value="1">
+              <input type="radio" id="contactChoice2"
+                     name="ombre" value="2">
+              <input type="radio" id="contactChoice3"
+                     name="ombre" value="3">
+          </form>
           </div>
-              <form >
-                  <input type="radio" id="contactChoice1"
-                         name="ombre" value="1">
-                  <input type="radio" id="contactChoice2"
-                         name="ombre" value="2">
-                  <input type="radio" id="contactChoice3"
-                         name="ombre" value="3">
-              </form>
-              <div class="commentaire-soli">
+          <div id="image5">
+              
+          </div>
+              <div class="commentaire-soli3">
                 <img src="img/soliMontgolfiere.svg">
                 <p id="SoliExTex">“ Encore un petit effort, vous allez bientôt découvrir votre potentiel solaire ” </p>
                 </div>
@@ -256,7 +252,7 @@ Y a-t-il de l'ombre sur votre toit ?
         <div id = "ligne">
           <img id="img-ques" src="img/SoliQuestion.png">
           <section id="ligne">
-            <form >
+            <form id="scroll">
               <section id="bulle-question">
                 <img id="facul1" alt="0" src="img/Choix optionnel/non selection/choix 1.jpg">
               </section>
@@ -276,7 +272,7 @@ Y a-t-il de l'ombre sur votre toit ?
           <img id="Soli5" src="img/montgolfiereAvancee.png"/>
         </div>
         <footer>
-          <button>Valider</button>
+          <button class="valid">Valider</button>
           <button class="passer">Passer</button>
         </footer>
       </section>
@@ -301,10 +297,13 @@ Y a-t-il de l'ombre sur votre toit ?
 
       <section id="mission" class="swiper-slide">
         <header>
-          <img src="img/SoliQuete.png">
+          <button class="home">
+            <img class="img-accueil" src="img/home.png">
+          </button>
         </header>
+        <img id="img-ques" src="img/SoliQuete.png">
         <div id="lettre_mission"></div>
-        <footer>
+        <footer id="footerScroll">
           <button onclick={swiper.slideTo(21,0)}>crédits</button>
         </footer>
       </section>
@@ -321,7 +320,7 @@ Y a-t-il de l'ombre sur votre toit ?
         <header>
         </header>
         <section id="infoTxt">
-          <img id="bulleInfo" onclick={swiper.slideTo(3,0);swiper.slideNext()} src="img/info/info-ouvert2.png">
+          <img id="bulleInfo" onclick={swiper.slideTo(4,0)} src="img/info/info-ouvert2.png">
           <p id="Saut">
             Si votre toit est incliné, vos panneaux le seront aussi. <br> Idéalement, ils doivent être
             perpendiculaires au rayon du soleil. <br> Un petit peu de physique pour mieux comprendre
@@ -339,7 +338,7 @@ Y a-t-il de l'ombre sur votre toit ?
         <header>
         </header>
         <section id="infoTxt">
-          <img id="bulleInfo" onclick={swiper.slideTo(4,0);swiper.slideNext()} src="img/info/info-ouvert2.png">
+          <img id="bulleInfo" onclick={swiper.slideTo(5,0)} src="img/info/info-ouvert2.png">
           <p id="Saut">
           </p>
           <p id="Saut">
@@ -356,7 +355,7 @@ Y a-t-il de l'ombre sur votre toit ?
         <header>
         </header>
         <section id="infoTxt">
-          <img id="bulleInfo" onclick={swiper.slideTo(5,0);swiper.slideNext()} src="img/info/info-ouvert2.png">
+          <img id="bulleInfo" onclick={swiper.slideTo(6,0)} src="img/info/info-ouvert2.png">
           <p id="Saut"> Un panneau a un rendement moyen de 20% et une production de 1000 watts crête par m²… <br> si l’ensoleillement est optimal !
             Or, les entreprises n’en tiennent pas toujours compte pour vendre leur devis.
 
@@ -507,10 +506,10 @@ Pour cela que la force… et la loi soient avec vous : depuis celle n°2005-781 
 
       <section id="credits" class="swiper-slide">
         <header>
-          <button class="retour" onclick={swiper.slideTo(9,0);swiper.slideNext()}>
+          <button class="retour" onclick={swiper.slideTo(10,0)}>
             <img class="img-fleche" src="img/FlecheRetour.png">
           </button>
-          <p class="titre">Un très grand merci d'avoir participé !</p>
+          <h2 class="titre">Un très grand merci d'avoir participé !</p>
         </header>
         <div id="main-remerciments">
           <p id="remerciements">

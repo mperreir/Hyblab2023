@@ -47,100 +47,56 @@ async function initSlide2() {
         changeText();
       }
     });
-    $("#adresse #search").click(async function(){
-      let pa = [
-        {
-          "latitude": "47.0000315",
-          "longitude": "2.4493021",
-          "full_address": {
-            "street_number": "15",
-            "street": "Rue du Bois au Moine",
-            "zip_code": "18340",
-            "town": "Plaimpied-Givaudins"
-          },
-          "address_text": "15 Rue du Bois au Moine, 18340 PLAIMPIED-GIVAUDINS"
-        }
-      ];
-        console.log(pa);
+    $("#adresse #search").click(async function () {
+      let pa = await getPossibleAddresses($("#adresse input").val());
+      console.log(pa);
 
-        $("div.result").html("");
-        pa.forEach(elt => {
-          $("div.result").append(`<option>${elt['address_text']}</option>`)
-        });
+      $("div.result").html("");
+      pa.forEach(elt => {
+        $("div.result").append(`<option>${elt['address_text']}</option>`)
+      });
 
-        $("div.result").show();
-        $("div.result option").click(async function () {
-          console.log(quiz["adresse"]);
-          quiz["adresse"] = {
-            "latitude": "47.0000315",
-            "longitude": "2.4493021",
-            "full_address": {
-              "street_number": "15",
-              "street": "Rue du Bois au Moine",
-              "zip_code": "18340",
-              "town": "Plaimpied-Givaudins"
-            },
-            "address_text": "15 Rue du Bois au Moine, 18340 PLAIMPIED-GIVAUDINS"
-          }
-          quiz["adresse"] = pa.find(elt => elt["adress_text"] == $(this).html());
-          console.log(quiz["adresse"]);
-          let response = await fetch('api/density/' + quiz["adresse"]["full_adress"]["town"]);
-          const density = await response.json();
-          quiz["density"] = density["density"];
-          // ajouter l'image correspondante
-          $("#adresse video").attr("src", `animation/geo-0${quiz["density"].mp4}`);
-          console.log($(this).html());
-          $('#adresse input').val($(this).html());
-          $("div.result").hide();
-        })
+      $("div.result").show();
+      $("div.result option").click(async function () {
+        console.log("option");
+        quiz["adresse"] = pa.find(elt => elt["address_text"] == $(this).html());
+        
+        let response = await fetch('api/density/' + quiz["adresse"]["full_address"]["town"])
+        const density = await response.json();
+        console.log(density);
+        quiz["density"] = density["density"];
+        // ajouter l'image correspondante
+        $("#adresse video").attr("src", `animation/geo-0${quiz["density"]}.mp4`);
+        $('#adresse input').val($(this).html());
+        $("div.result").hide();
+      })
     })
 
     $("#adresse input").change(async function () {
       let pa = await getPossibleAddresses($("#adresse input").val());
-        console.log(pa);
+      console.log(pa);
 
-        $("div.result").html("");
-        pa.forEach(elt => {
-          $("div.result").append(`<option>${elt['address_text']}</option>`)
-        });
+      $("div.result").html("");
+      pa.forEach(elt => {
+        $("div.result").append(`<option>${elt['address_text']}</option>`)
+      });
 
-        $("div.result").show();
-        $("div.result option").click(async function () {
-          console.log(quiz["adresse"]);
-          quiz["adresse"] = pa.find(elt => elt["adress_text"] == $(this).html());
-          let response = await fetch('api/density/' + quiz["adresse"]["full_adress"]["town"]);
-          const density = await response.json();
-          quiz["density"] = density["density"];
-          // ajouter l'image correspondante
-          $("#adresse video").attr("src", `animation/geo-0${quiz["density"].mp4}`);
-          console.log($(this).html());
-          $('#adresse input').val($(this).html());
-          $("div.result").hide();
-        })
-        
+      $("div.result").show();
+      $("div.result option").click(async function () {
+        console.log(quiz["adresse"]);
+        quiz["adresse"] = pa.find(elt => elt["address_text"] == $(this).html());
+
+        let response = await fetch('api/density/' + quiz["adresse"]["full_address"]["town"])
+        const density = await response.json();
+        console.log(density);
+        quiz["density"] = density["density"];
+        // ajouter l'image correspondante
+        $("#adresse video").attr("src", `animation/geo-0${quiz["density"]}.mp4`);
+        $('#adresse input').val($(this).html());
+        $("div.result").hide();
+      })
+
     })
-    $('#adresse input').on('input', async function () { // au changement de caractere
-        let pa = await getPossibleAddresses($("#adresse input").val());
-        console.log(pa);
-
-        $("div.result").html("");
-        pa.forEach(elt => {
-          $("div.result").append(`<option>${elt['address_text']}</option>`)
-        });
-
-        $("div.result").show();
-        $("div.result option").click(async function () {
-          console.log("option");
-          quiz["adresse"] = pa.find(elt => elt["adress_text"] == $(this).html());
-          let response = await fetch('api/density/' + quiz["adresse"]["full_adress"]["town"]);
-          const density = await response.json();
-          quiz["density"] = density["density"];
-          // ajouter l'image correspondante
-          $("#adresse video").attr("src", `animation/geo-0${quiz["density"].mp4}`);
-          $('#adresse input').val($(this).html());
-          $("div.result").hide();
-        })
-    });
 
 
     $("#adresse button.text").click(function () {
