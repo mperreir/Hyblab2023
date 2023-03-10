@@ -12,7 +12,9 @@ const initSlide5 = function () {
         $("#orientation header button").click(function () {
 
         });
-        $("#orientation footer button").click(function () {
+        $("#orientation footer button").click(async function () {
+            $("#orientation footer button").attr("disabled", true);
+
             quiz["orientation"] = $(".boussole img").attr("alt");
 
             let orientation = "N";
@@ -56,7 +58,7 @@ const initSlide5 = function () {
                     break;
             }
 
-            quiz["solarData"] = getSolarData(quiz["adresse"]["latitude"], quiz["adresse"]["longitude"], orientation, pente); 
+            quiz["solarData"] = await getSolarData(quiz["adresse"]["latitude"], quiz["adresse"]["longitude"], orientation, pente); 
             swiper.slideNext();
         })
         $("#orientation .boussole").click(function () {
