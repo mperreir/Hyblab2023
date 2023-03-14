@@ -74,3 +74,7 @@ setTimeout(() => {
 $(".retour").click(function(){
   swiper.slidePrev();
 })
+
+$(".home").click(function(){
+  swiper.slideTo(0, 0);
+})

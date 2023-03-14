@@ -1,9 +1,21 @@
 
 /* ------- Important ! Please at least keep the last part of this CSS ----------- */
+.title{
+    margin-bottom: 5px;
+}
 .article {
     overflow: scroll;
     height: 90%;
   }
+
+#premiere_page img{
+    max-width: 25%;
+}
+
+#lettre_mission{
+    margin-bottom: 10%;
+  } 
+
 #search{
     width: 20px;
     vertical-align: middle;
@@ -14,7 +26,7 @@
 
 
 #premiere_page #Boris{
-    font-size: 20px;
+    font-size: 7vw;
 }
 
 #premiere_page #ligne p {
@@ -26,7 +38,7 @@
 }
 
 p{
-    font-size: 14px;
+    font-size: 3.5vw;
     font-family: 'Inter';
     font-style: normal;
 }
@@ -44,6 +56,8 @@ body{
     color: black;
     overflow: hidden;   /* to avoid slider bugs on some browsers */
 }
+
+
 
 #image, #tropdechoix{
     max-width : 85%;
@@ -71,7 +85,7 @@ body{
     margin :auto;
     width: 100%;
     float: left;
-    height: 150px;
+    position: relative;
 }
 
 #image2{
@@ -81,10 +95,23 @@ body{
 }
 
 
+#image3{
+    position: relative;
+    max-height: 45%;
+    top: -10%;
+    z-index: 0;
+}
+
 #image4{
     width: 100%;
-    height: 40%;
-    padding-top: 30%;
+    height: 30%;
+    padding-top: 15%;
+}
+
+#image5{
+    position: relative;
+    top: -10%;
+    max-height: 45%;
 }
 
 #presentation{
@@ -100,48 +127,44 @@ body{
 
 #SoliExImg {
     text-align: center;
-    width: 20%
+    width: 20%;
+    bottom: 10%;
 }
 
 #SoliExTex2 {
-    padding-left: 20px;
+    padding-right: 7%;
     text-align: justify;
     width: 70%;
     position: relative;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 4vw;
-    bottom: 15px;
+    bottom: 10%;
 
 
 }
 
 #SoliExTex {
     text-align: justify;
-    width: 70%;
     bottom: 20%;
     position: relative;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 4vw;
+    padding-right: 7%;
 }
 
 /* ---------- Animation de Soli-mongolfière dans la jauge ------------ */
 
 #Soli1{ /* penser a bouger la montgolfiere par raaport a la taille de la page et au nombre de slides associées*/
-    width : 40px;
-    height: 60px;
+    width : 10vw;
     position : absolute;
     bottom : 5%;
-    right : 5%;
     animation-name: flo;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     transform:scale(0.9);
-    right: -350%;
-        
+    right:-5vw;
 
 }
 
@@ -152,72 +175,60 @@ body{
 }
 
 #Soli2{
-    width : 40px;
-    height: 60px;
+    width : 10vw;
     position : absolute;
     bottom : 25%;
-    right : 5%;
+    right:-5vw;
     animation-name: flo;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     transform:scale(0.9);
-    right: -350%;
-
+    
 }
 
 #Soli3{
-    width : 40px;
-    height: 60px;
+    width : 10vw;
     position : absolute;
     bottom : 45%;
-    right : 5%;
+    right:-5vw;
     animation-name: flo;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     transform:scale(0.9);
-    right: -350%;
 
 }
 
 #Soli4{
-    width : 40px;
-    height: 60px;
+    width : 10vw;
     position : absolute;
     bottom : 65%;
-    right : 5%;
+    right:-5vw;
     animation-name: flo;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     transform:scale(0.9);
-    right: -350%;
-
 }
 
 #Soli5{
-    width : 40px;
-    height: 60px;
+    width : 10vw;
     position : absolute;
     bottom : 85%;
-    right : 5%;
+    right:-5vw;
     animation-name: flo;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     transform:scale(0.9);
-    right: -350%;
-
 }
 
 div {
-    font-size: 15px;
+    font-size: 3.5vw;
     text-align: center;
 }
 
 header{
     margin-top: 8%;
-    margin-bottom: 0;
     text-align: center;
     width: 100%;
-    top: 10%;
     z-index: 2;
 }
 
@@ -238,37 +249,58 @@ header{
 .commentaire-soli {
     max-width: 90%;
     left: 5%;
-    right: 7%;
-    position:static;
+    right: 5%;
+    margin: auto;
     text-align: justify;
+    
 }
 
 .commentaire-soli2 {
     max-width: 90%;
     bottom: 7%;
     text-align: justify;
+    
 
+}
+
+.commentaire-soli3 {
+    max-width: 90%;
+    left: 5%;
+    right: 7%;
+    
+    text-align: justify;
+    position:relative;
 }
 
 .commentaire-soli2 p {
     max-width: 75%;
     display: inline-block;
-    font-size: 1.9vw;
+    
 }
 
 .commentaire-soli2 img {
     max-width: 20%;
+    
 }
 
 .commentaire-soli p {
     max-width: 75%;
     display: inline-block;
-    font-size: 1.9vw;
 }
 
 .commentaire-soli img {
     max-width: 20%;
 }
+
+.commentaire-soli3 p {
+    max-width: 75%;
+    display: inline-block;
+}
+
+.commentaire-soli3 img {
+    max-width: 20%;
+}
+
 
 .contenu-page {
     display: inline-block;
@@ -279,7 +311,7 @@ header{
 #ligne{
     width: 100%;
     float: left;
-    height: 150px;
+    height: 20%;
 }
 
 #lignelongue{
@@ -292,6 +324,9 @@ header{
 #bulle-question {
     /*height: 8vw;*/
     padding-top: 1%;
+}
+#bulle-question img{
+    max-width: 70%;
 }
 
 #colonne2 {
@@ -320,7 +355,8 @@ header{
 }
 
 #img-ques {
-    padding-bottom: 10%;
+
+    max-height: 80%;
 }
 
 #choix-ombre {
@@ -437,11 +473,13 @@ header{
 .titre{
     font-family: 'Boris';
     font-size: 5vw;
-    padding: 10px;
+    padding-bottom: 10px;
     font-weight: bold;
     text-align: center;
     margin: auto;
-    width: 70%;
+    width: 55%;
+    position: relative;
+    z-index: 1;
     /*padding-top: 10%;*/
 }
 
@@ -465,17 +503,12 @@ header{
     margin-right: 5%;
 }
 
-.choix-logement{
-    margin-bottom: 10%;
-}
-
-.choix-logement2{
-    margin-top: 5%;
-}
-
 .img-pente{
     max-width: 80%;
+    position: relative;
 }
+
+
 video{
     margin:auto;
     max-width: 85%;
@@ -486,6 +519,7 @@ video{
     margin: auto;
     max-width: 100%;
     position: relative;
+    margin-top: 10%;
 }
 
 .boussole .illustration{
@@ -538,9 +572,9 @@ video{
     border-radius: 8px;
     position: relative;
     margin: auto;
-    width: 90%;
+    width: 80%;
     text-align: center;
-    font-size: 4vw;
+    font-size: 3.5vw;
 }
 
 img.img-adresse{
@@ -569,6 +603,7 @@ footer button{
 }
 
 .passer{
+    display: inline-block;
     color: #9185BE;
     text-transform: uppercase;
     justify-content: center;
@@ -577,11 +612,51 @@ footer button{
     margin-top: 7px;
 }
 
+.valid{
+    display: inline-block;
+}
+
 div{
     position: relative;
 }
 
+#info1{
+    overflow: scroll;
+}
+
+#info2{
+    overflow: scroll;
+}
+
+#info3{
+    overflow: scroll;
+}
+
+#scroll{
+    overflow: scroll;
+}
+
+#facultatif{
+    overflow: scroll;
+}
+
+#mission{
+    overflow: scroll;
+}
+
 button.retour, button.info-bulle{
+    z-index: 9;
+    left: 0%;
+    margin: 2% ;
+    width : 10%;
+    text-align: center;
+    font-size: 5vw;
+    position: absolute;
+    background-color: transparent;
+    border: transparent;
+}
+
+.home{
     left: 0%;
     margin: 2% ;
     width : 10%;
@@ -593,6 +668,10 @@ button.retour, button.info-bulle{
 }
 
 .img-fleche {
+    width: 55%;
+}
+
+.img-accueil {
     width: 55%;
 }
 
@@ -664,20 +743,24 @@ div.conteneur{
     animation: glowing 2000ms infinite;
     height: 24px;
     top: 5%;
-
+    z-index: 1;
 }
 
 #indication{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 3.5vw;
     width: 85%;
     margin: auto;
-    line-height: 17px;
     text-align: center;
+    margin-top: 10%;
+
 }
 
+.corps {
+    top: -10%;
+  }
 
 #SoliInfo{
     position: absolute;
@@ -742,14 +825,15 @@ div.conteneur{
     height: 300px;
 }
 
-.choix-logement {
-    margin-bottom: 3%;
-}
-
 .congrats {
     display: flex;
     justify-content: space-around;
-    margin-top: 5%;
+    max-height: 3%;
+    height: auto;
+}
+
+#credits p {
+    font-size: 3.5vw;
 }
 
 #main-remerciments {
@@ -757,11 +841,10 @@ div.conteneur{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 55%;
+    /*height: 55%;*/
 }
 
-#remerciements {
-    font-size: 4vw;
+p#remerciements {
     margin-bottom: 10%;
     max-width: 90%;
 }
@@ -772,6 +855,7 @@ div.conteneur{
 
 .logos {
     max-width: 25%;
+    max-height: 10%;
 }
 
 /* Last slide image is centered */
@@ -800,6 +884,9 @@ footer{
     padding: 1em;
 }
 
+#footerScroll{
+    position: relative;
+}
 
 /* ---------- Positionning of logos on the last slide -------------------- */
 /* here we have a contraint on the height of the logos (not the width)     */
@@ -870,7 +957,7 @@ body{
 }
 
 /* Fill the whole viewport when its aspect ratio is between 9/16 and 3/4 */
-@media screen and (min-aspect-ratio: 3/4) {
+@media screen and (max-aspect-ratio: 3/4) {
     #container{
         margin-left: 0; /* reset margin-left */
         width: 100vw; /* content is full width (and full height because of the default rule for container height */
@@ -893,9 +980,7 @@ body{
     }
 
     /*Page pente*/
-    .img-pente {
-        width: 75%;
-    }
+    
 
     .open-button {
         top: 13%;
