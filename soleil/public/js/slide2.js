@@ -78,11 +78,11 @@ async function initSlide2() {
 
       $("div.result").html("");
       pa.forEach(elt => {
-        $("div.result").append(`<option>${elt['address_text']}</option>`)
+        $("div.result").append(`<div>${elt['address_text']}</div>`)
       });
 
       $("div.result").show();
-      $("div.result option").click(async function () {
+      $("div.result div").click(async function () {
         console.log(quiz["adresse"]);
         quiz["adresse"] = pa.find(elt => elt["address_text"] == $(this).html());
 
